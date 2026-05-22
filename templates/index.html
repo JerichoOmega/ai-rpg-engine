@@ -3,107 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Browser RPG</title>
+    <title>Dark Quest</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="game-container">
-        <header>
-            <h1>&#9876; Browser RPG</h1>
-            <div class="stats">
-                <span class="stat hp">&#10084; HP: {{ player_hp }}</span>
-                <span class="stat gold">&#9733; Gold: {{ player_gold }}</span>
-                <span class="stat room">Room {{ current_room }} / {{ adventure_length }}</span>
+
+{% if phase != "class_select" %}
+<header class="site-header">
+    <div class="header-title">&#9876; Dark Quest</div>
+
+    <div class="header-stats">
+        <div class="stat-group">
+            <span class="stat-label">HP</span>
+            <div class="hp-track">
+                <div class="hp-fill player-hp-fill
+                    {% if player_pct > 50 %}hp-high
+                    {% elif player_pct > 25 %}hp-mid
+                    {% else %}hp-low{% endif %}"
+                    style="width:{{ player_pct }}%"></div>
             </div>
-        </header>
-
-        <!-- ===== DEAD ===== -->
-        {% if phase == "dead" %}
-        <div class="panel outcome defeat">
-            <h2>&#128128; You Were Defeated</h2>
-            <p>Darkness closes in around you. Your adventure ends here.</p>
-            <div class="story-state">
-                <p>Cult defeated: {{ "Yes" if cult_defeated else "No" }}</p>
-                <p>Dragon defeated: {{ "Yes" if dragon_defeated else "No" }}</p>
-                <p>Knight defeated: {{ "Yes" if knight_defeated else "No" }}</p>
-                <p>Final Gold: {{ player_gold }}</p>
-            </div>
-            <form method="post" action="/action">
-                <input type="hidden" name="action" value="restart">
-                <button class="btn btn-primary">Play Again</button>
-            </form>
+            <span class="stat-val">{{ player_hp }}/{{ player_max_hp }}</span>
         </div>
 
-        <!-- ===== WON ===== -->
-        {% elif phase == "won" %}
-        <div class="panel outcome victory">
-            <h2>&#127881; Final Victory!</h2>
-            <p>You survived the entire adventure. The kingdom is saved!</p>
-            <div class="story-state">
-                <p>Cult defeated: {{ "Yes" if cult_defeated else "No" }}</p>
-                <p>Dragon defeated: {{ "Yes" if dragon_defeated else "No" }}</p>
-                <p>Knight defeated: {{ "Yes" if knight_defeated else "No" }}</p>
-                <p>Final Gold: {{ player_gold }}</p>
-            </div>
-            <form method="post" action="/action">
-                <input type="hidden" name="action" value="restart">
-                <button class="btn btn-primary">Play Again</button>
-            </form>
+        <div class="stat-chips">
+            <span class="chip chip-gold">&#9733; {{ player_gold }}g</span>
+            <span class="chip {{ rep_class }}">{{ rep_label }} ({{ player_reputation }})</span>
+            <span class="chip chip-room">Room {{ current_room }}/{{ adventure_length }}</span>
+            <span class="chip chip-class">{{ player_class | capitalize }}</span>
         </div>
+    </div>
 
-        <!-- ===== RAN ===== -->
-        {% elif phase == "ran" %}
-        <div class="panel outcome neutral">
-            <h2>&#128070; You Fled!</h2>
-            <p>You escaped into the darkness. The enemy still roams free.</p>
-            <form method="post" action="/action">
-                <input type="hidden" name="action" value="restart">
-                <button class="btn btn-primary">Play Again</button>
-            </form>
-        </div>
+    <div class="header-equip">
+        &#9876; {{ equipped_weapon }}{% if weapon_bonus > 0 %} <span class="bonus">(+{{ weapon_bonus }} ATK)</span>{% endif %}
+        &nbsp;|&nbsp; ATK Bonus: +{{ attack_bonus }}
+    </div>
+</header>
+{% endif %}
 
-        <!-- ===== VICTORY (room cleared) ===== -->
-        {% elif phase == "victory" %}
-        <div class="panel outcome victory">
-            <h2>&#9876; Enemy Defeated!</h2>
-            {% for line in log %}
-            <p>{{ line | safe }}</p>
-            {% endfor %}
-            <form method="post" action="/action">
-                <input type="hidden" name="action" value="continue">
-                <button class="btn btn-primary">Continue Adventure &rarr;</button>
-            </form>
-        </div>
+<main class="main-wrap">
 
-        <!-- ===== COMBAT ===== -->
-        {% else %}
-        <div class="panel quest-panel">
-            <h2>&#128196; Your Quest</h2>
-            <p class="quest-text">{{ quest }}</p>
-            <p class="location-text">&#128205; The danger waits <em>{{ location }}</em>.</p>
+{# ═══════════════════════════════════════════════════════
+   CLASS SELECT
+═══════════════════════════════════════════════════════ #}
+{% if phase == "class_select" %}
+<div class="screen-title-card">
+    <h1>&#9876; Dark Quest</h1>
+    <p class="tagline">The kingdom waits. Choose your path.</p>
+</div>
+
+<h2 class="section-heading">Choose Your Class</h2>
+<div class="class-grid">
+{% for key, cls in classes.items() %}
+<form method="post" action="/action">
+    <input type="hidden" name="action" value="{{ key }}">
+    <button type="submit" class="class-card">
+        <div class="class-icon">{{ cls.icon | safe }}</div>
+        <div class="class-name">{{ key | capitalize }}</div>
+        <div class="class-stats">
+            <span>&#10084; {{ cls.hp }} HP</span>
+            <span>&#9876; +{{ cls.attack_bonus }} ATK</span>
         </div>
+        <div class="class-desc">{{ cls.desc }}</div>
+    </button>
+</form>
+{% endfor %}
+</div>
+
+
+{# ═══════════════════════════════════════════════════════
+   ENCOUNTER BRIEFING
+═══════════════════════════════════════════════════════ #}
+{% elif phase == "encounter" %}
+<div class="panel quest-panel">
+    <div class="panel-label">&#128196; Quest</div>
+    <p class="quest-text">{{ quest }}</p>
+    <p class="location-text">&#128205; The danger waits <em>{{ location }}</em>.</p>
+</div>
+
+<div class="panel enemy-preview-panel">
+    <div class="panel-label">&#128122; Your Enemy</div>
+    <h2 class="enemy-name-large">{{ enemy_name }}</h2>
+    <div class="enemy-tags">
+        <span class="tag tag-hp">HP: {{ enemy_hp }}</span>
+        <span class="tag tag-special">Special: {{ enemy_special }}</span>
+    </div>
+    <p class="special-desc">{{ enemy_special_flavor }}</p>
+</div>
+
+<div class="action-row center">
+    <form method="post" action="/action">
+        <input type="hidden" name="action" value="begin">
+        <button class="btn btn-primary btn-large">&#9876; Prepare for Battle</button>
+    </form>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════
+   COMBAT
+═══════════════════════════════════════════════════════ #}
+{% elif phase == "combat" %}
+<div class="combat-layout">
+
+    <div class="combat-main">
 
         <div class="panel enemy-panel">
-            <div class="enemy-info">
-                <h2>&#128122; {{ enemy_name }}</h2>
-                <div class="hp-bar-wrap">
-                    <div class="hp-bar enemy-bar" style="width: {{ [enemy_hp * 3, 100] | min }}%"></div>
-                </div>
-                <span class="hp-label">Enemy HP: {{ enemy_hp }}</span>
+            <div class="enemy-header">
+                <span class="enemy-name-combat">&#128122; {{ enemy_name }}</span>
+                <span class="enemy-hp-num">{{ enemy_hp }} / {{ enemy_max_hp }} HP</span>
             </div>
+            <div class="bar-track">
+                <div class="bar-fill enemy-bar-fill
+                    {% if enemy_pct > 50 %}ebar-high
+                    {% elif enemy_pct > 25 %}ebar-mid
+                    {% else %}ebar-low{% endif %}"
+                    style="width:{{ enemy_pct }}%"></div>
+            </div>
+            <div class="special-badge">&#128161; Special: <em>{{ enemy_special }}</em> — {{ enemy_special_flavor }}</div>
         </div>
 
-        {% if log %}
-        <div class="panel log-panel">
-            {% for line in log %}
-            <p>{{ line | safe }}</p>
+        {% if combat_log %}
+        <div class="panel log-panel" id="combat-log">
+            {% for line in combat_log %}
+            <div class="log-line">{{ line | safe }}</div>
             {% endfor %}
         </div>
         {% endif %}
 
         <div class="panel actions-panel">
-            <h3>What do you do?</h3>
-            <div class="action-buttons">
+            <div class="actions-label">What do you do?</div>
+            <div class="action-row">
                 <form method="post" action="/action">
                     <input type="hidden" name="action" value="attack">
                     <button class="btn btn-attack">&#9876; Attack</button>
@@ -118,7 +146,225 @@
                 </form>
             </div>
         </div>
+
+    </div>
+
+    <div class="combat-sidebar">
+        <div class="panel sidebar-panel">
+            <div class="panel-label">&#127760; Quest</div>
+            <p class="sidebar-quest">{{ quest }}</p>
+            <p class="sidebar-location">&#128205; {{ location }}</p>
+        </div>
+
+        <div class="panel sidebar-panel">
+            <div class="panel-label">&#127920; Inventory ({{ inventory | length }})</div>
+            {% if inventory %}
+            <ul class="inv-list">
+                {% for item in inventory %}
+                <li class="inv-item {% if item == equipped_weapon %}inv-equipped{% endif %}">
+                    {{ item }}{% if item == equipped_weapon %} <span class="equipped-tag">equipped</span>{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="inv-empty">Empty</p>
+            {% endif %}
+            <div class="inv-weapon">&#9876; {{ equipped_weapon }}{% if weapon_bonus > 0 %} <span class="bonus">+{{ weapon_bonus }}</span>{% endif %}</div>
+        </div>
+
+        <div class="panel sidebar-panel">
+            <div class="panel-label">&#128218; Story State</div>
+            <ul class="story-list">
+                <li class="{{ 'story-done' if cult_defeated else 'story-pending' }}">Hidden Cult</li>
+                <li class="{{ 'story-done' if dragon_defeated else 'story-pending' }}">Ancient Dragon</li>
+                <li class="{{ 'story-done' if knight_defeated else 'story-pending' }}">Corrupted Knight</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+{# ═══════════════════════════════════════════════════════
+   POST COMBAT (loot + random event)
+═══════════════════════════════════════════════════════ #}
+{% elif phase == "post_combat" %}
+<div class="panel result-panel">
+    <div class="panel-label">&#9876; Battle Over</div>
+
+    <div class="log-panel log-panel-inline">
+        {% for line in combat_log[-6:] %}
+        <div class="log-line">{{ line | safe }}</div>
+        {% endfor %}
+    </div>
+
+    {% if event_log %}
+    <div class="divider">&#8943;</div>
+    <div class="log-panel log-panel-inline">
+        {% for line in event_log %}
+        <div class="log-line">{{ line | safe }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="action-row center" style="margin-top:20px">
+        <form method="post" action="/action">
+            <input type="hidden" name="action" value="continue">
+            <button class="btn btn-primary">Continue &#8594;</button>
+        </form>
+    </div>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════
+   STORY CHOICE
+═══════════════════════════════════════════════════════ #}
+{% elif phase == "story_choice" %}
+<div class="panel choice-panel">
+    <div class="panel-label">&#128100; A Moment of Choice</div>
+    <p class="choice-text">A wounded traveler collapses at your feet, eyes wide with fear. They beg for your help.</p>
+    <p class="choice-sub">What do you do?</p>
+
+    <div class="choice-buttons">
+        <form method="post" action="/action">
+            <input type="hidden" name="action" value="help">
+            <button class="btn btn-help">
+                <span class="choice-icon">&#128400;</span>
+                <span class="choice-label">Help</span>
+                <span class="choice-effect">+5 Reputation</span>
+            </button>
+        </form>
+        <form method="post" action="/action">
+            <input type="hidden" name="action" value="ignore">
+            <button class="btn btn-ignore">
+                <span class="choice-icon">&#128070;</span>
+                <span class="choice-label">Ignore</span>
+                <span class="choice-effect">No change</span>
+            </button>
+        </form>
+        <form method="post" action="/action">
+            <input type="hidden" name="action" value="rob">
+            <button class="btn btn-rob">
+                <span class="choice-icon">&#128176;</span>
+                <span class="choice-label">Rob</span>
+                <span class="choice-effect">+Gold, -10 Rep</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════
+   REPUTATION (world reaction)
+═══════════════════════════════════════════════════════ #}
+{% elif phase == "reputation" %}
+<div class="panel result-panel">
+    <div class="panel-label">&#127758; The World Reacts</div>
+
+    {% if event_log %}
+    <div class="log-panel log-panel-inline">
+        {% for line in event_log %}
+        <div class="log-line">{{ line | safe }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if rep_log %}
+    <div class="divider">&#8943;</div>
+    <div class="log-panel log-panel-inline">
+        {% for line in rep_log %}
+        <div class="log-line">{{ line | safe }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="action-row center" style="margin-top:20px">
+        <form method="post" action="/action">
+            <input type="hidden" name="action" value="continue">
+            {% if current_room < adventure_length %}
+            <button class="btn btn-primary">Next Room &#8594;</button>
+            {% else %}
+            <button class="btn btn-primary">&#8594; Final Challenge</button>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+
+{# ═══════════════════════════════════════════════════════
+   END SCREENS
+═══════════════════════════════════════════════════════ #}
+{% elif phase in ("dead", "won", "ran") %}
+<div class="panel end-panel
+    {% if phase == 'won' %}end-victory
+    {% elif phase == 'dead' %}end-defeat
+    {% else %}end-neutral{% endif %}">
+
+    {% if phase == "won" %}
+    <h2 class="end-title">&#127881; Final Victory!</h2>
+    <p class="end-sub">You survived the adventure. The kingdom is saved.</p>
+    {% elif phase == "dead" %}
+    <h2 class="end-title">&#128128; Defeated</h2>
+    <p class="end-sub">Darkness closes in around you. Your adventure ends here.</p>
+    {% else %}
+    <h2 class="end-title">&#128070; You Fled</h2>
+    <p class="end-sub">You escaped into the darkness. The enemy still roams free.</p>
+    {% endif %}
+
+    <div class="end-stats">
+        <div class="end-stat-grid">
+            <div class="end-stat">
+                <span class="end-stat-label">Gold</span>
+                <span class="end-stat-val chip-gold">{{ player_gold }}</span>
+            </div>
+            <div class="end-stat">
+                <span class="end-stat-label">Reputation</span>
+                <span class="end-stat-val {{ rep_class }}">{{ player_reputation }} ({{ rep_label }})</span>
+            </div>
+            <div class="end-stat">
+                <span class="end-stat-label">Class</span>
+                <span class="end-stat-val">{{ player_class | capitalize }}</span>
+            </div>
+            <div class="end-stat">
+                <span class="end-stat-label">Rooms Cleared</span>
+                <span class="end-stat-val">{{ current_room - 1 }}/{{ adventure_length }}</span>
+            </div>
+        </div>
+
+        <div class="end-section-title">Story State</div>
+        <ul class="story-list story-list-end">
+            <li class="{{ 'story-done' if cult_defeated else 'story-pending' }}">Hidden Cult {{ '&#10003;' if cult_defeated else '&#10007;' }}</li>
+            <li class="{{ 'story-done' if dragon_defeated else 'story-pending' }}">Ancient Dragon {{ '&#10003;' if dragon_defeated else '&#10007;' }}</li>
+            <li class="{{ 'story-done' if knight_defeated else 'story-pending' }}">Corrupted Knight {{ '&#10003;' if knight_defeated else '&#10007;' }}</li>
+        </ul>
+
+        {% if inventory %}
+        <div class="end-section-title">Inventory</div>
+        <ul class="inv-list">
+            {% for item in inventory %}
+            <li class="inv-item {% if item == equipped_weapon %}inv-equipped{% endif %}">
+                {{ item }}{% if item == equipped_weapon %} <span class="equipped-tag">equipped</span>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
         {% endif %}
     </div>
+
+    <div class="action-row center" style="margin-top:24px">
+        <form method="post" action="/action">
+            <input type="hidden" name="action" value="restart">
+            <button class="btn btn-primary">Play Again</button>
+        </form>
+    </div>
+</div>
+
+{% endif %}
+
+</main>
+
+<script>
+    const log = document.getElementById("combat-log");
+    if (log) log.scrollTop = log.scrollHeight;
+</script>
 </body>
 </html>

@@ -9,6 +9,17 @@ dragon_defeated = False
 knight_defeated = False
 
 player_gold = 25
+player_reputation = 0
+
+# =========================
+# INVENTORY / EQUIPMENT
+# =========================
+
+inventory = []
+
+equipped_weapon = "Rusty Sword"
+
+weapon_bonus = 0
 
 # =========================
 # ADVENTURE SETTINGS
@@ -126,49 +137,24 @@ def generate_story():
     return quest, location, enemy_name
 
 
+def show_inventory():
+
+    print("\n=== INVENTORY ===")
+
+    if len(inventory) == 0:
+
+        print("Your inventory is empty.")
+
+    else:
+
+        for item in inventory:
+            print("-", item)
+
+    print("\nEquipped Weapon:", equipped_weapon)
+    print("Weapon Bonus:", weapon_bonus)
+
+
 def random_event(player_hp, player_gold):
-
-    def story_choice(player_gold, player_reputation):
-
-    print("\n=== STORY CHOICE ===")
-    print("A wounded traveler begs for your help.")
-
-    print("\n1. Help the traveler")
-    print("2. Ignore the traveler")
-    print("3. Rob the traveler")
-
-    choice = input("\nChoose: ")
-
-    # HELP
-
-    if choice == "1":
-
-        player_reputation += 5
-
-        print("\nYou help the traveler.")
-        print("Your reputation increases.")
-
-    # IGNORE
-
-    elif choice == "2":
-
-        print("\nYou continue on your journey.")
-
-    # ROB
-
-    elif choice == "3":
-
-        gold_stolen = random.randint(10, 25)
-
-        player_gold += gold_stolen
-
-        player_reputation -= 10
-
-        print("\nYou rob the traveler!")
-        print("You steal", gold_stolen, "gold.")
-        print("Your reputation decreases.")
-
-    return player_gold, player_reputation
 
     event = random.choice(events)
 
@@ -222,7 +208,84 @@ def random_event(player_hp, player_gold):
     return player_hp, player_gold
 
 
+def story_choice(player_gold, player_reputation):
+
+    print("\n=== STORY CHOICE ===")
+    print("A wounded traveler begs for your help.")
+
+    print("\n1. Help the traveler")
+    print("2. Ignore the traveler")
+    print("3. Rob the traveler")
+
+    choice = input("\nChoose: ")
+
+    # HELP
+
+    if choice == "1":
+
+        player_reputation += 5
+
+        print("\nYou help the traveler.")
+        print("Your reputation increases.")
+
+    # IGNORE
+
+    elif choice == "2":
+
+        print("\nYou continue on your journey.")
+
+    # ROB
+
+    elif choice == "3":
+
+        gold_stolen = random.randint(10, 25)
+
+        player_gold += gold_stolen
+
+        player_reputation -= 10
+
+        print("\nYou rob the traveler!")
+        print("You steal", gold_stolen, "gold.")
+        print("Your reputation decreases.")
+
+    return player_gold, player_reputation
+
+
+def reputation_event(player_reputation, player_gold):
+
+    print("\n=== WORLD REACTION ===")
+
+    # HEROIC REPUTATION
+
+    if player_reputation >= 15:
+
+        reward = random.randint(15, 30)
+
+        player_gold += reward
+
+        print("The people celebrate your heroic deeds.")
+        print("A village gifts you", reward, "gold!")
+
+    # EVIL REPUTATION
+
+    elif player_reputation <= -15:
+
+        print("Whispers spread about your cruelty.")
+        print("Travelers avoid your presence.")
+
+    # NEUTRAL
+
+    else:
+
+        print("The world still watches your actions carefully.")
+
+    return player_gold
+
+
 def combat(player_hp, enemy_name, enemy_hp, attack_bonus):
+
+    global equipped_weapon
+    global weapon_bonus
 
     while player_hp > 0 and enemy_hp > 0:
 
@@ -232,13 +295,18 @@ def combat(player_hp, enemy_name, enemy_hp, attack_bonus):
 
         action = input("\nWhat do you do? ")
 
-        # =========================
+        # INVENTORY
+
+        if action.lower() == "inventory":
+
+            show_inventory()
+            continue
+
         # ATTACK
-        # =========================
 
         if action.lower() == "attack":
 
-            damage = random.randint(5, 15) + attack_bonus
+            damage = random.randint(5, 15) + attack_bonus + weapon_bonus
 
             enemy_hp -= damage
 
@@ -254,9 +322,7 @@ def combat(player_hp, enemy_name, enemy_hp, attack_bonus):
             print("\n" + random.choice(attack_descriptions))
             print("You dealt", damage, "damage!")
 
-        # =========================
         # HEAL
-        # =========================
 
         elif action.lower() == "heal":
 
@@ -267,26 +333,20 @@ def combat(player_hp, enemy_name, enemy_hp, attack_bonus):
             print("\nA warm light surrounds you.")
             print("You healed", heal, "HP!")
 
-        # =========================
         # RUN
-        # =========================
 
         elif action.lower() == "run":
 
             print("\nYou escape into the darkness...")
             break
 
-        # =========================
         # INVALID ACTION
-        # =========================
 
         else:
 
             print("\nYou hesitate and lose your chance!")
 
-        # =========================
         # ENEMY TURN
-        # =========================
 
         if enemy_hp > 0:
 
@@ -306,9 +366,7 @@ def combat(player_hp, enemy_name, enemy_hp, attack_bonus):
             print("\n" + random.choice(enemy_attacks))
             print("You take", enemy_damage, "damage!")
 
-            # =========================
             # SPECIAL ABILITIES
-            # =========================
 
             special = enemies[enemy_name]["special"]
 
@@ -364,6 +422,9 @@ def show_story_state():
     print("Knight Defeated:", knight_defeated)
 
     print("Gold:", player_gold)
+    print("Reputation:", player_reputation)
+
+    show_inventory()
 
 
 # =========================
@@ -417,9 +478,7 @@ while current_room <= adventure_length and player_hp > 0:
         attack_bonus
     )
 
-    # =========================
     # ENDINGS
-    # =========================
 
     if player_hp <= 0:
 
@@ -438,9 +497,40 @@ while current_room <= adventure_length and player_hp > 0:
         print("You gained", reward, "gold!")
         print("Total Gold:", player_gold)
 
-        # STORY MEMORY
+        # LOOT
 
-        player_reputation = 0
+        loot_items = [
+            "Iron Sword",
+            "Magic Staff",
+            "Shadow Dagger",
+            "Healing Potion",
+            "Dragon Shield"
+        ]
+
+        loot = random.choice(loot_items)
+
+        inventory.append(loot)
+
+        print("You found:", loot)
+
+        # EQUIP WEAPONS
+
+        if loot == "Iron Sword":
+
+            equipped_weapon = "Iron Sword"
+            weapon_bonus = 3
+
+        elif loot == "Magic Staff":
+
+            equipped_weapon = "Magic Staff"
+            weapon_bonus = 5
+
+        elif loot == "Shadow Dagger":
+
+            equipped_weapon = "Shadow Dagger"
+            weapon_bonus = 4
+
+        # STORY MEMORY
 
         if enemy_name == "hidden cult":
             cult_defeated = True
@@ -455,6 +545,20 @@ while current_room <= adventure_length and player_hp > 0:
 
         player_hp, player_gold = random_event(
             player_hp,
+            player_gold
+        )
+
+        # STORY CHOICE
+
+        player_gold, player_reputation = story_choice(
+            player_gold,
+            player_reputation
+        )
+
+        # WORLD REACTION
+
+        player_gold = reputation_event(
+            player_reputation,
             player_gold
         )
 
@@ -476,15 +580,3 @@ while current_room <= adventure_length and player_hp > 0:
 # =========================
 
 show_story_state()
-
-def show_story_state():
-
-print("\n=== STORY STATE ===")
-
-print("Cult Defeated:", cult_defeated)
-print("Dragon Defeated:", dragon_defeated)
-print("Knight Defeated:", knight_defeated)
-
-print("Gold:", player_gold)
-
-print("Reputation:", player_reputation)
