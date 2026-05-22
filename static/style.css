@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0d0d0d;
+    color: #e8e0d0;
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1a1209;
+    border: 1px solid #4a3010;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #d4a020;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    font-size: 1rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.stat.hp {
+    background: #3a0a0a;
+    color: #f06060;
+    border: 1px solid #6a1010;
+}
+
+.stat.gold {
+    background: #2a2000;
+    color: #d4a020;
+    border: 1px solid #5a4010;
+}
+
+.stat.room {
+    background: #0a1a2a;
+    color: #60a0d0;
+    border: 1px solid #10406a;
+}
+
+.panel {
+    background: #141008;
+    border: 1px solid #3a2a10;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.quest-panel h2 {
+    color: #d4a020;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.quest-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #c8c0b0;
+    margin-bottom: 8px;
+}
+
+.location-text {
+    font-size: 0.95rem;
+    color: #90a080;
+}
+
+.enemy-panel .enemy-info h2 {
+    color: #e05050;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.hp-bar-wrap {
+    background: #2a1010;
+    border-radius: 4px;
+    height: 12px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.hp-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+.enemy-bar {
+    background: linear-gradient(90deg, #e03030, #c06030);
+}
+
+.hp-label {
+    font-size: 0.85rem;
+    color: #a08070;
+}
+
+.log-panel {
+    background: #0e0e0a;
+    border-color: #2a2a18;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #b0a890;
+}
+
+.log-panel p {
+    padding: 2px 0;
+}
+
+.actions-panel h3 {
+    color: #c0a060;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.action-buttons form {
+    flex: 1;
+    min-width: 100px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-attack {
+    background: linear-gradient(135deg, #8a1a1a, #c03030);
+    color: #fff;
+    border: 1px solid #e04040;
+}
+
+.btn-heal {
+    background: linear-gradient(135deg, #1a5a2a, #2a9040);
+    color: #fff;
+    border: 1px solid #40c060;
+}
+
+.btn-run {
+    background: linear-gradient(135deg, #3a3020, #6a5a30);
+    color: #e0d090;
+    border: 1px solid #8a7a40;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a3010, #8a6020);
+    color: #f0d080;
+    border: 1px solid #c0a040;
+    padding: 14px 30px;
+    width: auto;
+}
+
+.outcome {
+    text-align: center;
+    padding: 32px 20px;
+}
+
+.outcome h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.outcome p {
+    font-size: 1rem;
+    color: #b0a890;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.outcome.victory h2 { color: #d4a020; }
+.outcome.defeat h2  { color: #e04040; }
+.outcome.neutral h2 { color: #a090b0; }
+
+.story-state {
+    background: #0e0e0a;
+    border: 1px solid #2a2a18;
+    border-radius: 6px;
+    padding: 14px;
+    margin: 16px auto;
+    max-width: 260px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #90a070;
+    line-height: 1.9;
+}
