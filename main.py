@@ -22,6 +22,8 @@ from player import (
     show_story_state
 )
 
+from save_system import save_game, load_game
+
 # =========================
 # PLAYER MEMORY / STORY STATE
 # =========================
@@ -96,10 +98,55 @@ enemies = {
 }
 
 # =========================
-# CREATE PLAYER
+# LOAD OR NEW GAME
 # =========================
 
-player_class, player_hp, attack_bonus = create_player()
+print("1. New Game")
+print("2. Load Game")
+
+game_choice = input("> ")
+
+if game_choice == "2":
+
+    save_data = load_game()
+
+    if save_data:
+
+        player_hp = save_data["player_hp"]
+
+        player_gold = save_data["player_gold"]
+
+        player_level = save_data["player_level"]
+
+        player_xp = save_data["player_xp"]
+
+        xp_to_next_level = save_data["xp_to_next_level"]
+
+        inventory = save_data["inventory"]
+
+        equipped_weapon = save_data["equipped_weapon"]
+
+        weapon_bonus = save_data["weapon_bonus"]
+
+        player_reputation = save_data["player_reputation"]
+
+        cult_defeated = save_data["cult_defeated"]
+
+        dragon_defeated = save_data["dragon_defeated"]
+
+        knight_defeated = save_data["knight_defeated"]
+
+        attack_bonus = 5
+
+        print("\nSave successfully loaded!")
+
+    else:
+
+        player_class, player_hp, attack_bonus = create_player()
+
+else:
+
+    player_class, player_hp, attack_bonus = create_player()
 
 # =========================
 # MAIN GAME LOOP
@@ -159,16 +206,21 @@ while current_room <= adventure_length and player_hp > 0:
         print("\nVictory!")
         print("The enemy has fallen.")
 
+        # =========================
         # GOLD
+        # =========================
 
         reward = random.randint(10, 30)
 
         player_gold += reward
 
         print("You gained", reward, "gold!")
+
         print("Total Gold:", player_gold)
 
+        # =========================
         # XP
+        # =========================
 
         xp_gained = random.randint(40, 70)
 
@@ -206,7 +258,9 @@ while current_room <= adventure_length and player_hp > 0:
 
         inventory = add_item(inventory, loot)
 
-        # EQUIP WEAPON
+        # =========================
+        # EQUIP WEAPONS
+        # =========================
 
         if loot in [
             "Iron Sword",
@@ -265,6 +319,25 @@ while current_room <= adventure_length and player_hp > 0:
             weapon_bonus
         )
 
+        # =========================
+        # SAVE GAME
+        # =========================
+
+        save_game(
+            player_hp,
+            player_gold,
+            player_level,
+            player_xp,
+            xp_to_next_level,
+            inventory,
+            equipped_weapon,
+            weapon_bonus,
+            player_reputation,
+            cult_defeated,
+            dragon_defeated,
+            knight_defeated
+        )
+
         current_room += 1
 
         # =========================
@@ -278,6 +351,7 @@ while current_room <= adventure_length and player_hp > 0:
         else:
 
             print("\n=== FINAL VICTORY ===")
+
             print("You survived the adventure!")
 
 # =========================

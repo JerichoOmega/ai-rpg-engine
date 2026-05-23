@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Quest — UI Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   ROOT & RESET
+═══════════════════════════════════════════════════ */
+:root {
+  --bg:          #07050b;
+  --bg2:         #0e0914;
+  --panel:       #120d18;
+  --panel2:      #1a1224;
+  --border:      #2a1e38;
+  --border2:     #3d2d50;
+  --gold:        #d4a848;
+  --gold-bright: #f0cc70;
+  --gold-dim:    #7a5f28;
+  --text:        #d8ccc0;
+  --text-dim:    #806858;
+  --text-faint:  #483838;
+  --red:         #c83030;
+  --red-glow:    rgba(200,48,48,0.55);
+  --purple-glow: rgba(140,60,220,0.55);
+  --blue-glow:   rgba(48,100,220,0.55);
+  --gold-glow:   rgba(210,168,72,0.55);
+  --green-glow:  rgba(48,160,100,0.55);
+  --hp-high:     #38b050;
+  --hp-mid:      #c0a030;
+  --hp-low:      #d03030;
+  --mp-col:      #4070d8;
+  --radius:      6px;
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:15px; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Crimson Pro', Georgia, serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content:'';
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 40%, rgba(100,20,20,.18) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 80% 20%, rgba(30,10,60,.22) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 50% 100%, rgba(60,15,15,.15) 0%, transparent 60%);
+}
+
+/* ═══════════════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════════════ */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius:3px; }
+
+/* ═══════════════════════════════════════════════════
+   WRAPPER
+═══════════════════════════════════════════════════ */
+#game-wrapper {
+  position: relative; z-index:1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ═══════════════════════════════════════════════════
+   LABEL STYLE (reusable)
+═══════════════════════════════════════════════════ */
+.panel-label {
+  font-family: 'Cinzel', serif;
+  font-size: .65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 8px;
+}
+
+/* ═══════════════════════════════════════════════════
+   PARTY BAR
+═══════════════════════════════════════════════════ */
+#party-bar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border2);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 20px rgba(0,0,0,.6);
+}
+
+.game-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+  white-space: nowrap;
+  text-shadow: 0 0 12px rgba(212,168,72,.5);
+  margin-right: 4px;
+}
+
+.party-members {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.party-card {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 170px;
+  position: relative;
+  transition: border-color .2s;
+}
+.party-card:hover { border-color: var(--border2); }
+.party-card.active-turn { border-color: var(--gold-dim); }
+
+.party-portrait {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  font-size: 1rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  border: 2px solid;
+}
+.portrait-mage   { background:#12082a; color:#b070ff; border-color:#6030b0; }
+.portrait-warrior{ background:#1a0808; color:#ff7050; border-color:#802020; }
+.portrait-rogue  { background:#081a10; color:#50e090; border-color:#20803a; }
+
+.party-info { flex:1; min-width:0; }
+.party-name {
+  font-family: 'Cinzel', serif;
+  font-size: .72rem;
+  color: var(--text);
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+.party-class { font-size:.65rem; color:var(--text-dim); margin-bottom:4px; }
+
+.bar-wrap { display:flex; flex-direction:column; gap:3px; }
+.bar-row  { display:flex; align-items:center; gap:4px; }
+.bar-icon { font-size:.6rem; width:10px; }
+.bar-track {
+  flex:1; height:5px;
+  background:#1a1020;
+  border-radius:3px; overflow:hidden;
+  border:1px solid #251830;
+}
+.bar-fill {
+  height:100%;
+  border-radius:3px;
+  transition: width .5s ease;
+}
+.hp-fill-high { background: linear-gradient(90deg,#206830,#38b050); }
+.hp-fill-mid  { background: linear-gradient(90deg,#806010,#c0a030); }
+.hp-fill-low  {
+  background: linear-gradient(90deg,#801818,#d03030);
+  animation: pulse-bar 1s ease-in-out infinite;
+}
+.mp-fill { background: linear-gradient(90deg,#203080,#4070d8); }
+.bar-num { font-size:.6rem; color:var(--text-dim); white-space:nowrap; }
+
+.party-statuses {
+  display:flex; gap:3px; flex-wrap:wrap;
+  margin-top:3px;
+}
+
+.meta-block {
+  display:flex; flex-direction:column; align-items:flex-end; gap:6px;
+  margin-left:auto;
+}
+.meta-chips { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+.meta-chip {
+  font-family:'Cinzel',serif;
+  font-size:.68rem;
+  padding:3px 10px;
+  border-radius:20px;
+  white-space:nowrap;
+}
+.chip-gold  { background:#1a1006; color:var(--gold); border:1px solid var(--gold-dim); }
+.chip-xp    { background:#0a0818; color:#a080f0; border:1px solid #402880; }
+.chip-room  { background:#08100e; color:#60c090; border:1px solid #206040; }
+
+.xp-bar-wrap { width:160px; }
+.xp-track { height:4px; background:#150e20; border-radius:2px; overflow:hidden; }
+.xp-fill  { height:100%; background:linear-gradient(90deg,#402880,#a060f0); border-radius:2px; }
+.xp-label { font-size:.58rem; color:var(--text-faint); margin-top:2px; text-align:right; }
+
+/* ═══════════════════════════════════════════════════
+   MAIN AREA
+═══════════════════════════════════════════════════ */
+#main-area {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 10px;
+  padding: 0 12px;
+  min-height: 320px;
+}
+
+/* ─── ENEMY ZONE ─── */
+#enemy-zone {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 2px solid #601818;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+#enemy-zone::before {
+  content:'';
+  position:absolute; inset:0; pointer-events:none;
+  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(120,20,20,.18) 0%, transparent 70%);
+}
+
+.boss-frame {
+  display:flex; align-items:center; justify-content:center;
+  background: radial-gradient(ellipse 70% 60% at 50% 70%, rgba(180,30,30,.25) 0%, rgba(60,10,10,.15) 50%, transparent 80%);
+  border-radius: var(--radius);
+  border: 1px solid #3a1010;
+  padding: 20px 10px 10px;
+  position: relative;
+}
+
+.boss-emoji {
+  font-size: 5.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 18px rgba(220,60,20,.6)) drop-shadow(0 4px 12px rgba(0,0,0,.8));
+  animation: boss-float 3s ease-in-out infinite;
+}
+
+@keyframes boss-float {
+  0%,100% { transform:translateY(0) scale(1); }
+  50%      { transform:translateY(-6px) scale(1.03); }
+}
+
+.phase-badge {
+  position:absolute; top:8px; right:8px;
+  font-family:'Cinzel',serif;
+  font-size:.6rem; letter-spacing:1px;
+  background:#2a0808; color:#e06060;
+  border:1px solid #601010;
+  padding:2px 8px; border-radius:20px;
+}
+.phase-pips { display:flex; gap:4px; margin-top:4px; justify-content:center; }
+.phase-pip { width:8px; height:8px; border-radius:50%; background:#2a1010; border:1px solid #501010; }
+.phase-pip.active { background:#cc3030; box-shadow:0 0 6px rgba(200,40,40,.6); }
+
+.boss-info {}
+.boss-name {
+  font-family:'Cinzel',serif;
+  font-size:1.1rem; color:#e06060;
+  text-shadow:0 0 12px rgba(220,60,60,.4);
+  margin-bottom:4px;
+}
+.boss-subtitle { font-size:.75rem; color:var(--text-dim); font-style:italic; margin-bottom:10px; }
+
+.boss-hp-section { margin-bottom:8px; }
+.boss-hp-header {
+  display:flex; justify-content:space-between;
+  font-size:.68rem; color:var(--text-dim); margin-bottom:4px;
+}
+.boss-hp-track {
+  height:14px; background:#1a0808;
+  border-radius:4px; overflow:hidden;
+  border:1px solid #3a1010;
+  position:relative;
+}
+.boss-hp-fill {
+  height:100%;
+  background: linear-gradient(90deg, #6a1010, #c83030, #e05050);
+  border-radius:4px;
+  transition: width .6s ease;
+  position:relative;
+}
+.boss-hp-fill::after {
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(255,255,255,.12) 0%, transparent 50%);
+}
+.boss-hp-shimmer {
+  position:absolute; top:0; bottom:0; width:40px;
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);
+  animation: shimmer 2s linear infinite;
+}
+@keyframes shimmer { from{left:-40px} to{left:100%} }
+
+/* ─── CENTER ZONE ─── */
+#center-zone {
+  display:flex; flex-direction:column; gap:10px;
+}
+
+#story-box {
+  background: var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:16px 18px;
+  flex:1;
+  position:relative;
+  overflow:hidden;
+}
+#story-box::before {
+  content:'';
+  position:absolute; inset:0; pointer-events:none;
+  background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(210,168,72,.04) 0%, transparent 60%);
+}
+.story-heading {
+  font-family:'Cinzel',serif;
+  font-size:.68rem; letter-spacing:2px;
+  color:var(--gold-dim); margin-bottom:10px;
+  display:flex; align-items:center; gap:8px;
+}
+.story-heading::after {
+  content:''; flex:1; height:1px; background:linear-gradient(90deg,var(--gold-dim),transparent);
+}
+#story-text {
+  font-size:.98rem; line-height:1.75;
+  color:#c0b8b0;
+  font-style:italic;
+}
+.story-beat {
+  display:block;
+  margin-top:10px;
+  font-size:.88rem;
+  color:var(--text-dim);
+  font-style:normal;
+}
+
+#room-progress {
+  background: var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:12px 18px;
+}
+.rooms-track {
+  display:flex; align-items:center; gap:0;
+  margin-top:8px; flex-wrap:nowrap; overflow-x:auto;
+}
+.room-node {
+  display:flex; flex-direction:column; align-items:center; gap:4px;
+  flex-shrink:0;
+}
+.room-circle {
+  width:26px; height:26px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:.65rem; font-family:'Cinzel',serif;
+  cursor:default; transition:all .2s;
+}
+.room-done {
+  background:#183018; border:2px solid #30a050; color:#60e080;
+}
+.room-current {
+  background:#1e1408; border:2px solid var(--gold);
+  color:var(--gold);
+  box-shadow:0 0 10px rgba(212,168,72,.4);
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+.room-future { background:#120c18; border:2px solid #2a1e38; color:var(--text-faint); }
+.room-boss   { background:#1a0808; border:2px solid #601010; color:#e06060; }
+.room-connector {
+  width:20px; height:2px;
+  flex-shrink:0;
+}
+.connector-done   { background:linear-gradient(90deg,#206030,#206030); }
+.connector-future { background:#1e1428; }
+.room-lbl { font-size:.55rem; color:var(--text-faint); }
+
+/* ═══════════════════════════════════════════════════
+   STATUS BADGES
+═══════════════════════════════════════════════════ */
+.status-effects { display:flex; gap:5px; flex-wrap:wrap; }
+.sbadge {
+  font-size:.65rem; padding:2px 8px;
+  border-radius:20px; font-weight:600;
+  display:inline-flex; align-items:center; gap:3px;
+}
+.sbadge-fire    { background:#2a0a04; color:#ff8040; border:1px solid #8a2010; }
+.sbadge-rage    { background:#200828; color:#e060ff; border:1px solid #601880; }
+.sbadge-poison  { background:#081a08; color:#60e060; border:1px solid #186018; }
+.sbadge-bleed   { background:#1a0808; color:#ff5050; border:1px solid #601010; }
+.sbadge-focus   { background:#080a20; color:#6090ff; border:1px solid #103080; }
+.sbadge-defend  { background:#101820; color:#80b0e0; border:1px solid #204060; }
+.sbadge-stun    { background:#201800; color:#ffd060; border:1px solid #806010; }
+.sbadge-burn    { background:#200800; color:#ff9040; border:1px solid #803010; }
+
+/* ═══════════════════════════════════════════════════
+   ACTION BAR
+═══════════════════════════════════════════════════ */
+#action-bar {
+  padding: 0 12px;
+  display:flex; gap:8px;
+}
+
+.act-btn {
+  flex:1;
+  display:flex; flex-direction:column; align-items:center; gap:4px;
+  padding:12px 8px;
+  border:1px solid;
+  border-radius:var(--radius);
+  cursor:pointer;
+  font-family:'Cinzel',serif;
+  transition: all .15s;
+  position:relative; overflow:hidden;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.act-btn::before {
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.act-btn:active { transform:scale(.97); }
+.act-btn:disabled { opacity:.4; cursor:not-allowed; }
+
+.btn-icon  { font-size:1.3rem; line-height:1; }
+.btn-label { font-size:.6rem; letter-spacing:1.5px; }
+.btn-cost  { font-size:.55rem; opacity:.7; }
+
+.btn-attack {
+  background:linear-gradient(135deg,#280808,#4a1010);
+  border-color:#8a2020; color:#ff8080;
+  box-shadow:0 0 12px rgba(200,48,48,.35), inset 0 0 8px rgba(200,48,48,.08);
+  animation:glow-red 2.5s ease-in-out infinite;
+}
+.btn-attack:hover { box-shadow:0 0 22px rgba(200,48,48,.6); border-color:#c03030; }
+
+.btn-skills {
+  background:linear-gradient(135deg,#180828,#301048);
+  border-color:#602898; color:#c080ff;
+  box-shadow:0 0 12px rgba(140,60,220,.3), inset 0 0 8px rgba(140,60,220,.06);
+  animation:glow-purple 2.5s ease-in-out infinite;
+}
+.btn-skills:hover { box-shadow:0 0 22px rgba(140,60,220,.55); border-color:#9040d0; }
+
+.btn-defend {
+  background:linear-gradient(135deg,#080828,#102050);
+  border-color:#204090; color:#70a0f0;
+  box-shadow:0 0 12px rgba(48,100,220,.3), inset 0 0 8px rgba(48,100,220,.06);
+  animation:glow-blue 2.5s ease-in-out infinite;
+}
+.btn-defend:hover { box-shadow:0 0 22px rgba(48,100,220,.55); border-color:#3060c0; }
+
+.btn-inventory {
+  background:linear-gradient(135deg,#1a1004,#302010);
+  border-color:#7a5018; color:var(--gold);
+  box-shadow:0 0 12px rgba(210,168,72,.25), inset 0 0 8px rgba(210,168,72,.05);
+  animation:glow-gold 2.5s ease-in-out infinite;
+}
+.btn-inventory:hover { box-shadow:0 0 22px rgba(210,168,72,.5); border-color:var(--gold-dim); }
+
+.btn-talk {
+  background:linear-gradient(135deg,#081808,#103020);
+  border-color:#206040; color:#60d090;
+  box-shadow:0 0 12px rgba(48,160,100,.25), inset 0 0 8px rgba(48,160,100,.05);
+  animation:glow-green 2.5s ease-in-out infinite;
+}
+.btn-talk:hover { box-shadow:0 0 22px rgba(48,160,100,.5); border-color:#30a060; }
+
+@keyframes glow-red    { 0%,100%{box-shadow:0 0 12px rgba(200,48,48,.35)} 50%{box-shadow:0 0 22px rgba(200,48,48,.6),0 0 40px rgba(200,48,48,.15)} }
+@keyframes glow-purple { 0%,100%{box-shadow:0 0 12px rgba(140,60,220,.3)} 50%{box-shadow:0 0 22px rgba(140,60,220,.55),0 0 40px rgba(140,60,220,.12)} }
+@keyframes glow-blue   { 0%,100%{box-shadow:0 0 12px rgba(48,100,220,.3)} 50%{box-shadow:0 0 22px rgba(48,100,220,.55),0 0 40px rgba(48,100,220,.12)} }
+@keyframes glow-gold   { 0%,100%{box-shadow:0 0 12px rgba(210,168,72,.25)} 50%{box-shadow:0 0 22px rgba(210,168,72,.5),0 0 40px rgba(210,168,72,.1)} }
+@keyframes glow-green  { 0%,100%{box-shadow:0 0 12px rgba(48,160,100,.25)} 50%{box-shadow:0 0 22px rgba(48,160,100,.5),0 0 40px rgba(48,160,100,.1)} }
+@keyframes pulse-bar   { 0%,100%{opacity:1} 50%{opacity:.7} }
+@keyframes pulse-gold  { 0%,100%{box-shadow:0 0 10px rgba(212,168,72,.4)} 50%{box-shadow:0 0 18px rgba(212,168,72,.7)} }
+
+/* ═══════════════════════════════════════════════════
+   SKILLS PANEL (overlay)
+═══════════════════════════════════════════════════ */
+#skills-panel {
+  margin: 0 12px;
+  background: var(--panel2);
+  border:1px solid #5030a0;
+  border-radius:var(--radius);
+  padding:14px 16px;
+  box-shadow:0 0 20px rgba(120,60,220,.3);
+  animation: fadeIn .2s ease;
+}
+#skills-panel.hidden { display:none !important; }
+.skills-header {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:12px;
+}
+.skills-title {
+  font-family:'Cinzel',serif;
+  font-size:.75rem; letter-spacing:1.5px; color:#c080ff;
+}
+.skills-close {
+  background:none; border:1px solid #402060;
+  color:#c080ff; font-size:.7rem; padding:2px 8px;
+  border-radius:3px; cursor:pointer;
+  font-family:'Cinzel',serif;
+}
+.skills-close:hover { background:#2a1040; }
+.skills-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+}
+.skill-card {
+  background:var(--panel);
+  border:1px solid #3a2060;
+  border-radius:var(--radius);
+  padding:10px 8px;
+  text-align:center;
+  cursor:pointer;
+  transition:all .15s;
+}
+.skill-card:hover { border-color:#7040c0; background:var(--panel2); transform:translateY(-2px); box-shadow:0 4px 12px rgba(120,60,220,.25); }
+.skill-icon  { font-size:1.4rem; margin-bottom:4px; }
+.skill-name  { font-family:'Cinzel',serif; font-size:.62rem; color:#c080ff; letter-spacing:.5px; margin-bottom:4px; }
+.skill-cost  { font-size:.6rem; color:#7050a0; }
+.skill-desc  { font-size:.6rem; color:var(--text-faint); margin-top:3px; line-height:1.3; }
+
+/* ═══════════════════════════════════════════════════
+   DIALOGUE PANEL
+═══════════════════════════════════════════════════ */
+#dialogue-panel {
+  margin: 0 12px;
+  background: var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:12px 16px;
+  border-left:2px solid var(--gold-dim);
+}
+#dialogue-log {
+  max-height:110px;
+  overflow-y:auto;
+  display:flex; flex-direction:column; gap:2px;
+}
+.dlog-line {
+  font-size:.85rem;
+  color:#b0a898;
+  line-height:1.6;
+  padding:2px 0;
+  border-bottom:1px solid #1a1424;
+  animation:fadeIn .3s ease;
+}
+.dlog-line:last-child { border-bottom:none; }
+.dlog-attack  { color:#ff8060; }
+.dlog-enemy   { color:#e06060; }
+.dlog-defend  { color:#70a0f0; }
+.dlog-heal    { color:#60d090; }
+.dlog-event   { color:var(--gold); font-style:italic; }
+.dlog-talk    { color:#c080ff; font-style:italic; }
+.dlog-system  { color:var(--text-dim); font-size:.78rem; }
+
+@keyframes fadeIn { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:none} }
+
+/* ═══════════════════════════════════════════════════
+   INVENTORY PANEL
+═══════════════════════════════════════════════════ */
+#inventory-panel {
+  margin: 0 12px;
+  background: var(--panel);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:12px 16px;
+  border-left:2px solid var(--gold-dim);
+}
+#inventory-panel.highlighted { border-color:var(--gold); box-shadow:0 0 16px rgba(210,168,72,.2); }
+#inv-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(80px,1fr));
+  gap:6px;
+  margin-top:4px;
+}
+.inv-slot {
+  background:var(--panel2);
+  border:1px solid #2a1e38;
+  border-radius:var(--radius);
+  padding:8px 6px;
+  text-align:center;
+  cursor:pointer;
+  transition:all .15s;
+  position:relative;
+  min-height:72px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
+}
+.inv-slot:hover { border-color:var(--gold-dim); background:#1e1830; }
+.inv-slot.equipped { border-color:var(--gold); box-shadow:0 0 8px rgba(210,168,72,.2); }
+.inv-slot.empty { opacity:.35; cursor:default; }
+.inv-slot.empty:hover { border-color:#2a1e38; background:var(--panel2); }
+.inv-icon   { font-size:1.4rem; }
+.inv-name   { font-size:.6rem; color:var(--text-dim); line-height:1.2; }
+.inv-count  {
+  position:absolute; top:4px; right:6px;
+  font-size:.6rem; color:var(--gold); font-weight:bold;
+}
+.inv-type-badge {
+  font-size:.52rem; padding:1px 5px;
+  border-radius:10px; margin-top:1px;
+}
+.type-weapon     { background:#200808; color:#e06060; border:1px solid #601010; }
+.type-armor      { background:#080820; color:#6090e0; border:1px solid #102060; }
+.type-consumable { background:#081808; color:#60d090; border:1px solid #186030; }
+.type-accessory  { background:#1a1006; color:var(--gold); border:1px solid #604010; }
+
+/* ═══════════════════════════════════════════════════
+   TOOLTIP
+═══════════════════════════════════════════════════ */
+.tooltip {
+  position:absolute; bottom:calc(100% + 6px); left:50%;
+  transform:translateX(-50%);
+  background:#0e0918; border:1px solid var(--border2);
+  border-radius:var(--radius); padding:8px 10px;
+  width:140px; z-index:100;
+  display:none; pointer-events:none;
+  box-shadow:0 4px 16px rgba(0,0,0,.6);
+}
+.inv-slot:hover .tooltip { display:block; }
+.tip-name { font-family:'Cinzel',serif; font-size:.65rem; color:var(--gold); margin-bottom:4px; }
+.tip-desc { font-size:.62rem; color:var(--text-dim); line-height:1.4; }
+
+/* ═══════════════════════════════════════════════════
+   DAMAGE NUMBERS (floating)
+═══════════════════════════════════════════════════ */
+.dmg-float {
+  position:fixed;
+  font-family:'Cinzel',serif;
+  font-size:1.3rem; font-weight:700;
+  pointer-events:none; z-index:200;
+  animation:float-up 1.2s ease-out forwards;
+}
+.dmg-enemy  { color:#ff6040; text-shadow:0 0 8px rgba(255,80,40,.6); }
+.dmg-player { color:#e03030; text-shadow:0 0 8px rgba(220,40,40,.6); }
+.dmg-heal   { color:#40e080; text-shadow:0 0 8px rgba(40,220,100,.6); }
+.dmg-miss   { color:#8080a0; }
+
+@keyframes float-up {
+  0%   { opacity:1; transform:translateY(0) scale(1); }
+  60%  { opacity:1; }
+  100% { opacity:0; transform:translateY(-70px) scale(.7); }
+}
+
+/* ═══════════════════════════════════════════════════
+   SCREEN FLASH
+═══════════════════════════════════════════════════ */
+#flash-overlay {
+  position:fixed; inset:0; z-index:150;
+  pointer-events:none; opacity:0;
+}
+.flash-red    { background:rgba(200,30,30,.2); animation:flash .4s ease; }
+.flash-gold   { background:rgba(210,168,72,.15); animation:flash .4s ease; }
+.flash-blue   { background:rgba(48,100,220,.15); animation:flash .4s ease; }
+@keyframes flash { 0%{opacity:1} 100%{opacity:0} }
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════ */
+@media (max-width:720px) {
+  #main-area { grid-template-columns:1fr; }
+  #enemy-zone { order:-1; }
+  .party-members { flex-wrap:wrap; }
+  .party-card { min-width:140px; }
+  .skills-grid { grid-template-columns:repeat(2,1fr); }
+  .boss-emoji { font-size:4rem; }
+}
+</style>
+</head>
+<body>
+<div id="game-wrapper">
+
+  <!-- ═══ PARTY BAR ═══════════════════════════════════ -->
+  <header id="party-bar">
+    <div class="game-title">⚔ DARK QUEST</div>
+    <div class="party-members" id="party-members"></div>
+    <div class="meta-block">
+      <div class="meta-chips" id="meta-chips"></div>
+      <div class="xp-bar-wrap">
+        <div class="xp-track"><div class="xp-fill" id="xp-fill"></div></div>
+        <div class="xp-label" id="xp-label"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN AREA ═══════════════════════════════════ -->
+  <div id="main-area">
+
+    <!-- Enemy Zone -->
+    <div id="enemy-zone">
+      <div class="boss-frame">
+        <div class="boss-emoji" id="boss-emoji"></div>
+        <div class="phase-badge" id="phase-badge"></div>
+      </div>
+      <div class="phase-pips" id="phase-pips"></div>
+      <div class="boss-info">
+        <div class="boss-name" id="boss-name"></div>
+        <div class="boss-subtitle" id="boss-subtitle"></div>
+        <div class="boss-hp-section">
+          <div class="boss-hp-header">
+            <span>❤ Health</span>
+            <span id="boss-hp-nums"></span>
+          </div>
+          <div class="boss-hp-track">
+            <div class="boss-hp-fill" id="boss-hp-fill">
+              <div class="boss-hp-shimmer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="status-effects" id="boss-statuses"></div>
+      </div>
+    </div>
+
+    <!-- Center Zone -->
+    <div id="center-zone">
+      <div id="story-box">
+        <div class="story-heading">📜 Current Encounter</div>
+        <p id="story-text"></p>
+      </div>
+      <div id="room-progress">
+        <div class="panel-label">🏰 Room Progression</div>
+        <div class="rooms-track" id="rooms-track"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══ ACTION BUTTONS ══════════════════════════════ -->
+  <div id="action-bar">
+    <button class="act-btn btn-attack"    onclick="doAttack()"    id="btn-attack">
+      <span class="btn-icon">⚔</span>
+      <span class="btn-label">ATTACK</span>
+    </button>
+    <button class="act-btn btn-skills"    onclick="toggleSkills()" id="btn-skills">
+      <span class="btn-icon">✦</span>
+      <span class="btn-label">SKILLS</span>
+    </button>
+    <button class="act-btn btn-defend"    onclick="doDefend()"    id="btn-defend">
+      <span class="btn-icon">🛡</span>
+      <span class="btn-label">DEFEND</span>
+    </button>
+    <button class="act-btn btn-inventory" onclick="doInventory()" id="btn-inventory">
+      <span class="btn-icon">📦</span>
+      <span class="btn-label">INVENTORY</span>
+    </button>
+    <button class="act-btn btn-talk"      onclick="doTalk()"      id="btn-talk">
+      <span class="btn-icon">💬</span>
+      <span class="btn-label">TALK</span>
+    </button>
+  </div>
+
+  <!-- ═══ SKILLS OVERLAY ══════════════════════════════ -->
+  <div id="skills-panel" class="hidden">
+    <div class="skills-header">
+      <div class="skills-title">✦ Aria's Spellbook</div>
+      <button class="skills-close" onclick="toggleSkills()">✕ Close</button>
+    </div>
+    <div class="skills-grid" id="skills-grid"></div>
+  </div>
+
+  <!-- ═══ DIALOGUE PANEL ══════════════════════════════ -->
+  <div id="dialogue-panel">
+    <div class="panel-label">💬 Combat Log</div>
+    <div id="dialogue-log"></div>
+  </div>
+
+  <!-- ═══ INVENTORY ════════════════════════════════════ -->
+  <div id="inventory-panel">
+    <div class="panel-label">📦 Party Inventory</div>
+    <div id="inv-grid"></div>
+  </div>
+
+</div>
+
+<!-- Flash overlay -->
+<div id="flash-overlay"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   GAME STATE  (placeholder / sample data)
+═══════════════════════════════════════════════════ */
+const S = {
+  turn: 0,
+  busy: false,
+  defending: false,
+  talkIdx: 0,
+  gold: 450,
+  xp: 2840, xpNext: 3500,
+  room: 3, totalRooms: 8,
+  party: [
+    { name:'Aria',  cls:'Arcane Mage',   icon:'🧙', portrait:'portrait-mage',
+      hp:68, maxHp:80, mp:45, maxMp:60, statuses:['focus'] },
+    { name:'Durn',  cls:'Iron Warrior',  icon:'⚔',  portrait:'portrait-warrior',
+      hp:42, maxHp:90, mp:0,  maxMp:0,  statuses:['bleed'] },
+    { name:'Lyss',  cls:'Shadow Rogue',  icon:'🗡',  portrait:'portrait-rogue',
+      hp:30, maxHp:55, mp:28, maxMp:40, statuses:['poison'] },
+  ],
+  enemy: {
+    name:'Ancient Dragon', emoji:'🐉',
+    subtitle:'Elder Wyrm of the Crimson Depths',
+    hp:240, maxHp:300, phase:2, maxPhase:3,
+    statuses:['fire','rage'],
+  },
+  inventory: [
+    { name:'Flame Blade',      icon:'🗡️',  type:'weapon',     count:1, desc:'A blade forged in dragonfire. +18 ATK, deals bonus fire damage.',  equipped:true  },
+    { name:'Iron Bulwark',     icon:'🛡️',  type:'armor',      count:1, desc:'Heavy tower shield. +25 DEF, reduces physical damage by 20%.',      equipped:false },
+    { name:'Healing Draught',  icon:'🧪',  type:'consumable', count:3, desc:'Restores 35 HP to a single target. Brewed by Aldric the Alchemist.', equipped:false },
+    { name:'Mana Crystal',     icon:'💎',  type:'consumable', count:2, desc:'Restores 30 MP instantly. Glows with arcane resonance.',             equipped:false },
+    { name:'Amulet of Power',  icon:'📿',  type:'accessory',  count:1, desc:'Ancient relic. +10 to all stats. Radiates dark energy.',            equipped:false },
+    { name:'Shadow Cloak',     icon:'🧥',  type:'armor',      count:1, desc:'Increases dodge chance by 15%. Grants invisibility once per battle.', equipped:false },
+    null, null,
+  ],
+  skills: [
+    { name:'Arcane Blast', icon:'⚡', cost:'15 MP', desc:'Channels raw magic into a devastating bolt.' },
+    { name:'Frost Nova',   icon:'❄️', cost:'25 MP', desc:'Erupts in ice, freezing all enemies for 1 turn.' },
+    { name:'Mana Shield',  icon:'🔮', cost:'20 MP', desc:'Forms a barrier that absorbs 40 damage.' },
+    { name:'Ethereal Form',icon:'👻', cost:'30 MP', desc:'Become intangible — dodge the next 2 attacks.' },
+    { name:'Arcane Storm', icon:'🌀', cost:'40 MP', desc:'Calls down a torrent of magic missiles (AOE).' },
+    { name:'Time Warp',    icon:'⏳', cost:'35 MP', desc:'Takes an extra turn immediately.' },
+    { name:'Drain Life',   icon:'💀', cost:'22 MP', desc:'Steals 30 HP from target. Heals caster.' },
+    { name:'Meteor Strike',icon:'☄️',  cost:'50 MP', desc:'Calls a meteor. Devastating AoE damage.' },
+  ],
+  storyLines: [
+    `You descend into the bone-strewn crypt beneath <em>Castle Valdris</em>. The torchlight flickers and dies as a terrible shape unfurls in the darkness ahead — scales like obsidian, eyes burning with ancient fury. <span class="story-beat">The Ancient Dragon has awakened. The air smells of sulfur and old blood.</span>`,
+    `The dragon rears back, wings spreading wide enough to blot out the ceiling. A low rumble builds in its chest — the sound of an avalanche beginning. <span class="story-beat">Phase 2 begins. The Wyrm calls upon its full power.</span>`,
+    `Cracks spread across the floor as the dragon channels a surge of crimson energy. The temperature drops. Then spikes. The very stone begins to glow. <span class="story-beat">Its scales harden. The creature has entered a Bloodrage state.</span>`,
+  ],
+  talkLines: [
+    `"Foolish mortals. You dare enter my lair with steel and sorcery? I have slept for a thousand years. I have burned kingdoms to cinder."`,
+    `"Your companion bleeds. I can smell it. That one — the warrior — he will not survive the next breath. Surrender and I will make it quick."`,
+    `"You intrigue me, little mage. The power you carry… it smells of the Void. Who taught you such arts? No matter. The knowledge dies with you."`,
+    `"Enough. I grow tired of your defiance."`,
+  ],
+  combatMessages: {
+    attack: [
+      (dmg) => `⚔ Aria releases an Arcane Blast! The dragon reels — <strong>${dmg} damage!</strong>`,
+      (dmg) => `⚔ Durn charges forward, slamming his blade into the scales! <strong>${dmg} damage!</strong>`,
+      (dmg) => `⚔ Lyss strikes from the shadows with deadly precision! <strong>${dmg} damage!</strong>`,
+    ],
+    enemy: [
+      (dmg) => `🔥 The dragon breathes a column of fire! <strong>${dmg} damage</strong> to the party!`,
+      (dmg) => `🐉 The dragon's tail sweeps the cavern — <strong>${dmg} damage</strong> hits Durn!`,
+      (dmg) => `💨 A gust of dark wind from the dragon's wings batters the party! <strong>${dmg} damage!</strong>`,
+    ],
+  },
+};
+
+/* ═══════════════════════════════════════════════════
+   RENDER HELPERS
+═══════════════════════════════════════════════════ */
+const STATUS_MAP = {
+  fire:   ['🔥 Burning',  'sbadge-fire'],
+  rage:   ['⚡ Enraged', 'sbadge-rage'],
+  poison: ['☠ Poisoned', 'sbadge-poison'],
+  bleed:  ['🩸 Bleeding', 'sbadge-bleed'],
+  focus:  ['✨ Focused',  'sbadge-focus'],
+  defend: ['🛡 Defended', 'sbadge-defend'],
+  stun:   ['💫 Stunned',  'sbadge-stun'],
+  burn:   ['🔥 Burn',     'sbadge-burn'],
+};
+
+function renderBadges(list) {
+  return list.map(s => {
+    const [label, cls] = STATUS_MAP[s] || [s, 'sbadge-burn'];
+    return `<span class="sbadge ${cls}">${label}</span>`;
+  }).join('');
+}
+
+function hpClass(pct) {
+  if (pct > 55) return 'hp-fill-high';
+  if (pct > 28) return 'hp-fill-mid';
+  return 'hp-fill-low';
+}
+
+/* ─── Party Bar ─── */
+function renderPartyBar() {
+  const pm = document.getElementById('party-members');
+  pm.innerHTML = S.party.map(m => {
+    const hpPct = Math.max(0, Math.round(m.hp / m.maxHp * 100));
+    const mpPct = m.maxMp ? Math.max(0, Math.round(m.mp / m.maxMp * 100)) : 0;
+    return `
+      <div class="party-card">
+        <div class="party-portrait ${m.portrait}">${m.icon}</div>
+        <div class="party-info">
+          <div class="party-name">${m.name}</div>
+          <div class="party-class">${m.cls}</div>
+          <div class="bar-wrap">
+            <div class="bar-row">
+              <span class="bar-icon">❤</span>
+              <div class="bar-track"><div class="bar-fill ${hpClass(hpPct)}" style="width:${hpPct}%"></div></div>
+              <span class="bar-num">${m.hp}/${m.maxHp}</span>
+            </div>
+            ${m.maxMp ? `<div class="bar-row">
+              <span class="bar-icon">✦</span>
+              <div class="bar-track"><div class="bar-fill mp-fill" style="width:${mpPct}%"></div></div>
+              <span class="bar-num">${m.mp}/${m.maxMp}</span>
+            </div>` : ''}
+          </div>
+          <div class="party-statuses">${renderBadges(m.statuses)}</div>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Meta chips
+  document.getElementById('meta-chips').innerHTML = `
+    <span class="meta-chip chip-gold">💰 ${S.gold.toLocaleString()}g</span>
+    <span class="meta-chip chip-xp">⭐ Lv.7</span>
+    <span class="meta-chip chip-room">🏰 Room ${S.room} / ${S.totalRooms}</span>`;
+
+  // XP bar
+  const xpPct = Math.round(S.xp / S.xpNext * 100);
+  document.getElementById('xp-fill').style.width = xpPct + '%';
+  document.getElementById('xp-label').textContent = `${S.xp.toLocaleString()} / ${S.xpNext.toLocaleString()} XP`;
+}
+
+/* ─── Enemy Zone ─── */
+function renderEnemy() {
+  const e = S.enemy;
+  const pct = Math.max(0, Math.round(e.hp / e.maxHp * 100));
+  document.getElementById('boss-emoji').textContent = e.emoji;
+  document.getElementById('boss-name').textContent = e.name;
+  document.getElementById('boss-subtitle').textContent = e.subtitle;
+  document.getElementById('phase-badge').textContent = `Phase ${e.phase}/${e.maxPhase}`;
+  document.getElementById('boss-hp-nums').textContent = `${e.hp} / ${e.maxHp}`;
+  document.getElementById('boss-hp-fill').style.width = pct + '%';
+  document.getElementById('boss-statuses').innerHTML = renderBadges(e.statuses);
+
+  const pips = document.getElementById('phase-pips');
+  pips.innerHTML = Array.from({length:e.maxPhase},(_,i) =>
+    `<div class="phase-pip ${i < e.phase ? 'active' : ''}"></div>`).join('');
+}
+
+/* ─── Story Text ─── */
+function renderStory() {
+  const idx = Math.min(S.enemy.phase - 1, S.storyLines.length - 1);
+  document.getElementById('story-text').innerHTML = S.storyLines[idx];
+}
+
+/* ─── Room Progress ─── */
+function renderRooms() {
+  const track = document.getElementById('rooms-track');
+  let html = '';
+  for (let i = 1; i <= S.totalRooms; i++) {
+    const isLast   = i === S.totalRooms;
+    const isDone   = i < S.room;
+    const isCur    = i === S.room;
+    const isBoss   = isLast;
+    const nodeClass = isBoss  ? 'room-boss'    :
+                      isDone  ? 'room-done'    :
+                      isCur   ? 'room-current' : 'room-future';
+    const label     = isBoss  ? '☠' : isDone ? '✓' : i;
+    html += `<div class="room-node">
+      <div class="room-circle ${nodeClass}">${label}</div>
+      <div class="room-lbl">${isBoss ? 'Boss' : isCur ? 'Here' : ''}</div>
+    </div>`;
+    if (i < S.totalRooms) {
+      html += `<div class="room-connector ${isDone ? 'connector-done' : 'connector-future'}"></div>`;
+    }
+  }
+  track.innerHTML = html;
+}
+
+/* ─── Skills Grid ─── */
+function renderSkills() {
+  document.getElementById('skills-grid').innerHTML = S.skills.map(sk => `
+    <div class="skill-card" onclick="useSkill('${sk.name}')">
+      <div class="skill-icon">${sk.icon}</div>
+      <div class="skill-name">${sk.name}</div>
+      <div class="skill-cost">${sk.cost}</div>
+      <div class="skill-desc">${sk.desc}</div>
+    </div>`).join('');
+}
+
+/* ─── Inventory ─── */
+function renderInventory() {
+  document.getElementById('inv-grid').innerHTML = S.inventory.map(item => {
+    if (!item) return `<div class="inv-slot empty"><div class="inv-icon">·</div></div>`;
+    return `<div class="inv-slot ${item.equipped ? 'equipped' : ''}">
+      <div class="inv-icon">${item.icon}</div>
+      <div class="inv-name">${item.name}</div>
+      <div class="inv-type-badge type-${item.type}">${item.type}</div>
+      ${item.count > 1 ? `<div class="inv-count">×${item.count}</div>` : ''}
+      <div class="tooltip">
+        <div class="tip-name">${item.name}</div>
+        <div class="tip-desc">${item.desc}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ─── Master Render ─── */
+function render() {
+  renderPartyBar();
+  renderEnemy();
+  renderStory();
+  renderRooms();
+  renderInventory();
+}
+
+/* ═══════════════════════════════════════════════════
+   DIALOGUE LOG
+═══════════════════════════════════════════════════ */
+function log(msg, cls='') {
+  const log = document.getElementById('dialogue-log');
+  const div = document.createElement('div');
+  div.className = 'dlog-line ' + cls;
+  div.innerHTML = msg;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+  // keep last 30 lines
+  while (log.children.length > 30) log.removeChild(log.firstChild);
+}
+
+/* ═══════════════════════════════════════════════════
+   FLOATING DAMAGE NUMBER
+═══════════════════════════════════════════════════ */
+function floatDmg(x, y, text, cls) {
+  const el = document.createElement('div');
+  el.className = 'dmg-float ' + cls;
+  el.textContent = text;
+  el.style.left = (x - 20) + 'px';
+  el.style.top  = (y - 20) + 'px';
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1300);
+}
+
+/* ═══════════════════════════════════════════════════
+   SCREEN FLASH
+═══════════════════════════════════════════════════ */
+function flash(cls) {
+  const el = document.getElementById('flash-overlay');
+  el.className = cls;
+  void el.offsetWidth; // reflow
+  el.className = cls; // re-apply animation
+  setTimeout(() => el.className = '', 450);
+}
+
+/* ═══════════════════════════════════════════════════
+   DISABLE / ENABLE BUTTONS
+═══════════════════════════════════════════════════ */
+function setBtnsDisabled(v) {
+  ['attack','skills','defend','inventory','talk'].forEach(id =>
+    document.getElementById('btn-' + id).disabled = v);
+}
+
+/* ═══════════════════════════════════════════════════
+   ACTION: ATTACK
+═══════════════════════════════════════════════════ */
+function doAttack() {
+  if (S.busy) return;
+  S.busy = true;
+  setBtnsDisabled(true);
+  S.turn++;
+
+  // Player attacks
+  const dmg = Math.floor(Math.random() * 30) + 18;
+  S.enemy.hp = Math.max(0, S.enemy.hp - dmg);
+  const atkMsg = S.combatMessages.attack[S.turn % 3](dmg);
+  log(atkMsg, 'dlog-attack');
+
+  // Float dmg on enemy area
+  const ez = document.getElementById('enemy-zone').getBoundingClientRect();
+  floatDmg(ez.left + ez.width * .5, ez.top + ez.height * .3, '-' + dmg, 'dmg-enemy');
+
+  // XP gain
+  S.xp = Math.min(S.xpNext, S.xp + Math.floor(dmg * .4));
+  S.gold += Math.floor(Math.random() * 5) + 2;
+
+  // Phase check
+  const pct = S.enemy.hp / S.enemy.maxHp;
+  if (pct < .34 && S.enemy.phase < 3)      { S.enemy.phase = 3; log('⚠ The dragon enters Phase 3 — BLOODRAGE FORM!', 'dlog-event'); }
+  else if (pct < .67 && S.enemy.phase < 2) { S.enemy.phase = 2; log('⚠ The dragon enters Phase 2 — scales harden!', 'dlog-event'); }
+
+  render();
+
+  if (S.enemy.hp <= 0) {
+    log('☀ The Ancient Dragon has been slain! Victory!', 'dlog-event');
+    S.busy = false;
+    setBtnsDisabled(false);
+    return;
+  }
+
+  // Enemy counter
+  setTimeout(() => {
+    const defending = S.defending;
+    let enemyDmg = Math.floor(Math.random() * 22) + 10;
+    if (defending) { enemyDmg = Math.floor(enemyDmg * .4); }
+
+    const targetIdx = Math.floor(Math.random() * S.party.length);
+    S.party[targetIdx].hp = Math.max(0, S.party[targetIdx].hp - enemyDmg);
+    const eMsg = S.combatMessages.enemy[S.turn % 3](enemyDmg);
+    log(eMsg, 'dlog-enemy');
+    flash('flash-red');
+
+    const pm = document.querySelectorAll('.party-card')[targetIdx];
+    if (pm) {
+      const r = pm.getBoundingClientRect();
+      floatDmg(r.left + r.width*.5, r.top, '-' + enemyDmg, 'dmg-player');
+    }
+
+    // Dragon special (chance)
+    if (Math.random() < .35) {
+      const specials = [
+        () => { log('🔥 FIRE BREATH — the cavern fills with roiling flame!', 'dlog-enemy'); flash('flash-red'); },
+        () => { log('⚡ The dragon\'s scales crackle with dark lightning — Aria is STUNNED!', 'dlog-enemy');
+                if (!S.party[0].statuses.includes('stun')) S.party[0].statuses.push('stun'); },
+        () => { log('🌑 The dragon drains life force — Aria loses 12 MP!', 'dlog-enemy'); S.party[0].mp = Math.max(0, S.party[0].mp - 12); },
+      ];
+      specials[Math.floor(Math.random() * specials.length)]();
+    }
+
+    S.defending = false;
+    render();
+    S.busy = false;
+    setBtnsDisabled(false);
+  }, 900);
+}
+
+/* ═══════════════════════════════════════════════════
+   ACTION: DEFEND
+═══════════════════════════════════════════════════ */
+function doDefend() {
+  if (S.busy) return;
+  S.defending = true;
+  if (!S.party[0].statuses.includes('defend')) S.party[0].statuses.push('defend');
+  log('🛡 Aria braces the party for impact. Incoming damage reduced by 60%!', 'dlog-defend');
+  flash('flash-blue');
+  log('⚔ The party takes a defensive stance…', 'dlog-system');
+
+  // Remove defend next turn via a timeout
+  setTimeout(() => {
+    S.party[0].statuses = S.party[0].statuses.filter(s => s !== 'defend');
+    render();
+  }, 4000);
+  render();
+}
+
+/* ═══════════════════════════════════════════════════
+   ACTION: SKILLS TOGGLE
+═══════════════════════════════════════════════════ */
+function toggleSkills() {
+  const panel = document.getElementById('skills-panel');
+  panel.classList.toggle('hidden');
+}
+
+function useSkill(name) {
+  const skill = S.skills.find(s => s.name === name);
+  if (!skill) return;
+  const mpCost = parseInt(skill.cost);
+  if (S.party[0].mp < mpCost) {
+    log(`✦ Not enough MP to cast ${name}!`, 'dlog-system');
+    return;
+  }
+  S.party[0].mp -= mpCost;
+  const dmg = Math.floor(Math.random() * 40) + 25;
+  S.enemy.hp = Math.max(0, S.enemy.hp - dmg);
+  log(`✦ Aria casts <strong>${name}</strong>! The dragon takes <strong>${dmg} damage!</strong>`, 'dlog-attack');
+  flash('flash-gold');
+
+  // Float
+  const ez = document.getElementById('enemy-zone').getBoundingClientRect();
+  floatDmg(ez.left + ez.width*.5, ez.top + ez.height*.2, '-' + dmg + '!', 'dmg-enemy');
+
+  S.xp = Math.min(S.xpNext, S.xp + Math.floor(dmg * .5));
+  toggleSkills();
+  render();
+}
+
+/* ═══════════════════════════════════════════════════
+   ACTION: INVENTORY
+═══════════════════════════════════════════════════ */
+function doInventory() {
+  const panel = document.getElementById('inventory-panel');
+  panel.classList.toggle('highlighted');
+  log('📦 Inventory opened. Use items by clicking slots.', 'dlog-system');
+  panel.scrollIntoView({ behavior:'smooth', block:'nearest' });
+
+  // Simulate using a potion
+  const potion = S.inventory.find(i => i && i.type === 'consumable' && i.count > 0);
+  if (potion) {
+    setTimeout(() => {
+      const heal = 35;
+      S.party[0].hp = Math.min(S.party[0].maxHp, S.party[0].hp + heal);
+      potion.count--;
+      if (potion.count <= 0) S.inventory[S.inventory.indexOf(potion)] = null;
+      log(`🧪 Aria drinks a <strong>${potion.name}</strong> — restored <strong>${heal} HP!</strong>`, 'dlog-heal');
+      flash('flash-gold');
+      const pm = document.querySelectorAll('.party-card')[0];
+      if (pm) { const r = pm.getBoundingClientRect(); floatDmg(r.left + r.width*.5, r.top, '+'+heal+' HP', 'dmg-heal'); }
+      render();
+    }, 600);
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   ACTION: TALK
+═══════════════════════════════════════════════════ */
+function doTalk() {
+  const line = S.talkLines[S.talkIdx % S.talkLines.length];
+  S.talkIdx++;
+  log(`💬 <em>Ancient Dragon: "${line}"</em>`, 'dlog-talk');
+}
+
+/* ═══════════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════════ */
+renderSkills();
+render();
+
+// Opening log
+setTimeout(() => log('📜 The Ancient Dragon awakens. Prepare for battle!', 'dlog-event'), 300);
+setTimeout(() => log('⚔ It is your turn. Choose an action.', 'dlog-system'), 700);
+</script>
+</body>
+</html>

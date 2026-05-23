@@ -6,8 +6,32 @@ expertMode = true
 runButton = "Project"
 
 [[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "UI Mockup"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run App"
+
+[[workflows.workflow]]
+name = "UI Mockup"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python ui_mockup/server.py"
+waitForPort = 5000
+
+[[workflows.workflow]]
 name = "Run App"
-mode = "sequential"
 author = "agent"
 
 [[workflows.workflow.tasks]]
@@ -17,15 +41,6 @@ waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Run App"
 
 [nix]
 

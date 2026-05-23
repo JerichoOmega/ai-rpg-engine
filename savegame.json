@@ -1,0 +1,17 @@
+{
+    "player_hp": 42,
+    "player_gold": 20,
+    "player_level": 1,
+    "player_xp": 49,
+    "xp_to_next_level": 100,
+    "inventory": [
+        "Magic Staff",
+        "Healing Potion"
+    ],
+    "equipped_weapon": "Magic Staff",
+    "weapon_bonus": 5,
+    "player_reputation": 0,
+    "cult_defeated": false,
+    "dragon_defeated": true,
+    "knight_defeated": false
+}
