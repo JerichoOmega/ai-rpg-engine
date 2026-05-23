@@ -1,59 +1,302 @@
-def shop(player_gold, player_hp):
+import random
 
-global inventory
-global equipped_weapon
-global weapon_bonus
+from combat import combat
 
-print("\n=== SHOP ===")
+from story import generate_story
 
-print("Gold:", player_gold)
+from inventory import (
+    show_inventory,
+    add_item,
+    remove_item,
+    use_potion,
+    equip_weapon
+)
 
-print("\n1. Healing Potion (15 gold)")
-print("2. Steel Sword (+6 attack) (30 gold)")
-print("3. Leave Shop")
+from events import random_event
 
-choice = input("\nChoose: ")
+from shop import shop
 
-# HEALING POTION
+from player import (
+    create_player,
+    check_level_up,
+    show_story_state
+)
 
-if choice == "1":
+# =========================
+# PLAYER MEMORY / STORY STATE
+# =========================
 
-    if player_gold >= 15:
+cult_defeated = False
+dragon_defeated = False
+knight_defeated = False
 
-        player_gold -= 15
+player_gold = 25
+player_reputation = 0
 
-        inventory.append("Healing Potion")
+# =========================
+# PLAYER PROGRESSION
+# =========================
 
-        print("\nYou bought a Healing Potion.")
+player_level = 1
+player_xp = 0
+xp_to_next_level = 100
 
-    else:
+# =========================
+# INVENTORY / EQUIPMENT
+# =========================
 
-        print("\nNot enough gold.")
+inventory = []
 
-# STEEL SWORD
+equipped_weapon = "Rusty Sword"
 
-elif choice == "2":
+weapon_bonus = 0
 
-    if player_gold >= 30:
+# =========================
+# ADVENTURE SETTINGS
+# =========================
 
-        player_gold -= 30
+adventure_length = 3
+current_room = 1
 
-        equipped_weapon = "Steel Sword"
+# =========================
+# ENEMIES
+# =========================
 
-        weapon_bonus = 6
+enemies = {
 
-        inventory.append("Steel Sword")
+    "hidden cult": {
+        "hp_min": 15,
+        "hp_max": 25,
+        "special": "summon"
+    },
 
-        print("\nYou equipped the Steel Sword!")
+    "ancient dragon": {
+        "hp_min": 30,
+        "hp_max": 45,
+        "special": "fire"
+    },
 
-    else:
+    "corrupted knight": {
+        "hp_min": 20,
+        "hp_max": 35,
+        "special": "shield"
+    },
 
-        print("\nNot enough gold.")
+    "shadow beast": {
+        "hp_min": 18,
+        "hp_max": 30,
+        "special": "dodge"
+    },
 
-# LEAVE
+    "necromancer": {
+        "hp_min": 20,
+        "hp_max": 40,
+        "special": "heal"
+    }
+}
 
-elif choice == "3":
+# =========================
+# CREATE PLAYER
+# =========================
 
-    print("\nYou leave the shop.")
+player_class, player_hp, attack_bonus = create_player()
 
-return player_gold, player_hp
+# =========================
+# MAIN GAME LOOP
+# =========================
+
+while current_room <= adventure_length and player_hp > 0:
+
+    # STORY GENERATION
+
+    quest, location, enemy_name = generate_story(enemies)
+
+    enemy_hp = random.randint(
+        enemies[enemy_name]["hp_min"],
+        enemies[enemy_name]["hp_max"]
+    )
+
+    print("\n=== YOUR ADVENTURE ===")
+
+    print("\n" + quest)
+
+    print("\nThe danger waits...")
+    print(location)
+
+    print("\nMain Enemy:")
+    print(enemy_name)
+
+    # =========================
+    # COMBAT
+    # =========================
+
+    player_hp, enemy_hp = combat(
+        player_hp,
+        enemy_name,
+        enemy_hp,
+        attack_bonus,
+        inventory,
+        enemies,
+        equipped_weapon,
+        weapon_bonus
+    )
+
+    # =========================
+    # PLAYER DEFEATED
+    # =========================
+
+    if player_hp <= 0:
+
+        print("\nYou were defeated...")
+        print("Darkness closes in around you.")
+
+    # =========================
+    # PLAYER VICTORY
+    # =========================
+
+    elif enemy_hp <= 0:
+
+        print("\nVictory!")
+        print("The enemy has fallen.")
+
+        # GOLD
+
+        reward = random.randint(10, 30)
+
+        player_gold += reward
+
+        print("You gained", reward, "gold!")
+        print("Total Gold:", player_gold)
+
+        # XP
+
+        xp_gained = random.randint(40, 70)
+
+        player_xp += xp_gained
+
+        print("You gained", xp_gained, "XP!")
+
+        (
+            player_level,
+            player_xp,
+            xp_to_next_level,
+            player_hp,
+            attack_bonus
+        ) = check_level_up(
+            player_level,
+            player_xp,
+            xp_to_next_level,
+            player_hp,
+            attack_bonus
+        )
+
+        # =========================
+        # LOOT
+        # =========================
+
+        loot_items = [
+            "Iron Sword",
+            "Magic Staff",
+            "Shadow Dagger",
+            "Healing Potion",
+            "Dragon Shield"
+        ]
+
+        loot = random.choice(loot_items)
+
+        inventory = add_item(inventory, loot)
+
+        # EQUIP WEAPON
+
+        if loot in [
+            "Iron Sword",
+            "Magic Staff",
+            "Shadow Dagger",
+            "Steel Sword"
+        ]:
+
+            equipped_weapon, weapon_bonus = equip_weapon(loot)
+
+        # =========================
+        # STORY MEMORY
+        # =========================
+
+        if enemy_name == "hidden cult":
+
+            cult_defeated = True
+
+        elif enemy_name == "ancient dragon":
+
+            dragon_defeated = True
+
+        elif enemy_name == "corrupted knight":
+
+            knight_defeated = True
+
+        # =========================
+        # RANDOM EVENT
+        # =========================
+
+        (
+            player_hp,
+            player_gold,
+            inventory
+        ) = random_event(
+            player_hp,
+            player_gold,
+            inventory
+        )
+
+        # =========================
+        # SHOP
+        # =========================
+
+        (
+            player_gold,
+            player_hp,
+            inventory,
+            equipped_weapon,
+            weapon_bonus
+        ) = shop(
+            player_gold,
+            player_hp,
+            inventory,
+            equipped_weapon,
+            weapon_bonus
+        )
+
+        current_room += 1
+
+        # =========================
+        # CONTINUE
+        # =========================
+
+        if current_room <= adventure_length:
+
+            print("\nYou continue deeper into the adventure...")
+
+        else:
+
+            print("\n=== FINAL VICTORY ===")
+            print("You survived the adventure!")
+
+# =========================
+# FINAL STORY STATE
+# =========================
+
+show_story_state(
+    cult_defeated,
+    dragon_defeated,
+    knight_defeated,
+    player_gold,
+    player_reputation,
+    player_level,
+    player_xp,
+    xp_to_next_level
+)
+
+show_inventory(
+    inventory,
+    equipped_weapon,
+    weapon_bonus
+)
