@@ -18,6 +18,10 @@ args = "UI Mockup"
 task = "workflow.run"
 args = "Run App"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Preview"
+
 [[workflows.workflow]]
 name = "UI Mockup"
 author = "agent"
@@ -41,6 +45,18 @@ waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[[workflows.workflow]]
+name = "Preview"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python preview.py"
+waitForPort = 5000
 
 [nix]
 

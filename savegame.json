@@ -1,17 +1,17 @@
 {
-    "player_hp": 42,
-    "player_gold": 20,
+    "player_hp": 62,
+    "player_gold": 35,
     "player_level": 1,
-    "player_xp": 49,
+    "player_xp": 65,
     "xp_to_next_level": 100,
     "inventory": [
-        "Magic Staff",
+        "Shadow Dagger",
         "Healing Potion"
     ],
-    "equipped_weapon": "Magic Staff",
-    "weapon_bonus": 5,
+    "equipped_weapon": "Shadow Dagger",
+    "weapon_bonus": 4,
     "player_reputation": 0,
     "cult_defeated": false,
-    "dragon_defeated": true,
+    "dragon_defeated": false,
     "knight_defeated": false
 }
