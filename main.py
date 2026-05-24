@@ -49,6 +49,13 @@ from quests import (
     complete_quest_rewards
 )
 
+from world_state import (
+    world_state,
+    update_world_state,
+    show_world_state,
+    world_event
+)
+
 from player import (
     create_player,
     check_level_up,
@@ -160,41 +167,105 @@ if game_choice == "2":
 
     if save_data:
 
-        player_hp = save_data["player_hp"]
+        # =========================
+        # PLAYER
+        # =========================
 
-        player_gold = save_data["player_gold"]
+        player_hp = save_data[
+            "player_hp"
+        ]
 
-        player_level = save_data["player_level"]
+        player_gold = save_data[
+            "player_gold"
+        ]
 
-        player_xp = save_data["player_xp"]
+        player_level = save_data[
+            "player_level"
+        ]
 
-        xp_to_next_level = save_data["xp_to_next_level"]
+        player_xp = save_data[
+            "player_xp"
+        ]
 
-        inventory = save_data["inventory"]
+        xp_to_next_level = save_data[
+            "xp_to_next_level"
+        ]
 
-        equipped_weapon = save_data["equipped_weapon"]
+        player_class = save_data[
+            "player_class"
+        ]
 
-        weapon_bonus = save_data["weapon_bonus"]
+        resource_name = save_data[
+            "resource_name"
+        ]
 
-        player_reputation = save_data["player_reputation"]
+        player_resource = save_data[
+            "player_resource"
+        ]
 
-        cult_defeated = save_data["cult_defeated"]
+        max_resource = save_data[
+            "max_resource"
+        ]
 
-        dragon_defeated = save_data["dragon_defeated"]
+        player_defense = save_data[
+            "player_defense"
+        ]
 
-        knight_defeated = save_data["knight_defeated"]
+        player_dodge = save_data[
+            "player_dodge"
+        ]
 
-        player_class = save_data["player_class"]
+        # =========================
+        # INVENTORY
+        # =========================
 
-        resource_name = save_data["resource_name"]
+        inventory = save_data[
+            "inventory"
+        ]
 
-        player_resource = save_data["player_resource"]
+        equipped_weapon = save_data[
+            "equipped_weapon"
+        ]
 
-        max_resource = save_data["max_resource"]
+        weapon_bonus = save_data[
+            "weapon_bonus"
+        ]
 
-        player_defense = save_data["player_defense"]
+        # =========================
+        # STORY FLAGS
+        # =========================
 
-        player_dodge = save_data["player_dodge"]
+        player_reputation = save_data[
+            "player_reputation"
+        ]
+
+        cult_defeated = save_data[
+            "cult_defeated"
+        ]
+
+        dragon_defeated = save_data[
+            "dragon_defeated"
+        ]
+
+        knight_defeated = save_data[
+            "knight_defeated"
+        ]
+
+        # =========================
+        # WORLD / STORY
+        # =========================
+
+        factions = save_data[
+            "factions"
+        ]
+
+        story_memory = save_data[
+            "story_memory"
+        ]
+
+        party = save_data[
+            "party"
+        ]
 
         attack_bonus = 5
 
@@ -236,6 +307,18 @@ while (
     current_room <= adventure_length
     and player_hp > 0
 ):
+
+    # =========================
+    # WORLD EVOLUTION
+    # =========================
+
+    update_world_state(
+        factions,
+        story_memory,
+        party
+    )
+
+    world_event()
 
     # =========================
     # STORY GENERATION
@@ -685,7 +768,16 @@ while (
             player_reputation,
             cult_defeated,
             dragon_defeated,
-            knight_defeated
+            knight_defeated,
+            player_class,
+            resource_name,
+            player_resource,
+            max_resource,
+            player_defense,
+            player_dodge,
+            factions,
+            story_memory,
+            party
         )
 
         current_room += 1
@@ -770,6 +862,12 @@ for memory_key in story_memory:
         "-",
         story_memory[memory_key]
     )
+
+# =========================
+# WORLD STATE
+# =========================
+
+show_world_state()
 
 # =========================
 # FINAL INVENTORY

@@ -1,407 +1,319 @@
-import random
+# =========================
+# PLAYER SYSTEM
+# =========================
 
-from status_effects import (
-    add_status_effect,
-    process_status_effects
-)
+def create_player():
 
-from skills import (
-    power_strike,
-    fireball,
-    backstab
-)
+    print(
+        "\n=== CHARACTER CREATION ==="
+    )
 
-from equipment import get_weapon_stats
+    print(
+        "\nChoose Your Class"
+    )
 
-def combat(
-    player_hp,
-    enemy_name,
-    enemy_hp,
-    attack_bonus,
-    inventory,
-    enemies,
-    equipped_weapon,
-    weapon_bonus,
-    player_class,
-    player_resource,
-    max_resource,
-    resource_name,
-    player_defense
-):
+    print(
+        "(type warrior, mage, or rogue)"
+    )
 
-    turn_count = 1
+    print("• Warrior")
+    print("• Mage")
+    print("• Rogue")
 
-    active_effects = []
+    choice = input("> ").lower()
 
-    while player_hp > 0 and enemy_hp > 0:
+    # =========================
+    # WARRIOR
+    # =========================
 
-        # =========================
-        # PROCESS STATUS EFFECTS
-        # =========================
+    if (
 
-        player_hp, active_effects = process_status_effects(
-            player_hp,
-            active_effects
-        )
+        choice == "warrior"
 
-        print("\n======================")
-        print("Your HP:", player_hp)
+    ):
+
+        player_class = "Warrior"
+
+        player_hp = 140
+
+        attack_bonus = 8
+
+        resource_name = "Stamina"
+
+        player_resource = 100
+
+        max_resource = 100
+
+        player_defense = 5
+
+        player_dodge = 5
 
         print(
-            resource_name + ":",
-            player_resource,
-            "/",
-            max_resource
+            "\nA heavily armored fighter"
+            " capable of surviving brutal combat."
         )
 
-        print("Defense:", player_defense)
+    # =========================
+    # MAGE
+    # =========================
 
-        print(enemy_name, "HP:", enemy_hp)
+    elif (
 
-        action = input(
-            "\nChoose action "
-            "(attack / skills / heal / inventory): "
+        choice == "mage"
+
+    ):
+
+        player_class = "Mage"
+
+        player_hp = 90
+
+        attack_bonus = 12
+
+        resource_name = "Mana"
+
+        player_resource = 120
+
+        max_resource = 120
+
+        player_defense = 2
+
+        player_dodge = 10
+
+        print(
+            "\nA master of destructive magic"
+            " and arcane abilities."
         )
 
-        # =========================
-        # INVENTORY
-        # =========================
+    # =========================
+    # ROGUE
+    # =========================
 
-        if action.lower() == "inventory":
+    elif (
 
-            print("\n=== INVENTORY ===")
+        choice == "rogue"
 
-            if len(inventory) == 0:
+    ):
 
-                print("Inventory empty.")
+        player_class = "Rogue"
 
-            else:
+        player_hp = 100
 
-                for item in inventory:
+        attack_bonus = 10
 
-                    print("-", item)
+        resource_name = "Stamina"
 
-            continue
+        player_resource = 110
 
-        # =========================
-        # BASIC ATTACK
-        # =========================
+        max_resource = 110
 
-        elif action.lower() == "attack":
+        player_defense = 3
 
-            # =========================
-            # WEAPON STATS
-            # =========================
+        player_dodge = 20
 
-            weapon_stats = get_weapon_stats(
-                equipped_weapon
-            )
+        print(
+            "\nA swift assassin specializing"
+            " in agility and critical strikes."
+        )
 
-            # =========================
-            # CRITICAL HIT SYSTEM
-            # =========================
+    # =========================
+    # DEFAULT CLASS
+    # =========================
 
-            crit_chance = 10
+    else:
 
-            crit_chance += weapon_stats["crit_bonus"]
+        print(
+            "\nInvalid choice."
+        )
 
-            # ROGUES HAVE HIGHER CRIT CHANCE
+        print(
+            "Defaulting to Warrior."
+        )
 
-            if player_class == "rogue":
+        player_class = "Warrior"
 
-                crit_chance += 15
+        player_hp = 140
 
-            # =========================
-            # DAMAGE CALCULATION
-            # =========================
+        attack_bonus = 8
 
-            damage = random.randint(5, 15)
+        resource_name = "Stamina"
 
-            damage += attack_bonus
+        player_resource = 100
 
-            damage += weapon_stats["damage"]
+        max_resource = 100
 
-            crit_roll = random.randint(1, 100)
+        player_defense = 5
 
-            # =========================
-            # CRITICAL HIT
-            # =========================
+        player_dodge = 5
 
-            if crit_roll <= crit_chance:
+    print(
+        "\nYou are now a",
+        player_class
+    )
 
-                damage *= 2
+    return (
 
-                print("\n=== CRITICAL HIT ===")
+        player_class,
 
-            enemy_hp -= damage
+        player_hp,
 
-            print("\nYou attack with", equipped_weapon + "!")
-            print("You deal", damage, "damage!")
+        attack_bonus,
 
-        # =========================
-        # SKILLS
-        # =========================
+        resource_name,
 
-        elif action.lower() == "skills":
+        player_resource,
 
-            print("\n=== SKILLS ===")
+        max_resource,
 
-            # =========================
-            # WARRIOR
-            # =========================
+        player_defense,
 
-            if player_class == "warrior":
+        player_dodge
+    )
 
-                print("1. Power Strike (15 Stamina)")
+# =========================
+# LEVEL SYSTEM
+# =========================
 
-                skill_choice = input("> ")
+def check_level_up(
 
-                if skill_choice == "1":
+    player_level,
+    player_xp,
+    xp_to_next_level,
+    player_hp,
+    attack_bonus,
+    max_resource
 
-                    if player_resource >= 15:
+):
 
-                        player_resource -= 15
+    while player_xp >= xp_to_next_level:
 
-                        enemy_hp = power_strike(
-                            enemy_hp,
-                            attack_bonus
-                        )
+        player_level += 1
 
-                    else:
+        player_xp -= xp_to_next_level
 
-                        print(
-                            "\nNot enough",
-                            resource_name + "!"
-                        )
+        xp_to_next_level += 50
 
-            # =========================
-            # MAGE
-            # =========================
+        player_hp += 20
 
-            elif player_class == "mage":
+        attack_bonus += 2
 
-                print("1. Fireball (20 Mana)")
+        max_resource += 10
 
-                skill_choice = input("> ")
+        print(
+            "\n=== LEVEL UP ==="
+        )
 
-                if skill_choice == "1":
+        print(
+            "You reached level",
+            player_level
+        )
 
-                    if player_resource >= 20:
+        print(
+            "Max HP increased!"
+        )
 
-                        player_resource -= 20
+        print(
+            "Attack power increased!"
+        )
 
-                        enemy_hp = fireball(enemy_hp)
+        print(
+            "Maximum resource increased!"
+        )
 
-                        active_effects = add_status_effect(
-                            active_effects,
-                            "burn",
-                            3
-                        )
+    return (
 
-                    else:
+        player_level,
 
-                        print(
-                            "\nNot enough",
-                            resource_name + "!"
-                        )
+        player_xp,
 
-            # =========================
-            # ROGUE
-            # =========================
+        xp_to_next_level,
 
-            elif player_class == "rogue":
+        player_hp,
 
-                print("1. Backstab (10 Stamina)")
+        attack_bonus,
 
-                skill_choice = input("> ")
+        max_resource
+    )
 
-                if skill_choice == "1":
+# =========================
+# STORY STATE DISPLAY
+# =========================
 
-                    if player_resource >= 10:
+def show_story_state(
 
-                        player_resource -= 10
+    cult_defeated,
+    dragon_defeated,
+    knight_defeated,
+    player_gold,
+    player_reputation,
+    player_level,
+    player_xp,
+    xp_to_next_level,
+    resource_name,
+    player_resource,
+    max_resource,
+    player_defense,
+    player_dodge
 
-                        enemy_hp = backstab(enemy_hp)
+):
 
-                    else:
+    print(
+        "\n=== FINAL PLAYER STATE ==="
+    )
 
-                        print(
-                            "\nNot enough",
-                            resource_name + "!"
-                        )
+    print(
+        "Level:",
+        player_level
+    )
 
-        # =========================
-        # HEALING POTION
-        # =========================
+    print(
+        "XP:",
+        str(player_xp)
+        + "/"
+        + str(xp_to_next_level)
+    )
 
-        elif action.lower() == "heal":
+    print(
+        "Gold:",
+        player_gold
+    )
 
-            if "Healing Potion" in inventory:
+    print(
+        "Reputation:",
+        player_reputation
+    )
 
-                heal_amount = 20
+    print(
+        resource_name + ":",
+        str(player_resource)
+        + "/"
+        + str(max_resource)
+    )
 
-                player_hp += heal_amount
+    print(
+        "Defense:",
+        player_defense
+    )
 
-                inventory.remove("Healing Potion")
+    print(
+        "Dodge Chance:",
+        str(player_dodge) + "%"
+    )
 
-                print("\nYou drink a Healing Potion!")
-                print("Recovered", heal_amount, "HP!")
+    print(
+        "\n=== STORY PROGRESS ==="
+    )
 
-            else:
+    print(
+        "Cult Defeated:",
+        cult_defeated
+    )
 
-                print("\nYou don't have any potions.")
+    print(
+        "Dragon Defeated:",
+        dragon_defeated
+    )
 
-            continue
-
-        # =========================
-        # INVALID ACTION
-        # =========================
-
-        else:
-
-            print("\nInvalid action.")
-            continue
-
-        # =========================
-        # ENEMY DEFEATED
-        # =========================
-
-        if enemy_hp <= 0:
-
-            print("\nThe enemy collapses!")
-
-            break
-
-        # =========================
-        # ENEMY AI SYSTEM
-        # =========================
-
-        special = enemies[enemy_name]["special"]
-
-        # =========================
-        # HIDDEN CULT
-        # =========================
-
-        if special == "summon":
-
-            if turn_count % 3 == 0:
-
-                enemy_damage = random.randint(8, 16)
-
-                print("\nThe cult summons dark reinforcements!")
-
-            else:
-
-                enemy_damage = random.randint(4, 10)
-
-        # =========================
-        # ANCIENT DRAGON
-        # =========================
-
-        elif special == "fire":
-
-            if turn_count % 2 == 0:
-
-                enemy_damage = random.randint(14, 22)
-
-                print("\nThe dragon unleashes FIRE BREATH!")
-
-                active_effects = add_status_effect(
-                    active_effects,
-                    "burn",
-                    3
-                )
-
-            else:
-
-                enemy_damage = random.randint(6, 12)
-
-            if enemy_hp < 15:
-
-                enemy_damage += 5
-
-                print("The dragon enters an ENRAGED state!")
-
-        # =========================
-        # CORRUPTED KNIGHT
-        # =========================
-
-        elif special == "shield":
-
-            if turn_count % 3 == 0:
-
-                enemy_damage = random.randint(5, 8)
-
-                print("\nThe knight raises a massive shield!")
-                print("Your next attack will be weakened.")
-
-            else:
-
-                enemy_damage = random.randint(7, 14)
-
-        # =========================
-        # SHADOW BEAST
-        # =========================
-
-        elif special == "dodge":
-
-            dodge_chance = random.randint(1, 100)
-
-            if dodge_chance <= 35:
-
-                print("\nThe shadow beast vanishes into darkness!")
-                print("It completely dodges your attack!")
-
-                enemy_damage = random.randint(5, 12)
-
-            else:
-
-                enemy_damage = random.randint(7, 15)
-
-        # =========================
-        # NECROMANCER
-        # =========================
-
-        elif special == "heal":
-
-            if turn_count % 2 == 0:
-
-                heal_amount = random.randint(5, 12)
-
-                enemy_hp += heal_amount
-
-                print("\nDark magic restores the necromancer!")
-                print(enemy_name, "heals", heal_amount, "HP!")
-
-            enemy_damage = random.randint(5, 10)
-
-        # =========================
-        # DEFAULT
-        # =========================
-
-        else:
-
-            enemy_damage = random.randint(4, 12)
-
-        # =========================
-        # ARMOR / DEFENSE
-        # =========================
-
-        enemy_damage -= player_defense
-
-        if enemy_damage < 1:
-
-            enemy_damage = 1
-
-        # =========================
-        # ENEMY ATTACK
-        # =========================
-
-        player_hp -= enemy_damage
-
-        print("\nThe enemy attacks!")
-        print("You take", enemy_damage, "damage!")
-
-        turn_count += 1
-
-    return player_hp, enemy_hp, player_resource
+    print(
+        "Knight Defeated:",
+        knight_defeated
+    )
