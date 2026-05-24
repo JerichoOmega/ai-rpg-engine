@@ -17,7 +17,10 @@ from loot import affixes
 
 from bosses import check_boss_phase
 
-from companions import companions
+from companions import (
+    companions,
+    companion_ability
+)
 
 def combat(
     player_hp,
@@ -44,6 +47,12 @@ def combat(
     max_enemy_hp = enemy_hp
 
     while player_hp > 0 and enemy_hp > 0:
+
+        # =========================
+        # RESET TEMP DEFENSE
+        # =========================
+
+        temp_defense = player_defense
 
         # =========================
         # BOSS PHASE SYSTEM
@@ -77,7 +86,7 @@ def combat(
             max_resource
         )
 
-        print("Defense:", player_defense)
+        print("Defense:", temp_defense)
 
         print("Dodge:", str(player_dodge) + "%")
 
@@ -118,17 +127,9 @@ def combat(
 
         elif action.lower() == "attack":
 
-            # =========================
-            # WEAPON STATS
-            # =========================
-
             weapon_stats = get_weapon_stats(
                 equipped_weapon
             )
-
-            # =========================
-            # CRITICAL HIT SYSTEM
-            # =========================
 
             crit_chance = 10
 
@@ -137,10 +138,6 @@ def combat(
             if player_class == "rogue":
 
                 crit_chance += 15
-
-            # =========================
-            # DAMAGE CALCULATION
-            # =========================
 
             damage = random.randint(5, 15)
 
@@ -184,9 +181,13 @@ def combat(
 
                 weapon_element = "dark"
 
-            enemy_weakness = enemies[enemy_name]["weakness"]
+            enemy_weakness = enemies[
+                enemy_name
+            ]["weakness"]
 
-            enemy_resistance = enemies[enemy_name]["resistance"]
+            enemy_resistance = enemies[
+                enemy_name
+            ]["resistance"]
 
             # =========================
             # ELEMENTAL WEAKNESS
@@ -226,15 +227,20 @@ def combat(
 
             enemy_hp -= damage
 
-            print("\nYou attack with", equipped_weapon + "!")
+            print(
+                "\nYou attack with",
+                equipped_weapon + "!"
+            )
 
-            print("You deal", damage, "damage!")
+            print(
+                "You deal",
+                damage,
+                "damage!"
+            )
 
             # =========================
             # WEAPON EFFECTS
             # =========================
-
-            # FLAMING
 
             if "flaming" in weapon_name:
 
@@ -244,9 +250,9 @@ def combat(
                     3
                 )
 
-                print("The weapon ignites the enemy!")
-
-            # VENOMOUS
+                print(
+                    "The weapon ignites the enemy!"
+                )
 
             elif "venomous" in weapon_name:
 
@@ -256,9 +262,9 @@ def combat(
                     3
                 )
 
-                print("Poison spreads through the enemy!")
-
-            # VAMPIRIC
+                print(
+                    "Poison spreads through the enemy!"
+                )
 
             elif "vampiric" in weapon_name:
 
@@ -271,8 +277,6 @@ def combat(
                     lifesteal,
                     "HP!"
                 )
-
-            # FROZEN
 
             elif "frozen" in weapon_name:
 
@@ -298,7 +302,9 @@ def combat(
 
             if player_class == "warrior":
 
-                print("1. Power Strike (15 Stamina)")
+                print(
+                    "1. Power Strike (15 Stamina)"
+                )
 
                 skill_choice = input("> ")
 
@@ -324,7 +330,9 @@ def combat(
 
             elif player_class == "mage":
 
-                print("1. Fireball (20 Mana)")
+                print(
+                    "1. Fireball (20 Mana)"
+                )
 
                 skill_choice = input("> ")
 
@@ -353,7 +361,9 @@ def combat(
 
             elif player_class == "rogue":
 
-                print("1. Backstab (10 Stamina)")
+                print(
+                    "1. Backstab (10 Stamina)"
+                )
 
                 skill_choice = input("> ")
 
@@ -384,15 +394,25 @@ def combat(
 
                 player_hp += heal_amount
 
-                inventory.remove("Healing Potion")
+                inventory.remove(
+                    "Healing Potion"
+                )
 
-                print("\nYou drink a Healing Potion!")
+                print(
+                    "\nYou drink a Healing Potion!"
+                )
 
-                print("Recovered", heal_amount, "HP!")
+                print(
+                    "Recovered",
+                    heal_amount,
+                    "HP!"
+                )
 
             else:
 
-                print("\nYou don't have any potions.")
+                print(
+                    "\nYou don't have any potions."
+                )
 
             continue
 
@@ -407,7 +427,7 @@ def combat(
             continue
 
         # =========================
-        # COMPANION ATTACKS
+        # COMPANION ACTIONS
         # =========================
 
         for member in party:
@@ -423,6 +443,19 @@ def combat(
                 "attacks for",
                 companion_damage,
                 "damage!"
+            )
+
+            # =========================
+            # COMPANION ABILITIES
+            # =========================
+
+            (
+                temp_defense,
+                active_effects
+            ) = companion_ability(
+                member,
+                temp_defense,
+                active_effects
             )
 
             if enemy_hp <= 0:
@@ -449,7 +482,9 @@ def combat(
         # ENEMY AI SYSTEM
         # =========================
 
-        special = enemies[enemy_name]["special"]
+        special = enemies[
+            enemy_name
+        ]["special"]
 
         # =========================
         # BOSS PHASE BONUSES
@@ -457,11 +492,15 @@ def combat(
 
         if phase == 2:
 
-            print("\n=== PHASE 2 ACTIVATED ===")
+            print(
+                "\n=== PHASE 2 ACTIVATED ==="
+            )
 
         elif phase == 3:
 
-            print("\n=== FINAL PHASE ===")
+            print(
+                "\n=== FINAL PHASE ==="
+            )
 
         # =========================
         # HIDDEN CULT
@@ -471,7 +510,10 @@ def combat(
 
             if turn_count % 3 == 0:
 
-                enemy_damage = random.randint(8, 16)
+                enemy_damage = random.randint(
+                    8,
+                    16
+                )
 
                 print(
                     "\nThe cult summons dark reinforcements!"
@@ -479,7 +521,10 @@ def combat(
 
             else:
 
-                enemy_damage = random.randint(4, 10)
+                enemy_damage = random.randint(
+                    4,
+                    10
+                )
 
         # =========================
         # ANCIENT DRAGON
@@ -489,7 +534,10 @@ def combat(
 
             if turn_count % 2 == 0:
 
-                enemy_damage = random.randint(14, 22)
+                enemy_damage = random.randint(
+                    14,
+                    22
+                )
 
                 print(
                     "\nThe dragon unleashes FIRE BREATH!"
@@ -503,7 +551,10 @@ def combat(
 
             else:
 
-                enemy_damage = random.randint(6, 12)
+                enemy_damage = random.randint(
+                    6,
+                    12
+                )
 
             # =========================
             # DRAGON PHASE ATTACKS
@@ -533,19 +584,21 @@ def combat(
 
             if turn_count % 3 == 0:
 
-                enemy_damage = random.randint(5, 8)
+                enemy_damage = random.randint(
+                    5,
+                    8
+                )
 
                 print(
                     "\nThe knight raises a massive shield!"
                 )
 
-                print(
-                    "Your next attack will be weakened."
-                )
-
             else:
 
-                enemy_damage = random.randint(7, 14)
+                enemy_damage = random.randint(
+                    7,
+                    14
+                )
 
         # =========================
         # SHADOW BEAST
@@ -553,7 +606,10 @@ def combat(
 
         elif special == "dodge":
 
-            dodge_chance = random.randint(1, 100)
+            dodge_chance = random.randint(
+                1,
+                100
+            )
 
             if dodge_chance <= 35:
 
@@ -561,19 +617,17 @@ def combat(
                     "\nThe shadow beast vanishes into darkness!"
                 )
 
-                print(
-                    "It completely dodges your attack!"
+                enemy_damage = random.randint(
+                    5,
+                    12
                 )
-
-                enemy_damage = random.randint(5, 12)
 
             else:
 
-                enemy_damage = random.randint(7, 15)
-
-            # =========================
-            # SHADOW FRENZY
-            # =========================
+                enemy_damage = random.randint(
+                    7,
+                    15
+                )
 
             if special_attack == "shadow_frenzy":
 
@@ -591,7 +645,10 @@ def combat(
 
             if turn_count % 2 == 0:
 
-                heal_amount = random.randint(5, 12)
+                heal_amount = random.randint(
+                    5,
+                    12
+                )
 
                 enemy_hp += heal_amount
 
@@ -606,11 +663,10 @@ def combat(
                     "HP!"
                 )
 
-            enemy_damage = random.randint(5, 10)
-
-            # =========================
-            # NECROMANCER PHASES
-            # =========================
+            enemy_damage = random.randint(
+                5,
+                10
+            )
 
             if special_attack == "summon_undead":
 
@@ -634,13 +690,16 @@ def combat(
 
         else:
 
-            enemy_damage = random.randint(4, 12)
+            enemy_damage = random.randint(
+                4,
+                12
+            )
 
         # =========================
         # ARMOR / DEFENSE
         # =========================
 
-        enemy_damage -= player_defense
+        enemy_damage -= temp_defense
 
         if enemy_damage < 1:
 
@@ -650,17 +709,24 @@ def combat(
         # DODGE SYSTEM
         # =========================
 
-        dodge_roll = random.randint(1, 100)
+        dodge_roll = random.randint(
+            1,
+            100
+        )
 
         if dodge_roll <= player_dodge:
 
-            print("\nYou DODGE the attack!")
+            print(
+                "\nYou DODGE the attack!"
+            )
 
         else:
 
             player_hp -= enemy_damage
 
-            print("\nThe enemy attacks!")
+            print(
+                "\nThe enemy attacks!"
+            )
 
             print(
                 "You take",
@@ -670,4 +736,8 @@ def combat(
 
         turn_count += 1
 
-    return player_hp, enemy_hp, player_resource
+    return (
+        player_hp,
+        enemy_hp,
+        player_resource
+    )

@@ -1,588 +1,317 @@
 import random
 
-from combat import combat
+from factions import modify_reputation
 
-from story import generate_story
+from memory import update_memory
 
-from inventory import (
-    show_inventory,
-    add_item,
-    remove_item,
-    use_potion,
-    equip_weapon
+from companions import (
+    change_loyalty,
+    companion_reaction
 )
 
-from events import (
-    random_event,
-    choice_event
-)
+# =========================
+# RANDOM EVENT SYSTEM
+# =========================
 
-from shop import shop
+def random_event(
+    player_hp,
+    player_gold,
+    inventory
+):
 
-from loot import generate_loot
+    event_roll = random.randint(1, 4)
 
-from factions import (
+    # =========================
+    # TREASURE EVENT
+    # =========================
+
+    if event_roll == 1:
+
+        gold_found = random.randint(
+            10,
+            25
+        )
+
+        player_gold += gold_found
+
+        print(
+            "\n=== RANDOM EVENT ==="
+        )
+
+        print(
+            "You discover a hidden treasure chest!"
+        )
+
+        print(
+            "You gain",
+            gold_found,
+            "gold!"
+        )
+
+    # =========================
+    # HEALING FOUNTAIN
+    # =========================
+
+    elif event_roll == 2:
+
+        heal_amount = random.randint(
+            10,
+            20
+        )
+
+        player_hp += heal_amount
+
+        print(
+            "\n=== RANDOM EVENT ==="
+        )
+
+        print(
+            "You discover a healing fountain."
+        )
+
+        print(
+            "Recovered",
+            heal_amount,
+            "HP!"
+        )
+
+    # =========================
+    # POTION FIND
+    # =========================
+
+    elif event_roll == 3:
+
+        inventory.append(
+            "Healing Potion"
+        )
+
+        print(
+            "\n=== RANDOM EVENT ==="
+        )
+
+        print(
+            "You find a Healing Potion!"
+        )
+
+    # =========================
+    # AMBUSH EVENT
+    # =========================
+
+    elif event_roll == 4:
+
+        damage = random.randint(
+            5,
+            15
+        )
+
+        player_hp -= damage
+
+        print(
+            "\n=== RANDOM EVENT ==="
+        )
+
+        print(
+            "Bandits ambush you in the dark!"
+        )
+
+        print(
+            "You take",
+            damage,
+            "damage!"
+        )
+
+    return (
+        player_hp,
+        player_gold,
+        inventory
+    )
+
+# =========================
+# CHOICE EVENT SYSTEM
+# =========================
+
+def choice_event(
     factions,
-    modify_reputation,
-    check_faction_status
-)
+    story_memory
+):
 
-from memory import (
-    story_memory,
-    update_memory
-)
+    print(
+        "\n=== MORAL CHOICE ==="
+    )
 
-from player import (
-    create_player,
-    check_level_up,
-    show_story_state
-)
+    print(
+        "\nYou discover a wounded cultist"
+        " begging for mercy."
+    )
 
-from save_system import save_game, load_game
+    print("\n1. Spare them")
 
-# =========================
-# PLAYER MEMORY / STORY STATE
-# =========================
+    print("2. Execute them")
 
-cult_defeated = False
-dragon_defeated = False
-knight_defeated = False
+    print("3. Recruit them")
 
-player_gold = 25
-player_reputation = 0
+    choice = input("> ")
 
-# =========================
-# PLAYER PROGRESSION
-# =========================
+    # =========================
+    # SPARE
+    # =========================
 
-player_level = 1
-player_xp = 0
-xp_to_next_level = 100
+    if choice == "1":
 
-# =========================
-# INVENTORY / EQUIPMENT
-# =========================
+        print(
+            "\nYou spare the cultist."
+        )
 
-inventory = []
+        story_memory = update_memory(
+            story_memory,
+            "spared_cultist"
+        )
 
-equipped_weapon = "Rusty Sword"
+        factions = modify_reputation(
+            factions,
+            "kingdom",
+            5
+        )
 
-weapon_bonus = 0
+        factions = modify_reputation(
+            factions,
+            "shadow_cult",
+            -5
+        )
 
-# =========================
-# ADVENTURE SETTINGS
-# =========================
+        # =========================
+        # COMPANION REACTIONS
+        # =========================
 
-adventure_length = 3
-current_room = 1
+        change_loyalty(
+            "Mira",
+            5
+        )
 
-# =========================
-# ENEMIES
-# =========================
+        print(
+            "\nMira approves of your mercy."
+        )
 
-enemies = {
+    # =========================
+    # EXECUTE
+    # =========================
 
-    "hidden cult": {
-        "hp_min": 15,
-        "hp_max": 25,
-        "special": "summon",
-        "weakness": "fire",
-        "resistance": "poison"
-    },
+    elif choice == "2":
 
-    "ancient dragon": {
-        "hp_min": 30,
-        "hp_max": 45,
-        "special": "fire",
-        "weakness": "ice",
-        "resistance": "fire"
-    },
+        print(
+            "\nYou execute the cultist."
+        )
 
-    "corrupted knight": {
-        "hp_min": 20,
-        "hp_max": 35,
-        "special": "shield",
-        "weakness": "poison",
-        "resistance": "physical"
-    },
+        story_memory = update_memory(
+            story_memory,
+            "executed_cultist"
+        )
 
-    "shadow beast": {
-        "hp_min": 18,
-        "hp_max": 30,
-        "special": "dodge",
-        "weakness": "fire",
-        "resistance": "ice"
-    },
+        factions = modify_reputation(
+            factions,
+            "kingdom",
+            10
+        )
 
-    "necromancer": {
-        "hp_min": 20,
-        "hp_max": 40,
-        "special": "heal",
-        "weakness": "fire",
-        "resistance": "poison"
-    }
-}
+        factions = modify_reputation(
+            factions,
+            "shadow_cult",
+            -15
+        )
 
-# =========================
-# LOAD OR NEW GAME
-# =========================
+        # =========================
+        # COMPANION REACTIONS
+        # =========================
 
-print("1. New Game")
-print("2. Load Game")
+        change_loyalty(
+            "Kael",
+            5
+        )
 
-game_choice = input("> ")
+        print(
+            "\nKael respects your ruthlessness."
+        )
 
-if game_choice == "2":
+        change_loyalty(
+            "Mira",
+            -5
+        )
 
-    save_data = load_game()
+        print(
+            "\nMira disapproves of the execution."
+        )
 
-    if save_data:
+    # =========================
+    # RECRUIT
+    # =========================
 
-        player_hp = save_data["player_hp"]
+    elif choice == "3":
 
-        player_gold = save_data["player_gold"]
+        print(
+            "\nThe cultist joins your cause."
+        )
 
-        player_level = save_data["player_level"]
+        story_memory = update_memory(
+            story_memory,
+            "recruited_cultist"
+        )
 
-        player_xp = save_data["player_xp"]
+        story_memory = update_memory(
+            story_memory,
+            "joined_shadow_cult"
+        )
 
-        xp_to_next_level = save_data["xp_to_next_level"]
+        factions = modify_reputation(
+            factions,
+            "shadow_cult",
+            15
+        )
 
-        inventory = save_data["inventory"]
+        factions = modify_reputation(
+            factions,
+            "kingdom",
+            -10
+        )
 
-        equipped_weapon = save_data["equipped_weapon"]
+        # =========================
+        # COMPANION REACTIONS
+        # =========================
 
-        weapon_bonus = save_data["weapon_bonus"]
+        change_loyalty(
+            "Mira",
+            -10
+        )
 
-        player_reputation = save_data["player_reputation"]
+        print(
+            "\nMira distrusts your alliance"
+            " with the cult."
+        )
 
-        cult_defeated = save_data["cult_defeated"]
+        change_loyalty(
+            "Kael",
+            10
+        )
 
-        dragon_defeated = save_data["dragon_defeated"]
-
-        knight_defeated = save_data["knight_defeated"]
-
-        player_class = save_data["player_class"]
-
-        resource_name = save_data["resource_name"]
-
-        player_resource = save_data["player_resource"]
-
-        max_resource = save_data["max_resource"]
-
-        player_defense = save_data["player_defense"]
-
-        player_dodge = save_data["player_dodge"]
-
-        attack_bonus = 5
-
-        print("\nSave successfully loaded!")
+        print(
+            "\nKael fully supports your"
+            " darker ambitions."
+        )
 
     else:
 
-        (
-            player_class,
-            player_hp,
-            attack_bonus,
-            resource_name,
-            player_resource,
-            max_resource,
-            player_defense,
-            player_dodge
-        ) = create_player()
-
-else:
-
-    (
-        player_class,
-        player_hp,
-        attack_bonus,
-        resource_name,
-        player_resource,
-        max_resource,
-        player_defense,
-        player_dodge
-    ) = create_player()
-
-# =========================
-# MAIN GAME LOOP
-# =========================
-
-while current_room <= adventure_length and player_hp > 0:
+        print(
+            "\nInvalid choice."
+        )
 
     # =========================
-    # STORY GENERATION
+    # GLOBAL COMPANION REACTIONS
     # =========================
 
-    quest, location, enemy_name = generate_story(enemies)
-
-    enemy_hp = random.randint(
-        enemies[enemy_name]["hp_min"],
-        enemies[enemy_name]["hp_max"]
+    companion_reaction(
+        story_memory
     )
 
-    print("\n=== YOUR ADVENTURE ===")
-
-    print("\n" + quest)
-
-    print("\nThe danger waits...")
-    print(location)
-
-    print("\nMain Enemy:")
-    print(enemy_name)
-
-    print(
-        "Weakness:",
-        enemies[enemy_name]["weakness"]
-    )
-
-    print(
-        "Resistance:",
-        enemies[enemy_name]["resistance"]
-    )
-
-    # =========================
-    # COMBAT
-    # =========================
-
-    (
-        player_hp,
-        enemy_hp,
-        player_resource
-    ) = combat(
-        player_hp,
-        enemy_name,
-        enemy_hp,
-        attack_bonus,
-        inventory,
-        enemies,
-        equipped_weapon,
-        weapon_bonus,
-        player_class,
-        player_resource,
-        max_resource,
-        resource_name,
-        player_defense,
-        player_dodge
-    )
-
-    # =========================
-    # PLAYER DEFEATED
-    # =========================
-
-    if player_hp <= 0:
-
-        print("\nYou were defeated...")
-
-        print("Darkness closes in around you.")
-
-    # =========================
-    # PLAYER VICTORY
-    # =========================
-
-    elif enemy_hp <= 0:
-
-        print("\nVictory!")
-
-        print("The enemy has fallen.")
-
-        # =========================
-        # GOLD REWARD
-        # =========================
-
-        reward = random.randint(10, 30)
-
-        player_gold += reward
-
-        print("You gained", reward, "gold!")
-
-        # =========================
-        # XP REWARD
-        # =========================
-
-        xp_gained = random.randint(40, 70)
-
-        player_xp += xp_gained
-
-        print("You gained", xp_gained, "XP!")
-
-        (
-            player_level,
-            player_xp,
-            xp_to_next_level,
-            player_hp,
-            attack_bonus,
-            max_resource
-        ) = check_level_up(
-            player_level,
-            player_xp,
-            xp_to_next_level,
-            player_hp,
-            attack_bonus,
-            max_resource
-        )
-
-        # =========================
-        # PROCEDURAL LOOT
-        # =========================
-
-        loot_items = [
-            "Iron Sword",
-            "Magic Staff",
-            "Shadow Dagger",
-            "Healing Potion",
-            "Dragon Slayer"
-        ]
-
-        base_loot = random.choice(loot_items)
-
-        loot = generate_loot(base_loot)
-
-        inventory = add_item(
-            inventory,
-            loot["name"]
-        )
-
-        print("\n=== LOOT FOUND ===")
-
-        print("Item:", loot["name"])
-
-        print("Rarity:", loot["rarity"])
-
-        print("Effect:", loot["effect"])
-
-        print("Element:", loot["element"])
-
-        print("Damage Bonus:", loot["damage_bonus"])
-
-        print("Crit Bonus:", loot["crit_bonus"])
-
-        print("Defense Bonus:", loot["defense_bonus"])
-
-        # =========================
-        # EQUIP WEAPON
-        # =========================
-
-        if base_loot in [
-            "Iron Sword",
-            "Magic Staff",
-            "Shadow Dagger",
-            "Dragon Slayer"
-        ]:
-
-            equipped_weapon = loot["name"]
-
-            print("\nYou equipped:", equipped_weapon)
-
-        # =========================
-        # STORY MEMORY / FACTIONS
-        # =========================
-
-        if enemy_name == "hidden cult":
-
-            cult_defeated = True
-
-            factions = modify_reputation(
-                factions,
-                "kingdom",
-                10
-            )
-
-            factions = modify_reputation(
-                factions,
-                "shadow_cult",
-                -15
-            )
-
-        elif enemy_name == "ancient dragon":
-
-            dragon_defeated = True
-
-            story_memory = update_memory(
-                story_memory,
-                "dragon_slain"
-            )
-
-            factions = modify_reputation(
-                factions,
-                "kingdom",
-                20
-            )
-
-        elif enemy_name == "corrupted knight":
-
-            knight_defeated = True
-
-            factions = modify_reputation(
-                factions,
-                "mages_guild",
-                10
-            )
-
-        elif enemy_name == "necromancer":
-
-            story_memory = update_memory(
-                story_memory,
-                "used_dark_magic"
-            )
-
-            factions = modify_reputation(
-                factions,
-                "shadow_cult",
-                15
-            )
-
-            factions = modify_reputation(
-                factions,
-                "kingdom",
-                -10
-            )
-
-        # =========================
-        # RANDOM EVENT
-        # =========================
-
-        (
-            player_hp,
-            player_gold,
-            inventory
-        ) = random_event(
-            player_hp,
-            player_gold,
-            inventory
-        )
-
-        # =========================
-        # CHOICE EVENT
-        # =========================
-
-        choice_roll = random.randint(1, 100)
-
-        if choice_roll <= 35:
-
-            (
-                factions,
-                story_memory
-            ) = choice_event(
-                factions,
-                story_memory
-            )
-
-        # =========================
-        # SHOP
-        # =========================
-
-        (
-            player_gold,
-            player_hp,
-            inventory,
-            equipped_weapon,
-            weapon_bonus
-        ) = shop(
-            player_gold,
-            player_hp,
-            inventory,
-            equipped_weapon,
-            weapon_bonus
-        )
-
-        # =========================
-        # SAVE GAME
-        # =========================
-
-        save_game(
-            player_hp,
-            player_gold,
-            player_level,
-            player_xp,
-            xp_to_next_level,
-            inventory,
-            equipped_weapon,
-            weapon_bonus,
-            player_reputation,
-            cult_defeated,
-            dragon_defeated,
-            knight_defeated
-        )
-
-        current_room += 1
-
-        # =========================
-        # CONTINUE ADVENTURE
-        # =========================
-
-        if current_room <= adventure_length:
-
-            print(
-                "\nYou continue deeper into the adventure..."
-            )
-
-        else:
-
-            print("\n=== FINAL VICTORY ===")
-
-            print("You survived the adventure!")
-
-# =========================
-# FINAL STORY STATE
-# =========================
-
-show_story_state(
-    cult_defeated,
-    dragon_defeated,
-    knight_defeated,
-    player_gold,
-    player_reputation,
-    player_level,
-    player_xp,
-    xp_to_next_level,
-    resource_name,
-    player_resource,
-    max_resource,
-    player_defense,
-    player_dodge
-)
-
-# =========================
-# FACTION STATUS
-# =========================
-
-print("\n=== FACTIONS ===")
-
-for faction_name in factions:
-
-    status = check_faction_status(
+    return (
         factions,
-        faction_name
+        story_memory
     )
-
-    print(
-        faction_name,
-        "-",
-        status,
-        "(" + str(factions[faction_name]) + ")"
-    )
-
-# =========================
-# STORY MEMORY
-# =========================
-
-print("\n=== STORY MEMORY ===")
-
-for memory_key in story_memory:
-
-    print(
-        memory_key,
-        "-",
-        story_memory[memory_key]
-    )
-
-# =========================
-# FINAL INVENTORY
-# =========================
-
-show_inventory(
-    inventory,
-    equipped_weapon,
-    weapon_bonus
-)

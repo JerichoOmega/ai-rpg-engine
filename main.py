@@ -37,7 +37,16 @@ from memory import (
 from companions import (
     companions,
     recruit_companion,
-    show_party
+    show_party,
+    loyalty_event
+)
+
+from quests import (
+    quests,
+    show_quests,
+    update_quests_from_enemy,
+    update_companion_quests,
+    complete_quest_rewards
 )
 
 from player import (
@@ -46,7 +55,10 @@ from player import (
     show_story_state
 )
 
-from save_system import save_game, load_game
+from save_system import (
+    save_game,
+    load_game
+)
 
 # =========================
 # PLAYER MEMORY / STORY STATE
@@ -186,7 +198,9 @@ if game_choice == "2":
 
         attack_bonus = 5
 
-        print("\nSave successfully loaded!")
+        print(
+            "\nSave successfully loaded!"
+        )
 
     else:
 
@@ -218,13 +232,20 @@ else:
 # MAIN GAME LOOP
 # =========================
 
-while current_room <= adventure_length and player_hp > 0:
+while (
+    current_room <= adventure_length
+    and player_hp > 0
+):
 
     # =========================
     # STORY GENERATION
     # =========================
 
-    quest, location, enemy_name = generate_story(
+    (
+        quest,
+        location,
+        enemy_name
+    ) = generate_story(
         enemies,
         factions,
         story_memory
@@ -235,14 +256,18 @@ while current_room <= adventure_length and player_hp > 0:
         enemies[enemy_name]["hp_max"]
     )
 
-    print("\n=== YOUR ADVENTURE ===")
+    print(
+        "\n=== YOUR ADVENTURE ==="
+    )
 
     print("\n" + quest)
 
     print("\nThe danger waits...")
+
     print(location)
 
     print("\nMain Enemy:")
+
     print(enemy_name)
 
     print(
@@ -287,9 +312,13 @@ while current_room <= adventure_length and player_hp > 0:
 
     if player_hp <= 0:
 
-        print("\nYou were defeated...")
+        print(
+            "\nYou were defeated..."
+        )
 
-        print("Darkness closes in around you.")
+        print(
+            "Darkness closes in around you."
+        )
 
     # =========================
     # PLAYER VICTORY
@@ -299,27 +328,74 @@ while current_room <= adventure_length and player_hp > 0:
 
         print("\nVictory!")
 
-        print("The enemy has fallen.")
+        print(
+            "The enemy has fallen."
+        )
+
+        # =========================
+        # QUEST UPDATES
+        # =========================
+
+        update_quests_from_enemy(
+            enemy_name
+        )
+
+        update_companion_quests(
+            party
+        )
+
+        # =========================
+        # QUEST REWARDS
+        # =========================
+
+        for quest_key in quests:
+
+            (
+                player_gold,
+                player_xp,
+                factions,
+                story_memory
+            ) = complete_quest_rewards(
+                quest_key,
+                player_gold,
+                player_xp,
+                factions,
+                story_memory
+            )
 
         # =========================
         # GOLD REWARD
         # =========================
 
-        reward = random.randint(10, 30)
+        reward = random.randint(
+            10,
+            30
+        )
 
         player_gold += reward
 
-        print("You gained", reward, "gold!")
+        print(
+            "You gained",
+            reward,
+            "gold!"
+        )
 
         # =========================
         # XP REWARD
         # =========================
 
-        xp_gained = random.randint(40, 70)
+        xp_gained = random.randint(
+            40,
+            70
+        )
 
         player_xp += xp_gained
 
-        print("You gained", xp_gained, "XP!")
+        print(
+            "You gained",
+            xp_gained,
+            "XP!"
+        )
 
         (
             player_level,
@@ -342,52 +418,93 @@ while current_room <= adventure_length and player_hp > 0:
         # =========================
 
         loot_items = [
+
             "Iron Sword",
+
             "Magic Staff",
+
             "Shadow Dagger",
+
             "Healing Potion",
+
             "Dragon Slayer"
         ]
 
-        base_loot = random.choice(loot_items)
+        base_loot = random.choice(
+            loot_items
+        )
 
-        loot = generate_loot(base_loot)
+        loot = generate_loot(
+            base_loot
+        )
 
         inventory = add_item(
             inventory,
             loot["name"]
         )
 
-        print("\n=== LOOT FOUND ===")
+        print(
+            "\n=== LOOT FOUND ==="
+        )
 
-        print("Item:", loot["name"])
+        print(
+            "Item:",
+            loot["name"]
+        )
 
-        print("Rarity:", loot["rarity"])
+        print(
+            "Rarity:",
+            loot["rarity"]
+        )
 
-        print("Effect:", loot["effect"])
+        print(
+            "Effect:",
+            loot["effect"]
+        )
 
-        print("Element:", loot["element"])
+        print(
+            "Element:",
+            loot["element"]
+        )
 
-        print("Damage Bonus:", loot["damage_bonus"])
+        print(
+            "Damage Bonus:",
+            loot["damage_bonus"]
+        )
 
-        print("Crit Bonus:", loot["crit_bonus"])
+        print(
+            "Crit Bonus:",
+            loot["crit_bonus"]
+        )
 
-        print("Defense Bonus:", loot["defense_bonus"])
+        print(
+            "Defense Bonus:",
+            loot["defense_bonus"]
+        )
 
         # =========================
         # EQUIP WEAPON
         # =========================
 
         if base_loot in [
+
             "Iron Sword",
+
             "Magic Staff",
+
             "Shadow Dagger",
+
             "Dragon Slayer"
         ]:
 
-            equipped_weapon = loot["name"]
+            equipped_weapon = loot[
+                "name"
+            ]
 
-            print("\nYou equipped:", equipped_weapon)
+            print(
+                "\nYou equipped:",
+                equipped_weapon
+            )
 
         # =========================
         # STORY MEMORY / FACTIONS
@@ -457,13 +574,19 @@ while current_room <= adventure_length and player_hp > 0:
         # COMPANION RECRUITMENT
         # =========================
 
-        recruit_roll = random.randint(1, 100)
+        recruit_roll = random.randint(
+            1,
+            100
+        )
 
         if recruit_roll <= 30:
 
             available_companions = [
+
                 "Mira",
+
                 "Thorn",
+
                 "Kael"
             ]
 
@@ -503,7 +626,10 @@ while current_room <= adventure_length and player_hp > 0:
         # CHOICE EVENT
         # =========================
 
-        choice_roll = random.randint(1, 100)
+        choice_roll = random.randint(
+            1,
+            100
+        )
 
         if choice_roll <= 35:
 
@@ -514,6 +640,16 @@ while current_room <= adventure_length and player_hp > 0:
                 factions,
                 story_memory
             )
+
+        # =========================
+        # LOYALTY EVENTS
+        # =========================
+
+        party = loyalty_event(
+            party,
+            story_memory,
+            factions
+        )
 
         # =========================
         # SHOP
@@ -558,7 +694,10 @@ while current_room <= adventure_length and player_hp > 0:
         # CONTINUE ADVENTURE
         # =========================
 
-        if current_room <= adventure_length:
+        if (
+            current_room
+            <= adventure_length
+        ):
 
             print(
                 "\nYou continue deeper into the adventure..."
@@ -566,9 +705,13 @@ while current_room <= adventure_length and player_hp > 0:
 
         else:
 
-            print("\n=== FINAL VICTORY ===")
+            print(
+                "\n=== FINAL VICTORY ==="
+            )
 
-            print("You survived the adventure!")
+            print(
+                "You survived the adventure!"
+            )
 
 # =========================
 # FINAL STORY STATE
@@ -607,14 +750,18 @@ for faction_name in factions:
         faction_name,
         "-",
         status,
-        "(" + str(factions[faction_name]) + ")"
+        "(" + str(
+            factions[faction_name]
+        ) + ")"
     )
 
 # =========================
 # STORY MEMORY
 # =========================
 
-print("\n=== STORY MEMORY ===")
+print(
+    "\n=== STORY MEMORY ==="
+)
 
 for memory_key in story_memory:
 
@@ -639,3 +786,9 @@ show_inventory(
 # =========================
 
 show_party(party)
+
+# =========================
+# QUEST JOURNAL
+# =========================
+
+show_quests()
