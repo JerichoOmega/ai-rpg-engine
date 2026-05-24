@@ -24,7 +24,7 @@ def modify_reputation(
     factions[faction_name] += amount
 
     print(
-        "\\nReputation with",
+        "\nReputation with",
         faction_name,
         "changed by",
         amount

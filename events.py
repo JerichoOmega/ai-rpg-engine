@@ -1,31 +1,43 @@
 import random
 
-from factions import modify_reputation
-
-from memory import update_memory
-
-from companions import (
-    change_loyalty,
-    companion_reaction
+from utils import (
+    is_spare,
+    is_execute,
+    is_recruit
 )
 
 # =========================
-# RANDOM EVENT SYSTEM
+# RANDOM EVENTS
 # =========================
 
 def random_event(
+
     player_hp,
     player_gold,
     inventory
+
 ):
 
-    event_roll = random.randint(1, 4)
+    print(
+        "\n=== RANDOM EVENT ==="
+    )
 
-    # =========================
-    # TREASURE EVENT
-    # =========================
+    event_roll = random.randint(
+        1,
+        4
+    )
 
     if event_roll == 1:
+
+        print(
+            "You find a Healing Potion!"
+        )
+
+        inventory.append(
+            "Healing Potion"
+        )
+
+    elif event_roll == 2:
 
         gold_found = random.randint(
             10,
@@ -35,89 +47,35 @@ def random_event(
         player_gold += gold_found
 
         print(
-            "\n=== RANDOM EVENT ==="
-        )
-
-        print(
-            "You discover a hidden treasure chest!"
-        )
-
-        print(
-            "You gain",
+            "You discover",
             gold_found,
             "gold!"
         )
 
-    # =========================
-    # HEALING FOUNTAIN
-    # =========================
-
-    elif event_roll == 2:
-
-        heal_amount = random.randint(
-            10,
-            20
-        )
-
-        player_hp += heal_amount
-
-        print(
-            "\n=== RANDOM EVENT ==="
-        )
-
-        print(
-            "You discover a healing fountain."
-        )
-
-        print(
-            "Recovered",
-            heal_amount,
-            "HP!"
-        )
-
-    # =========================
-    # POTION FIND
-    # =========================
-
     elif event_roll == 3:
-
-        inventory.append(
-            "Healing Potion"
-        )
-
-        print(
-            "\n=== RANDOM EVENT ==="
-        )
-
-        print(
-            "You find a Healing Potion!"
-        )
-
-    # =========================
-    # AMBUSH EVENT
-    # =========================
-
-    elif event_roll == 4:
 
         damage = random.randint(
             5,
-            15
+            10
         )
 
         player_hp -= damage
 
         print(
-            "\n=== RANDOM EVENT ==="
-        )
-
-        print(
-            "Bandits ambush you in the dark!"
+            "Bandits ambush you"
+            " in the dark!"
         )
 
         print(
             "You take",
             damage,
             "damage!"
+        )
+
+    else:
+
+        print(
+            "The road remains quiet."
         )
 
     return (
@@ -127,12 +85,14 @@ def random_event(
     )
 
 # =========================
-# CHOICE EVENT SYSTEM
+# MORAL CHOICE EVENTS
 # =========================
 
 def choice_event(
+
     factions,
     story_memory
+
 ):
 
     print(
@@ -140,14 +100,12 @@ def choice_event(
     )
 
     print(
-        "\nYou discover a wounded cultist"
-        " begging for mercy."
+        "\nYou discover a wounded"
+        " cultist begging for mercy."
     )
 
-    print("\n1. Spare them")
-
+    print("1. Spare them")
     print("2. Execute them")
-
     print("3. Recruit them")
 
     choice = input("> ")
@@ -156,160 +114,62 @@ def choice_event(
     # SPARE
     # =========================
 
-    if choice == "1":
+    if is_spare(choice):
 
         print(
             "\nYou spare the cultist."
         )
 
-        story_memory = update_memory(
-            story_memory,
+        factions[
+            "kingdom"
+        ] += 5
+
+        story_memory[
             "spared_cultist"
-        )
-
-        factions = modify_reputation(
-            factions,
-            "kingdom",
-            5
-        )
-
-        factions = modify_reputation(
-            factions,
-            "shadow_cult",
-            -5
-        )
-
-        # =========================
-        # COMPANION REACTIONS
-        # =========================
-
-        change_loyalty(
-            "Mira",
-            5
-        )
-
-        print(
-            "\nMira approves of your mercy."
-        )
+        ] = True
 
     # =========================
     # EXECUTE
     # =========================
 
-    elif choice == "2":
+    elif is_execute(choice):
 
         print(
             "\nYou execute the cultist."
         )
 
-        story_memory = update_memory(
-            story_memory,
+        factions[
+            "shadow_cult"
+        ] -= 10
+
+        story_memory[
             "executed_cultist"
-        )
-
-        factions = modify_reputation(
-            factions,
-            "kingdom",
-            10
-        )
-
-        factions = modify_reputation(
-            factions,
-            "shadow_cult",
-            -15
-        )
-
-        # =========================
-        # COMPANION REACTIONS
-        # =========================
-
-        change_loyalty(
-            "Kael",
-            5
-        )
-
-        print(
-            "\nKael respects your ruthlessness."
-        )
-
-        change_loyalty(
-            "Mira",
-            -5
-        )
-
-        print(
-            "\nMira disapproves of the execution."
-        )
+        ] = True
 
     # =========================
     # RECRUIT
     # =========================
 
-    elif choice == "3":
+    elif is_recruit(choice):
 
         print(
-            "\nThe cultist joins your cause."
+            "\nThe cultist secretly"
+            " joins your cause."
         )
 
-        story_memory = update_memory(
-            story_memory,
+        factions[
+            "shadow_cult"
+        ] += 10
+
+        story_memory[
             "recruited_cultist"
-        )
-
-        story_memory = update_memory(
-            story_memory,
-            "joined_shadow_cult"
-        )
-
-        factions = modify_reputation(
-            factions,
-            "shadow_cult",
-            15
-        )
-
-        factions = modify_reputation(
-            factions,
-            "kingdom",
-            -10
-        )
-
-        # =========================
-        # COMPANION REACTIONS
-        # =========================
-
-        change_loyalty(
-            "Mira",
-            -10
-        )
-
-        print(
-            "\nMira distrusts your alliance"
-            " with the cult."
-        )
-
-        change_loyalty(
-            "Kael",
-            10
-        )
-
-        print(
-            "\nKael fully supports your"
-            " darker ambitions."
-        )
+        ] = True
 
     else:
 
         print(
             "\nInvalid choice."
         )
-
-    # =========================
-    # GLOBAL COMPANION REACTIONS
-    # =========================
-
-    companion_reaction(
-        story_memory
-    )
 
     return (
         factions,

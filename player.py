@@ -1,3 +1,10 @@
+from utils import (
+    normalize_input,
+    is_warrior,
+    is_mage,
+    is_rogue
+)
+
 # =========================
 # PLAYER SYSTEM
 # =========================
@@ -20,17 +27,15 @@ def create_player():
     print("• Mage")
     print("• Rogue")
 
-    choice = input("> ").lower()
+    choice = normalize_input(
+        input("> ")
+    )
 
     # =========================
     # WARRIOR
     # =========================
 
-    if (
-
-        choice == "warrior"
-
-    ):
+    if is_warrior(choice):
 
         player_class = "Warrior"
 
@@ -57,11 +62,7 @@ def create_player():
     # MAGE
     # =========================
 
-    elif (
-
-        choice == "mage"
-
-    ):
+    elif is_mage(choice):
 
         player_class = "Mage"
 
@@ -88,11 +89,7 @@ def create_player():
     # ROGUE
     # =========================
 
-    elif (
-
-        choice == "rogue"
-
-    ):
+    elif is_rogue(choice):
 
         player_class = "Rogue"
 

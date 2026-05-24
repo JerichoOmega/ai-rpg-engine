@@ -354,6 +354,34 @@ def remove_companion(
     return party
 
 # =========================
+# COMPANION ATTACK
+# =========================
+
+def companion_attack(
+    party,
+    enemy_hp
+):
+
+    for member in party:
+
+        if member in companions:
+
+            damage = companions[
+                member
+            ]["damage"]
+
+            enemy_hp -= damage
+
+            print(
+                "\n" + member,
+                "attacks for",
+                damage,
+                "damage!"
+            )
+
+    return enemy_hp
+
+# =========================
 # LOYALTY EVENTS
 # =========================
 

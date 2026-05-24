@@ -1,17 +1,125 @@
 {
-    "player_hp": 62,
-    "player_gold": 35,
+    "player_hp": 100,
+    "attack_bonus": 12,
+    "player_gold": 50,
     "player_level": 1,
-    "player_xp": 65,
+    "player_xp": 0,
     "xp_to_next_level": 100,
-    "inventory": [
-        "Shadow Dagger",
-        "Healing Potion"
-    ],
-    "equipped_weapon": "Shadow Dagger",
-    "weapon_bonus": 4,
+    "player_class": "Mage",
+    "resource_name": "Mana",
+    "player_resource": 120,
+    "max_resource": 120,
+    "player_defense": 2,
+    "player_dodge": 10,
+    "inventory": [],
+    "equipped_weapon": "Rusty Sword",
+    "weapon_bonus": 0,
     "player_reputation": 0,
     "cult_defeated": false,
     "dragon_defeated": false,
-    "knight_defeated": false
+    "knight_defeated": false,
+    "factions": {
+        "kingdom": 0,
+        "mages_guild": 0,
+        "shadow_cult": 0
+    },
+    "story_memory": {
+        "spared_cultist": false,
+        "executed_cultist": false,
+        "recruited_cultist": false,
+        "joined_shadow_cult": false,
+        "dragon_slain": false,
+        "used_dark_magic": false
+    },
+    "party": [],
+    "companions": {
+        "Mira": {
+            "class": "mage",
+            "hp": 80,
+            "damage": 15,
+            "role": "support",
+            "ability": "arcane_shield",
+            "loyalty": 50
+        },
+        "Thorn": {
+            "class": "warrior",
+            "hp": 120,
+            "damage": 10,
+            "role": "tank",
+            "ability": "shield_block",
+            "loyalty": 50
+        },
+        "Kael": {
+            "class": "rogue",
+            "hp": 90,
+            "damage": 18,
+            "role": "assassin",
+            "ability": "poison_blade",
+            "loyalty": 50
+        }
+    },
+    "quests": {
+        "shadow_cult_rising": {
+            "name": "Shadow Cult Rising",
+            "description": "Investigate growing cult activity across the kingdom.",
+            "completed": false,
+            "reward_claimed": false,
+            "progress": 0,
+            "goal": 3,
+            "reward_gold": 100,
+            "reward_xp": 150
+        },
+        "dragon_hunter": {
+            "name": "Dragon Hunter",
+            "description": "Defeat the ancient dragon terrorizing nearby villages.",
+            "completed": false,
+            "reward_claimed": false,
+            "progress": 0,
+            "goal": 1,
+            "reward_gold": 200,
+            "reward_xp": 300
+        },
+        "mage_rebellion": {
+            "name": "Mage Rebellion",
+            "description": "Assist the Mages Guild in stopping forbidden dark rituals.",
+            "completed": false,
+            "reward_claimed": false,
+            "progress": 0,
+            "goal": 2,
+            "reward_gold": 120,
+            "reward_xp": 180
+        },
+        "thorn_honor": {
+            "name": "Thorn's Honor",
+            "description": "Help Thorn restore his family's honor.",
+            "completed": false,
+            "reward_claimed": false,
+            "progress": 0,
+            "goal": 2,
+            "reward_gold": 150,
+            "reward_xp": 200
+        },
+        "mira_mentor": {
+            "name": "Mira's Lost Mentor",
+            "description": "Search for Mira's missing mentor within ancient ruins.",
+            "completed": false,
+            "reward_claimed": false,
+            "progress": 0,
+            "goal": 2,
+            "reward_gold": 180,
+            "reward_xp": 220
+        }
+    },
+    "world_state": {
+        "kingdom_influence": 0,
+        "cult_influence": 0,
+        "mages_guild_influence": 0,
+        "world_chaos": 0,
+        "dragon_alive": true,
+        "kingdom_stability": 100,
+        "cult_rising": false,
+        "mages_rebellion": false,
+        "civil_war": false,
+        "shadow_corruption": 0
+    }
 }

@@ -32,7 +32,8 @@ def save_game(
     player_dodge,
     factions,
     story_memory,
-    party
+    party,
+    attack_bonus
 
 ):
 
@@ -43,6 +44,8 @@ def save_game(
         # =========================
 
         "player_hp": player_hp,
+
+        "attack_bonus": attack_bonus,
 
         "player_gold": player_gold,
 

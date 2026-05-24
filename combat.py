@@ -1,28 +1,28 @@
 import random
 
-from status_effects import (
-    add_status_effect,
-    process_status_effects
+from inventory import (
+    use_potion,
+    show_inventory
 )
-
-from skills import (
-    power_strike,
-    fireball,
-    backstab
-)
-
-from equipment import get_weapon_stats
-
-from loot import affixes
-
-from bosses import check_boss_phase
 
 from companions import (
-    companions,
-    companion_ability
+    companion_attack
 )
 
+from utils import (
+    is_attack,
+    is_skills,
+    is_heal,
+    is_inventory,
+    is_run
+)
+
+# =========================
+# COMBAT SYSTEM
+# =========================
+
 def combat(
+
     player_hp,
     enemy_name,
     enemy_hp,
@@ -38,194 +38,83 @@ def combat(
     resource_name,
     player_defense,
     player_dodge
+
 ):
 
-    turn_count = 1
-
-    active_effects = []
-
-    max_enemy_hp = enemy_hp
+    boss_phase = 1
 
     while player_hp > 0 and enemy_hp > 0:
 
-        # =========================
-        # RESET TEMP DEFENSE
-        # =========================
-
-        temp_defense = player_defense
-
-        # =========================
-        # BOSS PHASE SYSTEM
-        # =========================
-
-        phase, special_attack = check_boss_phase(
-            enemy_name,
-            enemy_hp,
-            max_enemy_hp
-        )
-
-        print("\nBoss Phase:", phase)
-
-        # =========================
-        # PROCESS STATUS EFFECTS
-        # =========================
-
-        player_hp, active_effects = process_status_effects(
-            player_hp,
-            active_effects
-        )
-
-        print("\n======================")
+        print("\n====================")
 
         print("Your HP:", player_hp)
 
         print(
             resource_name + ":",
-            player_resource,
-            "/",
-            max_resource
+            str(player_resource)
+            + " / "
+            + str(max_resource)
         )
 
-        print("Defense:", temp_defense)
+        print(
+            "Defense:",
+            player_defense
+        )
 
-        print("Dodge:", str(player_dodge) + "%")
+        print(
+            "Dodge:",
+            str(player_dodge) + "%"
+        )
 
-        print(enemy_name, "HP:", enemy_hp)
+        print(
+            enemy_name + " HP:",
+            enemy_hp
+        )
 
-        print("Equipped Weapon:", equipped_weapon)
+        print(
+            "Equipped Weapon:",
+            equipped_weapon
+        )
 
-        print("\nParty:", party)
+        print(
+            "\nParty:",
+            party
+        )
 
         action = input(
+
             "\nChoose action "
-            "(attack / skills / heal / inventory): "
+            "(attack / skills / heal / inventory / run): "
+
         )
 
         # =========================
-        # INVENTORY
+        # ATTACK
         # =========================
 
-        if action.lower() == "inventory":
+        if is_attack(action):
 
-            print("\n=== INVENTORY ===")
-
-            if len(inventory) == 0:
-
-                print("Inventory empty.")
-
-            else:
-
-                for item in inventory:
-
-                    print("-", item)
-
-            continue
-
-        # =========================
-        # BASIC ATTACK
-        # =========================
-
-        elif action.lower() == "attack":
-
-            weapon_stats = get_weapon_stats(
-                equipped_weapon
+            damage = random.randint(
+                8,
+                15
             )
-
-            crit_chance = 10
-
-            crit_chance += weapon_stats["crit_bonus"]
-
-            if player_class == "rogue":
-
-                crit_chance += 15
-
-            damage = random.randint(5, 15)
 
             damage += attack_bonus
 
-            damage += weapon_stats["damage"]
+            damage += weapon_bonus
 
-            crit_roll = random.randint(1, 100)
+            crit_roll = random.randint(
+                1,
+                100
+            )
 
-            # =========================
-            # CRITICAL HIT
-            # =========================
-
-            if crit_roll <= crit_chance:
+            if crit_roll <= 10:
 
                 damage *= 2
 
-                print("\n=== CRITICAL HIT ===")
-
-            # =========================
-            # ELEMENTAL SYSTEM
-            # =========================
-
-            weapon_name = equipped_weapon.lower()
-
-            weapon_element = None
-
-            if "flaming" in weapon_name:
-
-                weapon_element = "fire"
-
-            elif "frozen" in weapon_name:
-
-                weapon_element = "ice"
-
-            elif "venomous" in weapon_name:
-
-                weapon_element = "poison"
-
-            elif "vampiric" in weapon_name:
-
-                weapon_element = "dark"
-
-            enemy_weakness = enemies[
-                enemy_name
-            ]["weakness"]
-
-            enemy_resistance = enemies[
-                enemy_name
-            ]["resistance"]
-
-            # =========================
-            # ELEMENTAL WEAKNESS
-            # =========================
-
-            if weapon_element == enemy_weakness:
-
-                damage = int(damage * 1.5)
-
-                print("\n=== ELEMENTAL WEAKNESS ===")
-
                 print(
-                    enemy_name,
-                    "is weak to",
-                    weapon_element + "!"
+                    "\nCRITICAL HIT!"
                 )
-
-            # =========================
-            # ELEMENTAL RESISTANCE
-            # =========================
-
-            elif weapon_element == enemy_resistance:
-
-                damage = int(damage * 0.5)
-
-                print("\n=== ELEMENTAL RESISTED ===")
-
-                print(
-                    enemy_name,
-                    "resists",
-                    weapon_element + "!"
-                )
-
-            # =========================
-            # APPLY DAMAGE
-            # =========================
-
-            enemy_hp -= damage
 
             print(
                 "\nYou attack with",
@@ -238,235 +127,354 @@ def combat(
                 "damage!"
             )
 
-            # =========================
-            # WEAPON EFFECTS
-            # =========================
-
-            if "flaming" in weapon_name:
-
-                active_effects = add_status_effect(
-                    active_effects,
-                    "burn",
-                    3
-                )
-
-                print(
-                    "The weapon ignites the enemy!"
-                )
-
-            elif "venomous" in weapon_name:
-
-                active_effects = add_status_effect(
-                    active_effects,
-                    "poison",
-                    3
-                )
-
-                print(
-                    "Poison spreads through the enemy!"
-                )
-
-            elif "vampiric" in weapon_name:
-
-                lifesteal = random.randint(3, 8)
-
-                player_hp += lifesteal
-
-                print(
-                    "\nVampiric energy restores",
-                    lifesteal,
-                    "HP!"
-                )
-
-            elif "frozen" in weapon_name:
-
-                freeze_roll = random.randint(1, 100)
-
-                if freeze_roll <= 25:
-
-                    print(
-                        "\nThe enemy is frozen solid!"
-                    )
-
-                    continue
+            enemy_hp -= damage
 
         # =========================
         # SKILLS
         # =========================
 
-        elif action.lower() == "skills":
+        elif is_skills(action):
 
-            print("\n=== SKILLS ===")
+            print(
+                "\n=== SKILLS ==="
+            )
 
+            # =========================
             # WARRIOR
+            # =========================
 
-            if player_class == "warrior":
+            if player_class == "Warrior":
 
                 print(
-                    "1. Power Strike (15 Stamina)"
+                    "• Shield Slam (20 stamina)"
                 )
 
-                skill_choice = input("> ")
+                print(
+                    "• Battle Cry (15 stamina)"
+                )
 
-                if skill_choice == "1":
-
-                    if player_resource >= 15:
-
-                        player_resource -= 15
-
-                        enemy_hp = power_strike(
-                            enemy_hp,
-                            attack_bonus
-                        )
-
-                    else:
-
-                        print(
-                            "\nNot enough",
-                            resource_name + "!"
-                        )
-
+            # =========================
             # MAGE
+            # =========================
 
-            elif player_class == "mage":
+            elif player_class == "Mage":
 
                 print(
-                    "1. Fireball (20 Mana)"
+                    "• Fireball (25 mana)"
                 )
 
-                skill_choice = input("> ")
+                print(
+                    "• Arcane Burst (35 mana)"
+                )
 
-                if skill_choice == "1":
+            # =========================
+            # ROGUE
+            # =========================
+
+            elif player_class == "Rogue":
+
+                print(
+                    "• Backstab (20 stamina)"
+                )
+
+                print(
+                    "• Shadow Strike (30 stamina)"
+                )
+
+            skill_choice = input(
+                "\nUse skill: "
+            ).strip().lower()
+
+            # =========================
+            # WARRIOR SKILLS
+            # =========================
+
+            if player_class == "Warrior":
+
+                if (
+                    skill_choice
+                    == "shield slam"
+                ):
 
                     if player_resource >= 20:
 
                         player_resource -= 20
 
-                        enemy_hp = fireball(enemy_hp)
+                        damage = random.randint(
+                            18,
+                            28
+                        )
 
-                        active_effects = add_status_effect(
-                            active_effects,
-                            "burn",
-                            3
+                        enemy_hp -= damage
+
+                        print(
+                            "\nYou slam the enemy"
+                            " with your shield!"
+                        )
+
+                        print(
+                            "Damage:",
+                            damage
                         )
 
                     else:
 
                         print(
-                            "\nNot enough",
-                            resource_name + "!"
+                            "\nNot enough stamina!"
                         )
 
-            # ROGUE
+                elif (
+                    skill_choice
+                    == "battle cry"
+                ):
 
-            elif player_class == "rogue":
+                    if player_resource >= 15:
 
-                print(
-                    "1. Backstab (10 Stamina)"
-                )
+                        player_resource -= 15
 
-                skill_choice = input("> ")
+                        attack_bonus += 5
 
-                if skill_choice == "1":
-
-                    if player_resource >= 10:
-
-                        player_resource -= 10
-
-                        enemy_hp = backstab(enemy_hp)
+                        print(
+                            "\nYour battle cry"
+                            " empowers you!"
+                        )
 
                     else:
 
                         print(
-                            "\nNot enough",
-                            resource_name + "!"
+                            "\nNot enough stamina!"
+                        )
+
+            # =========================
+            # MAGE SKILLS
+            # =========================
+
+            elif player_class == "Mage":
+
+                if (
+                    skill_choice
+                    == "fireball"
+                ):
+
+                    if player_resource >= 25:
+
+                        player_resource -= 25
+
+                        damage = random.randint(
+                            25,
+                            40
+                        )
+
+                        enemy_hp -= damage
+
+                        print(
+                            "\nA blazing fireball"
+                            " explodes!"
+                        )
+
+                        print(
+                            "Damage:",
+                            damage
+                        )
+
+                    else:
+
+                        print(
+                            "\nNot enough mana!"
+                        )
+
+                elif (
+                    skill_choice
+                    == "arcane burst"
+                ):
+
+                    if player_resource >= 35:
+
+                        player_resource -= 35
+
+                        damage = random.randint(
+                            35,
+                            55
+                        )
+
+                        enemy_hp -= damage
+
+                        print(
+                            "\nArcane energy erupts!"
+                        )
+
+                        print(
+                            "Damage:",
+                            damage
+                        )
+
+                    else:
+
+                        print(
+                            "\nNot enough mana!"
+                        )
+
+            # =========================
+            # ROGUE SKILLS
+            # =========================
+
+            elif player_class == "Rogue":
+
+                if (
+                    skill_choice
+                    == "backstab"
+                ):
+
+                    if player_resource >= 20:
+
+                        player_resource -= 20
+
+                        damage = random.randint(
+                            22,
+                            36
+                        )
+
+                        enemy_hp -= damage
+
+                        print(
+                            "\nYou strike from"
+                            " the shadows!"
+                        )
+
+                        print(
+                            "Damage:",
+                            damage
+                        )
+
+                    else:
+
+                        print(
+                            "\nNot enough stamina!"
+                        )
+
+                elif (
+                    skill_choice
+                    == "shadow strike"
+                ):
+
+                    if player_resource >= 30:
+
+                        player_resource -= 30
+
+                        damage = random.randint(
+                            32,
+                            48
+                        )
+
+                        enemy_hp -= damage
+
+                        print(
+                            "\nA devastating"
+                            " shadow attack lands!"
+                        )
+
+                        print(
+                            "Damage:",
+                            damage
+                        )
+
+                    else:
+
+                        print(
+                            "\nNot enough stamina!"
                         )
 
         # =========================
-        # HEALING POTION
+        # HEAL
         # =========================
 
-        elif action.lower() == "heal":
+        elif is_heal(action):
 
-            if "Healing Potion" in inventory:
+            player_hp = use_potion(
+                inventory,
+                player_hp
+            )
 
-                heal_amount = 20
+        # =========================
+        # INVENTORY
+        # =========================
 
-                player_hp += heal_amount
+        elif is_inventory(action):
 
-                inventory.remove(
-                    "Healing Potion"
-                )
+            show_inventory(
+                inventory,
+                equipped_weapon,
+                weapon_bonus
+            )
+
+        # =========================
+        # RUN
+        # =========================
+
+        elif is_run(action):
+
+            escape_roll = random.randint(
+                1,
+                100
+            )
+
+            if escape_roll <= 50:
 
                 print(
-                    "\nYou drink a Healing Potion!"
+                    "\nYou escaped!"
                 )
 
-                print(
-                    "Recovered",
-                    heal_amount,
-                    "HP!"
-                )
+                break
 
             else:
 
                 print(
-                    "\nYou don't have any potions."
+                    "\nEscape failed!"
                 )
-
-            continue
-
-        # =========================
-        # INVALID ACTION
-        # =========================
 
         else:
 
-            print("\nInvalid action.")
+            print(
+                "\nInvalid action."
+            )
 
             continue
 
         # =========================
-        # COMPANION ACTIONS
+        # COMPANION ATTACKS
         # =========================
 
-        for member in party:
+        if enemy_hp > 0:
 
-            companion_damage = companions[
-                member
-            ]["damage"]
+            enemy_hp = companion_attack(
+                party,
+                enemy_hp
+            )
 
-            enemy_hp -= companion_damage
+        # =========================
+        # BOSS PHASES
+        # =========================
+
+        if (
+
+            enemy_hp <= 25
+
+            and
+
+            boss_phase == 1
+
+        ):
+
+            boss_phase = 2
 
             print(
-                "\n" + member,
-                "attacks for",
-                companion_damage,
-                "damage!"
+                "\n=== BOSS PHASE 2 ==="
             )
 
-            # =========================
-            # COMPANION ABILITIES
-            # =========================
-
-            (
-                temp_defense,
-                active_effects
-            ) = companion_ability(
-                member,
-                temp_defense,
-                active_effects
+            print(
+                enemy_name,
+                "becomes enraged!"
             )
-
-            if enemy_hp <= 0:
-
-                print(
-                    enemy_name,
-                    "was defeated by",
-                    member + "!"
-                )
-
-                break
 
         # =========================
         # ENEMY DEFEATED
@@ -474,239 +482,14 @@ def combat(
 
         if enemy_hp <= 0:
 
-            print("\nThe enemy collapses!")
+            print(
+                "\nThe enemy collapses!"
+            )
 
             break
 
         # =========================
-        # ENEMY AI SYSTEM
-        # =========================
-
-        special = enemies[
-            enemy_name
-        ]["special"]
-
-        # =========================
-        # BOSS PHASE BONUSES
-        # =========================
-
-        if phase == 2:
-
-            print(
-                "\n=== PHASE 2 ACTIVATED ==="
-            )
-
-        elif phase == 3:
-
-            print(
-                "\n=== FINAL PHASE ==="
-            )
-
-        # =========================
-        # HIDDEN CULT
-        # =========================
-
-        if special == "summon":
-
-            if turn_count % 3 == 0:
-
-                enemy_damage = random.randint(
-                    8,
-                    16
-                )
-
-                print(
-                    "\nThe cult summons dark reinforcements!"
-                )
-
-            else:
-
-                enemy_damage = random.randint(
-                    4,
-                    10
-                )
-
-        # =========================
-        # ANCIENT DRAGON
-        # =========================
-
-        elif special == "fire":
-
-            if turn_count % 2 == 0:
-
-                enemy_damage = random.randint(
-                    14,
-                    22
-                )
-
-                print(
-                    "\nThe dragon unleashes FIRE BREATH!"
-                )
-
-                active_effects = add_status_effect(
-                    active_effects,
-                    "burn",
-                    3
-                )
-
-            else:
-
-                enemy_damage = random.randint(
-                    6,
-                    12
-                )
-
-            # =========================
-            # DRAGON PHASE ATTACKS
-            # =========================
-
-            if special_attack == "inferno":
-
-                enemy_damage += 5
-
-                print(
-                    "\nThe dragon unleashes INFERNO!"
-                )
-
-            elif special_attack == "meteor":
-
-                enemy_damage += 10
-
-                print(
-                    "\nMETEORS crash from the sky!"
-                )
-
-        # =========================
-        # CORRUPTED KNIGHT
-        # =========================
-
-        elif special == "shield":
-
-            if turn_count % 3 == 0:
-
-                enemy_damage = random.randint(
-                    5,
-                    8
-                )
-
-                print(
-                    "\nThe knight raises a massive shield!"
-                )
-
-            else:
-
-                enemy_damage = random.randint(
-                    7,
-                    14
-                )
-
-        # =========================
-        # SHADOW BEAST
-        # =========================
-
-        elif special == "dodge":
-
-            dodge_chance = random.randint(
-                1,
-                100
-            )
-
-            if dodge_chance <= 35:
-
-                print(
-                    "\nThe shadow beast vanishes into darkness!"
-                )
-
-                enemy_damage = random.randint(
-                    5,
-                    12
-                )
-
-            else:
-
-                enemy_damage = random.randint(
-                    7,
-                    15
-                )
-
-            if special_attack == "shadow_frenzy":
-
-                enemy_damage += 6
-
-                print(
-                    "\nThe Shadow Beast enters a frenzy!"
-                )
-
-        # =========================
-        # NECROMANCER
-        # =========================
-
-        elif special == "heal":
-
-            if turn_count % 2 == 0:
-
-                heal_amount = random.randint(
-                    5,
-                    12
-                )
-
-                enemy_hp += heal_amount
-
-                print(
-                    "\nDark magic restores the necromancer!"
-                )
-
-                print(
-                    enemy_name,
-                    "heals",
-                    heal_amount,
-                    "HP!"
-                )
-
-            enemy_damage = random.randint(
-                5,
-                10
-            )
-
-            if special_attack == "summon_undead":
-
-                enemy_damage += 4
-
-                print(
-                    "\nUndead warriors rise from the ground!"
-                )
-
-            elif special_attack == "death_magic":
-
-                enemy_damage += 8
-
-                print(
-                    "\nThe necromancer casts DEATH MAGIC!"
-                )
-
-        # =========================
-        # DEFAULT
-        # =========================
-
-        else:
-
-            enemy_damage = random.randint(
-                4,
-                12
-            )
-
-        # =========================
-        # ARMOR / DEFENSE
-        # =========================
-
-        enemy_damage -= temp_defense
-
-        if enemy_damage < 1:
-
-            enemy_damage = 1
-
-        # =========================
-        # DODGE SYSTEM
+        # DODGE
         # =========================
 
         dodge_roll = random.randint(
@@ -717,24 +500,39 @@ def combat(
         if dodge_roll <= player_dodge:
 
             print(
-                "\nYou DODGE the attack!"
+                "\nYou dodge the attack!"
             )
 
-        else:
+            continue
 
-            player_hp -= enemy_damage
+        # =========================
+        # ENEMY ATTACK
+        # =========================
 
-            print(
-                "\nThe enemy attacks!"
-            )
+        enemy_damage = random.randint(
+            5,
+            12
+        )
 
-            print(
-                "You take",
-                enemy_damage,
-                "damage!"
-            )
+        if boss_phase == 2:
 
-        turn_count += 1
+            enemy_damage += 5
+
+        enemy_damage -= player_defense
+
+        if enemy_damage < 1:
+
+            enemy_damage = 1
+
+        player_hp -= enemy_damage
+
+        print(
+            "\nThe",
+            enemy_name,
+            "hits you for",
+            enemy_damage,
+            "damage!"
+        )
 
     return (
         player_hp,

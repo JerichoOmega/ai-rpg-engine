@@ -67,6 +67,15 @@ from save_system import (
     load_game
 )
 
+from regions import (
+    show_regions,
+    choose_region,
+    region_enemy,
+    region_world_event,
+    region_story_bonus,
+    regions
+)
+
 # =========================
 # PLAYER MEMORY / STORY STATE
 # =========================
@@ -167,10 +176,6 @@ if game_choice == "2":
 
     if save_data:
 
-        # =========================
-        # PLAYER
-        # =========================
-
         player_hp = save_data[
             "player_hp"
         ]
@@ -215,10 +220,6 @@ if game_choice == "2":
             "player_dodge"
         ]
 
-        # =========================
-        # INVENTORY
-        # =========================
-
         inventory = save_data[
             "inventory"
         ]
@@ -230,10 +231,6 @@ if game_choice == "2":
         weapon_bonus = save_data[
             "weapon_bonus"
         ]
-
-        # =========================
-        # STORY FLAGS
-        # =========================
 
         player_reputation = save_data[
             "player_reputation"
@@ -251,10 +248,6 @@ if game_choice == "2":
             "knight_defeated"
         ]
 
-        # =========================
-        # WORLD / STORY
-        # =========================
-
         factions = save_data[
             "factions"
         ]
@@ -267,7 +260,9 @@ if game_choice == "2":
             "party"
         ]
 
-        attack_bonus = 5
+        attack_bonus = save_data[
+            "attack_bonus"
+        ]
 
         print(
             "\nSave successfully loaded!"
@@ -321,17 +316,43 @@ while (
     world_event()
 
     # =========================
+    # REGION SELECTION
+    # =========================
+
+    show_regions()
+
+    selected_region = choose_region()
+
+    region_world_event(
+        selected_region
+    )
+
+    regional_story = region_story_bonus(
+        selected_region
+    )
+
+    print(
+        "\n=== REGION ATMOSPHERE ==="
+    )
+
+    print(regional_story)
+
+    # =========================
     # STORY GENERATION
     # =========================
 
     (
         quest,
         location,
-        enemy_name
+        _
     ) = generate_story(
         enemies,
         factions,
         story_memory
+    )
+
+    enemy_name = region_enemy(
+        selected_region
     )
 
     enemy_hp = random.randint(
@@ -415,10 +436,6 @@ while (
             "The enemy has fallen."
         )
 
-        # =========================
-        # QUEST UPDATES
-        # =========================
-
         update_quests_from_enemy(
             enemy_name
         )
@@ -426,10 +443,6 @@ while (
         update_companion_quests(
             party
         )
-
-        # =========================
-        # QUEST REWARDS
-        # =========================
 
         for quest_key in quests:
 
@@ -446,10 +459,6 @@ while (
                 story_memory
             )
 
-        # =========================
-        # GOLD REWARD
-        # =========================
-
         reward = random.randint(
             10,
             30
@@ -462,10 +471,6 @@ while (
             reward,
             "gold!"
         )
-
-        # =========================
-        # XP REWARD
-        # =========================
 
         xp_gained = random.randint(
             40,
@@ -495,10 +500,6 @@ while (
             attack_bonus,
             max_resource
         )
-
-        # =========================
-        # PROCEDURAL LOOT
-        # =========================
 
         loot_items = [
 
@@ -565,10 +566,6 @@ while (
             loot["defense_bonus"]
         )
 
-        # =========================
-        # EQUIP WEAPON
-        # =========================
-
         if base_loot in [
 
             "Iron Sword",
@@ -584,14 +581,14 @@ while (
                 "name"
             ]
 
+            weapon_bonus = loot[
+                "damage_bonus"
+            ]
+
             print(
                 "\nYou equipped:",
                 equipped_weapon
             )
-
-        # =========================
-        # STORY MEMORY / FACTIONS
-        # =========================
 
         if enemy_name == "hidden cult":
 
@@ -653,10 +650,6 @@ while (
                 -10
             )
 
-        # =========================
-        # COMPANION RECRUITMENT
-        # =========================
-
         recruit_roll = random.randint(
             1,
             100
@@ -682,10 +675,6 @@ while (
                 new_companion
             )
 
-        # =========================
-        # RANDOM EVENT
-        # =========================
-
         (
             player_hp,
             player_gold,
@@ -696,18 +685,10 @@ while (
             inventory
         )
 
-        # =========================
-        # NPC DIALOGUE
-        # =========================
-
         npc_dialogue(
             factions,
             story_memory
         )
-
-        # =========================
-        # CHOICE EVENT
-        # =========================
 
         choice_roll = random.randint(
             1,
@@ -724,19 +705,11 @@ while (
                 story_memory
             )
 
-        # =========================
-        # LOYALTY EVENTS
-        # =========================
-
         party = loyalty_event(
             party,
             story_memory,
             factions
         )
-
-        # =========================
-        # SHOP
-        # =========================
 
         (
             player_gold,
@@ -751,10 +724,6 @@ while (
             equipped_weapon,
             weapon_bonus
         )
-
-        # =========================
-        # SAVE GAME
-        # =========================
 
         save_game(
             player_hp,
@@ -777,14 +746,11 @@ while (
             player_dodge,
             factions,
             story_memory,
-            party
+            party,
+            attack_bonus
         )
 
         current_room += 1
-
-        # =========================
-        # CONTINUE ADVENTURE
-        # =========================
 
         if (
             current_room
@@ -825,10 +791,6 @@ show_story_state(
     player_dodge
 )
 
-# =========================
-# FACTION STATUS
-# =========================
-
 print("\n=== FACTIONS ===")
 
 for faction_name in factions:
@@ -847,10 +809,6 @@ for faction_name in factions:
         ) + ")"
     )
 
-# =========================
-# STORY MEMORY
-# =========================
-
 print(
     "\n=== STORY MEMORY ==="
 )
@@ -863,15 +821,7 @@ for memory_key in story_memory:
         story_memory[memory_key]
     )
 
-# =========================
-# WORLD STATE
-# =========================
-
 show_world_state()
-
-# =========================
-# FINAL INVENTORY
-# =========================
 
 show_inventory(
     inventory,
@@ -879,14 +829,6 @@ show_inventory(
     weapon_bonus
 )
 
-# =========================
-# FINAL PARTY
-# =========================
-
 show_party(party)
-
-# =========================
-# QUEST JOURNAL
-# =========================
 
 show_quests()
