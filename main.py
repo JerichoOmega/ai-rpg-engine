@@ -6,10 +6,7 @@ from story import generate_story
 
 from inventory import (
     show_inventory,
-    add_item,
-    remove_item,
-    use_potion,
-    equip_weapon
+    add_item
 )
 
 from events import (
@@ -50,7 +47,6 @@ from quests import (
 )
 
 from world_state import (
-    world_state,
     update_world_state,
     show_world_state,
     world_event
@@ -72,8 +68,14 @@ from regions import (
     choose_region,
     region_enemy,
     region_world_event,
-    region_story_bonus,
-    regions
+    region_story_bonus
+)
+
+from hub import (
+    town_hub,
+    tavern_scene,
+    dialogue_choice,
+    dungeon_room
 )
 
 # =========================
@@ -111,8 +113,7 @@ weapon_bonus = 0
 # ADVENTURE SETTINGS
 # =========================
 
-adventure_length = 3
-current_room = 1
+adventure_length = 5
 
 # =========================
 # ENEMIES
@@ -168,37 +169,27 @@ enemies = {
 print("1. New Game")
 print("2. Load Game")
 
-game_choice = input("> ")
+game_choice = input("> ").strip().lower()
 
-if game_choice == "2":
+if game_choice in ["2", "load", "load game"]:
 
     save_data = load_game()
 
     if save_data:
 
-        player_hp = save_data[
-            "player_hp"
-        ]
+        player_hp = save_data["player_hp"]
 
-        player_gold = save_data[
-            "player_gold"
-        ]
+        player_gold = save_data["player_gold"]
 
-        player_level = save_data[
-            "player_level"
-        ]
+        player_level = save_data["player_level"]
 
-        player_xp = save_data[
-            "player_xp"
-        ]
+        player_xp = save_data["player_xp"]
 
         xp_to_next_level = save_data[
             "xp_to_next_level"
         ]
 
-        player_class = save_data[
-            "player_class"
-        ]
+        player_class = save_data["player_class"]
 
         resource_name = save_data[
             "resource_name"
@@ -220,9 +211,7 @@ if game_choice == "2":
             "player_dodge"
         ]
 
-        inventory = save_data[
-            "inventory"
-        ]
+        inventory = save_data["inventory"]
 
         equipped_weapon = save_data[
             "equipped_weapon"
@@ -248,25 +237,19 @@ if game_choice == "2":
             "knight_defeated"
         ]
 
-        factions = save_data[
-            "factions"
-        ]
+        factions = save_data["factions"]
 
         story_memory = save_data[
             "story_memory"
         ]
 
-        party = save_data[
-            "party"
-        ]
+        party = save_data["party"]
 
         attack_bonus = save_data[
             "attack_bonus"
         ]
 
-        print(
-            "\nSave successfully loaded!"
-        )
+        print("\nSave loaded!")
 
     else:
 
@@ -298,432 +281,56 @@ else:
 # MAIN GAME LOOP
 # =========================
 
-while (
-    current_room <= adventure_length
-    and player_hp > 0
-):
+game_running = True
+
+while game_running and player_hp > 0:
 
     # =========================
-    # WORLD EVOLUTION
+    # TOWN HUB
     # =========================
 
-    update_world_state(
-        factions,
-        story_memory,
-        party
-    )
-
-    world_event()
+    hub_choice = town_hub()
 
     # =========================
-    # REGION SELECTION
+    # TAVERN
     # =========================
 
-    show_regions()
+    if hub_choice == "tavern":
 
-    selected_region = choose_region()
-
-    region_world_event(
-        selected_region
-    )
-
-    regional_story = region_story_bonus(
-        selected_region
-    )
-
-    print(
-        "\n=== REGION ATMOSPHERE ==="
-    )
-
-    print(regional_story)
-
-    # =========================
-    # STORY GENERATION
-    # =========================
-
-    (
-        quest,
-        location,
-        _
-    ) = generate_story(
-        enemies,
-        factions,
-        story_memory
-    )
-
-    enemy_name = region_enemy(
-        selected_region
-    )
-
-    enemy_hp = random.randint(
-        enemies[enemy_name]["hp_min"],
-        enemies[enemy_name]["hp_max"]
-    )
-
-    print(
-        "\n=== YOUR ADVENTURE ==="
-    )
-
-    print("\n" + quest)
-
-    print("\nThe danger waits...")
-
-    print(location)
-
-    print("\nMain Enemy:")
-
-    print(enemy_name)
-
-    print(
-        "Weakness:",
-        enemies[enemy_name]["weakness"]
-    )
-
-    print(
-        "Resistance:",
-        enemies[enemy_name]["resistance"]
-    )
-
-    # =========================
-    # COMBAT
-    # =========================
-
-    (
-        player_hp,
-        enemy_hp,
-        player_resource
-    ) = combat(
-        player_hp,
-        enemy_name,
-        enemy_hp,
-        attack_bonus,
-        inventory,
-        enemies,
-        equipped_weapon,
-        weapon_bonus,
-        party,
-        player_class,
-        player_resource,
-        max_resource,
-        resource_name,
-        player_defense,
-        player_dodge
-    )
-
-    # =========================
-    # PLAYER DEFEATED
-    # =========================
-
-    if player_hp <= 0:
-
-        print(
-            "\nYou were defeated..."
-        )
-
-        print(
-            "Darkness closes in around you."
-        )
-
-    # =========================
-    # PLAYER VICTORY
-    # =========================
-
-    elif enemy_hp <= 0:
-
-        print("\nVictory!")
-
-        print(
-            "The enemy has fallen."
-        )
-
-        update_quests_from_enemy(
-            enemy_name
-        )
-
-        update_companion_quests(
-            party
-        )
-
-        for quest_key in quests:
-
-            (
-                player_gold,
-                player_xp,
-                factions,
-                story_memory
-            ) = complete_quest_rewards(
-                quest_key,
-                player_gold,
-                player_xp,
-                factions,
-                story_memory
-            )
-
-        reward = random.randint(
-            10,
-            30
-        )
-
-        player_gold += reward
-
-        print(
-            "You gained",
-            reward,
-            "gold!"
-        )
-
-        xp_gained = random.randint(
-            40,
-            70
-        )
-
-        player_xp += xp_gained
-
-        print(
-            "You gained",
-            xp_gained,
-            "XP!"
-        )
-
-        (
-            player_level,
-            player_xp,
-            xp_to_next_level,
-            player_hp,
-            attack_bonus,
-            max_resource
-        ) = check_level_up(
-            player_level,
-            player_xp,
-            xp_to_next_level,
-            player_hp,
-            attack_bonus,
-            max_resource
-        )
-
-        loot_items = [
-
-            "Iron Sword",
-
-            "Magic Staff",
-
-            "Shadow Dagger",
-
-            "Healing Potion",
-
-            "Dragon Slayer"
-        ]
-
-        base_loot = random.choice(
-            loot_items
-        )
-
-        loot = generate_loot(
-            base_loot
-        )
-
-        inventory = add_item(
-            inventory,
-            loot["name"]
-        )
-
-        print(
-            "\n=== LOOT FOUND ==="
-        )
-
-        print(
-            "Item:",
-            loot["name"]
-        )
-
-        print(
-            "Rarity:",
-            loot["rarity"]
-        )
-
-        print(
-            "Effect:",
-            loot["effect"]
-        )
-
-        print(
-            "Element:",
-            loot["element"]
-        )
-
-        print(
-            "Damage Bonus:",
-            loot["damage_bonus"]
-        )
-
-        print(
-            "Crit Bonus:",
-            loot["crit_bonus"]
-        )
-
-        print(
-            "Defense Bonus:",
-            loot["defense_bonus"]
-        )
-
-        if base_loot in [
-
-            "Iron Sword",
-
-            "Magic Staff",
-
-            "Shadow Dagger",
-
-            "Dragon Slayer"
-        ]:
-
-            equipped_weapon = loot[
-                "name"
-            ]
-
-            weapon_bonus = loot[
-                "damage_bonus"
-            ]
-
-            print(
-                "\nYou equipped:",
-                equipped_weapon
-            )
-
-        if enemy_name == "hidden cult":
-
-            cult_defeated = True
-
-            factions = modify_reputation(
-                factions,
-                "kingdom",
-                10
-            )
-
-            factions = modify_reputation(
-                factions,
-                "shadow_cult",
-                -15
-            )
-
-        elif enemy_name == "ancient dragon":
-
-            dragon_defeated = True
-
-            story_memory = update_memory(
-                story_memory,
-                "dragon_slain"
-            )
-
-            factions = modify_reputation(
-                factions,
-                "kingdom",
-                20
-            )
-
-        elif enemy_name == "corrupted knight":
-
-            knight_defeated = True
-
-            factions = modify_reputation(
-                factions,
-                "mages_guild",
-                10
-            )
-
-        elif enemy_name == "necromancer":
-
-            story_memory = update_memory(
-                story_memory,
-                "used_dark_magic"
-            )
-
-            factions = modify_reputation(
-                factions,
-                "shadow_cult",
-                15
-            )
-
-            factions = modify_reputation(
-                factions,
-                "kingdom",
-                -10
-            )
-
-        recruit_roll = random.randint(
-            1,
-            100
-        )
-
-        if recruit_roll <= 30:
-
-            available_companions = [
-
-                "Mira",
-
-                "Thorn",
-
-                "Kael"
-            ]
-
-            new_companion = random.choice(
-                available_companions
-            )
-
-            party = recruit_companion(
-                party,
-                new_companion
-            )
-
-        (
-            player_hp,
-            player_gold,
-            inventory
-        ) = random_event(
-            player_hp,
-            player_gold,
-            inventory
-        )
+        tavern_scene()
 
         npc_dialogue(
             factions,
             story_memory
         )
 
-        choice_roll = random.randint(
-            1,
-            100
-        )
+        continue
 
-        if choice_roll <= 35:
+    # =========================
+    # QUEST BOARD
+    # =========================
 
-            (
-                factions,
-                story_memory
-            ) = choice_event(
-                factions,
-                story_memory
-            )
+    elif hub_choice == "quests":
 
-        party = loyalty_event(
-            party,
-            story_memory,
-            factions
-        )
+        show_quests()
 
-        (
-            player_gold,
-            player_hp,
-            inventory,
-            equipped_weapon,
-            weapon_bonus
-        ) = shop(
-            player_gold,
-            player_hp,
-            inventory,
-            equipped_weapon,
-            weapon_bonus
-        )
+        continue
+
+    # =========================
+    # PARTY CAMP
+    # =========================
+
+    elif hub_choice == "party":
+
+        show_party(party)
+
+        continue
+
+    # =========================
+    # SAVE GAME
+    # =========================
+
+    elif hub_choice == "save":
 
         save_game(
             player_hp,
@@ -750,30 +357,420 @@ while (
             attack_bonus
         )
 
+        continue
+
+    # =========================
+    # SHOP
+    # =========================
+
+    elif hub_choice == "shop":
+
+        (
+            player_gold,
+            player_hp,
+            inventory,
+            equipped_weapon,
+            weapon_bonus
+        ) = shop(
+            player_gold,
+            player_hp,
+            inventory,
+            equipped_weapon,
+            weapon_bonus
+        )
+
+        continue
+
+    # =========================
+    # BEGIN ADVENTURE
+    # =========================
+
+    elif hub_choice == "adventure":
+
+        print(
+            "\n=== BEGINNING ADVENTURE ==="
+        )
+
+    else:
+
+        print("\nInvalid option.")
+
+        continue
+
+    # =========================
+    # ADVENTURE LOOP
+    # =========================
+
+    current_room = 1
+
+    while (
+        current_room <= adventure_length
+        and player_hp > 0
+    ):
+
+        print(
+            f"\n=== ROOM {current_room} ==="
+        )
+
+        update_world_state(
+            factions,
+            story_memory,
+            party
+        )
+
+        world_event()
+
+        # =========================
+        # REGION SELECTION
+        # =========================
+
+        show_regions()
+
+        selected_region = choose_region()
+
+        region_world_event(
+            selected_region
+        )
+
+        regional_story = region_story_bonus(
+            selected_region
+        )
+
+        print(
+            "\n=== REGION ATMOSPHERE ==="
+        )
+
+        print(regional_story)
+
+        # =========================
+        # ROOM GENERATION
+        # =========================
+
+        room_type = dungeon_room()
+
+        # =========================
+        # DIALOGUE ROOM
+        # =========================
+
+        if room_type == "dialogue":
+
+            result = dialogue_choice()
+
+            if result == "persuade":
+
+                modify_reputation(
+                    factions,
+                    "kingdom",
+                    5
+                )
+
+            elif result == "threaten":
+
+                modify_reputation(
+                    factions,
+                    "kingdom",
+                    -5
+                )
+
+            elif result == "bribe":
+
+                if player_gold >= 10:
+
+                    player_gold -= 10
+
+                    modify_reputation(
+                        factions,
+                        "kingdom",
+                        3
+                    )
+
+                    print(
+                        "\nThe guard pockets"
+                        " the coin."
+                    )
+
+                else:
+
+                    print(
+                        "\nNot enough gold"
+                        " to bribe."
+                    )
+
+        # =========================
+        # TREASURE ROOM
+        # =========================
+
+        elif room_type == "treasure":
+
+            treasure = generate_loot(
+                "Ancient Relic"
+            )
+
+            inventory = add_item(
+                inventory,
+                treasure["name"]
+            )
+
+            print(
+                "\nYou obtained:",
+                treasure["name"]
+            )
+
+        # =========================
+        # TRAP ROOM
+        # =========================
+
+        elif room_type == "trap":
+
+            damage = random.randint(
+                5,
+                15
+            )
+
+            player_hp -= damage
+
+            print(
+                f"\nYou take {damage} trap damage!"
+            )
+
+        # =========================
+        # EVENT ROOM
+        # =========================
+
+        elif room_type == "event":
+
+            (
+                player_hp,
+                player_gold,
+                inventory
+            ) = random_event(
+                player_hp,
+                player_gold,
+                inventory
+            )
+
+        # =========================
+        # ENEMY ROOM
+        # =========================
+
+        elif room_type == "enemy":
+
+            (
+                quest,
+                location,
+                _
+            ) = generate_story(
+                enemies,
+                factions,
+                story_memory
+            )
+
+            enemy_name = region_enemy(
+                selected_region
+            )
+
+            enemy_hp = random.randint(
+                enemies[enemy_name]["hp_min"],
+                enemies[enemy_name]["hp_max"]
+            )
+
+            print(
+                "\n=== YOUR ADVENTURE ==="
+            )
+
+            print("\n" + quest)
+
+            print("\nThe danger waits...")
+
+            print(location)
+
+            print("\nMain Enemy:")
+
+            print(enemy_name)
+
+            print(
+                "Weakness:",
+                enemies[enemy_name]["weakness"]
+            )
+
+            print(
+                "Resistance:",
+                enemies[enemy_name]["resistance"]
+            )
+
+            (
+                player_hp,
+                enemy_hp,
+                player_resource
+            ) = combat(
+                player_hp,
+                enemy_name,
+                enemy_hp,
+                attack_bonus,
+                inventory,
+                enemies,
+                equipped_weapon,
+                weapon_bonus,
+                party,
+                player_class,
+                player_resource,
+                max_resource,
+                resource_name,
+                player_defense,
+                player_dodge
+            )
+
+            # =========================
+            # PLAYER VICTORY
+            # =========================
+
+            if enemy_hp <= 0:
+
+                print("\nVictory!")
+
+                reward = random.randint(
+                    15,
+                    40
+                )
+
+                xp_gained = random.randint(
+                    40,
+                    80
+                )
+
+                player_gold += reward
+
+                player_xp += xp_gained
+
+                print(
+                    f"You gained {reward} gold!"
+                )
+
+                print(
+                    f"You gained {xp_gained} XP!"
+                )
+
+                (
+                    player_level,
+                    player_xp,
+                    xp_to_next_level,
+                    player_hp,
+                    attack_bonus,
+                    max_resource
+                ) = check_level_up(
+                    player_level,
+                    player_xp,
+                    xp_to_next_level,
+                    player_hp,
+                    attack_bonus,
+                    max_resource
+                )
+
+                loot = generate_loot(
+                    "Mystic Weapon"
+                )
+
+                inventory = add_item(
+                    inventory,
+                    loot["name"]
+                )
+
+                print(
+                    "\nLoot Found:"
+                )
+
+                print(
+                    loot["name"]
+                )
+
+                update_quests_from_enemy(
+                    enemy_name
+                )
+
+                update_companion_quests(
+                    party
+                )
+
+                for quest_key in list(
+                    quests.keys()
+                ):
+
+                    (
+                        player_gold,
+                        player_xp,
+                        factions,
+                        story_memory
+                    ) = complete_quest_rewards(
+                        quest_key,
+                        player_gold,
+                        player_xp,
+                        factions,
+                        story_memory
+                    )
+
+                choice_roll = random.randint(
+                    1,
+                    100
+                )
+
+                if choice_roll <= 35:
+
+                    (
+                        factions,
+                        story_memory
+                    ) = choice_event(
+                        factions,
+                        story_memory
+                    )
+
+                recruit_roll = random.randint(
+                    1,
+                    100
+                )
+
+                if recruit_roll <= 30:
+
+                    available_companions = [
+
+                        "Mira",
+                        "Thorn",
+                        "Kael"
+                    ]
+
+                    new_companion = random.choice(
+                        available_companions
+                    )
+
+                    party = recruit_companion(
+                        party,
+                        new_companion
+                    )
+
+                party = loyalty_event(
+                    party,
+                    story_memory,
+                    factions
+                )
+
         current_room += 1
 
-        if (
-            current_room
-            <= adventure_length
-        ):
+    # =========================
+    # ADVENTURE COMPLETE
+    # =========================
 
-            print(
-                "\nYou continue deeper into the adventure..."
-            )
+    print(
+        "\n=== ADVENTURE COMPLETE ==="
+    )
 
-        else:
-
-            print(
-                "\n=== FINAL VICTORY ==="
-            )
-
-            print(
-                "You survived the adventure!"
-            )
+    print(
+        "You return to Ashfall."
+    )
 
 # =========================
-# FINAL STORY STATE
+# GAME OVER
 # =========================
+
+print("\n=== FINAL RESULTS ===")
 
 show_story_state(
     cult_defeated,
@@ -809,9 +806,7 @@ for faction_name in factions:
         ) + ")"
     )
 
-print(
-    "\n=== STORY MEMORY ==="
-)
+print("\n=== STORY MEMORY ===")
 
 for memory_key in story_memory:
 

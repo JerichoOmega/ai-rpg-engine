@@ -1,27 +1,29 @@
 {
     "player_hp": 100,
-    "attack_bonus": 12,
+    "attack_bonus": 8,
     "player_gold": 50,
-    "player_level": 1,
+    "player_level": 3,
     "player_xp": 0,
-    "xp_to_next_level": 100,
-    "player_class": "Mage",
-    "resource_name": "Mana",
-    "player_resource": 120,
-    "max_resource": 120,
-    "player_defense": 2,
-    "player_dodge": 10,
-    "inventory": [],
-    "equipped_weapon": "Rusty Sword",
-    "weapon_bonus": 0,
-    "player_reputation": 0,
-    "cult_defeated": false,
+    "xp_to_next_level": 250,
+    "player_class": "Warrior",
+    "resource_name": "Stamina",
+    "player_resource": 80,
+    "max_resource": 100,
+    "player_defense": 5,
+    "player_dodge": 5,
+    "inventory": [
+        "Healing Potion"
+    ],
+    "equipped_weapon": "Steel Sword",
+    "weapon_bonus": 6,
+    "player_reputation": 10,
+    "cult_defeated": true,
     "dragon_defeated": false,
     "knight_defeated": false,
     "factions": {
-        "kingdom": 0,
-        "mages_guild": 0,
-        "shadow_cult": 0
+        "kingdom": 20,
+        "mages_guild": 10,
+        "shadow_cult": -5
     },
     "story_memory": {
         "spared_cultist": false,
@@ -31,7 +33,9 @@
         "dragon_slain": false,
         "used_dark_magic": false
     },
-    "party": [],
+    "party": [
+        "Mira"
+    ],
     "companions": {
         "Mira": {
             "class": "mage",

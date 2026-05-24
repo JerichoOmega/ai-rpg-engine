@@ -1,0 +1,222 @@
+Run and fully integration-test my Python text RPG.
+
+IMPORTANT:
+- Do NOT refactor or rewrite the architecture.
+- Do NOT simplify systems.
+- Only fix actual bugs, crashes, integration issues, and broken logic.
+- Preserve all current mechanics and gameplay loops.
+- Make the SMALLEST safe fixes possible.
+
+The game now includes:
+- town hub system
+- dungeon room generation
+- dialogue choices
+- combat
+- quests
+- companions
+- factions
+- world state
+- regional travel
+- procedural story generation
+- loot system
+- save/load persistence
+
+THOROUGHLY TEST THESE SYSTEMS:
+
+=========================
+1. TOWN HUB
+=========================
+
+Verify:
+- Tavern works
+- Shop works
+- Quest Board works
+- Party Camp works
+- Save Game works
+- Begin Adventure works
+- Invalid inputs handled safely
+- Returning to town works properly
+
+Look for:
+- broken loops
+- softlocks
+- missing returns
+- invalid state transitions
+
+=========================
+2. DUNGEON ROOM SYSTEM
+=========================
+
+Verify generation of:
+- enemy rooms
+- treasure rooms
+- trap rooms
+- event rooms
+- dialogue rooms
+
+Check for:
+- missing room handling
+- bad transitions
+- crashes
+- progression issues
+
+=========================
+3. DIALOGUE CHOICE SYSTEM
+=========================
+
+Test:
+- persuade
+- threaten
+- bribe
+- leave
+
+Verify:
+- faction changes apply correctly
+- inputs normalize correctly
+- no invalid branching
+- no crashes
+
+=========================
+4. COMBAT SYSTEM
+=========================
+
+Test:
+- attack
+- skills
+- healing
+- inventory access
+- escape
+- boss phase transitions
+- companion attacks
+- dodge mechanics
+- defense calculations
+
+Test flexible inputs:
+- Attack
+- attack
+- strike
+- hit
+- potion
+- heal
+- inventory
+- run
+
+Check for:
+- combat softlocks
+- invalid damage
+- negative HP bugs
+- infinite combat loops
+- broken skill usage
+- resource errors
+
+=========================
+5. QUEST SYSTEM
+=========================
+
+Verify:
+- quests update correctly
+- enemy kills progress quests
+- companion quests work
+- rewards apply correctly
+- completed quests persist after saving/loading
+
+=========================
+6. COMPANION SYSTEM
+=========================
+
+Verify:
+- recruitment works
+- loyalty events trigger
+- companion attacks function
+- party persistence works
+- duplicate companions are handled safely
+
+=========================
+7. REGION SYSTEM
+=========================
+
+Verify:
+- region selection works
+- regional atmosphere displays
+- regional enemies generate correctly
+- regional world events trigger correctly
+
+=========================
+8. WORLD STATE SYSTEM
+=========================
+
+Verify:
+- civil war events
+- cult rising events
+- world chaos scaling
+- faction/world interactions
+- world evolution updates
+
+=========================
+9. SAVE/LOAD SYSTEM
+=========================
+
+Verify ALL persist correctly:
+- player stats
+- level
+- inventory
+- equipment
+- companions
+- quests
+- factions
+- story memory
+- world state
+- gold
+- region systems
+
+Look for:
+- corrupted saves
+- missing data
+- bad load states
+- crashes after loading
+
+=========================
+10. SHOP SYSTEM
+=========================
+
+Verify:
+- potion purchases
+- weapon purchases
+- insufficient gold handling
+- invalid inputs
+- inventory updates
+
+=========================
+11. STABILITY TESTING
+=========================
+
+Search for:
+- crashes
+- undefined variables
+- missing imports
+- infinite loops
+- bad dictionary access
+- malformed returns
+- broken references
+- inconsistent game state
+- unreachable code
+
+IMPORTANT:
+Before changing code:
+1. Explain the bug clearly
+2. Explain WHY it happens
+3. Make the smallest safe fix possible
+
+DO NOT:
+- rewrite systems
+- reorganize architecture
+- remove features
+- simplify mechanics
+
+After testing:
+Provide:
+1. List of bugs found
+2. Exact fixes made
+3. Remaining risky systems
+4. Recommended future tests
+5. Any architectural concerns

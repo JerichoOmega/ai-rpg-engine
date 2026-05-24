@@ -461,6 +461,10 @@ def combat(
 
             and
 
+            enemy_hp > 0
+
+            and
+
             boss_phase == 1
 
         ):
