@@ -243,7 +243,7 @@ def update_world_state(
 
         world_state[
             "world_chaos"
-        ] += 5
+        ] += 1
 
     if "Thorn" not in party:
 
@@ -254,7 +254,7 @@ def update_world_state(
 
         world_state[
             "kingdom_stability"
-        ] -= 5
+        ] -= 1
 
     if "Kael" not in party:
 
@@ -265,7 +265,7 @@ def update_world_state(
 
         world_state[
             "cult_influence"
-        ] += 5
+        ] += 1
 
     # =========================
     # WORLD LIMITS

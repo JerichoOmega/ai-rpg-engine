@@ -7,19 +7,19 @@ import random
 rarities = {
 
     "Common": {
-        "multiplier": 1
-    },
-
-    "Rare": {
         "multiplier": 2
     },
 
+    "Rare": {
+        "multiplier": 4
+    },
+
     "Epic": {
-        "multiplier": 3
+        "multiplier": 7
     },
 
     "Legendary": {
-        "multiplier": 5
+        "multiplier": 12
     }
 }
 

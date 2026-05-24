@@ -122,40 +122,40 @@ adventure_length = 5
 enemies = {
 
     "hidden cult": {
-        "hp_min": 15,
-        "hp_max": 25,
+        "hp_min": 40,
+        "hp_max": 65,
         "special": "summon",
         "weakness": "fire",
         "resistance": "poison"
     },
 
     "ancient dragon": {
-        "hp_min": 30,
-        "hp_max": 45,
+        "hp_min": 90,
+        "hp_max": 130,
         "special": "fire",
         "weakness": "ice",
         "resistance": "fire"
     },
 
     "corrupted knight": {
-        "hp_min": 20,
-        "hp_max": 35,
+        "hp_min": 60,
+        "hp_max": 90,
         "special": "shield",
         "weakness": "poison",
         "resistance": "physical"
     },
 
     "shadow beast": {
-        "hp_min": 18,
-        "hp_max": 30,
+        "hp_min": 50,
+        "hp_max": 80,
         "special": "dodge",
         "weakness": "fire",
         "resistance": "ice"
     },
 
     "necromancer": {
-        "hp_min": 20,
-        "hp_max": 40,
+        "hp_min": 65,
+        "hp_max": 100,
         "special": "heal",
         "weakness": "fire",
         "resistance": "poison"

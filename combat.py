@@ -514,8 +514,8 @@ def combat(
         # =========================
 
         enemy_damage = random.randint(
-            5,
-            12
+            8,
+            18
         )
 
         if boss_phase == 2:
