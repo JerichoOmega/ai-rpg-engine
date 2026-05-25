@@ -16,8 +16,12 @@ from campaign_manager import (
     campaign_state
 )
 
+from llm_bridge import (
+    ai_dialogue
+)
+
 # =========================
-# DIALOGUE TONES
+# FALLBACK DIALOGUE
 # =========================
 
 FRIENDLY_DIALOGUE = [
@@ -65,7 +69,7 @@ FEARFUL_DIALOGUE = [
 ]
 
 # =========================
-# GET NPC ATTITUDE
+# NPC ATTITUDE
 # =========================
 
 def get_npc_attitude(
@@ -97,7 +101,7 @@ def get_npc_attitude(
     return "neutral"
 
 # =========================
-# GET WORLD TONE
+# WORLD TONE
 # =========================
 
 def get_world_tone():
@@ -113,36 +117,14 @@ def get_world_tone():
     return "normal"
 
 # =========================
-# GENERATE DIALOGUE
+# FALLBACK DIALOGUE
 # =========================
 
-def generate_dialogue(
+def fallback_dialogue(
 
     npc_name
 
 ):
-
-    npc = NPCS.get(
-        npc_name
-    )
-
-    if not npc:
-
-        print(
-            "\nUnknown NPC."
-        )
-
-        return
-
-    if not npc["alive"]:
-
-        print(
-            f"\nOnly silence remains"
-            f" where {npc_name}"
-            " once stood."
-        )
-
-        return
 
     attitude = get_npc_attitude(
         npc_name
@@ -151,12 +133,8 @@ def generate_dialogue(
     world_tone = get_world_tone()
 
     print(
-        "\n=== DIALOGUE ==="
+        "\n=== FALLBACK DIALOGUE ==="
     )
-
-    # =========================
-    # FEARFUL WORLD OVERRIDE
-    # =========================
 
     if world_tone == "fearful":
 
@@ -164,35 +142,11 @@ def generate_dialogue(
             FEARFUL_DIALOGUE
         )
 
-        print(
-            f"\n{npc_name}:"
-        )
-
-        print(
-            f'"{line}"'
-        )
-
-    # =========================
-    # FRIENDLY
-    # =========================
-
     elif attitude == "friendly":
 
         line = random.choice(
             FRIENDLY_DIALOGUE
         )
-
-        print(
-            f"\n{npc_name}:"
-        )
-
-        print(
-            f'"{line}"'
-        )
-
-    # =========================
-    # HOSTILE
-    # =========================
 
     elif attitude == "hostile":
 
@@ -200,37 +154,19 @@ def generate_dialogue(
             HOSTILE_DIALOGUE
         )
 
-        print(
-            f"\n{npc_name}:"
-        )
-
-        print(
-            f'"{line}"'
-        )
-
-    # =========================
-    # NEUTRAL
-    # =========================
-
     else:
 
         line = random.choice(
             NEUTRAL_DIALOGUE
         )
 
-        print(
-            f"\n{npc_name}:"
-        )
-
-        print(
-            f'"{line}"'
-        )
-
-    generate_memory_callback(
-        npc_name
+    print(
+        f"\n{npc_name}:"
     )
 
-    generate_campaign_dialogue()
+    print(
+        f'"{line}"'
+    )
 
 # =========================
 # MEMORY CALLBACKS
@@ -253,19 +189,19 @@ def generate_memory_callback(
     if len(dragon_memories) > 0:
 
         print(
-            f'\n"{npc_name} whispers about'
-            ' the dragon slayer..."'
+            f'\n"{npc_name} remembers'
+            ' tales of the dragon slayer."'
         )
 
     if len(cult_memories) > 0:
 
         print(
-            f'\n"{npc_name} seems worried'
-            ' about cult activity."'
+            f'\n"{npc_name} fears'
+            ' rising cult influence."'
         )
 
 # =========================
-# CAMPAIGN DIALOGUE
+# CAMPAIGN TALK
 # =========================
 
 def generate_campaign_dialogue():
@@ -307,10 +243,84 @@ def generate_campaign_dialogue():
         )
 
 # =========================
+# AI NPC CONVERSATION
+# =========================
+
+def npc_conversation(
+
+    npc_name
+
+):
+
+    npc = NPCS.get(
+        npc_name
+    )
+
+    if not npc:
+
+        print(
+            "\nUnknown NPC."
+        )
+
+        return
+
+    if not npc["alive"]:
+
+        print(
+            f"\nOnly silence remains"
+            f" where {npc_name}"
+            " once stood."
+        )
+
+        return
+
+    print(
+        "\n=== NPC CONVERSATION ==="
+    )
+
+    # =========================
+    # AI DIALOGUE
+    # =========================
+
+    try:
+
+        ai_dialogue(
+
+            npc_name,
+
+            "The player approaches "
+            "for conversation."
+        )
+
+    # =========================
+    # FALLBACK
+    # =========================
+
+    except Exception:
+
+        fallback_dialogue(
+            npc_name
+        )
+
+    generate_memory_callback(
+        npc_name
+    )
+
+    generate_campaign_dialogue()
+
+    dialogue_choice(
+        npc_name
+    )
+
+# =========================
 # DIALOGUE CHOICES
 # =========================
 
-def dialogue_choice():
+def dialogue_choice(
+
+    npc_name
+
+):
 
     print(
         "\n=== DIALOGUE CHOICE ==="
@@ -332,46 +342,6 @@ def dialogue_choice():
         "\nChoose: "
     ).strip()
 
-    if choice == "1":
-
-        print(
-            "\nYou respond kindly."
-        )
-
-        return "kind"
-
-    elif choice == "2":
-
-        print(
-            "\nYou threaten them."
-        )
-
-        return "threaten"
-
-    else:
-
-        print(
-            "\nYou ask carefully."
-        )
-
-        return "question"
-
-# =========================
-# NPC CONVERSATION
-# =========================
-
-def npc_conversation(
-
-    npc_name
-
-):
-
-    generate_dialogue(
-        npc_name
-    )
-
-    result = dialogue_choice()
-
     npc = NPCS.get(
         npc_name
     )
@@ -381,10 +351,14 @@ def npc_conversation(
         return
 
     # =========================
-    # RELATIONSHIP EFFECTS
+    # KIND
     # =========================
 
-    if result == "kind":
+    if choice == "1":
+
+        print(
+            "\nYou respond kindly."
+        )
 
         npc[
             "relationship"
@@ -395,7 +369,15 @@ def npc_conversation(
             " appreciates your kindness."
         )
 
-    elif result == "threaten":
+    # =========================
+    # THREATEN
+    # =========================
+
+    elif choice == "2":
+
+        print(
+            "\nYou threaten them."
+        )
 
         npc[
             "relationship"
@@ -406,8 +388,18 @@ def npc_conversation(
             " distrusts you more."
         )
 
+    # =========================
+    # QUESTIONS
+    # =========================
+
+    else:
+
+        print(
+            "\nYou ask careful questions."
+        )
+
 # =========================
-# RANDOM NPC CONVERSATION
+# RANDOM CONVERSATION
 # =========================
 
 def random_conversation():

@@ -1,18 +1,13 @@
 import random
 
-# =========================
-# CORE WORLD
-# =========================
-
 from world_state import (
-    world_state,
-    update_world_state,
-    show_world_state
+    update_world_state
 )
 
-# =========================
-# SAVE + STATE
-# =========================
+from session_manager import (
+    start_session,
+    end_session
+)
 
 from save_system import (
     save_game,
@@ -20,130 +15,33 @@ from save_system import (
     autosave
 )
 
-from state_manager import (
-    validate_world_state
+from dm_brain import (
+    update_dm_brain
 )
 
-# =========================
-# SESSION SYSTEM
-# =========================
-
-from session_manager import (
-    start_session,
-    end_session,
-    show_campaign_timeline
+from consistency_engine import (
+    run_full_consistency_check
 )
 
-# =========================
-# AI DIRECTOR
-# =========================
-
-from ai_director import (
-    direct_gameplay,
-    show_director_state,
-    evaluate_session_flow,
-    reset_session_trackers
-)
-
-# =========================
-# CAMPAIGN
-# =========================
-
-from campaign_manager import (
-    show_campaign_status,
-    evaluate_campaign_progress
-)
-
-# =========================
-# QUESTS
-# =========================
-
-from quests import (
-    initialize_quests,
-    show_quests
+from memory_engine import (
+    compress_memories
 )
 
 from quest_generator import (
-    generate_quest,
     show_generated_quests
 )
-
-# =========================
-# NPCS
-# =========================
-
-from npc_manager import (
-    random_npc_event,
-    show_npc
-)
-
-# =========================
-# DIALOGUE
-# =========================
 
 from dialogue_ai import (
     random_conversation
 )
 
-# =========================
-# REGIONS
-# =========================
-
-from region_manager import (
-    random_region_event
+from npc_manager import (
+    show_npc
 )
 
-# =========================
-# ENCOUNTERS
-# =========================
-
-from encounter_generator import (
-    random_travel_event
+from llm_bridge import (
+    ai_narrate
 )
-
-# =========================
-# MEMORY
-# =========================
-
-from memory_engine import (
-    show_memories,
-    compress_memories
-)
-
-# =========================
-# CONSISTENCY
-# =========================
-
-from consistency_engine import (
-    run_full_consistency_check,
-    auto_fix_simple_issues
-)
-
-# =========================
-# NARRATIVE AI
-# =========================
-
-from narrative_ai import (
-    generate_story_hook
-)
-
-# =========================
-# EVENT SYSTEM
-# =========================
-
-from event_bus import (
-    emit
-)
-
-# =========================
-# FORCE SYSTEM IMPORTS
-# =========================
-
-import story_manager
-import faction_manager
-import narrative_ai
-import memory_engine
-import session_manager
 
 # =========================
 # GAME START
@@ -163,52 +61,21 @@ print(
 
 choice = input(
     "\n> "
-).strip().lower()
+).strip()
 
 # =========================
-# LOAD GAME
+# LOAD
 # =========================
 
-if choice in [
+if choice == "2":
 
-    "2",
-
-    "load",
-
-    "load game"
-]:
-
-    success = load_game()
-
-    if not success:
-
-        print(
-            "\nStarting new campaign..."
-        )
-
-# =========================
-# VALIDATION
-# =========================
-
-run_full_consistency_check()
-
-auto_fix_simple_issues()
-
-validate_world_state(
-    world_state
-)
+    load_game()
 
 # =========================
 # SESSION START
 # =========================
 
 start_session()
-
-# =========================
-# INITIALIZE QUESTS
-# =========================
-
-initialize_quests()
 
 # =========================
 # MAIN LOOP
@@ -224,46 +91,44 @@ while game_running:
 
     update_world_state()
 
-    evaluate_campaign_progress()
-
-    evaluate_session_flow()
-
     compress_memories()
 
-    # =========================
-    # AI DIRECTOR
-    # =========================
-
-    direct_gameplay()
+    run_full_consistency_check()
 
     # =========================
-    # RANDOM WORLD EVENTS
+    # DM BRAIN
     # =========================
 
-    random_roll = random.randint(
+    update_dm_brain()
+
+    # =========================
+    # RANDOM AI STORY MOMENT
+    # =========================
+
+    roll = random.randint(
         1,
         100
     )
 
-    if random_roll <= 25:
-
-        random_npc_event()
-
-    elif random_roll <= 50:
-
-        random_region_event()
-
-    elif random_roll <= 70:
+    if roll <= 30:
 
         random_conversation()
 
-    elif random_roll <= 85:
+    elif roll <= 60:
 
-        random_travel_event()
+        try:
 
-    else:
+            ai_narrate(
 
-        generate_story_hook()
+                "Narrate a mysterious "
+                "event happening in the world."
+            )
+
+        except Exception:
+
+            print(
+                "\nThe wind carries uneasy whispers."
+            )
 
     # =========================
     # PLAYER MENU
@@ -278,27 +143,11 @@ while game_running:
     )
 
     print(
-        "2. Show Generated Quests"
+        "2. Save Game"
     )
 
     print(
-        "3. Show Campaign Status"
-    )
-
-    print(
-        "4. Show Timeline"
-    )
-
-    print(
-        "5. Show Memories"
-    )
-
-    print(
-        "6. Save Game"
-    )
-
-    print(
-        "7. End Session"
+        "3. End Session"
     )
 
     player_choice = input(
@@ -311,59 +160,25 @@ while game_running:
 
     if player_choice == "1":
 
-        show_quests()
-
-    elif player_choice == "2":
-
         show_generated_quests()
-
-    # =========================
-    # CAMPAIGN
-    # =========================
-
-    elif player_choice == "3":
-
-        show_campaign_status()
-
-    # =========================
-    # TIMELINE
-    # =========================
-
-    elif player_choice == "4":
-
-        show_campaign_timeline()
-
-    # =========================
-    # MEMORIES
-    # =========================
-
-    elif player_choice == "5":
-
-        show_memories()
 
     # =========================
     # SAVE
     # =========================
 
-    elif player_choice == "6":
+    elif player_choice == "2":
 
         save_game()
 
     # =========================
-    # END SESSION
+    # END
     # =========================
 
-    elif player_choice == "7":
+    elif player_choice == "3":
 
         game_running = False
 
-    # =========================
-    # AUTOSAVE
-    # =========================
-
     autosave()
-
-    reset_session_trackers()
 
 # =========================
 # SESSION END
@@ -371,18 +186,8 @@ while game_running:
 
 end_session()
 
-# =========================
-# FINAL SAVE
-# =========================
-
 save_game()
-
-# =========================
-# GAME END
-# =========================
 
 print(
     "\n=== SESSION COMPLETE ==="
 )
-
-show_world_state()

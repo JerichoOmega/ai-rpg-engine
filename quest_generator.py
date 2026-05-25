@@ -4,14 +4,6 @@ from world_state import (
     world_state
 )
 
-from npc_manager import (
-    NPCS
-)
-
-from region_manager import (
-    REGIONS
-)
-
 from campaign_manager import (
     campaign_state
 )
@@ -20,52 +12,9 @@ from event_bus import (
     emit
 )
 
-# =========================
-# QUEST COMPONENTS
-# =========================
-
-OBJECTIVES = [
-
-    "eliminate",
-
-    "escort",
-
-    "investigate",
-
-    "recover",
-
-    "defend",
-
-    "survive"
-]
-
-TARGETS = [
-
-    "cultists",
-
-    "bandits",
-
-    "shadow beasts",
-
-    "undead",
-
-    "rogue mages",
-
-    "corrupted knights"
-]
-
-REWARDS = [
-
-    "gold",
-
-    "artifact",
-
-    "faction reputation",
-
-    "rare weapon",
-
-    "ancient knowledge"
-]
+from llm_bridge import (
+    ai_generate_quest
+)
 
 # =========================
 # GENERATED QUESTS
@@ -74,96 +23,79 @@ REWARDS = [
 generated_quests = []
 
 # =========================
+# FALLBACK QUESTS
+# =========================
+
+FALLBACK_QUESTS = [
+
+    "Eliminate Cultists",
+
+    "Escort Caravan",
+
+    "Investigate Ruins",
+
+    "Recover Artifact",
+
+    "Defend Village"
+]
+
+# =========================
 # GENERATE QUEST
 # =========================
 
 def generate_quest():
 
-    current_region = world_state[
-        "regions"
-    ]["current_region"]
-
-    region = REGIONS.get(
-        current_region
+    print(
+        "\n=== QUEST GENERATION ==="
     )
 
-    objective = random.choice(
-        OBJECTIVES
-    )
+    # =========================
+    # AI QUEST
+    # =========================
 
-    target = random.choice(
-        TARGETS
-    )
+    try:
 
-    reward = random.choice(
-        REWARDS
-    )
+        ai_generate_quest()
 
-    npc_name = random.choice(
-        list(NPCS.keys())
-    )
+    # =========================
+    # FALLBACK
+    # =========================
 
-    campaign_stage = campaign_state[
-        "campaign_stage"
-    ]
+    except Exception:
 
-    quest_name = (
+        fallback = random.choice(
+            FALLBACK_QUESTS
+        )
 
-        objective.title()
+        print(
+            f"\nFallback Quest:"
+            f" {fallback}"
+        )
 
-        + " "
-
-        + target.title()
+    quest_name = random.choice(
+        FALLBACK_QUESTS
     )
 
     quest = {
 
         "name": quest_name,
 
-        "objective": objective,
+        "completed": False,
 
-        "target": target,
+        "region":
 
-        "reward": reward,
+            world_state[
+                "regions"
+            ]["current_region"],
 
-        "region": current_region,
+        "campaign_stage":
 
-        "giver": npc_name,
-
-        "campaign_stage": campaign_stage,
-
-        "completed": False
+            campaign_state[
+                "campaign_stage"
+            ]
     }
 
     generated_quests.append(
-        quest
-    )
-
-    print(
-        "\n=== GENERATED QUEST ==="
-    )
-
-    print(
-        "Quest:",
-        quest_name
-    )
-
-    print(
-        "Region:",
-        current_region
-    )
-
-    print(
-        "Quest Giver:",
-        npc_name
-    )
-
-    print(
-        "Reward:",
-        reward
-    )
-
-    narrate_generated_quest(
         quest
     )
 
@@ -175,43 +107,6 @@ def generate_quest():
     )
 
     return quest
-
-# =========================
-# QUEST NARRATION
-# =========================
-
-def narrate_generated_quest(
-
-    quest
-
-):
-
-    print(
-        "\n=== QUEST HOOK ==="
-    )
-
-    objective = quest[
-        "objective"
-    ]
-
-    target = quest[
-        "target"
-    ]
-
-    region = quest[
-        "region"
-    ]
-
-    giver = quest[
-        "giver"
-    ]
-
-    print(
-        f"\n{giver} requests your help"
-        f" to {objective}"
-        f" {target}"
-        f" within {region}."
-    )
 
 # =========================
 # COMPLETE QUEST
@@ -240,50 +135,15 @@ def complete_generated_quest(
                 f" {quest_name}"
             )
 
-            apply_reward(
-                quest
-            )
-
             emit(
 
-                "generated_quest_completed",
+                "quest_completed",
 
                 quest_name=quest_name
             )
 
 # =========================
-# APPLY REWARD
-# =========================
-
-def apply_reward(
-
-    quest
-
-):
-
-    reward = quest[
-        "reward"
-    ]
-
-    print(
-        f"\nReward earned:"
-        f" {reward}"
-    )
-
-    if reward == "gold":
-
-        world_state[
-            "player"
-        ]["gold"] += 50
-
-    elif reward == "faction reputation":
-
-        world_state[
-            "factions"
-        ]["kingdom"] += 10
-
-# =========================
-# SHOW GENERATED QUESTS
+# SHOW QUESTS
 # =========================
 
 def show_generated_quests():
@@ -313,74 +173,6 @@ def show_generated_quests():
         )
 
         print(
-            "Giver:",
-            quest["giver"]
-        )
-
-        print(
             "Completed:",
             quest["completed"]
         )
-
-# =========================
-# CAMPAIGN-BASED QUESTS
-# =========================
-
-def generate_campaign_quest():
-
-    stage = campaign_state[
-        "campaign_stage"
-    ]
-
-    print(
-        "\n=== CAMPAIGN QUEST ==="
-    )
-
-    if stage == "emergence":
-
-        print(
-            "\nRumors spread of hidden cult activity."
-        )
-
-    elif stage == "regional_conflict":
-
-        print(
-            "\nFactions seek mercenaries for war."
-        )
-
-    elif stage == "world_crisis":
-
-        print(
-            "\nEntire regions collapse into chaos."
-        )
-
-    elif stage == "final_catastrophe":
-
-        print(
-            "\nThe fate of the world hangs by a thread."
-        )
-
-# =========================
-# DYNAMIC ESCALATION
-# =========================
-
-def evaluate_generated_quests():
-
-    incomplete = 0
-
-    for quest in generated_quests:
-
-        if not quest["completed"]:
-
-            incomplete += 1
-
-    if incomplete >= 5:
-
-        print(
-            "\nToo many unresolved quests"
-            " are destabilizing the world."
-        )
-
-        world_state[
-            "world_conditions"
-        ]["world_chaos"] += 5

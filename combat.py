@@ -1,30 +1,21 @@
 import random
 
-from world_state import (
-    world_state,
-    damage_player
-)
-
-from inventory import (
-    use_potion,
-    show_inventory
-)
-
-from companions import (
-    companion_attack
+from player import (
+    player
 )
 
 from event_bus import (
     emit
 )
 
-from utils import (
-    is_attack,
-    is_skills,
-    is_heal,
-    is_inventory,
-    is_run
+from llm_bridge import (
+    ai_combat_narration,
+    ai_narrate
 )
+
+# =========================
+# COMBAT
+# =========================
 
 def combat(
 
@@ -33,99 +24,162 @@ def combat(
 
 ):
 
-    player = world_state["player"]
+    print(
+        "\n=== COMBAT START ==="
+    )
 
-    companions = world_state[
-        "companions"
-    ]["party"]
+    # =========================
+    # AI INTRO NARRATION
+    # =========================
 
-    boss_phase = 1
+    combat_state = {
 
-    while (
+        "enemy_hp": enemy_hp,
 
-        player["hp"] > 0
+        "player_hp": player.hp
+    }
 
-        and
+    try:
 
-        enemy_hp > 0
+        ai_combat_narration(
 
-    ):
+            enemy_name,
+
+            combat_state
+        )
+
+    except Exception:
 
         print(
-            "\n===================="
+            f"\nA dangerous"
+            f" {enemy_name}"
+            " approaches."
+        )
+
+    # =========================
+    # COMBAT LOOP
+    # =========================
+
+    while enemy_hp > 0 and player.hp > 0:
+
+        print(
+            "\n========================"
         )
 
         print(
-            "Your HP:",
-            str(player["hp"])
-            + "/"
-            + str(player["max_hp"])
+            f"Player HP:"
+            f" {player.hp}/"
+            f"{player.max_hp}"
         )
 
         print(
-            enemy_name + " HP:",
-            enemy_hp
+            f"{enemy_name} HP:"
+            f" {enemy_hp}"
+        )
+
+        print(
+            "\n1. Attack"
+        )
+
+        print(
+            "2. Heavy Attack"
+        )
+
+        print(
+            "3. Heal"
         )
 
         action = input(
+            "\nChoose: "
+        ).strip()
 
-            "\nChoose action "
-            "(attack / skills / heal / inventory / run): "
+        # =========================
+        # ATTACK
+        # =========================
 
-        )
-
-        if is_attack(action):
+        if action == "1":
 
             damage = random.randint(
-                6,
+                5,
                 12
             )
 
-            damage += player[
-                "attack_bonus"
-            ]
-
-            damage += player[
-                "weapon_bonus"
-            ]
-
-            print(
-                "\nYou deal",
-                damage,
-                "damage!"
+            damage += (
+                player.attack_bonus
             )
 
             enemy_hp -= damage
 
-        elif is_heal(action):
+            print(
+                f"\nYou strike the"
+                f" {enemy_name}"
+                f" for {damage} damage."
+            )
 
-            use_potion()
+        # =========================
+        # HEAVY ATTACK
+        # =========================
 
-        elif is_inventory(action):
+        elif action == "2":
 
-            show_inventory()
+            damage = random.randint(
+                10,
+                20
+            )
 
-        elif is_run(action):
+            enemy_hp -= damage
 
             print(
-                "\nYou escaped!"
+                f"\nHeavy attack hits for"
+                f" {damage} damage!"
             )
 
-            return False
+        # =========================
+        # HEAL
+        # =========================
 
-        if enemy_hp > 0:
+        elif action == "3":
 
-            enemy_hp = companion_attack(
-
-                companions,
-                enemy_hp
-
+            heal = random.randint(
+                10,
+                20
             )
+
+            player.hp += heal
+
+            player.hp = min(
+
+                player.hp,
+
+                player.max_hp
+            )
+
+            print(
+                f"\nYou recover"
+                f" {heal} HP."
+            )
+
+        # =========================
+        # INVALID
+        # =========================
+
+        else:
+
+            print(
+                "\nInvalid action."
+            )
+
+            continue
+
+        # =========================
+        # ENEMY DEFEATED
+        # =========================
 
         if enemy_hp <= 0:
 
             print(
-                "\nThe enemy collapses!"
+                f"\nYou defeated"
+                f" {enemy_name}!"
             )
 
             emit(
@@ -135,23 +189,73 @@ def combat(
                 enemy_name=enemy_name
             )
 
+            # =========================
+            # AI AFTERMATH
+            # =========================
+
+            try:
+
+                ai_narrate(
+
+                    f"The player defeated"
+                    f" {enemy_name}."
+                    " Narrate the aftermath."
+                )
+
+            except Exception:
+
+                print(
+                    "\nThe battle ends."
+                )
+
             return True
 
+        # =========================
+        # ENEMY TURN
+        # =========================
+
         enemy_damage = random.randint(
-            6,
-            14
+            5,
+            15
         )
 
-        damage_player(
-            enemy_damage
-        )
-
-    if player["hp"] <= 0:
+        player.hp -= enemy_damage
 
         print(
-            "\nYou were defeated..."
+            f"\nThe {enemy_name}"
+            f" hits you for"
+            f" {enemy_damage} damage."
         )
 
-        return False
+        emit(
 
-    return True
+            "player_damaged",
+
+            amount=enemy_damage
+        )
+
+        # =========================
+        # LOW HP
+        # =========================
+
+        if player.hp <= 25:
+
+            print(
+                "\nYou are critically wounded!"
+            )
+
+        # =========================
+        # PLAYER DEFEATED
+        # =========================
+
+        if player.hp <= 0:
+
+            print(
+                "\nYou have fallen in battle..."
+            )
+
+            emit(
+                "player_defeated"
+            )
+
+            return False
