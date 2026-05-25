@@ -7,6 +7,11 @@ from world_state import (
     change_faction_reputation
 )
 
+from event_bus import (
+    subscribe,
+    emit
+)
+
 # =========================
 # QUEST DATABASE
 # =========================
@@ -105,25 +110,7 @@ quests = {
 
 def initialize_quests():
 
-    saved_progress = world_state[
-        "quests"
-    ].get("progress", {})
-
     for quest_name in quest_database:
-
-        if quest_name in saved_progress:
-
-            quests[quest_name][
-                "progress"
-            ] = saved_progress[quest_name]
-
-        if quest_name in world_state[
-            "quests"
-        ]["completed"]:
-
-            quests[quest_name][
-                "completed"
-            ] = True
 
         if (
 
@@ -134,12 +121,6 @@ def initialize_quests():
             world_state[
                 "quests"
             ]["active"]
-
-            and
-
-            not quests[
-                quest_name
-            ]["completed"]
 
         ):
 
@@ -252,12 +233,6 @@ def update_quests_from_enemy(
                 "progress"
             ] += 1
 
-            world_state[
-                "quests"
-            ]["progress"][
-                quest_name
-            ] = quest_state["progress"]
-
             print(
                 f"\nQuest Updated:"
                 f" {quest_name}"
@@ -282,10 +257,6 @@ def update_quests_from_enemy(
                     ]
                 )
             )
-
-            # =========================
-            # QUEST COMPLETE
-            # =========================
 
             if (
 
@@ -327,10 +298,6 @@ def reward_quest(quest_name):
         "completed"
     ] = True
 
-    # =========================
-    # REMOVE FROM ACTIVE
-    # =========================
-
     if (
 
         quest_name
@@ -349,17 +316,9 @@ def reward_quest(quest_name):
             quest_name
         )
 
-    # =========================
-    # COMPLETE QUEST
-    # =========================
-
     complete_quest(
         quest_name
     )
-
-    # =========================
-    # GOLD REWARD
-    # =========================
 
     add_gold(
 
@@ -367,10 +326,6 @@ def reward_quest(quest_name):
             "gold_reward"
         ]
     )
-
-    # =========================
-    # XP REWARD
-    # =========================
 
     world_state[
         "player"
@@ -380,10 +335,6 @@ def reward_quest(quest_name):
             "xp_reward"
         ]
     )
-
-    # =========================
-    # FACTION REWARD
-    # =========================
 
     change_faction_reputation(
 
@@ -395,10 +346,6 @@ def reward_quest(quest_name):
             "reputation_reward"
         ]
     )
-
-    # =========================
-    # MAJOR EVENT MEMORY
-    # =========================
 
     remember_major_event(
         quest_name
@@ -426,118 +373,38 @@ def reward_quest(quest_name):
         ]
     )
 
+    emit(
+
+        "quest_completed",
+
+        quest_name=quest_name
+    )
+
 # =========================
-# COMPANION QUESTS
+# EVENT REACTIONS
 # =========================
 
-def update_companion_quests(
+def handle_enemy_killed(
 
-    party
+    event_data
 
 ):
 
-    if "Mira" in party:
-
-        print(
-            "\nMira reflects on"
-            " your recent actions."
-        )
-
-    if "Thorn" in party:
-
-        print(
-            "\nThorn sharpens"
-            " his weapons silently."
-        )
-
-    if "Kael" in party:
-
-        print(
-            "\nKael studies"
-            " ancient magical symbols."
-        )
-
-# =========================
-# QUEST FAILURE
-# =========================
-
-def fail_active_quest(
-
-    quest_name
-
-):
-
-    if (
-
-        quest_name
-
-        in
-
-        world_state[
-            "quests"
-        ]["active"]
-
-    ):
-
-        world_state[
-            "quests"
-        ]["active"].remove(
-            quest_name
-        )
-
-        fail_quest(
-            quest_name
-        )
-
-        print(
-            f"\nQuest Failed:"
-            f" {quest_name}"
-        )
-
-# =========================
-# QUEST HISTORY
-# =========================
-
-def show_completed_quests():
-
-    print(
-        "\n=== COMPLETED QUESTS ==="
+    enemy_name = event_data.get(
+        "enemy_name"
     )
 
-    completed = world_state[
-        "quests"
-    ]["completed"]
+    if enemy_name:
 
-    if len(completed) == 0:
-
-        print(
-            "No completed quests."
+        update_quests_from_enemy(
+            enemy_name
         )
 
-        return
+# =========================
+# REGISTER EVENTS
+# =========================
 
-    for quest in completed:
-
-        print("•", quest)
-
-def show_failed_quests():
-
-    print(
-        "\n=== FAILED QUESTS ==="
-    )
-
-    failed = world_state[
-        "quests"
-    ]["failed"]
-
-    if len(failed) == 0:
-
-        print(
-            "No failed quests."
-        )
-
-        return
-
-    for quest in failed:
-
-        print("•", quest)
+subscribe(
+    "enemy_killed",
+    handle_enemy_killed
+)

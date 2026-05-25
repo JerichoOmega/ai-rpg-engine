@@ -7,9 +7,9 @@ from world_state import (
     change_faction_reputation
 )
 
-# =========================
-# COMPANION DATABASE
-# =========================
+from event_bus import (
+    subscribe
+)
 
 companions = {
 
@@ -68,10 +68,6 @@ companions = {
     }
 }
 
-# =========================
-# RECRUITMENT
-# =========================
-
 def attempt_recruitment():
 
     available = list(
@@ -100,10 +96,6 @@ def attempt_recruitment():
         recruit_companion(
             companion_name
         )
-
-# =========================
-# PARTY DISPLAY
-# =========================
 
 def show_party():
 
@@ -161,17 +153,6 @@ def show_party():
             relationship
         )
 
-        print(
-            "Personality:",
-            companion[
-                "personality"
-            ]
-        )
-
-# =========================
-# COMPANION ATTACKS
-# =========================
-
 def companion_attack(
 
     party,
@@ -207,14 +188,44 @@ def companion_attack(
     return enemy_hp
 
 # =========================
-# COMPANION REACTIONS
+# EVENT REACTIONS
 # =========================
 
-def companion_reaction(
+def handle_enemy_killed(
 
-    action_tag
+    event_data
 
 ):
+
+    enemy_name = event_data.get(
+        "enemy_name"
+    )
+
+    party = world_state[
+        "companions"
+    ]["party"]
+
+    if len(party) == 0:
+
+        return
+
+    for companion_name in party:
+
+        print(
+            f"\n{companion_name}"
+            f" reacts to defeating"
+            f" {enemy_name}."
+        )
+
+def handle_quest_completed(
+
+    event_data
+
+):
+
+    quest_name = event_data.get(
+        "quest_name"
+    )
 
     party = world_state[
         "companions"
@@ -222,236 +233,28 @@ def companion_reaction(
 
     for companion_name in party:
 
-        companion = companions[
-            companion_name
-        ]
-
-        likes = companion["likes"]
-
-        dislikes = companion[
-            "dislikes"
-        ]
-
-        # =========================
-        # LIKES
-        # =========================
-
-        if action_tag in likes:
-
-            world_state[
-                "companions"
-            ]["relationships"][
-                companion_name
-            ] += 5
-
-            print(
-                f"\n{companion_name}"
-                " approves of your actions."
-            )
-
-        # =========================
-        # DISLIKES
-        # =========================
-
-        if action_tag in dislikes:
-
-            world_state[
-                "companions"
-            ]["relationships"][
-                companion_name
-            ] -= 5
-
-            print(
-                f"\n{companion_name}"
-                " disapproves of your actions."
-            )
-
-# =========================
-# LOYALTY EVENTS
-# =========================
-
-def loyalty_event():
-
-    party = world_state[
-        "companions"
-    ]["party"]
-
-    if len(party) == 0:
-
-        return
-
-    print(
-        "\n=== COMPANION EVENT ==="
-    )
-
-    companion_name = random.choice(
-        party
-    )
-
-    loyalty = world_state[
-        "companions"
-    ]["loyalty"][
-        companion_name
-    ]
-
-    relationship = world_state[
-        "companions"
-    ]["relationships"][
-        companion_name
-    ]
-
-    # =========================
-    # HIGH RELATIONSHIP
-    # =========================
-
-    if relationship >= 25:
-
-        print(
-            f"\n{companion_name}"
-            " trusts you deeply."
-        )
-
-        loyalty += 5
-
-    # =========================
-    # LOW RELATIONSHIP
-    # =========================
-
-    elif relationship <= -25:
-
-        print(
-            f"\n{companion_name}"
-            " questions your leadership."
-        )
-
-        loyalty -= 10
-
-    else:
-
-        print(
-            f"\n{companion_name}"
-            " remains uncertain about you."
-        )
-
-    world_state[
-        "companions"
-    ]["loyalty"][
-        companion_name
-    ] = loyalty
-
-# =========================
-# COMPANION ABILITIES
-# =========================
-
-def companion_ability(
-
-    companion_name,
-    enemy_name
-
-):
-
-    if companion_name == "Mira":
-
-        print(
-            "\nMira casts an arcane shield!"
-        )
-
         world_state[
-            "player"
-        ]["defense"] += 2
-
-    elif companion_name == "Thorn":
-
-        print(
-            "\nThorn taunts the enemy!"
-        )
-
-    elif companion_name == "Kael":
-
-        print(
-            "\nKael strikes from the shadows!"
-        )
-
-# =========================
-# COMPANION LEAVING
-# =========================
-
-def check_companion_departure():
-
-    party = world_state[
-        "companions"
-    ]["party"]
-
-    for companion_name in party[:]:
-
-        loyalty = world_state[
             "companions"
-        ]["loyalty"][
+        ]["relationships"][
             companion_name
-        ]
+        ] += 2
 
-        if loyalty <= 0:
-
-            print(
-                f"\n{companion_name}"
-                " abandons the party!"
-            )
-
-            party.remove(
-                companion_name
-            )
+        print(
+            f"\n{companion_name}"
+            f" feels inspired after"
+            f" completing {quest_name}."
+        )
 
 # =========================
-# COMPANION STORY EVENTS
+# REGISTER EVENTS
 # =========================
 
-def companion_story_event():
+subscribe(
+    "enemy_killed",
+    handle_enemy_killed
+)
 
-    party = world_state[
-        "companions"
-    ]["party"]
-
-    if len(party) == 0:
-
-        return
-
-    companion_name = random.choice(
-        party
-    )
-
-    print(
-        "\n=== COMPANION STORY ==="
-    )
-
-    if companion_name == "Mira":
-
-        print(
-            "Mira speaks about the dangers"
-            " of uncontrolled magic."
-        )
-
-        remember_choice(
-            "learned_magic_lore"
-        )
-
-    elif companion_name == "Thorn":
-
-        print(
-            "Thorn recalls battles from"
-            " the civil war."
-        )
-
-        remember_choice(
-            "heard_war_story"
-        )
-
-    elif companion_name == "Kael":
-
-        print(
-            "Kael reveals hidden knowledge"
-            " about shadow cult rituals."
-        )
-
-        remember_choice(
-            "learned_cult_secret"
-        )
+subscribe(
+    "quest_completed",
+    handle_quest_completed
+)

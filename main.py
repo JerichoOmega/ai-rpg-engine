@@ -6,7 +6,6 @@ from world_state import (
     show_world_state,
     add_gold,
     add_item,
-    damage_player,
     discover_region,
     set_current_region,
     remember_choice
@@ -15,28 +14,20 @@ from world_state import (
 from player import (
     create_player,
     check_level_up,
-    show_player_status,
     show_story_state
 )
 
 from combat import combat
 
-from shop import (
-    shop,
-    black_market
-)
+from shop import shop
 
 from inventory import (
-    show_inventory,
-    equip_weapon
+    show_inventory
 )
 
 from quests import (
     initialize_quests,
-    show_quests,
-    update_quests_from_enemy,
-    update_companion_quests,
-    show_completed_quests
+    show_quests
 )
 
 from companions import (
@@ -51,8 +42,7 @@ from companions import (
 from save_system import (
     save_game,
     load_game,
-    autosave,
-    show_save_summary
+    autosave
 )
 
 from loot import (
@@ -66,8 +56,18 @@ from hub import (
     dungeon_room
 )
 
+from event_bus import (
+    emit
+)
+
 # =========================
-# ENEMY DATABASE
+# IMPORT STORY MANAGER
+# =========================
+
+import story_manager
+
+# =========================
+# ENEMIES
 # =========================
 
 enemies = {
@@ -143,10 +143,6 @@ print(
 
 choice = input("> ").strip().lower()
 
-# =========================
-# LOAD GAME
-# =========================
-
 if choice in [
 
     "2",
@@ -160,28 +156,16 @@ if choice in [
 
     if not success:
 
-        print(
-            "\nStarting new game instead."
-        )
-
         create_player()
-
-# =========================
-# NEW GAME
-# =========================
 
 else:
 
     create_player()
 
-# =========================
-# INITIALIZE QUESTS
-# =========================
-
 initialize_quests()
 
 # =========================
-# MAIN GAME LOOP
+# MAIN LOOP
 # =========================
 
 game_running = True
@@ -202,10 +186,6 @@ while game_running:
     print(
         "========================"
     )
-
-    # =========================
-    # TOWN HUB
-    # =========================
 
     hub_choice = town_hub()
 
@@ -232,7 +212,7 @@ while game_running:
         continue
 
     # =========================
-    # QUEST BOARD
+    # QUESTS
     # =========================
 
     elif hub_choice == "quests":
@@ -242,7 +222,7 @@ while game_running:
         continue
 
     # =========================
-    # PARTY CAMP
+    # PARTY
     # =========================
 
     elif hub_choice == "party":
@@ -252,7 +232,7 @@ while game_running:
         continue
 
     # =========================
-    # SAVE GAME
+    # SAVE
     # =========================
 
     elif hub_choice == "save":
@@ -262,7 +242,7 @@ while game_running:
         continue
 
     # =========================
-    # BEGIN ADVENTURE
+    # ADVENTURE
     # =========================
 
     elif hub_choice == "adventure":
@@ -272,10 +252,6 @@ while game_running:
         )
 
     else:
-
-        print(
-            "\nInvalid option."
-        )
 
         continue
 
@@ -301,17 +277,19 @@ while game_running:
             regions
         )
 
-        print(
-            "\nYou lose your way and arrive at:",
-            selected_region
-        )
-
     set_current_region(
         selected_region
     )
 
     discover_region(
         selected_region
+    )
+
+    emit(
+
+        "region_discovered",
+
+        region_name=selected_region
     )
 
     # =========================
@@ -364,10 +342,6 @@ while game_running:
                 enemy_hp
             )
 
-            # =========================
-            # PLAYER VICTORY
-            # =========================
-
             if victory:
 
                 gold_reward = random.randint(
@@ -388,24 +362,6 @@ while game_running:
                     "player"
                 ]["xp"] += xp_reward
 
-                print(
-                    f"\nYou gained"
-                    f" {gold_reward} gold!"
-                )
-
-                print(
-                    f"You gained"
-                    f" {xp_reward} XP!"
-                )
-
-                update_quests_from_enemy(
-                    enemy_name
-                )
-
-                # =========================
-                # LOOT
-                # =========================
-
                 loot = generate_loot(
                     enemy_name
                 )
@@ -414,32 +370,11 @@ while game_running:
                     loot["name"]
                 )
 
-                print(
-                    "\nLoot Found:"
-                )
-
-                print(
-                    loot["name"]
-                )
-
-                # =========================
-                # COMPANION EVENTS
-                # =========================
-
                 attempt_recruitment()
 
                 loyalty_event()
 
-                update_companion_quests(
-
-                    world_state[
-                        "companions"
-                    ]["party"]
-                )
-
-                # =========================
-                # LEVEL UP
-                # =========================
+                update_world_state()
 
                 check_level_up()
 
@@ -454,60 +389,6 @@ while game_running:
                 break
 
         # =========================
-        # TREASURE ROOM
-        # =========================
-
-        elif room_type == "treasure":
-
-            loot = generate_loot(
-                "treasure"
-            )
-
-            add_item(
-                loot["name"]
-            )
-
-            print(
-                "\nTreasure Found:"
-            )
-
-            print(
-                loot["name"]
-            )
-
-        # =========================
-        # TRAP ROOM
-        # =========================
-
-        elif room_type == "trap":
-
-            trap_damage = random.randint(
-                10,
-                20
-            )
-
-            damage_player(
-                trap_damage
-            )
-
-            print(
-                f"\nA trap deals"
-                f" {trap_damage} damage!"
-            )
-
-            if world_state[
-                "player"
-            ]["hp"] <= 0:
-
-                print(
-                    "\nThe trap kills you!"
-                )
-
-                game_running = False
-
-                break
-
-        # =========================
         # DIALOGUE ROOM
         # =========================
 
@@ -515,23 +396,22 @@ while game_running:
 
             result = dialogue_choice()
 
-            # =========================
-            # PERSUADE
-            # =========================
-
             if result == "persuade":
 
                 remember_choice(
                     "merciful"
                 )
 
+                emit(
+
+                    "player_choice",
+
+                    choice="mercy"
+                )
+
                 companion_reaction(
                     "mercy"
                 )
-
-            # =========================
-            # THREATEN
-            # =========================
 
             elif result == "threaten":
 
@@ -539,53 +419,21 @@ while game_running:
                     "ruthless"
                 )
 
+                emit(
+
+                    "player_choice",
+
+                    choice="ruthless"
+                )
+
                 companion_reaction(
                     "ruthless_actions"
                 )
 
-            # =========================
-            # BRIBE
-            # =========================
-
-            elif result == "bribe":
-
-                if (
-
-                    world_state[
-                        "player"
-                    ]["gold"] >= 10
-
-                ):
-
-                    world_state[
-                        "player"
-                    ]["gold"] -= 10
-
-                    print(
-                        "\nYou pay 10 gold."
-                    )
-
-                else:
-
-                    print(
-                        "\nNot enough gold"
-                        " to bribe."
-                    )
-
-        # =========================
-        # EVENT ROOM
-        # =========================
-
-        elif room_type == "event":
-
-            print(
-                "\nA mysterious world event unfolds..."
-            )
-
         current_room += 1
 
     # =========================
-    # ADVENTURE COMPLETE
+    # END OF ADVENTURE
     # =========================
 
     if game_running:
@@ -606,12 +454,8 @@ print(
 
 show_story_state()
 
-show_completed_quests()
-
 show_world_state()
 
 show_inventory()
 
 show_party()
-
-show_save_summary()
