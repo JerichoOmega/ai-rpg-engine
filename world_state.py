@@ -1,203 +1,708 @@
 # =========================
-# WORLD STATE SYSTEM
-# =========================
-
-from factions import modify_reputation
-
-from memory import update_memory
-
-# =========================
-# GLOBAL WORLD STATE
+# CENTRAL WORLD STATE SYSTEM
 # =========================
 
 world_state = {
 
-    "kingdom_influence": 0,
+    # =========================
+    # TIME
+    # =========================
 
-    "cult_influence": 0,
+    "time": {
 
-    "mages_guild_influence": 0,
+        "day": 1,
 
-    "world_chaos": 0,
+        "hour": 8,
 
-    "dragon_alive": True,
+        "weather": "clear"
+    },
 
-    "kingdom_stability": 100,
+    # =========================
+    # PLAYER
+    # =========================
 
-    "cult_rising": False,
+    "player": {
 
-    "mages_rebellion": False,
+        "name": "Adventurer",
 
-    "civil_war": False,
+        "class": "",
 
-    "shadow_corruption": 0
+        "hp": 100,
+
+        "max_hp": 100,
+
+        "gold": 25,
+
+        "level": 1,
+
+        "xp": 0,
+
+        "xp_to_next_level": 100,
+
+        "resource_name": "Stamina",
+
+        "resource": 100,
+
+        "max_resource": 100,
+
+        "attack_bonus": 5,
+
+        "defense": 0,
+
+        "dodge": 0,
+
+        "reputation": 0,
+
+        "inventory": [],
+
+        "equipped_weapon": "Rusty Sword",
+
+        "weapon_bonus": 0,
+
+        "status_effects": []
+    },
+
+    # =========================
+    # COMPANIONS
+    # =========================
+
+    "companions": {
+
+        "party": [],
+
+        "recruited": [],
+
+        "relationships": {},
+
+        "loyalty": {}
+    },
+
+    # =========================
+    # WORLD CONDITIONS
+    # =========================
+
+    "world_conditions": {
+
+        "world_chaos": 0,
+
+        "civil_war": False,
+
+        "cult_rising": False,
+
+        "mages_rebellion": False,
+
+        "dragon_awakened": False
+    },
+
+    # =========================
+    # FACTIONS
+    # =========================
+
+    "factions": {
+
+        "kingdom": 0,
+
+        "shadow_cult": 0,
+
+        "mages_guild": 0,
+
+        "neutral": 0
+    },
+
+    # =========================
+    # REGIONS
+    # =========================
+
+    "regions": {
+
+        "current_region": "kingdom_capital",
+
+        "discovered_regions": [],
+
+        "faction_control": {
+
+            "kingdom_capital": "kingdom",
+
+            "shadow_marsh": "shadow_cult",
+
+            "frostpeak_mountains": "neutral",
+
+            "arcane_ruins": "mages_guild",
+
+            "ashen_wastes": "neutral"
+        }
+    },
+
+    # =========================
+    # NPCS
+    # =========================
+
+    "npcs": {
+
+        "King Aldric": {
+
+            "alive": True,
+
+            "location": "kingdom_capital",
+
+            "relationship": 0,
+
+            "role": "king"
+        },
+
+        "Archmage Seraph": {
+
+            "alive": True,
+
+            "location": "arcane_ruins",
+
+            "relationship": 0,
+
+            "role": "mage_leader"
+        },
+
+        "Shade Prophet": {
+
+            "alive": True,
+
+            "location": "shadow_marsh",
+
+            "relationship": 0,
+
+            "role": "cult_leader"
+        }
+    },
+
+    # =========================
+    # QUESTS
+    # =========================
+
+    "quests": {
+
+        "active": [],
+
+        "completed": [],
+
+        "failed": [],
+
+        "progress": {}
+    },
+
+    # =========================
+    # STORY MEMORY
+    # =========================
+
+    "story_memory": {
+
+        "used_dark_magic": False,
+
+        "dragon_slain": False,
+
+        "merciful": False,
+
+        "ruthless": False,
+
+        "cult_connections": False
+    },
+
+    # =========================
+    # PLAYER HISTORY
+    # =========================
+
+    "history": {
+
+        "choices": [],
+
+        "discovered_lore": [],
+
+        "major_events": []
+    },
+
+    # =========================
+    # WORLD EVENTS
+    # =========================
+
+    "events": {
+
+        "active": [],
+
+        "completed": []
+    }
 }
 
 # =========================
-# SHOW WORLD STATE
+# PLAYER HELPERS
 # =========================
 
-def show_world_state():
+def get_player():
+
+    return world_state["player"]
+
+def add_gold(amount):
+
+    world_state["player"]["gold"] += amount
+
+def remove_gold(amount):
+
+    world_state["player"]["gold"] -= amount
+
+    if world_state["player"]["gold"] < 0:
+
+        world_state["player"]["gold"] = 0
+
+def damage_player(amount):
+
+    defense = world_state[
+        "player"
+    ]["defense"]
+
+    final_damage = amount - defense
+
+    if final_damage < 1:
+
+        final_damage = 1
+
+    world_state["player"]["hp"] -= final_damage
+
+    if world_state["player"]["hp"] < 0:
+
+        world_state["player"]["hp"] = 0
 
     print(
-        "\n=== WORLD STATE ==="
+        f"\nPlayer takes"
+        f" {final_damage} damage!"
     )
 
-    for state in world_state:
+def heal_player(amount):
 
-        print(
-            state,
-            ":",
-            world_state[state]
+    world_state["player"]["hp"] += amount
+
+    if (
+
+        world_state["player"]["hp"]
+
+        >
+
+        world_state["player"]["max_hp"]
+
+    ):
+
+        world_state["player"]["hp"] = (
+
+            world_state["player"]["max_hp"]
         )
 
 # =========================
-# UPDATE WORLD STATE
+# INVENTORY HELPERS
 # =========================
 
-def update_world_state(
-    factions,
-    story_memory,
-    party
+def add_item(item_name):
+
+    world_state[
+        "player"
+    ]["inventory"].append(item_name)
+
+    print(
+        f"\nAdded {item_name}"
+        f" to inventory."
+    )
+
+def remove_item(item_name):
+
+    if (
+
+        item_name
+
+        in
+
+        world_state[
+            "player"
+        ]["inventory"]
+
+    ):
+
+        world_state[
+            "player"
+        ]["inventory"].remove(item_name)
+
+        print(
+            f"\nRemoved {item_name}"
+            f" from inventory."
+        )
+
+# =========================
+# COMPANION HELPERS
+# =========================
+
+def recruit_companion(companion_name):
+
+    if (
+
+        companion_name
+
+        not in
+
+        world_state[
+            "companions"
+        ]["party"]
+
+    ):
+
+        world_state[
+            "companions"
+        ]["party"].append(
+            companion_name
+        )
+
+        world_state[
+            "companions"
+        ]["recruited"].append(
+            companion_name
+        )
+
+        world_state[
+            "companions"
+        ]["relationships"][
+            companion_name
+        ] = 0
+
+        world_state[
+            "companions"
+        ]["loyalty"][
+            companion_name
+        ] = 50
+
+        print(
+            f"\n{companion_name}"
+            f" joined your party!"
+        )
+
+# =========================
+# FACTION HELPERS
+# =========================
+
+def change_faction_reputation(
+
+    faction_name,
+    amount
+
 ):
+
+    world_state[
+        "factions"
+    ][faction_name] += amount
+
+    print(
+        f"\nFaction reputation with"
+        f" {faction_name}"
+        f" changed by {amount}."
+    )
+
+# =========================
+# QUEST HELPERS
+# =========================
+
+def add_active_quest(quest_name):
+
+    if (
+
+        quest_name
+
+        not in
+
+        world_state[
+            "quests"
+        ]["active"]
+
+    ):
+
+        world_state[
+            "quests"
+        ]["active"].append(
+            quest_name
+        )
+
+def complete_quest(quest_name):
+
+    if (
+
+        quest_name
+
+        in
+
+        world_state[
+            "quests"
+        ]["active"]
+
+    ):
+
+        world_state[
+            "quests"
+        ]["active"].remove(
+            quest_name
+        )
+
+    if (
+
+        quest_name
+
+        not in
+
+        world_state[
+            "quests"
+        ]["completed"]
+
+    ):
+
+        world_state[
+            "quests"
+        ]["completed"].append(
+            quest_name
+        )
+
+        print(
+            f"\nQuest completed:"
+            f" {quest_name}"
+        )
+
+def fail_quest(quest_name):
+
+    if (
+
+        quest_name
+
+        not in
+
+        world_state[
+            "quests"
+        ]["failed"]
+
+    ):
+
+        world_state[
+            "quests"
+        ]["failed"].append(
+            quest_name
+        )
+
+# =========================
+# STORY MEMORY HELPERS
+# =========================
+
+def remember_choice(choice):
+
+    world_state[
+        "history"
+    ]["choices"].append(choice)
+
+def remember_major_event(event):
+
+    world_state[
+        "history"
+    ]["major_events"].append(event)
+
+def discover_lore(lore):
+
+    if (
+
+        lore
+
+        not in
+
+        world_state[
+            "history"
+        ]["discovered_lore"]
+
+    ):
+
+        world_state[
+            "history"
+        ]["discovered_lore"].append(
+            lore
+        )
+
+# =========================
+# NPC HELPERS
+# =========================
+
+def kill_npc(npc_name):
+
+    if npc_name in world_state["npcs"]:
+
+        world_state["npcs"][
+            npc_name
+        ]["alive"] = False
+
+        print(
+            f"\n{npc_name} has died."
+        )
+
+def move_npc(
+
+    npc_name,
+    new_location
+
+):
+
+    if npc_name in world_state["npcs"]:
+
+        world_state["npcs"][
+            npc_name
+        ]["location"] = new_location
+
+# =========================
+# REGION HELPERS
+# =========================
+
+def discover_region(region_name):
+
+    if (
+
+        region_name
+
+        not in
+
+        world_state[
+            "regions"
+        ]["discovered_regions"]
+
+    ):
+
+        world_state[
+            "regions"
+        ]["discovered_regions"].append(
+            region_name
+        )
+
+        print(
+            f"\nNew region discovered:"
+            f" {region_name}"
+        )
+
+def set_current_region(region_name):
+
+    world_state[
+        "regions"
+    ]["current_region"] = region_name
+
+# =========================
+# WORLD EVENT HELPERS
+# =========================
+
+def activate_world_event(event_name):
+
+    if (
+
+        event_name
+
+        not in
+
+        world_state[
+            "events"
+        ]["active"]
+
+    ):
+
+        world_state[
+            "events"
+        ]["active"].append(
+            event_name
+        )
+
+        print(
+            f"\nWorld Event Started:"
+            f" {event_name}"
+        )
+
+def complete_world_event(event_name):
+
+    if (
+
+        event_name
+
+        in
+
+        world_state[
+            "events"
+        ]["active"]
+
+    ):
+
+        world_state[
+            "events"
+        ]["active"].remove(
+            event_name
+        )
+
+        world_state[
+            "events"
+        ]["completed"].append(
+            event_name
+        )
+
+# =========================
+# WORLD EVOLUTION
+# =========================
+
+def update_world_state():
 
     print(
         "\n=== WORLD EVOLUTION ==="
     )
 
-    # =========================
-    # SHADOW CULT RISING
-    # =========================
+    world_state["time"]["day"] += 1
 
-    if factions[
-        "shadow_cult"
-    ] >= 50:
+    print(
+        "Day:",
+        world_state["time"]["day"]
+    )
 
-        if not world_state[
-            "cult_rising"
-        ]:
+    chaos = world_state[
+        "world_conditions"
+    ]["world_chaos"]
 
-            print(
-                "\nThe Shadow Cult spreads"
-                " across the kingdom."
-            )
-
-            world_state[
-                "cult_rising"
-            ] = True
+    if len(
 
         world_state[
-            "cult_influence"
-        ] += 10
+            "companions"
+        ]["party"]
 
-        world_state[
-            "shadow_corruption"
-        ] += 5
+    ) == 0:
 
-        world_state[
-            "world_chaos"
-        ] += 5
-
-    # =========================
-    # KINGDOM COLLAPSE
-    # =========================
-
-    if factions[
-        "kingdom"
-    ] <= -50:
-
-        print(
-            "\nThe kingdom begins"
-            " to collapse into unrest."
-        )
-
-        world_state[
-            "kingdom_stability"
-        ] -= 15
-
-        world_state[
-            "world_chaos"
-        ] += 10
-
-    # =========================
-    # MAGES GUILD POWER
-    # =========================
-
-    if factions[
-        "mages_guild"
-    ] >= 40:
-
-        print(
-            "\nThe Mages Guild gains"
-            " political influence."
-        )
-
-        world_state[
-            "mages_guild_influence"
-        ] += 10
-
-    # =========================
-    # DRAGON DEFEATED
-    # =========================
-
-    if story_memory[
-        "dragon_slain"
-    ]:
-
-        if world_state[
-            "dragon_alive"
-        ]:
-
-            print(
-                "\nVillages celebrate"
-                " the dragon's defeat."
-            )
-
-            world_state[
-                "dragon_alive"
-            ] = False
-
-            world_state[
-                "kingdom_stability"
-            ] += 20
-
-    # =========================
-    # CULT DOMINANCE
-    # =========================
+        chaos += 1
 
     if world_state[
-        "cult_influence"
-    ] >= 60:
+        "story_memory"
+    ]["used_dark_magic"]:
 
-        print(
-            "\nDark rituals spread"
-            " through the land."
-        )
+        chaos += 2
+
+    world_state[
+        "world_conditions"
+    ]["world_chaos"] = chaos
+
+    print(
+        "World Chaos:",
+        chaos
+    )
+
+    # =========================
+    # CULT RISING
+    # =========================
+
+    if (
 
         world_state[
-            "world_chaos"
-        ] += 15
+            "factions"
+        ]["shadow_cult"]
 
-    # =========================
-    # MAGES REBELLION
-    # =========================
+        >= 40
 
-    if world_state[
-        "mages_guild_influence"
-    ] >= 50:
+    ):
 
-        if not world_state[
-            "mages_rebellion"
-        ]:
-
-            print(
-                "\nThe Mages Guild begins"
-                " an uprising."
-            )
-
-            world_state[
-                "mages_rebellion"
-            ] = True
+        world_state[
+            "world_conditions"
+        ]["cult_rising"] = True
 
     # =========================
     # CIVIL WAR
@@ -206,220 +711,119 @@ def update_world_state(
     if (
 
         world_state[
-            "kingdom_stability"
-        ] <= 40
+            "factions"
+        ]["kingdom"]
 
-        and
-
-        world_state[
-            "world_chaos"
-        ] >= 50
+        <= -30
 
     ):
 
-        if not world_state[
-            "civil_war"
-        ]:
-
-            print(
-                "\nCivil war erupts"
-                " across the kingdom!"
-            )
-
-            world_state[
-                "civil_war"
-            ] = True
+        world_state[
+            "world_conditions"
+        ]["civil_war"] = True
 
     # =========================
-    # COMPANION EFFECTS
+    # MAGE REBELLION
     # =========================
 
-    if "Mira" not in party:
-
-        print(
-            "\nWithout Mira,"
-            " magical instability grows."
-        )
+    if (
 
         world_state[
-            "world_chaos"
-        ] += 1
+            "factions"
+        ]["mages_guild"]
 
-    if "Thorn" not in party:
+        <= -20
 
-        print(
-            "\nWithout Thorn,"
-            " kingdom morale weakens."
-        )
+    ):
 
         world_state[
-            "kingdom_stability"
-        ] -= 1
-
-    if "Kael" not in party:
-
-        print(
-            "\nWithout Kael,"
-            " underground intelligence fades."
-        )
-
-        world_state[
-            "cult_influence"
-        ] += 1
-
-    # =========================
-    # WORLD LIMITS
-    # =========================
-
-    if world_state[
-        "kingdom_stability"
-    ] > 100:
-
-        world_state[
-            "kingdom_stability"
-        ] = 100
-
-    elif world_state[
-        "kingdom_stability"
-    ] < 0:
-
-        world_state[
-            "kingdom_stability"
-        ] = 0
-
-    if world_state[
-        "world_chaos"
-    ] > 100:
-
-        world_state[
-            "world_chaos"
-        ] = 100
-
-    elif world_state[
-        "world_chaos"
-        ] < 0:
-
-        world_state[
-            "world_chaos"
-        ] = 0
+            "world_conditions"
+        ]["mages_rebellion"] = True
 
 # =========================
-# WORLD EVENT GENERATOR
+# WORLD STATE DISPLAY
 # =========================
 
-def world_event():
+def show_world_state():
 
     print(
-        "\n=== WORLD EVENT ==="
+        "\n=== WORLD STATE ==="
     )
 
-    # =========================
-    # CULT EVENTS
-    # =========================
+    print(
+        "Day:",
+        world_state[
+            "time"
+        ]["day"]
+    )
 
-    if world_state[
-        "cult_rising"
-    ]:
+    print(
+        "Current Region:",
+        world_state[
+            "regions"
+        ]["current_region"]
+    )
 
-        print(
-            "\nCultists have begun"
-            " appearing openly in cities."
-        )
+    print(
+        "World Chaos:",
+        world_state[
+            "world_conditions"
+        ]["world_chaos"]
+    )
 
-    # =========================
-    # CIVIL WAR EVENTS
-    # =========================
+    print(
+        "\n=== PLAYER ==="
+    )
 
-    if world_state[
-        "civil_war"
-    ]:
+    player = world_state["player"]
 
-        print(
-            "\nRefugees flee from"
-            " war-torn villages."
-        )
+    print(
+        "Class:",
+        player["class"]
+    )
 
-    # =========================
-    # MAGES REBELLION
-    # =========================
+    print(
+        "HP:",
+        f"{player['hp']}"
+        f"/{player['max_hp']}"
+    )
 
-    if world_state[
-        "mages_rebellion"
-    ]:
+    print(
+        "Gold:",
+        player["gold"]
+    )
 
-        print(
-            "\nArcane storms erupt"
-            " near ancient ruins."
-        )
+    print(
+        "Level:",
+        player["level"]
+    )
 
-    # =========================
-    # HIGH CHAOS
-    # =========================
+    print(
+        "\n=== COMPANIONS ==="
+    )
 
-    if world_state[
-        "world_chaos"
-    ] >= 70:
+    for companion in world_state[
+        "companions"
+    ]["party"]:
 
-        print(
-            "\nThe world spirals deeper"
-            " into darkness."
-        )
+        print("•", companion)
 
-# =========================
-# WORLD STORY MODIFIERS
-# =========================
+    print(
+        "\n=== ACTIVE QUESTS ==="
+    )
 
-def world_story_modifier():
+    for quest in world_state[
+        "quests"
+    ]["active"]:
 
-    modifiers = []
+        print("•", quest)
 
-    # =========================
-    # CULT CONTROL
-    # =========================
+    print(
+        "\n=== ACTIVE WORLD EVENTS ==="
+    )
 
-    if world_state[
-        "cult_influence"
-    ] >= 50:
+    for event in world_state[
+        "events"
+    ]["active"]:
 
-        modifiers.append(
-            "Cult-controlled regions"
-        )
-
-    # =========================
-    # CIVIL WAR
-    # =========================
-
-    if world_state[
-        "civil_war"
-    ]:
-
-        modifiers.append(
-            "War-torn battlefields"
-        )
-
-    # =========================
-    # DRAGON DEAD
-    # =========================
-
-    if not world_state[
-        "dragon_alive"
-    ]:
-
-        modifiers.append(
-            "Villages rebuilding after"
-            " dragon attacks"
-        )
-
-    # =========================
-    # ARCANE CHAOS
-    # =========================
-
-    if world_state[
-        "mages_rebellion"
-    ]:
-
-        modifiers.append(
-            "Arcane storms"
-        )
-
-    return modifiers
+        print("•", event)

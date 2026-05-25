@@ -1,0 +1,270 @@
+Paste THIS into Replit Agent.
+
+This version is specifically designed for your new:
+
+# centralized world_state architecture.
+
+```text id="x2r7qp"
+Run a FULL integration and architecture stability test on my Python AI-driven RPG project.
+
+IMPORTANT:
+This project recently migrated to a centralized world_state architecture.
+
+The entire game now depends on:
+- world_state.py
+- centralized simulation state
+- persistent narrative tracking
+
+DO NOT:
+- rewrite systems
+- reorganize architecture
+- simplify mechanics
+- remove features
+- replace the world_state architecture
+
+ONLY:
+- fix real bugs
+- repair integration issues
+- eliminate state desync problems
+- stabilize the architecture
+
+========================================
+PRIMARY GOAL
+========================================
+
+Verify that ALL systems correctly:
+1. READ from world_state
+2. WRITE to world_state
+
+There should NOT be:
+- duplicate variables
+- stale local state
+- disconnected player data
+- unsynced systems
+
+world_state must be the SINGLE source of truth.
+
+========================================
+TEST THESE SYSTEMS THOROUGHLY
+========================================
+
+========================================
+1. PLAYER STATE
+========================================
+
+Verify:
+- HP updates correctly
+- gold updates correctly
+- XP updates correctly
+- level up works
+- equipment updates correctly
+- class data persists
+- resources persist
+
+Search entire project for:
+- leftover player_hp variables
+- duplicate gold tracking
+- stale attack_bonus variables
+- disconnected inventory references
+
+Ensure ONLY:
+world_state["player"]
+
+is authoritative.
+
+========================================
+2. INVENTORY SYSTEM
+========================================
+
+Verify:
+- loot rewards add correctly
+- potions work
+- equipping weapons works
+- inventory persistence works
+- inventory displays correctly
+
+Check for:
+- duplicate inventory lists
+- item desync
+- stale equipment values
+
+========================================
+3. COMBAT SYSTEM
+========================================
+
+Test:
+- attack
+- skills
+- healing
+- inventory access
+- run attempts
+- companion attacks
+- dodge logic
+- boss phase transitions
+
+Verify combat ONLY uses:
+world_state["player"]
+
+Check for:
+- stale HP variables
+- stale attack_bonus variables
+- stale resource variables
+- negative HP bugs
+- infinite loops
+- invalid combat states
+
+========================================
+4. QUEST SYSTEM
+========================================
+
+Verify:
+- quests update correctly
+- progress persists
+- rewards apply correctly
+- completed quests persist
+- failed quests persist
+
+Ensure quests properly update:
+world_state["quests"]
+
+========================================
+5. COMPANION SYSTEM
+========================================
+
+Verify:
+- recruitment works
+- loyalty updates
+- reactions trigger
+- departures work
+- companion persistence works
+
+Ensure companion data ONLY exists in:
+world_state["companions"]
+
+========================================
+6. SAVE / LOAD SYSTEM
+========================================
+
+CRITICAL TEST.
+
+Verify:
+- save file serializes correctly
+- load restores ALL systems
+- no missing sections
+- no corrupted state
+- no stale references after loading
+
+Verify persistence of:
+- player
+- companions
+- quests
+- factions
+- regions
+- story memory
+- world conditions
+- inventory
+- equipment
+- lore discoveries
+
+========================================
+7. WORLD STATE VALIDATION
+========================================
+
+Search for:
+- disconnected systems
+- variables bypassing world_state
+- duplicate truth sources
+- systems not updating state
+- systems mutating local copies
+- inconsistent references
+
+Identify ALL remaining architecture inconsistencies.
+
+========================================
+8. MAIN LOOP STABILITY
+========================================
+
+Verify:
+- town loop works
+- adventure loop works
+- room progression works
+- returning to town works
+- autosave works
+- game over works
+
+Check for:
+- softlocks
+- broken loops
+- unreachable states
+- bad transitions
+
+========================================
+9. NARRATIVE MEMORY
+========================================
+
+Verify:
+- remembered choices persist
+- lore discoveries persist
+- companion reactions persist
+- major events persist
+
+Ensure these update:
+world_state["history"]
+world_state["story_memory"]
+
+========================================
+10. STRESS TESTING
+========================================
+
+Simulate multiple full runs.
+
+Test:
+- repeated saves/loads
+- repeated adventures
+- repeated combat loops
+- long-term progression
+- multiple companion changes
+
+Look for:
+- memory corruption
+- state drift
+- progression instability
+- scaling issues
+
+========================================
+IMPORTANT FIX RULES
+========================================
+
+Before fixing anything:
+1. Explain the bug
+2. Explain WHY it happens
+3. Make the SMALLEST safe fix possible
+
+DO NOT:
+- rewrite architecture
+- overengineer systems
+- remove mechanics
+- redesign gameplay
+
+========================================
+FINAL REPORT
+========================================
+
+After testing provide:
+
+1. Bugs found
+2. Exact fixes made
+3. Remaining architecture risks
+4. Remaining disconnected systems
+5. Systems still bypassing world_state
+6. Recommended next stabilization steps
+7. Long-term architecture concerns
+```
+
+This is now testing your project like:
+
+# an actual simulation engine
+
+instead of:
+
+# a simple Python RPG.

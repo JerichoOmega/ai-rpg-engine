@@ -1,5 +1,10 @@
 import random
 
+from world_state import (
+    world_state,
+    damage_player
+)
+
 from inventory import (
     use_potion,
     show_inventory
@@ -23,47 +28,64 @@ from utils import (
 
 def combat(
 
-    player_hp,
     enemy_name,
-    enemy_hp,
-    attack_bonus,
-    inventory,
-    enemies,
-    equipped_weapon,
-    weapon_bonus,
-    party,
-    player_class,
-    player_resource,
-    max_resource,
-    resource_name,
-    player_defense,
-    player_dodge
+    enemy_hp
 
 ):
 
+    player = world_state["player"]
+
+    companions = world_state[
+        "companions"
+    ]["party"]
+
     boss_phase = 1
 
-    while player_hp > 0 and enemy_hp > 0:
+    battle_cry_bonus = 0
 
-        print("\n====================")
+    while (
 
-        print("Your HP:", player_hp)
+        player["hp"] > 0
+
+        and
+
+        enemy_hp > 0
+
+    ):
 
         print(
-            resource_name + ":",
-            str(player_resource)
+            "\n===================="
+        )
+
+        print(
+            "Your HP:",
+            str(player["hp"])
+            + "/"
+            + str(player["max_hp"])
+        )
+
+        print(
+
+            player["resource_name"]
+            + ":",
+
+            str(player["resource"])
             + " / "
-            + str(max_resource)
+            + str(
+                player["max_resource"]
+            )
         )
 
         print(
             "Defense:",
-            player_defense
+            player["defense"]
         )
 
         print(
             "Dodge:",
-            str(player_dodge) + "%"
+            str(
+                player["dodge"]
+            ) + "%"
         )
 
         print(
@@ -73,12 +95,14 @@ def combat(
 
         print(
             "Equipped Weapon:",
-            equipped_weapon
+            player[
+                "equipped_weapon"
+            ]
         )
 
         print(
             "\nParty:",
-            party
+            companions
         )
 
         action = input(
@@ -95,13 +119,19 @@ def combat(
         if is_attack(action):
 
             damage = random.randint(
-                8,
-                15
+                6,
+                12
             )
 
-            damage += attack_bonus
+            damage += player[
+                "attack_bonus"
+            ]
 
-            damage += weapon_bonus
+            damage += player[
+                "weapon_bonus"
+            ]
+
+            damage += battle_cry_bonus
 
             crit_roll = random.randint(
                 1,
@@ -118,7 +148,9 @@ def combat(
 
             print(
                 "\nYou attack with",
-                equipped_weapon + "!"
+                player[
+                    "equipped_weapon"
+                ] + "!"
             )
 
             print(
@@ -143,7 +175,7 @@ def combat(
             # WARRIOR
             # =========================
 
-            if player_class == "Warrior":
+            if player["class"] == "Warrior":
 
                 print(
                     "• Shield Slam (20 stamina)"
@@ -157,7 +189,7 @@ def combat(
             # MAGE
             # =========================
 
-            elif player_class == "Mage":
+            elif player["class"] == "Mage":
 
                 print(
                     "• Fireball (25 mana)"
@@ -171,7 +203,7 @@ def combat(
             # ROGUE
             # =========================
 
-            elif player_class == "Rogue":
+            elif player["class"] == "Rogue":
 
                 print(
                     "• Backstab (20 stamina)"
@@ -189,16 +221,13 @@ def combat(
             # WARRIOR SKILLS
             # =========================
 
-            if player_class == "Warrior":
+            if player["class"] == "Warrior":
 
-                if (
-                    skill_choice
-                    == "shield slam"
-                ):
+                if skill_choice == "shield slam":
 
-                    if player_resource >= 20:
+                    if player["resource"] >= 20:
 
-                        player_resource -= 20
+                        player["resource"] -= 20
 
                         damage = random.randint(
                             18,
@@ -223,16 +252,13 @@ def combat(
                             "\nNot enough stamina!"
                         )
 
-                elif (
-                    skill_choice
-                    == "battle cry"
-                ):
+                elif skill_choice == "battle cry":
 
-                    if player_resource >= 15:
+                    if player["resource"] >= 15:
 
-                        player_resource -= 15
+                        player["resource"] -= 15
 
-                        attack_bonus += 5
+                        battle_cry_bonus += 5
 
                         print(
                             "\nYour battle cry"
@@ -249,16 +275,13 @@ def combat(
             # MAGE SKILLS
             # =========================
 
-            elif player_class == "Mage":
+            elif player["class"] == "Mage":
 
-                if (
-                    skill_choice
-                    == "fireball"
-                ):
+                if skill_choice == "fireball":
 
-                    if player_resource >= 25:
+                    if player["resource"] >= 25:
 
-                        player_resource -= 25
+                        player["resource"] -= 25
 
                         damage = random.randint(
                             25,
@@ -283,14 +306,11 @@ def combat(
                             "\nNot enough mana!"
                         )
 
-                elif (
-                    skill_choice
-                    == "arcane burst"
-                ):
+                elif skill_choice == "arcane burst":
 
-                    if player_resource >= 35:
+                    if player["resource"] >= 35:
 
-                        player_resource -= 35
+                        player["resource"] -= 35
 
                         damage = random.randint(
                             35,
@@ -318,16 +338,13 @@ def combat(
             # ROGUE SKILLS
             # =========================
 
-            elif player_class == "Rogue":
+            elif player["class"] == "Rogue":
 
-                if (
-                    skill_choice
-                    == "backstab"
-                ):
+                if skill_choice == "backstab":
 
-                    if player_resource >= 20:
+                    if player["resource"] >= 20:
 
-                        player_resource -= 20
+                        player["resource"] -= 20
 
                         damage = random.randint(
                             22,
@@ -352,14 +369,11 @@ def combat(
                             "\nNot enough stamina!"
                         )
 
-                elif (
-                    skill_choice
-                    == "shadow strike"
-                ):
+                elif skill_choice == "shadow strike":
 
-                    if player_resource >= 30:
+                    if player["resource"] >= 30:
 
-                        player_resource -= 30
+                        player["resource"] -= 30
 
                         damage = random.randint(
                             32,
@@ -390,10 +404,7 @@ def combat(
 
         elif is_heal(action):
 
-            player_hp = use_potion(
-                inventory,
-                player_hp
-            )
+            use_potion()
 
         # =========================
         # INVENTORY
@@ -401,11 +412,7 @@ def combat(
 
         elif is_inventory(action):
 
-            show_inventory(
-                inventory,
-                equipped_weapon,
-                weapon_bonus
-            )
+            show_inventory()
 
         # =========================
         # RUN
@@ -424,13 +431,17 @@ def combat(
                     "\nYou escaped!"
                 )
 
-                break
+                return False
 
             else:
 
                 print(
                     "\nEscape failed!"
                 )
+
+        # =========================
+        # INVALID ACTION
+        # =========================
 
         else:
 
@@ -447,21 +458,23 @@ def combat(
         if enemy_hp > 0:
 
             enemy_hp = companion_attack(
-                party,
+
+                companions,
                 enemy_hp
+
             )
 
         # =========================
-        # BOSS PHASES
+        # BOSS PHASE
         # =========================
 
         if (
 
-            enemy_hp <= 25
+            enemy_hp > 0
 
             and
 
-            enemy_hp > 0
+            enemy_hp <= 25
 
             and
 
@@ -490,10 +503,10 @@ def combat(
                 "\nThe enemy collapses!"
             )
 
-            break
+            return True
 
         # =========================
-        # DODGE
+        # PLAYER DODGE
         # =========================
 
         dodge_roll = random.randint(
@@ -501,7 +514,7 @@ def combat(
             100
         )
 
-        if dodge_roll <= player_dodge:
+        if dodge_roll <= player["dodge"]:
 
             print(
                 "\nYou dodge the attack!"
@@ -514,32 +527,34 @@ def combat(
         # =========================
 
         enemy_damage = random.randint(
-            8,
-            18
+            6,
+            14
         )
 
         if boss_phase == 2:
 
-            enemy_damage += 5
+            enemy_damage += 4
 
-        enemy_damage -= player_defense
-
-        if enemy_damage < 1:
-
-            enemy_damage = 1
-
-        player_hp -= enemy_damage
+        damage_player(
+            enemy_damage
+        )
 
         print(
             "\nThe",
             enemy_name,
-            "hits you for",
-            enemy_damage,
-            "damage!"
+            "attacks you!"
         )
 
-    return (
-        player_hp,
-        enemy_hp,
-        player_resource
-    )
+    # =========================
+    # PLAYER DEFEATED
+    # =========================
+
+    if player["hp"] <= 0:
+
+        print(
+            "\nYou were defeated..."
+        )
+
+        return False
+
+    return True

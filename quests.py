@@ -1,121 +1,153 @@
-# =========================
-# QUEST SYSTEM
-# =========================
-
-from memory import update_memory
-
-from factions import modify_reputation
+from world_state import (
+    world_state,
+    add_gold,
+    complete_quest,
+    fail_quest,
+    remember_major_event,
+    change_faction_reputation
+)
 
 # =========================
 # QUEST DATABASE
 # =========================
 
-quests = {
+quest_database = {
 
-    "shadow_cult_rising": {
-
-        "name": "Shadow Cult Rising",
+    "Cult Hunt": {
 
         "description":
-            "Investigate growing cult activity "
-            "across the kingdom.",
+            "Defeat members of the Shadow Cult.",
 
-        "completed": False,
+        "target_enemy":
+            "hidden cult",
 
-        "reward_claimed": False,
+        "required_kills": 3,
 
-        "progress": 0,
+        "gold_reward": 50,
 
-        "goal": 3,
+        "xp_reward": 75,
 
-        "reward_gold": 100,
+        "faction": "kingdom",
 
-        "reward_xp": 150
+        "reputation_reward": 10
     },
 
-    "dragon_hunter": {
-
-        "name": "Dragon Hunter",
+    "Dragon Slayer": {
 
         "description":
-            "Defeat the ancient dragon "
-            "terrorizing nearby villages.",
+            "Slay the ancient dragon.",
 
-        "completed": False,
+        "target_enemy":
+            "ancient dragon",
 
-        "reward_claimed": False,
+        "required_kills": 1,
 
-        "progress": 0,
+        "gold_reward": 150,
 
-        "goal": 1,
+        "xp_reward": 200,
 
-        "reward_gold": 200,
+        "faction": "kingdom",
 
-        "reward_xp": 300
+        "reputation_reward": 25
     },
 
-    "mage_rebellion": {
-
-        "name": "Mage Rebellion",
+    "Necromancer Purge": {
 
         "description":
-            "Assist the Mages Guild in stopping "
-            "forbidden dark rituals.",
+            "Destroy dangerous necromancers.",
 
-        "completed": False,
+        "target_enemy":
+            "necromancer",
 
-        "reward_claimed": False,
+        "required_kills": 2,
 
-        "progress": 0,
+        "gold_reward": 80,
 
-        "goal": 2,
+        "xp_reward": 100,
 
-        "reward_gold": 120,
+        "faction": "mages_guild",
 
-        "reward_xp": 180
-    },
-
-    "thorn_honor": {
-
-        "name": "Thorn's Honor",
-
-        "description":
-            "Help Thorn restore his family's honor.",
-
-        "completed": False,
-
-        "reward_claimed": False,
-
-        "progress": 0,
-
-        "goal": 2,
-
-        "reward_gold": 150,
-
-        "reward_xp": 200
-    },
-
-    "mira_mentor": {
-
-        "name": "Mira's Lost Mentor",
-
-        "description":
-            "Search for Mira's missing mentor "
-            "within ancient ruins.",
-
-        "completed": False,
-
-        "reward_claimed": False,
-
-        "progress": 0,
-
-        "goal": 2,
-
-        "reward_gold": 180,
-
-        "reward_xp": 220
+        "reputation_reward": 15
     }
 }
+
+# =========================
+# QUEST STATE
+# =========================
+
+quests = {
+
+    "Cult Hunt": {
+
+        "progress": 0,
+
+        "completed": False
+    },
+
+    "Dragon Slayer": {
+
+        "progress": 0,
+
+        "completed": False
+    },
+
+    "Necromancer Purge": {
+
+        "progress": 0,
+
+        "completed": False
+    }
+}
+
+# =========================
+# INITIALIZE QUESTS
+# =========================
+
+def initialize_quests():
+
+    saved_progress = world_state[
+        "quests"
+    ].get("progress", {})
+
+    for quest_name in quest_database:
+
+        if quest_name in saved_progress:
+
+            quests[quest_name][
+                "progress"
+            ] = saved_progress[quest_name]
+
+        if quest_name in world_state[
+            "quests"
+        ]["completed"]:
+
+            quests[quest_name][
+                "completed"
+            ] = True
+
+        if (
+
+            quest_name
+
+            not in
+
+            world_state[
+                "quests"
+            ]["active"]
+
+            and
+
+            not quests[
+                quest_name
+            ]["completed"]
+
+        ):
+
+            world_state[
+                "quests"
+            ]["active"].append(
+                quest_name
+            )
 
 # =========================
 # SHOW QUESTS
@@ -123,281 +155,389 @@ quests = {
 
 def show_quests():
 
-    print("\n=== QUEST JOURNAL ===")
+    print(
+        "\n=== QUEST JOURNAL ==="
+    )
 
-    for quest_key in quests:
+    active_quests = world_state[
+        "quests"
+    ]["active"]
 
-        quest = quests[quest_key]
-
-        status = "Completed"
-
-        if not quest["completed"]:
-
-            status = "Active"
-
-        print("\n" + quest["name"])
-
-        print(quest["description"])
+    if len(active_quests) == 0:
 
         print(
-            "Progress:",
-            str(quest["progress"])
-            + "/"
-            + str(quest["goal"])
+            "No active quests."
         )
 
-        print("Status:", status)
+        return
+
+    for quest_name in active_quests:
+
+        quest_data = quest_database[
+            quest_name
+        ]
+
+        quest_state = quests[
+            quest_name
+        ]
+
+        print(
+            "\n•",
+            quest_name
+        )
+
+        print(
+            quest_data[
+                "description"
+            ]
+        )
+
+        print(
+
+            "Progress:",
+
+            str(
+                quest_state[
+                    "progress"
+                ]
+            )
+
+            + "/"
+
+            + str(
+
+                quest_data[
+                    "required_kills"
+                ]
+            )
+        )
 
 # =========================
-# PROGRESS QUEST
+# UPDATE QUESTS
 # =========================
 
-def progress_quest(
-    quest_key
+def update_quests_from_enemy(
+
+    enemy_name
+
 ):
 
-    if quest_key not in quests:
+    active_quests = world_state[
+        "quests"
+    ]["active"]
 
-        print(
-            "\nQuest does not exist."
-        )
+    for quest_name in active_quests:
 
-        return
+        quest_data = quest_database[
+            quest_name
+        ]
 
-    quest = quests[quest_key]
+        quest_state = quests[
+            quest_name
+        ]
 
-    # =========================
-    # ALREADY COMPLETE
-    # =========================
+        if (
 
-    if quest["completed"]:
+            enemy_name
 
-        return
+            ==
 
-    # =========================
-    # ADD PROGRESS
-    # =========================
+            quest_data[
+                "target_enemy"
+            ]
 
-    quest["progress"] += 1
+        ):
 
-    print(
-        "\n=== QUEST UPDATED ==="
-    )
+            quest_state[
+                "progress"
+            ] += 1
 
-    print(
-        quest["name"]
-    )
+            world_state[
+                "quests"
+            ]["progress"][
+                quest_name
+            ] = quest_state["progress"]
 
-    print(
-        str(quest["progress"])
-        + "/"
-        + str(quest["goal"])
-    )
+            print(
+                f"\nQuest Updated:"
+                f" {quest_name}"
+            )
 
-    # =========================
-    # COMPLETE QUEST
-    # =========================
+            print(
 
-    if quest["progress"] >= quest["goal"]:
+                "Progress:",
 
-        quest["completed"] = True
+                str(
+                    quest_state[
+                        "progress"
+                    ]
+                )
 
-        print(
-            "\n=== QUEST COMPLETED ==="
-        )
+                + "/"
 
-        print(
-            quest["name"]
-        )
+                + str(
+
+                    quest_data[
+                        "required_kills"
+                    ]
+                )
+            )
+
+            # =========================
+            # QUEST COMPLETE
+            # =========================
+
+            if (
+
+                quest_state[
+                    "progress"
+                ]
+
+                >=
+
+                quest_data[
+                    "required_kills"
+                ]
+
+            ):
+
+                reward_quest(
+                    quest_name
+                )
 
 # =========================
 # QUEST REWARDS
 # =========================
 
-def complete_quest_rewards(
-    quest_key,
-    player_gold,
-    player_xp,
-    factions,
-    story_memory
-):
+def reward_quest(quest_name):
 
-    if quest_key not in quests:
+    quest_data = quest_database[
+        quest_name
+    ]
 
-        return (
-            player_gold,
-            player_xp,
-            factions,
-            story_memory
-        )
+    quest_state = quests[
+        quest_name
+    ]
 
-    quest = quests[quest_key]
+    if quest_state["completed"]:
 
-    # =========================
-    # QUEST NOT COMPLETE
-    # =========================
+        return
 
-    if not quest["completed"]:
-
-        return (
-            player_gold,
-            player_xp,
-            factions,
-            story_memory
-        )
+    quest_state[
+        "completed"
+    ] = True
 
     # =========================
-    # REWARD ALREADY CLAIMED
+    # REMOVE FROM ACTIVE
     # =========================
 
-    if quest["reward_claimed"]:
+    if (
 
-        return (
-            player_gold,
-            player_xp,
-            factions,
-            story_memory
+        quest_name
+
+        in
+
+        world_state[
+            "quests"
+        ]["active"]
+
+    ):
+
+        world_state[
+            "quests"
+        ]["active"].remove(
+            quest_name
         )
 
     # =========================
-    # GIVE REWARDS
+    # COMPLETE QUEST
     # =========================
 
-    player_gold += quest["reward_gold"]
+    complete_quest(
+        quest_name
+    )
 
-    player_xp += quest["reward_xp"]
+    # =========================
+    # GOLD REWARD
+    # =========================
 
-    quest["reward_claimed"] = True
+    add_gold(
 
-    print(
-        "\n=== QUEST REWARDS ==="
+        quest_data[
+            "gold_reward"
+        ]
+    )
+
+    # =========================
+    # XP REWARD
+    # =========================
+
+    world_state[
+        "player"
+    ]["xp"] += (
+
+        quest_data[
+            "xp_reward"
+        ]
+    )
+
+    # =========================
+    # FACTION REWARD
+    # =========================
+
+    change_faction_reputation(
+
+        quest_data[
+            "faction"
+        ],
+
+        quest_data[
+            "reputation_reward"
+        ]
+    )
+
+    # =========================
+    # MAJOR EVENT MEMORY
+    # =========================
+
+    remember_major_event(
+        quest_name
     )
 
     print(
-        "Gold Gained:",
-        quest["reward_gold"]
+        "\n=== QUEST COMPLETE ==="
     )
 
     print(
-        "XP Gained:",
-        quest["reward_xp"]
+        quest_name
     )
 
-    # =========================
-    # QUEST CONSEQUENCES
-    # =========================
+    print(
+        "Gold Reward:",
+        quest_data[
+            "gold_reward"
+        ]
+    )
 
-    if quest_key == "shadow_cult_rising":
-
-        factions = modify_reputation(
-            factions,
-            "kingdom",
-            15
-        )
-
-        story_memory = update_memory(
-            story_memory,
-            "cult_defeated"
-        )
-
-    elif quest_key == "dragon_hunter":
-
-        factions = modify_reputation(
-            factions,
-            "kingdom",
-            25
-        )
-
-        story_memory = update_memory(
-            story_memory,
-            "dragon_slain"
-        )
-
-    elif quest_key == "mage_rebellion":
-
-        factions = modify_reputation(
-            factions,
-            "mages_guild",
-            20
-        )
-
-    elif quest_key == "thorn_honor":
-
-        factions = modify_reputation(
-            factions,
-            "kingdom",
-            10
-        )
-
-    elif quest_key == "mira_mentor":
-
-        factions = modify_reputation(
-            factions,
-            "mages_guild",
-            15
-        )
-
-    return (
-        player_gold,
-        player_xp,
-        factions,
-        story_memory
+    print(
+        "XP Reward:",
+        quest_data[
+            "xp_reward"
+        ]
     )
 
 # =========================
-# QUEST EVENT CHECKS
-# =========================
-
-def update_quests_from_enemy(
-    enemy_name
-):
-
-    # =========================
-    # CULT QUEST
-    # =========================
-
-    if enemy_name == "hidden cult":
-
-        progress_quest(
-            "shadow_cult_rising"
-        )
-
-    # =========================
-    # DRAGON QUEST
-    # =========================
-
-    elif enemy_name == "ancient dragon":
-
-        progress_quest(
-            "dragon_hunter"
-        )
-
-    # =========================
-    # MAGE QUEST
-    # =========================
-
-    elif enemy_name == "necromancer":
-
-        progress_quest(
-            "mage_rebellion"
-        )
-
-# =========================
-# COMPANION QUEST EVENTS
+# COMPANION QUESTS
 # =========================
 
 def update_companion_quests(
+
     party
+
 ):
-
-    if "Thorn" in party:
-
-        progress_quest(
-            "thorn_honor"
-        )
 
     if "Mira" in party:
 
-        progress_quest(
-            "mira_mentor"
+        print(
+            "\nMira reflects on"
+            " your recent actions."
         )
+
+    if "Thorn" in party:
+
+        print(
+            "\nThorn sharpens"
+            " his weapons silently."
+        )
+
+    if "Kael" in party:
+
+        print(
+            "\nKael studies"
+            " ancient magical symbols."
+        )
+
+# =========================
+# QUEST FAILURE
+# =========================
+
+def fail_active_quest(
+
+    quest_name
+
+):
+
+    if (
+
+        quest_name
+
+        in
+
+        world_state[
+            "quests"
+        ]["active"]
+
+    ):
+
+        world_state[
+            "quests"
+        ]["active"].remove(
+            quest_name
+        )
+
+        fail_quest(
+            quest_name
+        )
+
+        print(
+            f"\nQuest Failed:"
+            f" {quest_name}"
+        )
+
+# =========================
+# QUEST HISTORY
+# =========================
+
+def show_completed_quests():
+
+    print(
+        "\n=== COMPLETED QUESTS ==="
+    )
+
+    completed = world_state[
+        "quests"
+    ]["completed"]
+
+    if len(completed) == 0:
+
+        print(
+            "No completed quests."
+        )
+
+        return
+
+    for quest in completed:
+
+        print("•", quest)
+
+def show_failed_quests():
+
+    print(
+        "\n=== FAILED QUESTS ==="
+    )
+
+    failed = world_state[
+        "quests"
+    ]["failed"]
+
+    if len(failed) == 0:
+
+        print(
+            "No failed quests."
+        )
+
+        return
+
+    for quest in failed:
+
+        print("•", quest)

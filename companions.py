@@ -1,469 +1,457 @@
+import random
+
+from world_state import (
+    world_state,
+    recruit_companion,
+    remember_choice,
+    change_faction_reputation
+)
+
 # =========================
-# COMPANION SYSTEM
+# COMPANION DATABASE
 # =========================
 
 companions = {
 
     "Mira": {
-        "class": "mage",
-        "hp": 80,
-        "damage": 15,
-        "role": "support",
-        "ability": "arcane_shield",
-        "loyalty": 50
+
+        "role": "Mage",
+
+        "combat_bonus": 8,
+
+        "personality": "kind",
+
+        "likes": [
+            "mercy",
+            "helping_people"
+        ],
+
+        "dislikes": [
+            "ruthless_actions"
+        ]
     },
 
     "Thorn": {
-        "class": "warrior",
-        "hp": 120,
-        "damage": 10,
-        "role": "tank",
-        "ability": "shield_block",
-        "loyalty": 50
+
+        "role": "Warrior",
+
+        "combat_bonus": 10,
+
+        "personality": "aggressive",
+
+        "likes": [
+            "strength",
+            "battle"
+        ],
+
+        "dislikes": [
+            "cowardice"
+        ]
     },
 
     "Kael": {
-        "class": "rogue",
-        "hp": 90,
-        "damage": 18,
-        "role": "assassin",
-        "ability": "poison_blade",
-        "loyalty": 50
+
+        "role": "Rogue",
+
+        "combat_bonus": 7,
+
+        "personality": "mysterious",
+
+        "likes": [
+            "secrets",
+            "shadow_magic"
+        ],
+
+        "dislikes": [
+            "authority"
+        ]
     }
 }
 
 # =========================
-# RECRUIT COMPANION
+# RECRUITMENT
 # =========================
 
-def recruit_companion(
-    party,
-    companion_name
-):
+def attempt_recruitment():
 
-    if companion_name not in party:
-
-        party.append(companion_name)
-
-        print(
-            "\n" + companion_name,
-            "joins your adventure!"
-        )
-
-    else:
-
-        print(
-            "\n" + companion_name,
-            "is already in your party."
-        )
-
-    return party
-
-# =========================
-# CHANGE LOYALTY
-# =========================
-
-def change_loyalty(
-    companion_name,
-    amount
-):
-
-    companions[
-        companion_name
-    ]["loyalty"] += amount
-
-    # =========================
-    # LOYALTY LIMITS
-    # =========================
-
-    if companions[
-        companion_name
-    ]["loyalty"] > 100:
-
-        companions[
-            companion_name
-        ]["loyalty"] = 100
-
-    elif companions[
-        companion_name
-    ]["loyalty"] < 0:
-
-        companions[
-            companion_name
-        ]["loyalty"] = 0
-
-    print(
-        "\n" + companion_name,
-        "loyalty changed by",
-        amount
+    available = list(
+        companions.keys()
     )
 
-    print(
-        "Current Loyalty:",
-        companions[
-            companion_name
-        ]["loyalty"]
+    companion_name = random.choice(
+        available
     )
 
-# =========================
-# LOYALTY STATUS
-# =========================
+    current_party = world_state[
+        "companions"
+    ]["party"]
 
-def loyalty_status(
-    companion_name
-):
+    if companion_name in current_party:
 
-    loyalty = companions[
-        companion_name
-    ]["loyalty"]
+        return
 
-    if loyalty >= 80:
+    recruit_roll = random.randint(
+        1,
+        100
+    )
 
-        return "Devoted"
+    if recruit_roll <= 30:
 
-    elif loyalty <= 20:
-
-        return "Disloyal"
-
-    else:
-
-        return "Neutral"
+        recruit_companion(
+            companion_name
+        )
 
 # =========================
-# SHOW PARTY
+# PARTY DISPLAY
 # =========================
 
-def show_party(party):
+def show_party():
 
-    print("\n=== PARTY ===")
+    party = world_state[
+        "companions"
+    ]["party"]
+
+    print(
+        "\n=== PARTY ==="
+    )
 
     if len(party) == 0:
 
         print(
-            "No companions recruited."
+            "You travel alone."
         )
 
-    else:
+        return
 
-        for member in party:
+    for companion_name in party:
 
-            status = loyalty_status(
-                member
-            )
+        companion = companions[
+            companion_name
+        ]
 
-            print(
-                member,
-                "-",
-                companions[member]["class"],
-                "| Role:",
-                companions[member]["role"],
-                "| Loyalty:",
-                companions[member]["loyalty"],
-                "| Status:",
-                status
-            )
+        loyalty = world_state[
+            "companions"
+        ]["loyalty"][
+            companion_name
+        ]
+
+        relationship = world_state[
+            "companions"
+        ]["relationships"][
+            companion_name
+        ]
+
+        print(
+            "\n•",
+            companion_name
+        )
+
+        print(
+            "Role:",
+            companion["role"]
+        )
+
+        print(
+            "Loyalty:",
+            loyalty
+        )
+
+        print(
+            "Relationship:",
+            relationship
+        )
+
+        print(
+            "Personality:",
+            companion[
+                "personality"
+            ]
+        )
 
 # =========================
-# COMPANION ABILITIES
+# COMPANION ATTACKS
 # =========================
 
-def companion_ability(
-    member,
-    player_defense,
-    active_effects
+def companion_attack(
+
+    party,
+    enemy_hp
+
 ):
 
-    ability = companions[
-        member
-    ]["ability"]
+    if len(party) == 0:
 
-    # =========================
-    # MIRA — ARCANE SHIELD
-    # =========================
+        return enemy_hp
 
-    if ability == "arcane_shield":
+    for companion_name in party:
 
-        print(
-            "\nMira casts Arcane Shield!"
+        companion = companions[
+            companion_name
+        ]
+
+        damage = random.randint(
+            3,
+            companion[
+                "combat_bonus"
+            ]
         )
 
-        print(
-            "Your defense increases by 2!"
-        )
-
-        player_defense += 2
-
-    # =========================
-    # THORN — SHIELD BLOCK
-    # =========================
-
-    elif ability == "shield_block":
+        enemy_hp -= damage
 
         print(
-            "\nThorn steps forward to protect you!"
+            f"\n{companion_name}"
+            f" attacks for"
+            f" {damage} damage!"
         )
 
-        print(
-            "Incoming damage will be reduced!"
-        )
-
-        player_defense += 4
-
-    # =========================
-    # KAEL — POISON BLADE
-    # =========================
-
-    elif ability == "poison_blade":
-
-        print(
-            "\nKael coats his blades with poison!"
-        )
-
-        active_effects.append({
-
-            "effect": "poison",
-
-            "duration": 3
-        })
-
-    return (
-        player_defense,
-        active_effects
-    )
+    return enemy_hp
 
 # =========================
 # COMPANION REACTIONS
 # =========================
 
 def companion_reaction(
-    story_memory
+
+    action_tag
+
 ):
 
-    print(
-        "\n=== COMPANION REACTIONS ==="
-    )
+    party = world_state[
+        "companions"
+    ]["party"]
 
-    # =========================
-    # SHADOW CULT
-    # =========================
+    for companion_name in party:
 
-    if story_memory[
-        "joined_shadow_cult"
-    ]:
-
-        print(
-            "\nMira looks uneasy around"
-            " the cult influence."
-        )
-
-        change_loyalty(
-            "Mira",
-            -10
-        )
-
-        print(
-            "\nKael grins approvingly."
-        )
-
-        change_loyalty(
-            "Kael",
-            10
-        )
-
-    # =========================
-    # DRAGON SLAYER
-    # =========================
-
-    if story_memory[
-        "dragon_slain"
-    ]:
-
-        print(
-            "\nThorn respects your victory"
-            " over the dragon."
-        )
-
-        change_loyalty(
-            "Thorn",
-            10
-        )
-
-    # =========================
-    # SPARED CULTIST
-    # =========================
-
-    if story_memory[
-        "spared_cultist"
-    ]:
-
-        print(
-            "\nMira approves of your mercy."
-        )
-
-        change_loyalty(
-            "Mira",
-            5
-        )
-
-    # =========================
-    # EXECUTED CULTIST
-    # =========================
-
-    if story_memory[
-        "executed_cultist"
-    ]:
-
-        print(
-            "\nKael respects your ruthlessness."
-        )
-
-        change_loyalty(
-            "Kael",
-            5
-        )
-
-        print(
-            "\nMira disapproves of the execution."
-        )
-
-        change_loyalty(
-            "Mira",
-            -5
-        )
-
-# =========================
-# REMOVE COMPANION
-# =========================
-
-def remove_companion(
-    party,
-    companion_name
-):
-
-    if companion_name in party:
-
-        party.remove(
+        companion = companions[
             companion_name
-        )
+        ]
 
-        print(
-            "\n" + companion_name,
-            "has left the party!"
-        )
+        likes = companion["likes"]
 
-    return party
+        dislikes = companion[
+            "dislikes"
+        ]
 
-# =========================
-# COMPANION ATTACK
-# =========================
+        # =========================
+        # LIKES
+        # =========================
 
-def companion_attack(
-    party,
-    enemy_hp
-):
+        if action_tag in likes:
 
-    for member in party:
-
-        if member in companions:
-
-            damage = companions[
-                member
-            ]["damage"]
-
-            enemy_hp -= damage
+            world_state[
+                "companions"
+            ]["relationships"][
+                companion_name
+            ] += 5
 
             print(
-                "\n" + member,
-                "attacks for",
-                damage,
-                "damage!"
+                f"\n{companion_name}"
+                " approves of your actions."
             )
 
-    return enemy_hp
+        # =========================
+        # DISLIKES
+        # =========================
+
+        if action_tag in dislikes:
+
+            world_state[
+                "companions"
+            ]["relationships"][
+                companion_name
+            ] -= 5
+
+            print(
+                f"\n{companion_name}"
+                " disapproves of your actions."
+            )
 
 # =========================
 # LOYALTY EVENTS
 # =========================
 
-def loyalty_event(
-    party,
-    story_memory,
-    factions
+def loyalty_event():
+
+    party = world_state[
+        "companions"
+    ]["party"]
+
+    if len(party) == 0:
+
+        return
+
+    print(
+        "\n=== COMPANION EVENT ==="
+    )
+
+    companion_name = random.choice(
+        party
+    )
+
+    loyalty = world_state[
+        "companions"
+    ]["loyalty"][
+        companion_name
+    ]
+
+    relationship = world_state[
+        "companions"
+    ]["relationships"][
+        companion_name
+    ]
+
+    # =========================
+    # HIGH RELATIONSHIP
+    # =========================
+
+    if relationship >= 25:
+
+        print(
+            f"\n{companion_name}"
+            " trusts you deeply."
+        )
+
+        loyalty += 5
+
+    # =========================
+    # LOW RELATIONSHIP
+    # =========================
+
+    elif relationship <= -25:
+
+        print(
+            f"\n{companion_name}"
+            " questions your leadership."
+        )
+
+        loyalty -= 10
+
+    else:
+
+        print(
+            f"\n{companion_name}"
+            " remains uncertain about you."
+        )
+
+    world_state[
+        "companions"
+    ]["loyalty"][
+        companion_name
+    ] = loyalty
+
+# =========================
+# COMPANION ABILITIES
+# =========================
+
+def companion_ability(
+
+    companion_name,
+    enemy_name
+
 ):
 
-    # =========================
-    # MIRA LEAVES
-    # =========================
+    if companion_name == "Mira":
 
-    if "Mira" in party:
+        print(
+            "\nMira casts an arcane shield!"
+        )
 
-        if companions[
-            "Mira"
-        ]["loyalty"] <= 20:
+        world_state[
+            "player"
+        ]["defense"] += 2
 
-            if story_memory[
-                "joined_shadow_cult"
-            ]:
+    elif companion_name == "Thorn":
 
-                print(
-                    "\nMira can no longer tolerate"
-                    " your dark choices."
-                )
+        print(
+            "\nThorn taunts the enemy!"
+        )
 
-                party = remove_companion(
-                    party,
-                    "Mira"
-                )
+    elif companion_name == "Kael":
 
-    # =========================
-    # THORN MORALITY CONFLICT
-    # =========================
+        print(
+            "\nKael strikes from the shadows!"
+        )
 
-    if "Thorn" in party:
+# =========================
+# COMPANION LEAVING
+# =========================
 
-        if factions[
-            "kingdom"
-        ] <= -50:
+def check_companion_departure():
 
-            print(
-                "\nThorn questions your actions"
-                " against the kingdom."
-            )
+    party = world_state[
+        "companions"
+    ]["party"]
 
-            change_loyalty(
-                "Thorn",
-                -10
-            )
+    for companion_name in party[:]:
 
-            if companions[
-                "Thorn"
-            ]["loyalty"] <= 20:
+        loyalty = world_state[
+            "companions"
+        ]["loyalty"][
+            companion_name
+        ]
 
-                print(
-                    "\nThorn abandons your cause."
-                )
-
-                party = remove_companion(
-                    party,
-                    "Thorn"
-                )
-
-    # =========================
-    # KAEL DEVOTION BONUS
-    # =========================
-
-    if "Kael" in party:
-
-        if companions[
-            "Kael"
-        ]["loyalty"] >= 80:
+        if loyalty <= 0:
 
             print(
-                "\nKael is fiercely loyal."
+                f"\n{companion_name}"
+                " abandons the party!"
             )
 
-            print(
-                "His critical strikes grow deadlier."
+            party.remove(
+                companion_name
             )
 
-    return party
+# =========================
+# COMPANION STORY EVENTS
+# =========================
+
+def companion_story_event():
+
+    party = world_state[
+        "companions"
+    ]["party"]
+
+    if len(party) == 0:
+
+        return
+
+    companion_name = random.choice(
+        party
+    )
+
+    print(
+        "\n=== COMPANION STORY ==="
+    )
+
+    if companion_name == "Mira":
+
+        print(
+            "Mira speaks about the dangers"
+            " of uncontrolled magic."
+        )
+
+        remember_choice(
+            "learned_magic_lore"
+        )
+
+    elif companion_name == "Thorn":
+
+        print(
+            "Thorn recalls battles from"
+            " the civil war."
+        )
+
+        remember_choice(
+            "heard_war_story"
+        )
+
+    elif companion_name == "Kael":
+
+        print(
+            "Kael reveals hidden knowledge"
+            " about shadow cult rituals."
+        )
+
+        remember_choice(
+            "learned_cult_secret"
+        )

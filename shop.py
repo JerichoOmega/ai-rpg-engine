@@ -1,5 +1,13 @@
+from world_state import (
+    world_state,
+    add_gold,
+    remove_gold
+)
+
 from inventory import (
-    add_item
+    give_item,
+    equip_weapon,
+    show_inventory
 )
 
 from utils import (
@@ -9,18 +17,47 @@ from utils import (
 )
 
 # =========================
+# SHOP DATABASE
+# =========================
+
+shop_items = {
+
+    "Healing Potion": {
+
+        "price": 15,
+
+        "type": "consumable"
+    },
+
+    "Steel Sword": {
+
+        "price": 30,
+
+        "type": "weapon"
+    },
+
+    "Shadow Dagger": {
+
+        "price": 50,
+
+        "type": "weapon"
+    },
+
+    "Magic Staff": {
+
+        "price": 60,
+
+        "type": "weapon"
+    }
+}
+
+# =========================
 # SHOP SYSTEM
 # =========================
 
-def shop(
+def shop():
 
-    player_gold,
-    player_hp,
-    inventory,
-    equipped_weapon,
-    weapon_bonus
-
-):
+    player = world_state["player"]
 
     print(
         "\n=== SHOP ==="
@@ -28,7 +65,7 @@ def shop(
 
     print(
         "Gold:",
-        player_gold
+        player["gold"]
     )
 
     print(
@@ -54,14 +91,17 @@ def shop(
 
     if is_buy_potion(choice):
 
-        if player_gold >= 15:
+        item = "Healing Potion"
 
-            player_gold -= 15
+        cost = shop_items[
+            item
+        ]["price"]
 
-            inventory = add_item(
-                inventory,
-                "Healing Potion"
-            )
+        if player["gold"] >= cost:
+
+            remove_gold(cost)
+
+            give_item(item)
 
             print(
                 "\nYou purchased"
@@ -80,15 +120,19 @@ def shop(
 
     elif is_buy_weapon(choice):
 
-        if player_gold >= 30:
+        item = "Steel Sword"
 
-            player_gold -= 30
+        cost = shop_items[
+            item
+        ]["price"]
 
-            equipped_weapon = (
-                "Steel Sword"
-            )
+        if player["gold"] >= cost:
 
-            weapon_bonus = 6
+            remove_gold(cost)
+
+            give_item(item)
+
+            equip_weapon(item)
 
             print(
                 "\nYou purchased"
@@ -111,21 +155,196 @@ def shop(
             "\nYou leave the shop."
         )
 
+    # =========================
+    # INVALID
+    # =========================
+
     else:
 
         print(
             "\nInvalid choice."
         )
 
-    return (
+# =========================
+# SPECIAL SHOP
+# =========================
 
-        player_gold,
+def black_market():
 
-        player_hp,
+    player = world_state["player"]
 
-        inventory,
-
-        equipped_weapon,
-
-        weapon_bonus
+    print(
+        "\n=== BLACK MARKET ==="
     )
+
+    print(
+        "A hooded merchant watches"
+        " you carefully."
+    )
+
+    print(
+        "\n1. Shadow Dagger (50 gold)"
+    )
+
+    print(
+        "2. Magic Staff (60 gold)"
+    )
+
+    print(
+        "3. Leave"
+    )
+
+    choice = input("> ").strip().lower()
+
+    # =========================
+    # SHADOW DAGGER
+    # =========================
+
+    if choice in [
+
+        "1",
+
+        "shadow dagger"
+    ]:
+
+        item = "Shadow Dagger"
+
+        cost = shop_items[
+            item
+        ]["price"]
+
+        if player["gold"] >= cost:
+
+            remove_gold(cost)
+
+            give_item(item)
+
+            print(
+                "\nThe merchant quietly"
+                " hands over the dagger."
+            )
+
+        else:
+
+            print(
+                "\nYou cannot afford it."
+            )
+
+    # =========================
+    # MAGIC STAFF
+    # =========================
+
+    elif choice in [
+
+        "2",
+
+        "magic staff"
+    ]:
+
+        item = "Magic Staff"
+
+        cost = shop_items[
+            item
+        ]["price"]
+
+        if player["gold"] >= cost:
+
+            remove_gold(cost)
+
+            give_item(item)
+
+            print(
+                "\nArcane power pulses"
+                " from the staff."
+            )
+
+        else:
+
+            print(
+                "\nYou cannot afford it."
+            )
+
+    else:
+
+        print(
+            "\nYou leave the black market."
+        )
+
+# =========================
+# SELL ITEMS
+# =========================
+
+def sell_item(item_name):
+
+    player = world_state["player"]
+
+    inventory = player["inventory"]
+
+    if item_name not in inventory:
+
+        print(
+            "\nYou do not own"
+            " that item."
+        )
+
+        return
+
+    sell_values = {
+
+        "Healing Potion": 5,
+
+        "Iron Sword": 10,
+
+        "Steel Sword": 15,
+
+        "Shadow Dagger": 25,
+
+        "Magic Staff": 30,
+
+        "Dragon Slayer": 50
+    }
+
+    value = sell_values.get(
+        item_name,
+        1
+    )
+
+    inventory.remove(item_name)
+
+    add_gold(value)
+
+    print(
+        f"\nSold {item_name}"
+        f" for {value} gold."
+    )
+
+# =========================
+# SHOP STATUS
+# =========================
+
+def show_shop_status():
+
+    player = world_state["player"]
+
+    print(
+        "\n=== SHOP STATUS ==="
+    )
+
+    print(
+        "Gold:",
+        player["gold"]
+    )
+
+    print(
+        "Inventory Space:",
+        len(
+            player["inventory"]
+        )
+    )
+
+    print(
+        "Equipped Weapon:",
+        player["equipped_weapon"]
+    )
+
+    show_inventory()

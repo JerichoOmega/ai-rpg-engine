@@ -1,145 +1,51 @@
 import json
 
-from companions import companions
+from world_state import (
+    world_state
+)
 
-from quests import quests
+# =========================
+# SAVE FILE
+# =========================
 
-from world_state import world_state
+SAVE_FILE = "save_data.json"
 
 # =========================
 # SAVE GAME
 # =========================
 
-def save_game(
+def save_game():
 
-    player_hp,
-    player_gold,
-    player_level,
-    player_xp,
-    xp_to_next_level,
-    inventory,
-    equipped_weapon,
-    weapon_bonus,
-    player_reputation,
-    cult_defeated,
-    dragon_defeated,
-    knight_defeated,
-    player_class,
-    resource_name,
-    player_resource,
-    max_resource,
-    player_defense,
-    player_dodge,
-    factions,
-    story_memory,
-    party,
-    attack_bonus
+    try:
 
-):
+        with open(
 
-    save_data = {
+            SAVE_FILE,
 
-        # =========================
-        # PLAYER DATA
-        # =========================
+            "w"
 
-        "player_hp": player_hp,
+        ) as save_file:
 
-        "attack_bonus": attack_bonus,
+            json.dump(
 
-        "player_gold": player_gold,
+                world_state,
 
-        "player_level": player_level,
+                save_file,
 
-        "player_xp": player_xp,
+                indent=4
+            )
 
-        "xp_to_next_level": xp_to_next_level,
-
-        "player_class": player_class,
-
-        "resource_name": resource_name,
-
-        "player_resource": player_resource,
-
-        "max_resource": max_resource,
-
-        "player_defense": player_defense,
-
-        "player_dodge": player_dodge,
-
-        # =========================
-        # INVENTORY / EQUIPMENT
-        # =========================
-
-        "inventory": inventory,
-
-        "equipped_weapon": equipped_weapon,
-
-        "weapon_bonus": weapon_bonus,
-
-        # =========================
-        # STORY FLAGS
-        # =========================
-
-        "player_reputation": player_reputation,
-
-        "cult_defeated": cult_defeated,
-
-        "dragon_defeated": dragon_defeated,
-
-        "knight_defeated": knight_defeated,
-
-        # =========================
-        # FACTIONS
-        # =========================
-
-        "factions": factions,
-
-        # =========================
-        # STORY MEMORY
-        # =========================
-
-        "story_memory": story_memory,
-
-        # =========================
-        # PARTY
-        # =========================
-
-        "party": party,
-
-        # =========================
-        # COMPANIONS
-        # =========================
-
-        "companions": companions,
-
-        # =========================
-        # QUESTS
-        # =========================
-
-        "quests": quests,
-
-        # =========================
-        # WORLD STATE
-        # =========================
-
-        "world_state": world_state
-    }
-
-    with open(
-        "savegame.json",
-        "w"
-    ) as save_file:
-
-        json.dump(
-            save_data,
-            save_file,
-            indent=4
+        print(
+            "\n=== GAME SAVED ==="
         )
 
-    print(
-        "\n=== GAME SAVED ==="
-    )
+    except Exception as error:
+
+        print(
+            "\nSave failed:"
+        )
+
+        print(error)
 
 # =========================
 # LOAD GAME
@@ -147,58 +53,37 @@ def save_game(
 
 def load_game():
 
+    global world_state
+
     try:
 
         with open(
-            "savegame.json",
+
+            SAVE_FILE,
+
             "r"
+
         ) as save_file:
 
-            save_data = json.load(
+            loaded_data = json.load(
                 save_file
             )
 
         # =========================
-        # RESTORE COMPANIONS
-        # =========================
-
-        companions.clear()
-
-        companions.update(
-            save_data[
-                "companions"
-            ]
-        )
-
-        # =========================
-        # RESTORE QUESTS
-        # =========================
-
-        quests.clear()
-
-        quests.update(
-            save_data[
-                "quests"
-            ]
-        )
-
-        # =========================
-        # RESTORE WORLD STATE
+        # OVERWRITE WORLD STATE
         # =========================
 
         world_state.clear()
 
         world_state.update(
-            save_data[
-                "world_state"
-            ]
+            loaded_data
         )
 
         print(
-            "\n=== SAVE LOADED ==="
+            "\n=== GAME LOADED ==="
         )
 
-        return save_data
+        return True
 
     except FileNotFoundError:
 
@@ -206,4 +91,166 @@ def load_game():
             "\nNo save file found."
         )
 
-        return None
+        return False
+
+    except Exception as error:
+
+        print(
+            "\nLoad failed:"
+        )
+
+        print(error)
+
+        return False
+
+# =========================
+# AUTO SAVE
+# =========================
+
+def autosave():
+
+    print(
+        "\n=== AUTOSAVE ==="
+    )
+
+    save_game()
+
+# =========================
+# DELETE SAVE
+# =========================
+
+def delete_save():
+
+    import os
+
+    if os.path.exists(
+        SAVE_FILE
+    ):
+
+        os.remove(
+            SAVE_FILE
+        )
+
+        print(
+            "\nSave file deleted."
+        )
+
+    else:
+
+        print(
+            "\nNo save file exists."
+        )
+
+# =========================
+# SAVE PREVIEW
+# =========================
+
+def show_save_summary():
+
+    player = world_state["player"]
+
+    print(
+        "\n=== SAVE SUMMARY ==="
+    )
+
+    print(
+        "Class:",
+        player["class"]
+    )
+
+    print(
+        "Level:",
+        player["level"]
+    )
+
+    print(
+        "Gold:",
+        player["gold"]
+    )
+
+    print(
+        "Current Region:",
+        world_state[
+            "regions"
+        ]["current_region"]
+    )
+
+    print(
+        "Party Size:",
+        len(
+
+            world_state[
+                "companions"
+            ]["party"]
+        )
+    )
+
+    print(
+        "Completed Quests:",
+        len(
+
+            world_state[
+                "quests"
+            ]["completed"]
+        )
+    )
+
+    print(
+        "World Chaos:",
+        world_state[
+            "world_conditions"
+        ]["world_chaos"]
+    )
+
+# =========================
+# SAVE VALIDATION
+# =========================
+
+def validate_save():
+
+    required_sections = [
+
+        "player",
+
+        "companions",
+
+        "quests",
+
+        "factions",
+
+        "regions",
+
+        "world_conditions",
+
+        "story_memory"
+    ]
+
+    missing_sections = []
+
+    for section in required_sections:
+
+        if section not in world_state:
+
+            missing_sections.append(
+                section
+            )
+
+    if len(missing_sections) == 0:
+
+        print(
+            "\nSave structure valid."
+        )
+
+        return True
+
+    else:
+
+        print(
+            "\nMissing save sections:"
+        )
+
+        for section in missing_sections:
+
+            print("•", section)
+
+        return False

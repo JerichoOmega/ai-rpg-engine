@@ -1,107 +1,256 @@
+from world_state import (
+    world_state,
+    add_item,
+    remove_item,
+    heal_player
+)
+
 # =========================
-# INVENTORY SYSTEM
+# INVENTORY DISPLAY
 # =========================
 
-def show_inventory(inventory, equipped_weapon, weapon_bonus):
+def show_inventory():
 
-    print("\n=== INVENTORY ===")
+    player = world_state["player"]
+
+    inventory = player["inventory"]
+
+    print(
+        "\n=== INVENTORY ==="
+    )
 
     if len(inventory) == 0:
 
-        print("Your inventory is empty.")
+        print(
+            "Your inventory is empty."
+        )
 
     else:
 
         for item in inventory:
 
-            print("-", item)
+            print("•", item)
 
-    print("\nEquipped Weapon:", equipped_weapon)
-    print("Weapon Bonus:", weapon_bonus)
+    print(
+        "\nEquipped Weapon:",
+        player["equipped_weapon"]
+    )
 
+    print(
+        "Weapon Bonus:",
+        player["weapon_bonus"]
+    )
 
 # =========================
 # ADD ITEM
 # =========================
 
-def add_item(inventory, item):
+def give_item(item_name):
 
-    inventory.append(item)
-
-    print("\nYou obtained:", item)
-
-    return inventory
-
+    add_item(item_name)
 
 # =========================
 # REMOVE ITEM
 # =========================
 
-def remove_item(inventory, item):
+def take_item(item_name):
 
-    if item in inventory:
-
-        inventory.remove(item)
-
-        print("\nRemoved:", item)
-
-    return inventory
-
+    remove_item(item_name)
 
 # =========================
-# USE HEALING POTION
+# HEALING POTION
 # =========================
 
-def use_potion(inventory, player_hp):
+def use_potion():
+
+    inventory = world_state[
+        "player"
+    ]["inventory"]
 
     if "Healing Potion" in inventory:
 
-        heal = 20
+        heal_amount = 30
 
-        player_hp += heal
+        heal_player(
+            heal_amount
+        )
 
-        inventory.remove("Healing Potion")
+        remove_item(
+            "Healing Potion"
+        )
 
-        print("\nYou drink a Healing Potion.")
-        print("Recovered", heal, "HP!")
+        print(
+            f"\nYou restored"
+            f" {heal_amount} HP!"
+        )
+
+        print(
+            "Current HP:",
+            world_state[
+                "player"
+            ]["hp"]
+        )
 
     else:
 
-        print("\nNo Healing Potions available.")
-
-    return player_hp
-
+        print(
+            "\nYou do not have"
+            " a Healing Potion."
+        )
 
 # =========================
 # EQUIP WEAPON
 # =========================
 
-def equip_weapon(item):
+def equip_weapon(item_name):
 
-    equipped_weapon = "Rusty Sword"
+    player = world_state["player"]
 
-    weapon_bonus = 0
+    inventory = player["inventory"]
 
-    if item == "Iron Sword":
+    if item_name not in inventory:
 
-        equipped_weapon = "Iron Sword"
-        weapon_bonus = 3
+        print(
+            "\nYou do not own"
+            " that weapon."
+        )
 
-    elif item == "Magic Staff":
+        return
 
-        equipped_weapon = "Magic Staff"
-        weapon_bonus = 5
+    weapon_data = {
 
-    elif item == "Shadow Dagger":
+        "Rusty Sword": 0,
 
-        equipped_weapon = "Shadow Dagger"
-        weapon_bonus = 4
+        "Iron Sword": 4,
 
-    elif item == "Steel Sword":
+        "Steel Sword": 6,
 
-        equipped_weapon = "Steel Sword"
-        weapon_bonus = 6
+        "Shadow Dagger": 8,
 
-    print("\nEquipped:", equipped_weapon)
+        "Magic Staff": 10,
 
-    return equipped_weapon, weapon_bonus
+        "Dragon Slayer": 15,
+
+        "Mystic Weapon": 12,
+
+        "Ancient Relic": 20
+    }
+
+    if item_name in weapon_data:
+
+        player[
+            "equipped_weapon"
+        ] = item_name
+
+        player[
+            "weapon_bonus"
+        ] = weapon_data[
+            item_name
+        ]
+
+        print(
+            f"\nEquipped:"
+            f" {item_name}"
+        )
+
+        print(
+            "Weapon Bonus:",
+            player[
+                "weapon_bonus"
+            ]
+        )
+
+    else:
+
+        print(
+            "\nThat item cannot"
+            " be equipped."
+        )
+
+# =========================
+# INVENTORY CHECKS
+# =========================
+
+def has_item(item_name):
+
+    return (
+
+        item_name
+
+        in
+
+        world_state[
+            "player"
+        ]["inventory"]
+    )
+
+def inventory_count():
+
+    return len(
+
+        world_state[
+            "player"
+        ]["inventory"]
+    )
+
+# =========================
+# LOOT HANDLING
+# =========================
+
+def receive_loot(loot):
+
+    print(
+        "\n=== LOOT RECEIVED ==="
+    )
+
+    print(
+        "Item:",
+        loot["name"]
+    )
+
+    print(
+        "Rarity:",
+        loot["rarity"]
+    )
+
+    print(
+        "Effect:",
+        loot["effect"]
+    )
+
+    print(
+        "Element:",
+        loot["element"]
+    )
+
+    print(
+        "Damage Bonus:",
+        loot["damage_bonus"]
+    )
+
+    print(
+        "Crit Bonus:",
+        loot["crit_bonus"]
+    )
+
+    print(
+        "Defense Bonus:",
+        loot["defense_bonus"]
+    )
+
+    add_item(
+        loot["name"]
+    )
+
+# =========================
+# GOLD DISPLAY
+# =========================
+
+def show_gold():
+
+    print(
+        "\nGold:",
+        world_state[
+            "player"
+        ]["gold"]
+    )

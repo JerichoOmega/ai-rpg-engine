@@ -1,3 +1,7 @@
+from world_state import (
+    world_state
+)
+
 from utils import (
     normalize_input,
     is_warrior,
@@ -6,7 +10,7 @@ from utils import (
 )
 
 # =========================
-# PLAYER SYSTEM
+# PLAYER CREATION
 # =========================
 
 def create_player():
@@ -31,27 +35,31 @@ def create_player():
         input("> ")
     )
 
+    player = world_state["player"]
+
     # =========================
     # WARRIOR
     # =========================
 
     if is_warrior(choice):
 
-        player_class = "Warrior"
+        player["class"] = "Warrior"
 
-        player_hp = 140
+        player["hp"] = 140
 
-        attack_bonus = 8
+        player["max_hp"] = 140
 
-        resource_name = "Stamina"
+        player["attack_bonus"] = 8
 
-        player_resource = 100
+        player["resource_name"] = "Stamina"
 
-        max_resource = 100
+        player["resource"] = 100
 
-        player_defense = 5
+        player["max_resource"] = 100
 
-        player_dodge = 5
+        player["defense"] = 5
+
+        player["dodge"] = 5
 
         print(
             "\nA heavily armored fighter"
@@ -64,21 +72,23 @@ def create_player():
 
     elif is_mage(choice):
 
-        player_class = "Mage"
+        player["class"] = "Mage"
 
-        player_hp = 90
+        player["hp"] = 90
 
-        attack_bonus = 12
+        player["max_hp"] = 90
 
-        resource_name = "Mana"
+        player["attack_bonus"] = 12
 
-        player_resource = 120
+        player["resource_name"] = "Mana"
 
-        max_resource = 120
+        player["resource"] = 120
 
-        player_defense = 2
+        player["max_resource"] = 120
 
-        player_dodge = 10
+        player["defense"] = 2
+
+        player["dodge"] = 10
 
         print(
             "\nA master of destructive magic"
@@ -91,21 +101,23 @@ def create_player():
 
     elif is_rogue(choice):
 
-        player_class = "Rogue"
+        player["class"] = "Rogue"
 
-        player_hp = 100
+        player["hp"] = 100
 
-        attack_bonus = 10
+        player["max_hp"] = 100
 
-        resource_name = "Stamina"
+        player["attack_bonus"] = 10
 
-        player_resource = 110
+        player["resource_name"] = "Stamina"
 
-        max_resource = 110
+        player["resource"] = 110
 
-        player_defense = 3
+        player["max_resource"] = 110
 
-        player_dodge = 20
+        player["defense"] = 3
+
+        player["dodge"] = 20
 
         print(
             "\nA swift assassin specializing"
@@ -113,7 +125,7 @@ def create_player():
         )
 
     # =========================
-    # DEFAULT CLASS
+    # DEFAULT
     # =========================
 
     else:
@@ -126,74 +138,68 @@ def create_player():
             "Defaulting to Warrior."
         )
 
-        player_class = "Warrior"
+        player["class"] = "Warrior"
 
-        player_hp = 140
+        player["hp"] = 140
 
-        attack_bonus = 8
+        player["max_hp"] = 140
 
-        resource_name = "Stamina"
+        player["attack_bonus"] = 8
 
-        player_resource = 100
+        player["resource_name"] = "Stamina"
 
-        max_resource = 100
+        player["resource"] = 100
 
-        player_defense = 5
+        player["max_resource"] = 100
 
-        player_dodge = 5
+        player["defense"] = 5
+
+        player["dodge"] = 5
 
     print(
         "\nYou are now a",
-        player_class
-    )
-
-    return (
-
-        player_class,
-
-        player_hp,
-
-        attack_bonus,
-
-        resource_name,
-
-        player_resource,
-
-        max_resource,
-
-        player_defense,
-
-        player_dodge
+        player["class"]
     )
 
 # =========================
 # LEVEL SYSTEM
 # =========================
 
-def check_level_up(
+def check_level_up():
 
-    player_level,
-    player_xp,
-    xp_to_next_level,
-    player_hp,
-    attack_bonus,
-    max_resource
+    player = world_state["player"]
 
-):
+    while (
 
-    while player_xp >= xp_to_next_level:
+        player["xp"]
 
-        player_level += 1
+        >=
 
-        player_xp -= xp_to_next_level
+        player["xp_to_next_level"]
 
-        xp_to_next_level += 50
+    ):
 
-        player_hp += 20
+        player["level"] += 1
 
-        attack_bonus += 2
+        player["xp"] -= (
+            player["xp_to_next_level"]
+        )
 
-        max_resource += 10
+        player["xp_to_next_level"] += 50
+
+        player["max_hp"] += 20
+
+        player["hp"] = (
+            player["max_hp"]
+        )
+
+        player["attack_bonus"] += 2
+
+        player["max_resource"] += 10
+
+        player["resource"] = (
+            player["max_resource"]
+        )
 
         print(
             "\n=== LEVEL UP ==="
@@ -201,7 +207,7 @@ def check_level_up(
 
         print(
             "You reached level",
-            player_level
+            player["level"]
         )
 
         print(
@@ -216,101 +222,152 @@ def check_level_up(
             "Maximum resource increased!"
         )
 
-    return (
-
-        player_level,
-
-        player_xp,
-
-        xp_to_next_level,
-
-        player_hp,
-
-        attack_bonus,
-
-        max_resource
-    )
-
 # =========================
-# STORY STATE DISPLAY
+# PLAYER STATUS DISPLAY
 # =========================
 
-def show_story_state(
+def show_player_status():
 
-    cult_defeated,
-    dragon_defeated,
-    knight_defeated,
-    player_gold,
-    player_reputation,
-    player_level,
-    player_xp,
-    xp_to_next_level,
-    resource_name,
-    player_resource,
-    max_resource,
-    player_defense,
-    player_dodge
-
-):
+    player = world_state["player"]
 
     print(
-        "\n=== FINAL PLAYER STATE ==="
+        "\n=== PLAYER STATUS ==="
+    )
+
+    print(
+        "Class:",
+        player["class"]
     )
 
     print(
         "Level:",
-        player_level
+        player["level"]
     )
 
     print(
         "XP:",
-        str(player_xp)
+        str(player["xp"])
         + "/"
-        + str(xp_to_next_level)
+        + str(
+            player["xp_to_next_level"]
+        )
+    )
+
+    print(
+        "HP:",
+        str(player["hp"])
+        + "/"
+        + str(player["max_hp"])
+    )
+
+    print(
+        player["resource_name"]
+        + ":",
+        str(player["resource"])
+        + "/"
+        + str(
+            player["max_resource"]
+        )
     )
 
     print(
         "Gold:",
-        player_gold
+        player["gold"]
     )
 
     print(
-        "Reputation:",
-        player_reputation
-    )
-
-    print(
-        resource_name + ":",
-        str(player_resource)
-        + "/"
-        + str(max_resource)
+        "Attack Bonus:",
+        player["attack_bonus"]
     )
 
     print(
         "Defense:",
-        player_defense
+        player["defense"]
     )
 
     print(
         "Dodge Chance:",
-        str(player_dodge) + "%"
+        str(player["dodge"])
+        + "%"
     )
 
     print(
-        "\n=== STORY PROGRESS ==="
+        "Weapon:",
+        player["equipped_weapon"]
+    )
+
+# =========================
+# STORY SUMMARY
+# =========================
+
+def show_story_state():
+
+    player = world_state["player"]
+
+    story_memory = world_state[
+        "story_memory"
+    ]
+
+    print(
+        "\n=== FINAL STORY STATE ==="
     )
 
     print(
-        "Cult Defeated:",
-        cult_defeated
+        "Player Class:",
+        player["class"]
     )
 
     print(
-        "Dragon Defeated:",
-        dragon_defeated
+        "Level:",
+        player["level"]
     )
 
     print(
-        "Knight Defeated:",
-        knight_defeated
+        "Gold:",
+        player["gold"]
+    )
+
+    print(
+        "\n=== STORY MEMORY ==="
+    )
+
+    for memory in story_memory:
+
+        print(
+            memory,
+            "-",
+            story_memory[memory]
+        )
+
+    print(
+        "\n=== PLAYER HISTORY ==="
+    )
+
+    history = world_state[
+        "history"
+    ]
+
+    print(
+        "Choices Made:",
+        len(
+            history["choices"]
+        )
+    )
+
+    print(
+        "Lore Discovered:",
+        len(
+            history[
+                "discovered_lore"
+            ]
+        )
+    )
+
+    print(
+        "Major Events:",
+        len(
+            history[
+                "major_events"
+            ]
+        )
     )
