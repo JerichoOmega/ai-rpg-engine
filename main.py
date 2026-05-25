@@ -1,43 +1,18 @@
 import random
 
+# =========================
+# CORE WORLD
+# =========================
+
 from world_state import (
     world_state,
     update_world_state,
-    show_world_state,
-    add_gold,
-    add_item,
-    discover_region,
-    set_current_region,
-    remember_choice
+    show_world_state
 )
 
-from player import (
-    create_player,
-    check_level_up,
-    show_story_state
-)
-
-from combat import combat
-
-from shop import shop
-
-from inventory import (
-    show_inventory
-)
-
-from quests import (
-    initialize_quests,
-    show_quests
-)
-
-from companions import (
-    show_party,
-    attempt_recruitment,
-    loyalty_event,
-    companion_reaction,
-    companion_story_event,
-    check_companion_departure
-)
+# =========================
+# SAVE + STATE
+# =========================
 
 from save_system import (
     save_game,
@@ -45,85 +20,130 @@ from save_system import (
     autosave
 )
 
-from loot import (
-    generate_loot
+from state_manager import (
+    validate_world_state
 )
 
-from hub import (
-    town_hub,
-    tavern_scene,
-    dialogue_choice,
-    dungeon_room
+# =========================
+# SESSION SYSTEM
+# =========================
+
+from session_manager import (
+    start_session,
+    end_session,
+    show_campaign_timeline
 )
+
+# =========================
+# AI DIRECTOR
+# =========================
+
+from ai_director import (
+    direct_gameplay,
+    show_director_state,
+    evaluate_session_flow,
+    reset_session_trackers
+)
+
+# =========================
+# CAMPAIGN
+# =========================
+
+from campaign_manager import (
+    show_campaign_status,
+    evaluate_campaign_progress
+)
+
+# =========================
+# QUESTS
+# =========================
+
+from quests import (
+    initialize_quests,
+    show_quests
+)
+
+from quest_generator import (
+    generate_quest,
+    show_generated_quests
+)
+
+# =========================
+# NPCS
+# =========================
+
+from npc_manager import (
+    random_npc_event,
+    show_npc
+)
+
+# =========================
+# DIALOGUE
+# =========================
+
+from dialogue_ai import (
+    random_conversation
+)
+
+# =========================
+# REGIONS
+# =========================
+
+from region_manager import (
+    random_region_event
+)
+
+# =========================
+# ENCOUNTERS
+# =========================
+
+from encounter_generator import (
+    random_travel_event
+)
+
+# =========================
+# MEMORY
+# =========================
+
+from memory_engine import (
+    show_memories,
+    compress_memories
+)
+
+# =========================
+# CONSISTENCY
+# =========================
+
+from consistency_engine import (
+    run_full_consistency_check,
+    auto_fix_simple_issues
+)
+
+# =========================
+# NARRATIVE AI
+# =========================
+
+from narrative_ai import (
+    generate_story_hook
+)
+
+# =========================
+# EVENT SYSTEM
+# =========================
 
 from event_bus import (
     emit
 )
 
 # =========================
-# IMPORT STORY MANAGER
+# FORCE SYSTEM IMPORTS
 # =========================
 
 import story_manager
-
-# =========================
-# ENEMIES
-# =========================
-
-enemies = {
-
-    "hidden cult": {
-
-        "hp_min": 25,
-
-        "hp_max": 40
-    },
-
-    "ancient dragon": {
-
-        "hp_min": 80,
-
-        "hp_max": 120
-    },
-
-    "corrupted knight": {
-
-        "hp_min": 35,
-
-        "hp_max": 55
-    },
-
-    "shadow beast": {
-
-        "hp_min": 30,
-
-        "hp_max": 45
-    },
-
-    "necromancer": {
-
-        "hp_min": 40,
-
-        "hp_max": 60
-    }
-}
-
-# =========================
-# REGIONS
-# =========================
-
-regions = [
-
-    "kingdom_capital",
-
-    "shadow_marsh",
-
-    "frostpeak_mountains",
-
-    "arcane_ruins",
-
-    "ashen_wastes"
-]
+import faction_manager
+import narrative_ai
+import memory_engine
+import session_manager
 
 # =========================
 # GAME START
@@ -141,7 +161,13 @@ print(
     "2. Load Game"
 )
 
-choice = input("> ").strip().lower()
+choice = input(
+    "\n> "
+).strip().lower()
+
+# =========================
+# LOAD GAME
+# =========================
 
 if choice in [
 
@@ -156,11 +182,31 @@ if choice in [
 
     if not success:
 
-        create_player()
+        print(
+            "\nStarting new campaign..."
+        )
 
-else:
+# =========================
+# VALIDATION
+# =========================
 
-    create_player()
+run_full_consistency_check()
+
+auto_fix_simple_issues()
+
+validate_world_state(
+    world_state
+)
+
+# =========================
+# SESSION START
+# =========================
+
+start_session()
+
+# =========================
+# INITIALIZE QUESTS
+# =========================
 
 initialize_quests()
 
@@ -172,290 +218,171 @@ game_running = True
 
 while game_running:
 
+    # =========================
+    # WORLD UPDATE
+    # =========================
+
     update_world_state()
+
+    evaluate_campaign_progress()
+
+    evaluate_session_flow()
+
+    compress_memories()
+
+    # =========================
+    # AI DIRECTOR
+    # =========================
+
+    direct_gameplay()
+
+    # =========================
+    # RANDOM WORLD EVENTS
+    # =========================
+
+    random_roll = random.randint(
+        1,
+        100
+    )
+
+    if random_roll <= 25:
+
+        random_npc_event()
+
+    elif random_roll <= 50:
+
+        random_region_event()
+
+    elif random_roll <= 70:
+
+        random_conversation()
+
+    elif random_roll <= 85:
+
+        random_travel_event()
+
+    else:
+
+        generate_story_hook()
+
+    # =========================
+    # PLAYER MENU
+    # =========================
 
     print(
         "\n========================"
     )
 
     print(
-        "DAY",
-        world_state["time"]["day"]
+        "1. Show Quests"
     )
 
     print(
-        "========================"
+        "2. Show Generated Quests"
     )
 
-    hub_choice = town_hub()
+    print(
+        "3. Show Campaign Status"
+    )
 
-    # =========================
-    # TAVERN
-    # =========================
+    print(
+        "4. Show Timeline"
+    )
 
-    if hub_choice == "tavern":
+    print(
+        "5. Show Memories"
+    )
 
-        tavern_scene()
+    print(
+        "6. Save Game"
+    )
 
-        companion_story_event()
+    print(
+        "7. End Session"
+    )
 
-        continue
-
-    # =========================
-    # SHOP
-    # =========================
-
-    elif hub_choice == "shop":
-
-        shop()
-
-        continue
+    player_choice = input(
+        "\nChoose: "
+    ).strip()
 
     # =========================
     # QUESTS
     # =========================
 
-    elif hub_choice == "quests":
+    if player_choice == "1":
 
         show_quests()
 
-        continue
+    elif player_choice == "2":
+
+        show_generated_quests()
 
     # =========================
-    # PARTY
+    # CAMPAIGN
     # =========================
 
-    elif hub_choice == "party":
+    elif player_choice == "3":
 
-        show_party()
+        show_campaign_status()
 
-        continue
+    # =========================
+    # TIMELINE
+    # =========================
+
+    elif player_choice == "4":
+
+        show_campaign_timeline()
+
+    # =========================
+    # MEMORIES
+    # =========================
+
+    elif player_choice == "5":
+
+        show_memories()
 
     # =========================
     # SAVE
     # =========================
 
-    elif hub_choice == "save":
+    elif player_choice == "6":
 
         save_game()
 
-        continue
-
     # =========================
-    # ADVENTURE
+    # END SESSION
     # =========================
 
-    elif hub_choice == "adventure":
+    elif player_choice == "7":
 
-        print(
-            "\n=== BEGIN ADVENTURE ==="
-        )
-
-    else:
-
-        continue
+        game_running = False
 
     # =========================
-    # REGION SELECTION
+    # AUTOSAVE
     # =========================
 
-    print(
-        "\n=== CHOOSE REGION ==="
-    )
+    autosave()
 
-    for region in regions:
-
-        print("•", region)
-
-    selected_region = input(
-        "\nTravel to: "
-    ).strip().lower()
-
-    if selected_region not in regions:
-
-        selected_region = random.choice(
-            regions
-        )
-
-    set_current_region(
-        selected_region
-    )
-
-    discover_region(
-        selected_region
-    )
-
-    emit(
-
-        "region_discovered",
-
-        region_name=selected_region
-    )
-
-    # =========================
-    # DUNGEON LOOP
-    # =========================
-
-    room_count = 5
-
-    current_room = 1
-
-    while current_room <= room_count:
-
-        print(
-            f"\n=== ROOM {current_room} ==="
-        )
-
-        room_type = dungeon_room()
-
-        # =========================
-        # ENEMY ROOM
-        # =========================
-
-        if room_type == "enemy":
-
-            enemy_name = random.choice(
-                list(
-                    enemies.keys()
-                )
-            )
-
-            enemy_hp = random.randint(
-
-                enemies[
-                    enemy_name
-                ]["hp_min"],
-
-                enemies[
-                    enemy_name
-                ]["hp_max"]
-            )
-
-            print(
-                "\nEnemy:",
-                enemy_name
-            )
-
-            victory = combat(
-
-                enemy_name,
-                enemy_hp
-            )
-
-            if victory:
-
-                gold_reward = random.randint(
-                    15,
-                    35
-                )
-
-                xp_reward = random.randint(
-                    25,
-                    50
-                )
-
-                add_gold(
-                    gold_reward
-                )
-
-                world_state[
-                    "player"
-                ]["xp"] += xp_reward
-
-                loot = generate_loot(
-                    enemy_name
-                )
-
-                add_item(
-                    loot["name"]
-                )
-
-                attempt_recruitment()
-
-                loyalty_event()
-
-                update_world_state()
-
-                check_level_up()
-
-            else:
-
-                print(
-                    "\nYour adventure ends here..."
-                )
-
-                game_running = False
-
-                break
-
-        # =========================
-        # DIALOGUE ROOM
-        # =========================
-
-        elif room_type == "dialogue":
-
-            result = dialogue_choice()
-
-            if result == "persuade":
-
-                remember_choice(
-                    "merciful"
-                )
-
-                emit(
-
-                    "player_choice",
-
-                    choice="mercy"
-                )
-
-                companion_reaction(
-                    "mercy"
-                )
-
-            elif result == "threaten":
-
-                remember_choice(
-                    "ruthless"
-                )
-
-                emit(
-
-                    "player_choice",
-
-                    choice="ruthless"
-                )
-
-                companion_reaction(
-                    "ruthless_actions"
-                )
-
-        current_room += 1
-
-    # =========================
-    # END OF ADVENTURE
-    # =========================
-
-    if game_running:
-
-        print(
-            "\n=== ADVENTURE COMPLETE ==="
-        )
-
-        autosave()
+    reset_session_trackers()
 
 # =========================
-# GAME OVER
+# SESSION END
+# =========================
+
+end_session()
+
+# =========================
+# FINAL SAVE
+# =========================
+
+save_game()
+
+# =========================
+# GAME END
 # =========================
 
 print(
-    "\n=== GAME OVER ==="
+    "\n=== SESSION COMPLETE ==="
 )
 
-show_story_state()
-
 show_world_state()
-
-show_inventory()
-
-show_party()
