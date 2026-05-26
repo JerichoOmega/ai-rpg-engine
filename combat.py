@@ -13,6 +13,41 @@ from llm_bridge import (
     ai_narrate
 )
 
+from progression_manager import (
+    scale_enemy_power
+)
+
+from status_effects import (
+    process_status_effects,
+    add_status_effect
+)
+
+# =========================
+# CRITICAL HIT
+# =========================
+
+def calculate_critical_hit():
+
+    roll = random.randint(
+        1,
+        100
+    )
+
+    return roll <= 15
+
+# =========================
+# EVASION CHECK
+# =========================
+
+def check_evasion():
+
+    roll = random.randint(
+        1,
+        100
+    )
+
+    return roll <= player.evasion
+
 # =========================
 # COMBAT
 # =========================
@@ -29,12 +64,27 @@ def combat(
     )
 
     # =========================
+    # ENEMY ENTITY
+    # =========================
+
+    enemy = {
+
+        "name": enemy_name,
+
+        "hp": scale_enemy_power(
+            enemy_hp
+        ),
+
+        "status_effects": []
+    }
+
+    # =========================
     # AI INTRO NARRATION
     # =========================
 
     combat_state = {
 
-        "enemy_hp": enemy_hp,
+        "enemy_hp": enemy["hp"],
 
         "player_hp": player.hp
     }
@@ -60,7 +110,7 @@ def combat(
     # COMBAT LOOP
     # =========================
 
-    while enemy_hp > 0 and player.hp > 0:
+    while enemy["hp"] > 0 and player.hp > 0:
 
         print(
             "\n========================"
@@ -74,7 +124,7 @@ def combat(
 
         print(
             f"{enemy_name} HP:"
-            f" {enemy_hp}"
+            f" {enemy['hp']}"
         )
 
         print(
@@ -108,13 +158,51 @@ def combat(
                 player.attack_bonus
             )
 
-            enemy_hp -= damage
+            # =========================
+            # CRITICAL HIT
+            # =========================
+
+            critical = calculate_critical_hit()
+
+            if critical:
+
+                damage *= 2
+
+                print(
+                    "\nCRITICAL HIT!"
+                )
+
+            enemy["hp"] -= damage
 
             print(
                 f"\nYou strike the"
                 f" {enemy_name}"
                 f" for {damage} damage."
             )
+
+            # =========================
+            # RANDOM STATUS EFFECT
+            # =========================
+
+            status_roll = random.randint(
+                1,
+                100
+            )
+
+            if status_roll <= 15:
+
+                enemy[
+                    "status_effects"
+                ] = add_status_effect(
+
+                    enemy[
+                        "status_effects"
+                    ],
+
+                    "bleed",
+
+                    3
+                )
 
         # =========================
         # HEAVY ATTACK
@@ -127,7 +215,21 @@ def combat(
                 20
             )
 
-            enemy_hp -= damage
+            damage += (
+                player.attack_bonus
+            )
+
+            critical = calculate_critical_hit()
+
+            if critical:
+
+                damage *= 2
+
+                print(
+                    "\nCRITICAL HIT!"
+                )
+
+            enemy["hp"] -= damage
 
             print(
                 f"\nHeavy attack hits for"
@@ -172,10 +274,25 @@ def combat(
             continue
 
         # =========================
+        # PROCESS ENEMY STATUS EFFECTS
+        # =========================
+
+        enemy[
+            "status_effects"
+        ] = process_status_effects(
+
+            enemy,
+
+            enemy[
+                "status_effects"
+            ]
+        )
+
+        # =========================
         # ENEMY DEFEATED
         # =========================
 
-        if enemy_hp <= 0:
+        if enemy["hp"] <= 0:
 
             print(
                 f"\nYou defeated"
@@ -217,6 +334,31 @@ def combat(
         enemy_damage = random.randint(
             5,
             15
+        )
+
+        # =========================
+        # EVASION
+        # =========================
+
+        if check_evasion():
+
+            print(
+                "\nYou evade the attack!"
+            )
+
+            enemy_damage = 0
+
+        # =========================
+        # DEFENSE
+        # =========================
+
+        enemy_damage -= (
+            player.defense
+        )
+
+        enemy_damage = max(
+            enemy_damage,
+            0
         )
 
         player.hp -= enemy_damage

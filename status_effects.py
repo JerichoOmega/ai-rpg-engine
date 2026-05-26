@@ -1,57 +1,142 @@
 # =========================
+# STATUS EFFECT DATABASE
+# =========================
+
+STATUS_EFFECTS = {
+
+    "burn": {
+
+        "damage": 5,
+
+        "stackable": False
+    },
+
+    "poison": {
+
+        "damage": 3,
+
+        "stackable": True
+    },
+
+    "bleed": {
+
+        "damage": 4,
+
+        "stackable": True
+    }
+}
+
+# =========================
 # APPLY STATUS EFFECT
 # =========================
 
-def add_status_effect(active_effects, effect_name, duration):
+def add_status_effect(
+
+    active_effects,
+
+    effect_name,
+
+    duration
+
+):
+
+    effect_data = STATUS_EFFECTS.get(
+        effect_name
+    )
+
+    if not effect_data:
+
+        print(
+            "\nUnknown status effect."
+        )
+
+        return active_effects
+
+    # =========================
+    # PREVENT DUPLICATE EFFECTS
+    # =========================
+
+    if not effect_data["stackable"]:
+
+        for effect in active_effects:
+
+            if effect["effect"] == effect_name:
+
+                print(
+                    f"\n{effect_name}"
+                    " is already active."
+                )
+
+                return active_effects
+
+    # =========================
+    # APPLY EFFECT
+    # =========================
 
     active_effects.append({
 
         "effect": effect_name,
+
         "duration": duration
     })
 
-    print("\nStatus Applied:", effect_name)
+    print(
+        f"\nStatus Applied:"
+        f" {effect_name}"
+    )
 
     return active_effects
-
 
 # =========================
 # PROCESS STATUS EFFECTS
 # =========================
 
-def process_status_effects(player_hp, active_effects):
+def process_status_effects(
+
+    entity,
+
+    active_effects
+
+):
 
     remaining_effects = []
 
     for effect_data in active_effects:
 
-        effect = effect_data["effect"]
+        effect_name = effect_data[
+            "effect"
+        ]
 
-        duration = effect_data["duration"]
+        duration = effect_data[
+            "duration"
+        ]
+
+        effect = STATUS_EFFECTS.get(
+            effect_name
+        )
+
+        if not effect:
+
+            continue
 
         # =========================
-        # BURN
+        # APPLY DAMAGE
         # =========================
 
-        if effect == "burn":
+        damage = effect.get(
+            "damage",
+            0
+        )
 
-            burn_damage = 5
+        if damage > 0:
 
-            player_hp -= burn_damage
+            entity.hp -= damage
 
-            print("\nBurn deals", burn_damage, "damage!")
-
-        # =========================
-        # POISON
-        # =========================
-
-        elif effect == "poison":
-
-            poison_damage = 3
-
-            player_hp -= poison_damage
-
-            print("\nPoison deals", poison_damage, "damage!")
+            print(
+                f"\n{effect_name.title()}"
+                f" deals {damage}"
+                " damage!"
+            )
 
         # =========================
         # REDUCE DURATION
@@ -67,12 +152,97 @@ def process_status_effects(player_hp, active_effects):
 
             remaining_effects.append({
 
-                "effect": effect,
+                "effect": effect_name,
+
                 "duration": duration
             })
 
         else:
 
-            print(effect, "has worn off.")
+            print(
+                f"\n{effect_name}"
+                " has worn off."
+            )
 
-    return player_hp, remaining_effects
+    return remaining_effects
+
+# =========================
+# REMOVE STATUS EFFECT
+# =========================
+
+def remove_status_effect(
+
+    active_effects,
+
+    effect_name
+
+):
+
+    updated_effects = [
+
+        effect
+
+        for effect in active_effects
+
+        if effect["effect"] != effect_name
+    ]
+
+    print(
+        f"\nRemoved status:"
+        f" {effect_name}"
+    )
+
+    return updated_effects
+
+# =========================
+# CHECK STATUS
+# =========================
+
+def has_status_effect(
+
+    active_effects,
+
+    effect_name
+
+):
+
+    for effect in active_effects:
+
+        if effect["effect"] == effect_name:
+
+            return True
+
+    return False
+
+# =========================
+# SHOW STATUS EFFECTS
+# =========================
+
+def show_status_effects(
+
+    active_effects
+
+):
+
+    print(
+        "\n=== STATUS EFFECTS ==="
+    )
+
+    if not active_effects:
+
+        print(
+            "\nNo active effects."
+        )
+
+        return
+
+    for effect in active_effects:
+
+        print(
+            f"\n{effect['effect']}"
+        )
+
+        print(
+            f"Duration:"
+            f" {effect['duration']}"
+        )
