@@ -19,56 +19,582 @@ REGIONS = {
 
     "kingdom_capital": {
 
+        "display_name": "Kingdom Capital",
+
+        "biome": "urban",
+
         "danger": 10,
+
+        "stability": 85,
+
+        "prosperity": 90,
+
+        "travel_difficulty": 1,
 
         "faction": "kingdom",
 
-        "discovered": True,
+        "population": 12000,
+
+        "weather": "clear",
+
+        "resources": [
+
+            "gold",
+            "food",
+            "iron"
+        ],
+
+        "story_themes": [
+
+            "politics",
+            "corruption",
+            "nobility"
+        ],
+
+        "neighboring_regions": [
+
+            "shadow_marsh",
+            "arcane_ruins"
+        ],
+
+        "settlements": [
+
+            "royal_city",
+            "merchant_district",
+            "castle_blackstone"
+        ],
+
+        "active_conflicts": [],
 
         "events": [],
+
+        "discovered": True,
 
         "corrupted": False
     },
 
     "shadow_marsh": {
 
+        "display_name": "Shadow Marsh",
+
+        "biome": "swamp",
+
         "danger": 45,
+
+        "stability": 40,
+
+        "prosperity": 20,
+
+        "travel_difficulty": 6,
 
         "faction": "shadow_cult",
 
-        "discovered": False,
+        "population": 800,
+
+        "weather": "foggy",
+
+        "resources": [
+
+            "herbs",
+            "alchemy",
+            "swamp_meat"
+        ],
+
+        "story_themes": [
+
+            "horror",
+            "madness",
+            "corruption"
+        ],
+
+        "neighboring_regions": [
+
+            "kingdom_capital",
+            "ashen_wastes"
+        ],
+
+        "settlements": [
+
+            "murkwater_village",
+            "cult_hideout"
+        ],
+
+        "active_conflicts": [
+
+            "cult_activity"
+        ],
 
         "events": [],
+
+        "discovered": False,
 
         "corrupted": True
     },
 
     "arcane_ruins": {
 
+        "display_name": "Arcane Ruins",
+
+        "biome": "magical_ruins",
+
         "danger": 60,
+
+        "stability": 30,
+
+        "prosperity": 50,
+
+        "travel_difficulty": 5,
 
         "faction": "mages_guild",
 
-        "discovered": False,
+        "population": 300,
+
+        "weather": "arcane_storms",
+
+        "resources": [
+
+            "mana_crystals",
+            "ancient_books"
+        ],
+
+        "story_themes": [
+
+            "mystery",
+            "forbidden_knowledge",
+            "magic"
+        ],
+
+        "neighboring_regions": [
+
+            "kingdom_capital",
+            "ashen_wastes"
+        ],
+
+        "settlements": [
+
+            "fallen_tower",
+            "crystal_archive"
+        ],
+
+        "active_conflicts": [
+
+            "mana_instability"
+        ],
 
         "events": [],
+
+        "discovered": False,
 
         "corrupted": False
     },
 
     "ashen_wastes": {
 
+        "display_name": "Ashen Wastes",
+
+        "biome": "volcanic",
+
         "danger": 80,
+
+        "stability": 10,
+
+        "prosperity": 5,
+
+        "travel_difficulty": 9,
 
         "faction": "none",
 
-        "discovered": False,
+        "population": 50,
+
+        "weather": "ash_storm",
+
+        "resources": [
+
+            "obsidian",
+            "sulfur"
+        ],
+
+        "story_themes": [
+
+            "survival",
+            "revenge",
+            "desolation"
+        ],
+
+        "neighboring_regions": [
+
+            "shadow_marsh",
+            "arcane_ruins"
+        ],
+
+        "settlements": [
+
+            "burned_outpost",
+            "forgotten_forge"
+        ],
+
+        "active_conflicts": [
+
+            "monster_raids"
+        ],
 
         "events": [],
+
+        "discovered": False,
 
         "corrupted": True
     }
 }
+
+# =========================
+# GET REGION DATA
+# =========================
+
+def get_region_data(
+
+    region_name
+
+):
+
+    return REGIONS.get(
+        region_name
+    )
+
+# =========================
+# GET CURRENT REGION
+# =========================
+
+def get_current_region():
+
+    current_region = world_state[
+        "regions"
+    ]["current_region"]
+
+    return REGIONS.get(
+        current_region
+    )
+
+# =========================
+# GET REGION THEMES
+# =========================
+
+def get_region_story_themes(
+
+    region_name
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return []
+
+    return region.get(
+        "story_themes",
+        []
+    )
+
+# =========================
+# GET NEIGHBORING REGIONS
+# =========================
+
+def get_neighboring_regions(
+
+    region_name
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return []
+
+    return region.get(
+        "neighboring_regions",
+        []
+    )
+
+# =========================
+# GET REGION SETTLEMENTS
+# =========================
+
+def get_region_settlements(
+
+    region_name
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return []
+
+    return region.get(
+        "settlements",
+        []
+    )
+
+# =========================
+# GET REGION WEATHER
+# =========================
+
+def get_region_weather(
+
+    region_name
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return "unknown"
+
+    return region.get(
+        "weather",
+        "clear"
+    )
+
+# =========================
+# CHANGE REGION WEATHER
+# =========================
+
+def change_region_weather(
+
+    region_name,
+    new_weather
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return
+
+    old_weather = region[
+        "weather"
+    ]
+
+    region[
+        "weather"
+    ] = new_weather
+
+    print(
+        f"\nWeather in"
+        f" {region_name}"
+        f" changed from"
+        f" {old_weather}"
+        f" to"
+        f" {new_weather}."
+    )
+
+# =========================
+# CHANGE STABILITY
+# =========================
+
+def change_region_stability(
+
+    region_name,
+    amount
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return
+
+    region[
+        "stability"
+    ] += amount
+
+    region[
+        "stability"
+    ] = max(
+
+        0,
+
+        min(
+            region[
+                "stability"
+            ],
+            100
+        )
+    )
+
+    print(
+        f"\nStability in"
+        f" {region_name}"
+        f" changed by"
+        f" {amount}."
+    )
+
+# =========================
+# CHANGE PROSPERITY
+# =========================
+
+def change_region_prosperity(
+
+    region_name,
+    amount
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return
+
+    region[
+        "prosperity"
+    ] += amount
+
+    region[
+        "prosperity"
+    ] = max(
+
+        0,
+
+        min(
+            region[
+                "prosperity"
+            ],
+            100
+        )
+    )
+
+    print(
+        f"\nProsperity in"
+        f" {region_name}"
+        f" changed by"
+        f" {amount}."
+    )
+
+# =========================
+# RANDOM WEATHER UPDATE
+# =========================
+
+def random_weather_update():
+
+    possible_weather = [
+
+        "clear",
+
+        "rain",
+
+        "storm",
+
+        "foggy",
+
+        "ash_storm",
+
+        "arcane_storms"
+    ]
+
+    region_name = random.choice(
+        list(REGIONS.keys())
+    )
+
+    weather = random.choice(
+        possible_weather
+    )
+
+    change_region_weather(
+
+        region_name,
+
+        weather
+    )
+
+# =========================
+# REGION EVOLUTION
+# =========================
+
+def evolve_region(
+
+    region_name
+
+):
+
+    region = REGIONS.get(
+        region_name
+    )
+
+    if not region:
+
+        return
+
+    # =========================
+    # CORRUPTED REGIONS DECAY
+    # =========================
+
+    if region["corrupted"]:
+
+        change_region_stability(
+
+            region_name,
+
+            -2
+        )
+
+        change_region_prosperity(
+
+            region_name,
+
+            -1
+        )
+
+    # =========================
+    # PEACEFUL REGIONS RECOVER
+    # =========================
+
+    elif region["danger"] <= 20:
+
+        change_region_stability(
+
+            region_name,
+
+            1
+        )
+
+        change_region_prosperity(
+
+            region_name,
+
+            1
+        )
+
+# =========================
+# EVOLVE ALL REGIONS
+# =========================
+
+def evolve_world_regions():
+
+    for region_name in REGIONS:
+
+        evolve_region(
+            region_name
+        )
 
 # =========================
 # SHOW REGION
@@ -98,7 +624,14 @@ def show_region(
 
     print(
         "Region:",
-        region_name
+        region[
+            "display_name"
+        ]
+    )
+
+    print(
+        "Biome:",
+        region["biome"]
     )
 
     print(
@@ -109,6 +642,21 @@ def show_region(
     print(
         "Faction:",
         region["faction"]
+    )
+
+    print(
+        "Weather:",
+        region["weather"]
+    )
+
+    print(
+        "Stability:",
+        region["stability"]
+    )
+
+    print(
+        "Prosperity:",
+        region["prosperity"]
     )
 
     print(
@@ -352,8 +900,6 @@ def random_region_event():
     region_name = random.choice(
         list(REGIONS.keys())
     )
-
-    region = REGIONS[region_name]
 
     possible_events = [
 
