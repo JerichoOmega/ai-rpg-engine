@@ -1,0 +1,181 @@
+The attached files are now the canonical source of truth for this project.
+
+This includes:
+
+* The Elyndor Universe Bible
+* The Character Sheets
+* Any future lore documents
+
+Your job is to organize these documents into a scalable repository and preserve them as canon.
+
+⸻
+
+Canon Rules
+
+Elyndor is a standalone fantasy universe.
+
+It is not tied to any one game.
+
+Future games, books, comics, or other media may all take place within Elyndor.
+
+Do not redesign or rewrite the lore unless explicitly instructed.
+
+⸻
+
+Separate the Universe from the Game
+
+Maintain two completely separate documentation systems.
+
+1. Elyndor Universe Bible
+
+This contains only reusable worldbuilding.
+
+Examples include:
+
+* World lore
+* History
+* Ancient civilizations
+* Ancient Legends
+* Creatures
+* Monsters
+* Magic
+* Mythology
+* Religions
+* Organizations
+* Artifacts
+* Ruins
+* Historical timelines
+
+These documents exist independently of any game.
+
+⸻
+
+2. Tactical RPG Game Bible
+
+This contains everything specific to the current game.
+
+Examples include:
+
+* Main Story
+* Chapters
+* Quests
+* Playable Characters
+* Enemy Factions
+* Gameplay Systems
+* Combat
+* Equipment
+* Progression
+* Classes
+* UI
+* Design Documents
+
+Nothing in this section should overwrite the Universe Bible.
+
+⸻
+
+Character Categories
+
+Characters belong in one of two groups.
+
+Ancient Legends
+
+These are legendary historical figures from Elyndor’s distant past.
+
+They are part of the world’s mythology.
+
+Examples include:
+
+* Aurelia Sunstrider
+* Valen Ashfall
+
+They are not members of the playable cast unless a future story specifically says so.
+
+⸻
+
+Present-Day Characters
+
+These are the protagonists and companions of the Tactical RPG.
+
+Examples include:
+
+* Talos
+* Beast Master
+* Werewolf
+* Every future companion
+
+These belong exclusively inside the Game Bible.
+
+⸻
+
+Character Sheets
+
+Every playable character should have their own markdown file using the attached Character Sheet template.
+
+Do not modify the template unless instructed.
+
+Populate each file using the information already established.
+
+Leave unknown sections blank for future development.
+
+⸻
+
+Ancient Legend Sheets
+
+Ancient Legends should use the same template, but with these values:
+
+Era
+
+* Age of Legends
+
+Role
+
+* Historical Figure
+
+Their entries should focus on:
+
+* Historical accounts
+* Myths
+* Folklore
+* Legacy
+* Influence on the modern world
+
+⸻
+
+Lore Writing Style
+
+All lore should be written as though it were discovered by historians, explorers, librarians, or scholars living in Elyndor.
+
+Avoid:
+
+* Developer notes
+* Gameplay terminology
+* RPG mechanics
+* Meta commentary
+
+The world should feel believable and timeless.
+
+⸻
+
+Future Expansion
+
+The repository should always be easy to expand.
+
+Adding a new character should never require reorganizing the project.
+
+Adding a new creature should automatically fit into the Bestiary.
+
+Adding a new civilization should fit naturally into the World section.
+
+Keep everything modular and organized.
+
+⸻
+
+Repository Goal
+
+Treat this repository as a professional game studio would treat its internal lore database.
+
+The Elyndor Universe Bible is the permanent source of truth for the setting.
+
+The Tactical RPG Game Bible is the permanent source of truth for the current game.
+
+Never mix the two unless explicitly instructed.

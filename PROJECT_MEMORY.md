@@ -17,7 +17,13 @@ It contains the startup checklist, development rules, shutdown checklist, and li
 
 ## What This Project Is
 
-A **terminal-based AI RPG** written in Python. The player types commands in a terminal. An AI Director (the "DM Brain") shapes the narrative pacing and story. The game features combat, quests, factions, economy, companions, exploration, and a save system — all running in a single Python process with no external dependencies.
+An **AI-driven Tactical RPG**. The long-term design direction is a **Stylized 3D Tactical RPG** with a fixed isometric camera and stylized fantasy art. The current codebase is a **Python terminal prototype** — fully playable, all core systems implemented — from which the 3D game will grow.
+
+The previous sprite-based / gacha-inspired direction has been officially retired. Individual mechanics from that era may still be reused if they fit the new direction naturally.
+
+**Current implementation:** Python terminal — the player types commands; an AI Director (the "DM Brain") shapes narrative pacing and story. Combat, quests, factions, economy, companions, exploration, and save system all run in a single Python process with no external dependencies.
+
+> See `DESIGN_DECISIONS.md` (Decisions 011–014) and `docs/GAME_BIBLE.md` (Design Direction Notice) for the full record of this pivot.
 
 **Entry point:** `main.py` → `game_loop.py`  
 **Central state:** `world_state.py` (a single global dict, always the truth)  

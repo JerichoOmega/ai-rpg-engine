@@ -194,6 +194,98 @@ See: [`docs/known_issues.md`](docs/known_issues.md) BUG-002.
 
 ---
 
+## Decision 011 — Stylized 3D Tactical RPG as Long-Term Direction
+
+**Decision:** The game's long-term design direction is officially a **Stylized 3D Tactical RPG** with a fixed isometric camera. The previous sprite-based / gacha-inspired direction is no longer the primary foundation.
+
+**Reason:** Explicit creative direction decision from the project owner. Documented as an intentional evolution rather than a contradiction.
+
+**What Changes:**
+- Art direction now has confirmed principles: stylized fantasy, strong silhouettes, readable environments, expressive animations, gameplay clarity over realism
+- Camera: fixed (or mostly fixed) isometric, prioritizing tactical readability
+- Photorealism is explicitly NOT a design goal
+
+**What Stays the Same:**
+- The current Python terminal prototype remains the active implementation
+- All existing systems (combat, quests, factions, economy, AI Director) carry forward
+- The terminal engine's architecture is the foundation the 3D game grows from
+
+**Current Status:** [CONFIRMED — design direction]. Implementation is still the Python terminal prototype.
+
+**Trade-offs:**
+- ✅ Clear creative vision; art decisions can now be made with direction
+- ❌ Gap between current implementation (text) and target (3D) is significant; bridging it is a major future milestone
+
+---
+
+## Decision 012 — World Scope: One Continent, Open Outward
+
+**Decision:** The playable game takes place on one continent. The existence of additional continents or civilizations is intentionally undefined. World-building grows outward from the playable continent as it becomes relevant.
+
+**Reason:** Avoids over-defining a world before it matters to players. Keeps the setting open for natural expansion across future games or stories without contradiction.
+
+**Alternatives Considered:**
+- Defining a full world map up front — rejected; creates canon debt before it is needed
+- Leaving world scope entirely undefined — rejected; one-continent scope gives contributors a useful constraint
+
+**Trade-offs:**
+- ✅ World can expand naturally; no risk of contradicting future creative directions
+- ❌ Contributors cannot reference "other continents" without explicit approval
+
+**Current Status:** [CONFIRMED — design direction]
+
+**Rule:** Do not invent continents, civilizations, or geography beyond the single playable continent without explicit instruction.
+
+---
+
+## Decision 013 — Elyndor as a Standalone Universe (Separate from Any Game)
+
+**Decision:** The fantasy world is named **Elyndor** and exists as a standalone universe, independent of any single game. Universe-level lore is maintained in `elyndor/` and is strictly separated from game-specific documentation in `docs/`.
+
+**Reason:** Future games, books, comics, or other media may all take place within Elyndor. Mixing universe lore with game-specific content would make reuse across projects difficult and risk game-specific decisions overwriting universal canon.
+
+**Alternatives Considered:**
+- Single documentation system covering both universe and game — rejected; impossible to reuse cleanly across multiple projects
+- Universe lore inside `docs/GAME_BIBLE.md` — rejected; conflates the universe with one game's story
+
+**Trade-offs:**
+- ✅ Clean separation; universe lore is reusable; game docs can change without affecting world canon
+- ❌ Two systems to maintain; contributors must know which system to place content in
+
+**Rule:** Ancient Legends, world overview, bestiary, magic, and history → `elyndor/`. Playable characters, quests, mechanics, classes → `docs/`.
+
+**Current Status:** [CONFIRMED] — two-system structure established.
+
+---
+
+## Decision 014 — Character Category Separation (Legends vs. Playable Cast)
+
+**Decision:** Characters belong in one of two strictly separate groups: **Ancient Legends** (mythological/historical figures from Elyndor's past, in `elyndor/ancient_legends/`) and **Present-Day Characters** (the playable cast and companions, in `docs/characters/`).
+
+**Reason:** Ancient Legends are part of the world's mythology — they belong to Elyndor as a universe, not to any one game. Playable characters are game-specific. Mixing them creates confusion about who is canon in the world vs. who is playable in the current game.
+
+**Confirmed Legends:** Aurelia Sunstrider, Valen Ashfall  
+**Confirmed Playable Cast:** Talos, Eleanor, Ragash, Ronan, Steven
+
+**Rule:** An Ancient Legend does not become a playable character unless a future story explicitly establishes that connection. Do not assume or infer.
+
+**Current Status:** [CONFIRMED]
+
+---
+
+## Decision 015 — Previous Gacha/Sprite Direction Archived
+
+**Decision:** The previous sprite-based / gacha-inspired direction is no longer the primary foundation of this project. Documents and concepts from that era are treated as archived historical material.
+
+**What This Means:**
+- Individual gameplay mechanics, classes, monsters, or character ideas from the previous direction may be reused if they fit naturally into the new direction
+- The previous story, lore, and world are not considered active canon
+- No documents from the old direction should be treated as authoritative without explicit confirmation
+
+**Current Status:** [CONFIRMED] — archived. Refer to new direction documents for all canon decisions.
+
+---
+
 ## Revision History
 
 | Date | Change |

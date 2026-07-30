@@ -1,0 +1,76 @@
+# Phase 1 - Update Project Canon and Design Direction
+
+Analyze this prompt alongside the existing documentation repository.
+
+Treat the current documentation as the authoritative source unless this prompt explicitly updates a design decision.
+
+Your task is to integrate the following long-term project decisions into the documentation without overwriting unrelated content.
+
+## New Canonical Design Decisions
+
+### Project Direction
+
+The project has officially moved away from the previous sprite-based and gacha-inspired direction.
+
+The game is now a:
+
+• Stylized 3D Tactical RPG
+
+### Camera
+
+The game uses a fully 3D world viewed from a fixed (or mostly fixed) isometric camera.
+
+The camera should prioritize tactical readability and strategic gameplay.
+
+### Art Direction
+
+The visual style emphasizes:
+
+• Stylized fantasy
+• Strong character silhouettes
+• Readable environments
+• Expressive animations
+• Timeless visuals
+• Gameplay clarity over realism
+
+Photorealism is NOT a design goal.
+
+### Story Direction
+
+The previous gacha story, lore, and world are no longer considered the primary foundation of this project.
+
+Those documents should be archived as historical concepts.
+
+Individual gameplay mechanics, classes, monsters, or character ideas may still be reused if they fit naturally into the new game.
+
+### World Scope
+
+The playable game takes place on one continent.
+
+The existence of additional continents or civilizations has intentionally NOT been defined.
+
+Do not invent them.
+
+The world should remain open for future expansion.
+
+### World Building Philosophy
+
+Future world building should grow naturally from the playable continent outward.
+
+Avoid defining the entire world before it becomes relevant.
+
+## Documentation Tasks
+
+Update:
+
+• GAME_BIBLE.md
+• PROJECT_MEMORY.md
+• PROJECT_STATE.md
+• DESIGN_DECISIONS.md
+• AI_CONTINUATION_GUIDE.md
+
+Cross-reference all modified documents.
+
+Do not rewrite unrelated systems.
+
+Document this as an intentional evolution of the project rather than a contradiction.

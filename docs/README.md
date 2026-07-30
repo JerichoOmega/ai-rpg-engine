@@ -42,6 +42,40 @@ These live at the project root — read them first.
 
 ---
 
+## Game Content (`docs/characters/`, `docs/game_tone.md`)
+
+| Document | Description |
+|---|---|
+| [`characters/README.md`](characters/README.md) | Playable character roster and filing rules |
+| [`characters/talos.md`](characters/talos.md) | Talos — Elf Knight |
+| [`characters/eleanor.md`](characters/eleanor.md) | Eleanor — Human Mage |
+| [`characters/ragash.md`](characters/ragash.md) | Ragash — Orc Houndmaster |
+| [`characters/ronan.md`](characters/ronan.md) | Ronan — Human / Werewolf |
+| [`characters/steven.md`](characters/steven.md) | Steven — Human Miner (rare companion) |
+| [`game_tone.md`](game_tone.md) | Tonal direction — dark fantasy + adventure |
+
+---
+
+## Elyndor Universe Bible (`elyndor/`)
+
+The Universe Bible is **completely separate** from this game documentation. It contains only reusable world-building that exists independently of any single game.
+
+| Path | Description |
+|---|---|
+| [`../elyndor/README.md`](../elyndor/README.md) | Universe Bible index and canon rules |
+| [`../elyndor/world/world_overview.md`](../elyndor/world/world_overview.md) | World setting overview |
+| [`../elyndor/ancient_legends/`](../elyndor/ancient_legends/) | Aurelia Sunstrider, Valen Ashfall, and future legends |
+| [`../elyndor/bestiary/`](../elyndor/bestiary/) | Creature entries (template ready) |
+| [`../elyndor/history/`](../elyndor/history/) | Historical timelines and ages |
+| [`../elyndor/magic/`](../elyndor/magic/) | Magic systems and arcane lore |
+| [`../elyndor/organizations/`](../elyndor/organizations/) | Guilds, factions, religions |
+
+**Never mix Universe Bible content with game-specific content.**  
+Ancient Legends → `elyndor/ancient_legends/`  
+Playable characters → `docs/characters/`
+
+---
+
 ## System Documentation (`systems/`)
 
 | Document | Systems Covered |

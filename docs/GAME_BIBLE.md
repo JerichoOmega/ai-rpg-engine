@@ -43,9 +43,24 @@
 
 ---
 
+## Design Direction Notice
+
+> **As of July 2026, the project's long-term design direction has been officially updated.**  
+> The game is now targeting a **Stylized 3D Tactical RPG** with isometric camera and stylized fantasy art.  
+> The previous sprite-based / gacha-inspired direction is no longer the primary foundation.  
+> The current codebase is a **Python terminal prototype** that remains the authoritative implementation.  
+> This is an intentional evolution, not a contradiction. The terminal engine's systems, mechanics, and architecture carry forward into the new direction.  
+> See `DESIGN_DECISIONS.md` (Decision 011–014) for the full record of this pivot.
+
+---
+
 ## Executive Summary
 
-This is a **terminal-based, AI-driven role-playing game** written in Python. The player navigates a text-interface world where an AI Director (the "DM Brain") monitors the pacing of the session and dynamically adjusts story pressure, encounter frequency, and narrative tone. The game blends classic text-RPG structure (exploration, combat, quests, factions) with a runtime narrative layer that reacts to player decisions, world conditions, and session flow.
+This is an **AI-driven Tactical RPG** currently implemented as a Python terminal prototype. The long-term design vision is a **Stylized 3D Tactical RPG** viewed from a fixed isometric camera. An AI Director (the "DM Brain") monitors session pacing and dynamically adjusts story pressure, encounter frequency, and narrative tone. The game blends tactical RPG structure (exploration, combat, quests, factions) with a runtime narrative layer that reacts to player decisions, world conditions, and session flow.
+
+**Current implementation:** Python terminal (text-based, fully playable).  
+**Target platform direction:** Stylized 3D with isometric camera.  
+**Previous direction (gacha/sprite-based):** Archived as historical reference; individual mechanics may be reused where they fit.
 
 A separate browser-based interface (`app.py`) exists in the repository but is currently independent of the terminal game. It is not in active use as the primary interface.
 
@@ -73,15 +88,39 @@ The game records major events, choices, discovered lore, and faction relationshi
 ### 4. Modular Architecture
 Each game system is an independent Python module. Systems communicate through the event bus (`event_bus.py`) rather than direct cross-module calls where possible. This makes individual systems replaceable without breaking others.
 
-### 5. Text-First, No External Dependencies at Runtime
-The game runs entirely in a Python terminal. No external API calls are required for the game to function. The LLM layer is a drop-in module.
+### 5. Tactical Readability Over Realism
+The visual design (in the 3D target) prioritizes clear communication of game state over photorealistic rendering. Silhouettes, readable environments, and expressive animation serve gameplay clarity first.
+
+### 6. No External Dependencies at Runtime (Current Prototype)
+The current terminal prototype runs entirely in Python with no external API calls required. The LLM layer is a drop-in module. This principle carries forward: the game must be functional without requiring a live AI connection.
 
 ---
 
 ## Genre
 
-- **Primary:** Text-based Role-Playing Game (terminal)
+- **Target direction:** Stylized 3D Tactical RPG (isometric camera, turn-based or action-tactical combat)
+- **Current implementation:** Text-based Role-Playing Game (Python terminal prototype)
 - **Secondary elements:** Rogue-like pacing (session-based DM state), systemic RPG (faction/economy simulation)
+
+> **Note:** Genre reflects the confirmed long-term design direction. The current terminal implementation is the active prototype from which the 3D game will grow.
+
+---
+
+## Setting — Elyndor
+
+This game takes place within **Elyndor** — a standalone fantasy universe that exists independently of any single game.
+
+- The world's lore, mythology, ancient legends, creatures, and history are maintained separately in [`elyndor/`](../elyndor/README.md)
+- Do not mix universe-level world-building with game-specific content
+- The Ancient Legends (Aurelia Sunstrider, Valen Ashfall) belong in the Elyndor Universe Bible — they are not members of this game's playable cast unless a future story explicitly establishes otherwise
+
+See [`elyndor/world/world_overview.md`](../elyndor/world/world_overview.md) for the world description.
+
+---
+
+## Tone
+
+A mix of **dark fantasy and adventure** — serious enough to honor real stakes, warm enough to make the characters worth caring about. Full details: [`docs/game_tone.md`](../game_tone.md).
 
 ---
 
@@ -571,7 +610,34 @@ The game is **entirely text-based** (terminal). There is no graphical UI.
 
 ## Art Direction
 
-⚠️ **NOT APPLICABLE / NOT YET DEFINED** — This is a terminal text game. No visual assets exist. If a graphical version is developed in the future, this section should be filled in at that time.
+**[CONFIRMED — Design Direction]** The target visual style is **stylized fantasy**. This is the official art direction for the 3D version of the game.
+
+### Core Principles
+
+| Principle | Detail |
+|---|---|
+| **Stylized fantasy** | Not photorealistic; art style should feel timeless and expressive |
+| **Strong character silhouettes** | Characters must be instantly readable at tactical camera distance |
+| **Readable environments** | Terrain, obstacles, and pathways must be legible during gameplay |
+| **Expressive animations** | Animations communicate character personality and ability impact |
+| **Gameplay clarity first** | Visual design serves tactical understanding over aesthetic spectacle |
+| **Timeless visuals** | Style choices that age well rather than chasing current trends |
+
+### What Is NOT a Design Goal
+
+- Photorealism — explicitly rejected
+- High-fidelity texture detail that reduces gameplay readability
+- Visual complexity that obscures tactical information
+
+### Camera
+
+The game uses a **fixed (or mostly fixed) isometric camera** in the 3D target implementation. Camera behavior prioritizes:
+- Tactical readability — the player must always be able to see and understand the battlefield
+- Strategic overview — the camera height and angle serve decision-making, not cinematic presentation
+
+### Current Implementation Note
+
+The current Python terminal prototype has no visual assets. This section defines the target direction. No art assets should be created that contradict these principles.
 
 ---
 
@@ -618,6 +684,20 @@ See `/docs/systems/save_system.md` for details.
 
 ---
 
+## Playable Characters
+
+Five confirmed playable characters / companions. Full character sheets: [`docs/characters/`](../characters/).
+
+| Character | Race | Class | Key Trait |
+|---|---|---|---|
+| [Talos](../characters/talos.md) | Elf | Knight | Jaded veteran; protective, guarded, warm underneath |
+| [Eleanor](../characters/eleanor.md) | Human | Mage | Young, optimistic, unnaturally strong elemental bond |
+| [Ragash](../characters/ragash.md) | Orc | Houndmaster | Blunt and proud; devoted to her hounds above all else |
+| [Ronan](../characters/ronan.md) | Human | Werewolf | Cursed drifter; seeks a cure; fears losing control |
+| [Steven](../characters/steven.md) | Human | Miner | Silent, rare, mysterious; solves problems simply |
+
+---
+
 ## Roadmap
 
 See `/docs/roadmap.md` for the tracked development roadmap.
@@ -630,14 +710,28 @@ See `/docs/roadmap.md` for the tracked development roadmap.
 
 ---
 
+## World Scope
+
+**[CONFIRMED — Design Direction]**
+
+- The playable game takes place on **one continent**.
+- The existence of additional continents or other civilizations has **intentionally not been defined**.
+- Do not invent additional continents, oceans, or civilizations beyond the playable continent.
+- The world should remain open for natural expansion outward from the playable area.
+
+### World-Building Philosophy
+
+Future world-building should grow **outward from the playable continent** as it becomes relevant to gameplay. Avoid defining the full world before it becomes relevant to the player's experience. Undefined areas are not gaps — they are intentional creative space.
+
+---
+
 ## Future Expansion Opportunities
 
 These are **possible** future directions, not confirmed designs:
 
-- **Lore and World-Building** — The faction names and world flags (civil_war, dragon_alive, etc.) are named placeholders ready for lore expansion. A full world history, NPC backstories, and location lore can be layered in without changing the data structure.
+- **Lore and World-Building** — The faction names and world flags (civil_war, dragon_alive, etc.) are named placeholders ready for lore expansion. A full world history, NPC backstories, and location lore can be layered in without changing the data structure. World-building should expand from the single playable continent outward.
+- **3D Engine Implementation** — The current terminal prototype's systems (combat, quests, factions, economy, AI Director) translate directly to the 3D target. The game logic layer does not depend on the rendering layer.
 - **Real LLM Integration** — Swapping `llm_bridge.py` mock implementations for real API calls (OpenAI, Anthropic, local model) requires only changes inside that file.
-- **Browser UI** — `app.py` (Flask) exists as a parallel interface. Connecting it to the terminal game's state would create a graphical front-end.
 - **Crafting System** — The economy and inventory infrastructure supports crafting but no crafting system is currently implemented.
-- **Multiplayer / Co-op** — The companion system's architecture could be extended to player-controlled parties.
-- **Procedural World Generation** — The region and settlement systems support dynamic creation; a procedural generator could be added.
 - **Campaign Mode** — `campaign_manager.py` tracks act progression. A scripted multi-act campaign can be built on top of this.
+- **Procedural World Generation** — The region and settlement systems support dynamic creation; a procedural generator could be added.
