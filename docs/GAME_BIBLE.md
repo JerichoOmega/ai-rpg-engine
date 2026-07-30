@@ -40,6 +40,7 @@
 31. [Development Philosophy](#development-philosophy)
 32. [Roadmap](#roadmap)
 33. [Future Expansion Opportunities](#future-expansion-opportunities)
+34. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -115,6 +116,8 @@ This game takes place within **Elyndor** — a standalone fantasy universe that 
 - The Ancient Legends (Aurelia Sunstrider, Valen Ashfall) belong in the Elyndor Universe Bible — they are not members of this game's playable cast unless a future story explicitly establishes otherwise
 
 See [`elyndor/world/world_overview.md`](../elyndor/world/world_overview.md) for the world description.
+
+For official pronunciation of all proper nouns in this universe, see [`docs/PRONUNCIATION_GUIDE.md`](PRONUNCIATION_GUIDE.md).
 
 ---
 

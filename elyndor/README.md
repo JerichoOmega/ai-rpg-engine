@@ -85,3 +85,4 @@ elyndor/
 | Creatures | *(none yet confirmed; template ready)* |
 | Organizations | *(none yet confirmed)* |
 | Magic System | *(not yet defined)* |
+| Pronunciation | See [`docs/PRONUNCIATION_GUIDE.md`](../docs/PRONUNCIATION_GUIDE.md) for all canonical name pronunciations |
