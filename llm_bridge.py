@@ -1,246 +1,94 @@
+"""
+llm_bridge.py
+=============
+Bridge to the AI language model layer.
+
+All functions currently return hardcoded mock responses. Replace the
+mock bodies with real LLM API calls when a model is connected.
+
+Exported functions (called by dm_brain.py, combat.py, dialogue_ai.py):
+  - ai_narrate(prompt)                    — print a narrative beat
+  - ai_generate_quest()                   — print a quest rumour
+  - ai_combat_narration(attacker, ...)    — print combat flavour text
+  - ai_dialogue(npc, context)             — return an NPC dialogue line
+"""
+
 import random
 
-from world_state import (
-    world_state
-)
-
-from campaign_manager import (
-    campaign_state,
-    generate_campaign_event
-)
-
-from encounter_manager import (
-    generate_encounter,
-    generate_narrative_encounter
-)
-
-from npc_manager import (
-    random_npc_event
-)
-
-from region_manager import (
-    random_region_event
-)
-
-from memory_engine import (
-    retrieve_memories
-)
-
-from event_bus import (
-    emit,
-    subscribe
-)
-
 # =========================
-# DM STATE
+# AI NARRATE
 # =========================
 
-dm_state = {
+_NARRATE_LINES = [
+    "The world holds its breath as your actions ripple outward.",
+    "Shadows lengthen across the land, hinting at darker times ahead.",
+    "The wind carries whispers of great change on the horizon.",
+    "History will remember this moment, for better or worse.",
+    "Something stirs in the deep places of the world.",
+    "The sky darkens as though the heavens themselves take notice.",
+    "An uneasy silence falls before the storm.",
+]
 
-    "current_focus": "exploration",
+def ai_narrate(prompt):
+    """Generate a narrative beat. Mock implementation — replace with
+    a real LLM call when a model is available."""
+    print("\n[DM]", random.choice(_NARRATE_LINES))
 
-    "story_pressure": 25,
-
-    "emotional_tone": "neutral",
-
-    "priority_threat": "shadow_cult",
-
-    "active_threads": []
-}
-
-# =========================
-# STORY PRESSURE
-# =========================
-
-def change_story_pressure(
-
-    amount
-
-):
-
-    dm_state[
-        "story_pressure"
-    ] += amount
-
-    dm_state[
-        "story_pressure"
-    ] = max(
-
-        0,
-
-        min(
-            dm_state[
-                "story_pressure"
-            ],
-            100
-        )
-    )
 
 # =========================
-# EVALUATE STATE
+# AI GENERATE QUEST
 # =========================
 
-def evaluate_story_state():
+_QUEST_RUMORS = [
+    "A merchant whispers of a lost artefact in the eastern ruins.",
+    "Travellers report strange lights near the old watchtower.",
+    "The guild posts a bounty — dangerous quarry, generous reward.",
+    "Scouts have gone missing near the cult's last known stronghold.",
+    "A dying soldier clutches a map with trembling hands.",
+    "Word spreads of a village whose residents vanished overnight.",
+    "An anonymous letter slips under your door, sealed in black wax.",
+]
 
-    pressure = dm_state[
-        "story_pressure"
-    ]
+def ai_generate_quest():
+    """Generate a new quest hook. Mock implementation."""
+    print("\n[Quest Hook]", random.choice(_QUEST_RUMORS))
 
-    if pressure <= 25:
-
-        dm_state[
-            "current_focus"
-        ] = "recovery"
-
-    elif pressure <= 60:
-
-        dm_state[
-            "current_focus"
-        ] = "exploration"
-
-    else:
-
-        dm_state[
-            "current_focus"
-        ] = "crisis"
 
 # =========================
-# MAIN DM UPDATE
+# AI COMBAT NARRATION
 # =========================
 
-def update_dm_brain():
+_COMBAT_LINES = [
+    "Steel rings against steel in a deadly dance.",
+    "The air crackles with the tension of the fight.",
+    "Every blow lands with decisive purpose.",
+    "The enemy staggers but refuses to fall.",
+    "The battle reaches its fevered peak.",
+    "Pain and adrenaline sharpen every sense.",
+    "The ground shakes with the force of the exchange.",
+]
 
-    evaluate_story_state()
+def ai_combat_narration(attacker=None, defender=None, damage=0):
+    """Generate combat flavour text. Mock implementation."""
+    print("\n[Combat]", random.choice(_COMBAT_LINES))
 
-    focus = dm_state[
-        "current_focus"
-    ]
-
-    print(
-        "\n=== DM BRAIN ==="
-    )
-
-    # =========================
-    # RECOVERY
-    # =========================
-
-    if focus == "recovery":
-
-        generate_narrative_encounter()
-
-        random_npc_event()
-
-        try:
-
-            from llm_bridge import (
-                ai_narrate
-            )
-
-            ai_narrate(
-
-                "Generate a calm emotional "
-                "moment after recent conflict."
-            )
-
-        except Exception:
-
-            print(
-                "\nThe world briefly calms."
-            )
-
-    # =========================
-    # EXPLORATION
-    # =========================
-
-    elif focus == "exploration":
-
-        roll = random.randint(
-            1,
-            100
-        )
-
-        if roll <= 50:
-
-            try:
-
-                from llm_bridge import (
-                    ai_generate_quest
-                )
-
-                ai_generate_quest()
-
-            except Exception:
-
-                print(
-                    "\nRumors spread of danger."
-                )
-
-        else:
-
-            random_region_event()
-
-    # =========================
-    # CRISIS
-    # =========================
-
-    elif focus == "crisis":
-
-        generate_campaign_event()
-
-        generate_encounter()
-
-        try:
-
-            from llm_bridge import (
-                ai_narrate
-            )
-
-            ai_narrate(
-
-                "Narrate a major campaign "
-                "crisis escalation."
-            )
-
-        except Exception:
-
-            print(
-                "\nThe campaign spirals into chaos."
-            )
 
 # =========================
-# EVENT REACTIONS
+# AI DIALOGUE
 # =========================
 
-def on_enemy_killed(
+_DIALOGUE_LINES = [
+    "I have nothing more to say to you.",
+    "There are rumours … dark ones. Be careful out there.",
+    "The roads are dangerous. Stock up before you leave.",
+    "I've heard the cult has been more active lately.",
+    "You look like someone who can handle themselves.",
+    "Strange times. Strange times indeed.",
+    "Keep your blade sharp and your wits sharper.",
+]
 
-    event_data
-
-):
-
-    change_story_pressure(
-        5
-    )
-
-def on_world_collapse(
-
-    event_data
-
-):
-
-    change_story_pressure(
-        25
-    )
-
-# =========================
-# REGISTER EVENTS
-# =========================
-
-subscribe(
-    "enemy_killed",
-    on_enemy_killed
-)
-
-subscribe(
-    "world_collapse",
-    on_world_collapse
-)
+def ai_dialogue(npc=None, context=None):
+    """Generate an NPC dialogue line. Mock implementation.
+    Returns a string (does not print directly — caller decides how to
+    surface it)."""
+    return random.choice(_DIALOGUE_LINES)

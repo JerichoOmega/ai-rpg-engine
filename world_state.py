@@ -605,6 +605,69 @@ def change_faction_reputation(faction_name, amount):
 # =========================
 # STORY MODIFIERS
 # =========================
+def ensure_world_state_defaults():
+    """Backfill keys that are absent after loading a save written before
+    the typed-section refactor.  Call immediately after any
+    world_state.clear() + world_state.update(loaded_data) sequence so
+    that every code path can assume the full current schema is present.
+    """
+    # --- top-level scalar flags (story.py, story_manager.py) ---
+    _top = {
+        "civil_war": False,
+        "cult_rising": False,
+        "mages_rebellion": False,
+        "dragon_alive": True,
+        "world_chaos": 0,
+        "events": [],
+    }
+    for key, default in _top.items():
+        if key not in world_state:
+            world_state[key] = default
+
+    # --- nested section defaults ---
+    _sections = {
+        "time": {"day": 1, "hour": 8, "season": "spring"},
+        "inventory": {"items": [], "gold": 0},
+        "quests": {
+            "active": [], "completed": [], "failed": [], "progress": {}
+        },
+        "companions": {"party": [], "relationships": {}, "loyalty": {}},
+        "regions": {
+            "current_region": "kingdom_capital",
+            "discovered_regions": ["kingdom_capital"],
+            "faction_control": {},
+            "current_location": None,
+        },
+        "world_conditions": {"world_chaos": 0, "active_disasters": []},
+        "story_memory": {"major_choices": [], "important_flags": {}},
+        "history": {"major_events": [], "choices": [], "discovered_lore": []},
+        "sessions": {"session_count": 1, "last_session_summary": ""},
+        "factions": {
+            "kingdom": 0, "mages_guild": 0,
+            "shadow_cult": 0, "rebels": 0,
+        },
+        "player": {
+            "class": "Warrior", "name": "Wanderer",
+            "level": 1, "xp": 0, "xp_to_next_level": 100,
+            "gold": 0, "hp": 100, "max_hp": 100,
+            "resource_name": "Stamina", "resource": 100,
+            "max_resource": 100, "attack_bonus": 5,
+            "defense": 2, "dodge": 5, "weapon_bonus": 0,
+            "equipped_weapon": "Rusty Sword", "inventory": [],
+        },
+    }
+    for section, sub_defaults in _sections.items():
+        if section not in world_state:
+            world_state[section] = sub_defaults
+        elif isinstance(world_state[section], dict):
+            for sub_key, sub_val in sub_defaults.items():
+                if sub_key not in world_state[section]:
+                    world_state[section][sub_key] = sub_val
+
+
+# =========================
+# STORY MODIFIERS
+# =========================
 def world_story_modifier():
     """Return a dict of world-state modifiers for story generation.
     Used by story.py's generate_story()."""

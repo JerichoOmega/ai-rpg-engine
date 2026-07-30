@@ -1,6 +1,6 @@
 import random
 
-from inventory import (
+from world_state import (
     add_item
 )
 

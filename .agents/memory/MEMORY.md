@@ -1,0 +1,1 @@
+- [Integration pass fixes](integration-pass.md) — catalogue of broken imports + schema mismatches found and fixed in the Task 3 integration pass.

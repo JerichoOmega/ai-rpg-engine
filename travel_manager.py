@@ -30,7 +30,7 @@ from location_manager import (
     set_current_location
 )
 
-from encounter_generator import (
+from encounter_manager import (
     generate_encounter
 )
 

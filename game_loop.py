@@ -24,14 +24,12 @@ from faction_manager import (
 )
 
 from economy_manager import (
-    update_economy
+    evolve_economy
 )
 
 from relationship_manager import (
 
     decay_relationships,
-
-    world_social_reaction,
 
     generate_social_event
 )
@@ -63,7 +61,7 @@ from region_manager import (
 )
 
 from settlement_manager import (
-    show_settlements
+    show_all_settlements as show_settlements
 )
 
 from dialogue_manager import (
@@ -162,7 +160,7 @@ def process_game_tick():
 
     evolve_factions()
 
-    update_economy()
+    evolve_economy()
 
     decay_relationships()
 

@@ -68,8 +68,8 @@ def generate_story(
         )
 
     if world_state[
-        "world_chaos"
-    ] >= 60:
+        "world_conditions"
+    ]["world_chaos"] >= 60:
 
         locations.append(
 
@@ -147,36 +147,36 @@ def generate_story(
     # STORY MEMORY QUESTS
     # =========================
 
-    if story_memory[
+    if story_memory.get(
         "joined_shadow_cult"
-    ]:
+    ):
 
         quests.append(
 
             "Strengthen the influence of the Shadow Cult."
         )
 
-    if story_memory[
+    if story_memory.get(
         "spared_cultist"
-    ]:
+    ):
 
         quests.append(
 
             "Search for the cultist you once spared."
         )
 
-    if story_memory[
+    if story_memory.get(
         "executed_cultist"
-    ]:
+    ):
 
         quests.append(
 
             "Deal with growing fear surrounding your reputation."
         )
 
-    if story_memory[
+    if story_memory.get(
         "dragon_slain"
-    ]:
+    ):
 
         quests.append(
 
@@ -187,27 +187,27 @@ def generate_story(
     # FACTION QUESTS
     # =========================
 
-    if factions[
-        "kingdom"
-    ] >= 30:
+    if factions.get(
+        "kingdom", 0
+    ) >= 30:
 
         quests.append(
 
             "The kingdom requests your aid against rising threats."
         )
 
-    if factions[
-        "shadow_cult"
-    ] >= 40:
+    if factions.get(
+        "shadow_cult", 0
+    ) >= 40:
 
         quests.append(
 
             "The Shadow Cult offers you forbidden power."
         )
 
-    if factions[
-        "mages_guild"
-    ] >= 40:
+    if factions.get(
+        "mages_guild", 0
+    ) >= 40:
 
         quests.append(
 
@@ -264,8 +264,8 @@ def generate_story(
         ])
 
     if world_state[
-        "world_chaos"
-    ] >= 70:
+        "world_conditions"
+    ]["world_chaos"] >= 70:
 
         enemy_pool.extend([
 
@@ -278,9 +278,9 @@ def generate_story(
     # STORY MEMORY ENEMIES
     # =========================
 
-    if story_memory[
+    if story_memory.get(
         "joined_shadow_cult"
-    ]:
+    ):
 
         if "hidden cult" in enemy_pool:
 
@@ -337,8 +337,8 @@ def generate_story(
     ]
 
     if world_state[
-        "world_chaos"
-    ] >= 50:
+        "world_conditions"
+    ]["world_chaos"] >= 50:
 
         intro_text.append(
 

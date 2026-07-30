@@ -2,7 +2,6 @@ import random
 
 from world_state import (
     world_state,
-    discover_lore,
     activate_world_event
 )
 
@@ -663,6 +662,20 @@ def show_region(
         "Corrupted:",
         region["corrupted"]
     )
+
+# =========================
+# SHOW ALL REGIONS
+# =========================
+
+def show_regions():
+    """Print a summary of every known region."""
+    print(
+        "\n=== ALL REGIONS ==="
+    )
+    for region_name in REGIONS:
+        show_region(
+            region_name
+        )
 
 # =========================
 # DISCOVER REGION

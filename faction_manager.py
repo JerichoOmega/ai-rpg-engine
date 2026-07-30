@@ -685,28 +685,26 @@ def on_quest_completed(
 
 ):
 
+    # event_data may arrive as {quest_name: str, quest: dict} (quests.py)
+    # or as {quest_name: str} from older emitters; handle both gracefully.
     quest = event_data.get(
         "quest"
+    ) or {}
+
+    quest_type = quest.get(
+        "type"
     )
 
-    if not quest:
+    faction = quest.get(
+        "faction"
+    )
 
-        return
+    if quest_type == "faction" and faction:
 
-    if quest.get(
-        "type"
-    ) == "faction":
-
-        faction = quest.get(
-            "faction"
+        change_reputation(
+            faction,
+            10
         )
-
-        if faction:
-
-            change_reputation(
-                faction,
-                10
-            )
 
 # =========================
 # SHOW FACTIONS

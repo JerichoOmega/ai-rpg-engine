@@ -2,7 +2,6 @@ from world_state import (
     world_state,
     add_gold,
     complete_quest,
-    fail_quest,
     remember_major_event,
     change_faction_reputation
 )
@@ -377,7 +376,9 @@ def reward_quest(quest_name):
 
         "quest_completed",
 
-        quest_name=quest_name
+        quest_name=quest_name,
+
+        quest=quest_data
     )
 
 # =========================

@@ -4,12 +4,9 @@ from player import (
     player
 )
 
-from inventory import (
-    inventory
-)
-
 from world_state import (
-    world_state
+    world_state,
+    ensure_world_state_defaults
 )
 
 from progression_manager import (
@@ -124,7 +121,7 @@ def save_game():
         # INVENTORY
         # =========================
 
-        "inventory": inventory,
+        "inventory": world_state["player"]["inventory"],
 
         # =========================
         # EQUIPMENT
@@ -337,13 +334,14 @@ def load_game():
     # INVENTORY
     # =========================
 
-    inventory.clear()
+    world_state["player"]["inventory"].clear()
 
-    inventory.extend(
+    world_state["player"]["inventory"].extend(
 
-        save_data[
-            "inventory"
-        ]
+        save_data.get(
+            "inventory",
+            []
+        )
     )
 
     # =========================
@@ -397,6 +395,8 @@ def load_game():
             "world_state"
         ]
     )
+
+    ensure_world_state_defaults()
 
     # =========================
     # QUESTS
@@ -662,7 +662,7 @@ def show_save_summary():
 
     print(
         f"Inventory Items:"
-        f" {len(inventory)}"
+        f" {len(world_state['player']['inventory'])}"
     )
 
     print(

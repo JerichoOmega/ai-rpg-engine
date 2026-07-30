@@ -1,7 +1,6 @@
 import random
 
 from world_state import (
-    world_state,
     remember_major_event
 )
 

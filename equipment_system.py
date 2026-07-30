@@ -2,8 +2,8 @@ from player import (
     player
 )
 
-from inventory import (
-    inventory
+from world_state import (
+    world_state
 )
 
 from event_bus import (
@@ -109,7 +109,7 @@ def equip_item(
 
         return
 
-    if item_name not in inventory:
+    if item_name not in world_state["player"]["inventory"]:
 
         print(
             "\nItem not in inventory."
@@ -131,7 +131,7 @@ def equip_item(
             old_item
         )
 
-        inventory.append(
+        world_state["player"]["inventory"].append(
             old_item
         )
 
@@ -141,7 +141,7 @@ def equip_item(
 
     equipment[slot] = item_name
 
-    inventory.remove(
+    world_state["player"]["inventory"].remove(
         item_name
     )
 
@@ -187,7 +187,7 @@ def unequip_item(
         item_name
     )
 
-    inventory.append(
+    world_state["player"]["inventory"].append(
         item_name
     )
 

@@ -3,7 +3,8 @@ import copy
 import os
 
 from world_state import (
-    world_state
+    world_state,
+    ensure_world_state_defaults
 )
 
 # =========================
@@ -188,6 +189,8 @@ def load_game():
         world_state.update(
             loaded_state
         )
+
+        ensure_world_state_defaults()
 
         print(
             "\n=== GAME LOADED ==="
