@@ -21,7 +21,7 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 | Core engine (loop, state, events) | 90% | Working; minor gaps noted below |
 | Combat system | 75% | Terminal prototype functional; canonical 3D tactical design (grid, AP, facing, downed) documented in `docs/COMBAT_SYSTEM.md` — not yet implemented |
 | Quest system | 65% | CRUD complete; faction bonus wiring is present but never fires (missing `type` field) |
-| Progression / levelling | 60% | XP and level-up logic works; skill tree is scaffolded but not functional |
+| Progression / levelling | 60% | XP and level-up logic works; skill tree scaffolded; canonical design (level 25 cap, shared XP, companion scaling) documented — not yet implemented |
 | Faction system | 55% | Reputation tracking works; `rebels` faction is in state but absent from manager |
 | Economy system | 50% | Price evolution logic exists; shop buy/sell exists; deeper trade loops incomplete |
 | NPC / companion system | 50% | Named NPC (Elandor) confirmed; companion combat present; NPC changes not persisted |

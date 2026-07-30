@@ -364,12 +364,47 @@ Skills are defined in `skills.py` and tracked in `skill_tree.py`. A module-level
 
 ## Progression
 
-Managed by `progression_manager.py` with a `progression_state` dict serialized by `save_manager.py`.
+> **Full technical spec:** [`docs/systems/progression_skills.md`](systems/progression_skills.md)
 
-- `check_level_up()` — evaluates whether XP threshold is reached.
-- `show_progression()` — displays current level, XP, and threshold.
+### Level Cap
 
-XP is granted post-combat and on quest completion (via `world_state["player"]["xp"] +=`). Level thresholds and stat growth on level-up are ⚠️ **NOT YET FULLY DEFINED** beyond the XP tracking infrastructure.
+The maximum character level is **25**.
+
+Every level should feel impactful. The cap is designed to provide meaningful progression throughout the campaign without excessive stat inflation. Future expansions may raise it, but the base game is balanced around Level 25.
+
+### Experience System — Shared XP
+
+Experience earned from combat, quests, exploration, and other gameplay activities is awarded to the **entire roster** — not only the active party.
+
+| Benefit | Description |
+|---|---|
+| Equal active levels | All active party members stay at the same level |
+| Viable reserves | Bench heroes remain usable without grinding |
+| Composition freedom | Players can experiment with different team builds |
+| No mandatory grinding | Newly recruited or rotated companions do not fall behind |
+
+### New Companion Level Scaling
+
+When a new companion joins the roster, they **immediately join at the player's current level**.
+
+A companion recruited at Level 7 arrives at Level 7. A companion recruited at Level 18 arrives at Level 18.
+
+New companions join with level-appropriate:
+- Attributes
+- Equipment
+- Learned abilities
+- Passive talents
+- Skill points (if applicable)
+
+This keeps every newly recruited hero immediately usable in combat and reinforces the game's focus on tactical choice rather than maintenance grinding.
+
+### Design Philosophy
+
+Progression should encourage experimentation rather than punish it. Players should feel free to recruit new companions at any point, swap party compositions between encounters, and adapt their roster to upcoming battles without being penalized for doing so.
+
+### Current Implementation Status
+
+The terminal prototype tracks XP in `world_state["player"]["xp"]` and calls `check_level_up()` post-combat. Shared XP distribution across the roster and companion level scaling are ⚠️ **NOT YET IMPLEMENTED** — these are the design target. See `docs/systems/progression_skills.md` for the current technical state.
 
 ---
 

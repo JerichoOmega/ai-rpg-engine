@@ -133,6 +133,8 @@ Full issue list: [`docs/known_issues.md`](docs/known_issues.md)
 
 6. **Predefined hero roster for Phase 1** — players choose from the five confirmed heroes (Talos, Eleanor, Ragash, Ronan, Steven) at new game start. A Custom Hero system is a planned future phase and must NOT influence current design. The hero framework must support both predefined and custom heroes without a major rewrite. Full rules: [`docs/PLAYER_SYSTEM.md`](docs/PLAYER_SYSTEM.md).
 
+8. **Progression: level 25 cap, shared XP, companion scaling** — max level is 25; XP from all sources is awarded to the entire roster (not just active party); new companions join immediately at the player's current level with appropriate stats, gear, and abilities. No grinding required for roster changes. Full spec: [`docs/systems/progression_skills.md`](docs/systems/progression_skills.md).
+
 7. **Combat design direction: 3D tactical grid system** — target combat is turn-based on square tiles in a 3D isometric environment. Each hero gets Movement Points, an AP pool, one Support Action, and one Reaction per turn. Initiative is sequential with consecutive-hero flexibility. Facing (Front/Side/Rear) affects defense and flanking. Downed ≠ Dead — 0 HP downs a hero; death requires special circumstances. Active party is four heroes; recruitment is not guaranteed per playthrough. Current terminal prototype does not implement grid/AP/facing — it is a placeholder. Full spec: [`docs/COMBAT_SYSTEM.md`](docs/COMBAT_SYSTEM.md).
 
 Full rationale: [`DESIGN_DECISIONS.md`](DESIGN_DECISIONS.md)

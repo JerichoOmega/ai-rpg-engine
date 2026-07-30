@@ -8,7 +8,40 @@
 
 ## Overview
 
-The progression system tracks the player's experience points and level. The skill tree tracks unlocked skills. Both systems have their infrastructure in place but are not yet fully implemented in terms of combat integration and skill roster.
+The progression system tracks character experience points and level. The skill tree tracks unlocked skills. Both have infrastructure in place but are not yet fully implemented in terms of combat integration and skill roster.
+
+---
+
+## Canonical Design Direction
+
+The following rules are confirmed canonical as of July 2026. They define the target behavior. See **Current Implementation** below for what the terminal prototype does today.
+
+### Level Cap
+
+**Maximum level: 25.**
+
+Every level should feel meaningful. The cap avoids excessive stat inflation and supports carefully paced ability unlocks. Future expansions may increase the cap; base game balance targets Level 25.
+
+### Shared Experience
+
+XP earned from combat, quests, exploration, and other activities is awarded to the **entire roster** — active party and bench heroes alike.
+
+This ensures:
+- Active party members remain equally leveled with each other
+- Reserve heroes stay viable without grinding
+- Players can freely rotate compositions without penalty
+
+### New Companion Level Scaling
+
+When a new companion joins the roster, they **join at the player's current level** immediately.
+
+They arrive with level-appropriate attributes, equipment, learned abilities, passive talents, and skill points (if applicable). No catch-up grinding required.
+
+### Design Philosophy
+
+Progression should enable experimentation, not punish roster changes. Players should be able to recruit, swap, and rebuild their party at any point in the campaign without being penalized.
+
+---
 
 ---
 
@@ -101,13 +134,19 @@ Combat's `"2. Use Skill"` option exists in the menu. Full skill-in-combat mechan
 
 ## Future Expansion
 
-- Finalize stat growth formula on level-up.
-- Scale `xp_to_next_level` with each level.
-- Implement full skill roster in `skills.py`.
-- Wire skill use into combat's "Use Skill" option.
-- Class-specific skill trees (Warrior, Mage, Rogue archetypes).
-- Passive skills that modify player stats.
-- Skill point allocation system.
+**Canonical targets (confirmed design direction):**
+- Implement shared XP distribution — award XP to all roster members, not just the active player
+- Implement companion level scaling — new recruits join at current player level with appropriate stats/gear
+- Enforce level 25 cap in `check_level_up()`
+
+**Not yet defined:**
+- Stat growth formula on level-up
+- `xp_to_next_level` scaling curve across 25 levels
+- Full skill roster in `skills.py`
+- Wiring skill use into combat's "Use Skill" option
+- Class-specific skill trees per hero
+- Passive skills that modify player stats
+- Skill point allocation system
 
 ---
 
@@ -125,3 +164,4 @@ Combat's `"2. Use Skill"` option exists in the menu. Full skill-in-combat mechan
 | Date | Change |
 |---|---|
 | July 2026 | Initial documentation; skill tree marked as infrastructure-only |
+| July 2026 | Added canonical design direction: level 25 cap, shared XP, companion level scaling |
