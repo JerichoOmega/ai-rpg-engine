@@ -190,6 +190,13 @@ When in doubt: read the code. If it is in the code, it is real. If it is not in 
 
 ## How to Extend the Project While Maintaining Consistency
 
+### Adding a New Hero to the Roster
+1. Create a character sheet at `docs/characters/<name>.md` using `docs/characters/_character_template.md`.
+2. Add a pronunciation entry to `docs/PRONUNCIATION_GUIDE.md`.
+3. The hero's class, starting stats, and equipment loadout must be data-driven — no hardcoded per-hero logic in the game loop.
+4. Add the hero to the roster table in `docs/PLAYER_SYSTEM.md` and `docs/GAME_BIBLE.md`.
+5. **Do not** add a Custom Hero creation screen or character customization UI — that is Phase 2 and explicitly out of scope. See [`docs/PLAYER_SYSTEM.md`](PLAYER_SYSTEM.md).
+
 ### Adding a New System
 1. Create a new `system_name_manager.py`.
 2. Define the system's state as a module-level dict.

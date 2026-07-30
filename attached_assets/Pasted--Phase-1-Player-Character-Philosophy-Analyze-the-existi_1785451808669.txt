@@ -1,0 +1,90 @@
+# Phase 1 - Player Character Philosophy
+
+Analyze the existing project documentation and integrate the following design decisions into the Game Bible and related documentation.
+
+This is a canonical project decision.
+
+---
+
+# Player Character Philosophy
+
+For the initial version of the game, players will select from a roster of predefined, story-driven heroes.
+
+Each playable hero is a fully realized character with:
+
+- A unique identity
+- A defined backstory
+- A predetermined class
+- A unique visual design
+- Their own personality
+- Story-specific dialogue where appropriate
+- A fixed starting equipment loadout
+
+The game should begin with the player selecting one of these heroes before starting the adventure.
+
+---
+
+# Future Feature
+
+A fully customizable player character is planned for a future phase of development.
+
+This feature is intentionally out of scope for the first playable version and should NOT influence current gameplay systems.
+
+When eventually implemented, the Custom Hero system may include:
+
+- Character name
+- Appearance customization
+- Class selection
+- Background selection
+- Cosmetic customization
+
+These features should remain documented as future goals only.
+
+---
+
+# Architecture Requirement
+
+Although the Custom Hero system is postponed, the game's architecture should be designed so it can be integrated later without requiring major rewrites.
+
+Avoid hard-coding assumptions that every playable character must always be predefined.
+
+The Hero framework should support both:
+
+- Canonical story heroes
+- Future custom-created heroes
+
+---
+
+# Development Priority
+
+Current development should focus entirely on making the predefined heroes feel polished.
+
+Priority should be given to:
+
+- Hero identity
+- Story integration
+- Combat uniqueness
+- Companion interactions
+- Distinct playstyles
+
+Quality is more important than quantity.
+
+---
+
+# Documentation Tasks
+
+Update the following documentation where appropriate:
+
+- GAME_BIBLE.md
+- PLAYER_SYSTEM.md (create if necessary)
+- PROJECT_STATE.md
+- PROJECT_MEMORY.md
+- AI_CONTINUATION_GUIDE.md
+
+Cross-reference all affected documentation.
+
+Do not generate implementation code.
+
+Do not expand the scope of the Custom Hero system beyond documenting it as a future feature.
+
+This decision is now considered canonical unless explicitly changed in future documentation.

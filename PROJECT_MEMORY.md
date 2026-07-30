@@ -131,6 +131,8 @@ Full issue list: [`docs/known_issues.md`](docs/known_issues.md)
 
 5. **DM Brain is separate from LLM** — `dm_brain.py` handles pacing/pressure logic; `llm_bridge.py` handles text generation. They are intentionally separate.
 
+6. **Predefined hero roster for Phase 1** — players choose from the five confirmed heroes (Talos, Eleanor, Ragash, Ronan, Steven) at new game start. A Custom Hero system is a planned future phase and must NOT influence current design. The hero framework must support both predefined and custom heroes without a major rewrite. Full rules: [`docs/PLAYER_SYSTEM.md`](docs/PLAYER_SYSTEM.md).
+
 Full rationale: [`DESIGN_DECISIONS.md`](DESIGN_DECISIONS.md)
 
 ---

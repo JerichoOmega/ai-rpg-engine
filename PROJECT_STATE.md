@@ -107,6 +107,7 @@ July 2026 — Integration pass (Task 3) completed; full documentation suite gene
 
 ## Missing Features
 
+- **Hero selection screen** — the player character philosophy (Phase 1: predefined roster) is documented and canonical; the in-game selection UI at new-game-start is not yet implemented
 - Real LLM integration (all calls are mocked)
 - Crafting system — ⚠️ **NOT YET DEFINED** anywhere in the codebase
 - Sound / audio — ⚠️ **NOT YET DEFINED** (terminal game; no audio layer)
@@ -115,6 +116,7 @@ July 2026 — Integration pass (Task 3) completed; full documentation suite gene
 - Proper testing framework (no pytest suite; syntax checks only)
 - Formal versioning / release process
 - Full lore (world name, history, mythology) — ⚠️ **NOT YET DEFINED**
+- **Custom Hero system** — 🔵 **PLANNED FUTURE PHASE ONLY** — character name, appearance, class, background customization. Intentionally out of scope for v1. Architecture must support it later without major rewrite. See [`docs/PLAYER_SYSTEM.md`](docs/PLAYER_SYSTEM.md).
 
 ---
 
@@ -223,9 +225,10 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 7. Remove or archive legacy root modules (`factions.py`, `regions.py`, `loot.py`, `memory.py`)
 
 **Medium term (features):**
-8. Connect real LLM to `llm_bridge.py`
-9. Integrate `hub.py` into game loop
-10. Activate skill tree effects in combat
+8. Implement hero selection screen at new game start (roster UI, hero confirmation, stat/equipment initialization by hero)
+9. Connect real LLM to `llm_bridge.py`
+10. Integrate `hub.py` into game loop
+11. Activate skill tree effects in combat
 
 **Long term:**
 11. Establish pytest suite covering core systems

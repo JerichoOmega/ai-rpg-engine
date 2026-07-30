@@ -40,7 +40,8 @@
 31. [Development Philosophy](#development-philosophy)
 32. [Roadmap](#roadmap)
 33. [Future Expansion Opportunities](#future-expansion-opportunities)
-34. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+34. [Player Character Philosophy](PLAYER_SYSTEM.md) *(separate file)*
+35. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -689,7 +690,9 @@ See `/docs/systems/save_system.md` for details.
 
 ## Playable Characters
 
-Five confirmed playable characters / companions. Full character sheets: [`docs/characters/`](../characters/).
+Five confirmed playable characters. Full character sheets: [`docs/characters/`](../characters/).
+
+For the initial version of the game, players **select one of these predefined heroes** before the adventure begins. Each is a fully realized character with a unique identity, backstory, class, personality, story dialogue, and starting equipment loadout. Full details: [`docs/PLAYER_SYSTEM.md`](PLAYER_SYSTEM.md).
 
 | Character | Race | Class | Key Trait |
 |---|---|---|---|
@@ -698,6 +701,8 @@ Five confirmed playable characters / companions. Full character sheets: [`docs/c
 | [Ragash](../characters/ragash.md) | Orc | Houndmaster | Blunt and proud; devoted to her hounds above all else |
 | [Ronan](../characters/ronan.md) | Human | Werewolf | Cursed drifter; seeks a cure; fears losing control |
 | [Steven](../characters/steven.md) | Human | Miner | Silent, rare, mysterious; solves problems simply |
+
+> **Future:** A fully customizable player character (name, appearance, class, background) is planned for a later phase. It is intentionally out of scope for v1 and must not influence current system design. The hero framework must support both predefined and custom heroes without a major rewrite. See [`docs/PLAYER_SYSTEM.md`](PLAYER_SYSTEM.md) for the architecture requirement.
 
 ---
 
