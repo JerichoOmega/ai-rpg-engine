@@ -11,6 +11,7 @@ In order of importance:
 
 | File | Why |
 |---|---|
+| `PROJECT_CONSTITUTION.md` | Permanent governance — principles, rules, and decision process. Read before any major change. |
 | `PROJECT_STATE.md` | Current project health — completion %, bugs, priorities. Always check first. |
 | `PROJECT_MEMORY.md` | Full project quick-start — architecture, rules, common mistakes, file map |
 | `docs/GAME_BIBLE.md` | What the game is, every confirmed mechanic |

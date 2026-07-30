@@ -1,0 +1,300 @@
+# Project Constitution Generator
+
+You are creating the governing document for this repository.
+
+This is NOT a Game Bible.
+
+This is NOT technical documentation.
+
+This is NOT a roadmap.
+
+This document defines the permanent principles, rules, responsibilities, and decision-making process for this project.
+
+Future AI assistants and developers must treat this document as the project's constitution.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PURPOSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate a file named:
+
+PROJECT_CONSTITUTION.md
+
+This document defines:
+
+• how the project should evolve
+• how future decisions are made
+• how documentation is maintained
+• how code changes are managed
+• how canon is preserved
+• how future AI assistants should behave
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MISSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Write a mission statement describing the long-term goals of the project.
+
+Include:
+
+• project vision
+• player-first philosophy
+• maintainability
+• scalability
+• readability
+• documentation-first development
+• long-term sustainability
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CORE PRINCIPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Document the project's permanent principles.
+
+Examples include:
+
+• Preserve the game's identity.
+• Favor clarity over cleverness.
+• Build modular systems.
+• Keep systems extensible.
+• Document before redesigning.
+• Never remove working functionality without justification.
+• Avoid unnecessary complexity.
+• Prioritize maintainability.
+• Preserve backward compatibility whenever practical.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOURCES OF TRUTH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Clearly define the authority of each document.
+
+PROJECT_MEMORY.md
+Quick onboarding summary.
+
+PROJECT_STATE.md
+Current implementation status.
+
+GAME_BIBLE.md
+Authoritative source for gameplay, mechanics, vision, and canon.
+
+Architecture documentation
+Technical implementation.
+
+Coding standards
+Code quality rules.
+
+Roadmap
+Future plans only.
+
+Design decisions
+Historical reasoning behind major choices.
+
+Known issues
+Current bugs and technical debt.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CANON POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+State explicitly:
+
+Gameplay canon comes from the Game Bible.
+
+Technical implementation comes from the code.
+
+Roadmap items are not implemented features.
+
+Ideas are not canon.
+
+Unwritten lore is not canon.
+
+Never invent lore.
+
+Never invent mechanics.
+
+Never silently redefine established systems.
+
+If conflicts exist between documents and code:
+
+Document them.
+
+Explain them.
+
+Request clarification before making major changes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGE MANAGEMENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Define rules for modifying the project.
+
+Examples:
+
+Major gameplay changes require documentation updates.
+
+Major architecture changes require architecture documentation updates.
+
+Large refactors should preserve behavior whenever possible.
+
+Breaking changes should be documented.
+
+Deprecated systems should be marked—not silently removed.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI DEVELOPMENT RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Future AI assistants should:
+
+Understand before editing.
+
+Read documentation before writing code.
+
+Avoid duplicate systems.
+
+Reuse existing modules.
+
+Preserve naming conventions.
+
+Preserve coding standards.
+
+Avoid unnecessary rewrites.
+
+Document all significant changes.
+
+Maintain compatibility whenever possible.
+
+Never assume missing information.
+
+Clearly distinguish:
+
+CONFIRMED
+
+INFERRED
+
+PLANNED
+
+NOT YET DEFINED
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DOCUMENTATION POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Documentation must evolve alongside the code.
+
+Whenever major work is completed:
+
+Update PROJECT_STATE.md.
+
+Update CHANGELOG.md.
+
+Update DESIGN_DECISIONS.md if a significant design decision was made.
+
+Update GAME_BIBLE.md if gameplay changed.
+
+Update architecture documentation if systems changed.
+
+Update PROJECT_MEMORY.md when onboarding information changes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CODE QUALITY PRINCIPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Encourage:
+
+Readable code.
+
+Modular systems.
+
+Reusable components.
+
+Low coupling.
+
+High cohesion.
+
+Clear interfaces.
+
+Consistent naming.
+
+Minimal duplication.
+
+Well-documented code.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DECISION MAKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+When multiple solutions exist:
+
+Choose the one that:
+
+Preserves architecture.
+
+Minimizes technical debt.
+
+Maintains compatibility.
+
+Improves maintainability.
+
+Improves readability.
+
+Improves scalability.
+
+If uncertainty remains:
+
+Document alternatives.
+
+Recommend the preferred option.
+
+Do not silently choose one.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FUTURE EXPANSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Document how new systems should be added.
+
+Require:
+
+Documentation first.
+
+Integration planning.
+
+Compatibility review.
+
+Architecture review.
+
+Testing.
+
+Documentation updates.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL DECLARATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Conclude the document by stating that:
+
+This Constitution governs how the project evolves.
+
+The Game Bible governs what the game is.
+
+The codebase governs how the game currently works.
+
+Documentation preserves project knowledge.
+
+Future contributors—human or AI—should follow these principles to maintain consistency, quality, and long-term sustainability.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VALIDATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After generating PROJECT_CONSTITUTION.md:
+
+Verify that it does not contradict any existing documentation.
+
+Cross-reference all relevant documentation.
+
+Ensure it complements the existing Game Bible, AI Continuation Guide, Project State, and Project Memory files.
+
+This document should become the permanent governance document for the repository.

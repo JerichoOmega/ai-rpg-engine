@@ -191,6 +191,7 @@ Based on the codebase history, these systems change most often and carry the mos
 ## Documentation Map
 
 ```
+PROJECT_CONSTITUTION.md  ← permanent governance (read before any major decision)
 PROJECT_MEMORY.md        ← you are here (AI quick-start)
 PROJECT_STATE.md         ← current health, bugs, priorities
 DESIGN_DECISIONS.md      ← why things were built the way they were
