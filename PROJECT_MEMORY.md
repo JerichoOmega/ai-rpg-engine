@@ -7,6 +7,14 @@
 
 ---
 
+## ⚡ Start Every Session With
+```
+AI_START_HERE.md  ← read this before anything else
+```
+It contains the startup checklist, development rules, shutdown checklist, and links to everything below.
+
+---
+
 ## What This Project Is
 
 A **terminal-based AI RPG** written in Python. The player types commands in a terminal. An AI Director (the "DM Brain") shapes the narrative pacing and story. The game features combat, quests, factions, economy, companions, exploration, and a save system — all running in a single Python process with no external dependencies.

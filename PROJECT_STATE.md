@@ -252,6 +252,7 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 
 ## Development Notes
 
+- **New to this project? Start with [`AI_START_HERE.md`](AI_START_HERE.md)** — the official session startup guide with checklists and reading order.
 - The Flask app (`app.py`, `preview.py`, `ui_mockup/`) is a **separate interface prototype** — it does not share code with the terminal game engine. Do not merge them without explicit instruction.
 - All terminal game code lives in the root `.py` files and is entered via `main.py`.
 - `world_state.py` is the single source of truth for all mutable game state. Always read/write through it.

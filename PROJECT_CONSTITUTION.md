@@ -9,6 +9,14 @@
 
 ---
 
+## Official Session Entry Point
+
+> Every contributor — human or AI — must begin every session with **[`AI_START_HERE.md`](AI_START_HERE.md)**.  
+> It contains the mandatory startup checklist, development rules, conflict resolution procedure, and shutdown checklist.  
+> The principles in this Constitution are enforced through that document.
+
+---
+
 ## Article I — Mission Statement
 
 This project is an **AI-driven terminal RPG** with a long-term vision: to create a deeply narrative, systems-rich single-player game where an intelligent AI Director shapes every session into a unique, reactive story.

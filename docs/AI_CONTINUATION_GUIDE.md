@@ -7,11 +7,15 @@
 ## How to Understand This Project Quickly
 
 ### 1. Read These Files First
-In order of importance:
+
+> **Before any of the below: open [`AI_START_HERE.md`](../AI_START_HERE.md)** (project root).  
+> It is the official session entry point with startup checklist, development rules, and shutdown procedure.
+
+In order of importance after `AI_START_HERE.md`:
 
 | File | Why |
 |---|---|
-| `docs/handoffs/<latest date>.md` | **Start here every session** — what happened last time, warnings, and recommended next task |
+| `docs/handoffs/<latest date>.md` | What happened last time, warnings, and recommended next task |
 | `PROJECT_CONSTITUTION.md` | Permanent governance — principles, rules, and decision process. Read before any major change. |
 | `PROJECT_STATE.md` | Current project health — completion %, bugs, priorities. Always check first. |
 | `PROJECT_MEMORY.md` | Full project quick-start — architecture, rules, common mistakes, file map |

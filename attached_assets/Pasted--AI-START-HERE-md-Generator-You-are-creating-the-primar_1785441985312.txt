@@ -1,0 +1,226 @@
+# AI_START_HERE.md Generator
+
+You are creating the primary entry point for all future development sessions.
+
+This file should become the FIRST document every AI assistant or developer reads before touching the codebase.
+
+Its purpose is to provide a standardized startup checklist, decision-making workflow, and shutdown procedure so every development session begins and ends consistently.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate a root-level file:
+
+AI_START_HERE.md
+
+This file is the official onboarding guide for every future AI assistant and human developer.
+
+It should explain:
+
+• How to begin every session.
+• Which files to read.
+• How to verify project health.
+• How to understand current work.
+• How to safely make changes.
+• What documentation must be updated before ending a session.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+READING ORDER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every contributor should follow this order:
+
+1. Latest document in /docs/handoffs/
+   Understand what happened during the previous session.
+
+2. PROJECT_MEMORY.md
+   Learn the project in under five minutes.
+
+3. PROJECT_STATE.md
+   Understand the current implementation status.
+
+4. PROJECT_CONSTITUTION.md
+   Learn the governing rules of the repository.
+
+5. docs/GAME_BIBLE.md
+   Learn the gameplay vision, mechanics, and canon.
+
+6. docs/AI_CONTINUATION_GUIDE.md
+   Learn development standards and expectations.
+
+7. Relevant architecture or system documentation for the area being modified.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PRE-DEVELOPMENT CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before making changes, every contributor should:
+
+□ Read the latest handoff.
+□ Review PROJECT_STATE.md.
+□ Confirm the requested work.
+□ Identify affected systems.
+□ Review related documentation.
+□ Check for existing known issues.
+□ Verify no duplicate implementation already exists.
+□ Determine whether documentation will require updates.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEVELOPMENT RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+During development:
+
+• Preserve existing architecture whenever practical.
+• Reuse existing systems instead of creating duplicates.
+• Avoid unnecessary refactoring.
+• Maintain coding standards.
+• Preserve backward compatibility whenever practical.
+• Keep modules cohesive and loosely coupled.
+• Follow established naming conventions.
+• Keep documentation synchronized with implementation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHEN TO ASK FOR HUMAN APPROVAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Do not make the following changes without explicit approval:
+
+• Major gameplay redesigns.
+• Changes to established canon.
+• Removal of major systems.
+• Breaking architectural changes.
+• Large-scale refactors.
+• Database migrations.
+• Save format changes.
+• Monetization changes.
+• Licensing changes.
+• Security-sensitive changes.
+
+If uncertain:
+
+Pause.
+
+Document the issue.
+
+Recommend options.
+
+Ask for clarification.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+POST-DEVELOPMENT CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before ending a session:
+
+□ Verify the project builds (if applicable).
+□ Verify modified systems still function.
+□ Update PROJECT_STATE.md if project status changed.
+□ Update GAME_BIBLE.md if gameplay or canon changed.
+□ Update DESIGN_DECISIONS.md if an important decision was made.
+□ Update CHANGELOG.md if appropriate.
+□ Update architecture documentation if technical systems changed.
+□ Create a new handoff document summarizing the session.
+□ Record any remaining known issues.
+□ Record recommended next steps.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONFLICT RESOLUTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If documentation and implementation disagree:
+
+Do not immediately change either.
+
+Instead:
+
+1. Identify the conflict.
+2. Explain both sides.
+3. Determine whether the code or documentation is newer.
+4. Record the discrepancy.
+5. Ask for clarification before making major changes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUALITY STANDARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every contribution should improve at least one of:
+
+• readability
+• maintainability
+• scalability
+• documentation quality
+• consistency
+• stability
+• usability
+• performance
+
+Avoid changes that increase unnecessary complexity.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI BEHAVIOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Future AI assistants should:
+
+Understand before editing.
+
+Never guess.
+
+Never invent gameplay.
+
+Never invent lore.
+
+Never silently rewrite systems.
+
+Prefer extending existing architecture.
+
+Keep documentation synchronized.
+
+Record important decisions.
+
+Leave the repository in a better state than it was found.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL SESSION SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every session should conclude with:
+
+• Summary of work completed.
+• Files modified.
+• Documentation updated.
+• Remaining issues.
+• Risks.
+• Recommended next task.
+
+This summary should become the newest document inside /docs/handoffs/.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VALIDATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After generating AI_START_HERE.md:
+
+Update:
+
+PROJECT_MEMORY.md
+
+PROJECT_STATE.md
+
+PROJECT_CONSTITUTION.md
+
+AI_CONTINUATION_GUIDE.md
+
+README.md
+
+to reference AI_START_HERE.md as the official entry point for all future development sessions.
+
+Verify that all internal links are correct.
+
+Ensure no contradictions exist.
+
+Ensure the startup workflow matches the repository's governance and documentation hierarchy.
+
+The goal is for a brand-new AI assistant or developer to clone the repository, open AI_START_HERE.md, and immediately know exactly how to begin, how to contribute safely, and how to conclude a session while keeping the project consistent and well documented.
