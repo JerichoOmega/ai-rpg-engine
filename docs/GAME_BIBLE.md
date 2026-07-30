@@ -638,25 +638,36 @@ Wraps `llm_bridge.ai_dialogue()` for NPC conversation generation.
 
 ## Companions
 
+> **Companion design philosophy:** [`docs/HERO_BIBLE.md`](HERO_BIBLE.md)  
+> **Design checklist & Core Wound system:** [`docs/CHARACTER_DESIGN_GUIDE.md`](CHARACTER_DESIGN_GUIDE.md)  
+> **Individual Hero Bible entries:** [`docs/heroes/`](heroes/)
+
+### Design Standard
+
+Every companion is handcrafted. A companion is never simply "a tank" or "a mage." Their gameplay, abilities, dialogue, personality, equipment, and story all reinforce who they are as a person. Mechanics grow from character — not from slot-filling.
+
+Each companion has one **Core Wound** — a defining emotional scar that connects their personality, dialogue, combat role, unique passive, personal quest, and relationships. No two companions share a unique passive. See [`docs/HERO_BIBLE.md`](HERO_BIBLE.md) for full philosophy.
+
+### Confirmed Companions & Core Wounds
+
+| Hero | Core Wound | Hero Bible |
+|---|---|---|
+| Talos | Lost faith in authority after years of war | [`docs/heroes/TALOS.md`](heroes/TALOS.md) ✅ |
+| Eleanor | Naive optimism leaves her vulnerable to betrayal | ⚠️ Not yet written |
+| Ragash | Rejected by her people; found belonging with her hounds | ⚠️ Not yet written |
+| Ronan | Believes his curse makes him a danger to everyone | ⚠️ Not yet written |
+| Steven | His identity and mysterious past define him | ⚠️ Not yet written |
+
+### Technical Implementation (`companion_manager.py`)
+
 Managed by `companion_manager.py`. A `COMPANIONS` dict defines recruitable companions and an `active_companions` list tracks the current party.
 
-### Companion Fields (per companion)
-- Role, abilities, loyalty score, story reactions
-- Loyalty modified by `change_loyalty(companion_name, amount)`
-- Corrupt state via `corrupt_companion()`
+- **Companion fields:** role, abilities, loyalty score, story reactions
+- **Loyalty:** `change_loyalty(companion_name, amount)`
+- **Combat:** `companion_attack()`, `use_companion_ability()`, `calculate_party_bonus()`
+- **Interaction:** `random_companion_banter()`, `show_party()`, `companion_story_reaction(event)`
 
-### Companion Combat
-- `companion_attack(companion_name, enemy)` — companion attacks during combat rounds
-- `use_companion_ability(companion_name, ability)` — ability use
-- `calculate_party_bonus()` — returns aggregate party stat bonuses
-
-### Companion Interaction
-- `random_companion_banter()` — fires during game ticks
-- `show_party()` — displays current companions
-- `companion_story_reaction(event)` — companions react to narrative events
-
-### Companion Roster
-⚠️ **NOT YET FULLY DEFINED** — The infrastructure exists. Specific companion characters, their backstories, abilities, and recruitment conditions are not yet defined.
+⚠️ The terminal prototype infrastructure exists. Full ability implementation, recruitment conditions, and Hero Bible integration are not yet implemented.
 
 ---
 

@@ -1,0 +1,428 @@
+Analyze the existing project documentation, particularly Talos' existing character sheet, and integrate the following as the canonical Hero Bible direction for the project.
+
+Do NOT overwrite existing lore unless it directly conflicts with the decisions below.
+
+Expand and refine the documentation while preserving the established personality and backstory.
+
+Do not implement gameplay code.
+
+---
+
+# HERO BIBLE PHILOSOPHY
+
+Every companion in the game should feel handcrafted.
+
+A companion should never simply be "a tank" or "a mage."
+
+Their gameplay, abilities, dialogue, personality, equipment, animations, and story should all reinforce who they are as a person.
+
+Mechanics should grow naturally from the character rather than being assigned arbitrarily.
+
+The player's emotional connection to a companion should be just as important as their combat effectiveness.
+
+---
+
+# TALOS
+
+Preserve Talos' existing lore and expand upon it.
+
+The following should become his canonical interpretation.
+
+---
+
+## Core Identity
+
+Talos is not a warrior because he enjoys violence.
+
+He became a warrior because someone has to stand between innocent people and the horrors of the world.
+
+Everything about his gameplay should reinforce this philosophy.
+
+---
+
+## Personality
+
+Talos should remain:
+
+- Battle-worn
+- Distrustful
+- Proud
+- Compassionate
+- Protective
+- Honorable
+
+Expand his personality to include:
+
+### Public Personality
+
+- Stoic
+- Disciplined
+- Blunt
+- Slow to trust
+
+### Private Personality
+
+- Deeply kind
+- Protective of weaker people
+- Enjoys telling stories
+- Dry sense of humor around trusted friends
+
+---
+
+## Moral Compass
+
+Talos does not hate governments because he is rebellious.
+
+He distrusts governments because he has spent years watching ordinary people suffer while those in power pursued their own agendas.
+
+His loyalty should always be:
+
+1. Innocent people
+2. His companions
+3. His community
+4. Government (if deserved)
+
+His morality should always prioritize protecting people over following authority.
+
+---
+
+## Visual Identity
+
+Maintain his current visual design.
+
+Special emphasis should be placed on:
+
+- Heavy armor
+- Numerous battle scars
+- Towering build
+- Sword and shield
+
+Most importantly:
+
+The bead bracelet gifted to him by children should remain visible on his character model whenever possible.
+
+It represents exactly who he fights to protect.
+
+---
+
+## Gameplay Philosophy
+
+Talos is a protector.
+
+He is not designed around dealing the highest damage.
+
+He is designed around enabling the rest of the party to survive.
+
+---
+
+## Hero Trait
+
+Develop Talos' unique passive around protecting nearby allies.
+
+Working direction:
+
+Guardian's Resolve
+
+When adjacent to allies:
+
+- Allies gain defensive bonuses.
+- Talos gains increased resistance to crowd control.
+
+Exact values will be determined during balancing.
+
+No other companion should possess this passive.
+
+---
+
+## Signature Ability
+
+Preserve Talos' Battlecry concept.
+
+Expand it into his defining signature ability.
+
+Battlecry should:
+
+- Inspire allies.
+- Intimidate enemies.
+- Represent Talos as a battlefield leader.
+
+It should become the move players most associate with him.
+
+---
+
+## Shield Stance Integration
+
+Talos should become the primary showcase for the Shield Stance system.
+
+Future talents and abilities may expand upon:
+
+- Shield Wall
+- Hold the Line
+- Bulwark
+- Brace
+- Guardian's Oath
+
+Talos should feel like the definitive defensive hero.
+
+---
+
+## Companion Relationships
+
+Expand the existing relationships.
+
+### Eleanor
+
+Talos trusts Eleanor surprisingly quickly.
+
+He recognizes her innocence and optimism.
+
+As the story progresses he naturally becomes protective of her.
+
+---
+
+### Ragash
+
+Mutual respect.
+
+Potential slow-burn romance depending on player choices.
+
+Both admire each other's willingness to protect others.
+
+---
+
+### Ronan
+
+Talos remains cautious.
+
+He does not fear Ronan himself.
+
+He fears what Ronan's curse could do to innocent people.
+
+Over time this relationship can evolve into mutual respect.
+
+---
+
+## Personal Quest
+
+Expand Talos' story.
+
+His journey should challenge his belief that every government inevitably becomes corrupt.
+
+Allow the player to influence whether Talos ultimately:
+
+- Learns that some leaders deserve trust.
+- Remains convinced institutions always fail.
+- Finds that true change begins by protecting communities rather than governments.
+
+The quest should be about healing emotional wounds rather than simply defeating villains.
+
+---
+
+## Character Details
+
+Retain and expand:
+
+- Love of wine.
+- Favorite meal being roasted duck.
+- Always visits orphanages.
+- Loves telling children stories of great adventures.
+
+These should appear naturally throughout gameplay.
+
+This compassionate side should contrast with his intimidating appearance.
+
+---
+
+# HERO DESIGN PHILOSOPHY
+
+Every future companion should follow the same design principles.
+
+Each companion should have:
+
+- A distinct personality.
+- A unique gameplay identity.
+- A memorable visual design.
+- A meaningful emotional journey.
+- Distinct dialogue.
+- Personal relationships.
+- Personal quests.
+
+No companion should ever feel interchangeable.
+
+---
+
+## Core Wound Philosophy
+
+Every companion should possess one defining emotional wound.
+
+This emotional wound should directly influence:
+
+- Personality
+- Dialogue
+- Gameplay
+- Personal quest
+- Character growth
+
+Examples:
+
+Talos
+
+Lost faith in authority after years of war.
+
+Eleanor
+
+Naive optimism that leaves her vulnerable to betrayal.
+
+Ragash
+
+Rejected by her own people and found belonging with her hounds.
+
+Ronan
+
+Believes he is a danger to everyone around him because of his curse.
+
+Steven
+
+His identity and mysterious past define his emotional journey.
+
+Future companions should follow this same philosophy.
+
+---
+
+# HERO BIBLE TEMPLATE
+
+Create a reusable Hero Bible template for every companion using the following structure.
+
+---
+
+Hero Summary
+
+Core Identity
+
+Who are they at their heart?
+
+---
+
+Core Wound
+
+What event shaped who they became?
+
+---
+
+Core Belief
+
+What truth do they currently believe about the world?
+
+---
+
+Greatest Fear
+
+What do they fear losing the most?
+
+---
+
+Driving Goal
+
+Why do they join the adventure?
+
+---
+
+Combat Identity
+
+How does their personality translate into gameplay?
+
+---
+
+Unique Passive
+
+Inspired directly by their life story.
+
+No two companions should share the same passive.
+
+---
+
+Signature Ability
+
+The iconic move players immediately associate with this companion.
+
+---
+
+Personal Quest
+
+How does this companion emotionally grow throughout the story?
+
+How can the player influence that growth?
+
+---
+
+Relationship Dynamics
+
+How do they naturally interact with:
+
+- Talos
+- Eleanor
+- Ragash
+- Ronan
+- Steven
+- Future companions
+
+Relationships should naturally evolve over time.
+
+---
+
+Visual Identity
+
+Document:
+
+- Appearance
+- Clothing
+- Equipment
+- Colors
+- Recognizable features
+- Silhouette
+
+Each companion should be instantly recognizable.
+
+---
+
+Voice & Dialogue
+
+Document:
+
+- Speaking style
+- Tone
+- Vocabulary
+- Humor
+- Emotional tendencies
+
+Every companion should sound unique without requiring the player to see their portrait.
+
+---
+
+Gameplay Identity
+
+Summarize in one sentence:
+
+"What makes this companion irreplaceable?"
+
+This should become the design goal for every future companion.
+
+---
+
+# Documentation Tasks
+
+Update or create:
+
+- HERO_BIBLE.md
+- HEROES/TALOS.md
+- HERO_TEMPLATE.md
+- CHARACTER_DESIGN_GUIDE.md
+- PROJECT_MEMORY.md
+- AI_CONTINUATION_GUIDE.md
+- GAME_BIBLE.md
+
+Cross-reference all documentation.
+
+Treat this as the canonical companion design philosophy moving forward.
+
+Do not implement gameplay code at this stage.

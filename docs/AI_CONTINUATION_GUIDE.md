@@ -21,6 +21,9 @@ In order of importance after `AI_START_HERE.md`:
 | `PROJECT_MEMORY.md` | Full project quick-start — architecture, rules, common mistakes, file map |
 | `docs/GAME_BIBLE.md` | What the game is, every confirmed mechanic |
 | `docs/COMBAT_SYSTEM.md` | Canonical combat design — grid, AP economy, facing, downed/death, party rules |
+| `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
+| `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |
+| `docs/heroes/TALOS.md` | Full Hero Bible entry for Talos (only complete entry currently) |
 | `docs/architecture.md` | How modules connect, data flow |
 | `docs/systems/world_state.md` | The central state object — everything reads from it |
 | `docs/coding_standards.md` | How code is written here |
