@@ -11,11 +11,14 @@ In order of importance:
 
 | File | Why |
 |---|---|
+| `PROJECT_STATE.md` | Current project health — completion %, bugs, priorities. Always check first. |
+| `PROJECT_MEMORY.md` | Full project quick-start — architecture, rules, common mistakes, file map |
 | `docs/GAME_BIBLE.md` | What the game is, every confirmed mechanic |
 | `docs/architecture.md` | How modules connect, data flow |
 | `docs/systems/world_state.md` | The central state object — everything reads from it |
 | `docs/coding_standards.md` | How code is written here |
 | `docs/known_issues.md` | What is broken / tech debt — do not accidentally fix these in unrelated PRs |
+| `DESIGN_DECISIONS.md` | Why major decisions were made — read before any refactor |
 | `world_state.py` | The actual central state implementation |
 | `event_bus.py` | How systems communicate |
 | `dm_brain.py` | The AI pacing system |

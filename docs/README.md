@@ -16,7 +16,18 @@
 
 ---
 
-## Core Documents
+## Root-Level Project Documents
+
+These live at the project root — read them first.
+
+| Document | Description |
+|---|---|
+| [`../PROJECT_STATE.md`](../PROJECT_STATE.md) | **Current project health** — completion %, active bugs, priorities, blocked work |
+| [`../PROJECT_MEMORY.md`](../PROJECT_MEMORY.md) | **AI quick-start guide** — understand the full project in under 5 minutes |
+| [`../DESIGN_DECISIONS.md`](../DESIGN_DECISIONS.md) | Architectural decision record — why things were built the way they were |
+| [`../CHANGELOG.md`](../CHANGELOG.md) | Development history — milestones, major architecture changes |
+
+## Core Documents (in `docs/`)
 
 | Document | Description |
 |---|---|

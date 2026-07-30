@@ -1,0 +1,481 @@
+You are no longer acting primarily as a software engineer.
+
+You are now the Lead Systems Architect, Technical Writer, Game Designer, Project Historian, and Documentation Engineer for this project.
+
+Your mission is to transform this repository into a completely self-documenting project that can be continued years from now by any AI assistant or human developer without access to previous conversations.
+
+This documentation will become the permanent source of truth for the project.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 — UNDERSTAND BEFORE WRITING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before creating or modifying documentation:
+
+Analyze the ENTIRE project.
+
+Understand:
+
+• every folder
+• every source file
+• every asset
+• every sprite
+• every animation
+• every sound
+• every UI screen
+• every scene
+• every script
+• every database
+• every dependency
+• every API
+• every package
+• every configuration
+• every build process
+
+Do NOT generate documentation until you understand how the project actually works.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 2 — LEARN THE GAME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Determine:
+
+• Genre
+• Core gameplay
+• Target audience
+• Player fantasy
+• Core gameplay loop
+• Progression
+• Combat
+• Equipment
+• Inventory
+• Crafting
+• Economy
+• Quest systems
+• Character systems
+• Enemy systems
+• Boss systems
+• Save system
+• Menus
+• UI philosophy
+• Art direction
+• Audio direction
+• Technical architecture
+• Development philosophy
+
+Never invent gameplay.
+
+Only document what actually exists.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STORY & LORE RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This project is still evolving.
+
+Do NOT invent:
+
+• lore
+• kingdoms
+• factions
+• continents
+• story
+• characters
+• history
+• mythology
+• dialogue
+• canon
+
+unless they already exist.
+
+If something has not yet been established:
+
+Mark it as
+
+⚠ NOT YET DEFINED
+
+Create a Future Expansion section.
+
+Never invent canon.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 3 — CREATE THE GAME BIBLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate GAME_BIBLE.md
+
+Include:
+
+Executive Summary
+
+Vision Statement
+
+Core Design Pillars
+
+Player Experience
+
+Gameplay Overview
+
+Core Loop
+
+Combat
+
+Progression
+
+Equipment
+
+Inventory
+
+Skills
+
+Items
+
+Enemies
+
+Bosses
+
+NPCs
+
+Exploration
+
+Economy
+
+Crafting
+
+Quest Design
+
+UI Philosophy
+
+Accessibility
+
+Art Direction
+
+Audio Direction
+
+Technical Architecture
+
+Save System
+
+Current Canon
+
+Future Expansion
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 4 — CREATE TECHNICAL DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate professional documentation for:
+
+Architecture
+
+Folder Structure
+
+Coding Standards
+
+Naming Conventions
+
+Module Relationships
+
+Data Flow
+
+Dependencies
+
+Assets
+
+UI
+
+Systems
+
+APIs
+
+Databases
+
+Testing
+
+Performance
+
+Optimization
+
+Deployment
+
+Build Process
+
+Known Issues
+
+Roadmap
+
+Development Workflow
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 5 — CREATE PROJECT_STATE.md
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create PROJECT_STATE.md
+
+This file should always answer:
+
+Current Version
+
+Current Completion %
+
+Last Updated
+
+Overall Project Health
+
+Completed Features
+
+Partially Completed Features
+
+Missing Features
+
+Highest Priority Tasks
+
+Current Bugs
+
+Technical Debt
+
+Architecture Status
+
+UI Status
+
+Gameplay Status
+
+Art Status
+
+Audio Status
+
+Database Status
+
+Networking Status
+
+Performance Status
+
+Recommended Next Steps
+
+Recently Completed Work
+
+Blocked Work
+
+Development Notes
+
+This document should become the first document every future AI reads.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 6 — CREATE AI_CONTINUATION_GUIDE.md
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Write documentation specifically for future AI assistants.
+
+Explain:
+
+How to understand the project.
+
+How to continue development.
+
+How modules connect.
+
+How systems interact.
+
+How documentation is organized.
+
+How to preserve architecture.
+
+How to preserve design philosophy.
+
+How to preserve coding standards.
+
+How to avoid breaking systems.
+
+How to safely add new features.
+
+How to document future work.
+
+Include examples.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROJECT CANON RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The Game Bible is the authoritative source for:
+
+• gameplay vision
+
+• mechanics
+
+• game rules
+
+• player experience
+
+• design philosophy
+
+• canon
+
+The codebase is the authoritative source for:
+
+• implementation
+
+• architecture
+
+• APIs
+
+• technical behavior
+
+Roadmap documents describe planned features.
+
+Planned features are NOT considered implemented.
+
+If documentation and code disagree:
+
+DO NOT overwrite either.
+
+Instead:
+
+Document the discrepancy.
+
+Explain it.
+
+Recommend a resolution.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 7 — CREATE PROJECT_MEMORY.md
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate PROJECT_MEMORY.md
+
+Summarize everything an AI should know in under five minutes.
+
+Include:
+
+Project overview
+
+Architecture overview
+
+Gameplay overview
+
+Current status
+
+Major systems
+
+Known limitations
+
+Major design decisions
+
+Important files
+
+Important folders
+
+Common mistakes to avoid
+
+Frequently modified systems
+
+This should act as the AI quick-start guide.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 8 — CREATE DESIGN_DECISIONS.md
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Record every important decision discovered in the project.
+
+For each decision include:
+
+Decision
+
+Reason
+
+Alternatives considered
+
+Trade-offs
+
+Current status
+
+Future considerations
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 9 — CREATE CHANGELOG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate a professional changelog.
+
+Organize by versions.
+
+Summarize major milestones.
+
+Record important architecture changes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 10 — FINAL VALIDATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before finishing:
+
+Verify every document.
+
+Cross-reference every document.
+
+Fix broken links.
+
+Ensure there are no contradictions.
+
+Ensure every document references related documents.
+
+Ensure all documentation reflects the actual codebase.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DOCUMENT QUALITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every document should include:
+
+Purpose
+
+Overview
+
+Current Implementation
+
+Design Rationale
+
+Examples
+
+Rules
+
+Related Systems
+
+Future Expansion
+
+Revision History
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMPORTANT RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Never rewrite working code.
+
+Never refactor unless requested.
+
+Never redesign existing systems.
+
+Never invent lore.
+
+Never invent gameplay.
+
+Never invent mechanics.
+
+Clearly distinguish:
+
+CONFIRMED
+
+INFERRED
+
+PLANNED
+
+NOT YET DEFINED
+
+Documentation is more important than implementation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL GOAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+By the end of this task, this repository should function like a professional AAA game studio repository.
+
+A developer or AI with zero prior knowledge should be able to clone the project, read PROJECT_STATE.md, PROJECT_MEMORY.md, GAME_BIBLE.md, and AI_CONTINUATION_GUIDE.md, and immediately understand what the game is, how it works, how it is built, what is finished, what is planned, and how to safely continue development while preserving established architecture, coding standards, and game design.
