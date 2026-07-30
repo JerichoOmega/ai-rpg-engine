@@ -1,4 +1,3 @@
-```python id="f8b2mx"
 import json
 import copy
 import os
@@ -561,4 +560,3 @@ def debug_state_report():
             ]["major_events"]
         )
     )
-```
