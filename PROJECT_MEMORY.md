@@ -191,6 +191,7 @@ Based on the codebase history, these systems change most often and carry the mos
 ## Documentation Map
 
 ```
+docs/handoffs/<latest>   ← READ THIS FIRST — what happened last session
 PROJECT_CONSTITUTION.md  ← permanent governance (read before any major decision)
 PROJECT_MEMORY.md        ← you are here (AI quick-start)
 PROJECT_STATE.md         ← current health, bugs, priorities

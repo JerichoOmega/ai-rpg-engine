@@ -1,0 +1,224 @@
+# AI Handoff System Generator
+
+You are creating a permanent AI handoff system for this repository.
+
+This is not a changelog.
+
+This is not documentation about the game.
+
+This is a standardized communication system that allows one AI assistant or developer to hand work off to another without losing context.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create a documentation system that records every development session.
+
+Future contributors should be able to understand exactly what happened during the previous session without reading the entire repository.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CREATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create the following structure:
+
+/docs/handoffs/
+
+README.md
+
+HANDOFF_TEMPLATE.md
+
+Then create an initial handoff document for the current state of the project.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HANDOFF FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every handoff should contain:
+
+Session Date
+
+Contributor
+
+AI Model / Tool Used
+
+Branch (if applicable)
+
+Project Version
+
+Objectives
+
+Completed Work
+
+Files Created
+
+Files Modified
+
+Files Removed
+
+Architecture Changes
+
+Gameplay Changes
+
+UI Changes
+
+Performance Changes
+
+Bug Fixes
+
+Known Issues
+
+New Technical Debt
+
+Design Decisions Made
+
+Documentation Updated
+
+Testing Performed
+
+Outstanding Questions
+
+Recommended Next Task
+
+Warnings
+
+Dependencies Added
+
+Dependencies Removed
+
+Breaking Changes
+
+Migration Notes
+
+Estimated Project Completion
+
+Additional Notes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+README
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create README.md explaining:
+
+Purpose of the handoff system.
+
+How future contributors should create handoff reports.
+
+When a handoff should be created.
+
+Relationship between:
+
+PROJECT_MEMORY.md
+
+PROJECT_STATE.md
+
+CHANGELOG.md
+
+GAME_BIBLE.md
+
+PROJECT_CONSTITUTION.md
+
+AI_CONTINUATION_GUIDE.md
+
+and the handoff documents.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HANDOFF TEMPLATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create HANDOFF_TEMPLATE.md.
+
+This should be the standard template every future AI or developer fills out after completing meaningful work.
+
+Use professional formatting with clear sections and checklists where appropriate.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CURRENT SESSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generate the first handoff document summarizing everything accomplished during this documentation effort.
+
+Include:
+
+• Documentation generated
+• Architecture discovered
+• AI Continuation Guide creation
+• Project Memory creation
+• Project State creation
+• Design Decisions creation
+• Constitution creation
+• Validation work
+• Cross-reference fixes
+• Documentation hierarchy updates
+• Remaining known limitations
+• Recommended next development priorities
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AI HANDOFF RULES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Future contributors should:
+
+Read the most recent handoff first.
+
+Then read:
+
+PROJECT_MEMORY.md
+
+PROJECT_STATE.md
+
+PROJECT_CONSTITUTION.md
+
+GAME_BIBLE.md
+
+AI_CONTINUATION_GUIDE.md
+
+before beginning development.
+
+At the end of every significant development session:
+
+Create a new dated handoff document.
+
+Never overwrite previous handoffs.
+
+Treat handoffs as a historical record.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUALITY REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The handoff system should:
+
+Be concise enough to read in a few minutes.
+
+Contain enough detail that another AI can immediately continue development.
+
+Cross-reference existing documentation rather than duplicate it.
+
+Clearly distinguish:
+
+Completed
+
+In Progress
+
+Blocked
+
+Planned
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VALIDATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After generating the handoff system:
+
+Verify all links.
+
+Update PROJECT_MEMORY.md to mention the handoff process.
+
+Update PROJECT_STATE.md to reference the latest handoff.
+
+Update AI_CONTINUATION_GUIDE.md to instruct future AI assistants to begin each session by reading the newest handoff document.
+
+Ensure the handoff system complements the existing documentation suite without creating duplicate sources of truth.
+
+The goal is to create a permanent development history that preserves context between AI assistants and human developers while keeping the repository organized and easy to maintain.

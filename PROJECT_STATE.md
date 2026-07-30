@@ -237,7 +237,8 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 ## Recently Completed Work
 
 - **Integration pass (Task 3):** Fixed 8 broken imports, removed duplicate DM brain logic from `llm_bridge.py`, fixed 3 world_state path errors in `story.py`, added save migration guard (`ensure_world_state_defaults()`), fixed quest event payload, fixed faction event handler
-- **Documentation suite (Task 4):** Created 19 documentation files across `docs/` covering all systems, architecture, known issues, roadmap, and AI continuation guide
+- **Documentation suite:** Created 27 documentation files covering game bible, all systems, architecture, known issues, roadmap, governance, AI continuation guide, and handoff system
+- **Full session handoff:** See [`docs/handoffs/2026-07-30-documentation-session.md`](docs/handoffs/2026-07-30-documentation-session.md) for complete session record
 
 ---
 
