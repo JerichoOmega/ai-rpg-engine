@@ -9,371 +9,761 @@ from event_bus import (
 )
 
 from llm_bridge import (
+
     ai_combat_narration,
+
     ai_narrate
 )
 
-from progression_manager import (
-    scale_enemy_power
+from companion_manager import (
+
+    active_companions,
+
+    companion_attack,
+
+    use_companion_ability,
+
+    calculate_party_bonus
 )
 
 from status_effects import (
-    process_status_effects,
-    add_status_effect
+    process_status_effects
+)
+
+from dm_brain import (
+    change_story_pressure
 )
 
 # =========================
 # CRITICAL HIT
 # =========================
 
-def calculate_critical_hit():
+def calculate_critical_hit(
+
+    crit_chance=15
+
+):
 
     roll = random.randint(
         1,
         100
     )
 
-    return roll <= 15
+    return roll <= crit_chance
 
 # =========================
 # EVASION CHECK
 # =========================
 
-def check_evasion():
+def check_evasion(
+
+    evasion
+
+):
 
     roll = random.randint(
         1,
         100
     )
 
-    return roll <= player.evasion
+    return roll <= evasion
 
 # =========================
-# COMBAT
+# SHOW ENCOUNTER
 # =========================
 
-def combat(
+def show_combat_status(
 
-    enemy_name,
-    enemy_hp
+    enemies
 
 ):
 
     print(
-        "\n=== COMBAT START ==="
+        "\n=== ENCOUNTER STATUS ==="
+    )
+
+    print(
+        f"\nPlayer HP:"
+        f" {player.hp}/"
+        f"{player.max_hp}"
     )
 
     # =========================
-    # ENEMY ENTITY
+    # PARTY
     # =========================
 
-    enemy = {
-
-        "name": enemy_name,
-
-        "hp": scale_enemy_power(
-            enemy_hp
-        ),
-
-        "status_effects": []
-    }
-
-    # =========================
-    # AI INTRO NARRATION
-    # =========================
-
-    combat_state = {
-
-        "enemy_hp": enemy["hp"],
-
-        "player_hp": player.hp
-    }
-
-    try:
-
-        ai_combat_narration(
-
-            enemy_name,
-
-            combat_state
-        )
-
-    except Exception:
+    if active_companions:
 
         print(
-            f"\nA dangerous"
-            f" {enemy_name}"
-            " approaches."
+            "\n=== PARTY ==="
         )
 
-    # =========================
-    # COMBAT LOOP
-    # =========================
-
-    while enemy["hp"] > 0 and player.hp > 0:
-
-        print(
-            "\n========================"
-        )
-
-        print(
-            f"Player HP:"
-            f" {player.hp}/"
-            f"{player.max_hp}"
-        )
-
-        print(
-            f"{enemy_name} HP:"
-            f" {enemy['hp']}"
-        )
-
-        print(
-            "\n1. Attack"
-        )
-
-        print(
-            "2. Heavy Attack"
-        )
-
-        print(
-            "3. Heal"
-        )
-
-        action = input(
-            "\nChoose: "
-        ).strip()
-
-        # =========================
-        # ATTACK
-        # =========================
-
-        if action == "1":
-
-            damage = random.randint(
-                5,
-                12
-            )
-
-            damage += (
-                player.attack_bonus
-            )
-
-            # =========================
-            # CRITICAL HIT
-            # =========================
-
-            critical = calculate_critical_hit()
-
-            if critical:
-
-                damage *= 2
-
-                print(
-                    "\nCRITICAL HIT!"
-                )
-
-            enemy["hp"] -= damage
+        for companion in active_companions:
 
             print(
-                f"\nYou strike the"
-                f" {enemy_name}"
-                f" for {damage} damage."
+                f"{companion['role']}"
+                f" HP:"
+                f" {companion['hp']}/"
+                f"{companion['max_hp']}"
             )
 
-            # =========================
-            # RANDOM STATUS EFFECT
-            # =========================
+    # =========================
+    # ENEMIES
+    # =========================
 
-            status_roll = random.randint(
-                1,
-                100
-            )
+    print(
+        "\n=== ENEMIES ==="
+    )
 
-            if status_roll <= 15:
+    for index, enemy in enumerate(
+        enemies
+    ):
 
-                enemy[
-                    "status_effects"
-                ] = add_status_effect(
+        print(
+            f"\n[{index}]"
+            f" {enemy['name']}"
+        )
 
-                    enemy[
-                        "status_effects"
-                    ],
+        print(
+            f"HP:"
+            f" {enemy['hp']}/"
+            f"{enemy['max_hp']}"
+        )
 
-                    "bleed",
+        print(
+            f"Elite:"
+            f" {enemy['elite']}"
+        )
 
-                    3
-                )
+        print(
+            f"Boss:"
+            f" {enemy['boss']}"
+        )
 
-        # =========================
-        # HEAVY ATTACK
-        # =========================
+# =========================
+# REMOVE DEAD ENEMIES
+# =========================
 
-        elif action == "2":
+def cleanup_defeated_enemies(
 
-            damage = random.randint(
-                10,
-                20
-            )
+    enemies
 
-            damage += (
-                player.attack_bonus
-            )
+):
 
-            critical = calculate_critical_hit()
+    remaining = []
 
-            if critical:
+    for enemy in enemies:
 
-                damage *= 2
+        if enemy["hp"] > 0:
 
-                print(
-                    "\nCRITICAL HIT!"
-                )
-
-            enemy["hp"] -= damage
-
-            print(
-                f"\nHeavy attack hits for"
-                f" {damage} damage!"
-            )
-
-        # =========================
-        # HEAL
-        # =========================
-
-        elif action == "3":
-
-            heal = random.randint(
-                10,
-                20
-            )
-
-            player.hp += heal
-
-            player.hp = min(
-
-                player.hp,
-
-                player.max_hp
-            )
-
-            print(
-                f"\nYou recover"
-                f" {heal} HP."
-            )
-
-        # =========================
-        # INVALID
-        # =========================
-
-        else:
-
-            print(
-                "\nInvalid action."
+            remaining.append(
+                enemy
             )
 
             continue
 
+        enemy["hp"] = 0
+
+        print(
+            f"\n{enemy['name']}"
+            " has been defeated!"
+        )
+
+        emit(
+
+            "enemy_killed",
+
+            enemy_name=enemy[
+                "name"
+            ]
+        )
+
+    return remaining
+
+# =========================
+# PLAYER TURN
+# =========================
+
+def player_turn(
+
+    enemies
+
+):
+
+    print(
+        "\n1. Attack"
+    )
+
+    print(
+        "2. Heavy Attack"
+    )
+
+    print(
+        "3. Heal"
+    )
+
+    action = input(
+        "\nChoose: "
+    ).strip()
+
+    # =========================
+    # ATTACK
+    # =========================
+
+    if action == "1":
+
+        try:
+
+            target_index = int(
+
+                input(
+                    "\nTarget Enemy #: "
+                )
+            )
+
+            target = enemies[
+                target_index
+            ]
+
+        except Exception:
+
+            print(
+                "\nInvalid target."
+            )
+
+            return
+
+        damage = random.randint(
+            5,
+            12
+        )
+
+        damage += (
+            player.attack_bonus
+        )
+
+        damage += (
+            calculate_party_bonus()
+        )
+
+        critical = (
+            calculate_critical_hit()
+        )
+
+        if critical:
+
+            damage *= 2
+
+            print(
+                "\nCRITICAL HIT!"
+            )
+
+        target["hp"] -= damage
+
+        target["hp"] = max(
+            target["hp"],
+            0
+        )
+
+        print(
+            f"\nYou strike"
+            f" {target['name']}"
+            f" for {damage} damage."
+        )
+
+    # =========================
+    # HEAVY ATTACK
+    # =========================
+
+    elif action == "2":
+
+        try:
+
+            target_index = int(
+
+                input(
+                    "\nTarget Enemy #: "
+                )
+            )
+
+            target = enemies[
+                target_index
+            ]
+
+        except Exception:
+
+            print(
+                "\nInvalid target."
+            )
+
+            return
+
+        damage = random.randint(
+            15,
+            30
+        )
+
+        damage += (
+            player.attack_bonus
+        )
+
+        critical = (
+            calculate_critical_hit(
+                10
+            )
+        )
+
+        if critical:
+
+            damage *= 2
+
+            print(
+                "\nDEVASTATING CRITICAL!"
+            )
+
+        target["hp"] -= damage
+
+        target["hp"] = max(
+            target["hp"],
+            0
+        )
+
+        print(
+            f"\nHeavy attack hits"
+            f" {target['name']}"
+            f" for {damage} damage!"
+        )
+
+    # =========================
+    # HEAL
+    # =========================
+
+    elif action == "3":
+
+        heal = random.randint(
+            15,
+            30
+        )
+
+        player.hp += heal
+
+        player.hp = min(
+
+            player.hp,
+
+            player.max_hp
+        )
+
+        print(
+            f"\nYou recover"
+            f" {heal} HP."
+        )
+
+    else:
+
+        print(
+            "\nInvalid action."
+        )
+
+# =========================
+# COMPANION TURNS
+# =========================
+
+def companion_turns(
+
+    enemies
+
+):
+
+    if not active_companions:
+
+        return
+
+    print(
+        "\n=== COMPANION TURNS ==="
+    )
+
+    for companion in active_companions:
+
+        if companion["hp"] <= 0:
+
+            continue
+
+        if not enemies:
+
+            return
+
+        target = random.choice(
+            enemies
+        )
+
+        companion_attack(
+
+            companion,
+
+            target
+        )
+
+        target["hp"] = max(
+            target["hp"],
+            0
+        )
+
+        ability_roll = random.randint(
+            1,
+            100
+        )
+
+        if ability_roll <= 35:
+
+            use_companion_ability(
+
+                companion,
+
+                target
+            )
+
+            target["hp"] = max(
+                target["hp"],
+                0
+            )
+
+# =========================
+# ENEMY TURNS
+# =========================
+
+def enemy_turns(
+
+    enemies
+
+):
+
+    # =========================
+    # LOCAL IMPORTS
+    # =========================
+
+    from enemy_manager import (
+
+        use_enemy_ability,
+
+        boss_phase_check
+    )
+
+    print(
+        "\n=== ENEMY TURNS ==="
+    )
+
+    for enemy in enemies:
+
+        if enemy["hp"] <= 0:
+
+            continue
+
         # =========================
-        # PROCESS ENEMY STATUS EFFECTS
+        # BOSS PHASE
         # =========================
 
-        enemy[
+        if enemy["boss"]:
+
+            boss_phase_check(
+                enemy
+            )
+
+        # =========================
+        # ENEMY ABILITY
+        # =========================
+
+        ability_roll = random.randint(
+            1,
+            100
+        )
+
+        if ability_roll <= 30:
+
+            use_enemy_ability(
+                enemy
+            )
+
+        # =========================
+        # TARGETS
+        # =========================
+
+        valid_targets = [
+
+            "player"
+        ]
+
+        for companion in active_companions:
+
+            if companion["hp"] > 0:
+
+                valid_targets.append(
+                    companion
+                )
+
+        chosen_target = random.choice(
+            valid_targets
+        )
+
+        # =========================
+        # DAMAGE
+        # =========================
+
+        damage = random.randint(
+
+            int(
+                enemy["damage"] * 0.7
+            ),
+
+            enemy["damage"]
+        )
+
+        critical = (
+            calculate_critical_hit(
+
+                enemy[
+                    "crit_chance"
+                ]
+            )
+        )
+
+        if critical:
+
+            damage *= 2
+
+            print(
+                f"\n{enemy['name']}"
+                " lands a CRITICAL strike!"
+            )
+
+        # =========================
+        # PLAYER TARGET
+        # =========================
+
+        if chosen_target == "player":
+
+            if check_evasion(
+                player.evasion
+            ):
+
+                print(
+                    "\nYou evade the attack!"
+                )
+
+                continue
+
+            damage -= player.defense
+
+            damage = max(
+                damage,
+                0
+            )
+
+            player.hp -= damage
+
+            player.hp = max(
+                player.hp,
+                0
+            )
+
+            print(
+                f"\n{enemy['name']}"
+                f" hits you for"
+                f" {damage} damage."
+            )
+
+            emit(
+
+                "player_damaged",
+
+                amount=damage
+            )
+
+        # =========================
+        # COMPANION TARGET
+        # =========================
+
+        else:
+
+            chosen_target[
+                "hp"
+            ] -= damage
+
+            chosen_target[
+                "hp"
+            ] = max(
+
+                chosen_target[
+                    "hp"
+                ],
+
+                0
+            )
+
+            print(
+                f"\n{enemy['name']}"
+                f" hits"
+                f" {chosen_target['role']}"
+                f" for {damage} damage."
+            )
+
+# =========================
+# PROCESS STATUSES
+# =========================
+
+def process_combat_statuses(
+
+    enemies
+
+):
+
+    # =========================
+    # PLAYER
+    # =========================
+
+    if hasattr(
+
+        player,
+
+        "status_effects"
+    ):
+
+        player.hp, player.status_effects = (
+
+            process_status_effects(
+
+                player.hp,
+
+                player.status_effects
+            )
+        )
+
+    # =========================
+    # ENEMIES
+    # =========================
+
+    for enemy in enemies:
+
+        enemy["hp"], enemy[
             "status_effects"
         ] = process_status_effects(
 
-            enemy,
+            enemy["hp"],
 
             enemy[
                 "status_effects"
             ]
         )
 
-        # =========================
-        # ENEMY DEFEATED
-        # =========================
+# =========================
+# COMBAT LOOP
+# =========================
 
-        if enemy["hp"] <= 0:
+def combat(
 
-            print(
-                f"\nYou defeated"
-                f" {enemy_name}!"
-            )
+    enemies
 
-            emit(
+):
 
-                "enemy_killed",
+    # =========================
+    # LOCAL IMPORTS
+    # =========================
 
-                enemy_name=enemy_name
-            )
+    from encounter_manager import (
+        calculate_encounter_difficulty
+    )
 
-            # =========================
-            # AI AFTERMATH
-            # =========================
+    print(
+        "\n=== COMBAT START ==="
+    )
 
-            try:
+    try:
 
-                ai_narrate(
+        ai_combat_narration(
 
-                    f"The player defeated"
-                    f" {enemy_name}."
-                    " Narrate the aftermath."
-                )
+            "Encounter",
 
-            except Exception:
+            {
 
-                print(
-                    "\nThe battle ends."
-                )
+                "enemy_count":
+                    len(enemies),
 
-            return True
+                "difficulty":
+                    calculate_encounter_difficulty(
+                        enemies
+                    ),
 
-        # =========================
-        # ENEMY TURN
-        # =========================
-
-        enemy_damage = random.randint(
-            5,
-            15
+                "player_hp":
+                    player.hp
+            }
         )
 
-        # =========================
-        # EVASION
-        # =========================
-
-        if check_evasion():
-
-            print(
-                "\nYou evade the attack!"
-            )
-
-            enemy_damage = 0
-
-        # =========================
-        # DEFENSE
-        # =========================
-
-        enemy_damage -= (
-            player.defense
-        )
-
-        enemy_damage = max(
-            enemy_damage,
-            0
-        )
-
-        player.hp -= enemy_damage
+    except Exception:
 
         print(
-            f"\nThe {enemy_name}"
-            f" hits you for"
-            f" {enemy_damage} damage."
+            "\nDanger surrounds you."
         )
 
-        emit(
+    # =========================
+    # MAIN LOOP
+    # =========================
 
-            "player_damaged",
+    while enemies and player.hp > 0:
 
-            amount=enemy_damage
+        show_combat_status(
+            enemies
+        )
+
+        # =========================
+        # PLAYER TURN
+        # =========================
+
+        player_turn(
+            enemies
+        )
+
+        # =========================
+        # COMPANION TURNS
+        # =========================
+
+        companion_turns(
+            enemies
+        )
+
+        # =========================
+        # PROCESS STATUS EFFECTS
+        # =========================
+
+        process_combat_statuses(
+            enemies
+        )
+
+        # =========================
+        # CLEANUP
+        # =========================
+
+        enemies = cleanup_defeated_enemies(
+            enemies
+        )
+
+        if not enemies:
+
+            break
+
+        # =========================
+        # ENEMY TURNS
+        # =========================
+
+        enemy_turns(
+            enemies
+        )
+
+        # =========================
+        # TENSION
+        # =========================
+
+        change_story_pressure(
+            5
         )
 
         # =========================
@@ -386,18 +776,118 @@ def combat(
                 "\nYou are critically wounded!"
             )
 
-        # =========================
-        # PLAYER DEFEATED
-        # =========================
+    # =========================
+    # VICTORY
+    # =========================
 
-        if player.hp <= 0:
+    if player.hp > 0:
+
+        print(
+            "\n=== VICTORY ==="
+        )
+
+        try:
+
+            ai_narrate(
+
+                "Narrate the aftermath"
+                " of the battle victory."
+            )
+
+        except Exception:
 
             print(
-                "\nYou have fallen in battle..."
+                "\nThe battle is over."
             )
 
-            emit(
-                "player_defeated"
+        return True
+
+    # =========================
+    # DEFEAT
+    # =========================
+
+    print(
+        "\n=== DEFEAT ==="
+    )
+
+    emit(
+        "player_defeated"
+    )
+
+    return False
+
+# =========================
+# QUICK ENCOUNTER
+# =========================
+
+def quick_encounter(
+
+    region_name=None,
+
+    enemy_count=3
+
+):
+
+    # =========================
+    # LOCAL IMPORT
+    # =========================
+
+    from enemy_manager import (
+        generate_random_enemy
+    )
+
+    enemies = []
+
+    for _ in range(
+        enemy_count
+    ):
+
+        enemy = generate_random_enemy(
+            region_name
+        )
+
+        if enemy:
+
+            enemies.append(
+                enemy
             )
 
-            return False
+    return combat(
+        enemies
+    )
+
+# =========================
+# BOSS ENCOUNTER
+# =========================
+
+def boss_encounter(
+
+    boss_name
+
+):
+
+    # =========================
+    # LOCAL IMPORT
+    # =========================
+
+    from enemy_manager import (
+        create_enemy
+    )
+
+    boss = create_enemy(
+        boss_name
+    )
+
+    if not boss:
+
+        print(
+            "\nBoss not found."
+        )
+
+        return False
+
+    boss["boss"] = True
+
+    return combat(
+        [boss]
+    )

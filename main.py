@@ -1,193 +1,150 @@
-import random
-
-from world_state import (
-    update_world_state
+from game_loop import (
+    run_game
 )
 
-from session_manager import (
-    start_session,
-    end_session
-)
+from save_manager import (
 
-from save_system import (
-    save_game,
     load_game,
+
+    safe_load_game,
+
     autosave
 )
 
-from dm_brain import (
-    update_dm_brain
-)
-
-from consistency_engine import (
-    run_full_consistency_check
-)
-
-from memory_engine import (
-    compress_memories
-)
-
-from quest_generator import (
-    show_generated_quests
-)
-
-from dialogue_ai import (
-    random_conversation
-)
-
-from npc_manager import (
-    show_npc
-)
-
-from llm_bridge import (
-    ai_narrate
-)
-
 # =========================
-# GAME START
+# MAIN MENU
 # =========================
 
-print(
-    "\n=== AI DUNGEON MASTER ==="
-)
+def show_start_menu():
 
-print(
-    "\n1. New Game"
-)
+    print(
+        "\n=== AI RPG ==="
+    )
 
-print(
-    "2. Load Game"
-)
+    print(
+        "\n1. New Game"
+    )
 
-choice = input(
-    "\n> "
-).strip()
+    print(
+        "2. Load Game"
+    )
+
+    print(
+        "3. Safe Load"
+    )
+
+    print(
+        "4. Exit"
+    )
 
 # =========================
-# LOAD
+# START GAME
 # =========================
 
-if choice == "2":
+def start_new_game():
+
+    print(
+        "\nStarting new adventure..."
+    )
+
+    run_game()
+
+# =========================
+# LOAD GAME
+# =========================
+
+def continue_game():
+
+    print(
+        "\nLoading save..."
+    )
 
     load_game()
 
+    run_game()
+
 # =========================
-# SESSION START
+# SAFE LOAD
 # =========================
 
-start_session()
+def continue_safe_load():
+
+    print(
+        "\nRunning safe load..."
+    )
+
+    safe_load_game()
+
+    run_game()
 
 # =========================
 # MAIN LOOP
 # =========================
 
-game_running = True
+def main():
 
-while game_running:
+    running = True
 
-    # =========================
-    # WORLD UPDATE
-    # =========================
+    while running:
 
-    update_world_state()
+        show_start_menu()
 
-    compress_memories()
+        choice = input(
+            "\nChoose: "
+        ).strip()
 
-    run_full_consistency_check()
+        # =========================
+        # NEW GAME
+        # =========================
 
-    # =========================
-    # DM BRAIN
-    # =========================
+        if choice == "1":
 
-    update_dm_brain()
+            start_new_game()
 
-    # =========================
-    # RANDOM AI STORY MOMENT
-    # =========================
+        # =========================
+        # LOAD GAME
+        # =========================
 
-    roll = random.randint(
-        1,
-        100
-    )
+        elif choice == "2":
 
-    if roll <= 30:
+            continue_game()
 
-        random_conversation()
+        # =========================
+        # SAFE LOAD
+        # =========================
 
-    elif roll <= 60:
+        elif choice == "3":
 
-        try:
+            continue_safe_load()
 
-            ai_narrate(
+        # =========================
+        # EXIT
+        # =========================
 
-                "Narrate a mysterious "
-                "event happening in the world."
-            )
-
-        except Exception:
+        elif choice == "4":
 
             print(
-                "\nThe wind carries uneasy whispers."
+                "\nClosing game..."
             )
 
-    # =========================
-    # PLAYER MENU
-    # =========================
+            autosave()
 
-    print(
-        "\n========================"
-    )
+            running = False
 
-    print(
-        "1. Show Quests"
-    )
+        # =========================
+        # INVALID
+        # =========================
 
-    print(
-        "2. Save Game"
-    )
+        else:
 
-    print(
-        "3. End Session"
-    )
-
-    player_choice = input(
-        "\nChoose: "
-    ).strip()
-
-    # =========================
-    # QUESTS
-    # =========================
-
-    if player_choice == "1":
-
-        show_generated_quests()
-
-    # =========================
-    # SAVE
-    # =========================
-
-    elif player_choice == "2":
-
-        save_game()
-
-    # =========================
-    # END
-    # =========================
-
-    elif player_choice == "3":
-
-        game_running = False
-
-    autosave()
+            print(
+                "\nInvalid choice."
+            )
 
 # =========================
-# SESSION END
+# ENTRY POINT
 # =========================
 
-end_session()
+if __name__ == "__main__":
 
-save_game()
-
-print(
-    "\n=== SESSION COMPLETE ==="
-)
+    main()

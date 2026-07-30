@@ -59,6 +59,7 @@ args = "python preview.py"
 waitForPort = 5000
 
 [nix]
+packages = ["zip"]
 
 [deployment]
 deploymentTarget = "cloudrun"

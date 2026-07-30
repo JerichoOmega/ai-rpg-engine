@@ -1,510 +1,246 @@
-# =========================
-# LLM BRIDGE
-# =========================
-
-# This file acts as the bridge
-# between the game engine and
-# future AI language models.
-
-# Responsibilities:
-# - context collection
-# - prompt construction
-# - AI request routing
-# - response handling
-# - fallback management
-# - future API integration
-
-# =========================
-# IMPORTS
-# =========================
+import random
 
 from world_state import (
     world_state
 )
 
-from dm_brain import (
-    dm_state
+from campaign_manager import (
+    campaign_state,
+    generate_campaign_event
 )
 
-from campaign_manager import (
-    campaign_state
+from encounter_manager import (
+    generate_encounter,
+    generate_narrative_encounter
+)
+
+from npc_manager import (
+    random_npc_event
+)
+
+from region_manager import (
+    random_region_event
 )
 
 from memory_engine import (
     retrieve_memories
 )
 
-from npc_manager import (
-    NPCS
-)
-
-from region_manager import (
-    REGIONS
-)
-
-from prompt_manager import (
-
-    build_narration_prompt,
-
-    build_dialogue_prompt,
-
-    build_combat_prompt,
-
-    build_quest_prompt,
-
-    format_memories,
-
-    prioritize_memories
+from event_bus import (
+    emit,
+    subscribe
 )
 
 # =========================
-# CONTEXT COLLECTION
+# DM STATE
 # =========================
 
-def build_context():
+dm_state = {
 
-    # =========================
-    # BASIC WORLD INFO
-    # =========================
+    "current_focus": "exploration",
 
-    current_region = world_state[
-        "regions"
-    ]["current_region"]
+    "story_pressure": 25,
 
-    region_data = REGIONS.get(
-        current_region,
-        {}
+    "emotional_tone": "neutral",
+
+    "priority_threat": "shadow_cult",
+
+    "active_threads": []
+}
+
+# =========================
+# STORY PRESSURE
+# =========================
+
+def change_story_pressure(
+
+    amount
+
+):
+
+    dm_state[
+        "story_pressure"
+    ] += amount
+
+    dm_state[
+        "story_pressure"
+    ] = max(
+
+        0,
+
+        min(
+            dm_state[
+                "story_pressure"
+            ],
+            100
+        )
     )
 
-    world_chaos = world_state[
-        "world_conditions"
-    ]["world_chaos"]
+# =========================
+# EVALUATE STATE
+# =========================
 
-    # =========================
-    # CAMPAIGN INFO
-    # =========================
+def evaluate_story_state():
 
-    campaign_stage = campaign_state[
-        "campaign_stage"
-    ]
-
-    emotional_tone = dm_state[
-        "emotional_tone"
-    ]
-
-    story_pressure = dm_state[
+    pressure = dm_state[
         "story_pressure"
     ]
 
-    active_threads = dm_state[
-        "active_threads"
+    if pressure <= 25:
+
+        dm_state[
+            "current_focus"
+        ] = "recovery"
+
+    elif pressure <= 60:
+
+        dm_state[
+            "current_focus"
+        ] = "exploration"
+
+    else:
+
+        dm_state[
+            "current_focus"
+        ] = "crisis"
+
+# =========================
+# MAIN DM UPDATE
+# =========================
+
+def update_dm_brain():
+
+    evaluate_story_state()
+
+    focus = dm_state[
+        "current_focus"
     ]
 
-    # =========================
-    # MEMORIES
-    # =========================
-
-    memories = retrieve_memories(
-        "major_events"
-    )
-
-    prioritized_memories = (
-        prioritize_memories(
-            memories
-        )
-    )
-
-    formatted_memories = (
-        format_memories(
-            prioritized_memories,
-            limit=5
-        )
-    )
-
-    # =========================
-    # CONTEXT BLOCK
-    # =========================
-
-    context = f"""
-
-Current Region:
-{current_region}
-
-Region Description:
-{region_data.get('description', 'Unknown region.')}
-
-World Chaos:
-{world_chaos}
-
-Campaign Stage:
-{campaign_stage}
-
-Emotional Tone:
-{emotional_tone}
-
-Story Pressure:
-{story_pressure}
-
-Active Story Threads:
-{active_threads}
-
-Recent Major Memories:
-{formatted_memories}
-
-"""
-
-    return context
-
-# =========================
-# MOCK AI RESPONSE
-# =========================
-
-# Temporary placeholder until
-# real API integration exists.
-
-def generate_ai_response(
-
-    prompt
-
-):
-
     print(
-        "\n=== AI PROMPT ==="
+        "\n=== DM BRAIN ==="
     )
 
-    print(prompt)
+    # =========================
+    # RECOVERY
+    # =========================
 
-    mock_response = """
+    if focus == "recovery":
 
-[MOCK AI RESPONSE]
+        generate_narrative_encounter()
 
-Dark clouds gather over the ruined
-kingdom as distant bells echo
-through the cold night air...
+        random_npc_event()
 
-"""
+        try:
 
-    return mock_response
+            from llm_bridge import (
+                ai_narrate
+            )
 
-# =========================
-# AI NARRATION
-# =========================
+            ai_narrate(
 
-def ai_narrate(
+                "Generate a calm emotional "
+                "moment after recent conflict."
+            )
 
-    request,
+        except Exception:
 
-    emotional_tone=None,
+            print(
+                "\nThe world briefly calms."
+            )
 
-    narration_style="dark_fantasy"
+    # =========================
+    # EXPLORATION
+    # =========================
 
-):
+    elif focus == "exploration":
 
-    context = build_context()
-
-    if emotional_tone is None:
-
-        emotional_tone = dm_state[
-            "emotional_tone"
-        ]
-
-    prompt = build_narration_prompt(
-
-        context=context,
-
-        request=request,
-
-        emotional_tone=emotional_tone,
-
-        narration_style=narration_style
-    )
-
-    response = generate_ai_response(
-        prompt
-    )
-
-    print(
-        "\n=== AI NARRATION ==="
-    )
-
-    print(response)
-
-    return response
-
-# =========================
-# AI DIALOGUE
-# =========================
-
-def ai_dialogue(
-
-    npc_name,
-    request
-
-):
-
-    npc = NPCS.get(
-        npc_name
-    )
-
-    if not npc:
-
-        print(
-            "\nUnknown NPC."
+        roll = random.randint(
+            1,
+            100
         )
 
-        return None
+        if roll <= 50:
 
-    context = build_context()
+            try:
 
-    emotional_tone = dm_state[
-        "emotional_tone"
-    ]
+                from llm_bridge import (
+                    ai_generate_quest
+                )
 
-    prompt = build_dialogue_prompt(
+                ai_generate_quest()
 
-        npc_name=npc_name,
+            except Exception:
 
-        npc_role=npc[
-            "role"
-        ],
+                print(
+                    "\nRumors spread of danger."
+                )
 
-        relationship=npc[
-            "relationship"
-        ],
+        else:
 
-        context=context,
+            random_region_event()
 
-        request=request,
+    # =========================
+    # CRISIS
+    # =========================
 
-        emotional_tone=emotional_tone
-    )
+    elif focus == "crisis":
 
-    response = generate_ai_response(
-        prompt
-    )
+        generate_campaign_event()
 
-    print(
-        "\n=== AI DIALOGUE ==="
-    )
+        generate_encounter()
 
-    print(response)
+        try:
 
-    return response
+            from llm_bridge import (
+                ai_narrate
+            )
+
+            ai_narrate(
+
+                "Narrate a major campaign "
+                "crisis escalation."
+            )
+
+        except Exception:
+
+            print(
+                "\nThe campaign spirals into chaos."
+            )
 
 # =========================
-# AI COMBAT NARRATION
+# EVENT REACTIONS
 # =========================
 
-def ai_combat_narration(
+def on_enemy_killed(
 
-    enemy_name,
-    combat_state
+    event_data
 
 ):
 
-    context = build_context()
-
-    emotional_tone = "desperate"
-
-    prompt = build_combat_prompt(
-
-        enemy_name=enemy_name,
-
-        combat_state=combat_state,
-
-        context=context,
-
-        combat_style="cinematic",
-
-        emotional_tone=emotional_tone
+    change_story_pressure(
+        5
     )
 
-    response = generate_ai_response(
-        prompt
-    )
+def on_world_collapse(
 
-    print(
-        "\n=== AI COMBAT ==="
-    )
-
-    print(response)
-
-    return response
-
-# =========================
-# AI QUEST GENERATION
-# =========================
-
-def ai_generate_quest():
-
-    context = build_context()
-
-    emotional_tone = dm_state[
-        "emotional_tone"
-    ]
-
-    prompt = build_quest_prompt(
-
-        context=context,
-
-        emotional_tone=emotional_tone
-    )
-
-    response = generate_ai_response(
-        prompt
-    )
-
-    print(
-        "\n=== AI QUEST ==="
-    )
-
-    print(response)
-
-    return response
-
-# =========================
-# AI SCENE GENERATION
-# =========================
-
-def ai_generate_scene(
-
-    location,
-    scene_type="exploration"
+    event_data
 
 ):
 
-    request = f"""
-
-Generate a detailed scene for:
-
-Location:
-{location}
-
-Scene Type:
-{scene_type}
-
-Focus on:
-- atmosphere
-- immersion
-- environmental storytelling
-- emotional tone
-
-"""
-
-    return ai_narrate(
-        request
+    change_story_pressure(
+        25
     )
 
 # =========================
-# AI VILLAIN MONOLOGUE
+# REGISTER EVENTS
 # =========================
 
-def ai_villain_monologue(
+subscribe(
+    "enemy_killed",
+    on_enemy_killed
+)
 
-    villain_name,
-    villain_goal
-
-):
-
-    request = f"""
-
-Generate a villain monologue.
-
-Villain:
-{villain_name}
-
-Goal:
-{villain_goal}
-
-The monologue should:
-- feel intelligent
-- feel threatening
-- reflect campaign history
-- maintain emotional tension
-
-"""
-
-    return ai_narrate(
-
-        request,
-
-        emotional_tone="desperate"
-    )
-
-# =========================
-# AI WORLD EVENT
-# =========================
-
-def ai_world_event():
-
-    request = """
-
-Generate a major dynamic world event.
-
-The event should:
-- impact the campaign world
-- reflect faction tensions
-- escalate narrative pressure
-- feel immersive
-- create future consequences
-
-"""
-
-    return ai_narrate(
-
-        request,
-
-        emotional_tone="uncertain"
-    )
-
-# =========================
-# AI EMOTIONAL MOMENT
-# =========================
-
-def ai_emotional_scene(
-
-    situation
-
-):
-
-    request = f"""
-
-Generate an emotional character moment.
-
-Situation:
-{situation}
-
-Focus on:
-- character emotion
-- atmosphere
-- subtle storytelling
-- immersion
-
-"""
-
-    return ai_narrate(
-
-        request,
-
-        emotional_tone="hopeful"
-    )
-
-# =========================
-# FUTURE API PLACEHOLDER
-# =========================
-
-# Future real integrations:
-#
-# - OpenAI API
-# - Claude API
-# - Local LLMs
-# - Streaming responses
-# - Structured JSON outputs
-# - Token optimization
-# - Context compression
-#
-# Replace:
-# generate_ai_response()
-#
-# with:
-# real API calls later.
+subscribe(
+    "world_collapse",
+    on_world_collapse
+)

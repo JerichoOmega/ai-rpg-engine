@@ -1,14 +1,227 @@
 from world_state import (
+
     world_state,
+
     remember_choice,
+
     remember_major_event,
+
     discover_lore,
+
     activate_world_event
 )
 
 from event_bus import (
-    subscribe
+
+    subscribe,
+
+    emit
 )
+
+# =========================
+# STORY STATE
+# =========================
+
+story_state = {
+
+    "campaign_phase": 1,
+
+    "active_theme": "survival",
+
+    "main_story_arc": "shadow_rising",
+
+    "story_progress": 0,
+
+    "major_story_flags": {}
+}
+
+# =========================
+# STORY THEMES
+# =========================
+
+STORY_THEMES = {
+
+    "survival": {
+
+        "description":
+            "The world struggles to endure."
+    },
+
+    "revenge": {
+
+        "description":
+            "Old wounds fuel conflict."
+    },
+
+    "corruption": {
+
+        "description":
+            "Darkness spreads across the land."
+    },
+
+    "redemption": {
+
+        "description":
+            "Hope rises from despair."
+    },
+
+    "conquest": {
+
+        "description":
+            "Power reshapes the world."
+    }
+}
+
+# =========================
+# ADVANCE STORY
+# =========================
+
+def advance_story(
+
+    amount
+
+):
+
+    story_state[
+        "story_progress"
+    ] += amount
+
+    print(
+        f"\nStory Progress:"
+        f" {story_state['story_progress']}"
+    )
+
+    evaluate_story_phase()
+
+# =========================
+# STORY PHASES
+# =========================
+
+def evaluate_story_phase():
+
+    progress = story_state[
+        "story_progress"
+    ]
+
+    current_phase = story_state[
+        "campaign_phase"
+    ]
+
+    # =========================
+    # PHASE 2
+    # =========================
+
+    if progress >= 25 and current_phase < 2:
+
+        story_state[
+            "campaign_phase"
+        ] = 2
+
+        print(
+            "\nThe world grows unstable."
+        )
+
+        activate_world_event(
+            "corruption_surge"
+        )
+
+    # =========================
+    # PHASE 3
+    # =========================
+
+    elif progress >= 50 and current_phase < 3:
+
+        story_state[
+            "campaign_phase"
+        ] = 3
+
+        print(
+            "\nFactions spiral toward war."
+        )
+
+        activate_world_event(
+            "civil_war"
+        )
+
+    # =========================
+    # PHASE 4
+    # =========================
+
+    elif progress >= 75 and current_phase < 4:
+
+        story_state[
+            "campaign_phase"
+        ] = 4
+
+        print(
+            "\nThe world nears collapse."
+        )
+
+        activate_world_event(
+            "void_breach"
+        )
+
+# =========================
+# CHANGE STORY THEME
+# =========================
+
+def change_story_theme(
+
+    theme_name
+
+):
+
+    if theme_name not in STORY_THEMES:
+
+        print(
+            "\nUnknown story theme."
+        )
+
+        return
+
+    story_state[
+        "active_theme"
+    ] = theme_name
+
+    print(
+        f"\nStory Theme Changed:"
+        f" {theme_name}"
+    )
+
+# =========================
+# MAIN STORY ARC
+# =========================
+
+def set_main_story_arc(
+
+    arc_name
+
+):
+
+    story_state[
+        "main_story_arc"
+    ] = arc_name
+
+    print(
+        f"\nMain Story Arc:"
+        f" {arc_name}"
+    )
+
+# =========================
+# STORY FLAGS
+# =========================
+
+def set_story_flag(
+
+    flag_name,
+
+    value=True
+
+):
+
+    story_state[
+        "major_story_flags"
+    ][flag_name] = value
 
 # =========================
 # ENEMY KILLED
@@ -24,14 +237,14 @@ def on_enemy_killed(
         "enemy_name"
     )
 
-    # =========================
-    # CULT TRACKING
-    # =========================
-
-    if enemy_name == "hidden cult":
+    if enemy_name == "cultist":
 
         remember_choice(
             "fighting_cult"
+        )
+
+        advance_story(
+            2
         )
 
         print(
@@ -43,23 +256,22 @@ def on_enemy_killed(
             "factions"
         ]["shadow_cult"] -= 2
 
-    # =========================
-    # DRAGON MEMORY
-    # =========================
-
-    elif enemy_name == "ancient dragon":
+    elif enemy_name == "ashen_guardian":
 
         remember_major_event(
-            "dragon_slain"
+            "guardian_slain"
         )
 
-        world_state[
-            "story_memory"
-        ]["dragon_slain"] = True
+        set_story_flag(
+            "guardian_slain"
+        )
+
+        advance_story(
+            10
+        )
 
         print(
-            "\nThe world trembles after"
-            " the dragon's death."
+            "\nThe balance of power shifts."
         )
 
 # =========================
@@ -72,38 +284,32 @@ def on_quest_completed(
 
 ):
 
-    quest_name = event_data.get(
-        "quest_name"
+    quest = event_data.get(
+        "quest"
     )
 
-    # =========================
-    # CULT HUNT
-    # =========================
+    if not quest:
 
-    if quest_name == "Cult Hunt":
+        return
 
-        activate_world_event(
-            "Cult Retaliation"
-        )
+    quest_type = quest.get(
+        "type"
+    )
 
-        print(
-            "\nThe Shadow Cult begins"
-            " hunting you."
-        )
+    advance_story(
+        5
+    )
 
-    # =========================
-    # DRAGON SLAYER
-    # =========================
-
-    elif quest_name == "Dragon Slayer":
-
-        discover_lore(
-            "dragon_prophecy"
-        )
+    if quest_type == "faction":
 
         print(
-            "\nAncient prophecies begin"
-            " resurfacing across the world."
+            "\nPolitical tensions rise."
+        )
+
+    elif quest_type == "world_event":
+
+        print(
+            "\nThe world changes forever."
         )
 
 # =========================
@@ -123,6 +329,10 @@ def on_region_discovered(
     print(
         f"\nYou have entered"
         f" {region_name}."
+    )
+
+    advance_story(
+        1
     )
 
     if region_name == "arcane_ruins":
@@ -156,6 +366,10 @@ def on_player_choice(
             "story_memory"
         ]["merciful"] = True
 
+        change_story_theme(
+            "redemption"
+        )
+
         print(
             "\nYour compassion becomes"
             " widely known."
@@ -167,8 +381,22 @@ def on_player_choice(
             "story_memory"
         ]["ruthless"] = True
 
+        change_story_theme(
+            "conquest"
+        )
+
         print(
             "\nFear spreads in your wake."
+        )
+
+    elif choice == "corrupt":
+
+        change_story_theme(
+            "corruption"
+        )
+
+        print(
+            "\nDarkness consumes your path."
         )
 
 # =========================
@@ -196,6 +424,10 @@ def on_world_event(
             "world_conditions"
         ]["world_chaos"] += 5
 
+        advance_story(
+            5
+        )
+
         print(
             "\nCult assassins spread"
             " chaos across the land."
@@ -218,6 +450,40 @@ def on_companion_joined(
     print(
         f"\n{companion_name}"
         " becomes part of your legend."
+    )
+
+    advance_story(
+        3
+    )
+
+# =========================
+# STORY SUMMARY
+# =========================
+
+def show_story_summary():
+
+    print(
+        "\n=== STORY SUMMARY ==="
+    )
+
+    print(
+        f"Campaign Phase:"
+        f" {story_state['campaign_phase']}"
+    )
+
+    print(
+        f"Theme:"
+        f" {story_state['active_theme']}"
+    )
+
+    print(
+        f"Story Arc:"
+        f" {story_state['main_story_arc']}"
+    )
+
+    print(
+        f"Story Progress:"
+        f" {story_state['story_progress']}"
     )
 
 # =========================

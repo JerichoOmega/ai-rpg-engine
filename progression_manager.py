@@ -1,29 +1,9 @@
-from player import (
-    player
+from world_state import (
+    world_state
 )
 
 from event_bus import (
     emit
-)
-
-from skill_tree import (
-    gain_skill_point
-)
-
-from dungeon_manager import (
-    evolve_dungeons
-)
-
-from region_manager import (
-    evolve_world_regions
-)
-
-from settlement_manager import (
-    evolve_settlements
-)
-
-from economy_manager import (
-    evolve_economy
 )
 
 # =========================
@@ -38,35 +18,16 @@ progression_state = {
 
     "xp_to_next_level": 100,
 
-    "world_tier": 1,
+    "skill_points": 0,
 
-    "difficulty_scale": 1.0
+    "world_tier": 1
 }
 
 # =========================
-# XP REWARDS
+# ADD EXPERIENCE
 # =========================
 
-XP_REWARDS = {
-
-    "enemy_defeat": 25,
-
-    "boss_defeat": 150,
-
-    "quest_complete": 100,
-
-    "region_discovery": 50,
-
-    "dungeon_clear": 200,
-
-    "legendary_event": 500
-}
-
-# =========================
-# GAIN XP
-# =========================
-
-def gain_xp(
+def add_experience(
 
     amount
 
@@ -77,184 +38,190 @@ def gain_xp(
     ] += amount
 
     print(
-        f"\nGained"
-        f" {amount}"
-        " XP."
+        f"\nYou gained"
+        f" {amount} XP."
     )
 
     check_level_up()
 
 # =========================
-# CHECK LEVEL UP
+# LEVEL UP CHECK
 # =========================
 
 def check_level_up():
 
-    current_xp = progression_state[
-        "xp"
-    ]
+    while (
 
-    xp_needed = progression_state[
-        "xp_to_next_level"
-    ]
+        progression_state["xp"]
 
-    while current_xp >= xp_needed:
-
-        progression_state[
-            "xp"
-        ] -= xp_needed
-
-        level_up()
-
-        current_xp = progression_state[
-            "xp"
-        ]
-
-        xp_needed = progression_state[
-            "xp_to_next_level"
-        ]
-
-# =========================
-# LEVEL UP
-# =========================
-
-def level_up():
-
-    progression_state[
-        "level"
-    ] += 1
-
-    level = progression_state[
-        "level"
-    ]
-
-    # =========================
-    # XP SCALING
-    # =========================
-
-    progression_state[
-        "xp_to_next_level"
-    ] = int(
+        >=
 
         progression_state[
             "xp_to_next_level"
-        ] * 1.35
-    )
+        ]
 
-    # =========================
-    # PLAYER STAT GROWTH
-    # =========================
+    ):
 
-    player.max_hp += 10
+        progression_state[
+            "xp"
+        ] -= progression_state[
+            "xp_to_next_level"
+        ]
 
-    player.hp = player.max_hp
+        progression_state[
+            "level"
+        ] += 1
 
-    player.attack_bonus += 2
+        progression_state[
+            "xp_to_next_level"
+        ] += 50
 
-    player.defense += 1
+        progression_state[
+            "skill_points"
+        ] += 1
 
-    # =========================
-    # SKILL POINT REWARD
-    # =========================
+        # =========================
+        # PLAYER SCALING
+        # =========================
 
-    gain_skill_point(
-        1
-    )
+        player_data = world_state[
+            "player"
+        ]
 
-    print(
-        f"\n=== LEVEL UP ==="
-    )
+        player_data[
+            "max_hp"
+        ] += 20
 
-    print(
-        f"Reached Level {level}!"
-    )
+        player_data[
+            "hp"
+        ] = player_data[
+            "max_hp"
+        ]
 
-    print(
-        "\nStat increases:"
-    )
+        player_data[
+            "attack_bonus"
+        ] += 2
 
-    print(
-        "+10 Max HP"
-    )
+        print(
+            "\n=== LEVEL UP ==="
+        )
 
-    print(
-        "+2 Attack"
-    )
+        print(
+            f"You are now level"
+            f" {progression_state['level']}!"
+        )
 
-    print(
-        "+1 Defense"
-    )
+        print(
+            "\n+20 Max HP"
+        )
 
-    emit(
+        print(
+            "+2 Attack Bonus"
+        )
 
-        "player_level_up",
+        print(
+            "+1 Skill Point"
+        )
 
-        level=level
-    )
+        emit(
 
-    # =========================
-    # WORLD SCALING
-    # =========================
+            "player_level_up",
 
-    if level % 5 == 0:
+            level=progression_state[
+                "level"
+            ]
+        )
 
-        increase_world_tier()
+        # =========================
+        # WORLD TIER SCALING
+        # =========================
+
+        update_world_tier()
 
 # =========================
 # WORLD TIER
 # =========================
 
-def increase_world_tier():
+def update_world_tier():
 
-    progression_state[
+    level = progression_state[
+        "level"
+    ]
+
+    old_tier = progression_state[
         "world_tier"
-    ] += 1
+    ]
 
-    progression_state[
-        "difficulty_scale"
-    ] += 0.25
+    if level >= 20:
+
+        progression_state[
+            "world_tier"
+        ] = 5
+
+    elif level >= 15:
+
+        progression_state[
+            "world_tier"
+        ] = 4
+
+    elif level >= 10:
+
+        progression_state[
+            "world_tier"
+        ] = 3
+
+    elif level >= 5:
+
+        progression_state[
+            "world_tier"
+        ] = 2
+
+    else:
+
+        progression_state[
+            "world_tier"
+        ] = 1
+
+    new_tier = progression_state[
+        "world_tier"
+    ]
+
+    if new_tier > old_tier:
+
+        print(
+            f"\n=== WORLD TIER"
+            f" INCREASED:"
+            f" {new_tier} ==="
+        )
+
+        emit(
+
+            "world_tier_changed",
+
+            tier=new_tier
+        )
+
+# =========================
+# SCALE ENEMY POWER
+# =========================
+
+def scale_enemy_power(
+
+    base_value
+
+):
 
     tier = progression_state[
         "world_tier"
     ]
 
-    print(
-        f"\n=== WORLD TIER INCREASED ==="
+    multiplier = 1 + (
+        (tier - 1) * 0.35
     )
 
-    print(
-        f"World Tier:"
-        f" {tier}"
+    return int(
+        base_value * multiplier
     )
-
-    # =========================
-    # EVOLVE WORLD
-    # =========================
-
-    evolve_world_regions()
-
-    evolve_settlements()
-
-    evolve_economy()
-
-    evolve_dungeons()
-
-    emit(
-
-        "world_tier_increased",
-
-        tier=tier
-    )
-
-# =========================
-# GET PLAYER LEVEL
-# =========================
-
-def get_player_level():
-
-    return progression_state[
-        "level"
-    ]
 
 # =========================
 # GET WORLD TIER
@@ -267,73 +234,46 @@ def get_world_tier():
     ]
 
 # =========================
-# SCALE ENEMY
+# QUEST REWARDS
 # =========================
 
-def scale_enemy_power(
+def reward_quest_completion(
 
-    base_power
+    xp_reward=50,
+
+    gold_reward=25
 
 ):
 
-    scale = progression_state[
-        "difficulty_scale"
-    ]
-
-    return int(
-        base_power * scale
+    add_experience(
+        xp_reward
     )
 
-# =========================
-# REWARD HELPERS
-# =========================
+    world_state[
+        "player"
+    ][
+        "gold"
+    ] += gold_reward
 
-def reward_enemy_defeat():
-
-    gain_xp(
-        XP_REWARDS[
-            "enemy_defeat"
-        ]
+    print(
+        "\nQuest rewards:"
     )
 
-def reward_boss_defeat():
-
-    gain_xp(
-        XP_REWARDS[
-            "boss_defeat"
-        ]
+    print(
+        f"+{xp_reward} XP"
     )
 
-def reward_quest_completion():
-
-    gain_xp(
-        XP_REWARDS[
-            "quest_complete"
-        ]
+    print(
+        f"+{gold_reward} Gold"
     )
 
-def reward_region_discovery():
+    emit(
 
-    gain_xp(
-        XP_REWARDS[
-            "region_discovery"
-        ]
-    )
+        "quest_reward_given",
 
-def reward_dungeon_clear():
+        xp=xp_reward,
 
-    gain_xp(
-        XP_REWARDS[
-            "dungeon_clear"
-        ]
-    )
-
-def reward_legendary_event():
-
-    gain_xp(
-        XP_REWARDS[
-            "legendary_event"
-        ]
+        gold=gold_reward
     )
 
 # =========================
@@ -359,149 +299,11 @@ def show_progression():
     )
 
     print(
+        f"Skill Points:"
+        f" {progression_state['skill_points']}"
+    )
+
+    print(
         f"World Tier:"
         f" {progression_state['world_tier']}"
     )
-
-    print(
-        f"Difficulty Scale:"
-        f" {progression_state['difficulty_scale']}"
-    )
-
-# =========================
-# PROGRESSION SUMMARY
-# =========================
-
-def show_progression_summary():
-
-    print(
-        "\n=== CHARACTER SUMMARY ==="
-    )
-
-    print(
-        f"Level:"
-        f" {progression_state['level']}"
-    )
-
-    print(
-        f"HP:"
-        f" {player.hp}"
-        f"/"
-        f"{player.max_hp}"
-    )
-
-    print(
-        f"Attack:"
-        f" {player.attack_bonus}"
-    )
-
-    print(
-        f"Defense:"
-        f" {player.defense}"
-    )
-
-# =========================
-# MILESTONE CHECK
-# =========================
-
-def check_progression_milestones():
-
-    level = progression_state[
-        "level"
-    ]
-
-    if level == 10:
-
-        print(
-            "\nYou are becoming"
-            " a legendary adventurer."
-        )
-
-    elif level == 20:
-
-        print(
-            "\nYour actions now shape"
-            " entire kingdoms."
-        )
-
-    elif level == 30:
-
-        print(
-            "\nThe world trembles"
-            " at your power."
-        )
-
-# =========================
-# EVENT XP INTEGRATION
-# =========================
-
-def on_enemy_killed(
-
-    event_data
-
-):
-
-    reward_enemy_defeat()
-
-def on_boss_defeated(
-
-    event_data
-
-):
-
-    reward_boss_defeat()
-
-def on_quest_completed(
-
-    event_data
-
-):
-
-    reward_quest_completion()
-
-def on_region_discovered(
-
-    event_data
-
-):
-
-    reward_region_discovery()
-
-def on_dungeon_cleared(
-
-    event_data
-
-):
-
-    reward_dungeon_clear()
-
-# =========================
-# REGISTER EVENTS
-# =========================
-
-from event_bus import subscribe
-
-subscribe(
-    "enemy_killed",
-    on_enemy_killed
-)
-
-subscribe(
-    "boss_defeated",
-    on_boss_defeated
-)
-
-subscribe(
-    "quest_completed",
-    on_quest_completed
-)
-
-subscribe(
-    "region_discovered",
-    on_region_discovered
-)
-
-subscribe(
-    "dungeon_cleared",
-    on_dungeon_cleared
-)

@@ -2,442 +2,15 @@ import random
 
 from enemy_manager import (
 
-    generate_random_enemy,
-
-    create_elite_enemy,
-
-    create_legendary_enemy
+    generate_enemy_group
 )
 
-from progression_manager import (
-    get_world_tier
-)
-
-from region_manager import (
-    REGIONS
+from event_bus import (
+    emit
 )
 
 # =========================
-# REGION ENCOUNTER TABLES
-# =========================
-
-REGION_ENCOUNTERS = {
-
-    "shadow_marsh": {
-
-        "common": [
-
-            "cultist",
-
-            "shadow_beast"
-        ],
-
-        "rare": [
-
-            "rogue_mage"
-        ],
-
-        "boss": [
-
-            "ashen_guardian"
-        ]
-    },
-
-    "arcane_ruins": {
-
-        "common": [
-
-            "rogue_mage"
-        ],
-
-        "rare": [
-
-            "shadow_beast"
-        ],
-
-        "boss": [
-
-            "ashen_guardian"
-        ]
-    },
-
-    "ashen_wastes": {
-
-        "common": [
-
-            "shadow_beast"
-        ],
-
-        "rare": [
-
-            "cultist"
-        ],
-
-        "boss": [
-
-            "ashen_guardian"
-        ]
-    }
-}
-
-# =========================
-# GENERATE ENCOUNTER
-# =========================
-
-def generate_encounter(
-
-    region_name,
-
-    encounter_type="random"
-
-):
-
-    encounter_table = REGION_ENCOUNTERS.get(
-        region_name
-    )
-
-    if not encounter_table:
-
-        print(
-            "\nNo encounter data found."
-        )
-
-        return []
-
-    world_tier = get_world_tier()
-
-    enemies = []
-
-    # =========================
-    # BOSS ENCOUNTER
-    # =========================
-
-    if encounter_type == "boss":
-
-        boss_name = random.choice(
-
-            encounter_table[
-                "boss"
-            ]
-        )
-
-        boss = generate_random_enemy(
-            region_name
-        )
-
-        if boss:
-
-            boss["boss"] = True
-
-            enemies.append(
-                boss
-            )
-
-        return enemies
-
-    # =========================
-    # LEGENDARY ENCOUNTER
-    # =========================
-
-    legendary_roll = random.randint(
-        1,
-        1000
-    )
-
-    if legendary_roll == 1000:
-
-        enemies.append(
-            create_legendary_enemy()
-        )
-
-        return enemies
-
-    # =========================
-    # ENCOUNTER SIZE
-    # =========================
-
-    enemy_count = random.randint(
-        1,
-        3 + world_tier
-    )
-
-    # =========================
-    # GENERATE ENEMIES
-    # =========================
-
-    for _ in range(enemy_count):
-
-        rarity_roll = random.randint(
-            1,
-            100
-        )
-
-        # =========================
-        # RARE ENEMY
-        # =========================
-
-        if rarity_roll <= 15:
-
-            enemy_name = random.choice(
-
-                encounter_table[
-                    "rare"
-                ]
-            )
-
-        # =========================
-        # COMMON ENEMY
-        # =========================
-
-        else:
-
-            enemy_name = random.choice(
-
-                encounter_table[
-                    "common"
-                ]
-            )
-
-        # =========================
-        # ELITE CHANCE
-        # =========================
-
-        elite_roll = random.randint(
-            1,
-            100
-        )
-
-        if elite_roll <= 10:
-
-            enemy = create_elite_enemy(
-                enemy_name
-            )
-
-        else:
-
-            enemy = generate_random_enemy(
-                region_name
-            )
-
-        if enemy:
-
-            enemies.append(
-                enemy
-            )
-
-    return enemies
-
-# =========================
-# AMBUSH ENCOUNTER
-# =========================
-
-def generate_ambush(
-
-    region_name
-
-):
-
-    print(
-        "\n=== AMBUSH ==="
-    )
-
-    enemies = generate_encounter(
-        region_name
-    )
-
-    for enemy in enemies:
-
-        enemy[
-            "damage"
-        ] += 5
-
-    return enemies
-
-# =========================
-# NIGHT ENCOUNTER
-# =========================
-
-def generate_night_encounter(
-
-    region_name
-
-):
-
-    print(
-        "\n=== NIGHT ENCOUNTER ==="
-    )
-
-    enemies = generate_encounter(
-        region_name
-    )
-
-    for enemy in enemies:
-
-        enemy[
-            "crit_chance"
-        ] += 10
-
-    return enemies
-
-# =========================
-# WEATHER MODIFIER
-# =========================
-
-def apply_weather_modifier(
-
-    enemies,
-
-    weather
-
-):
-
-    if weather == "storm":
-
-        for enemy in enemies:
-
-            enemy[
-                "evasion"
-            ] += 5
-
-    elif weather == "foggy":
-
-        for enemy in enemies:
-
-            enemy[
-                "crit_chance"
-            ] += 5
-
-    elif weather == "ash_storm":
-
-        for enemy in enemies:
-
-            enemy[
-                "damage"
-            ] += 5
-
-    return enemies
-
-# =========================
-# FACTION ENCOUNTER
-# =========================
-
-def generate_faction_encounter(
-
-    faction_name
-
-):
-
-    enemies = []
-
-    for enemy_name in [
-
-        "cultist",
-
-        "rogue_mage",
-
-        "shadow_beast"
-    ]:
-
-        enemy = generate_random_enemy()
-
-        if not enemy:
-
-            continue
-
-        if enemy[
-            "faction"
-        ] == faction_name:
-
-            enemies.append(
-                enemy
-            )
-
-    return enemies
-
-# =========================
-# ELITE PATROL
-# =========================
-
-def generate_elite_patrol(
-
-    region_name
-
-):
-
-    print(
-        "\n=== ELITE PATROL ==="
-    )
-
-    patrol_size = random.randint(
-        2,
-        4
-    )
-
-    enemies = []
-
-    for _ in range(
-        patrol_size
-    ):
-
-        enemy_name = random.choice(
-
-            REGION_ENCOUNTERS[
-                region_name
-            ]["common"]
-        )
-
-        enemy = create_elite_enemy(
-            enemy_name
-        )
-
-        enemies.append(
-            enemy
-        )
-
-    return enemies
-
-# =========================
-# ENCOUNTER SUMMARY
-# =========================
-
-def show_encounter(
-
-    enemies
-
-):
-
-    print(
-        "\n=== ENCOUNTER ==="
-    )
-
-    for enemy in enemies:
-
-        print(
-            f"\n{enemy['name']}"
-        )
-
-        print(
-            f"HP:"
-            f" {enemy['hp']}"
-        )
-
-        print(
-            f"Damage:"
-            f" {enemy['damage']}"
-        )
-
-        print(
-            f"Elite:"
-            f" {enemy['elite']}"
-        )
-
-        print(
-            f"Boss:"
-            f" {enemy['boss']}"
-        )
-
-# =========================
-# DANGER LEVEL
+# ENCOUNTER DIFFICULTY
 # =========================
 
 def calculate_encounter_difficulty(
@@ -446,37 +19,77 @@ def calculate_encounter_difficulty(
 
 ):
 
-    difficulty = 0
+    total_power = 0
 
     for enemy in enemies:
 
-        difficulty += enemy[
-            "damage"
+        total_power += enemy[
+            "hp"
         ]
 
-        difficulty += int(
-            enemy["hp"] / 10
+        total_power += (
+            enemy["damage"] * 2
         )
 
         if enemy["elite"]:
 
-            difficulty += 25
+            total_power += 50
 
         if enemy["boss"]:
 
-            difficulty += 100
+            total_power += 150
 
-    return difficulty
+    if total_power < 100:
+
+        return "Easy"
+
+    elif total_power < 250:
+
+        return "Medium"
+
+    elif total_power < 450:
+
+        return "Hard"
+
+    return "Deadly"
 
 # =========================
-# SHOW DIFFICULTY
+# GENERATE ENCOUNTER
 # =========================
 
-def show_encounter_difficulty(
+def generate_encounter(
 
-    enemies
+    region_name=None
 
 ):
+
+    roll = random.randint(
+        1,
+        100
+    )
+
+    if roll <= 40:
+
+        enemy_count = 1
+
+    elif roll <= 75:
+
+        enemy_count = 2
+
+    elif roll <= 95:
+
+        enemy_count = 3
+
+    else:
+
+        enemy_count = 4
+
+    enemies = generate_enemy_group(
+
+        count=enemy_count,
+
+        region_name=region_name
+    )
 
     difficulty = (
         calculate_encounter_difficulty(
@@ -485,57 +98,192 @@ def show_encounter_difficulty(
     )
 
     print(
-        "\n=== ENCOUNTER DIFFICULTY ==="
+        "\n=== ENCOUNTER ==="
     )
 
     print(
-        f"Difficulty Score:"
-        f" {difficulty}"
+        f"\nDifficulty: {difficulty}"
     )
+
+    for enemy in enemies:
+
+        print(
+            f"- {enemy['name']}"
+        )
+
+    emit(
+
+        "encounter_started",
+
+        difficulty=difficulty,
+
+        enemy_count=len(
+            enemies
+        )
+    )
+
+    return enemies
+
+# =========================
+# NARRATIVE ENCOUNTER
+# =========================
+
+def generate_narrative_encounter():
+
+    print(
+        "\nA story event unfolds."
+    )
+
+    emit(
+        "narrative_encounter"
+    )
+
+    return {
+
+        "type": "narrative"
+    }
+
+# =========================
+# AMBUSH ENCOUNTER
+# =========================
+
+def ambush_encounter(
+
+    region_name=None
+
+):
+
+    print(
+        "\nYou are ambushed!"
+    )
+
+    enemies = generate_enemy_group(
+
+        count=random.randint(
+            2,
+            5
+        ),
+
+        region_name=region_name
+    )
+
+    for enemy in enemies:
+
+        enemy["damage"] += 2
+
+    emit(
+        "player_ambushed"
+    )
+
+    return enemies
+
+# =========================
+# ELITE ENCOUNTER
+# =========================
+
+def elite_encounter(
+
+    region_name=None
+
+):
+
+    print(
+        "\nAn elite enemy appears!"
+    )
+
+    enemies = generate_enemy_group(
+
+        count=2,
+
+        region_name=region_name
+    )
+
+    for enemy in enemies:
+
+        enemy["elite"] = True
+
+        enemy["hp"] += 30
+
+        enemy["max_hp"] += 30
+
+        enemy["damage"] += 5
+
+    emit(
+        "elite_encounter"
+    )
+
+    return enemies
+
+# =========================
+# BOSS ENCOUNTER
+# =========================
+
+def boss_encounter(
+
+    region_name=None
+
+):
+
+    print(
+        "\nA terrifying boss emerges!"
+    )
+
+    enemies = generate_enemy_group(
+
+        count=1,
+
+        region_name=region_name
+    )
+
+    boss = enemies[0]
+
+    boss["boss"] = True
+
+    boss["elite"] = True
+
+    boss["hp"] += 150
+
+    boss["max_hp"] += 150
+
+    boss["damage"] += 15
+
+    emit(
+
+        "boss_encounter_started",
+
+        boss_name=boss[
+            "name"
+        ]
+    )
+
+    return enemies
 
 # =========================
 # WORLD EVENT ENCOUNTER
 # =========================
 
-def generate_world_event_encounter():
+def generate_world_event_encounter(
+
+    event_name=None
+
+):
 
     print(
-        "\n=== WORLD EVENT ==="
+        "\nA world event encounter begins!"
     )
 
-    event_types = [
+    if event_name == "Cult Retaliation":
 
-        "corruption_surge",
-
-        "demonic_invasion",
-
-        "undead_rising",
-
-        "void_breach"
-    ]
-
-    event_name = random.choice(
-        event_types
-    )
-
-    print(
-        f"\nEvent:"
-        f" {event_name}"
-    )
-
-    enemies = []
-
-    enemy_count = random.randint(
-        3,
-        6
-    )
-
-    for _ in range(enemy_count):
-
-        enemies.append(
-            create_elite_enemy(
-                "shadow_beast"
-            )
+        enemies = generate_enemy_group(
+            count=4
         )
 
-    return enemies
+        for enemy in enemies:
+
+            enemy["damage"] += 3
+
+        return enemies
+
+    return generate_enemy_group(
+        count=3
+    )

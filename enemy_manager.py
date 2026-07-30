@@ -1,190 +1,93 @@
 import random
 
-from progression_manager import (
-    scale_enemy_power,
-    get_world_tier
+from world_state import (
+    world_state
 )
 
-from status_effects import (
-    add_status_effect
+from event_bus import (
+    emit
 )
 
 # =========================
 # ENEMY DATABASE
 # =========================
 
-ENEMIES = {
+enemy_database = {
 
-    "cultist": {
+    "goblin": {
 
-        "type": "humanoid",
+        "name": "Goblin",
 
-        "faction": "shadow_cult",
+        "hp": 35,
 
-        "base_hp": 35,
+        "max_hp": 35,
 
-        "base_damage": 8,
+        "damage": 8,
+
+        "elite": False,
+
+        "boss": False,
 
         "crit_chance": 5,
 
-        "evasion": 3,
-
-        "resistances": [
-
-            "corruption"
-        ],
-
-        "weaknesses": [
-
-            "fire"
-        ],
-
-        "abilities": [
-
-            "dark_strike"
-        ],
-
-        "loot_table": [
-
-            "gold",
-
-            "cult_amulet"
-        ],
-
-        "regions": [
-
-            "shadow_marsh"
-        ]
+        "status_effects": []
     },
 
-    "shadow_beast": {
+    "skeleton": {
 
-        "type": "monster",
+        "name": "Skeleton",
 
-        "faction": "none",
+        "hp": 45,
 
-        "base_hp": 55,
+        "max_hp": 45,
 
-        "base_damage": 12,
+        "damage": 10,
+
+        "elite": False,
+
+        "boss": False,
+
+        "crit_chance": 8,
+
+        "status_effects": []
+    },
+
+    "orc": {
+
+        "name": "Orc Warrior",
+
+        "hp": 65,
+
+        "max_hp": 65,
+
+        "damage": 14,
+
+        "elite": True,
+
+        "boss": False,
 
         "crit_chance": 10,
 
-        "evasion": 8,
-
-        "resistances": [
-
-            "poison"
-        ],
-
-        "weaknesses": [
-
-            "holy"
-        ],
-
-        "abilities": [
-
-            "bleed_attack"
-        ],
-
-        "loot_table": [
-
-            "shadow_blade"
-        ],
-
-        "regions": [
-
-            "shadow_marsh",
-
-            "ashen_wastes"
-        ]
+        "status_effects": []
     },
 
-    "rogue_mage": {
+    "dragon": {
 
-        "type": "mage",
+        "name": "Ancient Dragon",
 
-        "faction": "mages_guild",
+        "hp": 250,
 
-        "base_hp": 45,
+        "max_hp": 250,
 
-        "base_damage": 15,
+        "damage": 35,
 
-        "crit_chance": 12,
+        "elite": True,
 
-        "evasion": 5,
+        "boss": True,
 
-        "resistances": [
+        "crit_chance": 20,
 
-            "arcane"
-        ],
-
-        "weaknesses": [
-
-            "physical"
-        ],
-
-        "abilities": [
-
-            "arcane_burst",
-
-            "burn"
-        ],
-
-        "loot_table": [
-
-            "mana_crystal"
-        ],
-
-        "regions": [
-
-            "arcane_ruins"
-        ]
-    },
-
-    "ashen_guardian": {
-
-        "type": "boss",
-
-        "faction": "ancient",
-
-        "base_hp": 150,
-
-        "base_damage": 22,
-
-        "crit_chance": 15,
-
-        "evasion": 5,
-
-        "resistances": [
-
-            "fire",
-
-            "burn"
-        ],
-
-        "weaknesses": [
-
-            "ice"
-        ],
-
-        "abilities": [
-
-            "fire_slam",
-
-            "burning_roar"
-        ],
-
-        "loot_table": [
-
-            "legendary_armor",
-
-            "obsidian_blade"
-        ],
-
-        "regions": [
-
-            "ashen_wastes"
-        ]
+        "status_effects": []
     }
 }
 
@@ -194,119 +97,26 @@ ENEMIES = {
 
 def create_enemy(
 
-    enemy_name
+    enemy_key
 
 ):
 
-    enemy_data = ENEMIES.get(
-        enemy_name
+    enemy_template = enemy_database.get(
+        enemy_key.lower()
     )
 
-    if not enemy_data:
+    if not enemy_template:
+
+        print(
+            f"\nEnemy not found:"
+            f" {enemy_key}"
+        )
 
         return None
 
-    world_tier = get_world_tier()
-
-    enemy = {
-
-        "name": enemy_name,
-
-        "type": enemy_data[
-            "type"
-        ],
-
-        "faction": enemy_data[
-            "faction"
-        ],
-
-        "hp": scale_enemy_power(
-
-            enemy_data[
-                "base_hp"
-            ]
-        ),
-
-        "max_hp": scale_enemy_power(
-
-            enemy_data[
-                "base_hp"
-            ]
-        ),
-
-        "damage": scale_enemy_power(
-
-            enemy_data[
-                "base_damage"
-            ]
-        ),
-
-        "crit_chance": enemy_data[
-            "crit_chance"
-        ],
-
-        "evasion": enemy_data[
-            "evasion"
-        ],
-
-        "resistances": enemy_data[
-            "resistances"
-        ],
-
-        "weaknesses": enemy_data[
-            "weaknesses"
-        ],
-
-        "abilities": enemy_data[
-            "abilities"
-        ],
-
-        "loot_table": enemy_data[
-            "loot_table"
-        ],
-
-        "status_effects": [],
-
-        "elite": False,
-
-        "boss": (
-
-            enemy_data["type"]
-            == "boss"
-        ),
-
-        "world_tier": world_tier
-    }
-
-    return enemy
-
-# =========================
-# ELITE ENEMY
-# =========================
-
-def create_elite_enemy(
-
-    enemy_name
-
-):
-
-    enemy = create_enemy(
-        enemy_name
+    enemy = dict(
+        enemy_template
     )
-
-    if not enemy:
-
-        return None
-
-    enemy["elite"] = True
-
-    enemy["hp"] *= 2
-
-    enemy["max_hp"] *= 2
-
-    enemy["damage"] += 10
-
-    enemy["crit_chance"] += 10
 
     return enemy
 
@@ -320,88 +130,58 @@ def generate_random_enemy(
 
 ):
 
-    valid_enemies = []
+    enemy_keys = list(
+        enemy_database.keys()
+    )
 
-    for enemy_name, enemy_data in ENEMIES.items():
+    selected_enemy = random.choice(
+        enemy_keys
+    )
 
-        if region_name:
+    enemy = create_enemy(
+        selected_enemy
+    )
 
-            if region_name not in enemy_data[
-                "regions"
-            ]:
-
-                continue
-
-        valid_enemies.append(
-            enemy_name
-        )
-
-    if not valid_enemies:
+    if not enemy:
 
         return None
 
-    chosen_enemy = random.choice(
-        valid_enemies
-    )
+    # =========================
+    # REGION MODIFIERS
+    # =========================
 
-    elite_roll = random.randint(
-        1,
-        100
-    )
+    if region_name == "dark_forest":
 
-    if elite_roll <= 10:
+        enemy["hp"] += 10
 
-        return create_elite_enemy(
-            chosen_enemy
-        )
+        enemy["max_hp"] += 10
 
-    return create_enemy(
-        chosen_enemy
-    )
+    elif region_name == "ancient_ruins":
 
-# =========================
-# APPLY ENEMY STATUS
-# =========================
+        enemy["damage"] += 3
 
-def apply_enemy_status(
+    # =========================
+    # WORLD CHAOS SCALING
+    # =========================
 
-    enemy,
+    chaos = world_state[
+        "world_conditions"
+    ][
+        "world_chaos"
+    ]
 
-    effect_name,
+    enemy["hp"] += chaos
 
-    duration
+    enemy["max_hp"] += chaos
 
-):
-
-    if effect_name in enemy[
-        "resistances"
-    ]:
-
-        print(
-            f"\n{enemy['name']}"
-            f" resisted"
-            f" {effect_name}!"
-        )
-
-        return enemy
-
-    enemy[
-        "status_effects"
-    ] = add_status_effect(
-
-        enemy[
-            "status_effects"
-        ],
-
-        effect_name,
-
-        duration
+    enemy["damage"] += int(
+        chaos * 0.3
     )
 
     return enemy
 
 # =========================
-# ENEMY ABILITY
+# ENEMY ABILITIES
 # =========================
 
 def use_enemy_ability(
@@ -410,104 +190,74 @@ def use_enemy_ability(
 
 ):
 
-    abilities = enemy.get(
-        "abilities",
-        []
-    )
+    enemy_name = enemy[
+        "name"
+    ].lower()
 
-    if not abilities:
+    # =========================
+    # GOBLIN
+    # =========================
 
-        return None
-
-    ability = random.choice(
-        abilities
-    )
-
-    print(
-        f"\n{enemy['name']}"
-        f" uses"
-        f" {ability}!"
-    )
-
-    return ability
-
-# =========================
-# SHOW ENEMY
-# =========================
-
-def show_enemy(
-
-    enemy
-
-):
-
-    print(
-        "\n=== ENEMY INFO ==="
-    )
-
-    print(
-        "Name:",
-        enemy["name"]
-    )
-
-    print(
-        "Type:",
-        enemy["type"]
-    )
-
-    print(
-        "HP:",
-        enemy["hp"]
-    )
-
-    print(
-        "Damage:",
-        enemy["damage"]
-    )
-
-    print(
-        "Elite:",
-        enemy["elite"]
-    )
-
-    print(
-        "Boss:",
-        enemy["boss"]
-    )
-
-# =========================
-# ENEMY SUMMARY
-# =========================
-
-def show_enemy_database():
-
-    print(
-        "\n=== ENEMY DATABASE ==="
-    )
-
-    for enemy_name, enemy_data in ENEMIES.items():
+    if "goblin" in enemy_name:
 
         print(
-            f"\n{enemy_name}"
+            "\nGoblin throws sand"
+            " in your eyes!"
         )
 
-        print(
-            f"Type:"
-            f" {enemy_data['type']}"
-        )
+    # =========================
+    # SKELETON
+    # =========================
+
+    elif "skeleton" in enemy_name:
 
         print(
-            f"Faction:"
-            f" {enemy_data['faction']}"
+            "\nSkeleton reforms"
+            " damaged bones!"
         )
 
+        heal = random.randint(
+            5,
+            12
+        )
+
+        enemy["hp"] += heal
+
+        enemy["hp"] = min(
+
+            enemy["hp"],
+
+            enemy["max_hp"]
+        )
+
+    # =========================
+    # ORC
+    # =========================
+
+    elif "orc" in enemy_name:
+
         print(
-            f"Base HP:"
-            f" {enemy_data['base_hp']}"
+            "\nOrc enters a rage!"
+        )
+
+        enemy["damage"] += 2
+
+    # =========================
+    # DRAGON
+    # =========================
+
+    elif "dragon" in enemy_name:
+
+        print(
+            "\nThe dragon breathes fire!"
+        )
+
+        emit(
+            "dragon_fire"
         )
 
 # =========================
-# BOSS PHASE CHECK
+# BOSS PHASES
 # =========================
 
 def boss_phase_check(
@@ -522,80 +272,141 @@ def boss_phase_check(
 
     hp_percent = (
 
-        enemy["hp"]
-        /
-        enemy["max_hp"]
+        enemy["hp"] /
 
+        enemy["max_hp"]
     ) * 100
 
-    if hp_percent <= 50:
+    # =========================
+    # PHASE 2
+    # =========================
 
-        print(
-            f"\n{enemy['name']}"
-            " enters a rage phase!"
+    if (
+
+        hp_percent <= 50
+
+        and not enemy.get(
+            "phase_2_triggered"
         )
+    ):
+
+        enemy[
+            "phase_2_triggered"
+        ] = True
 
         enemy["damage"] += 10
 
+        print(
+            f"\n{enemy['name']}"
+            " becomes enraged!"
+        )
+
+        emit(
+
+            "boss_phase_changed",
+
+            enemy_name=enemy[
+                "name"
+            ],
+
+            phase=2
+        )
+
+    # =========================
+    # FINAL PHASE
+    # =========================
+
+    if (
+
+        hp_percent <= 20
+
+        and not enemy.get(
+            "final_phase_triggered"
+        )
+    ):
+
+        enemy[
+            "final_phase_triggered"
+        ] = True
+
+        enemy["damage"] += 15
+
+        print(
+            f"\n{enemy['name']}"
+            " enters FINAL PHASE!"
+        )
+
+        emit(
+
+            "boss_phase_changed",
+
+            enemy_name=enemy[
+                "name"
+            ],
+
+            phase=3
+        )
+
 # =========================
-# LEGENDARY ENEMY
+# ENEMY REWARD
 # =========================
 
-def create_legendary_enemy():
+def reward_player_for_enemy(
 
-    enemy = {
+    enemy
 
-        "name": "void_harbinger",
+):
 
-        "type": "legendary",
+    reward_gold = random.randint(
+        5,
+        20
+    )
 
-        "faction": "void",
+    if enemy["elite"]:
 
-        "hp": 500,
+        reward_gold *= 2
 
-        "max_hp": 500,
+    if enemy["boss"]:
 
-        "damage": 45,
+        reward_gold *= 5
 
-        "crit_chance": 25,
+    world_state[
+        "player"
+    ][
+        "gold"
+    ] += reward_gold
 
-        "evasion": 15,
+    print(
+        f"\nYou gain"
+        f" {reward_gold} gold."
+    )
 
-        "resistances": [
+# =========================
+# ENCOUNTER GENERATION
+# =========================
 
-            "fire",
+def generate_enemy_group(
 
-            "poison",
+    count=3,
 
-            "corruption"
-        ],
+    region_name=None
 
-        "weaknesses": [
+):
 
-            "holy"
-        ],
+    enemies = []
 
-        "abilities": [
+    for _ in range(
+        count
+    ):
 
-            "void_blast",
+        enemy = generate_random_enemy(
+            region_name
+        )
 
-            "reality_tear",
+        if enemy:
 
-            "soul_drain"
-        ],
+            enemies.append(
+                enemy
+            )
 
-        "loot_table": [
-
-            "godkiller_relic"
-        ],
-
-        "status_effects": [],
-
-        "elite": True,
-
-        "boss": True,
-
-        "world_tier": 999
-    }
-
-    return enemy
+    return enemies
