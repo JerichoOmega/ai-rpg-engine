@@ -25,6 +25,8 @@ Long sword with shield.
 ### Special Ability / Mechanic
 **Battlecry** — Boosts stats for party members and unsettles enemies. Functions as a battlefield rallying tool.
 
+**Shield Stance** — As a shield-bearing hero, Talos has access to the Shield Stance system. He may spend his Support Action to raise his shield and enter a persistent frontal defense stance, gaining increased block chance, reduced frontal damage, and access to shield-specific Reactions. Lowering the shield is free and restores the Support Action to normal use on that turn. See [`docs/COMBAT_SYSTEM.md`](../COMBAT_SYSTEM.md) for full rules.
+
 ---
 
 ## Personality

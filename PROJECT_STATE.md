@@ -19,7 +19,7 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 | Area | % Complete | Notes |
 |---|---|---|
 | Core engine (loop, state, events) | 90% | Working; minor gaps noted below |
-| Combat system | 75% | Turn-based combat functional; boss system present; balancing incomplete |
+| Combat system | 75% | Terminal prototype functional; canonical 3D tactical design (grid, AP, facing, downed) documented in `docs/COMBAT_SYSTEM.md` — not yet implemented |
 | Quest system | 65% | CRUD complete; faction bonus wiring is present but never fires (missing `type` field) |
 | Progression / levelling | 60% | XP and level-up logic works; skill tree is scaffolded but not functional |
 | Faction system | 55% | Reputation tracking works; `rebels` faction is in state but absent from manager |

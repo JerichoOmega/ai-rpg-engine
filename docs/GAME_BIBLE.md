@@ -189,27 +189,60 @@ MAIN MENU
 
 ## Combat Overview
 
-Combat is **turn-based** and terminal-driven. The player faces one or more enemies. Companions in the active party assist automatically.
+> **Full combat design spec:** [`docs/COMBAT_SYSTEM.md`](COMBAT_SYSTEM.md)  
+> **Terminal prototype implementation:** [`docs/systems/combat.md`](systems/combat.md)
 
-### Combat Flow
-1. Enemy (or boss) is selected and presented to the player.
-2. Each round the player chooses: **Attack**, **Use Skill**, **Use Item**, or **Flee**.
-3. Enemies counter-attack, apply status effects, and may use special moves (boss only).
-4. Companions contribute attacks each round.
-5. Combat ends when the enemy dies, the player dies, or the player successfully flees.
+Combat is a **turn-based tactical system** fought on **square grids** in fully **3D isometric environments**. The design rewards tactical positioning, team synergy, and planning over speed.
 
-### Key Combat Mechanics
-- **Attack Bonus** — player stat added to damage rolls.
-- **Defense** — reduces incoming damage by a flat value.
-- **Evasion** — chance to dodge attacks entirely.
-- **Critical Hits** — enemies have a `crit_chance` field; crits deal doubled damage.
-- **Elite enemies** — have enhanced stats flagged via `elite: True`.
-- **Status Effects** — see Status Effects section below.
-- **AI Narration** — `llm_bridge.ai_combat_narration()` is called for combat flavour text (mock implementation).
-- **Post-combat** — enemy killed event fires on event bus, loot is awarded, XP is granted, DM Brain records the battle.
+### Combat Philosophy
 
-### Status Effects
-Defined in `status_effects.py`. Current effects include: burn, freeze, stun, poison, bleed, slow, weaken, and shield. Effects are stored on the entity's `status_effects` list and resolved each round.
+| Pillar | Description |
+|---|---|
+| Tactical positioning | Where you stand shapes what you can do |
+| Meaningful decisions | Every turn presents real choices |
+| Team synergy | Heroes combine through positioning and ability chaining |
+| Readable combat | What is happening is always clear |
+| Flexible choice | Multiple valid approaches to any encounter |
+
+### Action Economy
+
+Each hero receives per turn:
+
+| Resource | Purpose |
+|---|---|
+| **Movement Points (MP)** | Tile movement — flexible order (move → act, act → move, or split) |
+| **Action Point Pool (AP)** | Attacks, spells, class abilities, dash, combat interactions |
+| **Support Action** | One dedicated utility action (heal, buff, revive, potion) — separate from AP |
+| **Reaction** | One reactive trigger per round (opportunity attack, block, counter, ally protection) |
+
+### Initiative
+
+Each combatant has an Initiative value. Heroes whose turns fall consecutively may activate in any player-chosen order before initiative passes to the enemy side — enabling tactical combinations.
+
+### Facing
+
+Combatants have directional facing: **Front / Side / Rear**. Facing affects shield coverage, defensive bonuses, flanking, and back attack damage. Positioning relative to enemies is a core tactical layer.
+
+### Shield Stance
+
+Shield-bearing heroes may spend their **Support Action** to enter Shield Stance — a persistent frontal defense mode granting increased block chance, reduced incoming damage from the front, and access to shield-specific Reactions. The stance persists between turns at no further cost. Lowering the shield is free and returns the Support Action to normal use on that turn. This makes shields an active tactical choice rather than a passive stat bonus. Full rules: [`docs/COMBAT_SYSTEM.md`](COMBAT_SYSTEM.md).
+
+### Downed & Death
+
+**Downed** (0 HP): hero cannot act; allies can revive them with a Support Action. If combat ends while downed, the hero survives with very low HP and enters Critical Condition.
+
+**Death**: separate from Downed. Only through execution, special enemy abilities, or story events. Requires resurrection mechanics to reverse — not standard healing.
+
+### Party
+
+Four active heroes in combat. Party composition is locked during combat; swapping is available freely outside combat.
+
+### Current Terminal Prototype
+
+The Python implementation (`combat.py`) is a simplified placeholder: single player, no grid, Attack / Skill / Item / Flee menu, no AP economy or facing. It remains the authoritative *current implementation*. The design above is the *target* for the 3D game.
+
+### Status Effects (Terminal Prototype)
+Defined in `status_effects.py`: burn, freeze, stun, poison, bleed, slow, weaken, shield. Effects tick each round.
 
 ---
 

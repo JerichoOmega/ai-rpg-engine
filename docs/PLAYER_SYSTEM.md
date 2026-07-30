@@ -128,6 +128,31 @@ The hero framework should support both:
 
 ---
 
+## Party System
+
+### Active Party Size
+
+The player controls **four active heroes** during combat.
+
+- The player selects their chosen hero at the start of a new game
+- Companions are recruited during play and join the available roster
+- The player freely configures which four heroes form the active party — outside combat only
+- Party swapping is **disabled during combat**; the active party is locked until the encounter ends
+
+Heroes not in the active party remain on the bench and are available for future deployment.
+
+### Recruitment Philosophy
+
+**Not every hero is guaranteed to appear in every campaign.**
+
+Recruitment opportunities may vary between playthroughs based on story decisions and encounter outcomes. This is intentional — different parties should produce meaningfully different experiences and increase replayability.
+
+Do not assume all five heroes are always available. Design story and quest content with the possibility of a partial roster in mind.
+
+See [`docs/COMBAT_SYSTEM.md`](COMBAT_SYSTEM.md) for full party combat rules.
+
+---
+
 ## Relationship to Companions
 
 The playable hero is distinct from companions:
@@ -135,8 +160,8 @@ The playable hero is distinct from companions:
 | | Playable Hero | Companions |
 |---|---|---|
 | Selected at | New game start | Recruited during play |
-| Count | 1 (the player's character) | 0–N active in party |
-| Combat role | Player-controlled | Auto-assist |
+| Count | 1 (the player's character) | Up to 3 others in active party (4 total) |
+| Combat role | Player-controlled | Player-controlled (all four active heroes) |
 | Character depth | Deep (story-integrated) | Also deep (see character sheets) |
 
 The hero and companions are all members of the confirmed playable cast. See [`docs/characters/`](characters/) for all character sheets.

@@ -1,0 +1,76 @@
+---
+
+# Shield Stance System
+
+Shield-bearing heroes gain access to the Shield Stance mechanic.
+
+Shield Stance provides an active defensive choice rather than a passive armor bonus.
+
+## Entering Shield Stance
+
+A shield-bearing hero may spend their **Support Action** to raise their shield and enter Shield Stance.
+
+Entering Shield Stance does not consume any Action Points.
+
+Once raised, the shield remains active until the player chooses to lower it.
+
+---
+
+## Benefits of Shield Stance
+
+While Shield Stance is active, the hero gains defensive bonuses against attacks originating from the front.
+
+Potential benefits include:
+
+- Increased frontal defense
+- Increased block chance
+- Reduced ranged damage from the front
+- Improved resistance against melee attacks from the front
+- Access to shield-specific Reaction abilities
+
+Exact numerical values will be determined during balancing.
+
+---
+
+## Maintaining Shield Stance
+
+Shield Stance remains active between turns.
+
+The player does not need to spend another Support Action every round to maintain the stance.
+
+The hero continues benefiting from Shield Stance until it is voluntarily lowered or another game mechanic removes it.
+
+---
+
+## Lowering the Shield
+
+A hero may lower their shield at the beginning of their turn without spending Action Points or a Support Action.
+
+Lowering the shield removes all Shield Stance defensive bonuses.
+
+Lowering the shield does **not** refund the Support Action previously spent to enter the stance.
+
+Once lowered, the hero may use their current turn's Support Action normally for other abilities.
+
+---
+
+## Tactical Purpose
+
+Shield Stance creates a meaningful tactical decision every battle.
+
+Players must decide between:
+
+- Maintaining a powerful defensive position
+- Lowering their guard to use Support Actions for healing, reviving allies, buffs, consumables, or other utility abilities
+
+This reinforces the identity of shield-bearing classes as defensive front-line protectors instead of simply high-armor damage dealers.
+
+---
+
+## Design Philosophy
+
+Shield Stance is intended to make shields an active tactical choice rather than a passive equipment bonus.
+
+The system rewards planning, positioning, and anticipation of enemy actions while remaining simple for players to understand.
+
+Future skills, equipment, talents, and class abilities may expand upon the Shield Stance system.

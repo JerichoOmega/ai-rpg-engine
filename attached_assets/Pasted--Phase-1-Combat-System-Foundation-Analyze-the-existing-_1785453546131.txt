@@ -1,0 +1,235 @@
+# Phase 1 - Combat System Foundation
+
+Analyze the existing project documentation and integrate the following decisions into the project's canonical documentation.
+
+These decisions are now considered the official direction for the combat system.
+
+Do not generate gameplay code.
+
+Update the Game Bible and create additional documentation where appropriate.
+
+---
+
+# Combat Philosophy
+
+Combat is a turn-based tactical system fought on square grids within fully 3D isometric environments.
+
+The design philosophy emphasizes:
+
+- Tactical positioning
+- Meaningful decision making
+- Environmental awareness
+- Team synergy
+- Readable combat
+- Flexible player choice
+
+Combat should reward planning rather than speed.
+
+---
+
+# Battlefield
+
+## Grid
+
+Combat uses square tiles.
+
+Movement occurs from tile to tile.
+
+---
+
+## Movement
+
+Heroes may:
+
+- Move before acting.
+- Act before moving.
+- Split movement before and after actions as long as movement remains.
+
+Movement should feel flexible rather than restrictive.
+
+---
+
+# Action Economy
+
+Every hero receives the following each turn:
+
+## Movement
+
+Movement Points used for movement across the battlefield.
+
+---
+
+## Action Point Pool (AP)
+
+Action Points are used for offensive and tactical abilities.
+
+Examples include:
+
+- Weapon attacks
+- Offensive spells
+- Combat abilities
+- Dash
+- Combat interactions
+- Special class abilities
+
+Different abilities may consume different amounts of AP.
+
+---
+
+## Support Action
+
+Each hero receives one dedicated Support Action every turn.
+
+Support Actions are separate from AP and cannot be converted into Action Points.
+
+Support Actions include examples such as:
+
+- Drinking potions
+- Applying buffs
+- Healing allies
+- Reviving downed allies
+- Using support abilities
+- Other utility-focused actions
+
+Support Actions exist to encourage strategic utility instead of pure offense.
+
+---
+
+## Reactions
+
+Each hero may have one Reaction available each round.
+
+Examples include:
+
+- Opportunity attacks
+- Shield blocks
+- Counter attacks
+- Protecting nearby allies
+- Future class-specific reactions
+
+Reactions refresh each round.
+
+---
+
+# Initiative
+
+Combat uses an initiative system inspired by the design philosophy of modern tactical RPGs.
+
+Each combatant has an Initiative value.
+
+Heroes whose turns occur consecutively within the initiative order may be activated in whichever order the player chooses before initiative proceeds to the opposing side.
+
+This system encourages tactical combinations while maintaining initiative-based gameplay.
+
+---
+
+# Facing
+
+Combat includes directional facing.
+
+Front
+
+Side
+
+Rear
+
+Facing influences combat mechanics including:
+
+- Shield protection
+- Defensive bonuses
+- Flanking
+- Back attacks
+
+Positioning should remain an important tactical consideration.
+
+---
+
+# Downed System
+
+When a hero reaches zero health:
+
+- They become Downed.
+- They cannot act.
+- Allies may revive them during combat.
+
+If combat ends while a hero remains Downed:
+
+- They automatically survive.
+- They stand after combat.
+- They recover with very low health (approximately 1 HP or another low value determined during balancing).
+- They enter a Critical Condition and should be healed before the next battle.
+
+---
+
+# Death
+
+Death is separate from being Downed.
+
+A hero only dies through special circumstances, such as:
+
+- Execution while Downed
+- Special enemy abilities
+- Story events
+- Other intentional gameplay mechanics
+
+Dead heroes cannot be revived through normal healing.
+
+They must be restored using the world's resurrection mechanics.
+
+Death should remain uncommon and meaningful.
+
+---
+
+# Party System
+
+The player controls four active heroes during combat.
+
+Additional recruited heroes remain outside the active party.
+
+Players may freely swap party members outside combat through the party management interface.
+
+Party swapping is disabled during combat.
+
+---
+
+# Recruitment Philosophy
+
+Not every hero is guaranteed to appear in every campaign.
+
+Recruitment opportunities may vary between playthroughs to increase replayability.
+
+Future campaigns should feel different based on available companions and player decisions.
+
+---
+
+# Design Goals
+
+Combat should prioritize:
+
+- Tactical positioning
+- Team synergy
+- Strategic flexibility
+- Readability
+- Player creativity
+- Replayability
+
+The system should remain approachable while offering meaningful tactical depth.
+
+---
+
+# Documentation Tasks
+
+Update or create the following documents:
+
+- GAME_BIBLE.md
+- COMBAT_SYSTEM.md
+- PLAYER_SYSTEM.md
+- PROJECT_MEMORY.md
+- PROJECT_STATE.md
+- AI_CONTINUATION_GUIDE.md
+
+Cross-reference all related documentation.
+
+Treat this document as canonical unless explicitly superseded by future project decisions.
+
+Do not implement gameplay systems or code at this stage.

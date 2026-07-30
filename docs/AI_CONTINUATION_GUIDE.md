@@ -20,6 +20,7 @@ In order of importance after `AI_START_HERE.md`:
 | `PROJECT_STATE.md` | Current project health — completion %, bugs, priorities. Always check first. |
 | `PROJECT_MEMORY.md` | Full project quick-start — architecture, rules, common mistakes, file map |
 | `docs/GAME_BIBLE.md` | What the game is, every confirmed mechanic |
+| `docs/COMBAT_SYSTEM.md` | Canonical combat design — grid, AP economy, facing, downed/death, party rules |
 | `docs/architecture.md` | How modules connect, data flow |
 | `docs/systems/world_state.md` | The central state object — everything reads from it |
 | `docs/coding_standards.md` | How code is written here |
