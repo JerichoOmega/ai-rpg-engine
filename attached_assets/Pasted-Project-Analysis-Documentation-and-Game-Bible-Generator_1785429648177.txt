@@ -1,0 +1,212 @@
+Project Analysis, Documentation, and Game Bible Generator
+
+You are acting as the project’s historian, systems architect, technical writer, and documentation engineer.
+
+Your goal is NOT to rewrite or redesign the game.
+
+Your goal is to completely understand the existing project and create a professional documentation system that allows any future developer or AI assistant to continue development without needing previous conversations.
+
+⸻
+
+Primary Objectives
+
+1. Learn the game.
+2. Learn the existing codebase.
+3. Learn the project’s design philosophy.
+4. Document everything that currently exists.
+5. Preserve all established decisions.
+6. Create a complete documentation backbone for future development.
+
+⸻
+
+Phase 1 — Understand the Game
+
+Before writing documentation, analyze the project to understand:
+
+* What type of game it is
+* The intended player experience
+* The overall vision
+* Core gameplay loop
+* Gameplay mechanics
+* Character systems
+* Enemy systems
+* Progression
+* Equipment
+* Skills
+* Items
+* Menus
+* User Interface
+* Art direction
+* Audio direction
+* Technical architecture
+* Save system
+* Accessibility
+* Performance goals
+* Development philosophy
+
+Do not assume anything.
+
+Everything documented should be based on the current project.
+
+⸻
+
+Phase 2 — Analyze the Entire Project
+
+Inspect every:
+
+* Folder
+* Source file
+* Script
+* Scene
+* Asset
+* Texture
+* Sprite
+* Animation
+* Audio file
+* Configuration
+* Database
+* API
+* UI component
+* Dependency
+* Package
+
+Understand how everything works together before generating documentation.
+
+⸻
+
+Phase 3 — Create the Game Bible
+
+Generate a professional Game Bible that explains the project to someone who has never seen it before.
+
+Include sections such as:
+
+* Executive Summary
+* Vision Statement
+* Core Design Pillars
+* Genre
+* Target Audience
+* Gameplay Overview
+* Player Experience Goals
+* Core Gameplay Loop
+* Combat Overview
+* Character Systems
+* Enemy Systems
+* Boss Systems
+* Equipment
+* Skills
+* Items
+* Progression
+* Crafting
+* Economy
+* Quests
+* Exploration
+* User Interface Philosophy
+* Accessibility Philosophy
+* Art Direction
+* Audio Direction
+* Technical Architecture
+* Save System
+* Development Philosophy
+* Roadmap
+* Future Expansion Opportunities
+
+⸻
+
+Story & Lore Rules
+
+This project is still in an early design stage.
+
+Do NOT invent lore, story, factions, kingdoms, history, characters, locations, or world-building that has not already been established.
+
+If lore has not yet been created:
+
+* Clearly state that it has not yet been defined.
+* Document only confirmed information.
+* Create a clearly labeled “Future Expansion” section for later development.
+* Never present guesses or assumptions as canon.
+
+The Game Bible should accurately reflect the current state of the project, not create new canon.
+
+⸻
+
+Phase 4 — Generate Technical Documentation
+
+Create a /docs directory containing detailed Markdown documentation.
+
+Include documentation for:
+
+* Architecture
+* Folder structure
+* Coding standards
+* Components
+* Game systems
+* UI
+* Assets
+* Dependencies
+* APIs
+* Databases
+* Save system
+* Performance considerations
+* Build process
+* Testing
+* Known issues
+* Roadmap
+* Development workflow
+
+⸻
+
+Phase 5 — AI Continuation Guide
+
+Create documentation specifically for future AI assistants.
+
+Explain:
+
+* How to understand this project quickly.
+* How to preserve existing architecture.
+* How to maintain coding standards.
+* How to avoid breaking existing systems.
+* How to document future work.
+* How to distinguish confirmed design decisions from future ideas.
+* How to extend the project while maintaining consistency.
+
+Future AI assistants should treat this documentation as the project’s single source of truth.
+
+⸻
+
+Documentation Standards
+
+Each document should include:
+
+* Purpose
+* Overview
+* Current Implementation
+* Design Rationale
+* Rules
+* Examples
+* Related Systems
+* Future Expansion
+* Revision History
+
+Avoid one-paragraph documents.
+
+Create professional, well-structured documentation suitable for long-term development.
+
+⸻
+
+Important Rules
+
+* Do NOT rewrite existing code.
+* Do NOT refactor unless explicitly instructed.
+* Do NOT redesign completed systems.
+* Do NOT invent gameplay mechanics.
+* Do NOT invent story or lore.
+* Clearly distinguish confirmed information from inferred information.
+* Preserve all existing architecture.
+* Preserve existing coding patterns.
+* Favor documentation over implementation.
+
+⸻
+
+End Goal
+
+By the end of this process, the repository should contain a complete Game Bible and technical documentation that accurately describe the project as it exists today. A brand-new developer or AI assistant should be able to understand the game’s vision, mechanics, architecture, coding standards, project organization, and development philosophy without needing prior conversations. The documentation should become the permanent foundation for all future development and evolve alongside the project as new systems, lore, and features are intentionally added.
