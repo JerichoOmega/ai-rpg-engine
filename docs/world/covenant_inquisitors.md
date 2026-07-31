@@ -49,6 +49,8 @@ The Inquisitors have operated under their current structure for five years, sinc
 
 **In encounters:** Coss does not appear in Frontier towns or low-level investigations. He operates from the Capital Province. Players who make significant waves with the Inquisitors — particularly those who cost the faction resources or exposure — may eventually be summoned to meet him. He is not a villain. He is a man who has made himself the institutional container for something he believes would be worse if he weren't containing it. He can be reasoned with, appealed to on institutional grounds, and genuinely moved by evidence that his Senior Examiners have crossed a line. He is not easily surprised.
 
+His authored confrontation scene — the summons to the Capital annex, both variants (useful and adversary), his negotiating posture, and the choice that can change the Inquisitors' trajectory — is defined below in **The Summons — An Hour with the Inquisitor-General**.
+
 ---
 
 ### Senior Examiner Lysa Dorne
@@ -193,6 +195,62 @@ The prisoner is aware enough to beg the party not to let the Inquisitors take hi
 
 ---
 
+## The Summons — An Hour with the Inquisitor-General
+
+> **Authored confrontation scene for Inquisitor-General Aldren Coss.** For use in Capital Province content, or as the late-game consequence of sustained party involvement with Inquisitor operations. Two variants share one setting and one man; which variant runs depends on what the party has cost or given the faction.
+
+### The Trigger and the Setting
+
+Coss summons; he is not encountered. The threshold is organizational, not personal: the party appears in enough field reports — as obstruction, as expense, as an unmanaged variable his Senior Examiners keep having to write around — that dealing with them stops being a field matter. The summons itself is deliberately unthreatening: a written invitation, Covenant courtesy forms, a named hour, delivered by an ordinary Covenant messenger. Refusing it is possible and he will not compel attendance; he will simply note that the party preferred not to come, and the faction's posture toward them hardens from *unresolved* to *decided* without their input. (Parties should be allowed to understand this — the invitation is the last point at which they are being consulted about what the Inquisitors think of them.)
+
+The meeting is at the unmarked Covenant annex in the capital, in a plain office with a window onto a courtyard and a desk stacked with field reports — several of which, visibly, concern the party. No guards inside the room. Coss meets them alone, pours the wine himself, and opens both variants the same way, because it is true in both:
+
+> *"I have read everything my people have written about you. I would like one hour to find out what they left out."*
+
+**How to play him throughout (both variants):** slow, courteous, unhurried, unsurprised. He asks short factual questions and lets silence do the pressing. He never threatens — he *describes*, accurately, what the institution around him will do, in the tone of a man reporting weather. The scene's tension should come from the gap the party gradually detects between the man (reasonable, tired, genuinely open to evidence) and the machine he sits on top of (which is already moving, and which he only partly steers — canon: he inherited the institution and has never fully controlled it).
+
+### His Negotiating Posture
+
+**What he offers (in rising order, only as the conversation earns it):**
+1. *Deconfliction* — Inquisitor operations routed around the party's known interests and locations; they stop tripping over each other. Cheap for him, valuable for them, and his standard opening offer.
+2. *Information* — the Inquisitors know things about genuine Corruption activity that no one else has assembled. He will trade specific intelligence for specific cooperation, case by case.
+3. *Commission* — for a party he judges capable and containable: sanctioned work against genuine Corruption targets, with Covenant cover. This is the same offer Verath's cooperative parties received at field level, made at institutional level, and it is honest — the targets are real.
+
+**What he asks for:** never loyalty and never silence about the past — he is too experienced to buy either. He asks for *predictability*: advance notice before the party acts against an Inquisitor operation ("Tell me before you break something of mine, and it may not need breaking"), and the routing of any evidence of Inquisitor misconduct **to him first**. That second request is the scene's trap and its lever — see the choice below.
+
+**What he will not compromise on, stated plainly if pushed:**
+- The Inquisitors' continued existence. He will trade methods, personnel, even public standing — not the function. His argument, delivered without heat: *"You have seen what one Corruption-touched cleric does to a town. I have read eighteen years of what they do. Show me the institution that would have caught them, and I will disband mine tomorrow. There isn't one. There is me."*
+- The chain of accountability, thin as it is. He will not let any Inquisitor — including one the party has proven guilty — answer to a body outside the Covenant. This is his Tribunal lesson and his genuine line: Callanus's sin was answering to no one within the institution.
+- He will not lie to the party. He will decline to answer — often — but writers should never have Coss state a falsehood. His entire self-conception rests on being the honest custodian of a compromised thing. (His dishonesty is structural, not verbal: what he avoids knowing — per his profile — he cannot be asked about, and he has built the not-knowing carefully. A party that names this practice aloud is the only thing in the scene that visibly costs him composure — the deliberate pause of a man being shown his own load-bearing wall.)
+
+### Variant One — Summoned as Useful
+
+Run when the party's record is mixed or cooperative: they have handled Corruption threats competently, perhaps embarrassed a field operative without exposing the faction. Coss's aim is recruitment-adjacent: convert an unmanaged variable into an asset. The hour is genuinely pleasant. He is a good conversationalist, asks about the party's actual encounters with the Corruption with the attention of a man comparing their accounts against eighteen years of reports, and concedes points against his own people readily ("Verath's Millhaven file reads worse than your account of it, which tells me my people are at least honest in their paperwork"). The offers arrive in order, each contingent on the last being received sensibly.
+
+**Beats:** (1) verification — he corrects one small error in his own file about the party, aloud, to show them the file exists and that he cares whether it is accurate; (2) the offers; (3) the ask for predictability; (4) the close, which he leaves open deliberately: *"You do not need to answer today. You need to understand that after today, whatever happens between you and my people, I will assume you understood."*
+
+### Variant Two — Summoned as Adversary
+
+Run when the party has cost the faction seriously: operations exposed, an operative dead or turned, Reformist dossiers visibly fattened by party evidence. The scene is *not* angrier — writers should resist that. It is more respectful and more precise, the tone of a commander meeting a competent opposing commander under truce. The offers do not appear. In their place, an accounting: he lays out, accurately and without embellishment, what the party has cost — including the human costs on his side, named, because he knows their names — and then asks the only question the meeting exists to ask: *"What is the end of it, from your side? Tell me what the world looks like when you are finished with us, and I will tell you whether we can live in it."*
+
+A party that answers honestly — abolition, reform, oversight, revenge — gets his honest response mapped to the non-negotiables above: abolition he will fight to his last day in office; external oversight he will refuse; *internal* reform, evidenced and specific, he will genuinely entertain. A party that answers evasively gets the scene's quiet turn: he stands, thanks them for coming, and tells them — describing, not threatening — what the institution does with unresolved threats, and that he will contain it as long as he holds the office, *"which is not a promise about the office's next holder."* That line should land as the scene's true warning: Coss is the moderate. The party's war is with what follows him.
+
+### The Choice That Changes the Trajectory
+
+In either variant, the hinge is **what the party does with evidence of Inquisitor misconduct** — evidence they hold now or gather later. Coss's request that it come to him first is sincere, and canon makes him genuinely movable by it. The scene should make the three routes and their consequences legible:
+
+**Route 1 — Bring it to Coss.** If the evidence is specific and real, he acts: the operative is withdrawn, the method is struck from practice, and — this is the meaningful institutional change — he uses the case to impose the first *written* field-methods standard in the faction's history, because a documented abuse gives him leverage against his own hardliners that abstract principle never has. The faction becomes measurably more restrained. The cost: the evidence disappears into internal correction. It never reaches the Reformists' dossier, the formal inquiry stays "three years away" forever, and the institution's fundamental unaccountability is *strengthened* by having visibly self-corrected. Coss knows this is the trade he is offering. He will not pretend otherwise if asked.
+
+**Route 2 — Bring it to the Reformists.** The evidence enters the dossier and the slow official process. No immediate change in the field; the abusive method continues in the interim, and Coss — who learns most things — closes the door the party could have walked through: no more offers, deconfliction withdrawn, the faction treats them as a decided adversary. But the dossier moves closer to the inquiry threshold, and content downstream can treat the party's contribution as a real fraction of what finally forces the Covenant's hand.
+
+**Route 3 — Both, sequenced.** Give Coss the evidence *and* tell him the Reformists will receive a copy regardless — no ambush, stated to his face. This is the only route that treats him as what he believes himself to be, and it produces the scene's rarest outcome: he does not withdraw the offers. He corrects the abuse internally *and* prepares the institution for the scrutiny he now knows is coming — which, writers should note, is the single trajectory in which the Inquisitors move toward *becoming sanctionable*: corrected methods, written standards, and an inquiry they can survive. Whether surviving the inquiry saves the faction or merely legitimizes it is deliberately left open for late-campaign content. Coss's parting line on this route: *"You have made me accountable to someone. I have spent four years arguing that we must be. I notice I do not enjoy it."*
+
+### Writers' Note for the Scene
+
+Do not let Coss win the argument, and do not let the party win it. His institutional case is real (the Corruption is real; nothing else catches it), his personal honesty is real, and the machine under him is still doing, tonight, in some Frontier town, exactly what the party has seen it do. The scene fails if he reads as a hypocrite and fails worse if he reads as correct. He is the strongest version of the claim that the Inquisitors are containable — sitting in a room with the evidence, in his own stacked reports, that containment is what he has instead of control.
+
+---
+
 ## Writers' Notes
 
 **The Inquisitors are not the Ashen Tribunal.** Writers should resist flattening them into generic religious zealots. The specific texture of the Inquisitors is *institutional capture* — an organization that started with a legitimate purpose and accumulated methods its original charter never authorized, staffed by people who believe in the mission and have not examined the methods closely enough.
@@ -210,3 +268,4 @@ The prisoner is aware enough to beg the party not to let the Inquisitors take hi
 | Date | Change |
 |---|---|
 | July 2026 | Created — leadership, methods, reach, faction relationships, and encounter hooks established. Cross-referenced to religions.md and cults.md. |
+| 2026-07-31 | Authored Inquisitor-General Coss's confrontation scene (*The Summons — An Hour with the Inquisitor-General*) — trigger, setting, negotiating posture (offers, asks, non-negotiables), useful and adversary variants, and the three-route evidence choice that changes the faction's trajectory. Linked from the Leadership section. |
