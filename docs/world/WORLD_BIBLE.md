@@ -68,7 +68,7 @@ Travel is gameplay. Moving between locations on the strategic map can trigger en
 
 | Encounter | Notes |
 |---|---|
-| Traveling merchants | Trade opportunities; may carry rare inventory |
+| Traveling merchants | Trade opportunities; may carry rare inventory; often a named halfling trading house wagon or barge — see [`docs/world/halfling_houses.md`](halfling_houses.md) |
 | Refugees | World state indicator; may carry information or quests |
 | Pilgrims | Faction-affiliated; may reveal religious plot threads |
 | Wandering musicians | Lore carriers; lighten tone |

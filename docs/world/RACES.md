@@ -123,6 +123,8 @@ Halflings are rarely seen as dangerous, threatening, or powerful by other races 
 **House Rivalries**
 The major trading houses compete. Competing on the same routes, for the same contracts, with the same customers — while maintaining the outward courtesy the culture demands — is a halfling art form. House feuds can run for generations while both houses attend the same Reckoning and share the same loaded table.
 
+> **Named houses:** The four major trading houses — Brambleford, Copperwade, Fenholt, and Marchbanks — with their heads, routes, internal tensions, and the generations-old Brambleford–Copperwade "Disputed Page" rivalry, are defined in [`halfling_houses.md`](halfling_houses.md).
+
 ### Architecture
 
 Halfling-built structures are **low, wide, and oriented toward gathering**. Wide porches and communal spaces at the front; private family quarters at the back. Wayhouses are built to handle more people than they were formally designed for, because the Laden Table means the number of guests is never predictable.
@@ -237,3 +239,4 @@ They have tribal politics, territorial interests, traditions, and the capacity f
 | July 2026 | Created — six playable races confirmed; design philosophy established; non-playable races defined |
 | July 2026 | Halflings defined — distributed river and trade people; cultural philosophy, traditions, and faction relations established |
 | July 2026 | Gnomes defined — Iron Peaks and Capital archivists; cultural philosophy, traditions, and faction relations established |
+| 2026-07-31 | Named the four major halfling trading houses — pointer added to House Rivalries section; full definitions in `halfling_houses.md` |
