@@ -53,18 +53,20 @@ His authored confrontation scene — the summons to the Capital annex, both vari
 
 ---
 
-### Senior Examiner Lysa Dorne
+### Senior Examiner Lysa Venn
 
 **The administrative and operational coordinator; the Inquisitors' organizational intelligence**
 
 - Forty-four years old; trained as a Covenant legal scholar before joining the Inquisitors twelve years ago; the only person who consistently knows where all active Inquisitors are and what they are doing
-- Not a field operative — Dorne does not conduct interrogations or burn shrines. She schedules, routes, briefs, and deconflicts. She is the reason the Inquisitors function as an organization rather than as independent operators
-- Reformists have identified her as a key target: if Dorne's filing system were ever exposed or if she turned against the Inquisitors, the entire operation would become visible
+- Not a field operative — Venn does not conduct interrogations or burn shrines. She schedules, routes, briefs, and deconflicts. She is the reason the Inquisitors function as an organization rather than as independent operators
+- Reformists have identified her as a key target: if Venn's filing system were ever exposed or if she turned against the Inquisitors, the entire operation would become visible
 - She is not ideologically committed to the Inquisitors' methods; she is committed to competence and order. She joined because the Inquisitors had a problem worth solving and an institution capable of solving it. She has stayed because leaving would mean someone less careful taking her role
 - What she watches: the line between "investigation that produces actionable intelligence" and "investigation that produces confessions regardless of truth." She has quietly killed three field assignments that she believed had crossed it. She has not reported this to Coss; she handled it through scheduling.
 - Physically: precise, efficient, unremarkable in appearance; affects the vestments of a mid-level Covenant administrator and is rarely recognizable as anything more
 
-**In encounters:** Dorne is not present in field operations but may appear when players have become a problem that requires organizational response — she might arrange for Inquisitor interest to be redirected, or contact the party indirectly if she has determined they are useful rather than threatening.
+**In encounters:** Venn is not present in field operations but may appear when players have become a problem that requires organizational response — she might arrange for Inquisitor interest to be redirected, or contact the party indirectly if she has determined they are useful rather than threatening.
+
+Her authored first-contact scene — how she reaches the party, her negotiating posture, and how the scene differs for cooperative versus opposing parties — is defined below in **The Adjustment — Senior Examiner Venn and the Party**.
 
 ---
 
@@ -106,15 +108,15 @@ The Inquisitors distinguish themselves from the Ashen Tribunal on these grounds:
 ## Current Reach
 
 ### Capital Province
-The Inquisitors' administrative base. Coss and Dorne operate from an unmarked Covenant annex in the capital city. Field personnel rotate through on quarterly reporting cycles. The Capital Province is where the Inquisitors are most restrained — too many eyes, too many rival Covenant factions watching for ammunition. Documented abuses in the Capital Province are rare because operatives there know they are visible.
+The Inquisitors' administrative base. Coss and Venn operate from an unmarked Covenant annex in the capital city. Field personnel rotate through on quarterly reporting cycles. The Capital Province is where the Inquisitors are most restrained — too many eyes, too many rival Covenant factions watching for ammunition. Documented abuses in the Capital Province are rare because operatives there know they are visible.
 
 ### The Frontier
 Where Inquisitor activity is most visible to players and most likely to escalate. Frontier towns have minimal Covenant oversight, communities that mix religious practices, and populations with limited institutional recourse when Covenant authority is exercised against them. Brother Verath's operation in Millhaven (*The Inquisitor's Commission*) is representative: a field Inquisitor operating with real authority and minimal supervision, in a place where official checks do not function.
 
-Active Inquisitor presence in the Frontier is currently four to six field operatives rotating through a circuit of towns. They do not coordinate with each other in real time — Dorne manages their movements from the Capital — which means two Inquisitors can be pursuing contradictory agendas in adjacent towns without knowing it.
+Active Inquisitor presence in the Frontier is currently four to six field operatives rotating through a circuit of towns. They do not coordinate with each other in real time — Venn manages their movements from the Capital — which means two Inquisitors can be pursuing contradictory agendas in adjacent towns without knowing it.
 
 ### Sol Kareth
-The Inquisitors have recently established a presence in Sol Kareth's major oasis cities, following the Covenant's existing merchant-elite network. Operatives here focus almost entirely on identifying Corruption influence within Covenant-aligned trading families — a different profile from Frontier operations, more about financial leverage and information than about burning shrines. Coss authorized this expansion six months ago; Dorne is still building the operational infrastructure.
+The Inquisitors have recently established a presence in Sol Kareth's major oasis cities, following the Covenant's existing merchant-elite network. Operatives here focus almost entirely on identifying Corruption influence within Covenant-aligned trading families — a different profile from Frontier operations, more about financial leverage and information than about burning shrines. Coss authorized this expansion six months ago; Venn is still building the operational infrastructure.
 
 ### Outside These Regions
 Minimal to none. The Inquisitors do not have meaningful presence in the Iron Peaks, the Great Forest, or the Frozen Highlands. The Great Forest's elven community has made clear that Covenant authority does not extend to their territory. The Iron Peaks' dwarven clans have their own internal accountability structures that have declined to cooperate with Covenant investigative bodies. This is a source of genuine frustration within the Inquisitor leadership.
@@ -187,9 +189,9 @@ Most ordinary Covenant clergy are not part of any faction. They are aware the In
 
 The Inquisitors and the Ashen Tribunal do not cooperate. They are not allied. From the Inquisitors' perspective, the Tribunal is an embarrassment and a danger — a faction that took Inquisitor methods to their logical extreme, went mad with certainty, and now makes every Inquisitor operation look like a step toward the same destination.
 
-Inquisitor-General Coss has stated internally that the Tribunal is "a warning we carry." Dorne has quietly ensured that the Inquisitors' operational records contain clear distinctions from Tribunal methods wherever there is overlap.
+Inquisitor-General Coss has stated internally that the Tribunal is "a warning we carry." Venn has quietly ensured that the Inquisitors' operational records contain clear distinctions from Tribunal methods wherever there is overlap.
 
-From the Tribunal's perspective, the Inquisitors are insufficiently committed — people doing necessary work who cannot face the full implications of that work. Voreth Callanus has made contact with former Inquisitors twice since the split; both times the approached individuals reported the contact to Dorne rather than respond.
+From the Tribunal's perspective, the Inquisitors are insufficiently committed — people doing necessary work who cannot face the full implications of that work. Voreth Callanus has made contact with former Inquisitors twice since the split; both times the approached individuals reported the contact to Venn rather than respond.
 
 In play: Inquisitors and Tribunal members will not work together. If players attempt to use one faction to manipulate the other, both will respond with suspicion. A player who exposes Tribunal activity to an Inquisitor contact will gain limited credibility — the Inquisitors are relieved when the Tribunal is disrupted — but this does not translate into friendship.
 
@@ -212,7 +214,7 @@ Investigation reveals the surveillance report was built from testimony by a loca
 
 ### Hook B: The Inquisitor Who Wants Out
 
-A mid-level Inquisitor makes quiet contact with the party — through a trusted intermediary, through a note left where only they would find it. She has been operating in the Frontier for two years and has begun keeping a secondary record of what her reports to Dorne omit.
+A mid-level Inquisitor makes quiet contact with the party — through a trusted intermediary, through a note left where only they would find it. She has been operating in the Frontier for two years and has begun keeping a secondary record of what her reports to Venn omit.
 
 She is not ready to defect openly. She wants to know if there is somewhere to go. She has information about three active Inquisitor operations she considers illegal even by the faction's own standards. She also has information about a genuine Corruption-touched individual the Inquisitors have been unable to locate — someone who has been actively harmful and who the party's intervention against would be unambiguously correct.
 
@@ -235,6 +237,65 @@ The prisoner is aware enough to beg the party not to let the Inquisitors take hi
 - The party refuses, which creates a direct conflict with Covenant authority; the Inquisitor does not have the resources to compel the party but will file a report that has consequences
 - The party negotiates: they accompany the prisoner to the examination, insisting on witnessing it — the Inquisitor has to decide whether their presence is worth more than it costs
 - The party helps the prisoner escape and deals with the fallout from both the Covenant and whatever the prisoner actually is
+
+---
+
+## The Adjustment — Senior Examiner Venn and the Party
+
+> **Authored first-contact scene for Senior Examiner Lysa Venn.** Runs when the party has become a *pattern* in the field reports — recurring, unpredictable, and expensive to route around — but before they are important enough for the Inquisitor-General. The Adjustment and The Summons (below) are a deliberate sequence: Venn handles problems so that Coss never has to know they were problems. If the party meets Coss first, it usually means Venn's adjustment failed or was refused.
+
+### How the Party Notices Her Before They Meet Her
+
+Venn's first moves are not a scene — they are *effects*, and writers should play at least one before any contact:
+
+- An Inquisitor the party expected to collide with is reassigned two days before they arrive; the town's investigation is "deferred pending resources"
+- A surveillance commission on a party ally quietly lapses and is not renewed
+- Conversely, for an opposing party: Covenant doors that used to open now require paperwork; an allied cleric mentions being asked, in routine correspondence, to confirm dates the party was in town
+
+A party paying attention realizes someone is moving the furniture around them. That realization is the scene's true opening — Venn prefers to be *deduced*, because a party capable of deducing her is a party worth talking to, and a party that never notices can simply go on being managed.
+
+### First Contact
+
+Never a summons, never her office, never her name. The contact is a message through a channel the party trusts — a merchant they bank with, a cleric who owes them, an innkeeper's sealed note — proposing a conversation with "a Covenant administrator whose work the party has been complicating." The meeting place is public, mundane, and chosen so that no record of it would surprise anyone: a market arcade, a tithe office with a queue, a ferry crossing. She arrives as what her profile says she is — a mid-level administrator nobody looks at twice — and she comes alone, carrying nothing.
+
+Her opening, in both branches, states the premise flatly:
+
+> *"You have cost my organization four hundred crowns and three reassignments this season. I am not here about the money. I am here because you are not a problem I can file, and everything I cannot file eventually lands on a desk where the solutions are worse than mine."*
+
+**How to play her:** brisk, exact, without warmth or hostility — the tone of a person conducting the eleventh meeting of a long day, every one of which mattered. She quotes dates, places, and costs from memory and is never wrong. She does not moralize, does not defend the Inquisitors' methods, and — the trait that should unsettle attentive players — does not once claim to *approve* of the institution she is protecting. Competence is her entire register. If the party tries to argue ethics, she declines the lane: *"You are mistaking me for someone with a position. I have a schedule."*
+
+### Her Negotiating Posture
+
+**What she wants:** not cooperation, not loyalty — *predictability's cheaper cousin, legibility*. She wants to know where the party will be and what they care about, so she can route operations around them instead of through them. She frames it without flattery: deconfliction is what she does for everyone, including her own operatives; the party is simply the first outsiders efficient enough to qualify.
+
+**What she trades in:** scheduling. It is the only currency she admits to having, and it is worth more than it sounds:
+- An investigation *deferred* — indefinitely, renewably — is a person not detained
+- An operative *rotated* is a town's crisis relocated
+- A commission *lapsed* is surveillance ended without anyone deciding to end it
+
+She will never promise an outcome, only an adjustment: *"I cannot make anything stop. I can make a great many things late."*
+
+**What she will not put in writing — and why the party should notice:** nothing. No note, no token, no signature; every agreement with Venn is verbal and deniable, and she says so up front as a courtesy. The reason is the scene's quiet reveal, available to a party that presses her: her filing system is the faction's single point of failure (canon: the Reformists know it), and she has spent twelve years making sure the only incriminating index is the one behind her eyes. A party that realizes this understands, in the same moment, why she is worth having as a contact and why she can never be subpoenaed into usefulness — whatever the Reformists eventually force into the open, Venn's ledger will not be in it.
+
+**What she will not do, stated once, without emphasis:** she will not give the party operational information that endangers her people, will not act against Coss, and will not "turn" — not out of loyalty to the mission, but because (her own words, and the most honest thing she says) *"the person who replaces me frightens me more than you do."* Writers should treat this as her true, current position — and as a position that events, not persuasion, might someday move.
+
+### Branch One — The Party Has Been Mostly Helping
+
+Run when the party's pattern is cooperative or mixed: Corruption threats genuinely handled, an operative embarrassed but not exposed. Venn's posture is transactional and almost friendly in its total absence of pressure. She offers the deconfliction openly and adds the one thing Coss's later offers will not include: *warning*. If an Inquisitor operation is about to intersect something the party cares about — a town, an ally, a name she has seen in their file — a message will arrive in time to matter. In exchange she wants early notice of where they intend to work, nothing more.
+
+**The test inside the branch:** at some point she mentions, as dry logistics, an upcoming operation the party will dislike — mild enough not to demand intervention, specific enough to be acted on. It is deliberate. She is finding out what they do with what she tells them: parties that act discreetly become the rare category she actively protects; parties that torch the operation confirm she can only manage them at arm's length. She never says any of this aloud.
+
+### Branch Two — The Party Has Been Opposing
+
+Run when the party's pattern is adversarial: operations disrupted, evidence flowing toward the Reformists. The meeting still happens — that is the point writers should not soften; Venn meets threats *sooner*, not later. The posture changes from trade to triage. She does not ask them to stop. She asks them to be *accurate*: *"You are going to keep doing this. I have read enough of you to stop pretending otherwise. Then do it correctly. Half of what you have fed the Reformists is true. The other half my people can disprove with a duty roster, and when they do, the true half dies with it."*
+
+The offer in this branch is stranger and should feel it: she will tell the party, case by case, *which of their targets deserve them.* Not names of clean operatives to spare — she will not endanger her people — but confirmation, after the fact or in the negative: "that thread is not what you think it is; this one, keep pulling." It is the field application of what canon says she watches — the line between intelligence and coerced confession — conducted through the only external instrument she has ever had. A party that works with her becomes more dangerous to the faction's worst operations and useless against its defensible ones, which is exactly the shape she wants their opposition to take. A party that refuses gets a single sentence on parting, delivered as scheduling: *"Then you will be handled at the next level up, and I want you to remember, when you meet him, that his version of me is a man with a list."*
+
+### Where It Goes
+
+- **The Adjustment feeds The Summons.** Either branch, sustained long enough, ends with Coss's invitation — Branch One as *useful*, Branch Two as *adversary*. Venn's file on the party, complete and accurate, is on his desk when they arrive. Whether her *arrangements* with them are in that file is a question writers should answer carefully: her deconfliction-level dealings are; the Branch Two target-vetting is not, because it does not exist anywhere she does not carry it.
+- **Her killed assignments stay hers.** The three field assignments she has quietly ended (canon) are not disclosed in this scene under any pressure. If later content exposes them, this scene is where players retroactively understand what she was protecting.
+- **She is not a redemption arc on a timer.** Writers should resist bending her toward defection. What canon and this scene establish is narrower and better: a person who has decided that competent stewardship of a bad machine beats the alternatives on offer, holding that position under increasing strain. If the campaign ever gives her a genuinely better alternative — not an argument, an *alternative* — what she does then is unwritten, and should stay unwritten until a specific story earns it.
 
 ---
 
@@ -300,7 +361,7 @@ Do not let Coss win the argument, and do not let the party win it. His instituti
 
 **The Corruption's role is amplification, not replacement.** Inquisitors like Brother Verath are not possessed or controlled — they are themselves, pushed past the point where they can see what they are doing clearly. A good Inquisitor encounter makes the player understand how the Inquisitor arrived at this position before asking them to oppose it.
 
-**The faction has internal dissent.** Lysa Dorne has quietly killed operations she considered too extreme. The junior clerk in Millhaven is deeply uncomfortable. There are Inquisitors who have resigned — quietly, carefully, without making their reasons public. Players who look for the dissent will find it; players who treat every Inquisitor as identical will miss the texture.
+**The faction has internal dissent.** Lysa Venn has quietly killed operations she considered too extreme. The junior clerk in Millhaven is deeply uncomfortable. There are Inquisitors who have resigned — quietly, carefully, without making their reasons public. Players who look for the dissent will find it; players who treat every Inquisitor as identical will miss the texture.
 
 **Encounter outcomes should have consequences upstream.** An Inquisitor confronted, evidence gathered, and a report sent to the Reformists is one entry in a dossier that is building toward something. Players who oppose the Inquisitors repeatedly are not just managing individual incidents — they are part of a political contest whose outcome matters.
 
@@ -311,5 +372,7 @@ Do not let Coss win the argument, and do not let the party win it. His instituti
 | Date | Change |
 |---|---|
 | July 2026 | Created — leadership, methods, reach, faction relationships, and encounter hooks established. Cross-referenced to religions.md and cults.md. |
+| 2026-07-31 | Renamed the Inquisitors' coordinator from Lysa Dorne to **Lysa Venn** throughout, resolving an identity collision with the Mages Guild's Senior Examiner Dorne (docs/lore/IMPERIAL_CAPITAL.md, docs/world/vampire_houses.md), who keeps the name per lore-bible precedence. |
+| 2026-07-31 | Authored Senior Examiner Venn's first-contact scene (*The Adjustment — Senior Examiner Venn and the Party*) — effects-first approach, indirect contact, her negotiating posture (legibility, scheduling as currency, nothing in writing), helping/opposing branches, and how the scene feeds The Summons. Linked from the Leadership section. |
 | 2026-07-31 | Added Frontier Operatives — The Circuit Roster: four named circuit Inquisitors beyond Verath (Odran Kolt, Renna Fenwick, Tavin Sarel, Ivett Harrow) with profiles, method emphases, and subregions; Harrow identified as the operative in Hook B; usage notes and the unnamed sixth slot. |
 | 2026-07-31 | Authored Inquisitor-General Coss's confrontation scene (*The Summons — An Hour with the Inquisitor-General*) — trigger, setting, negotiating posture (offers, asks, non-negotiables), useful and adversary variants, and the three-route evidence choice that changes the faction's trajectory. Linked from the Leadership section. |

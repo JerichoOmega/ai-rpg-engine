@@ -467,7 +467,7 @@ The militant enforcement branch of the Solari Covenant.
 | Name | Role |
 |---|---|
 | **Inquisitor-General Coss** | Overall leadership |
-| **Inquisitor Dorne** | Senior field operative |
+| **Senior Examiner Lysa Venn** | Administrative and operational coordinator |
 | **Brother Verath** | Active field inquisitor (Frontier reach) |
 
 ### Other Named Factions
