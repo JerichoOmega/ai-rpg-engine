@@ -173,6 +173,8 @@ Talos trusts Eleanor more quickly than he trusts most people. He recognizes her 
 ### Ronan
 Eleanor and Ronan's relationship can develop into romance depending on player choices. She sees him clearly — the guilt, the isolation, the genuine effort he makes to protect others from himself — and finds those qualities compelling rather than frightening. She is not naive about the curse. She simply believes the person matters more than the condition.
 
+Throughout most of the game, Eleanor is positioned to help Ronan. During **The Fractured Circle** campaign arc, this dynamic inverts: Ronan becomes one of Eleanor's strongest emotional supports as she watches respected Guild members fall to the Corruption. Because he understands the fear of losing oneself, he can reach her in ways no other companion does. This is one of the moments where his growth pays off in service of her story. See [`docs/systems/dynamic_story_arcs.md`](../systems/dynamic_story_arcs.md).
+
 ### Ragash
 *(Relationship not yet defined — to be established when Ragash's arc is more fully developed.)*
 

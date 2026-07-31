@@ -46,7 +46,10 @@
 36. [World Bible](world/WORLD_BIBLE.md) *(separate file)*
 37. [Playable Races](world/RACES.md) *(separate file)*
 38. [Vampire Houses](world/vampire_houses.md) *(separate file)*
-39. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+39. [Goblin Tribes](world/goblin_tribes.md) *(separate file)*
+40. [Religions of Elyndor](world/religions.md) *(separate file)*
+41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*
+42. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 

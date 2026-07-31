@@ -25,6 +25,9 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/world/WORLD_BIBLE.md` | Canonical regions, travel encounters, encounter philosophy, intelligent factions, goblin tribes, vampires, player choice philosophy |
 | `docs/world/RACES.md` | Six playable races; race design philosophy; non-playable intelligent races |
 | `docs/world/vampire_houses.md` | Three vampire houses: Vetharis (political), Drakmor (military), Soleth (knowledge) |
+| `docs/world/religions.md` | Four major religions: Solari Covenant, The Old Ways, Ancestors' Path, Veiled Order; cults vs. legitimate religion; religious orders and reputation |
+| `docs/world/goblin_tribes.md` | Three tribes: Stonefang (Warchief Grakkor), Mossroot (Elder Vess), Ashfire (Warchief Skarra); leadership, territory, traditions, inter-tribe relationships |
+| `docs/systems/dynamic_story_arcs.md` | Dynamic Story Arc framework; The Fractured Circle (first confirmed arc); campaign-exclusive enemies; companion stakes per arc |
 | `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
 | `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |
 | `docs/heroes/TALOS.md` | Full Hero Bible — Talos |

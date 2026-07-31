@@ -250,10 +250,35 @@ These fields are the natural home for tracking which corruption type is dominant
 
 ---
 
+## Dynamic Story Arc Selection
+
+During campaign generation, the AI Dungeon Master selects one or more **Dynamic Story Arcs** for the campaign. These are authored large-scale world events that shape the entire playthrough — regions, factions, companion stories, questlines, and enemy types.
+
+The DM Brain is responsible for:
+
+1. **Selecting arcs** at campaign generation based on campaign parameters (corruption type, companion roster, regional setup)
+2. **Seeding world state** to match the selected arcs — setting `world_state` flags that reflect which factions are affected and which crisis is developing
+3. **Pacing arc development** — arcs should escalate gradually, not reveal themselves immediately; the DM Brain controls when arc-related events surface
+4. **Tracking companion stakes** — which companions have personal connection to the active arc; narrative emphasis should increase when those companions are present
+5. **Introducing arc-exclusive content** — campaign-exclusive enemies and locations exist only while their arc is active; the DM Brain gates their appearance appropriately
+
+Not every campaign contains every arc. Campaign identity emerges from the arcs selected.
+
+Arc definitions and design framework: [`docs/systems/dynamic_story_arcs.md`](dynamic_story_arcs.md)
+
+**Current confirmed arcs:**
+
+| Arc | Primary Faction | Corruption Type |
+|---|---|---|
+| **The Fractured Circle** | Mages Guild | Arcane |
+
+---
+
 ## Future Expansion
 
 **Canonical targets (connected to main story framework):**
 - Campaign corruption type selected at start; AI Director seeds `world_state` flags to match and reinforces throughout
+- Dynamic Story Arc selected at campaign generation; DM Brain paces arc escalation and gates arc-exclusive content
 - DM Brain issuing proactive narrative prompts tied to active corruption type (not just reacting to events)
 - Multi-act campaign scripting: Corruption grows across acts until confrontation with its source
 
@@ -278,3 +303,4 @@ These fields are the natural home for tracking which corruption type is dominant
 | Date | Change |
 |---|---|
 | July 2026 | Initial documentation created; merger of ai_director into dm_brain noted |
+| July 2026 | Dynamic Story Arc selection section added; The Fractured Circle confirmed as first arc |

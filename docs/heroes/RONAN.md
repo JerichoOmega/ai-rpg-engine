@@ -171,6 +171,8 @@ Ronan's quest is about self-acceptance that is earned, not given. Whatever the p
 ### Eleanor
 Eleanor and Ronan's relationship can develop into romance depending on player choices. She sees him clearly — the guilt, the isolation, the deliberate care — and does not find any of it disqualifying. He finds her openness both disarming and frightening, because it does not leave him comfortable distance. Their dynamic works because she does not require him to be fixed, and he does not require her to be more guarded. It costs both of them something.
 
+During **The Fractured Circle** campaign arc, the relationship inverts: Eleanor's struggle watching respected Guild members fall to the Corruption mirrors, in a different register, what Ronan lives with every day. He becomes one of her primary supports — reminding her that those who have fallen were once good people, and helping her carry the weight of impossible decisions. This is a direct expression of his growth: he is no longer only someone who needs saving. He has become someone capable of helping others using what his experience has taught him. See [`docs/systems/dynamic_story_arcs.md`](../systems/dynamic_story_arcs.md).
+
 ### Talos
 Talos is cautious around Ronan — not hostile, and not personal. His concern is protective of others: if Ronan loses control, who gets hurt? Over time, as Ronan demonstrates the extent of his effort and his self-awareness, Talos's caution can evolve into genuine respect. They share more than either would say out loud: both have learned to manage something difficult alone.
 

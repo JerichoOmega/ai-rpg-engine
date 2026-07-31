@@ -41,7 +41,7 @@ A Core Wound is **not** a plot event that happens during the game. It is the cha
 | **Combat role** | Their abilities should express who they are, and who they are comes from the wound |
 | **Unique passive** | Should feel like it could only belong to this specific person |
 | **Personal quest** | The narrative arc that directly challenges and potentially heals the wound |
-| **Relationships** | Other companions either echo, challenge, or unknowingly provoke the wound |
+| **Relationships** | Other companions either echo, challenge, or unknowingly provoke the wound; relationships evolve — never remain static |
 
 ### A Test
 

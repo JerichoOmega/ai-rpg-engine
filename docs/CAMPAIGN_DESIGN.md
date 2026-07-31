@@ -88,6 +88,27 @@ Full lore: [`elyndor/history/the_corruption.md`](../elyndor/history/the_corrupti
 
 ---
 
+## Dynamic Story Arcs
+
+Each campaign features one or more **Dynamic Story Arcs** — large-scale world events unique to that particular playthrough.
+
+The AI Dungeon Master selects these arcs during campaign generation. They are authored scenarios, not procedurally generated content. The arcs in play are a major part of what makes each campaign distinct.
+
+Each arc influences:
+- Which regions fall into crisis
+- Which factions are internally affected
+- Which companions have personal stakes in events
+- What campaign-exclusive enemies and locations appear
+- How questlines and world events unfold
+
+The main story never changes. The world's response to the Corruption does.
+
+> Example: In *The Fractured Circle* arc, the Corruption spreads through portions of the Mages Guild. Scholars begin communicating with cultists. Former Guild members become corrupted battle mages, ritualists, and arcane priests — enemy types that exist only in this campaign. Eleanor's personal story becomes one of heartbreak rather than hatred, as the corrupted individuals are former teachers, friends, and mentors.
+
+Full arc definitions and design framework: [`docs/systems/dynamic_story_arcs.md`](systems/dynamic_story_arcs.md)
+
+---
+
 ## Replayability Philosophy
 
 Replayability comes from experiencing **a familiar world that changes in meaningful ways** — not from encountering a completely different game.
@@ -147,3 +168,4 @@ A player who finishes one campaign should immediately want to start another — 
 | Date | Change |
 |---|---|
 | July 2026 | Created — established Handcrafted First principle, Replayability Philosophy, DM role, Design Goal, and dynamic variation framework |
+| July 2026 | Dynamic Story Arcs section added; The Fractured Circle documented as example arc |
