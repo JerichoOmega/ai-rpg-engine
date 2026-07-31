@@ -527,18 +527,34 @@ def set_current_region(region_name):
 # PLAYER HELPERS
 # =========================
 def heal_player(amount):
-    """Restore HP up to max_hp. Used by inventory.py."""
-    player = world_state["player"]
-    player["hp"] = min(player["hp"] + amount, player["max_hp"])
+    """Restore HP up to max_hp. Used by inventory.py.
+
+    Updates both world_state["player"]["hp"] (the authoritative
+    persisted value) and the runtime Player object so combat.py and
+    the save-path sync see the same number immediately.
+    """
+    ws_player = world_state["player"]
+    ws_player["hp"] = min(ws_player["hp"] + amount, ws_player["max_hp"])
+    # Mirror to runtime Player object so combat/pre-save sync stay consistent.
+    from player import player as _player
+    _player.hp = ws_player["hp"]
     print(f"\nPlayer heals {amount} HP!")
 
 
 def damage_player(amount):
-    """Deal damage reduced by defense, clamp to 0. Used by main.py."""
-    player = world_state["player"]
-    defense = player.get("defense", 0)
+    """Deal damage reduced by defense, clamp to 0. Used by main.py.
+
+    Updates both world_state["player"]["hp"] (the authoritative
+    persisted value) and the runtime Player object so combat.py and
+    the save-path sync see the same number immediately.
+    """
+    ws_player = world_state["player"]
+    defense = ws_player.get("defense", 0)
     actual = max(0, amount - defense)
-    player["hp"] = max(0, player["hp"] - actual)
+    ws_player["hp"] = max(0, ws_player["hp"] - actual)
+    # Mirror to runtime Player object so combat/pre-save sync stay consistent.
+    from player import player as _player
+    _player.hp = ws_player["hp"]
     print(f"\nPlayer takes {actual} damage!")
 
 

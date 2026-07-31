@@ -26,6 +26,25 @@ from skill_tree import player_skills
 
 from progression_manager import progression_state
 
+from quest_manager import active_quests, completed_quests
+
+from world_event_manager import (
+    active_world_events,
+    completed_world_events,
+)
+
+from economy_manager import economy_state
+
+from story_manager import story_state
+
+from dialogue_manager import npc_relationships
+
+from relationship_manager import social_state
+
+from companion_manager import active_companions
+
+from dm_brain import dm_state
+
 
 # =========================
 # APPLY HERO
@@ -237,6 +256,44 @@ def select_hero():
     progression_state["xp_to_next_level"] = 100
     progression_state["skill_points"]     = 0
     progression_state["world_tier"]       = 1
+
+    # 6. Manager globals serialised by save_manager — each must start
+    #    fresh so prior-run quest/story/faction/companion/dm state
+    #    does not bleed into the new playthrough.
+    active_quests.clear()
+    completed_quests.clear()
+    active_world_events.clear()
+    completed_world_events.clear()
+    active_companions.clear()
+    npc_relationships.clear()
+
+    economy_state.update({
+        "inflation": 1.0,
+        "global_stability": 75,
+        "scarcity": 20,
+    })
+    story_state.update({
+        "campaign_phase":   1,
+        "active_theme":     "survival",
+        "main_story_arc":   "shadow_rising",
+        "story_progress":   0,
+        "major_story_flags": {},
+    })
+    social_state.update({
+        "fear":   0,
+        "respect": 0,
+        "infamy":  0,
+        "renown":  0,
+    })
+    dm_state.update({
+        "current_focus":         "exploration",
+        "story_pressure":        25,
+        "emotional_tone":        "neutral",
+        "priority_threat":       "shadow_cult",
+        "active_threads":        [],
+        "recent_battles":        0,
+        "recent_story_events":   0,
+    })
 
     apply_hero(chosen_key)
 
