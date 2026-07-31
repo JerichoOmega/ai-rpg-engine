@@ -172,6 +172,99 @@ Whether the three houses can coordinate a response — and what each would deman
 
 ---
 
+## The Corruption's Effect on the Vampire Houses
+
+> **Cross-reference:** [`elyndor/history/the_corruption.md`](../../elyndor/history/the_corruption.md) — canonical rules for how The Corruption works. The core principle: it amplifies what is already present. It does not manufacture new darkness; it accelerates existing flaws, fears, and vulnerabilities.
+
+Each house faces a different version of the same problem: The Corruption is attacking the specific thing each house depends on to survive.
+
+---
+
+### House Vetharis: The Erosion of the Board
+
+**Corruption pressure — what it is doing:**
+
+Vetharis's power rests entirely on political institutions being stable enough to infiltrate. Rank must mean something. Records must be trustworthy. Loyalty must be purchasable. The Corruption amplifies the instability already latent in every political structure — and those structures are now becoming unreliable. A magistrate Vetharis spent forty years cultivating is now acting on paranoia that outpaces calculation. A noble family managed for two generations is fracturing into internal violence. The political figures Vetharis has carefully shaped into assets are behaving in ways their handlers cannot predict.
+
+The deeper problem is structural: the same mechanisms that let Vetharis embed in councils and guilds require those institutions to function. As The Corruption accelerates the greed, fear, and ambition of the humans inside them, the institutions themselves become harder to read and harder to steer. The board Cassiel has spent centuries arranging is rearranging itself.
+
+**Cassiel's response:**
+
+Cassiel is intensifying information-gathering rather than acting openly. He is identifying which assets are Corruption-affected and how far the deterioration has progressed — mapping the damage before committing to any response. His working theory is that political disorder always produces opportunity for those who kept their composure, and that the new equilibrium will be shapeable once its contours become visible. He is waiting for clarity. His critics would call it paralysis.
+
+**Faction measurably affected — The Impatient Faction:**
+
+The Corruption is vindicating the Impatient Faction in real time. The political structures Cassiel built his philosophy around are demonstrably failing, and the Impatient Faction is using this as evidence that Vetharis needs to act more aggressively — embed in the *emerging* power structures rather than the collapsing ones; shape the chaos rather than wait it out. Sera Vaine and her allies have already taken at least three unsanctioned operations in the past year. Cassiel is aware of two of them. He has not acted against her directly, which the Impatient Faction interprets as tacit tolerance. Cassiel interprets it as keeping his response options open.
+
+The measurable effect: the Impatient Faction is now operating in the same operational space as sanctioned Vetharis missions without coordinating with official channels. Players in the field may encounter two sets of Vetharis agents with conflicting objectives and no knowledge of each other.
+
+**What writers can use:**
+
+- Vetharis agents maintaining composed false identities while their human contacts deteriorate around them — the gap between the mask and the reality beneath it visibly widening
+- Vetharis-placed assets (governors, trade officials, magistrates) behaving erratically in ways their handlers cannot explain or correct
+- Impatient Faction operatives appearing in the same locations as sanctioned Vetharis work, creating confusion about who the player is actually dealing with and whose instructions to trust
+- Cassiel's information requests becoming more specific and more urgent even as his outward manner stays composed — he is not panicking, but he is working harder than usual
+
+---
+
+### House Drakmor: The Unmappable Border
+
+**Corruption pressure — what it is doing:**
+
+Drakmor's power rests on territory held by force and enforced by credible threat. This requires borders to be legible: a frontier settlement either cooperates with Drakmor or faces consequences, and that binary keeps supply lines functional and military capacity organized. The Corruption is making territory harder to hold without making it easier to take.
+
+Frontier settlements that served as supply nodes are fracturing under internal pressure: militias turning on each other, local leaders making decisions driven by amplified fear and ambition rather than strategic calculation, trade routes collapsing as the communities along them destabilize. At the same time, Corruption-influenced creatures are encroaching on frontier territory that Drakmor has historically controlled through force of reputation. These creatures do not negotiate and do not respond to threat demonstrations. They are making borders meaningless in a way that Drakmor's military doctrine was not designed to address.
+
+**Morreth's response:**
+
+Morreth is fighting tactically — destroying Corruption-influenced threats where they appear, reinforcing supply corridors with heavier force, demanding discipline from the Old Guard at a moment when discipline is harder to enforce. She has not articulated a strategic response because she does not believe the situation has revealed its strategic shape yet. She is waiting for the enemy to take a form she can fight. This frustrates her in ways she does not express openly.
+
+**Faction measurably affected — The Expansionists:**
+
+The Expansionists see what Morreth sees and draw the opposite conclusion: The Corruption is clearing the board. Political structures that blocked territorial expansion are failing. Organized armies are absorbed with domestic crises. Territories that were held behind treaties and stable governments are becoming available. The Expansionists believe this is the window — that Drakmor should be taking ground now, while the rest of the world is too occupied with survival to respond to Drakmor's advance.
+
+They have already moved ahead of Morreth's sanctioned operations in at least two frontier regions, occupying positions she had not authorized. Morreth has not reversed these advances — the territory is useful — but she has made it clear she will not defend the Expansionists if they overextend into a conflict she did not sanction and cannot win.
+
+The measurable effect: Expansionist-held checkpoints exist in territory Drakmor has not officially claimed. They are aggressive, ideologically motivated, and poorly coordinated with Drakmor's official command structure. Players in the frontier may encounter Drakmor forces operating under different rules depending on which faction controls the local post.
+
+**What writers can use:**
+
+- Drakmor supply routes through frontier territory becoming contested by Corruption-influenced creature incursion — players may be hired to clear routes or escort supply wagons
+- Expansionist-operated positions in territory Morreth has not publicly claimed, staffed by true believers in the expansion doctrine who are making decisions that official Drakmor command would not sanction
+- Old Guard members visibly uncomfortable with a threat that cannot be answered by direct force and personal combat — their methodology does not fit the problem
+- Morreth's tactical responses creating collateral damage in settlements that were previously neutral, pushing those communities toward other factions out of self-preservation
+
+---
+
+### House Soleth: The Archive on Fire
+
+**Corruption pressure — what it is doing:**
+
+Soleth's physical resources — archive complexes, sealed vaults, ruin excavations in Sol Kareth, deep-pass installations in the Iron Peaks — occupy exactly the kind of ancient, liminal places The Corruption disturbs most directly. Ruins stir. Sealed vaults crack. Buried things return. Archive sites that have been safely dormant for centuries are becoming active in ways the Archivist does not yet fully understand.
+
+In Sol Kareth, at least two excavation sites have had to be sealed because something beneath them woke up. In the Iron Peaks, a deep-pass archive has gone silent — agents sent to investigate have not returned. Materials Soleth spent generations preserving are being damaged or destroyed by supernatural phenomena emanating from the same locations where the archives are stored. The Corruption is not targeting Soleth deliberately; it is doing what it does to ancient places, and Soleth chose to live in ancient places.
+
+**The Archivist's response:**
+
+The Archivist is treating this as a research problem before a logistical one. He has observed that the pattern of site activation is not random — something about which sites The Corruption is disturbing suggests a geographic or historical logic that could be mapped. He is deploying Preservationists to document and seal disturbed sites while simultaneously intensifying internal research into what those sites have in common. He has communicated nothing about urgency to the other houses. He is not certain he should. He is not certain he shouldn't.
+
+**Faction measurably affected — The Weaponizers:**
+
+The archive disruptions have significantly strengthened the Weaponizers' position. Their argument — that Soleth is sitting on information about The Corruption's true nature that could be used to address it — now has physical evidence: the fact that Soleth's sites are being specifically disturbed suggests that something in those archives is relevant to the god's prison or its mechanics. The Weaponizers believe the archives contain a key, and that the Corruption's presence is specifically activating the sites that hold it.
+
+The Archivist has neither confirmed nor denied this theory. The Weaponizers have begun acting on it without confirmation — including making unauthorized contact with senior scholars at the Sol Kareth Mages Guild chapter, offering historical materials in exchange for current research on Corruption spread patterns. The Preservationists regard this as a catastrophic breach of operational security. The Archivist has not intervened directly, which both factions are interpreting in their own favor.
+
+The measurable effect: Soleth is now running two parallel information-sharing policies simultaneously — the Preservationists withholding aggressively while the Weaponizers share selectively. Players may receive contradictory Soleth offers depending on which faction they encounter first.
+
+**What writers can use:**
+
+- Soleth archive sites as encounter locations that are actively dangerous — not because of vampires, but because whatever was sealed there is no longer reliably sealed
+- Weaponizer-affiliated vampires approaching the player or Mages Guild contacts with offers: specific historical information about The Corruption in exchange for assistance reaching or defending a compromised site
+- Preservationists and Weaponizers visibly at odds in the field — different Soleth agents giving conflicting instructions about what to do with recovered materials from the same location
+- The Iron Peaks archive silence as a standing quest hook: Soleth agents are missing, the site has not been officially reassigned, and the Archivist has not explained why — the absence is conspicuous to anyone paying attention
+
+---
+
 ## Design Notes
 
 ### Vampire Types by House

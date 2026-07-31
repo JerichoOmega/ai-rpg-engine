@@ -97,8 +97,19 @@ These questions are the campaign's spine. Do not answer them prematurely.
 
 ---
 
+## Faction-Specific Effects
+
+The Corruption's interaction with specific factions is documented in their respective files. These cross-references show how the general rules above manifest in particular political and institutional contexts.
+
+| Faction | File | Summary |
+|---|---|---|
+| **Vampire Houses** | [`docs/world/vampire_houses.md — The Corruption's Effect on the Vampire Houses`](../../docs/world/vampire_houses.md) | Vetharis's political infrastructure is destabilizing; Drakmor's territorial hold is fragmenting; Soleth's archive sites are being physically disrupted. Each house has one internal faction whose position is measurably shifted by The Corruption. |
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — established The Ancient God, The Corruption, and their canonical rules |
+| July 2026 | Added cross-reference table to faction-specific Corruption effect sections |
