@@ -1,0 +1,128 @@
+# Campaign Design Philosophy
+
+Project Dungeon Keeper is designed around a handcrafted narrative with dynamic world evolution.
+
+The goal is **not** for every campaign to tell a completely unrelated story.
+
+Instead, every campaign tells a different version of the same world crisis.
+
+---
+
+# Core Story
+
+Every campaign begins with the same central premise.
+
+An ancient god remains imprisoned beneath the world.
+
+Its prison has begun to weaken.
+
+As its influence spreads, the world slowly falls into chaos through a force known as **The Corruption**.
+
+The player gradually uncovers the truth behind this ancient threat while exploring the continent.
+
+This overarching narrative remains consistent across all campaigns.
+
+---
+
+# Dynamic Campaign Philosophy
+
+While the main story remains consistent, each campaign should feel unique because the world evolves differently.
+
+Examples of systems that may vary include:
+
+- Which companions become recruitable.
+- Recruitment order.
+- Companion availability.
+- Regional events.
+- Political conflicts.
+- Faction relationships.
+- World events.
+- Optional bosses.
+- Hidden dungeons.
+- Secret merchants.
+- Travel encounters.
+- Side quests.
+- Companion quests.
+- Environmental storytelling.
+- Town outcomes.
+- Player consequences.
+
+The player should never know exactly how the world will develop during a new campaign.
+
+---
+
+# The Corruption
+
+The Corruption does not control people's minds.
+
+Instead, it amplifies existing flaws within individuals, societies, and nature.
+
+Possible manifestations include:
+
+- Political instability.
+- Religious extremism.
+- Environmental corruption.
+- Arcane instability.
+- Ancient monsters awakening.
+- Increasing hostility between factions.
+
+Each campaign emphasizes different manifestations of the Corruption, creating a unique experience while remaining true to the world's lore.
+
+---
+
+# Handcrafted First
+
+Project Dungeon Keeper prioritizes handcrafted storytelling over procedural generation.
+
+Major story beats, companion arcs, world lore, and important quests are intentionally authored.
+
+Randomization exists to create variation, replayability, and player-driven stories—not to replace quality writing.
+
+---
+
+# Replayability Philosophy
+
+Replayability comes from experiencing a familiar world that changes in meaningful ways.
+
+Players should ask:
+
+- Which companions will I meet this time?
+- Which regions will be in crisis?
+- Which factions will rise or fall?
+- What secrets will I discover?
+- How will my choices shape this version of the world?
+
+Rather than:
+
+"I wonder if I'll get an entirely different game."
+
+Every campaign should feel like a new telling of the same epic legend.
+
+---
+
+# Dungeon Master Philosophy
+
+The AI Dungeon Master is not responsible for creating completely different stories.
+
+Its role is to guide, adapt, and personalize each campaign by responding to player actions and orchestrating dynamic world events.
+
+The AI should ensure every playthrough feels natural, coherent, and unique while respecting the established lore and handcrafted narrative.
+
+---
+
+# Design Goal
+
+Project Dungeon Keeper combines:
+
+- A handcrafted central narrative.
+- Memorable companion stories.
+- Tactical turn-based combat.
+- Dynamic world evolution.
+- Meaningful player choices.
+- High replayability through campaign variation.
+
+The objective is for players to finish one campaign and immediately wonder:
+
+"What happened in someone else's world?"
+
+rather than simply replaying the exact same adventure.

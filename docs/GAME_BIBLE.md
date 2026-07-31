@@ -41,7 +41,8 @@
 32. [Roadmap](#roadmap)
 33. [Future Expansion Opportunities](#future-expansion-opportunities)
 34. [Player Character Philosophy](PLAYER_SYSTEM.md) *(separate file)*
-35. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+35. [Campaign Design Philosophy](CAMPAIGN_DESIGN.md) *(separate file)*
+36. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -594,7 +595,8 @@ The DM Brain subscribes to:
 
 ## Main Story
 
-> **Universe lore:** [`elyndor/history/the_corruption.md`](../elyndor/history/the_corruption.md)
+> **Universe lore:** [`elyndor/history/the_corruption.md`](../elyndor/history/the_corruption.md)  
+> **Full campaign design philosophy:** [`docs/CAMPAIGN_DESIGN.md`](CAMPAIGN_DESIGN.md)
 
 ### The Central Conflict
 
@@ -645,6 +647,19 @@ The main story framework is **consistent across campaigns; the expression is var
 What changes: how The Corruption manifests, which factions rise or fall, which companions join the party, regional events, quest availability, world state, and the consequences of player choices.
 
 This creates a game with a **handcrafted central narrative** while allowing the AI Director to generate meaningful variation across multiple playthroughs. Every campaign should feel like a different telling of the same great legend — not an entirely unrelated story.
+
+### Design Goal
+
+| Pillar | Description |
+|---|---|
+| Handcrafted central narrative | Consistent, authored story with established lore |
+| Memorable companion stories | Heroes with distinct identities, wounds, and arcs |
+| Tactical turn-based combat | Grid-based, strategic, readable |
+| Dynamic world evolution | World changes based on The Corruption and player choices |
+| Meaningful player choices | Consequences that persist across the campaign |
+| High replayability | Campaign variation; every run feels worth having |
+
+**Target player feeling:** *"What happened in someone else's world?"* — a player who finishes one campaign immediately wants to start another to discover how this version of the world unfolded differently. See [`docs/CAMPAIGN_DESIGN.md`](CAMPAIGN_DESIGN.md) for the full philosophy.
 
 ---
 

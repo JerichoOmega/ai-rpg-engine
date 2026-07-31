@@ -209,6 +209,20 @@ The villain "Varkun" is confirmed as a character name in the codebase. All other
 
 ---
 
+## Dungeon Master Philosophy
+
+The AI Director is **not** responsible for generating completely different stories between playthroughs.
+
+Its role is to **guide, adapt, and personalize** each campaign by responding to player actions and orchestrating dynamic world events. It ensures every playthrough feels natural, coherent, and unique while respecting the established lore and handcrafted narrative backbone.
+
+- It does not invent new lore
+- It does not contradict established canon
+- It works within the authored world to create variation and meaningful response
+
+See [`docs/CAMPAIGN_DESIGN.md`](../CAMPAIGN_DESIGN.md) for the full philosophy governing the DM's scope.
+
+---
+
 ## Campaign Narrative Framework
 
 The AI Director's variation system is directly connected to the game's main story structure. See [`docs/GAME_BIBLE.md — Main Story`](../GAME_BIBLE.md) and [`elyndor/history/the_corruption.md`](../../elyndor/history/the_corruption.md) for full details.
