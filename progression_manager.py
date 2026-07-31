@@ -6,6 +6,10 @@ from event_bus import (
     emit
 )
 
+from player import (
+    sync_player_from_world_state
+)
+
 # =========================
 # PROGRESSION STATE
 # =========================
@@ -123,6 +127,16 @@ def check_level_up():
             "+1 Skill Point"
         )
 
+        # Sync progression-owned fields into world_state["player"]
+        # BEFORE calling sync_player_from_world_state() so that the
+        # Player object picks up the new level from world_state (not
+        # a stale progression_state value written after the sync).
+        world_state["player"]["level"] = progression_state["level"]
+        world_state["player"]["xp"] = progression_state["xp"]
+        world_state["player"]["xp_to_next_level"] = progression_state[
+            "xp_to_next_level"
+        ]
+
         emit(
 
             "player_level_up",
@@ -131,6 +145,13 @@ def check_level_up():
                 "level"
             ]
         )
+
+        # Keep the runtime Player object in sync with the new
+        # world_state["player"] values (level, max_hp, hp,
+        # attack_bonus). Without this call, the pre-save
+        # sync_world_state_from_player() would overwrite these
+        # level-up bonuses with the stale combat-side values.
+        sync_player_from_world_state()
 
         # =========================
         # WORLD TIER SCALING
