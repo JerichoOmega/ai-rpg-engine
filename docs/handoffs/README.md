@@ -82,6 +82,7 @@ Create a new handoff document at the end of any session that includes:
 | Date | File | Summary |
 |---|---|---|
 | 2026-07-30 | [`2026-07-30-documentation-session.md`](2026-07-30-documentation-session.md) | Full documentation suite created; integration pass completed |
+| 2026-07-31 | [`2026-07-31-lore-design-session.md`](2026-07-31-lore-design-session.md) | Engine stabilization (dual player-state eliminated); lore Bible expansion (Four Ages framework, First Empire, Great Library Director, Soleth Archive, Capital dynasty, hero arcs) |
 
 *Add new rows here (oldest → newest) each time a handoff is created.*
 
