@@ -432,6 +432,8 @@ Not every goblin tribe is automatically hostile.
 | **Strategy** | Raiding and territorial expansion |
 | **Military culture** | Strength is status; the strongest lead |
 | **Threat level** | High; actively expanding territory |
+| **Leader** | Warchief Grakkor Stonefang — pragmatic strategist who inherited command at nineteen |
+| **Territory** | Eastern Frontier; controls the trade road through Fang-Hold |
 
 The Stonefang Tribe is the most immediately dangerous of the three — the one most likely to be encountered as a combat threat. However, even within the Stonefang, leadership can be challenged, alliances can shift, and the right approach may open doors that violence would close.
 
@@ -445,6 +447,8 @@ The Stonefang Tribe is the most immediately dangerous of the three — the one m
 | **Strategy** | Avoidance of unnecessary conflict; living alongside the land |
 | **Culture** | Deeply tied to the natural world; respect for wildlife |
 | **Threat level** | Low under normal conditions; dangerous if cornered or their land is threatened |
+| **Leader** | Elder Speaker Vess — council-first governance; distrusts outsiders; exceptional tracker |
+| **Territory** | Southern and western Great Forest margins; seasonal camp network |
 
 The Mossroot Tribe is the most likely to be open to negotiation. They are not pacifists — they hunt and they defend themselves — but they do not seek conflict. Approaching them with understanding of their territory and values is the foundation of any relationship.
 
@@ -455,20 +459,16 @@ The Mossroot Tribe is the most likely to be open to negotiation. They are not pa
 | Trait | Detail |
 |---|---|
 | **Defining character** | Newly unified; ambitious; rapidly expanding |
-| **Origin** | Recently united multiple separate clans under a single leadership |
+| **Origin** | Recently united eight separate clans under a single warchief |
 | **Strategy** | Political consolidation followed by territorial expansion |
 | **Threat level** | Growing; becoming a major regional threat |
 | **Dynamic** | The most politically complex of the three — a unified goblin force is something new |
+| **Leader** | Warchief Skarra Ashfire — nation-builder; united the clans through demonstration, not speeches; not yet thirty |
+| **Territory** | Central and southern Frontier; based at Cinderhold, the most developed goblin settlement on the continent |
 
-The Ashfire Tribe's ambition makes it unpredictable. They are not simply raiders — they are a political entity in formation. Who leads them, what they want, and whether that leadership can be influenced or challenged are all campaign-relevant questions.
+The Ashfire Tribe's ambition makes it unpredictable. They are not simply raiders — they are a political entity in formation. Skarra's goal is not expansion for its own sake but the creation of something durable: a goblin political presence large enough to survive.
 
-### Goblin Tribe Design Notes
-
-Each tribe requires:
-- Named leadership (⚠️ NOT YET DEFINED for all three)
-- Specific territory on the continent map (⚠️ NOT YET DEFINED)
-- Traditions and internal culture beyond combat role (⚠️ NOT YET DEFINED in full)
-- Relationship with neighboring civilizations (⚠️ NOT YET DEFINED)
+Full definitions — leadership, territory, traditions, relationships — are in [`docs/world/goblin_tribes.md`](goblin_tribes.md).
 
 ---
 

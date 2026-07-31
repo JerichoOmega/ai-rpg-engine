@@ -46,9 +46,27 @@ The following factions are confirmed to have separate reputation tracking:
 | **Adventurers Guild** | The neutral trade organization; quest access and information |
 | **Mages Guild** | The arcane institution; magical services and Eleanor's faction |
 | **Vampire Houses** | Three separate houses, each tracked independently |
-| **Goblin Tribes** | Three separate tribes, each tracked independently |
+| **Goblin Tribes** | Three separate tribes, each tracked independently — see below |
 | **Religious Orders** | Four orders, each tracked independently — see below |
 | **Mercenary Companies** | ⚠️ NOT YET DEFINED — specific companies to be established |
+
+### Goblin Tribes (detail)
+
+Three tribes are tracked independently. Standing with one does not transfer to others — tribal interests frequently conflict, and helping one tribe may actively harm standing with another.
+
+| Tribe | Leader | Reputation Character |
+|---|---|---|
+| **Stonefang Tribe** | Warchief Grakkor Stonefang | Strength-based; affected by demonstrated combat capability, honoring the Debt of Steel, outcomes of leadership challenges, and willingness to deal directly rather than through intermediaries |
+| **Mossroot Tribe** | Elder Speaker Vess | Trust-based and slow-building; affected by how the party treats Mossroot territory, wildlife, and secrets — notably the Deep Warren; council consensus means reputation shifts are gradual in both directions |
+| **Ashfire Tribe** | Warchief Skarra Ashfire | Politically sensitive; affected by consistency and follow-through on commitments (Ash Oaths are taken seriously), treatment of the unification's legitimacy, and whether the party is perceived as a long-term political partner or short-term opportunist |
+
+**Cross-tribal reputation dynamics:**
+- Helping the Stonefang against the Mossroot in a territorial dispute creates a significant Mossroot penalty and a moderate Stonefang gain
+- Helping the Mossroot defend against Stonefang incursion creates the reverse
+- Recognizing Ashfire territorial claims (e.g., in negotiating safe passage through their zone) creates an Ashfire gain with no automatic effect on the other two — but the Stonefang will note it
+- Brokering peace or a territorial agreement between any two tribes creates a smaller gain with the third (they observe that the party can operate as a neutral political actor)
+
+> Full tribal definitions: [`docs/world/goblin_tribes.md`](../world/goblin_tribes.md)
 
 ### Religious Orders (detail)
 
