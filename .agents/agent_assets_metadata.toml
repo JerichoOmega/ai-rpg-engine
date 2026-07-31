@@ -6,3 +6,9 @@ id = "fR8idDo8TLmOLeBxJ3mdp"
 uri = "file://project-dungeon-keeper-docs.zip"
 type = "unspecified"
 title = "Project Dungeon Keeper — Docs & Lore"
+
+[[outputs]]
+id = "NRkI5si3UUZmf1HXZRZGS"
+uri = "file://exports/project_dungeon_keeper_docs.zip"
+type = "unspecified"
+title = "Project Dungeon Keeper — Documentation"
