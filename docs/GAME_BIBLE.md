@@ -745,10 +745,10 @@ Each companion has one **Core Wound** — a defining emotional scar that connect
 | Hero | Core Wound | Hero Bible |
 |---|---|---|
 | Talos | Lost faith in authority after years of war | [`docs/heroes/TALOS.md`](heroes/TALOS.md) ✅ |
-| Eleanor | Naive optimism leaves her vulnerable to betrayal | ⚠️ Not yet written |
-| Ragash | Rejected by her people; found belonging with her hounds | ⚠️ Not yet written |
-| Ronan | Believes his curse makes him a danger to everyone | ⚠️ Not yet written |
-| Steven | His identity and mysterious past define him | ⚠️ Not yet written |
+| Eleanor | Naive optimism leaves her vulnerable to betrayal | [`docs/heroes/ELEANOR.md`](heroes/ELEANOR.md) ✅ |
+| Ragash | Rejected by her people; found belonging with her hounds | [`docs/heroes/RAGASH.md`](heroes/RAGASH.md) ✅ |
+| Ronan | Believes his curse makes him a danger to everyone | [`docs/heroes/RONAN.md`](heroes/RONAN.md) ✅ |
+| Steven | His identity and mysterious past define him | [`docs/heroes/STEVEN.md`](heroes/STEVEN.md) ✅ |
 
 ### Technical Implementation (`companion_manager.py`)
 

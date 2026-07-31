@@ -71,10 +71,10 @@ Full Hero Bible entries live in [`docs/heroes/`](heroes/):
 | Hero | Entry | Status |
 |---|---|---|
 | Talos | [`docs/heroes/TALOS.md`](heroes/TALOS.md) | ✅ Complete |
-| Eleanor | `docs/heroes/ELEANOR.md` | ⚠️ Not yet written |
-| Ragash | `docs/heroes/RAGASH.md` | ⚠️ Not yet written |
-| Ronan | `docs/heroes/RONAN.md` | ⚠️ Not yet written |
-| Steven | `docs/heroes/STEVEN.md` | ⚠️ Not yet written |
+| Eleanor | [`docs/heroes/ELEANOR.md`](heroes/ELEANOR.md) | ✅ Complete |
+| Ragash | [`docs/heroes/RAGASH.md`](heroes/RAGASH.md) | ✅ Complete |
+| Ronan | [`docs/heroes/RONAN.md`](heroes/RONAN.md) | ✅ Complete |
+| Steven | [`docs/heroes/STEVEN.md`](heroes/STEVEN.md) | ✅ Complete |
 
 ---
 
