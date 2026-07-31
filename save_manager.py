@@ -302,6 +302,21 @@ def load_game():
 
         return
 
+    # Guard: json.load() can return any JSON
+    # value (list, string, number, etc.).
+    # Every path below calls save_data.get()
+    # so we must confirm it is a dict before
+    # proceeding.
+
+    if not isinstance(save_data, dict):
+
+        print(
+            "\nSave file is not a valid"
+            " JSON object — cannot load."
+        )
+
+        return
+
     # =========================
     # PLAYER
     # =========================
