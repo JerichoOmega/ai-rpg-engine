@@ -121,6 +121,49 @@ Minimal to none. The Inquisitors do not have meaningful presence in the Iron Pea
 
 ---
 
+## Frontier Operatives — The Circuit Roster
+
+> The four-to-six field operatives currently rotating through the Frontier circuit (see *Current Reach*). Five are named here, including Brother Verath. Writers running Frontier encounters should pick the operative whose method fits the scene rather than defaulting to "a figure like Verath" — the roster exists precisely because the Inquisitors' field texture is not uniform. Remember the canon constraint: these five do not coordinate in real time; their movements are managed from the Capital, and two of them can be pursuing contradictory agendas in adjacent towns without knowing it.
+
+### Brother Verath
+The known quantity — see the Leadership section and *The Inquisitor's Commission*. Conviction amplified past self-scrutiny; the "focus of disorder" doctrine applied without regard to intent. Currently working the central Frontier around Millhaven and its neighboring settlements. Baseline against which the others should read as *different*, not lesser copies.
+
+### Brother Odran Kolt — the careerist
+- Fifty-two; the circuit's senior operative by years of service, and the only one who experiences the posting as a punishment. Kolt spent nine years in Capital Province operations until an investigation of his brushed a Restorationist patron's household and he was rotated to the Frontier "for breadth of experience." He has spent six years trying to be rotated back.
+- **Method emphasis:** canonical referral. Kolt builds immaculate paper cases and escalates them into the official Covenant structure — because formal referrals are read in the Capital, and being read in the Capital is the point. He detains rarely and burns almost nothing; visible mess is career damage.
+- **Distinguishing trait:** his target selection tracks political value, not spiritual danger. A genuinely Corruption-touched hermit interests him less than a suspect whose exposure would please someone with influence. He is, by the Reformists' private assessment, the least cruel and most corrupt man on the circuit.
+- **Operates in:** the prosperous trade-road towns of the eastern Frontier, where the merchants have Capital connections worth cultivating.
+- **In encounters:** Kolt can be bargained with by anyone who understands what he actually wants, and is dangerous to anyone who assumes his courtesy is softness. He will trade a prisoner for a favor that travels. He files everything.
+
+### Sister Renna Fenwick — the doctrinaire
+- Thirty-eight; former Covenant shrine warden whose Frontier chapel was destroyed in a genuine Corruption incident eleven years ago — she identified the touched individual correctly, reported through official channels, and the process took four months, by which point three people were dead. She joined the Inquisitors the following spring and has never once doubted why.
+- **Method emphasis:** disorder designation, applied fast and wide. Fenwick destroys foci first and documents afterward. Her incident rate is the highest on the circuit; so is her rate of confirmed Corruption findings — which is what makes her impossible for the leadership to simply rein in.
+- **Distinguishing trait:** she is the circuit's closest approach to the Tribunal pattern and the only operative other Inquisitors privately worry about. Where Verath has convinced himself intent is irrelevant, Fenwick believes delay is complicity — and unlike Verath, she has a four-month body count to point to when challenged. Several of her field assignments have been cancelled at the last moment by scheduling conflicts she has begun to find suspicious.
+- **Operates in:** the western Frontier margin, the mixed-practice settlements nearest the Great Forest.
+- **In encounters:** she cannot be slowed by procedure (she regards procedure as the thing that killed three people) but can be stopped by *evidence delivered faster than her action* — she has never destroyed a focus she was persuaded was clean, and, uniquely on the roster, she has formally retracted a designation and recorded the error under her own name.
+
+### Brother Tavin Sarel — the gentle instrument
+- Forty-five; a village cleric for twenty years before the Inquisitors recruited him for the quality everyone notices within minutes: people trust him. Sarel is warm, patient, unhurried, and entirely sincere — there is no mask.
+- **Method emphasis:** the spiritual interview, at which he is the best on the circuit. Sarel never detains and has never designated a site for destruction. He sits with people, and people tell him things — about themselves, about their neighbors — because talking to him feels like relief.
+- **Distinguishing trait:** he is the roster's demonstration that the Inquisitors' harm does not require cruelty. Sarel's interview transcripts have initiated more extended examinations than any other operative's fieldwork — carried out later, by others, on people who never understood that the kind man at their table was the beginning of the process. Whether Sarel has allowed himself to understand this is a question writers should keep open; he reads his own role as ministry.
+- **Operates in:** the farm belt of the southern Frontier, moving village to village on foot.
+- **In encounters:** parties will likely meet him without realizing what he is, and may like him. Confronting him with what happens downstream of his interviews is the encounter — he will not argue, he will grieve, and what he does next is one of the circuit's genuinely undetermined outcomes.
+
+### Sister Ivett Harrow — the one keeping a second ledger
+- Thirty-three; recruited from the Covenant's archival service for her documentation skills; two years on the Frontier circuit. Competent, quiet, unremarkable in the field — deliberately so.
+- **Method emphasis:** surveillance commissions and evidence work. Harrow's official reports are models of restraint and accuracy. Her unofficial record — the one no one has authorized — documents what her official reports omit, including three active operations she considers illegal by the faction's own standards.
+- **Distinguishing trait:** Harrow is the operative in **Hook B: The Inquisitor Who Wants Out**, above. Everything in that hook — the indirect contact, the leverage structure, the genuine Corruption intelligence she holds — is hers. Until Hook B triggers, she is simply the circuit's most careful and least alarming member, which is exactly the cover a person in her position needs.
+- **Operates in:** the northern Frontier, the newer settlements — assignments with less history and less scrutiny, which she has quietly maneuvered to keep.
+- **In encounters (before Hook B):** scrupulously procedural, oddly insistent on doing everything by the book in a faction that has no book. A party paying close attention may notice she documents her *colleagues'* actions with the same care she documents suspects'.
+
+### Using the Roster
+
+- **The circuit's friction is content.** Kolt and Fenwick working adjacent towns produce opposite Inquisitor experiences a day's travel apart; a community "cleared" by Sarel's gentle visit may be on Fenwick's designation list a month later. Parties who deal with one operative and assume they understand the faction should be surprised by the next.
+- **The spectrum is the point.** Careerism (Kolt), doctrine (Fenwick), sincere ministry (Sarel), hidden dissent (Harrow), amplified conviction (Verath) — five different answers to how a person ends up doing this work. Encounter design should make the party feel that opposing the Inquisitors means something different in each case.
+- **The unnamed sixth.** The circuit runs four to six operatives; the sixth position, when staffed, rotates and is deliberately left unauthored for writers who need a disposable or scene-specific Inquisitor.
+
+---
+
 ## Relationship with Covenant Factions
 
 ### The Restorationists
@@ -268,4 +311,5 @@ Do not let Coss win the argument, and do not let the party win it. His instituti
 | Date | Change |
 |---|---|
 | July 2026 | Created — leadership, methods, reach, faction relationships, and encounter hooks established. Cross-referenced to religions.md and cults.md. |
+| 2026-07-31 | Added Frontier Operatives — The Circuit Roster: four named circuit Inquisitors beyond Verath (Odran Kolt, Renna Fenwick, Tavin Sarel, Ivett Harrow) with profiles, method emphases, and subregions; Harrow identified as the operative in Hook B; usage notes and the unnamed sixth slot. |
 | 2026-07-31 | Authored Inquisitor-General Coss's confrontation scene (*The Summons — An Hour with the Inquisitor-General*) — trigger, setting, negotiating posture (offers, asks, non-negotiables), useful and adversary variants, and the three-route evidence choice that changes the faction's trajectory. Linked from the Leadership section. |
