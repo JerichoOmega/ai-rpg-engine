@@ -790,6 +790,8 @@ At a glance: a location consistent with Order boundary sites — minimal physica
 
 > Frequency definitions: Very Common — nearly every journey; Common — most journeys; Occasional — some journeys; Rare — notable when encountered; None — not present in this region
 
+> **Named shrine locations:** For regions where shrines are Common or Very Common, specific named and placed shrines are defined in [`docs/world/shrine_locations.md`](../world/shrine_locations.md). The AI DM must use those fixed locations consistently across playthroughs; unnamed procedural shrines may supplement them but cannot replace them.
+
 ---
 
 ## Cross-Reference: Reputation Impact Summary
