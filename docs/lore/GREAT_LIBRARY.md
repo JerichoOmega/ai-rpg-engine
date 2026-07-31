@@ -81,6 +81,127 @@ It also contains materials that were placed there by House Soleth — the vampir
 
 ---
 
+## Key Personnel
+
+---
+
+### Director Maret Cosse
+
+**Name:** Maret Cosse  
+**Species:** Gnome  
+**Position:** Director of the Great Library  
+**Tenure as Director:** 43 years  
+**Background:** Senior Index (head of gnomish archival staff) for 21 years before elevation to Director
+
+---
+
+Maret Cosse did not become Director through political appointment. She became Director because, after twenty-one years as Senior Index, she was the person who knew the Library's contents — and its gaps — better than anyone alive. The Library's administrative council elevated her to the position during a period when the previous Director's death had created a vacancy that the usual candidates for senior institutional appointments did not want to touch. The Sealed Archive's most recent additions had been made during the previous Director's tenure. No one who understood what was in them was enthusiastic about inheriting the responsibility.
+
+Maret accepted. She had already been living with that knowledge for years. The title changed nothing except the weight of what she was asked to justify.
+
+She is now in her late eighties — not old for a gnome, but visibly older than she was when she took the position. She runs the Library from a second-floor office overlooking the primary Reading Hall. The office is neither grand nor sparse — it is a working space filled with stacked papers, catalogued correspondence, and a set of bound notes she has been maintaining for four decades. She does not host audiences in it. She meets people in the Reading Hall or in the first-floor reception room adjacent to the Restricted Collection entrance. She does not bring people upstairs.
+
+---
+
+**Character Beat 1 — Carrying the Archive**
+
+Maret has read what is in the Sealed Archive. Not completely — she acknowledges freely that the sealed materials were placed there by people who did not reliably transmit their context, and that the full picture has gaps she cannot fill. But she has read enough. In her first year as Director, she spent three weeks in the lowest level, reading.
+
+She has not gone back. She did not need to.
+
+What she carries is not guilt, precisely. It is a more specific form of institutional grief: she took an oath to preserve knowledge for future generations, and she oversees an archive specifically designed to prevent certain knowledge from reaching future generations. The Library's entrance inscription — *"Tomorrow inherits only what we preserve today"* — passes through her line of sight every morning. She has been thinking about it for forty-three years.
+
+She has never resolved the contradiction. She has learned to carry it instead, in the way of someone who decided long ago that resolution was less available than endurance.
+
+*For writers:* Maret does not discuss the Archive's contents directly. What she will occasionally do — with players who have demonstrated genuine understanding of what they're asking about — is acknowledge that the contradiction exists. A single, unguarded admission that the Library's mission and the Library's practice are not the same thing. She does not linger on it. But she does not pretend it isn't there.
+
+---
+
+**Character Beat 2 — The Veiled Archivists**
+
+Maret finds Carros useful and uncomfortable in proportions she has never fully separated.
+
+His research — the most complete account of the Great Forgetting assembled by any living scholar — is precisely the kind of work the Library's mission demands. It is also precisely the kind of work she formally requested he not publish through Library distribution channels. She made that request fourteen years ago. Carros complied. He has continued his research. His files grow. He has not pressed her on the suppression.
+
+She is aware that this makes her a hypocrite. She has the exact same thought every time she passes his private study on the way to the Restricted Collection entrance. She made the request not because she wants his findings buried — she would not describe it that way, even privately — but because she does not know what publishing them through the Library would trigger. The Library is visible. Its distribution channels reach the Royal Government, the Mages Guild council, and the senior figures of every major religious tradition. The people who created the gaps in the Open Collection created them in response to something. She does not know what they were responding to. She does not want to find out by having Carros's research reach the same people who produced the gaps in the first place.
+
+Her caution is protective, she tells herself. Whether that is true, or whether it is a more comfortable word for self-preserving inaction, she has not resolved.
+
+*For writers:* If players ask her about Carros's research — particularly after establishing that they already know it exists — Maret will acknowledge that it is there. She will not pretend it is inaccessible. What she will do is describe the political reality around it in terms that make clear she is managing something she does not fully control, not simply refusing access out of authority. Players who express understanding of that reality — who demonstrate they know what they would be walking into — may find she has more to say than her formal position requires.
+
+---
+
+**Character Beat 3 — Institutional Loyalty and Private Conclusions**
+
+Maret's private conclusion — never stated aloud, never written in official correspondence, never said to another person in forty-three years — is that the Great Library has been complicit in the Great Forgetting in ways its founding mission specifically forbids.
+
+The Sealed Archive is not a preservation measure. It is a suppression measure. The materials placed there were placed there specifically so that they would not reach the people whose inheritance they are. The distinction between *preserving something restricted* and *hiding something* is one the Order's oath does not acknowledge, and Maret has spent four decades watching that distinction matter.
+
+She has not acted on this conclusion. Acting on it would require a clarity she does not have: she does not know who the enemy is. She does not know what releasing the Sealed Archive's contents would do, or to whom, or whether the people who originally sealed those materials had reasons she cannot see from where she stands. She does not know whether her conclusion is correct, or whether it is the conclusion of someone who has read one side of a story whose full context is sealed in the same archive she is analyzing.
+
+Her caution is real. It is also, she recognizes, convenient.
+
+*For writers:* Maret is not a villain and not an ally in any straightforward sense. She is an institution personified — capable of great care and genuine grief, and also capable of rationalizing inaction for long enough that the rationalization has become structural. Players who treat her as simply obstructive will find her obstructive. Players who treat her as someone who has been sitting with a problem for forty-three years and has not yet found a way to act on it may find something more.
+
+---
+
+**Character Beat 4 — When Players Get Close**
+
+Maret does not refuse directly. This is the most important thing about running her.
+
+A character who simply refuses is a wall. Maret is a gatekeeper — she redirects, points toward legitimate pathways, asks careful questions about research purpose. What she cannot do, when a player asks something that lands, is fully absorb it without her expression changing.
+
+She has been thinking about certain questions for four decades. When someone asks one of them, she has already had the conversation. She has already worked through the implications, the counter-arguments, the places where she cannot see clearly. The pause before her answer is the sound of someone deciding which version of a very long internal conversation to offer.
+
+*Specific behavioral tells for the AI Director:*
+
+- A question that references the Sealed Archive directly produces a particular quality of stillness — not hostility, not surprise, but the composure of someone who has been waiting for this conversation and is now deciding whether they are ready for it
+- A question that demonstrates the player already knows about the eight-member Chorus produces something different: Maret will look at the player for a long moment before speaking. Not measuring them for threat. Measuring them for readiness.
+- She asks research questions not to gatekeep but to understand. If a player explains why they are asking, she listens carefully enough that it is clear she is not assembling a case for refusal — she is trying to figure out how much they already know
+- She does not lie about the Sealed Archive's existence. She does not volunteer it either. The distinction is available to players who ask the right question
+
+---
+
+**Character Beat 5 — The House Soleth Arrangement**
+
+Maret inherited the Soleth arrangement. She did not create it, did not negotiate it, and cannot locate its full terms.
+
+This is the most uncomfortable thing she carries. The arrangement predates the current dynasty, predates three prior Directors, and — as best as she can determine from the fragmented documentation that survived — predates the Library's current building by at least one architectural era. She has a partial record of what Soleth contributed to the Sealed Archive. She has a significantly more incomplete record of what the Library agreed to provide in exchange.
+
+She treats the arrangement as a legacy she cannot change without triggering consequences she cannot predict, because that is what it is. Unilaterally refusing what Soleth contributed would mean returning or destroying materials the Library has held for generations. Unilaterally refusing whatever the Library is obligated to provide in exchange would mean breaking a commitment whose enforcement mechanism she does not know and does not want to find out about.
+
+She does not resent Soleth the way she resents the arrangement's opacity. In her forty-three years as Director, she has dealt with Soleth agents directly on four occasions. What she found, each time, was not the predatory negotiation she had prepared for. What she found was people — or near-people — who were also sitting with knowledge they had not asked for, trying to manage something larger than themselves. The Archivist, in particular, struck her as someone carrying the same specific weight she carries: the weight of knowing that an institution you believe in has done things its mission forbids, for reasons that might be good, and that you cannot undo without knowing more than you know.
+
+She would not call this kinship. She has thought about it enough that she would recognize it if asked.
+
+*For writers:* If players ask about the Soleth arrangement, Maret will acknowledge it exists — she will not pretend otherwise to a player who has clearly done enough research to know it does. What she will not do is reveal terms she cannot locate. Her frustration about this is genuine and available: she is, among other things, angry that she was handed a binding commitment without its documentation. That anger is one of the more accessible things about her.
+
+---
+
+**Maret's Relationship to the Player**
+
+The arc of dealing with Maret should move through three stages:
+
+*Stage 1 — Formal gatekeeper:* She is the Director. She provides legitimate pathways. She is helpful within the institution's stated policy. Players who treat this as the only register available will find it is the only one they get.
+
+*Stage 2 — Person carrying something:* Players who demonstrate genuine understanding of what they're looking for — not just claiming research access, but showing they know what they're asking about — will find that Maret has more give than her institutional role suggests. She begins to ask fewer procedural questions and more substantive ones. The conversation changes texture.
+
+*Stage 3 — Potential ally of a specific kind:* Maret will not open the Sealed Archive for a player. She does not have the authority to do that unilaterally, and she knows it. What she can do — for a player she has come to trust, in a conversation that has moved past the formal register — is describe the shape of what is in it. Not the contents. The shape: what kind of materials, from what period, with what organizational logic. Enough to tell a careful researcher where the real access problems lie and what paths exist that she cannot officially point to.
+
+This is not heroism. It is a person who has been carrying a contradiction for forty-three years and has found one specific thing they can do that is less wrong than doing nothing.
+
+---
+
+### Note on Other Senior Staff
+
+The Library's administrative structure places the Director above:
+- **The Chief Archivist** — head of the Order of Archivists, who manages the institution's scholarly staff and maintains the Order's traditions; this position is currently held by a senior human scholar who has been in the role for twelve years and is aware of the Sealed Archive's existence but not its contents
+- **The Senior Index** — head of gnomish archival staff (Maret's former position); currently held by a gnome known professionally as the Senior Index, whose personal name is used only by colleagues; the position Maret held for twenty-one years before elevation
+
+Carros (the Veiled Archivist) and the Senior Index both report through the Chief Archivist. Maret's relationship with Carros bypasses that chain when the subject is the Sealed Archive — she deals with him directly, as she does with the gnomish archival staff on archival matters, because those subjects are above the Chief Archivist's clearance.
+
+---
+
 ## The Order of Archivists
 
 The Order of Archivists is the Great Library's own institutional body — the scholars, researchers, and preservationists who staff the Library and carry its mission forward across generations. They are distinct from the Veiled Order's archivists, who operate within the Library under a separate arrangement.
@@ -215,3 +336,4 @@ It also shapes the tension at the Library's core. An institution devoted to pres
 |---|---|
 | July 2026 | Created — Great Library lore document; collections (Open, Restricted, Sealed Archive); the Veiled Archivists and Carros; gnomish archivist staff; the Library's relationship to the Great Forgetting; access structure as campaign tool |
 | July 2026 | Major expansion — Entrance Inscription added; Order of Archivists established as named institution (mission, loyalty, Official Oath, Chief Archivist's response); Scholar Traditions (common sayings); Archivist Traditions (blank journal; journals permanently archived at death); Design Philosophy section added |
+| July 2026 | Added Key Personnel section — Director Maret Cosse (gnome; 43-year tenure; five character beats: carrying the Archive, the Veiled Archivists, private conclusions, responding to close questions, the Soleth arrangement); note on Chief Archivist and Senior Index reporting structure |
