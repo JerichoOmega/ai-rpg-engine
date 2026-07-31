@@ -275,6 +275,101 @@ The measurable effect: Soleth is now running two parallel information-sharing po
 
 ---
 
+## The Weaponizer–Mages Guild Contact Channel
+
+> **Cross-faction sidebar.** This section documents the unauthorized information exchange between the Weaponizer faction within House Soleth and a senior scholar at the Sol Kareth Mages Guild chapter. It provides named individuals, specific exchanged materials, and the Archivist's current awareness level for use in quests, encounters, and scholar-facing storylines.
+
+---
+
+### The Weaponizer Contact: Voss Theranel
+
+**Who he is:** Voss Theranel is a Weaponizer-aligned Soleth operative who has lived through the Third Age but was not turned until near its end — old enough to have direct memory of what political catastrophe looks like, young enough (by vampire standards) to find the Archivist's deliberateness intolerable. He is not a strategist or ideologue within the Weaponizer faction; he is an executor. The Weaponizers chose him for this channel because he has the patience to maintain a long-running deception and the scholarly credibility to make his cover plausible.
+
+**His cover identity:** Theranel presents himself as a traveling antiquarian and private collector of pre-modern historical records — specifically materials from the Second Age and older. He has cultivated this identity over approximately fifteen years in Sol Kareth's scholarly community. He attends Guild-adjacent symposia, donates minor genuine historical items to the Guild's public archive, and has made himself useful enough to be known without being important enough to be scrutinized.
+
+**His manner:** Careful, unhurried, and genuinely knowledgeable. He is not performing scholarly interest — he has been immersed in Soleth's archives long enough that his expertise is real. He tends to ask questions in the form of gifts: he offers a fragment of information, then waits to see if the scholar he's speaking with offers something in return. He regards this as civilized conversation. He does not threaten. He does not rush. He is patient in the way that someone with centuries of practice is patient.
+
+**What writers should know:** Theranel is not a villain in the conventional sense. He genuinely believes that the information exchange serves the goal of stopping the Corruption — he is a Sharer in temperament who found himself operating through Weaponizer methods because the Sharers lack organizational capacity. He is capable of regret. He is also capable of compartmentalizing it.
+
+---
+
+### The Mages Guild Contact: Senior Scholar Aldric Wenne
+
+**Who he is:** Aldric Wenne is a senior researcher at the Sol Kareth chapter of the Mages Guild, specializing in the geographic spread of Corruption effects — specifically, the rate and pattern of its advance across the continent's ecosystems, population centers, and magical infrastructure. He has been compiling this data for seven years and is, by most institutional assessments, the most rigorous field cartographer the Guild has on the subject.
+
+**How the contact began:** Theranel approached Wenne at a scholarly gathering approximately two years before the campaign's present. He offered, through the careful indirection he favors, a fragment of a Third Age chronicle describing three historical locations where the imprisoned god's presence had been "measured and found stable" before the Age of Legends. The fragment was genuine. One of the three locations corresponded exactly to a site Wenne had already flagged in his own research as showing anomalous Corruption intensity — a site the Guild's official position had categorized as a probable natural anomaly. The match convinced Wenne that Theranel's source, whoever it was, had access to something real.
+
+**What he knows about Theranel:** Wenne knows Theranel is not who he presents himself as. He does not know Theranel is a vampire. His working hypothesis is that Theranel represents a private collection — old family archive, possibly a dissolved noble estate — that has reasons to stay off official record. He has not investigated this hypothesis carefully, because investigating it would require acknowledging what he is doing to Guild oversight. He knows this is a failing. He continues anyway.
+
+**His manner:** Precise, methodical, and visibly uncomfortable when the subject strays toward his source's identity. Wenne is not a person who enjoys moral ambiguity. He has constructed an ethical framework for the exchange — *information in service of stopping the Corruption is worth the compromise; I am not harming anyone; the source has never asked me for anything dangerous* — and he revisits this framework frequently. If a player gives him a reason to revise it, he will.
+
+**What writers should know:** Wenne is not corrupt in the self-serving sense. He is a meticulous scholar who made one bad decision and has been making incrementally worse decisions in its service ever since. He has enough Guild institutional standing that exposure would damage the chapter, not just his career. He is aware of this and has used it, unconsciously, as a reason not to stop.
+
+---
+
+### What Has Been Exchanged
+
+**Materials Theranel provided (Weaponizer → Guild):**
+
+1. **The Third Age Chronicle Fragment** — a partial transcription (not the original document) from a Third Age record documenting three "anchor sites": locations where the god's presence was historically strongest before the final sealing. The fragment does not name the god, does not describe the sealing, and does not explain what an anchor site means in terms of the seal's mechanics. It provides geographic descriptions and a set of environmental signatures associated with each location. One anchor site is in or near Sol Kareth. The others are described with enough specificity that Wenne has tentative candidate locations in the Iron Peaks and the Great Forest.
+
+2. **A collection of pre-Corruption baseline ecological measurements** — documentation from before The Corruption's modern intensification, establishing what "normal" magical field readings looked like at sites that are now heavily disturbed. This gives Wenne a baseline he did not have, making his spread-rate calculations significantly more accurate.
+
+3. **A partial index of Second Age scholarly correspondence** — not the letters themselves, but a record that they existed, who wrote them, and what subject headings they were filed under. Several of the subject headings correspond directly to questions Wenne's current research cannot answer. He knows this index is telling him there are answers somewhere that he does not have.
+
+**Materials Wenne provided (Guild → Weaponizer):**
+
+1. **Wenne's compiled Corruption spread-rate data** — a seven-year cartographic study documenting how the Corruption is advancing geographically, with projected trajectories for the next decade under current conditions. This is the most comprehensive picture of The Corruption's expansion currently available to any faction. The Weaponizers wanted it because it tells them which Soleth archive sites are in the Corruption's path and how much time each has.
+
+2. **The Guild's institutional review of magical destabilization events** — an internal document (not publicly circulated) that correlates documented magical incidents over the past twenty years to proximity to Wenne's anchor-point candidate locations. The pattern is significant: sites near candidate anchor points show substantially higher rates of magical destabilization. This document's existence, and what it implies about the anchor sites, is not yet known to Guild leadership.
+
+3. **Field notes from three Sol Kareth excavation sites** — Wenne had access to preliminary notes from recent Guild-sponsored excavations in the desert ruins. Theranel asked for these specifically. Wenne provided them. He has since recognized that Theranel's interest in those sites was probably not random, and that some of those sites may correspond to active Soleth operations. He has not raised this concern with anyone.
+
+---
+
+### The Archivist's Awareness
+
+**What he knows:** The Archivist knows the channel exists. He is aware that Voss Theranel has been meeting with a Mages Guild scholar in Sol Kareth and that some form of information exchange is occurring. He does not know the full scope — specifically, he has not read the Third Age Chronicle Fragment that was provided, does not know the anchor-site data has been shared, and does not know about the magical destabilization correlation document.
+
+**Why he has not intervened:** This is consistent with his characteristic behavior and not an oversight. The Archivist does not act until he has mapped the consequences. He is allowing the exchange to continue while he assesses what the Weaponizers are learning from it, what the Guild scholar is capable of doing with what he receives, and whether the information leaving Soleth's possession will produce outcomes worth the cost of the breach. He regards this as risk assessment. The Preservationists regard it as dangerous tolerance. The Weaponizers regard it as quiet approval.
+
+**The line:** The anchor-site data is the Archivist's threshold. He does not consider sharing the spread-rate data or the baseline measurements to be irreversible — that information will become derivable eventually. The anchor-site information narrows Soleth's strategic options in ways he considers unacceptable: knowing which sites are anchor candidates gives outside factions leverage over Soleth's most sensitive physical locations. If he learns the Third Age Chronicle Fragment was shared, his assessment of the situation changes.
+
+**His response if fully discovered:**
+
+*If the channel is exposed to Guild oversight or other factions before the Archivist acts:*
+The Archivist closes the channel immediately and accepts the damage. He does not deny that it occurred. He frames it, accurately, as an unauthorized internal faction action — which it is. Whether this is accepted depends on who is asking and what they want to do with the information.
+
+*Regarding Voss Theranel:*
+There is no dramatic confrontation. Theranel finds himself reassigned to a documentation project at a dormant archive site in the Iron Peaks — a posting that is technically a legitimate function of his role and also clearly a removal from active operations. No message is sent. No explanation is given. The Weaponizer faction leadership understands what happened.
+
+*Regarding Wenne:*
+The Archivist does not contact Wenne directly. He is a Guild scholar who made bad decisions under the reasonable assumption that he was dealing with a private collector. The Archivist considers what Wenne knows to be a managed problem rather than a threat, unless Wenne chooses to act on the anchor-site data. He will have a Soleth operative observe Wenne's subsequent research to assess this.
+
+*If the anchor-site data has already been used:*
+This is the scenario the Archivist considers carefully before taking any action. If the anchor-site information has propagated beyond Wenne — if it appears in Guild institutional materials, if another faction has access to it, if the player has seen it — the damage is not reversible by closing the channel. In this case his response shifts from containment to consequence mapping. He does not punish inefficiency. He does not forgive exposure of anchor-site data. He is not finished thinking about it when the player encounters him.
+
+---
+
+### Using This Channel in Play
+
+**For writers building encounters and quests:**
+
+- A Mages Guild protagonist or scholar contact who knows Wenne will eventually have access to the channel — not because it is offered, but because Wenne's research outputs are anomalously precise in ways that don't have a visible source. Tracing that precision back to its origin is a natural investigative thread.
+- Theranel can appear as a recurring background presence in Sol Kareth before being identified — the antiquarian the player has seen at Guild gatherings who asks slightly more specific questions than his cover story explains.
+- Wenne is a valuable asset and a moral complication simultaneously. He has information no other Guild scholar has and cannot explain where it came from without implicating himself. He is a source who has reasons to cooperate and reasons to obstruct.
+- The anchor-site data is a significant in-world discovery. A player who recovers Wenne's compiled research is holding one of the most consequential documents currently in circulation. Factions that learn the player has it will respond accordingly.
+- If the channel is exposed to the Archivist through player action, his response reveals more of his characterization than almost any other event in the Soleth arc — he already knew, he allowed it, and he has a precise account of why. The player's reaction to this explanation is the measure of the relationship.
+
+**Encounter hooks:**
+
+- Wenne approaches the player (or a Mages Guild contact the player already has) with a specific, urgent question about an anomalous site — one that matches an anchor-site candidate. He needs field data he can't get through official channels. He is not forthcoming about why.
+- Theranel is present at a gathering, event, or ruin site and is clearly more interested in something there than his cover story accounts for. He notices when the player notices.
+- A Preservationist-aligned Soleth contact mentions, obliquely, that there is a breach in operational security the Archivist has not resolved. If the player presses, the Preservationist is not willing to name the channel directly — but they are willing to point toward Sol Kareth.
+- Wenne's field notes from the three Sol Kareth excavation sites surface in a location where they should not be — in Weaponizer-adjacent materials recovered from a compromised archive site, for example. How they got there is traceable, but tracing it leads directly to the channel.
+
+---
+
 ## Companion Reactions to the Vampire Houses
 
 Each companion holds a distinct position on the Vampire Houses. These opinions do not disappear — they should surface in dialogue, camp conversations, and moments where the party must decide how to engage.
