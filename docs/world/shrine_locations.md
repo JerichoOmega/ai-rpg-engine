@@ -56,8 +56,8 @@ Regions covered by this document (Common or Very Common):
 ---
 
 #### **The Lantern House at Greyveil**
-**Type:** SC-S2 (Waystation Shrine)  
-**Location:** Attached to an active Frontier waystation called Greyveil — a permanent stone building at the edge of Blackfen that serves as a rest point for travelers crossing the marshland. The shrine occupies a room off the main hall.  
+**Type:** SC-S1 (Roadside Sun-Niche), incorporated into a waystation  
+**Location:** Built into the outer wall of a Frontier waystation called Greyveil — a permanent stone building at the edge of Blackfen that serves as a rest point for travelers crossing the marshland. The niche faces the road; a small sun-disc and oil lamp are visible from fifty feet.  
 **State:** Maintained. A lay custodian named **Baret Sinne** (late forties, former soldier, Covenant-faithful without being devout) keeps the station and the shrine. He considers the shrine a practical service, not a theological statement, and will say so plainly.  
 **Fixed lore:** The shrine's record book — a tradition Baret maintains without being asked — lists every traveler who stopped and left an offering over the past twelve years. Players who spend time with the book find three entries from a single traveler who signed as "T.V." — six months ago, four months ago, and six weeks ago. Each entry notes the same phrase after the offering: *"Still waiting."* Tessaly Vorn (from the Threshold Circle questline) uses this shrine as a waypoint. The most recent entry is not in the same handwriting.
 
@@ -84,9 +84,9 @@ Regions covered by this document (Common or Very Common):
 ---
 
 #### **The Healer's Grove above Ashwatch**
-**Type:** OW-S2 (Ancient Grove)  
-**Location:** A stand of very old trees on the hillside above Ashwatch Keep, reachable by a half-hour climb from the keep's eastern gate. The grove predates the keep by at least two centuries.  
-**State:** Dormant — the quality that Old Ways practitioners associate with a living sacred grove has diminished in the past two years. The trees are physically healthy but the sense of presence is gone.  
+**Type:** OW-S3 (Frontier Cairn), marking an adjacent grove  
+**Location:** A traditional Old Ways cairn at the threshold of a stand of very old trees on the hillside above Ashwatch Keep, reachable by a half-hour climb from the keep's eastern gate. The cairn marks entry to the grove; the grove predates the keep by at least two centuries and is the sacred site the cairn was placed to mark.  
+**State:** Dormant — the quality that Old Ways practitioners associate with a living sacred grove has diminished in the past two years. The cairn is intact and offerings continue to appear, but the grove beyond it has lost whatever quality made it worth marking.  
 **Fixed lore:** During the keep's construction three hundred years ago, the builder — a human commander with Old Ways practice — specifically sited the keep's eastern wall to avoid disturbing the grove. His decision was recorded in the keep's founding documents as an architectural note, with no theological explanation. A Covenant historian who reads the note will find it baffling. A Grove Keeper who reads it will find it deeply moving. The grove and the keep have coexisted without incident for three centuries. Whatever is causing the dormancy began two years ago, not three hundred — its cause is external, not the keep.
 
 ---
@@ -153,7 +153,7 @@ Regions covered by this document (Common or Very Common):
 
 #### **The Deep Shrine of the Stoneheart Hall**
 **Type:** AP-S3 (Deep Shrine)  
-**Location:** Accessible through Stoneheart Hall — a large underground chamber two hours' descent into the Iron Peaks below the settlement of Kethwald. The shrine itself is in a secondary chamber off the main hall, sealed behind a door that requires clan credentials to open.  
+**Location:** Accessible through Stoneheart Hall — a large underground chamber two hours' descent into the Iron Peaks below the Iron Peaks settlement of **Ironvale**. (Note: Kethwald is a separate Frontier town referenced in the Threshold Circle questline; Ironvale is distinct.) The shrine itself is in a secondary chamber off the main hall, sealed behind a door that requires clan credentials to open.  
 **State:** Sealed — recently, and with urgency. The attendant, **Keeper Maret Ashval**, sealed the shrine three weeks ago after an ancestral contact session produced responses she describes as "present, but wrong." She has sent messages to six other senior Ancestor Speakers asking for guidance. Two have responded with similar reports from their own sites. Four have not responded.  
 **Fixed lore:** The Stoneheart Hall Deep Shrine is one of only three shrines in the Iron Peaks where ancestral contact has been reliable enough for clan governance decisions over multiple centuries. Its closure has produced a political crisis: the Ashval clan's elder council has a succession dispute that requires ancestral consultation to resolve legitimately. Without access to the shrine, both claimants are governing simultaneously and the clan is in a slow-motion split. Keeper Maret will open the shrine to players who can demonstrate both the relevant clan credentials and an understanding of why she sealed it. She will not open it to people who simply need it for political reasons — she has already been approached by both succession claimants and refused them both.
 
@@ -293,4 +293,5 @@ Regions covered by this document (Common or Very Common):
 
 | Date | Change |
 |---|---|
-| 2026-07-31 | Created — named shrine locations for all regions with Common or Very Common shrine frequency: Frontier (5), Great Forest (4), Iron Peaks (3), Frozen Highlands (3), Sol Kareth (3), Capital Province (5); cross-region network notes; consistent state, lore, and hook for each named location |
+| 2026-07-31 | Created — named shrine locations for all regions with Common or Very Common shrine frequency: Frontier (6), Great Forest (4), Iron Peaks (3), Frozen Highlands (3), Sol Kareth (3), Capital Province (6); 25 named locations total; cross-region network notes; consistent state, lore, and hook for each named location |
+| 2026-07-31 | Corrected type assignments: Lantern House at Greyveil changed SC-S2→SC-S1 (SC-S2 not placed in Frontier per encounter rules); Healer's Grove above Ashwatch changed OW-S2→OW-S3 (OW-S2 not placed in Frontier per encounter rules); Stoneheart Hall settlement renamed Kethwald→Ironvale to prevent conflict with the Frontier town Kethwald in the Threshold Circle questline |
