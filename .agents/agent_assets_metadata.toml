@@ -12,3 +12,9 @@ id = "NRkI5si3UUZmf1HXZRZGS"
 uri = "file://exports/project_dungeon_keeper_docs.zip"
 type = "unspecified"
 title = "Project Dungeon Keeper Docs — July 2026"
+
+[[outputs]]
+id = "On3MzUOr6I5-SxwYXLaFo"
+uri = "file://ai-rpg-engine.zip"
+type = "unspecified"
+title = "ai-rpg-engine.zip"
