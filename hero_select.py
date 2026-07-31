@@ -24,6 +24,8 @@ from equipment_system import equipment
 
 from skill_tree import player_skills
 
+from progression_manager import progression_state
+
 
 # =========================
 # APPLY HERO
@@ -226,6 +228,15 @@ def select_hero():
     #    them set would double-apply those bonuses on the new hero.
     player_skills["available_points"] = 3
     player_skills["unlocked_skills"]  = []
+
+    # 5. Progression state — level/XP/world_tier from a prior run must
+    #    not persist into the new hero's session or it mismatches the
+    #    world_state["player"] level=1 fields set by apply_hero().
+    progression_state["level"]            = 1
+    progression_state["xp"]              = 0
+    progression_state["xp_to_next_level"] = 100
+    progression_state["skill_points"]     = 0
+    progression_state["world_tier"]       = 1
 
     apply_hero(chosen_key)
 
