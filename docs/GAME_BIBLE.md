@@ -52,6 +52,7 @@
 42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework: Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration)*
 43. [Magic Bible](../elyndor/magic/MAGIC_BIBLE.md) *(separate file — Primordial Magic, Divine Chorus, magic limitations, Eleanor's Harmonic Soul)*
 44. [Journey System](systems/journey_system.md) *(separate file — Journey Conversations, travel as storytelling, companion relationships, interaction scheduling, relationship evolution)*
+45. [Companion Design Bible](design/companions/README.md) *(separate folder — canonical companion philosophy, Three Pillars, approval, progressions, Journey Conversations, companion relationships, personal quests)*
 57. [Journal System — Living Chronicle](systems/journal_system.md) *(separate file — World State, Bestiary, Flora & Fauna, People, Locations, History, Recipes, Alchemy)*
 58. [Crafting, Cooking & Alchemy](systems/crafting.md) *(separate file — crafting philosophy, cooking as optional support, alchemy, companion passive crafting skills, safe area activities, canonical inventory categories)*
 45. [The Forgotten Eighth](../elyndor/history/the_eighth.md) *(separate file — the Ancient God's true identity, the Great Forgetting, the Imprisonment as tragedy, Corruption as amplified virtue)*
@@ -891,7 +892,8 @@ Wraps `llm_bridge.ai_dialogue()` for NPC conversation generation.
 
 ## Companions
 
-> **Companion design philosophy:** [`docs/HERO_BIBLE.md`](HERO_BIBLE.md)  
+> **Companion Design Bible (canonical):** [`docs/design/companions/`](design/companions/) — Three Pillars, approval, progressions, Journey Conversations, personal quests  
+> **Companion design philosophy (extended):** [`docs/HERO_BIBLE.md`](HERO_BIBLE.md)  
 > **Design checklist & Core Wound system:** [`docs/CHARACTER_DESIGN_GUIDE.md`](CHARACTER_DESIGN_GUIDE.md)  
 > **Individual Hero Bible entries:** [`docs/heroes/`](heroes/)
 
