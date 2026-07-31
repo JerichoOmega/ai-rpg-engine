@@ -648,6 +648,96 @@ Each house should feel distinct at the table level: a Vetharis quest session sho
 
 ---
 
+## Recurring Quest NPC Profiles
+
+These profiles exist so writers can portray each NPC consistently across multiple quest steps and dialogue moments without inventing characterization from scratch. Each profile covers: role, personality, how they speak, what they want, and one memorable detail.
+
+---
+
+### Brennan Ashfield — Royal Auditor
+
+**Role:** Senior auditor attached to the provincial administration of the Capital Province. He investigates financial irregularities, false identities, and misconduct in public offices. His current quiet investigation concerns Aldric Hourne (Lord Cassiel Vetharis's cover identity) — specifically a set of personal history inconsistencies spanning forty years of public records.
+
+**Personality:** Methodical and incorruptible — not out of moral performance, but because he has never yet encountered anything he valued more than a clean finding. He is the kind of bureaucrat who is dangerous precisely because he has no ambitions beyond the work itself.
+
+**How he speaks:** Careful, documentary precision. He does not accuse — he describes observations and invites explanations. He phrases everything as a question, which is more unsettling than a direct accusation because it gives the person he is talking to nowhere comfortable to stand. Long pauses before he responds. He writes things down mid-conversation.
+
+**What he wants:** To close the Hourne inquiry with a finding one way or the other. He does not particularly care what he finds — he cares that the record is accurate. If the player offers him a genuine scandal to pursue instead, he will pursue it with exactly the same care he brought to Hourne. He is not motivated by personal animus toward anyone in this situation.
+
+**Memorable detail:** He keeps a small numbered ledger open on the table during any meeting, even social ones. He writes nothing in it visibly. People who notice it are never sure whether he recorded something.
+
+---
+
+### Sera Vaine — Impatient Faction, House Vetharis
+
+**Role:** Vetharis vampire, Impatient Faction. Her human cover is a trade guild assessor based in the Capital Province — she evaluates commercial viability of regional trade agreements, which gives her credible reason to be in merchant halls, guild offices, and mid-ranking political gatherings without attracting scrutiny. She has taken at least three unsanctioned operations in the past year. Cassiel is aware of two of them.
+
+**Personality:** Sharp, frustrated, and right often enough to be dangerous. She is not a hothead — she thinks carefully before she acts. She is simply convinced that careful thinking leads to faster action than Cassiel reaches, and she has stopped waiting for his permission.
+
+**How she speaks:** Efficient. She gives the player the relevant facts and the relevant ask without preamble. She uses the word "currently" a lot — she is always thinking about the present situation, the window of action, the rate at which things are changing. She does not moralize. She does not beg. She presents a case and lets the player decide.
+
+**What she wants:** To demonstrate, in measurable terms, that aggressive and targeted intervention produces faster results than Cassiel's patience. She is not trying to overthrow him — she is trying to make the argument that his approach is obsolete, and she intends to prove it through outcomes. The player is a means to that proof.
+
+**Memorable detail:** She smells faintly of cedar and ink — her cover identity requires her to spend a great deal of time reviewing documents. The smell has become part of her even when she is not performing the cover.
+
+---
+
+### Commander Valdrek Ash — House Drakmor
+
+**Role:** Senior officer in House Drakmor's military command, directly attached to Lady Morreth. He handles assignments that require someone with authority and discretion — not a spy, a soldier who has been trusted with decisions that require judgment. He is Morreth's face for operations where she does not want her own presence registered.
+
+**Personality:** Blunt, professional, and entirely comfortable with the moral weight of his work. He does not perform ruthlessness — it is simply the register in which Drakmor operates, and he has internalized it so thoroughly it no longer registers as a register. He respects results. He has some disdain for cleverness that does not produce them.
+
+**How he speaks:** Short sentences. Declarative. He gives the player the situation, the objective, and the constraints, in that order, and then stops. He does not ask how the player feels about it. He does not offer alternative framings. Questions are welcome if they are about the mission; he has no patience for questions about his house's politics or Morreth's reasoning.
+
+**What he wants:** The mission completed with minimum secondary consequences. He has a particular dislike for operations that create more problems than they solve — not out of squeamishness, but because he has spent centuries cleaning up after people who chose the spectacular approach when the quiet one was available. He will note if the player used more force than necessary, and he will not treat this as a compliment.
+
+**Memorable detail:** His left hand bears a fused scar across the palm from a siege weapon explosion two centuries ago. He did not have it healed. It has become a distinguishing mark he uses to establish credibility with soldiers who have seen genuine combat — he shows it without comment and lets people draw their own conclusions.
+
+---
+
+### Sergeant Hallec — Old Guard, House Drakmor
+
+**Role:** Old Guard vampire, four centuries in Drakmor's service. He currently operates under a human cover consistent with his surface role — a veteran soldier turned garrison supervisor. He has survived long enough in Drakmor to have institutional memory no living record contains. He reports to Morreth; he operates, privately, by his own code.
+
+**Personality:** Weathered in the specific way that comes from having watched idealism become loyalty become habit become ritual. He does not talk about what he believes. He talks about what he does and what it costs. He has attachments he does not announce — to places, to soldiers long dead, to the specific idea of what Drakmor was in its early centuries compared to what it is now.
+
+**How he speaks:** Slower than Ash. More pauses. He often states a fact and then waits, as if checking whether the person he is talking to will draw the obvious conclusion themselves before he has to say it. His vocabulary is older — not archaic, but carrying turns of phrase that have not been common for a century. When he has something important to say, he says it once, quietly.
+
+**What he wants:** Not advancement, not recognition — he has had more than enough of both. What he wants is the particular kind of quiet that comes from having done a job completely. He keeps a private account of things he owes: to places, to dead soldiers, to Morreth herself. *The Soldier Who Remembered* is him trying to pay one of those debts. The player who helps him understands this without needing it explained.
+
+**Memorable detail:** He refers to soldiers who died under his command by name, in the present tense, without explanation. He does not do this as performance or grief display — it is simply how he holds them. Writers should use this sparingly; the first time a player hears it is the most important.
+
+---
+
+### Darvish Corr — Captain, Iron Serration
+
+**Role:** Captain of the Iron Serration, a mid-sized mercenary company with standing contracts across several frontier towns. She is well-regarded in the frontier mercenary circuit — not famous, but the kind of company captain whose name means the contract will be honored. She is currently under contract to protect Fang-Hold, which puts her in direct conflict with Drakmor's consolidation plans.
+
+**Personality:** A professional in the most precise sense — she has separated her opinions from her decisions so thoroughly that working for someone she dislikes produces the same quality of work as working for someone she respects. She is not cynical about this. She regards it as craft. She is, however, watchful about what she is being asked to do and who she is being asked to do it for.
+
+**How she speaks:** Direct and specific. She names numbers — contract terms, timelines, headcounts, distances. Abstract appeals do not move her. Concrete offers do. She asks clarifying questions that are clearly about protecting herself and her company, not about expressing doubt. She does not waste time on conversations that are not about a decision.
+
+**What she wants:** A contract that protects her company's long-term interests and standing. She took the Fang-Hold contract because it was good work at fair terms, not because she has particular loyalties to the town. If the player can demonstrate that accepting a different arrangement is better for the Iron Serration than holding the current one, she will listen. She will not be bullied; she has been in enough frontier negotiations to know what a threat looks like.
+
+**Memorable detail:** The Iron Serration insignia — a stylized serrated blade — is stitched on the inside of her collar rather than the outside. She wears the company mark where she can feel it, not where others can see it. She does not explain this unless asked, and she will not explain it to someone she has just met.
+
+---
+
+### Mira Deln — Soleth Operative, Sol Kareth
+
+**Role:** Soleth operative embedded in Sol Kareth's scholarly community. She has maintained her cover identity — a private conservator of ancient materials, specializing in pre-modern clay tablet preservation — for decades. She is the Archivist's point of contact for Sol Kareth operations and the player's first face-to-face Soleth encounter in *What the Desert Remembers*.
+
+**Personality:** Precise and unhurried, with the particular patience of someone who has been operating in the same city long enough to know how every institution in it actually works beneath its official functions. She is not warm, but she is not cold either — she is interested in the player in the careful, calibrated way that Soleth operatives are interested in anyone who might be useful: genuinely curious, professionally contained.
+
+**How she speaks:** She presents information in layers — enough to establish trust, not enough to give the player a full picture before she has decided they warrant it. She uses qualifiers accurately: she says "the Archivist believes" when that is the source, "I have confirmed" when she has, and "this is uncertain" when it is. She does not volunteer more than the conversation requires. Her sentences end where they should end.
+
+**What she wants:** For the operation to succeed cleanly and for Soleth's involvement to remain invisible to the Mages Guild. She is a professional who takes competence seriously — the player who is sloppy in ways that create evidence is a liability she will note, without drama, to the Archivist. She is not the player's friend. She is their contact, which is a different thing, and she would like the player to understand the distinction.
+
+**Memorable detail:** She keeps a small fragment of pre-modern clay tablet — not one from any current operation, a personal piece from her early years in Sol Kareth — in a leather case she carries on her person. She has never had it translated. She says she is saving it. Writers who want to signal that something has moved her deeply can use the moment when she puts the case on the table without being asked.
+
+---
+
 ## Document History
 
 | Date | Change |
@@ -655,3 +745,4 @@ Each house should feel distinct at the table level: a Vetharis quest session sho
 | July 2026 | Created — three houses named and fully developed: Vetharis (political manipulation), Drakmor (military conquest), Soleth (ancient knowledge and vampire survival) |
 | July 2026 | Added vampire house quests — two named quests per house, reputation cross-reference table, and writer design notes |
 | July 2026 | Expanded *The Fraying Edge* — fully authors the Iron Peaks archive silence hook with named site (Keth-Dural complex), named agents (Harvel Dun, Cassilda Vrehn), specific Corruption-driven danger (Remnant Intellect), and the Archivist's specific reason for silence |
+| July 2026 | Added Recurring Quest NPC Profiles — six profiles (Brennan Ashfield, Sera Vaine, Commander Valdrek Ash, Sergeant Hallec, Darvish Corr, Mira Deln) with role, personality, speech, motivation, and memorable detail |
