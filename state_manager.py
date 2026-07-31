@@ -166,14 +166,34 @@ def load_game():
 
             return False
 
+        # If world_state is present but has
+        # the wrong type (e.g. a string due to
+        # corruption), treat it as empty so
+        # ensure_world_state_defaults() can
+        # fill in safe defaults rather than
+        # letting world_state.update() crash.
+
+        if not isinstance(
+            loaded_state, dict
+        ):
+
+            print(
+                "\nworld_state has unexpected"
+                " type; loading defaults."
+            )
+
+            loaded_state = {}
+
         # =========================
         # LOAD INTO MEMORY
         # =========================
 
         # Snapshot the live state so we can
-        # restore it if validation fails —
-        # prevents a rejected load from
-        # corrupting the current session.
+        # restore it if validation fails OR if
+        # an exception is raised during the
+        # update — prevents a rejected or
+        # interrupted load from corrupting the
+        # current session.
 
         _snapshot = copy.deepcopy(
             world_state
@@ -240,6 +260,28 @@ def load_game():
         )
 
         print(error)
+
+        # Restore the pre-load snapshot if
+        # an exception was raised after
+        # world_state was already cleared.
+        # _snapshot may not exist if the
+        # exception was raised before it was
+        # assigned (e.g. during JSON parsing),
+        # so guard with locals().
+
+        if "_snapshot" in dir():
+
+            try:
+
+                world_state.clear()
+
+                world_state.update(
+                    _snapshot
+                )
+
+            except Exception:
+
+                pass
 
         return False
 

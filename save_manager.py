@@ -315,9 +315,21 @@ def load_game():
     # in the save are silently ignored so that
     # schema drift never crashes the load.
 
-    _saved_player = save_data.get(
-        "player", {}
-    )
+    # Type-safe helper: return the value only
+    # when it is the expected container type;
+    # fall back to `default` otherwise so
+    # wrong-typed data never reaches .update()
+    # or .extend().
+
+    def _get_dict(key, fallback=None):
+        v = save_data.get(key, fallback or {})
+        return v if isinstance(v, dict) else {}
+
+    def _get_list(key, fallback=None):
+        v = save_data.get(key, fallback or [])
+        return v if isinstance(v, list) else []
+
+    _saved_player = _get_dict("player")
 
     for _attr, _val in _saved_player.items():
 
@@ -332,11 +344,7 @@ def load_game():
     world_state["player"]["inventory"].clear()
 
     world_state["player"]["inventory"].extend(
-
-        save_data.get(
-            "inventory",
-            []
-        )
+        _get_list("inventory")
     )
 
     # =========================
@@ -346,11 +354,7 @@ def load_game():
     equipment.clear()
 
     equipment.update(
-
-        save_data.get(
-            "equipment",
-            {}
-        )
+        _get_dict("equipment")
     )
 
     # =========================
@@ -360,11 +364,7 @@ def load_game():
     progression_state.clear()
 
     progression_state.update(
-
-        save_data.get(
-            "progression",
-            {}
-        )
+        _get_dict("progression")
     )
 
     # =========================
@@ -374,11 +374,7 @@ def load_game():
     player_skills.clear()
 
     player_skills.update(
-
-        save_data.get(
-            "skills",
-            {}
-        )
+        _get_dict("skills")
     )
 
     # =========================
@@ -417,6 +413,15 @@ def load_game():
             if k in _WORLD_STATE_KEYS
         }
 
+    # Guard: world_state must be a dict;
+    # if not, start from an empty baseline
+    # so ensure_world_state_defaults() fills
+    # in safe defaults rather than crashing.
+
+    if not isinstance(_raw_ws, dict):
+
+        _raw_ws = {}
+
     world_state.clear()
 
     world_state.update(
@@ -436,21 +441,13 @@ def load_game():
     active_quests.clear()
 
     active_quests.extend(
-
-        save_data.get(
-            "active_quests",
-            []
-        )
+        _get_list("active_quests")
     )
 
     completed_quests.clear()
 
     completed_quests.extend(
-
-        save_data.get(
-            "completed_quests",
-            []
-        )
+        _get_list("completed_quests")
     )
 
     # =========================
@@ -460,21 +457,13 @@ def load_game():
     active_world_events.clear()
 
     active_world_events.extend(
-
-        save_data.get(
-            "active_world_events",
-            []
-        )
+        _get_list("active_world_events")
     )
 
     completed_world_events.clear()
 
     completed_world_events.extend(
-
-        save_data.get(
-            "completed_world_events",
-            []
-        )
+        _get_list("completed_world_events")
     )
 
     # =========================
@@ -484,11 +473,7 @@ def load_game():
     DUNGEONS.clear()
 
     DUNGEONS.update(
-
-        save_data.get(
-            "dungeons",
-            {}
-        )
+        _get_dict("dungeons")
     )
 
     # =========================
@@ -498,11 +483,7 @@ def load_game():
     SETTLEMENTS.clear()
 
     SETTLEMENTS.update(
-
-        save_data.get(
-            "settlements",
-            {}
-        )
+        _get_dict("settlements")
     )
 
     # =========================
@@ -512,11 +493,7 @@ def load_game():
     economy_state.clear()
 
     economy_state.update(
-
-        save_data.get(
-            "economy",
-            {}
-        )
+        _get_dict("economy")
     )
 
     # =========================
@@ -526,11 +503,7 @@ def load_game():
     FACTIONS.clear()
 
     FACTIONS.update(
-
-        save_data.get(
-            "factions",
-            {}
-        )
+        _get_dict("factions")
     )
 
     # =========================
@@ -540,11 +513,7 @@ def load_game():
     REGIONS.clear()
 
     REGIONS.update(
-
-        save_data.get(
-            "regions",
-            {}
-        )
+        _get_dict("regions")
     )
 
     # =========================
@@ -554,13 +523,7 @@ def load_game():
     story_state.clear()
 
     story_state.update(
-
-        save_data.get(
-
-            "story_state",
-
-            {}
-        )
+        _get_dict("story_state")
     )
 
     # =========================
@@ -570,13 +533,7 @@ def load_game():
     npc_relationships.clear()
 
     npc_relationships.update(
-
-        save_data.get(
-
-            "npc_relationships",
-
-            {}
-        )
+        _get_dict("npc_relationships")
     )
 
     # =========================
@@ -586,13 +543,7 @@ def load_game():
     social_state.clear()
 
     social_state.update(
-
-        save_data.get(
-
-            "social_state",
-
-            {}
-        )
+        _get_dict("social_state")
     )
 
     # =========================
@@ -602,25 +553,13 @@ def load_game():
     COMPANIONS.clear()
 
     COMPANIONS.update(
-
-        save_data.get(
-
-            "companions",
-
-            {}
-        )
+        _get_dict("companions")
     )
 
     active_companions.clear()
 
     active_companions.extend(
-
-        save_data.get(
-
-            "active_companions",
-
-            []
-        )
+        _get_list("active_companions")
     )
 
     # =========================
@@ -629,18 +568,16 @@ def load_game():
 
     dm_state.clear()
 
-    dm_state.update(
+    # "dm_state" was previously saved as
+    # "director_state" — accept both names.
 
-        save_data.get(
+    _dm = _get_dict("dm_state")
 
-            "dm_state",
+    if not _dm:
 
-            save_data.get(
-                "director_state",
-                {}
-            )
-        )
-    )
+        _dm = _get_dict("director_state")
+
+    dm_state.update(_dm)
 
     print(
         "\n=== GAME LOADED ==="
@@ -740,14 +677,11 @@ def validate_save_data(
 
 ):
 
-    # A save file is valid if it is a JSON
-    # object that contains at least a "player"
-    # key (the minimum marker for a game save).
-    # load_game() uses .get() with safe defaults
-    # for every other key, so strict key
-    # requirements here would incorrectly
-    # reject pre-refactor saves that are
-    # perfectly loadable.
+    # Structural validation: reject the save
+    # before any mutation if the data cannot
+    # be safely loaded, so that Safe Load
+    # never delegates to the loader with
+    # malformed input.
 
     if not isinstance(save_data, dict):
 
@@ -757,6 +691,9 @@ def validate_save_data(
         )
 
         return False
+
+    # Must contain at least one recognisable
+    # root key to be considered a game save.
 
     if (
 
@@ -768,10 +705,65 @@ def validate_save_data(
 
         print(
             "\nSave file missing required"
-            " keys — may not be a game save."
+            " keys — not a recognised game"
+            " save format."
         )
 
         return False
+
+    # When present, dict-typed sections must
+    # actually be dicts, and list-typed
+    # sections must actually be lists.
+    # Wrong types here indicate corruption.
+
+    _required_dicts = [
+        "player", "world_state",
+        "equipment", "progression",
+        "skills", "economy",
+        "factions", "regions",
+        "dungeons", "settlements",
+    ]
+
+    for _key in _required_dicts:
+
+        _val = save_data.get(_key)
+
+        if _val is not None and not isinstance(
+            _val, dict
+        ):
+
+            print(
+                f"\nSave file: '{_key}'"
+                f" must be an object,"
+                f" got {type(_val).__name__}."
+            )
+
+            return False
+
+    _required_lists = [
+        "inventory",
+        "active_quests",
+        "completed_quests",
+        "active_world_events",
+        "completed_world_events",
+        "active_companions",
+    ]
+
+    for _key in _required_lists:
+
+        _val = save_data.get(_key)
+
+        if _val is not None and not isinstance(
+            _val, list
+        ):
+
+            print(
+                f"\nSave file: '{_key}'"
+                f" must be an array,"
+                f" got {type(_val).__name__}."
+            )
+
+            return False
 
     return True
 

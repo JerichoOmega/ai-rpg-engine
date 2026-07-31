@@ -657,9 +657,16 @@ def ensure_world_state_defaults():
         },
     }
     for section, sub_defaults in _sections.items():
-        if section not in world_state:
-            world_state[section] = sub_defaults
-        elif isinstance(world_state[section], dict):
+        if (
+            section not in world_state
+            or not isinstance(world_state[section], dict)
+        ):
+            # Missing entirely, or wrong type (e.g. the save had the
+            # key set to a string or list due to corruption/schema drift).
+            # Supply the full default so downstream code never sees a
+            # non-dict where a dict is expected.
+            world_state[section] = dict(sub_defaults)
+        else:
             for sub_key, sub_val in sub_defaults.items():
                 if sub_key not in world_state[section]:
                     world_state[section][sub_key] = sub_val
