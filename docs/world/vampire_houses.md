@@ -6,6 +6,16 @@
 
 ---
 
+## Historical Context
+
+The Vampire Houses were not always as powerful as they are now. During the **Third Age — the Age of Wars** — while kingdoms fought each other for centuries, the Houses recognized the opportunity that political chaos provided. They expanded their influence, embedded in power structures, and established territorial positions they did not hold during the Second Age. The political chaos that devastated human kingdoms was, for the Houses, a period of quiet consolidation.
+
+The current power of each house is partly a product of what they were able to accomplish while everyone else was distracted by war.
+
+See [`elyndor/history/HISTORY_BIBLE.md`](../../elyndor/history/HISTORY_BIBLE.md) — Third Age section.
+
+---
+
 ## Overview
 
 Vampires are one of Elyndor's primary supernatural powers. They are ancient, organized, and politically aware. The three major houses have endured for centuries — long enough to have watched kingdoms rise and collapse, to have outlasted dynasties, and to have learned that the most dangerous thing a vampire can be is visible.

@@ -49,7 +49,8 @@
 39. [Goblin Tribes](world/goblin_tribes.md) *(separate file)*
 40. [Religions of Elyndor](world/religions.md) *(separate file)*
 41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*
-42. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework)*
+43. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -103,6 +104,20 @@ The visual design (in the 3D target) prioritizes clear communication of game sta
 
 ### 6. No External Dependencies at Runtime (Current Prototype)
 The current terminal prototype runs entirely in Python with no external API calls required. The LLM layer is a drop-in module. This principle carries forward: the game must be functional without requiring a live AI connection.
+
+---
+
+## Lore Design Philosophy
+
+All world-building in Project Dungeon Keeper follows five rules. These apply to history, factions, cultures, monsters, artifacts, locations, and everything else added to the canon.
+
+| Rule | Principle |
+|---|---|
+| **Rule One — Gameplay purpose** | Never create lore that has no gameplay purpose. Every historical event, faction, culture, religion, artifact, monster, or location should eventually influence quests, dialogue, exploration, combat, politics, or companion interactions. |
+| **Rule Two — Companions experience the world** | Companions are not observers — they are participants. Major world events should affect them emotionally. Dynamic Campaign Story Arcs should unlock unique conversations, disagreements, emotional growth, and camp scenes. |
+| **Rule Three — Regional identity** | Every region must have a distinct identity the player immediately recognizes. The Frontier is adventure and danger. The Great Forest is ancient mystery and elven history. The Iron Peaks is dwarven civilization and craftsmanship. The Frozen Highlands is survival and resilience. Sol Kareth is trade, archaeology, and desert kingdoms. The Capital Province is politics, military, religion, and education. |
+| **Rule Four — Internal faction conflict** | Every intelligent faction contains internal disagreements. No faction is completely unified. The world feels alive because its factions argue with each other. |
+| **Rule Five — AI DM builds within canon** | The AI Dungeon Master creates stories inside established canon. It does not rewrite history. It builds on existing lore while respecting all canonical documentation. |
 
 ---
 

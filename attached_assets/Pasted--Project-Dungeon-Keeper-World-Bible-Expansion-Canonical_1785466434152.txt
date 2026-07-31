@@ -1,0 +1,502 @@
+# Project Dungeon Keeper - World Bible Expansion (Canonical Update)
+
+Analyze the entire repository before making any changes.
+
+Review all existing documentation, including but not limited to:
+
+- Game Bible
+- World Bible
+- Hero Bible
+- Companion documentation
+- Dynamic Story Arc documentation
+- Region documentation
+- Reputation System
+- Faction documentation
+- Vampire House documentation
+- Religion documentation
+- Magic documentation (if present)
+- Roadmap
+- AI Dungeon Master documentation
+
+Do NOT overwrite existing canon.
+
+Instead, integrate the following additions into the existing documentation while preserving all established lore and cross-referencing the appropriate files.
+
+---
+
+# OVERALL GOAL
+
+Project Dungeon Keeper should continue evolving into a handcrafted RPG world where:
+
+- The world feels ancient.
+- Every region has history.
+- Every faction has depth.
+- Companion relationships evolve naturally.
+- Dynamic Campaign Story Arcs create unique emotional experiences.
+- The AI Dungeon Master expands within established canon instead of rewriting it.
+
+These additions are now considered canonical.
+
+---
+
+# DOCUMENTATION REVIEW RESULTS
+
+While the documentation is already well organized, several foundational pillars should now be expanded.
+
+Highest Priority Additions:
+
+• World History
+• Magic Bible
+• Religion Bible
+• Monster/Bestiary Bible
+• Culture Bible
+• Economy Bible
+
+These should become permanent long-term roadmap items.
+
+The purpose of these documents is not to create unnecessary lore.
+
+Every piece of lore should exist because it supports:
+
+- gameplay
+- exploration
+- quests
+- dialogue
+- companion interactions
+- world immersion
+
+---
+
+# DESIGN PHILOSOPHY
+
+Whenever new lore is created, follow these rules.
+
+## Rule One
+
+Never create lore that has no gameplay purpose.
+
+Every historical event, faction, culture, religion, artifact, monster, or location should eventually influence:
+
+- quests
+- dialogue
+- exploration
+- combat
+- politics
+- companion interactions
+
+---
+
+## Rule Two
+
+Companions should experience the world alongside the player.
+
+Major world events should affect them emotionally.
+
+Dynamic Campaign Story Arcs should unlock:
+
+- unique conversations
+- disagreements
+- friendships
+- emotional growth
+- camp scenes
+
+Different campaigns should naturally highlight different companion relationships.
+
+---
+
+## Rule Three
+
+Every region should possess a distinct identity.
+
+The player should immediately recognize where they are.
+
+Current regional identities include:
+
+The Frontier
+- adventure
+- danger
+- exploration
+- frontier settlements
+
+The Great Forest
+- ancient mystery
+- elven history
+- sacred groves
+- forgotten ruins
+
+Iron Peaks
+- dwarven civilization
+- mining
+- craftsmanship
+- mountain fortresses
+
+Frozen Highlands
+- survival
+- resilience
+- harsh beauty
+- communities built around using every resource wisely
+
+Sol Kareth
+- trade
+- archaeology
+- ancient tombs
+- desert kingdoms
+
+Capital Province
+- politics
+- military
+- religion
+- education
+- diplomacy
+
+---
+
+## Rule Four
+
+Every intelligent faction should contain internal disagreements.
+
+Avoid portraying any faction as completely unified.
+
+Examples include:
+
+- rival Vampire Houses
+- Goblin tribal politics
+- differing beliefs within the Mages Guild
+- political disagreements among nobles
+- religious divisions
+
+The world should feel alive.
+
+---
+
+## Rule Five
+
+The AI Dungeon Master should create stories inside the world's established canon.
+
+It should not rewrite history.
+
+It should build upon existing lore while respecting all canonical documentation.
+
+---
+
+# WORLD HISTORY
+
+Create a new canonical History Bible.
+
+The world's history should be divided into Four Ages.
+
+Each age should possess its own identity, themes, historical events, and long-term consequences.
+
+---
+
+# FIRST AGE
+
+## The Age of Creation
+
+"When gods still walked among mortals."
+
+This is the mythical beginning of recorded history.
+
+During this era:
+
+- the Ancient God shaped the world
+- the first races emerged
+- dragons were common
+- magic flowed freely
+- civilizations began forming
+
+Eventually...
+
+The Ancient God's growing corruption threatened the entire world.
+
+A legendary alliance of heroes, powerful mages, divine champions, and ancient dragons united to imprison the Ancient God beneath the world.
+
+The battle reshaped continents.
+
+Magic itself was forever changed.
+
+The gods withdrew from directly walking among mortals.
+
+Legacy:
+
+- the prison of the Ancient God
+- legendary artifacts
+- ancient ruins
+- lost civilizations
+- dragons becoming incredibly rare
+
+Theme:
+
+Sacrifice
+
+Lesson:
+
+Unity can overcome even impossible darkness.
+
+---
+
+# SECOND AGE
+
+## The Age of Kingdoms
+
+"An era of hope, discovery, and prosperity."
+
+Following the imprisonment of the Ancient God...
+
+Civilization flourished.
+
+Major kingdoms were founded.
+
+The Capital Province became the center of politics.
+
+The Iron Peaks became the heart of dwarven civilization.
+
+The Great Forest flourished.
+
+Sol Kareth became a center of trade and learning.
+
+The Mages Guild was founded.
+
+Major religions expanded.
+
+Most people believed darkness had been defeated forever.
+
+Legacy:
+
+- modern kingdoms
+- trade routes
+- universities
+- temples
+- magical education
+
+Theme:
+
+Hope
+
+Lesson:
+
+Peace and prosperity must be actively protected.
+
+---
+
+# THIRD AGE
+
+## The Age of Wars
+
+"When ambition replaced unity."
+
+Old alliances collapsed.
+
+Kingdoms fought for centuries.
+
+Borders changed repeatedly.
+
+Cities were destroyed.
+
+Knowledge was lost.
+
+The Vampire Houses quietly expanded.
+
+Goblin tribes became more organized.
+
+The Corruption slowly returned unnoticed.
+
+Talos served during the latter years of this age.
+
+His military service helped shape his worldview.
+
+Legacy:
+
+- modern politics
+- ruined fortresses
+- battlefields
+- noble rivalries
+- fractured alliances
+
+Theme:
+
+Pride
+
+Lesson:
+
+Division can destroy what previous generations built.
+
+---
+
+# FOURTH AGE
+
+## The Age of Shadows
+
+"The darkness returns unnoticed."
+
+This is the current age.
+
+Trade has resumed.
+
+Kingdoms rebuild.
+
+People believe the worst is behind them.
+
+However...
+
+The Corruption has begun spreading once again.
+
+Ancient ruins awaken.
+
+Monsters become more aggressive.
+
+Dark magic resurfaces.
+
+Only a handful of scholars recognize the pattern.
+
+The player begins their journey during the earliest days of this age.
+
+Legacy:
+
+Still being written.
+
+The player's choices will determine how history remembers this age.
+
+Theme:
+
+Choice
+
+Lesson:
+
+History shapes the future but does not determine it.
+
+---
+
+# HISTORY DESIGN PHILOSOPHY
+
+History should explain the present.
+
+Ancient ruins should exist for a reason.
+
+Artifacts should possess history.
+
+Kingdoms should remember old wars.
+
+Different cultures should interpret historical events differently.
+
+History should enrich exploration.
+
+---
+
+# VAMPIRE HOUSE EXPANSION
+
+The Vampire Houses remain one of the world's primary evil factions.
+
+They are intelligent civilizations.
+
+They possess politics.
+
+Rivalries.
+
+Long-term goals.
+
+The player may negotiate with them.
+
+Temporarily ally with them.
+
+Trade information.
+
+Or oppose them.
+
+This should never imply moral goodness.
+
+Helping a Vampire House should always produce consequences.
+
+Companions should react accordingly.
+
+---
+
+# COMPANION RELATIONSHIP EXPANSION
+
+Continue expanding dynamic companion relationships.
+
+Examples include:
+
+• Ronan supporting Eleanor during The Fractured Circle.
+
+• Ragash becoming increasingly protective of Eleanor.
+
+• Ragash helping Ronan accept himself.
+
+• Talos remaining cautious while gradually learning to trust certain individuals.
+
+Relationships should evolve naturally throughout the game.
+
+Companions should become a family.
+
+---
+
+# RONAN PERSONAL QUEST
+
+Expand Ronan's companion quest.
+
+Introduce a hidden nomadic werewolf community.
+
+This community has survived for generations by remaining hidden.
+
+They are not a kingdom.
+
+They are not an empire.
+
+They are a traveling pack.
+
+Meeting them changes Ronan forever.
+
+He realizes he is not alone.
+
+Some members embrace their dual nature.
+
+Others continue struggling.
+
+The community demonstrates that lycanthropy does not define one's character.
+
+Character is determined by choices.
+
+This section of Ronan's story explores:
+
+- identity
+- belonging
+- family
+- redemption
+- responsibility
+
+---
+
+# FUTURE DOCUMENTATION ROADMAP
+
+Create dedicated documentation for:
+
+History Bible
+
+Magic Bible
+
+Religion Bible
+
+Monster & Bestiary Bible
+
+Culture Bible
+
+Economy Bible
+
+Each should eventually become canonical reference documents.
+
+---
+
+# FINAL DESIGN GOAL
+
+Project Dungeon Keeper should feel like a living tabletop RPG campaign.
+
+Every quest should feel connected.
+
+Every region should possess history.
+
+Every companion should continue growing throughout the adventure.
+
+Every campaign should feel emotionally unique.
+
+The AI Dungeon Master should use these documents as the world's permanent canonical foundation and continue expanding them while preserving consistency across the entire repository.

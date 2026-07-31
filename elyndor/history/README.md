@@ -4,34 +4,38 @@
 
 ---
 
-## Known Ages
+## The Four Ages
 
-| Age | Status | Notes |
-|---|---|---|
-| **Age of Legends** | [CONFIRMED — named] | The distant past; home of the Ancient Legends; specifics mostly lost to myth |
-| Current Age | ⚠️ NOT YET NAMED | The present era of the world |
-| Intervening ages | ⚠️ NOT YET DEFINED | What happened between the Age of Legends and now is not established |
+| Age | Name | Theme | Status |
+|---|---|---|---|
+| **First** | The Age of Creation | Sacrifice | Mythologized; partially recorded; equivalent to the Age of Legends |
+| **Second** | The Age of Kingdoms | Hope | Recorded; reliable |
+| **Third** | The Age of Wars | Pride | Recorded; within living memory of oldest races |
+| **Fourth** | The Age of Shadows | Choice | Present day; still being written |
+
+Full definitions, legacy tables, and cross-references: [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md)
 
 ---
 
 ## Confirmed Historical Events
 
-| Event | Status | File |
-|---|---|---|
-| **The Ancient God's imprisonment** | [CONFIRMED — exists; details unknown] | [`the_corruption.md`](the_corruption.md) |
-| **The weakening of the prison seal** | [CONFIRMED — ongoing at campaign start] | [`the_corruption.md`](the_corruption.md) |
-| **The Corruption** | [CONFIRMED — canonical world phenomenon] | [`the_corruption.md`](the_corruption.md) |
+| Event | Status | Age | File |
+|---|---|---|---|
+| **The Ancient God's imprisonment** | [CONFIRMED — legendary alliance; details of members unknown] | First Age | [`the_corruption.md`](the_corruption.md) |
+| **The Mages Guild founding** | [CONFIRMED] | Second Age | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
+| **The Age of Wars** | [CONFIRMED — centuries of conflict; Talos served in latter years] | Third Age | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
+| **The Vampire Houses' quiet expansion** | [CONFIRMED — exploited Third Age chaos] | Third Age | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
+| **The weakening of the prison seal** | [CONFIRMED — ongoing at campaign start] | Fourth Age | [`the_corruption.md`](the_corruption.md) |
+| **The Corruption** | [CONFIRMED — canonical world phenomenon] | Third Age onset; Fourth Age acceleration | [`the_corruption.md`](the_corruption.md) |
 
-### What Is Not Yet Defined
+### Intentional Mysteries — Do Not Define Without Canonical Direction
 
-The following are intentional mysteries — do not define them without explicit canonical direction:
-
-- The god's name
-- Why it was sealed
-- Who sealed it
+- The Ancient God's name
+- The specific nature of its corruption
+- The specific members of the legendary alliance that imprisoned it
+- Why the seal is weakening now
 - Whether the seal can be repaired
 - What happens if the god fully awakens
-- When the original imprisonment occurred (which age)
 
 ---
 

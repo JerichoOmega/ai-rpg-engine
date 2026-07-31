@@ -240,7 +240,7 @@ The following personal details are confirmed canon and should appear naturally t
 | **Loves telling stories** | Especially to children; has an inexhaustible supply |
 | **Bead bracelet** | One bead from each child he has met on his travels; worn always; knows where each came from |
 | **No racial prejudice** | Hard line; anyone who expresses it loses his respect immediately |
-| **Served in the Capital's military** | Before losing faith in the government; the Capital is not abstract to him — he walked its halls, followed its orders, watched what happened when institutions chose power over people |
+| **Served in the Capital's military** | During the latter years of the Third Age (the Age of Wars); his worldview — the pragmatism, the military discipline, the exhaustion with institutions that claim to represent order while serving only themselves — was forged in that era; the Capital he defended was already a product of everything the Age of Wars had corroded |
 
 These details should **contrast with his intimidating appearance**. The large, scarred, armored soldier who kneels down to talk to children at eye level — that contrast is the character.
 

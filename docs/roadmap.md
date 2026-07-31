@@ -100,6 +100,36 @@ These are directions, not commitments. Do not implement without explicit design 
 - Define NPC backstories and companion characters.
 - All lore additions go into `docs/GAME_BIBLE.md` first as confirmed canon.
 
+### [CONFIRMED] History Bible
+- Four Ages framework established: Age of Creation, Age of Kingdoms, Age of Wars, Age of Shadows.
+- File: [`elyndor/history/HISTORY_BIBLE.md`](../elyndor/history/HISTORY_BIBLE.md)
+- Expand with per-age event files, named battles, regional histories, and artifact provenance.
+
+### [CONFIRMED] Religion Bible
+- Four major religions established: Solari Covenant, The Old Ways, The Ancestors' Path, The Veiled Order.
+- File: [`docs/world/religions.md`](world/religions.md)
+- Expand with pilgrim NPCs, shrine locations, cult detail, order quest depth.
+
+### [FUTURE] Magic Bible
+- Define the canonical rules of magic in Elyndor: how it works, what changed after the First Age imprisonment, why certain magic is unstable, how the Mages Guild regulates it.
+- File to create: `elyndor/magic/MAGIC_BIBLE.md`
+- Every spell, magical item, and arcane phenomenon in the game should be derivable from these rules.
+
+### [FUTURE] Monster & Bestiary Bible
+- Define canonical creature types: origins, behaviors, ecological roles, connection to the Corruption.
+- File to create: `elyndor/bestiary/BESTIARY_BIBLE.md`
+- Every enemy in the game should have an entry here. Campaign-exclusive enemies (Dynamic Story Arcs) should be flagged as such.
+
+### [FUTURE] Culture Bible
+- Define the cultural identity of each major people: Humans, Elves, Dwarves, Orcs, Halflings, Gnomes, and the major regional cultures.
+- File to create: `elyndor/cultures/CULTURE_BIBLE.md`
+- Halflings and Gnomes are currently ⚠️ NOT YET DEFINED — this is a priority entry.
+
+### [FUTURE] Economy Bible
+- Define how trade, currency, and regional economies work across the continent.
+- File to create: `elyndor/economy/ECONOMY_BIBLE.md`
+- Sol Kareth's merchant culture and the Frontier's resource extraction economy are the most developed starting points.
+
 ### [FUTURE] Browser UI integration
 - Connect `app.py` (Flask) to terminal game state.
 - Requires a shared state layer or API contract between the two systems.
