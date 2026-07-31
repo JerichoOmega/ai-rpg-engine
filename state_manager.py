@@ -167,20 +167,6 @@ def load_game():
             return False
 
         # =========================
-        # VALIDATE STRUCTURE
-        # =========================
-
-        if not validate_world_state(
-            loaded_state
-        ):
-
-            print(
-                "\nSave validation failed."
-            )
-
-            return False
-
-        # =========================
         # LOAD INTO MEMORY
         # =========================
 
@@ -190,7 +176,27 @@ def load_game():
             loaded_state
         )
 
+        # Backfill any keys absent in saves
+        # written before the refactor BEFORE
+        # validation so the check sees the
+        # complete schema, not the raw sparse
+        # saved state.
+
         ensure_world_state_defaults()
+
+        # =========================
+        # VALIDATE STRUCTURE
+        # =========================
+
+        if not validate_world_state(
+            world_state
+        ):
+
+            print(
+                "\nSave validation failed."
+            )
+
+            return False
 
         print(
             "\n=== GAME LOADED ==="
@@ -251,7 +257,7 @@ def migrate_save(save_data):
     )
 
     # =========================
-    # EXAMPLE MIGRATION
+    # VERSION 0 → 1 MIGRATION
     # =========================
 
     if old_version < 1:
@@ -264,9 +270,39 @@ def migrate_save(save_data):
 
         ):
 
+            # Pre-refactor saves serialised the
+            # world_state contents directly at
+            # the top level of the save file
+            # rather than nested under a
+            # "world_state" key.  Collect any
+            # recognised world-state keys and
+            # move them into the nested dict so
+            # the rest of load_game() finds them.
+
+            _WORLD_STATE_KEYS = {
+                "time", "player", "inventory",
+                "quests", "companions", "factions",
+                "regions", "world_conditions",
+                "story_memory", "events", "history",
+                "sessions", "civil_war",
+                "cult_rising", "mages_rebellion",
+                "dragon_alive", "world_chaos",
+                "npcs",
+            }
+
+            nested = {}
+
+            for key in list(save_data.keys()):
+
+                if key in _WORLD_STATE_KEYS:
+
+                    nested[key] = (
+                        save_data.pop(key)
+                    )
+
             save_data[
                 "world_state"
-            ] = {}
+            ] = nested
 
     # =========================
     # UPDATE VERSION

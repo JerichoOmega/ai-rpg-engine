@@ -306,29 +306,24 @@ def load_game():
     # PLAYER
     # =========================
 
-    player.hp = save_data[
-        "player"
-    ]["hp"]
+    # Use .get() throughout so that saves
+    # written before the refactor (which may
+    # be missing any of these keys) load
+    # cleanly instead of raising KeyError.
+    # Only restore attributes that the Player
+    # object actually declares; unknown fields
+    # in the save are silently ignored so that
+    # schema drift never crashes the load.
 
-    player.max_hp = save_data[
-        "player"
-    ]["max_hp"]
+    _saved_player = save_data.get(
+        "player", {}
+    )
 
-    player.attack_bonus = save_data[
-        "player"
-    ]["attack_bonus"]
+    for _attr, _val in _saved_player.items():
 
-    player.defense = save_data[
-        "player"
-    ]["defense"]
+        if hasattr(player, _attr):
 
-    player.magic_power = save_data[
-        "player"
-    ]["magic_power"]
-
-    player.evasion = save_data[
-        "player"
-    ]["evasion"]
+            setattr(player, _attr, _val)
 
     # =========================
     # INVENTORY
@@ -352,9 +347,10 @@ def load_game():
 
     equipment.update(
 
-        save_data[
-            "equipment"
-        ]
+        save_data.get(
+            "equipment",
+            {}
+        )
     )
 
     # =========================
@@ -365,9 +361,10 @@ def load_game():
 
     progression_state.update(
 
-        save_data[
-            "progression"
-        ]
+        save_data.get(
+            "progression",
+            {}
+        )
     )
 
     # =========================
@@ -378,9 +375,10 @@ def load_game():
 
     player_skills.update(
 
-        save_data[
-            "skills"
-        ]
+        save_data.get(
+            "skills",
+            {}
+        )
     )
 
     # =========================
@@ -391,10 +389,15 @@ def load_game():
 
     world_state.update(
 
-        save_data[
-            "world_state"
-        ]
+        save_data.get(
+            "world_state",
+            {}
+        )
     )
+
+    # Backfill any keys absent in pre-refactor
+    # saves immediately after loading so every
+    # code path can assume the full schema.
 
     ensure_world_state_defaults()
 
@@ -406,18 +409,20 @@ def load_game():
 
     active_quests.extend(
 
-        save_data[
-            "active_quests"
-        ]
+        save_data.get(
+            "active_quests",
+            []
+        )
     )
 
     completed_quests.clear()
 
     completed_quests.extend(
 
-        save_data[
-            "completed_quests"
-        ]
+        save_data.get(
+            "completed_quests",
+            []
+        )
     )
 
     # =========================
@@ -428,18 +433,20 @@ def load_game():
 
     active_world_events.extend(
 
-        save_data[
-            "active_world_events"
-        ]
+        save_data.get(
+            "active_world_events",
+            []
+        )
     )
 
     completed_world_events.clear()
 
     completed_world_events.extend(
 
-        save_data[
-            "completed_world_events"
-        ]
+        save_data.get(
+            "completed_world_events",
+            []
+        )
     )
 
     # =========================
@@ -450,9 +457,10 @@ def load_game():
 
     DUNGEONS.update(
 
-        save_data[
-            "dungeons"
-        ]
+        save_data.get(
+            "dungeons",
+            {}
+        )
     )
 
     # =========================
@@ -463,9 +471,10 @@ def load_game():
 
     SETTLEMENTS.update(
 
-        save_data[
-            "settlements"
-        ]
+        save_data.get(
+            "settlements",
+            {}
+        )
     )
 
     # =========================
@@ -476,9 +485,10 @@ def load_game():
 
     economy_state.update(
 
-        save_data[
-            "economy"
-        ]
+        save_data.get(
+            "economy",
+            {}
+        )
     )
 
     # =========================
@@ -489,9 +499,10 @@ def load_game():
 
     FACTIONS.update(
 
-        save_data[
-            "factions"
-        ]
+        save_data.get(
+            "factions",
+            {}
+        )
     )
 
     # =========================
@@ -502,9 +513,10 @@ def load_game():
 
     REGIONS.update(
 
-        save_data[
-            "regions"
-        ]
+        save_data.get(
+            "regions",
+            {}
+        )
     )
 
     # =========================
