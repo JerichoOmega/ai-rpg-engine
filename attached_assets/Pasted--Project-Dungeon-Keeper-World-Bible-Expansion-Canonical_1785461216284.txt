@@ -1,0 +1,311 @@
+# Project Dungeon Keeper - World Bible Expansion (Canonical Update)
+
+Analyze the existing repository and expand the worldbuilding documentation using the following information.
+
+## IMPORTANT
+
+- Preserve all existing lore unless it directly conflicts with this update.
+- Expand documentation rather than replacing it.
+- Do NOT implement gameplay systems or write game code.
+- This update is for worldbuilding and design documentation only.
+
+---
+
+# WORLD PHILOSOPHY
+
+The world should feel ancient, believable, and lived in.
+
+Rather than dozens of shallow kingdoms and factions, Project Dungeon Keeper will focus on a smaller number of deeply developed civilizations, organizations, and cultures.
+
+Every region should have:
+
+- Its own identity
+- Culture
+- Architecture
+- History
+- Politics
+- Wildlife
+- Dungeons
+- Local monsters
+- Travel encounters
+- Resources
+
+The Corruption influences every region differently.
+
+---
+
+# CANON REGIONS
+
+## The Frontier
+
+The untamed edge of civilization.
+
+Known for:
+
+- Frontier towns
+- Military outposts
+- Goblin tribes
+- Orc warbands
+- Refugee settlements
+- Dangerous trade routes
+- Ruined watchtowers
+- Ancient battlefields
+
+The Frontier is often the first region affected by the Corruption.
+
+---
+
+## The Great Forest
+
+Known for:
+
+- Ancient forests
+- Elven settlements
+- Sacred groves
+- Magical wildlife
+- Hidden shrines
+- Ancient ruins
+- Rare herbs
+
+As the Corruption spreads, portions of the forest become twisted and increasingly dangerous.
+
+---
+
+## The Iron Peaks
+
+Homeland of the dwarves.
+
+Known for:
+
+- Massive mountain ranges
+- Ancient underground kingdoms
+- Rich mines
+- Legendary forges
+- Frozen mountain passes
+- Endless cave systems
+
+Steven's mining knowledge naturally gives him unique interactions within this region.
+
+---
+
+## The Frozen Highlands
+
+A harsh northern wilderness where survival shapes the culture.
+
+Core Philosophy:
+
+Nothing is wasted.
+
+The people of the Frozen Highlands make use of every part of every resource available to them.
+
+Examples:
+
+- Meat becomes food.
+- Hide becomes clothing.
+- Bones become tools.
+- Sinew becomes bowstrings.
+- Fat becomes lamp oil.
+- Antlers become carvings.
+
+Because survival is difficult, the culture values:
+
+- Practicality
+- Honor
+- Community
+- Self-reliance
+- Respect for nature
+
+Wastefulness is viewed as deeply disrespectful.
+
+---
+
+## Sol Kareth
+
+The great desert kingdom.
+
+Known for:
+
+- Oasis cities
+- Merchant caravans
+- Ancient tombs
+- Forgotten temples
+- Buried civilizations
+- Sandstorms
+- Powerful trade routes
+
+Sol Kareth is one of the oldest civilizations on the continent, with countless ruins hidden beneath the sands.
+
+---
+
+## The Capital Province
+
+Political heart of the continent.
+
+Known for:
+
+- Great cities
+- Noble houses
+- Government
+- Military headquarters
+- Trade
+- Political intrigue
+
+Campaign events can significantly alter the stability of this region.
+
+---
+
+# MAJOR ORGANIZATIONS
+
+## Adventurers Guild
+
+One of the most respected neutral organizations.
+
+Responsibilities include:
+
+- Monster contracts
+- Exploration requests
+- Escort missions
+- Treasure hunting
+- Bounties
+- Rumor gathering
+- Mapping unexplored areas
+
+The guild serves as a major source of optional quests and world information.
+
+---
+
+## Mages Guild
+
+Responsible for:
+
+- Training mages
+- Preserving magical knowledge
+- Researching magical phenomena
+- Studying ancient relics
+- Securing dangerous artifacts
+- Investigating magical anomalies caused by the Corruption
+
+The guild is respected but not universally trusted.
+
+---
+
+# RELIGIONS
+
+The world will initially feature a small number of major religions rather than dozens of minor faiths.
+
+Focus on developing each religion with meaningful beliefs, traditions, and influence rather than simply creating multiple gods.
+
+Religion should affect politics, culture, and daily life throughout the world.
+
+---
+
+# VAMPIRE FACTIONS
+
+There are three major vampire houses.
+
+Each house has different goals, philosophies, and methods.
+
+Examples of possible differences include:
+
+- Political manipulation
+- Military conquest
+- Ancient knowledge
+- Maintaining secrecy
+- Survival of vampire society
+
+Vampires are one of the world's primary supernatural powers and should never feel like generic enemies.
+
+Campaigns may feature varying levels of vampire activity.
+
+---
+
+# GOBLIN TRIBES
+
+There are three primary goblin tribes.
+
+## Stonefang Tribe
+
+Known for:
+
+- Aggressive raiding
+- Strength
+- Brutal warriors
+- Territorial expansion
+
+---
+
+## Mossroot Tribe
+
+Known for:
+
+- Hunters
+- Survivalists
+- Living alongside nature
+- Avoiding unnecessary conflict
+
+---
+
+## Ashfire Tribe
+
+Known for:
+
+- Recently united clans
+- Ambitious leadership
+- Rapid expansion
+- Becoming a major regional threat
+
+Each tribe should have its own leaders, traditions, territories, and relationships with neighboring civilizations.
+
+Not every goblin tribe should automatically be hostile.
+
+---
+
+# REPUTATION SYSTEM PHILOSOPHY
+
+Reputation should be heavily inspired by Fallout: New Vegas.
+
+The player does NOT have a universal morality score.
+
+Instead, reputation is tracked separately for each major faction.
+
+Examples include:
+
+- Kingdoms
+- Adventurers Guild
+- Mages Guild
+- Vampire Houses
+- Goblin Tribes
+- Religious Orders
+- Mercenary Companies
+
+Player actions should have meaningful consequences.
+
+High reputation may unlock:
+
+- Unique quests
+- Discounts
+- Allies
+- Special dialogue
+- Political influence
+- Safe passage
+
+Poor reputation may result in:
+
+- Increased prices
+- Denied services
+- Assassination attempts
+- Hostile settlements
+- Lost questlines
+- Rival factions pursuing the player
+
+Reputation should significantly influence how the world reacts throughout the campaign.
+
+---
+
+# DESIGN PHILOSOPHY
+
+The goal is to create a world that feels alive.
+
+Every kingdom, faction, organization, tribe, and culture should feel like it existed long before the player arrived and will continue evolving after the player's choices.
+
+These additions should become canonical within the World Bible and serve as the foundation for future worldbuilding.

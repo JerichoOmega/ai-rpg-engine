@@ -509,8 +509,23 @@ When a faction becomes `hostile`, a `faction_hostile` event fires on the event b
 
 `evolve_factions()` is called each game tick and may shift faction relationships based on world conditions.
 
+### Additional Factions (Design Target)
+
+The full reputation system tracks many more factions than the current four. Confirmed factions for future implementation:
+
+| Faction | Notes |
+|---|---|
+| **Adventurers Guild** | Neutral organization; monster contracts, exploration, escort, bounties, rumor gathering; major quest source |
+| **Goblin Tribes** | Three named tribes tracked independently: **Stonefang** (raiders), **Mossroot** (survivalists), **Ashfire** (newly unified, expanding) |
+| **Vampire Houses** | Three major houses tracked independently; ⚠️ names NOT YET DEFINED |
+| **Religious Orders** | ⚠️ NOT YET DEFINED — depends on religion framework |
+| **Mercenary Companies** | ⚠️ NOT YET DEFINED — specific companies to be established |
+
+Full faction design philosophy: [`docs/world/WORLD_BIBLE.md`](world/WORLD_BIBLE.md)  
+Full reputation system design: [`docs/systems/reputation.md`](systems/reputation.md)
+
 ### Lore Status
-⚠️ **NOT YET DEFINED** — The four faction names are confirmed. Detailed lore, history, leadership, motivations, internal structure, and inter-faction relationships have not been written. Do not invent this content.
+⚠️ **NOT YET DEFINED** — The four tracked faction names are confirmed in code. Detailed lore, history, leadership, motivations, internal structure, and inter-faction relationships have not been written. Do not invent this content.
 
 ---
 
@@ -531,7 +546,7 @@ Six regions are confirmed canon. Each has a distinct identity and a relationship
 | **The Great Forest** | Ancient forests, elven settlements, magical wildlife, hidden shrines | Portions become twisted as Corruption spreads |
 | **The Iron Peaks** | Massive mountain range; dwarven strongholds, cave systems, dragons | Wakes ancient buried things; Steven excels here |
 | **The Frozen Highlands** | Remote northern wilderness; ice caves, ancient fortresses, giant beasts | Corruption arrives late but hits hard |
-| **The Desert Kingdom** | Oasis cities, merchant caravans, ancient tombs, buried civilizations | Wakes what was buried under sand |
+| **Sol Kareth** *(The Desert Kingdom)* | Oasis cities, merchant caravans, ancient tombs, buried civilizations; one of the oldest civilizations on the continent | Wakes what was buried under sand |
 | **The Capital Province** | Political center; noble houses, government, military, trade intrigue | Most responsive to player choices; Political Corruption most visible |
 
 Full region details: [`docs/world/WORLD_BIBLE.md`](world/WORLD_BIBLE.md)

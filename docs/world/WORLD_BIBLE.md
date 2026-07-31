@@ -1,8 +1,35 @@
 # World Bible
 
 > **Document Status:** Canonical as of July 2026.  
-> **Authority:** This document defines the canonical regions, travel encounter framework, encounter philosophy, and faction design philosophy for the game world. All future world design must align with these principles.  
-> **Cross-references:** [`docs/GAME_BIBLE.md`](../GAME_BIBLE.md) · [`docs/systems/world_regions.md`](../systems/world_regions.md) · [`elyndor/`](../../elyndor/) · [`docs/CAMPAIGN_DESIGN.md`](../CAMPAIGN_DESIGN.md)
+> **Authority:** This document defines the canonical regions, organizations, factions, religion framework, reputation philosophy, travel encounter framework, and encounter philosophy for the game world. All future world design must align with these principles.  
+> **Cross-references:** [`docs/GAME_BIBLE.md`](../GAME_BIBLE.md) · [`docs/systems/world_regions.md`](../systems/world_regions.md) · [`docs/systems/reputation.md`](../systems/reputation.md) · [`elyndor/`](../../elyndor/) · [`docs/CAMPAIGN_DESIGN.md`](../CAMPAIGN_DESIGN.md)
+
+---
+
+## World Philosophy
+
+The world should feel **ancient, believable, and lived in**.
+
+Rather than dozens of shallow kingdoms and factions, this game focuses on a smaller number of **deeply developed civilizations, organizations, and cultures**.
+
+Every region must have:
+
+| Element | Description |
+|---|---|
+| **Identity** | A distinct tone and sense of place |
+| **Culture** | How people live, what they value, how they treat each other |
+| **Architecture** | What buildings and structures look like here |
+| **History** | What happened before the player arrived |
+| **Politics** | Who holds power and why it is contested |
+| **Wildlife** | What lives here and how The Corruption affects it |
+| **Dungeons** | Where danger is concentrated |
+| **Local monsters** | Threats unique to or most prevalent in this region |
+| **Travel encounters** | What happens on the road between locations |
+| **Resources** | What is valuable here and who wants it |
+
+The Corruption influences every region differently.
+
+> The goal is a world that feels like it existed long before the player arrived and will continue evolving after their choices.
 
 ---
 
@@ -27,11 +54,11 @@ Travel is gameplay. Moving between locations on the strategic map can trigger en
 
 | Encounter | Notes |
 |---|---|
-| Goblin camps | Territorial; may be negotiated in some circumstances |
+| Goblin camps | Three named tribes; see Goblin Tribes section; may be negotiated |
 | Orc warbands | Organized; may have leadership worth targeting |
 | Bandit ambushes | Human antagonists; motivation-dependent |
 | Corrupted wildlife | Tied to The Corruption's spread in the region |
-| Vampire covens | Major supernatural faction; see Vampires section |
+| Vampire covens | Three major houses; see Vampire Factions section |
 | Werewolf packs | May include turned individuals rather than born werewolves |
 | Necromancer rituals | Risk of undead escalation if not interrupted |
 | Trolls | Environmental hazard; territory-based |
@@ -111,7 +138,7 @@ The untamed edge of civilization.
 | Characteristic | Detail |
 |---|---|
 | **Tone** | Dangerous, lawless, contested; the place where order runs out |
-| **Settlements** | Frontier towns, military outposts, refugee camps |
+| **Settlements** | Frontier towns, military outposts, refugee settlements |
 | **Threats** | Goblin tribes, orc warbands, ruined watchtowers, ancient battlefields, dangerous trade routes |
 | **Corruption** | The Frontier often experiences The Corruption before the rest of the continent — the weakest institutions fall first |
 
@@ -127,7 +154,7 @@ An ancient wood of significant magical and historical depth.
 |---|---|
 | **Tone** | Atmospheric, old, layered; beautiful and potentially dangerous |
 | **Settlements** | Elven settlements; hidden communities |
-| **Points of interest** | Hidden shrines, ancient ruins, rare herbs, magical wildlife |
+| **Points of interest** | Sacred groves, hidden shrines, ancient ruins, rare herbs, magical wildlife |
 | **Corruption** | As The Corruption spreads, portions of the forest become twisted — the natural world turning against itself |
 
 The Great Forest is the world's most visible indicator of The Corruption's effect on nature. Players who visit early in a campaign may find it peaceful; those who return later may not recognize it.
@@ -136,15 +163,16 @@ The Great Forest is the world's most visible indicator of The Corruption's effec
 
 ### The Iron Peaks
 
-A massive mountain range defined by the things buried within it.
+The homeland of the dwarves — a massive mountain range defined by what is buried within it.
 
 | Characteristic | Detail |
 |---|---|
 | **Tone** | Harsh, vertical, claustrophobic underground; vast and exposed above |
-| **Settlements** | Dwarven strongholds, mining operations, ancient underground cities |
-| **Points of interest** | Frozen passes, endless cave systems, buried civilizations |
+| **People** | Dwarves; one of the continent's great civilizations |
+| **Settlements** | Ancient underground kingdoms, dwarven strongholds, rich mines, legendary forges |
+| **Points of interest** | Frozen mountain passes, endless cave systems |
 | **Threats** | Dragons (confirmed presence), underground hazards |
-| **Companion connection** | Steven's Master Miner abilities excel here — he finds what others miss |
+| **Companion connection** | Steven's mining knowledge gives him unique interactions here — he finds what others miss |
 
 The Iron Peaks hold things that have not been disturbed in centuries. As The Corruption wakes ancient things, the mountains become more dangerous than anyone expected.
 
@@ -152,30 +180,57 @@ The Iron Peaks hold things that have not been disturbed in centuries. As The Cor
 
 ### The Frozen Highlands
 
-Remote northern wilderness defined by endurance and isolation.
+A harsh northern wilderness where survival shapes everything — including the culture.
 
 | Characteristic | Detail |
 |---|---|
 | **Tone** | Brutal, isolating, ancient; survival is not assumed |
 | **Settlements** | Northern settlements; scattered and self-reliant |
 | **Points of interest** | Ice caves, ancient fortresses |
-| **Threats** | Giant beasts, harsh weather as a system, The Corruption manifesting in cold forms |
+| **Threats** | Giant beasts, harsh weather as an active system, The Corruption manifesting in cold forms |
+| **Corruption** | Arrives late; hits hard — less to cushion the impact |
 
-The Frozen Highlands are far enough from the continent's center that The Corruption's effects take longer to arrive — and hit harder when they do, because there is less to cushion the impact.
+#### Cultural Philosophy — Nothing Is Wasted
+
+The defining principle of Frozen Highlands culture is **total use of every available resource**.
+
+In a land where survival is difficult, wastefulness is not merely impractical — it is deeply disrespectful.
+
+| Resource | Use |
+|---|---|
+| Meat | Food |
+| Hide | Clothing |
+| Bones | Tools |
+| Sinew | Bowstrings |
+| Fat | Lamp oil |
+| Antlers | Carvings |
+
+This philosophy shapes the culture's values:
+
+- **Practicality** — solutions must work, not merely sound good
+- **Honor** — what you do when no one is watching is what you are
+- **Community** — survival is collective; abandonment of one's own is the deepest shame
+- **Self-reliance** — dependency is vulnerability; preparation is survival
+- **Respect for nature** — the land provides; those who take without giving back are enemies of the whole
+
+Characters from the Frozen Highlands carry these values visibly in how they speak, what they prioritize, and what they find offensive.
 
 ---
 
-### The Desert Kingdom
+### Sol Kareth
 
-A civilization built around scarcity and the things buried beneath sand.
+The great desert kingdom — one of the oldest civilizations on the continent.
 
 | Characteristic | Detail |
 |---|---|
-| **Tone** | Ancient, mercantile, layered; a culture built on trade and secrets |
+| **Tone** | Ancient, mercantile, layered; a civilization built on trade and secrets |
 | **Settlements** | Oasis cities, merchant caravans |
 | **Points of interest** | Ancient tombs, buried civilizations, forgotten temples |
+| **Trade** | Powerful trade routes; Sol Kareth's merchants reach every major region |
 | **Environmental hazards** | Sandstorms, extreme travel conditions |
-| **Corruption** | The Desert Kingdom hides things — and The Corruption is waking what was buried |
+| **Corruption** | Sol Kareth hides things — countless ruins beneath the sands — and The Corruption is waking what was buried |
+
+Sol Kareth has outlasted kingdoms that rose and fell while it traded. Its age is both its greatest resource and its greatest vulnerability: no civilization accumulates as many buried secrets without some of them eventually demanding to be found.
 
 ---
 
@@ -187,11 +242,81 @@ The political center of the continent.
 |---|---|
 | **Tone** | Intricate, political, high-stakes; power concentrated and contested |
 | **Settlements** | Great cities, noble estates |
-| **Content** | Noble house politics, government, military command, trade, political intrigue |
+| **Content** | Noble house politics, government, military headquarters, trade, political intrigue |
 | **Corruption** | Political Corruption is most visible here — powerful people becoming worse versions of themselves |
 | **Campaign sensitivity** | The condition of The Capital Province changes depending on campaign events; it is the world's most responsive region to player choices |
 
 The Capital Province is where decisions made everywhere else eventually land. Campaigns that end here often culminate in confrontations not just with monsters, but with the human darkness The Corruption has amplified.
+
+---
+
+## Major Organizations
+
+### Adventurers Guild
+
+One of the most respected **neutral organizations** on the continent.
+
+The Guild operates across all regions and maintains relationships with most major factions without being formally allied with any of them. This neutrality is its most valuable asset.
+
+**Guild responsibilities:**
+
+| Service | Description |
+|---|---|
+| Monster contracts | Hired elimination of threats |
+| Exploration requests | Mapping and surveying unknown areas |
+| Escort missions | Protection of travelers, merchants, and cargo |
+| Treasure hunting | Recovery of specific items or artifacts |
+| Bounties | Apprehension or elimination of wanted individuals |
+| Rumor gathering | Intelligence collection across the continent |
+| Mapping | Documenting unexplored areas for the Guild's records |
+
+The Guild serves as a **major source of optional quests and world information**. Players who maintain good standing with the Guild gain access to contracts, intelligence, and contacts unavailable elsewhere.
+
+---
+
+### Mages Guild
+
+The continent's primary magical institution.
+
+The Mages Guild is **respected but not universally trusted**. Its members hold significant knowledge and power, which makes them valuable to some factions and threatening to others.
+
+**Guild responsibilities:**
+
+| Responsibility | Description |
+|---|---|
+| Training mages | Identifying and educating those with magical ability |
+| Preserving knowledge | Maintaining archives of magical theory and history |
+| Researching phenomena | Investigating unexplained magical events |
+| Studying ancient relics | Cataloguing and understanding artifacts of historical significance |
+| Securing dangerous artifacts | Containing items too dangerous for general access |
+| Investigating the Corruption | Studying magical anomalies caused by the god's influence |
+
+The Mages Guild's investigation of The Corruption is one of the campaign's significant ongoing threads. Guild mages are among the few groups actively trying to understand what is happening to the world — though their conclusions are incomplete and sometimes wrong.
+
+Eleanor's faction arc is tied to the Mages Guild. See [`docs/heroes/ELEANOR.md`](../heroes/ELEANOR.md).
+
+---
+
+## Religion
+
+The world features **a small number of major religions** rather than dozens of minor faiths.
+
+Each religion is developed with:
+- **Meaningful beliefs** — a coherent worldview and theology
+- **Traditions** — practices, rituals, and calendar events that shape daily life
+- **Influence** — real political, cultural, and social reach
+
+Religion should affect politics, culture, and daily life throughout the world. It is not background dressing — it is a system that shapes how people think, what they fight over, and who they trust.
+
+### Current Status
+
+⚠️ **NOT YET DEFINED** — The specific major religions, their names, their deities or beliefs, their territories, and their relationship to The Corruption have not been established. Do not invent this content without explicit canonical direction.
+
+What is confirmed:
+- There will be a small number of major religions (not dozens)
+- Religion will have real political and cultural influence
+- Some religious orders will fracture under The Corruption's influence (confirmed in Corruption lore)
+- Cults receiving whispers from the imprisoned god exist and are distinct from legitimate religious practice
 
 ---
 
@@ -203,9 +328,9 @@ The following are confirmed examples of intelligent factions that possess intern
 
 | Faction | Design note |
 |---|---|
-| **Goblins** | Territorial and organized; motivation-dependent; not a monolith |
+| **Goblins** | Three named tribes; see Goblin Tribes section |
 | **Orcs** | Society and politics exist; warbands are not the whole story |
-| **Vampires** | Major supernatural faction; see Vampires section |
+| **Vampires** | Three major houses; see Vampire Factions section |
 | **Werewolves** | Includes both born and turned individuals; society exists |
 | **Witches** | Practice and tradition; not inherently antagonistic |
 | **Necromancers** | Goal-driven; some are scholarly or philosophical |
@@ -230,11 +355,81 @@ The player's first instinct should not always be violence. Some encounters that 
 
 ---
 
-## Vampires
+## Goblin Tribes
 
-Vampires are one of the world's major supernatural factions.
+There are three primary goblin tribes. Each has its own identity, leadership, territory, and relationship to neighboring civilizations.
 
-They should **never feel like generic enemies**.
+Not every goblin tribe is automatically hostile.
+
+---
+
+### Stonefang Tribe
+
+| Trait | Detail |
+|---|---|
+| **Defining character** | Aggressive; strength-focused; brutal in combat |
+| **Strategy** | Raiding and territorial expansion |
+| **Military culture** | Strength is status; the strongest lead |
+| **Threat level** | High; actively expanding territory |
+
+The Stonefang Tribe is the most immediately dangerous of the three — the one most likely to be encountered as a combat threat. However, even within the Stonefang, leadership can be challenged, alliances can shift, and the right approach may open doors that violence would close.
+
+---
+
+### Mossroot Tribe
+
+| Trait | Detail |
+|---|---|
+| **Defining character** | Hunters; survivalists; nature-oriented |
+| **Strategy** | Avoidance of unnecessary conflict; living alongside the land |
+| **Culture** | Deeply tied to the natural world; respect for wildlife |
+| **Threat level** | Low under normal conditions; dangerous if cornered or their land is threatened |
+
+The Mossroot Tribe is the most likely to be open to negotiation. They are not pacifists — they hunt and they defend themselves — but they do not seek conflict. Approaching them with understanding of their territory and values is the foundation of any relationship.
+
+---
+
+### Ashfire Tribe
+
+| Trait | Detail |
+|---|---|
+| **Defining character** | Newly unified; ambitious; rapidly expanding |
+| **Origin** | Recently united multiple separate clans under a single leadership |
+| **Strategy** | Political consolidation followed by territorial expansion |
+| **Threat level** | Growing; becoming a major regional threat |
+| **Dynamic** | The most politically complex of the three — a unified goblin force is something new |
+
+The Ashfire Tribe's ambition makes it unpredictable. They are not simply raiders — they are a political entity in formation. Who leads them, what they want, and whether that leadership can be influenced or challenged are all campaign-relevant questions.
+
+### Goblin Tribe Design Notes
+
+Each tribe requires:
+- Named leadership (⚠️ NOT YET DEFINED for all three)
+- Specific territory on the continent map (⚠️ NOT YET DEFINED)
+- Traditions and internal culture beyond combat role (⚠️ NOT YET DEFINED in full)
+- Relationship with neighboring civilizations (⚠️ NOT YET DEFINED)
+
+---
+
+## Vampire Factions
+
+Vampires are one of the world's **primary supernatural powers**.
+
+They should never feel like generic enemies.
+
+### Three Major Vampire Houses
+
+There are three major vampire houses. Each house has different goals, philosophies, and methods.
+
+| Approach | Description |
+|---|---|
+| **Political manipulation** | Power through influence, placement, and information |
+| **Military conquest** | Power through force and territorial control |
+| **Ancient knowledge** | Power through accumulated history and secrets |
+| **Maintaining secrecy** | Survival through invisibility within society |
+| **Survival of vampire society** | Protecting the existence of their kind above all |
+
+The three houses are ⚠️ **NOT YET NAMED** — their names, specific philosophies, leadership, and territories require dedicated authorship. The above represents confirmed design directions, not final assignments.
 
 ### Confirmed Vampire Types
 
@@ -253,7 +448,35 @@ Vampire presence varies significantly between campaigns.
 - Some campaigns will barely feature vampires — they exist in the world, but are not the current story
 - Other campaigns may center on stopping an expanding vampire threat — an organized coven, an ancient lord's plan, a city quietly converting
 
-This variation is part of the campaign-to-campaign replayability. Players who become expert at reading vampire politics in one campaign will bring that knowledge to the next — and find a completely different situation.
+This variation is part of campaign-to-campaign replayability. Players who become expert at reading vampire politics in one campaign will bring that knowledge to the next — and find a completely different situation.
+
+---
+
+## Reputation System
+
+> **Full design document:** [`docs/systems/reputation.md`](../systems/reputation.md)
+
+The reputation system is **inspired by Fallout: New Vegas**. Players do not have a universal morality score — reputation is tracked **separately for each major faction**.
+
+### Factions with Reputation Tracking (confirmed)
+
+- Kingdoms
+- Adventurers Guild
+- Mages Guild
+- Vampire Houses (three)
+- Goblin Tribes (three)
+- Religious Orders
+- Mercenary Companies
+
+### High Reputation Unlocks
+
+Unique quests, discounts, allies, special dialogue, political influence, safe passage.
+
+### Poor Reputation Results In
+
+Increased prices, denied services, assassination attempts, hostile settlements, lost questlines, rival factions pursuing the player.
+
+Full consequences and mechanics: [`docs/systems/reputation.md`](../systems/reputation.md)
 
 ---
 
@@ -262,3 +485,4 @@ This variation is part of the campaign-to-campaign replayability. Players who be
 | Date | Change |
 |---|---|
 | July 2026 | Created — canonical regions, travel encounters, encounter philosophy, intelligent factions, and vampires established |
+| July 2026 | Expanded — World Philosophy, Frozen Highlands culture, Sol Kareth name, Iron Peaks dwarven identity, Goblin Tribes (Stonefang/Mossroot/Ashfire), three vampire houses, Adventurers Guild, Mages Guild, Religion framework, Reputation system summary added |
