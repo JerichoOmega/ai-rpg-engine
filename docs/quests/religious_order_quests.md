@@ -629,24 +629,25 @@ The mechanism of alteration is the deeper mystery. The archive is not a building
 
 - The alterations were made by someone with legitimate access to the archive — not an intruder
 - The authentication markers that should flag unauthorized changes were not triggered, which means either the person who made the changes had authority to authenticate, or the authentication system itself was manipulated
-- One of the altered records — a testimony from forty years ago — includes a marginal annotation in a hand that Tessyn identifies as belonging to a former Archivist named Carros, who died twelve years ago
+- One of the altered records — a testimony from forty years ago — includes a marginal annotation in a hand that Tessyn identifies as belonging to a former Archivist named Hollen, who died twelve years ago
 
-**Carros** is where the investigation centers. He was a trusted senior Archivist — one of the most accomplished practitioners of Boundary Reading in the Order's history. He spent the last decade of his life working in the archive's deepest holdings, which he was given exceptional access to because of his expertise. He died quietly, of illness, and was recorded by the Order as having passed in The Reckoning — the contemplation of one's death — which is considered an honored death for a practitioner.
+**Hollen** is where the investigation centers. *(Naming note for writers: Hollen, the Order's deceased Archivist in this quest, is a distinct character from **Carros**, the living Veiled Archivist conducting Great Forgetting research at the Great Library — see `docs/lore/GREAT_LIBRARY.md`. Do not conflate them.)* He was a trusted senior Archivist — one of the most accomplished practitioners of Boundary Reading in the Order's history. He spent the last decade of his life working in the archive's deepest holdings, which he was given exceptional access to because of his expertise. He died quietly, of illness, and was recorded by the Order as having passed in The Reckoning — the contemplation of one's death — which is considered an honored death for a practitioner.
 
-The problem: if Carros made the alteration twelve years ago, why are the most recent alterations from within the last year? He is dead.
+The problem: if Hollen made the alteration twelve years ago, why are the most recent alterations from within the last year? He is dead.
 
-Unless the annotation is a different kind of message — left by Carros before he died, for whoever came looking.
+Unless the annotation is a different kind of message — left by Hollen before he died, for whoever came looking.
 
 ---
 
 **Key choices**
 
-**Option A — Follow Carros's trail into the archive's deep holdings**  
-The investigation suggests Carros discovered the alteration problem years before his death and spent his final years trying to leave a record of what the originals said. The deep holdings he was given access to contain something he was studying that he did not include in his official reports. Finding what he found requires extended work in the archive's most restricted sections — which means extended time in a space where the Order's relationship with death and the Corruption's influence on that relationship are both very close.  
-*Reputation consequence:* **Significant gain with The Veiled Archivists** if the party recovers what Carros documented — this restores the archive's integrity and produces a significant new body of accurate primary-source material about the Corruption. The Order will treat this as among the most valuable contributions any outside party has made to their work. **Risk:** extended time in the deep holdings is not without cost; the party will encounter things the archive holds that are meant to stay contained.
+**Option A — Follow Hollen's trail into the archive's deep holdings**  
+The investigation suggests Hollen discovered the alteration problem years before his death and spent his final years trying to leave a record of what the originals said. The deep holdings he was given access to contain something he was studying that he did not include in his official reports. Finding what he found requires extended work in the archive's most restricted sections — which means extended time in a space where the Order's relationship with death and the Corruption's influence on that relationship are both very close.  
+*Reputation consequence:* **Significant gain with The Veiled Archivists** if the party recovers what Hollen documented — this restores the archive's integrity and produces a significant new body of accurate primary-source material about the Corruption. The Order will treat this as among the most valuable contributions any outside party has made to their work. **Risk:** extended time in the deep holdings is not without cost; the party will encounter things the archive holds that are meant to stay contained.
+*Authored handout content:* the recovered documents — five fragments in Hollen's voice, the verbatim marginal annotation, the vigil-record hiding mechanism, and AI DM usage notes — are fully written in [`handouts/hollen_archive_records.md`](handouts/hollen_archive_records.md).
 
 **Option B — Identify and confront the living person responsible for the recent alterations**  
-If Carros died twelve years ago, someone else made the changes within the last year. The investigation, if pressed in this direction, can identify the living Archivist who made them. That person is not obviously compromised — they function normally, they pass internal review, they are a respected member of the Order. What the party discovers when they find them is that they have been receiving communications they have accepted as internal Order guidance: messages they believed came from senior members of the Order, directing specific record corrections for "accuracy." The messages came from somewhere else.  
+If Hollen died twelve years ago, someone else made the changes within the last year. The investigation, if pressed in this direction, can identify the living Archivist who made them. That person is not obviously compromised — they function normally, they pass internal review, they are a respected member of the Order. What the party discovers when they find them is that they have been receiving communications they have accepted as internal Order guidance: messages they believed came from senior members of the Order, directing specific record corrections for "accuracy." The messages came from somewhere else.  
 *Reputation consequence:* **Significant gain with The Veiled Archivists** if handled with care — the Archivist was not acting in bad faith and should be treated as a victim, not a conspirator. If exposed harshly or publicly, the Order loses a practitioner they need and the party loses a potential ally. If handled well, the Archivist's account of the communications provides a significant intelligence thread about the Corruption's ability to impersonate internal authority.
 
 **Option C — Reconstruct the originals from external cross-references**  
@@ -661,7 +662,7 @@ The party's advice to Tessyn: close the most restricted sections, halt all archi
 
 **Follow-on threads**
 
-- Carros's undisclosed research — if recovered — is one of the most complete historical accounts of the Corruption's behavior available to any party; it will change what is knowable in late-campaign content
+- Hollen's undisclosed research — if recovered — is one of the most complete historical accounts of the Corruption's behavior available to any party; it will change what is knowable in late-campaign content. The research itself is authored in [`handouts/hollen_archive_records.md`](handouts/hollen_archive_records.md); its Fragment Three (the Withdrawal) is the late-campaign lever.
 - The living Archivist who made the recent alterations, once they understand what was done to them, may become the Order's most motivated researcher on the question of how the Corruption impersonates legitimate authority
 - The altered records represent an intelligence objective: whatever removed those specific accounts of the Corruption wanted the Order not to know what they documented; understanding what was in them is itself strategically significant
 
@@ -688,7 +689,7 @@ The following interactions exist across all eight quests (entry-level and high-r
 | High standing with **Ancestor Speakers** | Dwarven clan access; Iron Peaks political network | No direct effect on other orders; dwarven goodwill may surprise the Covenant |
 | Securing the Ironmoot Chamber (Ancestor Speakers high-rep quest) | Significant Ancestor Speakers gain; Iron Peaks political stability | Moderate loss with clans who viewed it as outside interference |
 | Sharing Veiled Archivists records with **Mages Guild** | Mages Guild research gain | Significant loss with **Veiled Archivists** (information shared without consent) |
-| Recovering Carros's research (Veiled Archivists high-rep quest) | Significant Veiled Archivists gain; major campaign intelligence | Accessible to **Mages Guild** only if party manages the relationship carefully |
+| Recovering Hollen's research (Veiled Archivists high-rep quest) | Significant Veiled Archivists gain; major campaign intelligence | Accessible to **Mages Guild** only if party manages the relationship carefully |
 | Exposing **Inquisitors** (Covenant entry quest) to **Grove Keepers** | Grove Keeper gain | Does not offset Covenant penalty from direct intervention — different ledgers |
 
 Standing with all four orders at **Friendly** simultaneously is difficult but possible. The primary natural tension remains between the Covenant Clergy and the Grove Keepers. The high-reputation quests create additional cross-order complexity: the Covenant Synod outcome affects Frontier religious operations, which affects Grove Keeper communities. The Ancestor Speakers' inter-clan dynamics can draw in Veiled Order methodology if the party connects those relationships. These are not automatic links — they require the party to actively maintain multiple relationships across the campaign.
@@ -700,4 +701,6 @@ Standing with all four orders at **Friendly** simultaneously is difficult but po
 | Date | Change |
 |---|---|
 | July 2026 | Created — four named religious order quests established: The Inquisitor's Commission (Covenant Clergy), The Turning Grove (Grove Keepers), What the Ancestors Say (Ancestor Speakers), The Archivist's Last Record (Veiled Archivists) |
+| 2026-07-31 | Hollen's archived research authored as discoverable handout content: `handouts/hollen_archive_records.md` (five fragments, marginal annotation verbatim, vigil-record hiding mechanism, AI DM usage notes); *What Was Written Here* Option A and follow-on threads now link to it. |
+| 2026-07-31 | Deceased quest Archivist renamed **Carros → Hollen** to resolve a canonical collision with the living Great Library researcher Carros (`docs/lore/GREAT_LIBRARY.md`), whose Great Forgetting research has downstream dependencies; naming note added to the quest text. |
 | July 2026 | Added high-reputation (Friendly standing) second quests for all four orders: The Synod of Millhaven (Covenant Clergy), The Last Standing Grove (Grove Keepers), The Conclave of Kept Names (Ancestor Speakers), What Was Written Here (Veiled Archivists). Updated cross-quest reputation dynamics table. |
