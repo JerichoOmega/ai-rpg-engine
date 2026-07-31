@@ -332,6 +332,16 @@ Four major religions are defined in full: [`docs/world/religions.md`](religions.
 
 Each religion includes: theology, traditions, territory, political influence, and how The Corruption is affecting it. The distinction between legitimate religious practice and corruption-influenced cults is fully documented in [`docs/world/religions.md`](religions.md).
 
+### Named Cults
+
+Three named cults are defined for use in quests and encounters: [`docs/world/cults.md`](cults.md)
+
+| Cult | Origin Religion | Radicalization |
+|---|---|---|
+| **The Ashen Tribunal** | Solari Covenant | High |
+| **The Severance** | The Old Ways | Medium |
+| **The Threshold Circle** | The Veiled Order | Low-to-medium |
+
 Each religion has an associated order with separate reputation tracking. See [`docs/systems/reputation.md`](../systems/reputation.md).
 
 ---

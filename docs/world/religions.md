@@ -285,6 +285,16 @@ Most cults do not start as cults. They emerge from within legitimate religious p
 
 The Solari Covenant's Inquisitor faction and the Old Ways' Severance splinter are both at risk of this trajectory. Neither has crossed fully into cult territory. Both are being watched by other members of their traditions.
 
+### Named Cults
+
+Three named cults are fully defined for use in quests and encounters: [`docs/world/cults.md`](cults.md)
+
+| Cult | Origin Religion | Radicalization | Primary Territory |
+|---|---|---|---|
+| **The Ashen Tribunal** | Solari Covenant | High | Capital Province; Frontier cities |
+| **The Severance** | The Old Ways | Medium | Great Forest; Frontier margins |
+| **The Threshold Circle** | The Veiled Order | Low-to-medium | Scattered; secretive |
+
 ### Cults as Gameplay Elements
 
 Cults function differently from legitimate religious factions in gameplay:
