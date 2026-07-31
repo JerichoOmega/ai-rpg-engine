@@ -1,0 +1,285 @@
+Shrine Locations (Rough Draft)
+
+Capital Province
+
+The Grand Temple of the Seven Voices
+
+Type: Grand Cathedral
+
+Dedicated To: The Divine Chorus
+
+Age: Early Age of Unity
+
+Condition: Immaculately Maintained
+
+Caretakers: High Covenant Clergy
+
+Lore
+The largest temple on the continent and the spiritual heart of the Covenant. Pilgrims from every kingdom visit at least once in their lifetime.
+
+Quest Hook
+Political tensions among clergy threaten to divide the temple.
+
+World State
+The morale of the capital is influenced by the stability of this temple.
+
+⸻
+
+First Chorus Sanctuary
+
+Type: Ancient Shrine
+
+Age: First Empire
+
+Condition: Restored
+
+Lore
+Believed to be one of the earliest shrines dedicated to the Divine Chorus.
+
+Unknown to nearly everyone, hidden beneath its foundations lie sealed ruins connected to the Architects.
+
+This remains undiscovered during most of the game.
+
+⸻
+
+Pilgrim’s Rest Chapel
+
+Small roadside chapel serving travelers entering the capital.
+
+Maintained by volunteers.
+
+Offers food, shelter, and medical care.
+
+⸻
+
+Great Forest
+
+Whispering Grove
+
+Nature shrine.
+
+Dedicated to harmony between civilization and nature.
+
+Built around an enormous ancient tree.
+
+Travelers traditionally tie ribbons to its branches.
+
+⸻
+
+Moonwater Spring
+
+Sacred healing spring.
+
+Pilgrims leave carved stones bearing the names of loved ones.
+
+Water is believed to possess mild restorative properties.
+
+⸻
+
+Fallen Roots Shrine
+
+Nearly reclaimed by nature.
+
+Old Way traditions survive here.
+
+One elderly caretaker refuses to abandon it.
+
+⸻
+
+Northern Highlands
+
+Frostwatch Shrine
+
+Mountain shrine overlooking dangerous passes.
+
+Travelers ring its bronze bell before crossing.
+
+The bell only rings naturally during severe winter storms.
+
+⸻
+
+Shrine of Quiet Resolve
+
+A memorial to those lost in the mountains.
+
+Visitors leave climbing ropes and tools as offerings.
+
+⸻
+
+Stonefather Cairn
+
+Massive stone monument maintained by local clans.
+
+A place of remembrance rather than worship.
+
+⸻
+
+Eastern Frontier
+
+Dawn’s Crossing Shrine
+
+Marks the historic eastern trade road.
+
+Merchants traditionally donate their first coin earned each season.
+
+⸻
+
+Ember Lantern Shrine
+
+A shrine whose lantern has burned continuously for generations.
+
+Should corruption extinguish it, nearby settlements lose hope.
+
+⸻
+
+Bridgekeeper’s Shrine
+
+Small roadside shrine maintained by generations of bridge wardens.
+
+Associated with safe journeys.
+
+⸻
+
+Western Coast
+
+Tidecall Shrine
+
+Located on seaside cliffs.
+
+Fishermen pray before voyages.
+
+During storms the waves crash dramatically around the shrine.
+
+⸻
+
+Lighthouse Sanctuary
+
+Part shrine.
+
+Part lighthouse.
+
+Serves sailors and pilgrims alike.
+
+⸻
+
+Windspeaker Bluff
+
+Open-air shrine where travelers leave wind chimes.
+
+The sound changes with each season.
+
+⸻
+
+Southern Plains
+
+Harvest Shrine
+
+Center of annual harvest festivals.
+
+Farmers bring the first bundle of grain every year.
+
+⸻
+
+Shepherd’s Refuge
+
+Simple countryside chapel.
+
+Known for generosity toward travelers.
+
+⸻
+
+Seven Fields Monument
+
+Ancient memorial marking where seven villages united during a devastating famine.
+
+⸻
+
+Ancient Frontier Ruins
+
+Hall of Echoes
+
+Partially buried temple.
+
+No one remembers who originally built it.
+
+Ancient murals don’t quite match accepted history.
+
+⸻
+
+Veiled Sanctuary
+
+Accessible only through hidden underground passages.
+
+Contains subtle references to an unknown eighth figure.
+
+Scholars dismiss them as artistic errors.
+
+⸻
+
+Silent Observatory
+
+A shrine built around celestial observation.
+
+Records the movements of both moons.
+
+Its oldest star charts contain impossible inaccuracies that hint at knowledge older than the Divine Chorus itself.
+
+⸻
+
+General World State Examples
+
+Shrines can exist in several conditions:
+
+Maintained
+
+* Active pilgrims
+* Flowers
+* Candles
+* Music
+* Healthy surroundings
+
+Neglected
+
+* Overgrown paths
+* Faded banners
+* Few visitors
+* Aging caretaker
+
+Abandoned
+
+* Wildlife has reclaimed the grounds.
+* Roof damage.
+* Broken statues.
+* Lost records.
+
+Corrupted
+
+* Strange growths.
+* Distorted architecture.
+* Unnatural silence.
+* Local wildlife behaves aggressively.
+
+Restored (Player Influence)
+
+* Pilgrims return.
+* Local festivals resume.
+* New caretakers arrive.
+* Historical records are preserved.
+* The surrounding community begins to recover.
+
+⸻
+
+Design Rules
+
+Every named shrine should include:
+
+* Name
+* Region
+* Divine Chorus dedication (or Old Way tradition)
+* Approximate age
+* Current condition
+* Caretaker (if applicable)
+* Historical significance
+* Local tradition
+* Quest hook
+* World State interaction
