@@ -112,8 +112,19 @@ Broad-shouldered. The build of someone who has been at a forge for decades. Hand
 ### Equipment
 His forging hammer is his primary weapon — a warhammer that is also a craftsman's tool. It has been repaired more than once. He carries a portable forge kit and tools that should be too heavy to travel with but somehow always travel with him.
 
-### Recognizable Personal Detail
-⚠️ **NOT YET DEFINED** — Torren's meaningful personal item, tied to his history and his specific loss; to be established when his personal arc is authored.
+### Recognizable Personal Detail — The Cold Clasp
+
+Torren carries a **heat-warped iron clasp** — a hinged fastening about the size of his palm, the kind forged to hold something bigger than itself shut. It has been through fire hot enough to run the metal: the hinge is fused, the plate is bowed, and one corner has slagged into a shape no smith would sign. The workmanship underneath the damage is visible to anyone who knows what to look for. It was made well. It failed anyway.
+
+He keeps it in his tool roll — not with his personal effects, but in the slot beside his finest hammer, where a working smith keeps a pending job. That placement is the entire statement: to Torren it is not a memorial. It is work he has not finished.
+
+**The detail that defines it:** Torren repairs everything. Cracked breastplates, strangers' gate hinges, companions' boot buckles no one asked him to touch. The clasp is the one broken thing he owns that he has never repaired. At camp, some nights, he takes it out, turns it over in the firelight, sets it on the anvil — and then puts it back in the roll and picks up someone else's gear instead. He has never once put a tool to it. The party will notice this long before anyone understands it.
+
+If asked about it directly, he answers the way he answers everything — plainly, and no further than the question: *"It's from something I couldn't save."* He does not elaborate. He does not lie. He puts it away.
+
+**What it anchors:** the clasp is the physical form of his Core Wound — the thing he refused to let go of past the point where letting go would have protected others. What the clasp held shut, and who bore the cost when it didn't, is deliberately not defined here; that belongs to his personal arc. Writers should treat the clasp exactly as Torren does: present, visible, unexplained. Whether repairing it — or finally choosing not to — becomes part of his arc's resolution is a decision reserved for the arc itself.
+
+**Usage guidance:** the clasp should appear the way Talos's bead bracelet appears — naturally and recurrently, never as a set piece. Campfire scenes are its home: the sound of the tool roll opening, the pause, the roll closing. Companions may notice and react in character (Ragash would recognize an object that carries the record of what it survived; Ronan would recognize the one thing someone keeps and won't touch). No one should force the conversation. Torren hasn't.
 
 ### Silhouette
 Solid. Grounded. In a lineup of the five heroes, Torren's silhouette is the one that looks like it cannot be moved easily. He occupies space the way load-bearing walls occupy space.
@@ -348,3 +359,4 @@ This is not coldness. It is the way Torren processes grief — through the quest
 |---|---|
 | July 2026 | Created — full Hero Bible entry for Torren; Stephen retired as canonical companion; Torren is a complete redesign, not a rename |
 | July 2026 | Added The Forgotten Eighth revelation response |
+| 2026-07-31 | Recognizable Personal Detail defined — the Cold Clasp: the one broken thing Torren has never repaired; kept as a pending job, not a memorial; origin deliberately reserved for his personal arc |

@@ -73,6 +73,9 @@ Becomes the party's dependable foundation. Companions tend to notice that their 
 ### Visual Appearance
 Broad-shouldered; the build of a lifelong smith. Hands that show decades of work — calloused, scarred, burn-marked. Practical clothing reinforced at the joints. Carries a portable forge kit that should be too heavy to travel with.
 
+### Recognizable Personal Detail
+**The Cold Clasp** — a heat-warped iron clasp kept in his tool roll beside his finest hammer, filed as a pending job rather than a keepsake. It is the only broken thing Torren owns that he has never repaired; some nights he takes it out at the fire, turns it over, and puts it back untouched. *"It's from something I couldn't save."* Full canon: [`docs/heroes/TORREN.md`](../heroes/TORREN.md) — Recognizable Personal Detail.
+
 ### Voice / Way of Speaking
 Measured and unhurried. Shorter sentences after longer pauses. His humor is dry, late-arriving, and worth waiting for.
 
