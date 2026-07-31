@@ -29,6 +29,9 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/world/goblin_tribes.md` | Three tribes: Stonefang (Warchief Grakkor), Mossroot (Elder Vess), Ashfire (Warchief Skarra); leadership, territory, traditions, inter-tribe relationships |
 | `docs/systems/dynamic_story_arcs.md` | Dynamic Story Arc framework; The Fractured Circle (first confirmed arc); campaign-exclusive enemies; companion stakes per arc |
 | `docs/quests/religious_order_quests.md` | One named quest per religious order: The Inquisitor's Commission (Covenant), The Turning Grove (Old Ways), What the Ancestors Say (Ancestors' Path), The Archivist's Last Record (Veiled Order) |
+| `docs/world/cults.md` | Named cults players will encounter; how cults emerge from legitimate religion; cult mechanics in gameplay |
+| `docs/encounters/religious_encounters.md` | Religious pilgrimage and shrine encounters for the travel encounter tables |
+| `docs/quests/goblin_tribe_quests.md` | One named quest per goblin tribe: Stonefang, Mossroot, Ashfire |
 | `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
 | `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |
 | `docs/heroes/TALOS.md` | Full Hero Bible — Talos |
