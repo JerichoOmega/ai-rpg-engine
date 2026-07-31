@@ -98,6 +98,107 @@ Whether this is institutional fastidiousness or something more deliberate is a q
 
 ---
 
+## Key Figures
+
+---
+
+### The Aldenmoor Dynasty
+
+**Dynasty name:** House Aldenmoor  
+**Founded:** Late Age of Sundering / early Age of Restoration transition  
+**Current generation:** Third
+
+---
+
+**How they came to power:**
+
+The previous ruling house of the Capital — the one whose origins genuinely trace to the Second Age's founding political order — did not survive the Age of Sundering's final campaigns intact. The heir was killed in the siege that nearly broke the Capital. The secondary heir died of illness within the year. The tertiary claim was held by a family whose support base was entirely in the eastern provinces, now rubble.
+
+The Capital needed someone to hold it.
+
+**Aldenmoor the Elder** — then Commander of the Capital's defensive forces, later the dynasty's founder — did so. He refused several offers to transfer power to rival claimants, citing the necessity of institutional continuity during the crisis. He was not wrong that continuity was necessary. He was careful never to say anything that could be read as conquest. He commissioned historians to document his family's descent from Second Age military administrators, establishing a line of legitimacy that was thin but present. He built alliances with the institutions that most needed the fighting to stop — the temples, the universities, the remains of the merchant class.
+
+By the time there was leisure to question whether his governance was emergency or permanent, it was permanent.
+
+The second generation consolidated what the first had taken: filling judicial positions, placing loyalists in the Mages Guild's administrative tier, ensuring that the story of the Capital's survival credited the Aldenmoor decision-making rather than the defender-of-last-resort circumstances. The third generation — the current reign — has largely succeeded in making the dynasty unremarkable. Citizens born during the second generation's rule have no personal memory of a different house. Citizens born during the third have never heard the founding story told critically.
+
+**The official history says:** House Aldenmoor has governed the Capital Province since the great crisis, maintaining order through the difficult transition into the Age of Restoration, and represents the natural continuity of the Second Age's founding institutions.
+
+**What is documented but not discussed:** The previous ruling house had surviving members. They are no longer in the Capital. Where they are, and under what circumstances they left, is not recorded in accessible documents.
+
+---
+
+### Queen Merveth Aldenmoor
+
+**Name:** Queen Merveth Aldenmoor  
+**Generation:** Third (current monarch)  
+**Came to power:** Following the death of her older brother, the second-generation heir, whose death was officially declared an illness that came on quickly and resolved the succession question thoroughly
+
+---
+
+Merveth was not born to rule. Her older brother was the prepared heir; she was educated for governance as a secondary precaution — given serious academic and political training because the dynasty valued competent family members, not because anyone expected her to be needed.
+
+Her brother died when she was thirty-one. She was the most qualified person in the family for the position, and everyone who had worked with her knew it. She took the throne without a succession crisis because she was genuinely capable, because she moved quickly, and because she had spent her adult life building relationships in every institution that mattered.
+
+She has been an effective monarch. This is not propaganda — the comparative evidence supports it. The Aldenmoor dynasty's institutional consolidation has been most efficiently executed during her reign. She has identified talent reliably, placed capable people in positions where they could succeed, and maintained the political balance that keeps the Capital's factions from open conflict.
+
+**The Corruption's amplification — the thing that makes her interesting:**
+
+Merveth has always been acutely aware of her own competence. This was once her professional strength: she did not surround herself with sycophants because sycophants are useless, and she knew it. She sought out people who were good at things.
+
+What the Corruption has done is take that awareness and turn it toward threat assessment rather than resource identification. She still seeks out people who are competent. She now systematically diminishes them before they become too competent relative to her. The promotion that comes with a responsibility that makes success nearly impossible. The assignment to a distant posting when the work in the Capital is going well. The question asked in a council meeting, in front of peers, that is technically reasonable and specifically designed to surface a failure.
+
+She does not do this consciously, or not entirely. She is not plotting. She is managing, in the same way she has always managed — identifying risks and addressing them before they become problems. The risk she is now most alert to is capable people she cannot fully control.
+
+**For writers:** Merveth should not read as a villain. She should read as someone who was good at something important, and who is becoming worse at it in ways that are hard to name from inside the process. The clearest sign that something is wrong: the people around her keep leaving. Some retire. Some take postings abroad. Some simply stop being visible in court. The ones who remain are, on average, somewhat less capable than they were a decade ago — not because she drove away the incompetent, but because she drove away the competition.
+
+She does not know the Archivist is a vampire. She does not know House Vetharis's Capital operations are vampire-run. She would be disturbed by both facts. Her intelligence is still real; what has been corrupted is not her intelligence but what she does with it.
+
+---
+
+### Marshal Edric Voss
+
+**Name:** Marshal Edric Voss  
+**Position:** Head of the Capital's Military High Command  
+**Background:** Career officer; served under the second-generation Aldenmoor monarch; elevated to Marshal at the transition to Merveth's reign
+
+---
+
+Edric Voss is not a charismatic man. He does not inspire the way a battlefield commander inspires; he does not have the quality that makes soldiers want to die for him. What he has is precision: he understands military institutions the way a craftsman understands a tool — not with love, but with complete functional knowledge of what each part is for and how it fails. He has never lost a logistical battle. He has never been surprised by a supply shortage. He has never promoted someone who could not do the job.
+
+He was, for most of his career, one of the better institutional leaders the Military produced — reliable, clear-eyed, and incorruptible in the specific ways that matter for administration. Not personally rich. Not trading in favors. Not building a personal power base.
+
+**The Corruption's amplification:**
+
+Voss's institutional loyalty was always his defining quality. He believed — genuinely, not as a convenient framing — that the institution was larger than any individual, including himself. An order from the chain of command was not a personal act; it was the institution acting through him. His job was execution, not evaluation.
+
+The Corruption has not changed this belief. It has removed everything that once functioned as a check on it. What was appropriate professional deference has become an abdication: he no longer asks whether an order is right, because the concept of "right" as an external standard has been progressively replaced by "what the institution requires." The Queen's direction is, for him, institutional direction. What the Queen wants is, therefore, what the institution needs. He does not experience this as servility. He experiences it as the highest form of professional integrity.
+
+He is now capable of authorizing things he would have found distasteful a decade ago, because the frame through which he evaluates distaste has been comprehensively removed. He does not feel complicit. He feels clear.
+
+**Talos's relationship with Voss:**
+
+Talos served under Voss during the middle period of Merveth's predecessor's reign — the second-generation Aldenmoor monarch's later years. Voss was then a senior general in the eastern command; Talos was one of the officers whose capability Voss had identified and promoted.
+
+The order that ended Talos's career came from Voss.
+
+The specifics of the order are **not yet defined** — that detail belongs to Talos's personal quest beats, which are a separate task. What is established:
+- Voss gave the order. He gave it as an institutional directive, not as a personal act, and he believed — believes still — that this distinction matters.
+- Talos refused. His refusal was not the act of someone who misunderstood the chain of command; he understood it precisely and rejected it.
+- The Military's official account of Talos's departure frames it as insubordination. This framing serves the institution. It also, Voss would say, serves Talos — the alternative framing was worse.
+- Voss believed then, and believes now, that Talos made things worse by leaving. His view: institutions can only be changed from inside. Someone who walks out has lost the ability to stop the next order.
+- Talos believed then, and believes now, that staying would have made him complicit in a different way. His view: there are orders you cannot follow and remain who you are.
+
+**Neither of them is entirely wrong. This is what makes the reunion difficult.**
+
+Voss has not promoted the story that Talos was a traitor or a coward — he has been scrupulously accurate in what he has said, which means he has said as little as possible. The official record exists. He has not added to it. Whether this is residual respect for someone he once valued, or calculated distance from a complicated situation, Talos does not know.
+
+**For the AI Director:** When Talos and Voss are in the same scene, the dynamic is not that of an old enemy. It is something harder: a mentor who gave an order the student couldn't follow, and who has never stopped believing he was right to give it. The confrontation, if it comes, is not about hatred. It is about two people who share values that led them to opposite conclusions, and who have been living with that split for a long time.
+
+**Voss's awareness of the Corruption:** He does not recognize what is happening to him. He does not have the frame. The changes he has undergone feel, from inside, like maturity — the removal of sentiment that once complicated good institutional decision-making. He is more decisive now. He is clearer. He does not experience this as a loss.
+
+---
+
 ## The Capital and The Corruption
 
 Political Corruption is the Capital's dominant expression of the world's deterioration.
@@ -130,3 +231,4 @@ For players who have uncovered early evidence of the Great Forgetting, the Capit
 |---|---|
 | July 2026 | Created — Imperial Capital lore document; city districts; institutions (Royal Government, Military High Command, Mages Guild HQ, Major Temples, Universities, gnomish community); Corruption's political expression; campaign significance |
 | July 2026 | Expanded — framing updated to cultural and intellectual center (not only political); Academic Quarter expanded with Museums, Translation Halls, Observatory, Scholar's District; "scholars from every kingdom travel here" established |
+| July 2026 | Added Key Figures section — House Aldenmoor founding account (military opportunism at Age of Sundering collapse; three-generation consolidation); Queen Merveth Aldenmoor (third generation; Corruption amplification: competence turning toward threat suppression); Marshal Edric Voss (Military High Command head; institutional-loyalty amplification; Talos's unresolved history with him established) |
