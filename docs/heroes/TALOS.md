@@ -207,10 +207,8 @@ Mutual respect — the kind that grows between two people who recognize the same
 ### Ronan
 Talos remains cautious around Ronan — not personally, but practically. He does not fear who Ronan is. He fears what Ronan's curse could do to someone nearby if control slips. His concern is protective of others, not hostile toward Ronan. Over time, as Ronan demonstrates control and intent, this caution can evolve into genuine mutual respect.
 
-### Steven
-Talos and Steven share something unusual: a form of communication that does not require words. Talos does not try to fill Steven's silence, does not treat it as a problem to solve, and does not speak louder or more slowly as if that would help. He simply adjusts — treating Steven's gestures and expressions as a complete language, because they are. For Steven, this is rarer than it should be.
-
-Whether this mutual ease deepens into something more — genuine understanding, a specific trust, a friendship built in the particular quiet they share — depends on the events of the campaign and the player's choices.
+### Torren
+Mutual respect built on discipline and craftsmanship. Talos recognizes in Torren the same quality he values in himself and rarely finds in others: consistent, uncommented, unglamorous commitment to doing difficult work correctly. Torren recognizes Talos's sense of duty in the same way he recognizes any craftsman who takes their work seriously — with acknowledgment rather than admiration. Neither announces this. Both notice it in the other, and it does not require conversation to be real.
 
 ---
 

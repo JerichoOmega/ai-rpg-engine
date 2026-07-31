@@ -95,7 +95,7 @@ Travel triggers companion-specific moments tied to each hero's identity and hist
 | **Eleanor** | Senses a magical disturbance in the area |
 | **Ragash** | Her hounds detect a hidden trail or concealed presence |
 | **Ronan** | Hears distant howls that he cannot fully explain |
-| **Steven** | Discovers a hidden mine entrance others have walked past |
+| **Torren** | Finds usable materials and structural weaknesses others overlook; constructs field fortifications from what is available |
 
 These events are not random flavor — they are character moments that expand lore and deepen companion relationships.
 
@@ -172,7 +172,7 @@ The homeland of the dwarves — a massive mountain range defined by what is buri
 | **Settlements** | Ancient underground kingdoms, dwarven strongholds, rich mines, legendary forges |
 | **Points of interest** | Frozen mountain passes, endless cave systems |
 | **Threats** | Dragons (confirmed presence), underground hazards |
-| **Companion connection** | Steven's mining knowledge gives him unique interactions here — he finds what others miss |
+| **Companion connection** | Torren's craft knowledge and smith's eye for underground construction give him unique interactions here — he reads the stone in ways others cannot |
 | **Gnome communities** | Gnomes settled in the lower Iron Peaks as record-keepers for the dwarven kingdoms; their archive communities are among the oldest on the continent |
 
 The Iron Peaks hold things that have not been disturbed in centuries. As The Corruption wakes ancient things, the mountains become more dangerous than anyone expected.

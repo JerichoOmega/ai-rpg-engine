@@ -57,7 +57,7 @@ If you can swap a companion's Core Wound for a different companion's Core Wound 
 | **Eleanor** | Naive optimism leaves her vulnerable to betrayal | Believes the best of everyone; this will cost her; her growth is learning to love without being blind |
 | **Ragash** | Rejected by her own people; found belonging with her hounds | Pride as armor; blunt to the point of seeming cold; her hounds receive the openness she withholds from people |
 | **Ronan** | Believes he is a danger to everyone around him | Keeps distance; his curse is a metaphor for the fear of losing control of what you are |
-| **Steven** | His identity and mysterious past | What he knows about himself defines him; what others do not know creates both distance and connection |
+| **Torren** | He once refused to let go of something that could not be saved | His philosophy of restoration is the answer he built from that loss; he believes every person deserves an attempt before giving up on them |
 
 Full Hero Bible entries: [`docs/heroes/`](heroes/)
 

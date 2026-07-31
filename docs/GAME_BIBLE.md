@@ -386,6 +386,20 @@ Skills are defined in `skills.py` and tracked in `skill_tree.py`. A module-level
 
 ⚠️ **NOT YET FULLY DEFINED** — The skill tree structure exists but the full skill roster, unlock conditions, and in-combat use pathways are not yet fully implemented.
 
+### Companion Specialization Philosophy
+
+Each companion has three distinct specialization paths rather than a single progression line or Ultimate abilities. Players cannot unlock all three paths — every investment should matter, and every build should feel unique while remaining viable.
+
+| Companion | Path 1 | Path 2 | Path 3 |
+|---|---|---|---|
+| **Talos** | Guardian | Commander | Duelist |
+| **Eleanor** | Elemental Harmony | Battlefield Control | Arcane Support |
+| **Ragash** | Ambusher | Survivalist | Skirmisher |
+| **Ronan** | Beast Hunter | Controlled Lycan | Tracker |
+| **Torren** | Forge Master | Engineer | War Smith |
+
+**Design principle:** No build should invalidate another. Each path should encourage meaningfully different tactical strategies while preserving the companion's core identity. This is inspired by the philosophy of deep specialization games — meaningful choice, not overwhelming complexity.
+
 ---
 
 ## Items & Inventory
@@ -587,7 +601,7 @@ Six regions are confirmed canon. Each has a distinct identity and a relationship
 |---|---|---|
 | **The Frontier** | Untamed edge of civilization; frontier towns, military outposts, goblin/orc presence | First to show Corruption — weakest institutions fall first |
 | **The Great Forest** | Ancient forests, elven settlements, magical wildlife, hidden shrines | Portions become twisted as Corruption spreads |
-| **The Iron Peaks** | Massive mountain range; dwarven strongholds, cave systems, dragons | Wakes ancient buried things; Steven excels here |
+| **The Iron Peaks** | Massive mountain range; dwarven strongholds, cave systems, dragons | Wakes ancient buried things; Torren's craft knowledge and smith's eye for stone give him unique interactions here |
 | **The Frozen Highlands** | Remote northern wilderness; ice caves, ancient fortresses, giant beasts | Corruption arrives late but hits hard |
 | **Sol Kareth** *(The Desert Kingdom)* | Oasis cities, merchant caravans, ancient tombs, buried civilizations; one of the oldest civilizations on the continent | Wakes what was buried under sand |
 | **The Capital Province** | Political center; noble houses, government, military, trade intrigue | Most responsive to player choices; Political Corruption most visible |
@@ -843,7 +857,7 @@ Each companion has one **Core Wound** — a defining emotional scar that connect
 | Eleanor | Naive optimism leaves her vulnerable to betrayal | [`docs/heroes/ELEANOR.md`](heroes/ELEANOR.md) ✅ |
 | Ragash | Rejected by her people; found belonging with her hounds | [`docs/heroes/RAGASH.md`](heroes/RAGASH.md) ✅ |
 | Ronan | Believes his curse makes him a danger to everyone | [`docs/heroes/RONAN.md`](heroes/RONAN.md) ✅ |
-| Steven | His identity and mysterious past define him | [`docs/heroes/STEVEN.md`](heroes/STEVEN.md) ✅ |
+| Torren | He once refused to let go of something that could not be saved; his philosophy of restoration was built from that loss | [`docs/heroes/TORREN.md`](heroes/TORREN.md) ✅ |
 
 ### Technical Implementation (`companion_manager.py`)
 
@@ -966,7 +980,7 @@ For the initial version of the game, players **select one of these predefined he
 | [Eleanor](../characters/eleanor.md) | Human | Mage | Young, optimistic, unnaturally strong elemental bond |
 | [Ragash](../characters/ragash.md) | Orc | Houndmaster | Blunt and proud; devoted to her hounds above all else |
 | [Ronan](../characters/ronan.md) | Human | Werewolf | Cursed drifter; seeks a cure; fears losing control |
-| [Steven](../characters/steven.md) | Human | Miner | Silent, rare, mysterious; solves problems simply |
+| [Torren](../characters/torren.md) | Human | Master Blacksmith | Calm, patient; builds what endures; the party's craftsman and quiet optimist |
 
 > **Future:** A fully customizable player character (name, appearance, class, background) is planned for a later phase. It is intentionally out of scope for v1 and must not influence current system design. The hero framework must support both predefined and custom heroes without a major rewrite. See [`docs/PLAYER_SYSTEM.md`](PLAYER_SYSTEM.md) for the architecture requirement.
 

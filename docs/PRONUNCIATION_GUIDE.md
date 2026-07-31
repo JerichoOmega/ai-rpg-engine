@@ -29,7 +29,7 @@ Pronunciations are written in plain English phonetics only — no IPA.
 | Mages Guild | MAY-jez GILD | Organization |
 | Ragash | rah-GASH | Playable Character |
 | Ronan | ROH-nan | Playable Character |
-| Steven | STEE-ven | Playable Character |
+| Torren | TOR-en | Playable Character |
 | Talos | TAY-loss | Playable Character |
 | Valen Ashfall | VAY-len ASH-fall | Ancient Legend |
 
@@ -176,16 +176,16 @@ Two syllables. Stress on the first. Irish name origin. "ROH" has a long 'o' soun
 
 ---
 
-### Steven
+### Torren
 **Type:** Playable Character
 
 **Pronunciation:**
-STEE-ven
+TOR-en
 
 **Notes:**
-Two syllables. Standard English name. Stress on the first. Included here because Steven is a rare companion — his name should be spoken with the same weight and care as any other party member, not treated as an afterthought.
+Two syllables. Stress on the first. Rhymes with "Warren." Solid and grounded in sound, like the character. Not "Tor-REN" — the weight is on the first syllable.
 
-> Example: *"Nobody noticed __STEE-ven__ until his pickaxe found the passage."*
+> Example: *"__TOR-en__ had already reinforced the position before anyone thought to ask him."*
 
 ---
 
@@ -235,7 +235,7 @@ The following named mechanics use standard English pronunciation. Entries are in
 |---|---|---|
 | Battlecry | BAT-ul-kry | Talos's signature ability. "Cry" rhymes with "try." |
 | Hound Summon | HOWND SUM-un | Ragash's ability. "Hound" rhymes with "found." |
-| Master Miner | MAS-ter MY-ner | Steven's title and passive ability. Standard English. |
+| Field Forge | FEELD FORJ | Torren's signature ability. Standard English. |
 | Werewolf Form | WAIR-woolf FORM | Ronan's transformation. "Were" rhymes with "air." |
 
 ---

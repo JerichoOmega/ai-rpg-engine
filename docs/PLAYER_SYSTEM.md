@@ -55,7 +55,7 @@ Five confirmed playable heroes. Full character sheets: [`docs/characters/`](char
 | [Eleanor](characters/eleanor.md) | Human | Mage | Young, optimistic; unusually strong elemental bond |
 | [Ragash](characters/ragash.md) | Orc | Houndmaster | Blunt and proud; devoted to her hounds above all |
 | [Ronan](characters/ronan.md) | Human | Werewolf | Cursed drifter; seeks a cure; fears losing control |
-| [Steven](characters/steven.md) | Human | Miner | Silent, rare, mysterious; solves problems simply |
+| [Torren](characters/torren.md) | Human | Master Blacksmith | Calm, reliable; builds what endures; the party's craftsman |
 
 ### Hero Selection Flow
 

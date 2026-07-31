@@ -19,7 +19,7 @@ The world of this game takes its dangers seriously. War has real cost — Talos 
 The world is not safe. People die. Institutions fail the people they are supposed to serve. History is heavy.
 
 ### Adventure
-Despite the weight, this is not a hopeless game. The characters choose to act. There is camaraderie, warmth, and moments of genuine levity. Talos visits orphanages and tells children stories. Eleanor's enthusiasm is infectious. Steven solves problems with disarming simplicity.
+Despite the weight, this is not a hopeless game. The characters choose to act. There is camaraderie, warmth, and moments of genuine levity. Talos visits orphanages and tells children stories. Eleanor's enthusiasm is infectious. Torren's steady presence is the thing that holds when everything else is under pressure.
 
 Adventure here means: the world is worth fighting for, and the people fighting for it are worth knowing.
 
@@ -50,7 +50,7 @@ Each character embodies the tone in a specific way:
 | Eleanor | Light side of the balance — her optimism is genuine, not naive, and the story tests it seriously |
 | Ragash | Pragmatic middle — doesn't perform either; says what she thinks, protects what she loves |
 | Ronan | Dark with hope underneath — depression as a lived reality, not a pose; the cure/control arc is about whether hope wins |
-| Steven | Comic relief without being comedy — solves problems earnestly; his silence gives the party space |
+| Torren | Hope without naïveté — his craft and his philosophy are both expressions of the same belief: broken things can be rebuilt |
 
 ---
 

@@ -158,8 +158,8 @@
 ### Ronan
 *(Relationship to Ronan.)*
 
-### Steven
-*(Relationship to Steven.)*
+### Torren
+*(Relationship to Torren.)*
 
 ### Future Companions
 *Note any design space left for companions not yet created.*

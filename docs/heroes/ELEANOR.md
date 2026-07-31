@@ -232,8 +232,11 @@ Ragash becomes one of Eleanor's most important protectors — not because Eleano
 
 Eleanor may not always be aware of the full depth of Ragash's protectiveness. Ragash does not announce it. But it is there, steady and deliberate, in the choices she makes when the party is under threat.
 
-### Steven
-*(Relationship not yet defined — to be established when Steven's arc is more fully developed.)*
+### Torren
+
+Eleanor understands magical harmony; Torren understands physical restoration. Their conversations tend toward comparison — what it looks like to repair a relic versus to understand why it broke, what healing a person shares with rebuilding a structure. Eleanor finds his perspective reaches conclusions her academic instinct sometimes misses. Torren finds her curiosity a genuinely different lens on problems he approaches from one direction.
+
+They do not always agree on the priority of understanding versus doing. This is a productive disagreement.
 
 ---
 

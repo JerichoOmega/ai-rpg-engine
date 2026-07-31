@@ -40,7 +40,7 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/heroes/ELEANOR.md` | Full Hero Bible — Eleanor |
 | `docs/heroes/RAGASH.md` | Full Hero Bible — Ragash |
 | `docs/heroes/RONAN.md` | Full Hero Bible — Ronan |
-| `docs/heroes/STEVEN.md` | Full Hero Bible — Steven |
+| `docs/heroes/TORREN.md` | Full Hero Bible — Torren (replaces Steven; full redesign, not a rename) |
 | `docs/architecture.md` | How modules connect, data flow |
 | `docs/systems/world_state.md` | The central state object — everything reads from it |
 | `docs/coding_standards.md` | How code is written here |

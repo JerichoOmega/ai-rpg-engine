@@ -186,8 +186,11 @@ Her years raising and training hounds have also given her a particular understan
 
 She becomes one of the first companions Ronan genuinely trusts. Alongside Eleanor — who offers hope through belief in his humanity — Ragash offers something different: acceptance through the absence of judgment. Eleanor sees who Ronan could be. Ragash accepts who he is now. Both matter to him, and in different ways.
 
-### Steven
-*(Relationship not yet defined — to be established.)*
+### Torren
+
+Ragash helps Torren appreciate imperfect beauty — that things which have been damaged carry the record of what they have survived, and that record is not simply a flaw to be corrected. Torren teaches Ragash patience through craftsmanship — that some things require sustained, unhurried attention to come back right.
+
+Together they reinforce the idea that identity is built through experience rather than perfection. Neither would put it in those terms. But that is what their dynamic produces.
 
 ---
 

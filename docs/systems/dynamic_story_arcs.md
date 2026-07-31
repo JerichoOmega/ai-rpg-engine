@@ -141,7 +141,7 @@ See [`docs/heroes/ELEANOR.md`](../heroes/ELEANOR.md)
 
 **Ronan** brings the most complicated perspective: because he constantly fears losing himself to his werewolf curse, he understands that corruption is not always a conscious choice. He is positioned to remind Eleanor that some victims may still be worth saving — that not every corrupted person has fully crossed the line. This dynamic directly engages Ronan's core wound.
 
-Steven's involvement depends on when he is recruited and what the party has uncovered about his past. He says nothing, but he watches the corrupted scholars with unusual attention.
+**Torren**, if present, observes The Fractured Circle's corrupted scholars with the particular grief of a craftsman watching something that required years to build become something that destroys. He does not engage with the theological or institutional dimensions of the crisis. He engages with what is being lost — the discipline, the precision, the accumulated knowledge that corrupted mages are discarding or weaponizing. He is reliably useful in the aftermath of encounters, repairing what can be repaired, and he does not comment on what cannot.
 
 See [`docs/heroes/`](../heroes/)
 
@@ -276,7 +276,7 @@ See [`docs/heroes/TALOS.md`](../heroes/TALOS.md)
 
 **Ronan** understands what it is to watch something you cannot stop happen inside a system you are part of. He does not have strong opinions about the Capital specifically, but he understands complicity — the fear of acting that enables the thing you fear to continue. He is not positioned to lecture Talos; he is positioned to quietly be present in a way that Talos recognizes as genuine.
 
-**Steven**, if present, is watching. He has seen institutions before — what they protect, and what they are willing to do to protect it. He does not react with surprise.
+**Torren**, if present, has little investment in the political content of The Broken Crown. What he responds to is the damage — what institutional corruption does to the actual infrastructure of people's lives, the structures and supply lines and maintainable systems that a functioning government is supposed to keep running. He is not positioned to adjudicate the Talos/Eleanor disagreement about reform versus abandonment. He is already thinking about what comes next.
 
 See [`docs/heroes/`](../heroes/)
 
@@ -372,7 +372,7 @@ See [`docs/heroes/RAGASH.md`](../heroes/RAGASH.md)
 
 **Eleanor** is drawn toward the deep root sites and the question of what the Corruption is doing to something as old and complex as the Great Forest's underlying systems. Her academic instincts are useful here — she can sometimes identify patterns that Ragash's tracking and Talos's tactical read miss. She is careful not to make Ragash's situation about her curiosity, and usually succeeds.
 
-**Steven**, if present, shows an unusual attentiveness to the deep root sites. He finds things. He does not explain what they mean to him.
+**Torren**, if present, approaches the Corruption-damaged sites of The Hungry Dark with the attention of a craftsman assessing structural loss. He does not have Ragash's ecological knowledge, but he reads what the Corruption is doing to ancient wood and stone in his own register — as destruction of things that took centuries to build. He finds materials others overlook. He grieves the waste in a way that does not require explanation.
 
 See [`docs/heroes/`](../heroes/)
 
@@ -469,7 +469,7 @@ See [`docs/heroes/RONAN.md`](../heroes/RONAN.md)
 
 **Ragash** trusts the hounds' response to compromised holy sites more than any institutional account of what those sites are. She does not engage with the theology. She engages with the evidence she can verify. If Ronan needs someone who will not turn his questions about The Surrendered into an event, she is nearby and she is not going to do that.
 
-**Steven**, if present, watches the cult's inner rituals — if the party has access to them — with an expression that cannot easily be read. He does not leave. He is not alarmed. What this means is not clear.
+**Torren**, if present, engages with the physical evidence of the Threshold Circle's activity — the objects made or corrupted, the sacred spaces desecrated or deliberately remade. He has less patience for the cult's philosophical justifications than for the concrete record of what they have done. Sacred spaces that have been twisted register to him as both theological violation and craft destruction: these things were made carefully, and they have been deliberately broken.
 
 See [`docs/heroes/`](../heroes/)
 

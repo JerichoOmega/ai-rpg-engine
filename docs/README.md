@@ -51,7 +51,7 @@ These live at the project root — read them first.
 | [`characters/eleanor.md`](characters/eleanor.md) | Eleanor — Human Mage |
 | [`characters/ragash.md`](characters/ragash.md) | Ragash — Orc Houndmaster |
 | [`characters/ronan.md`](characters/ronan.md) | Ronan — Human / Werewolf |
-| [`characters/steven.md`](characters/steven.md) | Steven — Human Miner (rare companion) |
+| [`characters/torren.md`](characters/torren.md) | Torren — Human Master Blacksmith |
 | [`game_tone.md`](game_tone.md) | Tonal direction — dark fantasy + adventure |
 
 ---

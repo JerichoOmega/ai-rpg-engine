@@ -70,7 +70,7 @@ The wound is not the character. It is the lens through which they see the world.
 | **Eleanor** | Naive optimism that leaves her vulnerable to betrayal — she believes the best of everyone, sometimes to her own cost |
 | **Ragash** | Rejected by her own people; found belonging with her hounds instead of other people |
 | **Ronan** | Believes he is a danger to everyone around him because of his curse; carries constant guilt for what he might become |
-| **Steven** | His identity and mysterious past define his emotional journey — what he knows about himself that others do not |
+| **Torren** | He once refused to let go of something that could not be saved — his philosophy of restoration is built on that loss |
 
 ---
 
@@ -84,7 +84,7 @@ Full Hero Bible entries live in [`docs/heroes/`](heroes/):
 | Eleanor | [`docs/heroes/ELEANOR.md`](heroes/ELEANOR.md) | ✅ Complete |
 | Ragash | [`docs/heroes/RAGASH.md`](heroes/RAGASH.md) | ✅ Complete |
 | Ronan | [`docs/heroes/RONAN.md`](heroes/RONAN.md) | ✅ Complete |
-| Steven | [`docs/heroes/STEVEN.md`](heroes/STEVEN.md) | ✅ Complete |
+| Torren | [`docs/heroes/TORREN.md`](heroes/TORREN.md) | ✅ Complete |
 
 ---
 

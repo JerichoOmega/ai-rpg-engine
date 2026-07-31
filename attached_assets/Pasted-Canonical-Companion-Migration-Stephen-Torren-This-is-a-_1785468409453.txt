@@ -1,0 +1,210 @@
+Canonical Companion Migration — Stephen → Torren
+
+This is a canonical narrative and design update for Project Dungeon Keeper.
+
+This is not a simple character rename.
+
+Stephen has been retired as a companion because the project has evolved significantly, and his original concept no longer aligns with the game’s thematic direction.
+
+The goal is to preserve the crafting gameplay niche while creating a companion that fully supports the game’s core philosophy.
+
+⸻
+
+Why This Change Was Made
+
+When Stephen was originally designed, Project Dungeon Keeper had a much broader narrative focus.
+
+Since then, the world, companions, religion, magic system, and Corruption have all evolved around a single central theme:
+
+The greatest battle is not against darkness… but against forgetting who you are.
+
+Every major companion now represents a different philosophical response to the Corruption.
+
+Stephen’s original identity as an engineer/craftsman no longer meaningfully contributed to this theme.
+
+Rather than forcing the character to fit, we have chosen to redesign the role from the ground up.
+
+⸻
+
+Stephen Has Been Replaced
+
+Stephen is no longer considered a canonical companion.
+
+Replace him with a completely new companion:
+
+Torren
+
+This is not a rename.
+
+This is a full redesign.
+
+Old personality, backstory, motivations, dialogue, combat style, and companion philosophy should all be retired unless they naturally fit the new concept.
+
+⸻
+
+What Was Preserved
+
+The following ideas remain valuable and should be preserved:
+
+* Crafting
+* Equipment improvement
+* Weapon maintenance
+* Armor maintenance
+* Battlefield support
+* Construction
+
+These mechanics are now represented through Torren instead of Stephen.
+
+⸻
+
+What Changed
+
+Instead of an engineer or generic craftsman…
+
+Torren is a master blacksmith.
+
+His identity revolves around creation rather than invention.
+
+Where the Corruption destroys…
+
+Torren rebuilds.
+
+Where others discard broken things…
+
+Torren restores them.
+
+His craftsmanship is an extension of his worldview.
+
+⸻
+
+New Core Philosophy
+
+Torren represents:
+
+* Hope
+* Restoration
+* Renewal
+
+His defining belief is:
+
+“Broken things aren’t worthless. They simply require someone willing to rebuild them.”
+
+This philosophy applies equally to:
+
+* Weapons
+* Armor
+* Relics
+* Kingdoms
+* Friendships
+* People
+
+He is not naïve.
+
+He understands that some things cannot be saved.
+
+But he refuses to stop trying before reaching that conclusion.
+
+⸻
+
+Combat Identity Changes
+
+Stephen’s previous combat design should be retired.
+
+Torren now fights using a forging hammer (warhammer).
+
+His gameplay emphasizes:
+
+* Battlefield control
+* Defensive support
+* Tactical positioning
+* Heavy melee combat
+* Construct creation
+
+He creates handcrafted battlefield structures such as:
+
+* Barricades
+* Ballistae
+* Forge beacons
+* Portable anvils
+* Defensive fortifications
+* Supply caches
+
+Avoid magical summons or advanced technology.
+
+Everything should feel handcrafted by a legendary smith.
+
+⸻
+
+Progression Philosophy
+
+Project Dungeon Keeper no longer uses Ultimate abilities.
+
+Companions instead grow through meaningful specialization trees inspired by the philosophy of Path of Exile.
+
+The goal is meaningful player choice, not overwhelming complexity.
+
+Torren’s specialization paths are:
+
+Forge Master
+
+* Ally enhancement
+* Equipment reinforcement
+* Repairs
+* Buffs
+
+Engineer
+
+* Battlefield construction
+* Defensive structures
+* Terrain manipulation
+* Tactical support
+
+War Smith
+
+* Hammer mastery
+* Armor breaking
+* Crowd control
+* Frontline durability
+
+Players should specialize rather than unlock everything.
+
+⸻
+
+Story Role
+
+Torren is no longer “the crafting companion.”
+
+He is the companion who reminds the party that rebuilding is always worth attempting.
+
+His worldview directly opposes the Ancient God’s philosophy.
+
+The Corruption says:
+
+“Everything eventually breaks.”
+
+Torren answers:
+
+“Then we rebuild.”
+
+⸻
+
+Companion Dynamics
+
+Update companion interactions to reflect Torren’s new role.
+
+Examples:
+
+* Ronan finds encouragement in Torren’s belief that broken things can be reforged.
+* Talos respects Torren’s discipline and dedication to his craft.
+* Eleanor and Torren discuss the similarities between restoring relics and restoring people.
+* Ragash helps Torren appreciate that imperfections often tell the story of survival.
+
+⸻
+
+Documentation Cleanup
+
+Update all companion documentation, world references, dialogue plans, relationship notes, combat systems, progression documents, and future planning documents to remove Stephen as a canonical companion and replace him with Torren where appropriate.
+
+Do not perform a blind find-and-replace. Carefully rewrite affected sections so they reflect Torren’s new personality, philosophy, gameplay role, and narrative purpose.
+
+The end result should feel as though Torren was always intended to be one of the core companions from the beginning of Project Dungeon Keeper.

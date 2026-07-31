@@ -1,0 +1,386 @@
+Companion Roster Update, Torren Redesign & Skill Tree Philosophy
+
+This is a canonical design update for Project Dungeon Keeper. Integrate these changes throughout the documentation, companion files, gameplay systems, and development bible. Preserve existing lore unless it conflicts with the changes below.
+
+⸻
+
+Companion Roster Update
+
+Retire the companion Stephen.
+
+Stephen should no longer be considered part of the canonical companion roster.
+
+Instead, replace him with a completely redesigned companion named:
+
+Torren
+
+Torren is not a renamed Stephen.
+
+He is a completely new character who fills the crafting role while fitting the game’s mature themes.
+
+⸻
+
+Torren Overview
+
+Role:
+Master Blacksmith
+
+Primary Weapon:
+Forging Hammer (Warhammer)
+
+Combat Role:
+Battlefield Controller / Support Bruiser
+
+Core Theme:
+Hope through Creation
+
+Where the Corruption twists, destroys, and consumes…
+
+Torren creates.
+
+Repairs.
+
+Builds.
+
+Restores.
+
+His philosophy perfectly complements the game’s central theme of preserving identity against corruption.
+
+⸻
+
+Character Philosophy
+
+Torren believes that very few things are truly beyond repair.
+
+He does not blindly believe everyone can be saved.
+
+Instead, he believes every person deserves the chance to be saved before giving up on them.
+
+His worldview can be summarized as:
+
+“Broken things aren’t worthless. They simply require someone willing to rebuild them.”
+
+He serves as the emotional optimist of the party without becoming naïve.
+
+⸻
+
+Personality
+
+Torren should be:
+
+* Calm
+* Patient
+* Thoughtful
+* Reliable
+* Humble
+* Quietly humorous
+
+He is not loud.
+
+He is not boastful.
+
+He often speaks only after listening.
+
+While companions argue around the campfire…
+
+Torren is repairing armor, sharpening swords, or quietly working at his portable forge.
+
+⸻
+
+Companion Theme
+
+Each companion should represent a core philosophical response to the Corruption.
+
+Current themes:
+
+Talos
+
+* Duty
+* Responsibility
+* Discipline
+
+Eleanor
+
+* Harmony
+* Understanding
+* Balance
+
+Ronan
+
+* Perseverance
+* Identity
+* Self-Control
+
+Ragash
+
+* Acceptance
+* Belonging
+* Family
+
+Torren
+
+* Hope
+* Restoration
+* Renewal
+
+⸻
+
+Combat Identity
+
+Torren fights using his forging hammer.
+
+His attacks should feel deliberate and powerful rather than agile.
+
+He reshapes the battlefield instead of simply dealing damage.
+
+His combat identity revolves around:
+
+* Creating cover
+* Supporting allies
+* Controlling terrain
+* Reinforcing defenses
+* Building temporary battlefield structures
+
+⸻
+
+Construct Philosophy
+
+Torren does NOT summon magical creatures.
+
+He builds practical constructs during combat.
+
+Examples include:
+
+* Defensive barricades
+* Portable anvils
+* Reinforced walls
+* Ballistae
+* Supply caches
+* Forge beacons
+* Defensive towers
+* Temporary fortifications
+
+All constructs should fit the medieval fantasy setting.
+
+Avoid advanced steampunk or excessive technology.
+
+Everything should look handcrafted by a legendary smith.
+
+⸻
+
+Skill Tree Philosophy
+
+The game will NOT use Ultimate abilities.
+
+Instead, every companion uses a deep specialization system inspired by the philosophy of games like Path of Exile.
+
+The inspiration is meaningful specialization, not overwhelming complexity.
+
+Players should never unlock every skill.
+
+Every investment should matter.
+
+Every build should feel unique.
+
+Companions maintain their identity while allowing player expression.
+
+⸻
+
+Torren Skill Trees
+
+Forge Master
+
+Focus:
+
+Supporting allies.
+
+Examples:
+
+* Sharpen Weapon
+* Temper Edge
+* Reinforce Armor
+* Battle Repairs
+* Forge Blessing
+* Emergency Reinforcement
+
+This path emphasizes improving equipment and increasing party survivability.
+
+⸻
+
+Engineer
+
+Focus:
+
+Battlefield construction.
+
+Examples:
+
+* Portable Barricade
+* Spike Barrier
+* Defensive Tower
+* Ballista
+* Supply Cache
+* Forge Beacon
+* Cover Reinforcement
+
+This path focuses on terrain manipulation and tactical positioning.
+
+⸻
+
+War Smith
+
+Focus:
+
+Hammer combat.
+
+Examples:
+
+* Armor Break
+* Crushing Blow
+* Shockwave Strike
+* Guard Breaker
+* Earthshatter
+* Heavy Counter
+
+This path transforms Torren into a durable frontline fighter.
+
+⸻
+
+Companion Progression Philosophy
+
+Every companion should eventually receive a similar specialization system.
+
+The purpose is not to create hundreds of skills.
+
+Instead:
+
+Each companion has a distinct combat philosophy with multiple viable builds.
+
+Examples:
+
+Talos
+
+* Guardian
+* Commander
+* Duelist
+
+Ronan
+
+* Beast Hunter
+* Controlled Lycan
+* Tracker
+
+Eleanor
+
+* Elemental Harmony
+* Battlefield Control
+* Arcane Support
+
+Ragash
+
+* Ambusher
+* Survivalist
+* Skirmisher
+
+Torren
+
+* Forge Master
+* Engineer
+* War Smith
+
+No build should invalidate another.
+
+Each should encourage different tactical strategies.
+
+⸻
+
+Story Integration
+
+Torren is more than the “crafting companion.”
+
+He embodies the belief that broken things can be restored.
+
+This philosophy directly opposes the Corruption.
+
+The Ancient God whispers:
+
+“Everything breaks.”
+
+Torren responds:
+
+“Then we rebuild.”
+
+⸻
+
+Campfire Presence
+
+Torren naturally becomes the party’s craftsman.
+
+Typical scenes include:
+
+* Repairing damaged weapons.
+* Teaching maintenance to younger companions.
+* Quietly listening to conversations.
+* Offering thoughtful advice rather than speeches.
+* Maintaining equipment before everyone wakes.
+* Working beside the campfire late into the night.
+
+His craftsmanship should become part of the atmosphere of the game.
+
+⸻
+
+Character Relationships
+
+Ronan
+
+Torren understands that Ronan believes himself broken.
+
+Rather than trying to “fix” Ronan, he reminds him that being scarred does not mean being beyond repair.
+
+Potential dialogue:
+
+Ronan: “I’m broken.”
+
+Torren: “Broken steel can be reforged.”
+
+This philosophy should define much of their friendship.
+
+⸻
+
+Talos
+
+Mutual respect built upon discipline and craftsmanship.
+
+Talos respects Torren’s dedication.
+
+Torren respects Talos’ sense of duty.
+
+⸻
+
+Eleanor
+
+Eleanor understands magical harmony.
+
+Torren understands physical restoration.
+
+Their conversations often compare repairing relics with healing people.
+
+⸻
+
+Ragash
+
+Ragash helps Torren appreciate imperfect beauty.
+
+Torren teaches Ragash patience through craftsmanship.
+
+Together they reinforce the idea that identity is shaped through experience rather than perfection.
+
+⸻
+
+Development Philosophy
+
+Continue ensuring that every major character, mechanic, and system reinforces the game’s central theme:
+
+The greatest battle is not against darkness… but against forgetting who you are.
+
+Torren should feel like he has always belonged in Project Dungeon Keeper—not as “the crafting guy,” but as the companion who reminds the party that even after suffering loss, failure, or corruption, there is still value in choosing to rebuild.

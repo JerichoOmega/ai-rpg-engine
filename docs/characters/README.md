@@ -10,7 +10,7 @@
 
 | Category | Location | Examples |
 |---|---|---|
-| Playable characters & companions | `docs/characters/` (here) | Talos, Eleanor, Ragash, Ronan, Steven |
+| Playable characters & companions | `docs/characters/` (here) | Talos, Eleanor, Ragash, Ronan, Torren |
 | Ancient Legends / mythological figures | `elyndor/ancient_legends/` | Aurelia Sunstrider, Valen Ashfall |
 
 **Never place playable characters in the Universe Bible. Never place Ancient Legends in this folder unless a future story explicitly makes them playable.**
@@ -34,7 +34,7 @@
 | [Eleanor](eleanor.md) | Human | Mage | Confirmed |
 | [Ragash](ragash.md) | Orc | Houndmaster | Confirmed |
 | [Ronan](ronan.md) | Human | Werewolf | Confirmed |
-| [Steven](steven.md) | Human | Miner | Confirmed (rare companion) |
+| [Torren](torren.md) | Human | Master Blacksmith | Confirmed |
 
 ---
 

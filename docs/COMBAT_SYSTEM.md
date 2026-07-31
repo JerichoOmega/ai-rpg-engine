@@ -269,7 +269,7 @@ Heroes not in the active party remain available for future deployment. They do n
 - Some heroes may be missable or locked behind specific decisions
 - Different campaigns should feel meaningfully different based on who joined the party
 
-> Replayability is a design goal. A party of Talos, Ragash, and Ronan should feel different from one built around Eleanor and Steven.
+> Replayability is a design goal. A party of Talos, Ragash, and Ronan should feel different from one built around Eleanor and Torren.
 
 ---
 

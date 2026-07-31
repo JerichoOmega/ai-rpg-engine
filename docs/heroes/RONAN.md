@@ -216,8 +216,16 @@ She never asks him to justify his curse or to demonstrate that he is not dangero
 
 Alongside Eleanor — who offers hope through her belief in who he can become — Ragash offers something he has rarely had: acceptance of who he is right now, without conditions attached.
 
-### Steven
-*(Relationship not yet defined — to be established.)*
+### Torren
+
+Torren understands that Ronan believes himself broken. He does not treat this as a diagnosis to argue with. He treats it the same way he treats a cracked blade: as a fact about current condition that says nothing definitive about what is possible.
+
+He does not try to fix Ronan. He reminds him — usually through action rather than argument — that being scarred is not the same as being beyond repair.
+
+> *Ronan: "I'm broken."*  
+> *Torren: "Broken steel can be reforged."*
+
+This is not false comfort. Torren has seen things that could not be repaired. He also knows that the conclusion of *cannot be saved* should not be reached before the attempt has been made. The friendship this creates is quiet and specific — built on Torren's refusal to treat Ronan's condition as the final word on who he is.
 
 ---
 
