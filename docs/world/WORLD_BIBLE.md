@@ -173,6 +173,7 @@ The homeland of the dwarves — a massive mountain range defined by what is buri
 | **Points of interest** | Frozen mountain passes, endless cave systems |
 | **Threats** | Dragons (confirmed presence), underground hazards |
 | **Companion connection** | Steven's mining knowledge gives him unique interactions here — he finds what others miss |
+| **Gnome communities** | Gnomes settled in the lower Iron Peaks as record-keepers for the dwarven kingdoms; their archive communities are among the oldest on the continent |
 
 The Iron Peaks hold things that have not been disturbed in centuries. As The Corruption wakes ancient things, the mountains become more dangerous than anyone expected.
 
@@ -243,6 +244,7 @@ The political, military, educational, and cultural heart of the continent.
 | **Tone** | Intricate, political, high-stakes; power concentrated and contested |
 | **Settlements** | Great cities, noble districts, royal estates |
 | **Institutions** | Royal Government, Military High Command, Mages Guild Headquarters, Major Temples, Universities, Great Libraries |
+| **Gnome presence** | A significant gnomish scholarly community is established here, centered around the universities and the Mages Guild archives |
 | **Economy** | International trade hub; the continent's primary commercial center |
 | **Military** | Majority of the continent's military stationed here; smaller garrisons protect towns, forts, roads, and trade routes throughout the continent |
 | **Corruption** | Political Corruption is most visible here — powerful people becoming worse versions of themselves |
@@ -251,6 +253,19 @@ The political, military, educational, and cultural heart of the continent.
 The Capital Province is where decisions made everywhere else eventually land. Campaigns that end here often culminate in confrontations not just with monsters, but with the human darkness The Corruption has amplified.
 
 **Talos connection:** Talos once served within the Capital's military before losing faith in the government. This history continues to influence his personal story — the Capital is not an abstraction to him. He has walked its halls, followed its orders, and watched what happened when its institutions chose power over people. See [`docs/heroes/TALOS.md`](../heroes/TALOS.md).
+
+---
+
+## Playable Race Presence
+
+Two playable races are distributed across the world rather than anchored to a single region.
+
+| Race | Presence |
+|---|---|
+| **Halflings** | Distributed across all regions along river networks, canal junctions, and major trade roads; no single homeland; organized around family trading houses; strongest concentration along the continent's central river corridor |
+| **Gnomes** | Primary communities in the lower Iron Peaks (traditional archival institutions) and the Capital Province (university and Mages Guild archives); smaller communities in Sol Kareth and the Frontier |
+
+Full cultural definitions: [`docs/world/RACES.md`](RACES.md)
 
 ---
 
@@ -567,3 +582,4 @@ Full consequences and mechanics: [`docs/systems/reputation.md`](../systems/reput
 | July 2026 | Expanded — World Philosophy, Frozen Highlands culture, Sol Kareth name, Iron Peaks dwarven identity, Goblin Tribes (Stonefang/Mossroot/Ashfire), three vampire houses, Adventurers Guild, Mages Guild, Religion framework, Reputation system summary added |
 | July 2026 | Expanded — Capital Province details (Royal Government, Military HQ, org locations, Talos connection), Adventurers Guild HQ in The Frontier, Mages Guild HQ in Capital, Player Choice Philosophy, Goblin Diplomacy framework added |
 | July 2026 | Vampire Factions — three houses named and developed: House Vetharis (political manipulation), House Drakmor (military conquest), House Soleth (ancient knowledge). Full document: [`vampire_houses.md`](vampire_houses.md) |
+| July 2026 | Playable Race Presence section added — Halflings (distributed traders) and Gnomes (Iron Peaks and Capital archivists) cross-referenced to [`RACES.md`](RACES.md); Iron Peaks and Capital Province entries updated with race presence notes |

@@ -134,8 +134,8 @@ Six races are confirmed playable at launch. Race defines cultural context — no
 | **Elves** | Long-lived; associated with the Great Forest and ancient traditions |
 | **Dwarves** | Homeland in the Iron Peaks; mining and forging tradition |
 | **Orcs** | Own society, culture, and politics — not defined by conflict |
-| **Halflings** | ⚠️ Culture and history NOT YET DEFINED |
-| **Gnomes** | ⚠️ Culture and history NOT YET DEFINED |
+| **Halflings** | Distributed across the continent along river and trade networks; the continent's most practiced trading people; cultural philosophy: "The road always continues" |
+| **Gnomes** | Concentrated in the lower Iron Peaks and Capital; renowned archivists and instrument-makers; cultural philosophy: "What is not recorded is lost" |
 
 **Non-playable intelligent races:** Goblins (three named tribes — Stonefang, Mossroot, Ashfire). Other intelligent races may be introduced if they naturally fit the setting.
 
