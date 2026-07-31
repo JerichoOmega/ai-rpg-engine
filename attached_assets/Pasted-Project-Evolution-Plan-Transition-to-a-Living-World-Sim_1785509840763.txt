@@ -1,0 +1,286 @@
+Project Evolution Plan – Transition to a Living World Simulation
+
+Objective
+
+The goal of this update is not to add random features.
+
+The goal is to continue evolving the project from an AI-assisted RPG into a persistent world simulation with an intelligent Dungeon Master.
+
+The AI should become one subsystem of the engine—not the engine itself.
+
+Every system should prioritize consistency, persistence, and simulation over generation.
+
+⸻
+
+Core Design Philosophy
+
+The player should never feel like they are chatting with an AI.
+
+Instead, they should feel like they are exploring a world that continues to exist whether they are present or not.
+
+The AI’s responsibility is to interpret and narrate the current world state—not invent a new reality every response.
+
+Before generating any narrative, the AI should always consult existing game state.
+
+Priority order:
+
+1. World State
+2. Rules
+3. Existing Lore
+4. NPC Memory
+5. Quest State
+6. AI Creativity
+
+Creativity should never override established facts.
+
+⸻
+
+Phase 1 – Deep NPC Memory
+
+Expand NPC persistence.
+
+Each NPC should permanently remember:
+
+* conversations
+* promises
+* favors
+* insults
+* crimes witnessed
+* gifts received
+* friendships
+* rivalries
+* reputation
+* family relationships
+* previous encounters
+* player choices affecting them
+
+NPC memories should decay only when appropriate rather than resetting.
+
+NPC behavior should naturally evolve from accumulated memories.
+
+⸻
+
+Phase 2 – Living World Simulation
+
+The world should continue progressing while the player explores elsewhere.
+
+Implement simulation systems for:
+
+* settlements
+* kingdoms
+* factions
+* religion
+* trade
+* migration
+* weather
+* food production
+* wars
+* diplomacy
+* corruption spread
+* cult expansion
+
+Time should continue moving regardless of player location.
+
+Major events should occur naturally.
+
+⸻
+
+Phase 3 – Dynamic Factions
+
+Expand faction simulation.
+
+Every faction should maintain:
+
+* leadership
+* goals
+* territory
+* military strength
+* wealth
+* diplomatic relationships
+* religious beliefs
+* public reputation
+* alliances
+* rivalries
+
+Factions should actively pursue objectives without waiting for player interaction.
+
+⸻
+
+Phase 4 – Consequence Engine
+
+Player actions should ripple throughout the world.
+
+Examples:
+
+* Crimes spread through rumor networks.
+* Heroes become famous.
+* Villages remember aid.
+* Merchants adjust prices.
+* Nobles react politically.
+* Religious groups respond.
+* Kingdoms change policies.
+* NPC opinions evolve.
+
+The player should frequently encounter delayed consequences hours later.
+
+⸻
+
+Phase 5 – World Calendar
+
+Implement a persistent calendar.
+
+Track:
+
+* seasons
+* holidays
+* harvests
+* festivals
+* birthdays
+* coronations
+* elections
+* migrations
+* wars
+* religious events
+
+NPC schedules should depend on time.
+
+Seasonal events should naturally influence gameplay.
+
+⸻
+
+Phase 6 – Character Goal System
+
+Every significant NPC should possess ongoing goals.
+
+Goals may include:
+
+* acquiring wealth
+* revenge
+* political power
+* protecting family
+* religious devotion
+* exploration
+* trade
+* conquest
+* research
+
+NPC decisions should arise from these motivations rather than random AI generation.
+
+⸻
+
+Phase 7 – Rumor & Information Network
+
+Implement an information propagation system.
+
+News should spread gradually based on:
+
+* distance
+* trade routes
+* travelers
+* messengers
+* bards
+* merchants
+* political censorship
+
+Rumors may become distorted over distance.
+
+Different settlements may know different versions of the same event.
+
+⸻
+
+Phase 8 – Director AI
+
+Separate narrative generation from world simulation.
+
+Create a Director layer responsible for:
+
+* pacing
+* dramatic tension
+* foreshadowing
+* callbacks
+* emotional highs and lows
+* encounter timing
+
+The Director should never modify world facts.
+
+Its responsibility is presentation rather than simulation.
+
+⸻
+
+Phase 9 – Lore Validation Layer
+
+Before every AI response, verify consistency.
+
+Validate:
+
+* locations
+* living/deceased NPCs
+* historical events
+* religions
+* factions
+* timelines
+* inventories
+* quests
+* relationships
+
+If generated content conflicts with existing lore, revise it before presenting it to the player.
+
+⸻
+
+Phase 10 – World State First
+
+Refactor AI prompts so they prioritize structured simulation.
+
+The AI should receive:
+
+Current World State
+
+↓
+
+Current NPC States
+
+↓
+
+Faction States
+
+↓
+
+Quest Progress
+
+↓
+
+Recent Memories
+
+↓
+
+Player Context
+
+↓
+
+Narrative Request
+
+The AI should interpret the simulation—not replace it.
+
+⸻
+
+Long-Term Goal
+
+The finished project should feel less like an AI storyteller and more like a living tabletop campaign run by an exceptional Dungeon Master.
+
+Players should remember the game because:
+
+* the world remembers them,
+* NPCs change over time,
+* factions pursue their own agendas,
+* consequences persist,
+* and every playthrough creates a unique history grounded in consistent simulation.
+
+⸻
+
+Implementation Requirements
+
+* Integrate with existing architecture whenever possible.
+* Reuse current managers (world_state, memory_engine, faction_manager, relationship_manager, etc.) instead of duplicating functionality.
+* Document all new systems in the Development Bible.
+* Keep systems modular and extensible.
+* Maintain backward compatibility with existing saves where feasible.
