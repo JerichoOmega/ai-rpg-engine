@@ -1,0 +1,81 @@
+Update the RPG Lore Bible with the finalized natural landmarks for the primary continent.
+
+IMPORTANT:
+- Review the existing Lore Bible first.
+- Do not overwrite or contradict existing canon.
+- If any of these names already exist under different names, flag the conflict instead of replacing them automatically.
+- Preserve the world's grounded, high-fantasy tone, historical depth, mystery, and environmental storytelling.
+- Treat the Lore Bible as the single source of truth.
+
+Update the Geography section with the following finalized landmarks:
+
+## Lakes (3)
+- Serenity Lake — An ancient, mysterious lake known for its calm waters, forgotten legends, and quiet atmosphere.
+- Frostmere — A partially frozen lake located within the Frozen Highlands.
+- Stonewater Lake — A rugged mountain lake nestled among the Iron Peaks.
+
+## The Iron Peaks
+
+Major Mountains
+- Mount Ironheart
+- Skyspire
+
+Mountain Ranges
+- Black Anvil Range
+- Thundercrest Range
+
+Mountain Pass
+- Iron Gate Pass
+
+## Swamps (2)
+- Blackfen
+- Mistfen
+
+## Plains (4)
+- Golden Plains
+- King's Meadow
+- Wind Plains
+- Sunfields
+
+## Desert Kingdom Landmarks (5)
+- Sea of Glass
+- Scorpion Dunes
+- Whispering Sands
+- Oasis of Kings
+- The Broken Obelisk
+
+## Frozen Highlands Locations (4)
+- Icewind Valley
+- Crystal Icefields
+- White Fang Ridge
+- Frozen Crown
+
+## Coastlines (4)
+- Sapphire Coast
+- Storm Coast
+- The Shattered Coast
+- Emerald Bay
+
+## Caves & Dungeons (8)
+- Hollow Deep
+- Forgotten Halls
+- Iron Delve
+- The Deep Warrens
+- Shadow Cavern
+- Ember Hollow
+- Whispering Caves
+- Titan's Tomb
+
+## Ruins (8)
+- The Fallen City
+- Old Aranor
+- Sunken Temple
+- Kingsfall
+- Ashwatch Keep
+- Grey Fortress
+- Temple of the First Dawn
+- The Forgotten Citadel
+
+For each location, add a concise lore entry (2–4 sentences) describing its appearance, historical significance, and why adventurers might visit. Keep the descriptions intentionally mysterious where appropriate, avoiding over-explaining ancient history so future quests and discoveries remain possible.
+
+Finally, update any maps, indexes, appendices, cross-references, and regional summaries so these landmark names are used consistently throughout the Lore Bible.

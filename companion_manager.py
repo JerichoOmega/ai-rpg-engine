@@ -16,6 +16,10 @@ from event_bus import (
     emit
 )
 
+from world_state import (
+    world_state
+)
+
 # =========================
 # ACTIVE COMPANIONS
 # =========================
@@ -164,6 +168,12 @@ def recruit_companion(
 
         return
 
+    # Scale companion to current player level before adding to party.
+    _scale_companion_to_player_level(
+        companion_name,
+        companion
+    )
+
     active_companions.append(
         companion
     )
@@ -179,6 +189,77 @@ def recruit_companion(
 
         companion_name=companion_name
     )
+
+# =========================
+# COMPANION LEVEL SCALING
+# =========================
+
+def _scale_companion_to_player_level(
+    companion_name,
+    companion
+):
+    """Scale a companion to the current player level on recruitment so
+    benched heroes never fall behind the active party.
+
+    Idempotent: base stats are stored in the roster entry on first recruit
+    and reused on every subsequent recruit, so remove→re-recruit at a
+    higher player level applies the delta correctly rather than stacking
+    the full multiplier on already-scaled values.
+    """
+
+    from progression_manager import (
+        progression_state,
+        MAX_LEVEL,
+        _xp_threshold
+    )
+
+    if "roster" not in world_state:
+        world_state["roster"] = {}
+
+    current_level = min(
+        progression_state["level"],
+        MAX_LEVEL
+    )
+
+    existing_entry = world_state["roster"].get(companion_name)
+
+    if existing_entry and "base_max_hp" in existing_entry:
+        # Re-recruit: scale from the stored immutable level-1 base stats.
+        base_max_hp = existing_entry["base_max_hp"]
+        base_damage = existing_entry["base_damage"]
+    else:
+        # First recruit: current companion stats are the level-1 base.
+        base_max_hp = companion.get("max_hp", 100)
+        base_damage = companion.get("damage", 10)
+
+    scaled_max_hp = base_max_hp + (current_level - 1) * 20
+    scaled_attack_bonus = 5 + (current_level - 1) * 2
+    scaled_damage = base_damage + (current_level - 1) * 2
+
+    # Update the companion's combat-facing stats.
+    companion["max_hp"] = scaled_max_hp
+    companion["hp"] = scaled_max_hp
+    companion["damage"] = scaled_damage
+
+    # Write (or overwrite) the roster entry.  base_max_hp and base_damage
+    # are the immutable level-1 anchors used by future re-recruit calls.
+    world_state["roster"][companion_name] = {
+        "level": current_level,
+        "xp": 0,
+        "xp_to_next_level": _xp_threshold(current_level),
+        "max_hp": scaled_max_hp,
+        "attack_bonus": scaled_attack_bonus,
+        "damage": scaled_damage,
+        "base_max_hp": base_max_hp,
+        "base_damage": base_damage,
+    }
+
+    if current_level > 1:
+        print(
+            f"\n{companion_name.title()}"
+            f" joins at level {current_level}."
+        )
+
 
 # =========================
 # REMOVE COMPANION

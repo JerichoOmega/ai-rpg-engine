@@ -141,6 +141,7 @@ The untamed edge of civilization.
 | **Settlements** | Frontier towns, military outposts, refugee settlements |
 | **Threats** | Goblin tribes, orc warbands, ruined watchtowers, ancient battlefields, dangerous trade routes |
 | **Corruption** | The Frontier often experiences The Corruption before the rest of the continent — the weakest institutions fall first |
+| **Notable landmarks** | Golden Plains · Wind Plains · Blackfen · Kingsfall · Ashwatch Keep · Shadow Cavern · The Fallen City · Serenity Lake (border). Full entries: [`docs/world/GEOGRAPHY_LANDMARKS.md`](GEOGRAPHY_LANDMARKS.md) |
 
 The Frontier is where the world's decay is most visible and least managed. It is also where most campaigns begin — the place where a party of adventurers is most needed and least supported.
 
@@ -156,6 +157,7 @@ An ancient wood of significant magical and historical depth.
 | **Settlements** | Elven settlements; hidden communities |
 | **Points of interest** | Sacred groves, hidden shrines, ancient ruins, rare herbs, magical wildlife |
 | **Corruption** | As The Corruption spreads, portions of the forest become twisted — the natural world turning against itself |
+| **Notable landmarks** | Mistfen · Hollow Deep · Old Aranor · Emerald Bay (southern coast). Full entries: [`docs/world/GEOGRAPHY_LANDMARKS.md`](GEOGRAPHY_LANDMARKS.md) |
 
 The Great Forest is the world's most visible indicator of The Corruption's effect on nature. Players who visit early in a campaign may find it peaceful; those who return later may not recognize it.
 
@@ -174,6 +176,7 @@ The homeland of the dwarves — a massive mountain range defined by what is buri
 | **Threats** | Dragons (confirmed presence), underground hazards |
 | **Companion connection** | Torren's craft knowledge and smith's eye for underground construction give him unique interactions here — he reads the stone in ways others cannot |
 | **Gnome communities** | Gnomes settled in the lower Iron Peaks as record-keepers for the dwarven kingdoms; their archive communities are among the oldest on the continent |
+| **Notable landmarks** | Mount Ironheart · Skyspire · Black Anvil Range · Thundercrest Range · Iron Gate Pass · Stonewater Lake · Iron Delve · Forgotten Halls · The Deep Warrens. Full entries: [`docs/world/GEOGRAPHY_LANDMARKS.md`](GEOGRAPHY_LANDMARKS.md) |
 
 The Iron Peaks hold things that have not been disturbed in centuries. As The Corruption wakes ancient things, the mountains become more dangerous than anyone expected.
 
@@ -190,6 +193,7 @@ A harsh northern wilderness where survival shapes everything — including the c
 | **Points of interest** | Ice caves, ancient fortresses |
 | **Threats** | Giant beasts, harsh weather as an active system, The Corruption manifesting in cold forms |
 | **Corruption** | Arrives late; hits hard — less to cushion the impact |
+| **Notable landmarks** | Frostmere · Icewind Valley · Crystal Icefields · White Fang Ridge · Frozen Crown · Grey Fortress · The Forgotten Citadel. Full entries: [`docs/world/GEOGRAPHY_LANDMARKS.md`](GEOGRAPHY_LANDMARKS.md) |
 
 #### Cultural Philosophy — Nothing Is Wasted
 
@@ -230,6 +234,7 @@ The great desert kingdom — one of the oldest civilizations on the continent.
 | **Trade** | Powerful trade routes; Sol Kareth's merchants reach every major region |
 | **Environmental hazards** | Sandstorms, extreme travel conditions |
 | **Corruption** | Sol Kareth hides things — countless ruins beneath the sands — and The Corruption is waking what was buried |
+| **Notable landmarks** | Sea of Glass · Scorpion Dunes · Whispering Sands · Oasis of Kings · The Broken Obelisk · Ember Hollow · Whispering Caves · Titan's Tomb · The Forgotten Citadel. Full entries: [`docs/world/GEOGRAPHY_LANDMARKS.md`](GEOGRAPHY_LANDMARKS.md) |
 
 Sol Kareth has outlasted kingdoms that rose and fell while it traded. Its age is both its greatest resource and its greatest vulnerability: no civilization accumulates as many buried secrets without some of them eventually demanding to be found.
 
@@ -249,6 +254,7 @@ The political, military, educational, and cultural heart of the continent.
 | **Military** | Majority of the continent's military stationed here; smaller garrisons protect towns, forts, roads, and trade routes throughout the continent |
 | **Corruption** | Political Corruption is most visible here — powerful people becoming worse versions of themselves |
 | **Campaign sensitivity** | The condition of The Capital Province changes depending on campaign events; it is the world's most responsive region to player choices |
+| **Notable landmarks** | King's Meadow · Sunfields · Golden Plains (border) · Temple of the First Dawn (Frontier border) · Sapphire Coast · Kingsfall (Frontier). Full entries: [`docs/world/GEOGRAPHY_LANDMARKS.md`](GEOGRAPHY_LANDMARKS.md) |
 
 The Capital Province is where decisions made everywhere else eventually land. Campaigns that end here often culminate in confrontations not just with monsters, but with the human darkness The Corruption has amplified.
 

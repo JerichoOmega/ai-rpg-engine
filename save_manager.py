@@ -10,7 +10,9 @@ from world_state import (
 )
 
 from progression_manager import (
-    progression_state
+    progression_state,
+    reconcile_player_roster_before_save,
+    reconcile_player_roster_after_load,
 )
 
 from skill_tree import (
@@ -98,6 +100,10 @@ def save_game():
     # other world-state-helper-managed fields are NOT overwritten.
     from player import sync_world_state_from_player
     sync_world_state_from_player()
+    # Roster is authoritative for progression fields; re-assert its values
+    # over anything sync_world_state_from_player may have written from a
+    # stale runtime Player object.
+    reconcile_player_roster_before_save()
 
     save_data = {
 
@@ -409,7 +415,7 @@ def load_game():
         "sessions", "civil_war",
         "cult_rising", "mages_rebellion",
         "dragon_alive", "world_chaos",
-        "npcs",
+        "npcs", "roster",
     }
 
     if "world_state" in save_data:
@@ -570,11 +576,21 @@ def load_game():
         _get_dict("companions")
     )
 
+    # Rebuild active_companions as references into COMPANIONS so that
+    # _sync_companion_combat_stats() updates the combat-active object,
+    # not a separate deserialized copy.  Match by role (unique per companion).
+    raw_active = _get_list("active_companions")
     active_companions.clear()
-
-    active_companions.extend(
-        _get_list("active_companions")
-    )
+    for ac_data in raw_active:
+        role = ac_data.get("role")
+        match = next(
+            (comp for comp in COMPANIONS.values()
+             if comp.get("role") == role),
+            None
+        )
+        active_companions.append(
+            match if match is not None else ac_data
+        )
 
     # =========================
     # AI DIRECTOR
@@ -598,6 +614,11 @@ def load_game():
     # hero_key, inventory, etc.) is current in both representations.
     from player import sync_player_from_world_state
     sync_player_from_world_state()
+
+    # Rebuild the player roster entry from world_state["player"] so the
+    # first XP award after load uses the correct level rather than
+    # module-init values.  Also aligns progression_state.
+    reconcile_player_roster_after_load()
 
     print(
         "\n=== GAME LOADED ==="

@@ -37,6 +37,7 @@
 | `elyndor/history/the_corruption.md` | Corruption mechanics and faction effects |
 | `elyndor/ancient_legends/aurelia_sunstrider.md` | Ancient legend: Aurelia |
 | `elyndor/ancient_legends/valen_ashfall.md` | Ancient legend: Valen |
+| `docs/world/GEOGRAPHY_LANDMARKS.md` | All named geographic landmarks — lakes, mountains, swamps, plains, coastlines, caves, ruins |
 
 ---
 
@@ -97,6 +98,100 @@ Six canonical regions exist. Their lore descriptions are established in `docs/wo
 | **Cinderhold** | Central/southern Frontier | Ashfire goblin tribe settlement; built in a former ruin |
 
 No other named settlements are established in canon. All other inhabited locations are described by region or by type only.
+
+---
+
+## Geography — Named Landmarks
+
+Full lore entries (2–4 sentences each) are in `docs/world/GEOGRAPHY_LANDMARKS.md`. The table below is the index. ⚠️ See that document for two naming disambiguations: **The Deep Warrens** (Iron Peaks cave) ≠ **Deep Warren** (Mossroot goblin settlement); **Temple of the First Dawn** (Solaryn ruin) ≠ **First Temple** (oldest Chorus temple).
+
+### Lakes
+
+| Name | Region |
+|---|---|
+| **Serenity Lake** | Great Forest / Frontier border |
+| **Frostmere** | Frozen Highlands |
+| **Stonewater Lake** | Iron Peaks |
+
+### Iron Peaks — Named Features
+
+| Name | Type |
+|---|---|
+| **Mount Ironheart** | Highest peak; navigational landmark; oral tradition anchor |
+| **Skyspire** | Northeastern peak; anomalous geometry; dwarves avoid it |
+| **Black Anvil Range** | Western sub-range; dark stone; location of the oldest dwarven forges |
+| **Thundercrest Range** | Northern sub-range; extreme lightning activity |
+| **Iron Gate Pass** | Primary cross-continental mountain pass |
+
+### Swamps
+
+| Name | Region |
+|---|---|
+| **Blackfen** | Frontier (southwestern) |
+| **Mistfen** | Great Forest / Frontier border |
+
+### Plains
+
+| Name | Region |
+|---|---|
+| **Golden Plains** | Capital Province / Frontier border |
+| **King's Meadow** | Capital Province (formal Crown-maintained grassland) |
+| **Wind Plains** | Frontier (northern) |
+| **Sunfields** | Capital Province (primary agricultural land) |
+
+### Sol Kareth — Named Landmarks
+
+| Name | Type |
+|---|---|
+| **Sea of Glass** | Vast fused-silica desert expanse; origin unknown |
+| **Scorpion Dunes** | Highest dune field; seasonally shifting; conceals ruins |
+| **Whispering Sands** | Acoustic basin; traditional neutral ground for negotiations |
+| **Oasis of Kings** | Largest oasis; neutral council site; oldest recorded meeting place |
+| **The Broken Obelisk** | Partially translated boundary marker; top section fallen |
+
+### Frozen Highlands — Named Locations
+
+| Name | Type |
+|---|---|
+| **Icewind Valley** | Wind-channeling valley; partial ice preservation |
+| **Crystal Icefields** | Geometric ice formations; non-random pattern |
+| **White Fang Ridge** | Territorial boundary ridge; navigational landmark |
+| **Frozen Crown** | Far-northern circular stone/ice formation; pre-settlement origin |
+
+### Coastlines
+
+| Name | Location |
+|---|---|
+| **Sapphire Coast** | Southern coast (near Capital Province and Great Forest) |
+| **Storm Coast** | Northern coast (near Frozen Highlands and Frontier) |
+| **The Shattered Coast** | Western coast (fragmented geology; remote) |
+| **Emerald Bay** | Southern coast (near Great Forest; primary maritime trade entry) |
+
+### Caves & Dungeons
+
+| Name | Region |
+|---|---|
+| **Hollow Deep** | Great Forest |
+| **Forgotten Halls** | Iron Peaks (lost dwarven complex) |
+| **Iron Delve** | Iron Peaks (former mining operation) |
+| **The Deep Warrens** | Iron Peaks (natural, pre-dwarven cave network) |
+| **Shadow Cavern** | Frontier (eastern) |
+| **Ember Hollow** | Sol Kareth (geothermal cave complex) |
+| **Whispering Caves** | Sol Kareth (near Whispering Sands) |
+| **Titan's Tomb** | Sol Kareth (oversized burial complex) |
+
+### Ruins
+
+| Name | Region |
+|---|---|
+| **The Fallen City** | Frontier (unnamed ancient city) |
+| **Old Aranor** | Great Forest (pre-existing elvish settlement) |
+| **Sunken Temple** | Sapphire Coast (partially submerged; pre-dates four religions) |
+| **Kingsfall** | Frontier (northern; battlefield and fortification) |
+| **Ashwatch Keep** | Frontier (near Cinderhold / Ashfire territory) |
+| **Grey Fortress** | Frozen Highlands (southern approach) |
+| **Temple of the First Dawn** | Frontier / Capital Province border (ancient Solaryn temple) |
+| **The Forgotten Citadel** | Frozen Highlands (far north; pre-dates Grey Fortress) |
 
 ---
 
@@ -428,8 +523,8 @@ Everything in this section has been mentioned or implied in canonical sources bu
 | **Central river corridor** | A significant river (or river network) runs through the center of the continent and forms the backbone of Halfling trade culture | The river is not named; its course, tributaries, and termini are not described |
 | **Oceans / seas** | Implied by the half-submerged coastal location of Neressa's temple and by general world geography | None named |
 | **Islands** | Implied by standard world geography | None confirmed or named |
-| **Mountain ranges** | The Iron Peaks is named; ranges shifted during the Sundering | No other named ranges |
-| **Coastlines** | Referenced indirectly (Neressa's temple on a "rocky coast") | No named coastlines, headlands, or bays |
+| **Mountain ranges** | The Iron Peaks is named; ranges shifted during the Sundering | Black Anvil Range and Thundercrest Range are now named (both are sub-ranges of the Iron Peaks). No other mountain ranges outside the Iron Peaks are named. |
+| **Coastlines** | Referenced indirectly (Neressa's temple on a "rocky coast") | Sapphire Coast, Storm Coast, The Shattered Coast, and Emerald Bay are now named. No specific bays, headlands, or sea names are established beyond these four. |
 
 ---
 
@@ -520,17 +615,15 @@ Items marked ⚠️ **NOT YET DEFINED** in the source documents are listed here.
 | Names of any ocean or sea |
 | Names of any island or island group |
 | Names of rivers (including the central corridor river) |
-| Names of lakes |
-| Names of mountain ranges beyond "The Iron Peaks" |
 | Names of any road or trade route |
-| Names of any oasis city in Sol Kareth |
+| Named oasis cities in Sol Kareth (Oasis of Kings is a named landmark/meeting site, but the oasis *cities* as settlements remain unnamed) |
 | Named settlements in the Great Forest (beyond Deep Warren) |
 | Named settlements in the Iron Peaks |
 | Named settlements in the Frozen Highlands |
 | Named settlements in Sol Kareth |
 | The First Grove's precise location within the Great Forest |
-| The location of Neressa's Sanctuary of Returning Tides (coast, but which coast?) |
-| The location of The High Crossing (mountain pass, but where?) |
+| The location of Neressa's Sanctuary of Returning Tides (four coastlines now named — which one, or is it on an unnamed stretch?) |
+| The location of The High Crossing (mountain pass — Iron Peaks implied but which range is unconfirmed) |
 
 ---
 
@@ -616,7 +709,8 @@ Both Aurelia Sunstrider and Valen Ashfall have the following explicitly marked a
 | Flora or fauna with proper nouns beyond Chorus sacred species |
 | Currency names |
 | A canonical measurement system (distance, weight) |
-| Any named body of water beyond "the central river corridor" (itself unnamed) |
+| Any named ocean or sea (four coastlines are now named; the waters themselves are not) |
+| Any named river (the central river corridor remains unnamed) |
 
 ---
 
@@ -627,3 +721,4 @@ Both Aurelia Sunstrider and Valen Ashfall have the following explicitly marked a
 | Date | Change |
 |---|---|
 | July 2026 | Created — compiled from full repository review. All 26 source documents reviewed. No new lore established. |
+| July 2026 | Updated — added Geography — Named Landmarks section reflecting `docs/world/GEOGRAPHY_LANDMARKS.md`. Updated Partial Canon and Undefined sections to reflect newly named mountain ranges (Black Anvil Range, Thundercrest Range), four named coastlines, three named lakes, and all landmark names. Source documents table updated. |

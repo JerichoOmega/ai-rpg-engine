@@ -454,6 +454,12 @@ world_state = {
     "mages_rebellion": False,
     "dragon_alive": True,
     "world_chaos": 0,
+
+    # --- Hero roster progression ---
+    # Keyed by hero name (or "player" for the active player hero).
+    # Each entry: level, xp, xp_to_next_level, max_hp, attack_bonus.
+    # Populated lazily on first XP award and on companion recruit.
+    "roster": {},
 }
 
 
@@ -671,6 +677,7 @@ def ensure_world_state_defaults():
             "defense": 2, "dodge": 5, "weapon_bonus": 0,
             "equipped_weapon": "Rusty Sword", "inventory": [],
         },
+        "roster": {},
     }
     for section, sub_defaults in _sections.items():
         if (

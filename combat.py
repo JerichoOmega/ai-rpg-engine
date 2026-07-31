@@ -30,6 +30,10 @@ from companion_manager import (
     calculate_party_bonus
 )
 
+from progression_manager import (
+    award_xp_to_roster
+)
+
 from status_effects import (
     process_status_effects
 )
@@ -690,6 +694,10 @@ def combat(
         "\n=== COMBAT START ==="
     )
 
+    # Track how many enemies entered so we can award XP after victory
+    # even though the list is emptied during cleanup.
+    initial_enemy_count = len(enemies)
+
     try:
 
         ai_combat_narration(
@@ -798,6 +806,11 @@ def combat(
         print(
             "\n=== VICTORY ==="
         )
+
+        # Award XP to every hero in the roster — 15 XP per enemy defeated.
+        combat_xp = initial_enemy_count * 15
+        if combat_xp > 0:
+            award_xp_to_roster(combat_xp)
 
         try:
 

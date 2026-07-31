@@ -358,7 +358,7 @@ def migrate_save(save_data):
                 "sessions", "civil_war",
                 "cult_rising", "mages_rebellion",
                 "dragon_alive", "world_chaos",
-                "npcs",
+                "npcs", "roster",
             }
 
             nested = {}

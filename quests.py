@@ -11,6 +11,10 @@ from event_bus import (
     emit
 )
 
+from progression_manager import (
+    award_xp_to_roster
+)
+
 # =========================
 # QUEST DATABASE
 # =========================
@@ -326,10 +330,7 @@ def reward_quest(quest_name):
         ]
     )
 
-    world_state[
-        "player"
-    ]["xp"] += (
-
+    award_xp_to_roster(
         quest_data[
             "xp_reward"
         ]
