@@ -43,6 +43,14 @@ The other members of the Chorus interacted with mortal civilization — through 
 
 The Eighth was different. She came among mortals not as a steward visiting her charges, but as someone who found in mortal life something she had not encountered within the Chorus. She was present in ways the other gods were not. She lingered. She returned.
 
+Through this sustained closeness, she came to understand something the rest of the Chorus struggled to grasp:
+
+**Mortals do not live long. They simply live deeply.**
+
+She experienced things that meant little to immortal beings but became priceless to her — simple conversations, the act of watching rain, sharing meals, quiet moments, small joys. A mortal's appreciation for a single afternoon was something no member of the Chorus, with endless time to fill, could fully replicate. She found it extraordinary.
+
+This relationship with mortality fundamentally altered how she viewed Creation. She had cared for mortals as their steward before. She came to love the mortal experience itself.
+
 Over time, she fell deeply in love with one particular mortal.
 
 ---
@@ -53,22 +61,95 @@ The identity of this mortal — their name, their culture, what they were or did
 
 What is canonical:
 
+- The mortal was intentionally ordinary. They were not a legendary hero, royalty, a chosen one, a famous scholar, a powerful mage, or a renowned warrior. They lived an ordinary life. History never remembered their name.
+- What drew the Eighth to them was not power, status, or accomplishment. It was simply who they were: their kindness, their humor, their compassion, their ability to appreciate ordinary existence.
+- The Eighth loved their soul rather than their accomplishments.
 - The relationship was genuine. It was not infatuation or novelty — it was love, and it fundamentally changed how she understood mortality.
 - The other members of the Chorus were aware of the relationship. Their response was not hatred, jealousy, or prohibition.
 - They understood something she could not yet accept: **mortals die. Immortality and mortality cannot coexist without grief.** They had witnessed this before. They knew how it ends.
 - She believed this love was different. She believed the outcome would be different. She was wrong.
 
+> **The point is that an ordinary mortal changed the heart of a primordial god.** The mortal's importance comes entirely from who they were, not what they accomplished. This is one of the central themes of the setting: the value of a life is not measured by history, status, or power. It is measured by the lives it changes.
+
 ---
 
-## The Death
+## The Final Verse
 
-Eventually, her mortal companion died.
+The world's term for death is **the Final Verse**.
+
+It is not a location. It is not an afterlife. It is the moment a soul passes beyond the stewardship of the Divine Chorus — beyond the reach of Primordial Magic, beyond the knowledge of the gods themselves.
+
+No one knows what happens afterward. Not mortals. Not scholars. Not mages. Not even the Divine Chorus.
+
+This mystery is never answered. The gods themselves acknowledge that what lies beyond the Final Verse exists outside their authority:
+
+> *"We guide the living. We do not govern what follows the Final Verse."*
+
+Eventually, her mortal companion sang their Final Verse.
 
 The cause was intentionally ordinary. Not murder. Not divine punishment. Not betrayal. Simply the unavoidable end of a mortal life — the thing that the Chorus had warned her about and that she had chosen not to accept as real until it was.
+
+The Chorus mourned alongside their sister. They attempted to comfort her. They did not abandon her. They genuinely wished to help.
 
 For the first time in her eternal existence, a member of the Divine Chorus experienced grief on an intensely personal level.
 
 She could not accept it.
+
+---
+
+## The Five Stages of the Fall
+
+Her descent was not sudden. It unfolded across centuries, in stages that are now recognized — by those scholars who have encountered traces of this history — as a coherent progression.
+
+### Stage I — Love
+
+She was the most compassionate member of the Chorus. More time among mortals than any of her siblings. A genuine love, not for a type of being or a civilization, but for one completely ordinary person.
+
+### Stage II — Grief
+
+The mortal sings their Final Verse. The Chorus mourns alongside her, attempts to comfort her, does not abandon her. She cannot accept the loss. She believes there must be another way.
+
+### Stage III — Obsession
+
+The Chorus initially assists her research. They understand grief. They want to help.
+
+Eventually they realize she is crossing boundaries never meant to be crossed — reaching beyond the edges of Creation into regions that exist outside their stewardship, outside their knowledge, outside the laws that govern the world they maintain.
+
+Arguments begin. She does not stop.
+
+### Stage IV — Justification
+
+This is the defining turning point.
+
+She is not yet fully corrupted. Not yet.
+
+Instead, she begins convincing herself that increasingly dangerous actions are necessary. She causes catastrophes. She tears holes into other realities. She sacrifices innocent lives.
+
+Each decision feels justified. Each one is framed, in her mind, as a cost that had to be paid.
+
+Eventually she commits an act she once believed impossible. She looks upon what she has done.
+
+She is horrified.
+
+Then she quietly tells herself: *"It had to be done."*
+
+This moment allows the corruption to truly take root.
+
+> **The corruption does not overwrite her personality. It amplifies the compromises she has already chosen to make.** She was the one who opened the door. The forces beyond Creation simply walked through it.
+
+### Stage V — Hatred
+
+Only after centuries does she begin hating the Divine Chorus.
+
+She believes they chose:
+
+- Law over love
+- Balance over family
+- Creation over their sister
+
+From her perspective, they betrayed her first. They had the ability to help her — the power to find another way, to search alongside her, to tear down the laws that took what she loved — and instead they chose to preserve a universe over a single soul.
+
+That this is not accurate — that the Chorus genuinely could not do what she believes they refused to do — does not change what she feels, or what she has become.
 
 ---
 
@@ -224,3 +305,4 @@ These questions should not have clean answers. The mythology is designed to gene
 | Date | Change |
 |---|---|
 | July 2026 | Created — The Forgotten Eighth established as canonical; the Ancient God confirmed as former member of the Divine Chorus; her story, the Great Forgetting, the Imprisonment as tragedy, the Corruption's true nature as amplified virtue, and companion revelation responses all documented |
+| July 2026 | Major revision — "The Final Verse" established as the world's canonical term for death; The Five Stages of the Fall formally named and documented (Love, Grief, Obsession, Justification, Hatred); Stage IV (Justification) established as the true root of corruption through self-compromise; Stage V (Hatred) added with her perspective that the Chorus betrayed her first; "Time Among Mortals" expanded with why she found mortal life extraordinary; "The Mortal She Loved" expanded with specific qualities (kindness, humor, compassion, appreciation of ordinary life); Chorus's mourning and comfort attempt added to the Final Verse section |

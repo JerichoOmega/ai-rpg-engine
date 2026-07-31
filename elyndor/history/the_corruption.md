@@ -16,7 +16,11 @@ The entity imprisoned is not a simple ancient evil. She is **The Forgotten Eight
 
 What is relevant here: the Corruption is not the leakage of evil into the world. It is the leakage of grief, obsession, and the amplified remains of virtues that lost their balance. The entity in the prison did not begin as a monster. She began as someone who loved something so much she could not let it go — and the forces she encountered while searching for what she had lost changed her past the point of return.
 
-The Corruption carries the signature of that process.
+A critical distinction: the corruption did not overwrite her. She opened the door herself. Through countless small justifications — each catastrophe framed as necessary, each sacrifice told to herself as a cost that had to be paid — she made compromises that created the opening. The forces beyond Creation did not corrupt something empty. They amplified compromises she had already chosen to make.
+
+The moment the corruption truly took root was not when she encountered something monstrous beyond Creation. It was the moment she looked at what she had done, felt horror, and quietly told herself: *"It had to be done."*
+
+The Corruption carries the signature of that process — because what spreads from her prison is not evil, but self-justification amplified past the point of return.
 
 ---
 
@@ -161,3 +165,4 @@ The Corruption's interaction with specific factions is documented in their respe
 | July 2026 | Created — established The Ancient God, The Corruption, and their canonical rules |
 | July 2026 | Added cross-reference table to faction-specific Corruption effect sections |
 | July 2026 | Major revision — The Ancient God canonically established as The Forgotten Eighth, former member of the Divine Chorus; Corruption redefined as amplified virtue rather than simple evil; virtue-corruption table added; cross-reference to the_eighth.md added |
+| July 2026 | Stage IV (Justification) mechanism added — corruption takes root through self-justification, not external overwhelming; "It amplifies the compromises she has already chosen to make" established as canonical |

@@ -241,6 +241,19 @@ The campaign should generate discussion rather than provide answers. The mytholo
 
 ---
 
+Players should finish the campaign understanding that history's greatest catastrophe began because one primordial being loved one completely ordinary person.
+
+The mortal's importance comes entirely from who they were rather than what they accomplished. This reinforces one of the central themes of the setting:
+
+> **The value of a life is not measured by history, status, or power.**
+> **It is measured by the lives it changes.**
+
+The greatest tragedy in Creation began not because a hero died — but because an ordinary soul taught a god what it truly meant to live.
+
+The mythology should consistently reinforce that the Eighth's fall was not the result of sudden corruption, but of countless small compromises made in pursuit of an impossible act of love. This tragedy serves as the philosophical foundation for the world's lore, the corruption system, the companion arcs, and the main campaign.
+
+---
+
 ## Document History
 
 | Date | Change |
@@ -248,3 +261,4 @@ The campaign should generate discussion rather than provide answers. The mytholo
 | July 2026 | Created — established Handcrafted First principle, Replayability Philosophy, DM role, Design Goal, and dynamic variation framework |
 | July 2026 | Dynamic Story Arcs section added; The Fractured Circle documented as example arc |
 | July 2026 | Core Design Philosophy added (Balance vs. Obsession etc.); The Narrative Goal section added; Journey System section added |
+| July 2026 | The Narrative Goal section expanded — "The value of a life is not measured by history, status, or power. It is measured by the lives it changes." established as canonical theme statement; closing mythology paragraph added |
