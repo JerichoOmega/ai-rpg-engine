@@ -3,6 +3,7 @@
 > **Canon Status:** Confirmed — established July 2026.  
 > **Authority:** This document defines the three canonical vampire houses, their names, philosophies, leadership, territories, and internal politics. All future content involving vampire factions must align with this document.  
 > **Cross-references:** [`docs/world/WORLD_BIBLE.md`](WORLD_BIBLE.md) · [`docs/GAME_BIBLE.md`](../GAME_BIBLE.md) · [`elyndor/history/the_corruption.md`](../../elyndor/history/the_corruption.md)
+> **See also:** [`docs/world/factions/vampire_houses/`](factions/vampire_houses/README.md) — the canonical Vampire Houses faction folder (design philosophy, the Veil, the Crimson Conclave, the full ten-house roster including the seven Founding Houses, bloodlines, history, culture, politics). That folder supplements this document; this document remains authoritative for the three Great Houses.
 
 ---
 

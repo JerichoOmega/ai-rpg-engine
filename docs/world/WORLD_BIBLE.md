@@ -250,7 +250,7 @@ The political, military, educational, and cultural heart of the continent.
 |---|---|
 | **Tone** | Intricate, political, high-stakes; power concentrated and contested |
 | **Settlements** | Great cities, noble districts, royal estates |
-| **Institutions** | Royal Government, Military High Command, Mages Guild Headquarters, Major Temples, Universities, Great Libraries |
+| **Institutions** | Royal Government (Queen Merveth Aldenmoor, sovereign of the Province), seat of the Imperial Council (the continental representative body — [`docs/world/factions/GOVERNMENT.md`](factions/GOVERNMENT.md)), Military High Command, Mages Guild Headquarters, Major Temples, Universities, the Great Library |
 | **Gnome presence** | A significant gnomish scholarly community is established here, centered around the universities and the Mages Guild archives |
 | **Economy** | International trade hub; the continent's primary commercial center |
 | **Military** | Majority of the continent's military stationed here; smaller garrisons protect towns, forts, roads, and trade routes throughout the continent |

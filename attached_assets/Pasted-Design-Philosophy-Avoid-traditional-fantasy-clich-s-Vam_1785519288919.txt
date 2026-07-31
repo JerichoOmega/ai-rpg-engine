@@ -1,0 +1,280 @@
+Design Philosophy
+
+Avoid traditional fantasy clichés.
+
+Vampires are not a single kingdom.
+
+They are ancient noble bloodlines scattered across the continent.
+
+Some openly participate in politics.
+
+Some live in isolation.
+
+Some have nearly disappeared.
+
+Some actively try to help civilization endure.
+
+Others believe civilization is already doomed.
+
+⸻
+
+Origins
+
+The exact origin of vampirism is unknown.
+
+Several competing theories exist:
+
+* An ancient magical affliction.
+* A forgotten experiment from the Age of Harmony.
+* A curse dating to the Long Decline.
+* A condition tied to primordial magic.
+
+No theory has been conclusively proven.
+
+The truth should remain a long-term mystery.
+
+⸻
+
+Society
+
+Vampires organize themselves into Houses.
+
+Each House operates independently.
+
+There is no Vampire King.
+
+No global vampire empire.
+
+Instead:
+
+* alliances
+* rivalries
+* political marriages
+* ancient feuds
+
+shape vampire society.
+
+⸻
+
+Relationship with Civilization
+
+Most citizens never knowingly meet a vampire.
+
+Many nobles suspect certain Houses possess unusually long family histories.
+
+Rumors exist.
+
+Proof is rare.
+
+Some Houses actively support civilization.
+
+Others manipulate events from the shadows.
+
+Most avoid unnecessary attention.
+
+⸻
+
+Relationship with the Divine Chorus
+
+The Divine Chorus does not hunt vampires.
+
+Nor do they endorse them.
+
+Vampires are considered mortal beings living under unusual circumstances.
+
+They are judged by their choices rather than their condition.
+
+⸻
+
+Relationship with the Long Decline
+
+Every House has its own philosophy.
+
+Some seek to preserve civilization.
+
+Some believe survival requires ruthless pragmatism.
+
+Some believe the world is approaching an inevitable end.
+
+This ideological divide creates conflict between Houses.
+
+⸻
+
+Example Houses
+
+House Valenor
+
+Known for diplomacy and scholarship.
+
+Maintains hidden archives rivaling those of the Great Library.
+
+Prefers negotiation over violence.
+
+⸻
+
+House Draven
+
+Old military lineage.
+
+Produces renowned generals.
+
+Believes order is maintained through strength.
+
+⸻
+
+House Seraphe
+
+Mystics and philosophers.
+
+Study ancient magic and the Final Verse.
+
+Some members quietly investigate evidence related to the Forgotten Eighth.
+
+⸻
+
+House Morcant
+
+Political manipulators.
+
+Experts in diplomacy and espionage.
+
+Maintain extensive intelligence networks.
+
+⸻
+
+House Kaelor
+
+Lives in remote mountain estates.
+
+Known for strict honor.
+
+Rarely involved in continental politics.
+
+⸻
+
+House Noctis
+
+One of the oldest surviving bloodlines.
+
+Its origins are almost completely lost.
+
+Even other vampires know little about them.
+
+⸻
+
+Internal Politics
+
+Vampire Houses regularly debate:
+
+* Whether to reveal themselves.
+* Whether to assist civilization.
+* Whether immortality is a blessing or burden.
+* Whether the Long Decline can truly be stopped.
+
+These debates should shape quests and relationships.
+
+⸻
+
+Gameplay Role
+
+Vampires are uncommon.
+
+Most players may encounter only a handful during a playthrough.
+
+When encountered they should feel important.
+
+They are:
+
+* quest givers
+* historians
+* political figures
+* scholars
+* warriors
+* antagonists
+* allies
+
+Never simply “high-level enemies.”
+
+⸻
+
+Culture
+
+Each House possesses:
+
+* Heraldry
+* Motto
+* Formal traditions
+* Codes of conduct
+* Family histories
+* Estate architecture
+* Distinct clothing styles
+
+Their culture should resemble ancient aristocracy rather than gothic horror.
+
+⸻
+
+Moral Philosophy
+
+Avoid portraying vampires as universally evil or heroic.
+
+Some Houses genuinely preserve communities.
+
+Others exploit them.
+
+Some struggle against their hunger.
+
+Others embrace it.
+
+Every House should possess internal disagreement.
+
+⸻
+
+World State Integration
+
+The World State should influence vampire society.
+
+If civilization weakens:
+
+* Isolationist Houses gain influence.
+* Predatory factions become bolder.
+* Ancient rivalries intensify.
+
+If civilization remains resilient:
+
+* Cooperative Houses become more active.
+* Alliances with human institutions increase.
+* Ancient knowledge is more readily shared.
+
+⸻
+
+Quest Integration
+
+Vampire Houses should support quests involving:
+
+* political intrigue
+* ancient history
+* family disputes
+* forgotten bloodlines
+* relic recovery
+* moral dilemmas
+* diplomacy
+
+Avoid simple “kill the vampire lord” quests.
+
+Instead, emphasize difficult choices, conflicting loyalties, and the burden of centuries of history.
+
+⸻
+
+Developer Notes
+
+Vampires should reinforce the world’s central themes.
+
+They are living witnesses to history.
+
+Some remember the First Empire.
+
+Some knew individuals who lived during the Age of Harmony.
+
+Their greatest value is not their supernatural abilities, but the perspective that comes from centuries of watching civilizations rise and fall.
+
+They should feel like another thread in the tapestry of the world—deeply connected to its history, politics, and philosophy—rather than a genre trope inserted from outside the setting.

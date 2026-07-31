@@ -1,0 +1,387 @@
+Design Philosophy
+
+Vampires are not monsters hiding in castles.
+
+They are an ancient aristocratic society.
+
+Most people never knowingly encounter one.
+
+Most scholars consider them myths.
+
+Some nobles suspect they exist.
+
+Only a handful of senior Archivists possess incomplete historical evidence suggesting they may be real.
+
+Their society has existed in secrecy for centuries.
+
+⸻
+
+The Veil
+
+The foundation of vampire civilization.
+
+The first and greatest law.
+
+The existence of the Houses must never become common knowledge among civilization.
+
+This principle is known simply as:
+
+The Veil
+
+Breaking the Veil is considered one of the greatest crimes a vampire can commit.
+
+The Veil exists because history has repeatedly shown that open war between vampires and civilization ultimately destroys both.
+
+⸻
+
+Vampire Society
+
+There is:
+
+* No Vampire Empire
+* No Vampire Kingdom
+* No Vampire Emperor
+* No Vampire Pope
+
+Instead…
+
+Vampire society is composed of independent noble Houses.
+
+Each House governs itself.
+
+Each possesses:
+
+* estates
+* traditions
+* heraldry
+* ancient bloodlines
+* political influence
+* internal hierarchy
+
+⸻
+
+The Crimson Conclave
+
+The Houses are represented by a governing council known as:
+
+The Crimson Conclave
+
+Each Great House sends one Elder representative.
+
+The Conclave exists to:
+
+* settle disputes
+* negotiate alliances
+* mediate blood feuds
+* protect the Veil
+* recognize new Houses
+* judge crimes committed against vampire society
+
+No House rules over the others.
+
+The Conclave governs by negotiation and consensus.
+
+⸻
+
+Origins
+
+The exact origin of vampirism remains intentionally mysterious.
+
+Competing theories exist:
+
+* an ancient magical affliction
+* a forgotten experiment
+* a curse
+* primordial magic
+* an unknown historical event
+
+No explanation should be confirmed.
+
+Even vampires disagree.
+
+The mystery should remain intact.
+
+⸻
+
+Relationship with Civilization
+
+Most Houses avoid direct involvement.
+
+Some quietly influence politics.
+
+Some operate businesses.
+
+Some fund universities.
+
+Some sponsor archaeological expeditions anonymously.
+
+Some simply watch history unfold.
+
+They are observers as much as participants.
+
+⸻
+
+Relationship with the Divine Chorus
+
+The Divine Chorus neither endorses nor persecutes vampires.
+
+They are considered another form of mortal life.
+
+They are judged by their actions rather than their condition.
+
+This reinforces the game’s philosophy that moral character comes from choices, not birth.
+
+⸻
+
+Relationship with the Long Decline
+
+Every House has its own philosophy.
+
+Examples include:
+
+“We must preserve civilization.”
+
+“Civilization always falls.”
+
+“Only knowledge survives.”
+
+“We should remain hidden.”
+
+“We should reveal ourselves.”
+
+These disagreements create centuries-old political divisions.
+
+⸻
+
+The Great Houses
+
+Implement seven founding Houses.
+
+⸻
+
+House Valenor
+
+Known for scholarship.
+
+Maintains hidden archives rivaling the Great Library.
+
+Values diplomacy.
+
+Collectors of forgotten history.
+
+⸻
+
+House Draven
+
+Military lineage.
+
+Produces renowned strategists.
+
+Believes order is maintained through strength.
+
+⸻
+
+House Seraphe
+
+Mystics.
+
+Researchers.
+
+Study ancient magic.
+
+Quietly investigate evidence connected to the Forgotten Eighth.
+
+⸻
+
+House Morcant
+
+Political manipulators.
+
+Masters of diplomacy.
+
+Influence mortal noble houses from the shadows.
+
+⸻
+
+House Kaelor
+
+Hunters.
+
+Live in remote wilderness estates.
+
+Respect nature.
+
+Avoid politics whenever possible.
+
+⸻
+
+House Noctis
+
+The oldest surviving House.
+
+Its history predates most modern kingdoms.
+
+Even other Houses know little about its true origins.
+
+Members rarely appear in public.
+
+⸻
+
+House Vesper
+
+Merchants.
+
+Control secret trade routes.
+
+Acquire rare artifacts.
+
+Maintain information networks spanning the continent.
+
+⸻
+
+Internal Politics
+
+The Houses disagree on many issues.
+
+Common debates include:
+
+Should humanity know the truth?
+
+Can civilization survive?
+
+Should vampires intervene?
+
+Can the Long Decline be slowed?
+
+What responsibility do immortals have toward mortals?
+
+No House should be portrayed as entirely heroic or villainous.
+
+⸻
+
+Culture
+
+Every House should define:
+
+* crest
+* colors
+* motto
+* architecture
+* traditions
+* ceremonies
+* etiquette
+* hierarchy
+* notable families
+* famous historical members
+
+The culture should resemble ancient aristocracy rather than gothic horror.
+
+⸻
+
+Gameplay Philosophy
+
+Players may complete an entire playthrough while only meeting a handful of vampires.
+
+When they do appear, it should feel significant.
+
+Vampires should primarily serve as:
+
+* political figures
+* historians
+* scholars
+* nobles
+* patrons
+* rivals
+* allies
+
+Avoid making them generic enemies.
+
+⸻
+
+Relationship with the Great Library
+
+The Great Library officially classifies vampires as folklore.
+
+Privately…
+
+A restricted archive exists.
+
+Only the highest-ranking Archivists may access it.
+
+The evidence spans centuries but remains incomplete.
+
+Some Archivists quietly believe the Houses are real.
+
+Others dismiss the records as legend.
+
+This uncertainty should be preserved.
+
+⸻
+
+World State Integration
+
+The Houses react dynamically to the World State.
+
+When civilization weakens:
+
+* Isolationist Houses gain influence.
+* Predatory factions become more aggressive.
+* Ancient rivalries intensify.
+* The Conclave becomes increasingly divided.
+
+When civilization remains resilient:
+
+* Cooperative Houses become more active.
+* Secret alliances with mortal institutions increase.
+* More historical knowledge is shared.
+
+The player’s actions should subtly influence these political shifts.
+
+⸻
+
+Quest Design
+
+Avoid traditional vampire-hunting stories.
+
+Instead, create quests centered on:
+
+* political intrigue
+* diplomacy
+* ancient history
+* bloodline disputes
+* forgotten archives
+* philosophical conflicts
+* protecting or revealing secrets
+* difficult moral decisions
+
+The focus should be on centuries of accumulated history and responsibility, not simple monster slaying.
+
+⸻
+
+Canonical Design Rules
+
+Every Vampire House must define:
+
+* History
+* Leadership
+* Philosophy
+* View of humanity
+* View of the Divine Chorus
+* View of the Long Decline
+* Political allies
+* Political rivals
+* Internal traditions
+* Signature architecture
+* Heraldry
+* Gameplay purpose
+* Relationship to the Crimson Conclave
+
+No House should exist solely as an antagonist or ally. Each should represent a distinct philosophy on immortality, secrecy, and civilization’s future.
+
+⸻
+
+Developer Notes
+
+The Vampire Houses are intended to be one of the world’s oldest surviving political societies. They are older than the modern nations but not older than the First Civilization itself. They remember kingdoms that have long since fallen, yet even they possess only fragmented knowledge of the deepest mysteries surrounding the Architects and the earliest ages.
+
+The goal is for players to see the Houses not as monsters in the shadows, but as another ancient civilization struggling to decide whether they should preserve the world from behind the Veil or continue watching history repeat itself.

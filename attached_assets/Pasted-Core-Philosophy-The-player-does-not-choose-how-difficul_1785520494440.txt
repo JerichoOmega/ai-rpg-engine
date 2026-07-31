@@ -1,0 +1,404 @@
+Core Philosophy
+
+The player does not choose how difficult the world becomes.
+
+The world responds naturally to the player’s decisions.
+
+Difficulty emerges from consequence rather than artificial scaling.
+
+The goal is to make the world feel alive, interconnected, and believable.
+
+The player should never feel punished by the game.
+
+Instead, they should feel that civilization is responding to success and failure.
+
+⸻
+
+Canonical Design Principle
+
+The game should never arbitrarily increase enemy levels or spawn stronger enemies simply because time has passed.
+
+Instead:
+
+Every increase in danger must have a believable in-world explanation.
+
+Examples include:
+
+* corruption spreading
+* roads becoming unsafe
+* military forces becoming stretched thin
+* settlements declining
+* monster populations increasing
+* political instability
+* famine
+* trade disruption
+
+The player should always understand why the world has become more dangerous.
+
+⸻
+
+Living World System
+
+The World State tracks the overall health of civilization.
+
+It is not:
+
+* morality
+* alignment
+* good vs evil
+
+Instead it measures:
+
+* stability
+* prosperity
+* security
+* hope
+* preservation of civilization
+
+Every major questline influences this system.
+
+⸻
+
+Example: Vampire Crisis
+
+Ignoring the Vampire Houses does not immediately fail the game.
+
+Instead:
+
+The hidden vampire society begins to collapse.
+
+Feral vampires escape into the wider world.
+
+Consequences include:
+
+* stronger night encounters
+* refugee movements
+* closed trade routes
+* missing caravans
+* abandoned villages
+* increased Frontier Ranger patrols
+* military casualties
+* reduced merchant availability
+* greater corruption pressure
+
+The player is never punished directly.
+
+The world simply reacts.
+
+⸻
+
+Example: Bandit Crisis
+
+Ignoring organized bandits allows them to grow.
+
+Progression:
+
+Small camps
+
+↓
+
+Organized patrols
+
+↓
+
+Road blockades
+
+↓
+
+Fortified encampments
+
+↓
+
+Regional control
+
+Consequences:
+
+* merchants avoid roads
+* prices increase
+* supplies become scarce
+* random encounters become more dangerous
+
+⸻
+
+Example: Corrupted Forest
+
+If left untreated:
+
+Wildlife mutates.
+
+Food becomes scarce.
+
+Alchemy ingredients become corrupted.
+
+Ranger expedition bonuses become less effective.
+
+Travel becomes increasingly dangerous.
+
+⸻
+
+Example: Shrines
+
+Neglected shrines:
+
+* lose pilgrims
+* fall into disrepair
+* weaken community morale
+* reduce regional hope
+
+Restored shrines:
+
+* attract pilgrims
+* inspire settlements
+* strengthen local culture
+* preserve history
+
+⸻
+
+Example: Settlements
+
+Helping communities results in:
+
+* economic growth
+* expanded markets
+* improved defenses
+* happier NPCs
+* new quests
+* better equipment
+* increased trade
+
+Ignoring them results in:
+
+* abandoned buildings
+* refugees
+* fewer merchants
+* weaker defenses
+* increased crime
+* declining morale
+
+⸻
+
+Dynamic Difficulty Philosophy
+
+Difficulty should emerge naturally from:
+
+Player decisions
+
+↓
+
+Regional changes
+
+↓
+
+World reactions
+
+↓
+
+Gameplay consequences
+
+The game never says:
+
+“Enemies are now stronger.”
+
+Instead:
+
+The player sees:
+
+* stronger enemy factions
+* increased monster activity
+* worsening corruption
+* deteriorating infrastructure
+
+Everything has an in-world explanation.
+
+⸻
+
+World State Categories
+
+Track at minimum:
+
+Security
+
+Prosperity
+
+Trade
+
+Hope
+
+Infrastructure
+
+Corruption
+
+Knowledge Preservation
+
+Faith
+
+Political Stability
+
+Environmental Health
+
+These values should influence multiple systems simultaneously.
+
+⸻
+
+Faction Integration
+
+Every major faction responds dynamically.
+
+Imperial Council
+
+* emergency legislation
+* military deployments
+* political debates
+
+Great Library
+
+* sends archivists
+* preserves endangered knowledge
+* prioritizes threatened regions
+
+Covenant
+
+* relief efforts
+* pilgrimages
+* shrine restoration
+
+Merchant Guild
+
+* reroutes caravans
+* changes prices
+* adjusts trade
+
+Frontier Rangers
+
+* increase patrols
+* investigate threats
+* escort civilians
+
+Builders’ Guild
+
+* repairs roads
+* restores bridges
+* rebuilds settlements
+
+⸻
+
+Companion Integration
+
+Companions notice changes.
+
+Examples:
+
+The Ranger comments on disappearing wildlife.
+
+Torren notices deteriorating infrastructure.
+
+Eleanor comments on magical instability.
+
+Companions should react naturally to a changing world.
+
+⸻
+
+Journal Integration
+
+The Journal should update automatically.
+
+Examples:
+
+“The roads north of Ashwyn have become unsafe.”
+
+“The Shrine of Whispering Grove has fallen into neglect.”
+
+“Merchant caravans have ceased travel through Frost Pass.”
+
+“The Crimson Conclave has reportedly withdrawn from several regions.”
+
+The Journal becomes a living historical record.
+
+⸻
+
+Multiple Outcomes
+
+There should rarely be only success or failure.
+
+Most questlines should produce:
+
+Excellent outcome
+
+Good outcome
+
+Mixed outcome
+
+Poor outcome
+
+Disastrous outcome
+
+Every outcome changes the world differently.
+
+⸻
+
+Traditional Combat Difficulty
+
+Retain optional combat difficulty settings.
+
+Examples:
+
+Story
+
+Adventurer
+
+Veteran
+
+Legend
+
+These settings affect only:
+
+* enemy AI
+* damage
+* health
+* tactical challenge
+
+They must never alter:
+
+* World State
+* story outcomes
+* regional changes
+* faction behavior
+* dynamic world systems
+
+Combat difficulty and Living World simulation are independent systems.
+
+⸻
+
+Canonical Design Rules
+
+Every major quest should answer:
+
+If completed:
+
+How does civilization improve?
+
+If ignored:
+
+How does civilization decline?
+
+Who is affected?
+
+What regions change?
+
+Which factions respond?
+
+How does the World State evolve?
+
+If a quest cannot answer these questions, it is not yet fully integrated into the Living World system.
+
+⸻
+
+Developer Notes
+
+The Living World System is one of the game’s defining features.
+
+The player does not simply complete quests—they influence the health and resilience of an entire civilization.
+
+The goal is for every playthrough to produce a different version of the continent. One player may travel through thriving cities connected by safe roads and active trade, while another may find abandoned villages, dangerous wilderness, fractured institutions, and desperate refugees. Neither experience is “more correct”; both are the natural result of the player’s priorities and the world’s response to them.
+
+This system should be referenced by all future quest, region, faction, companion, and world design documents. It is a foundational pillar of the game’s identity and should reinforce the central theme that civilization survives—or falters—through the choices of ordinary people, not because of destiny or a chosen hero.

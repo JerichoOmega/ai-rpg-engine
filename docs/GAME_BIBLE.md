@@ -44,8 +44,10 @@
 34. [Player Character Philosophy](PLAYER_SYSTEM.md) *(separate file)*
 35. [Campaign Design Philosophy](CAMPAIGN_DESIGN.md) *(separate file)*
 36. [World Bible](world/WORLD_BIBLE.md) *(separate file)*
+    - [Living World Difficulty System](design/world_state/README.md) *(separate folder — foundational pillar: difficulty from consequence, World State categories, world reactions, regional escalation, outcome tiers)*
+    - [Faction Bible](world/factions/README.md) *(separate folder — Imperial Council & federal government, guilds, noble houses, military & civil orders, non-human factions, secret organizations, faction relationships & reputation)*
 37. [Playable Races](world/RACES.md) *(separate file)*
-38. [Vampire Houses](world/vampire_houses.md) *(separate file)*
+38. [Vampire Houses](world/vampire_houses.md) *(separate file)* · [Vampire Houses faction folder](world/factions/vampire_houses/README.md) *(separate folder)*
 39. [Goblin Tribes](world/goblin_tribes.md) *(separate file)*
 40. [Religions of Elyndor](world/religions.md) *(separate file)*
 41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*

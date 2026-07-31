@@ -45,7 +45,7 @@ The following factions are confirmed to have separate reputation tracking:
 | **Kingdoms** | The ruling authorities; political standing with government |
 | **Adventurers Guild** | The neutral trade organization; quest access and information |
 | **Mages Guild** | The arcane institution; magical services and Eleanor's faction |
-| **Vampire Houses** | Three separate houses, each tracked independently |
+| **Vampire Houses** | Three Great Houses, each tracked independently with formal tier tables; seven Founding Houses use narrative standing only — see below |
 | **Goblin Tribes** | Three separate tribes, each tracked independently — see below |
 | **Religious Orders** | Four orders, each tracked independently — see below |
 | **Mercenary Companies** | ⚠️ NOT YET DEFINED — specific companies to be established |
@@ -88,6 +88,8 @@ Standing with one order does not transfer to others. The Solari Covenant and the
 Three houses are tracked independently. Standing with one does not transfer to the others — and because the houses are in permanent, low-intensity competition, gaining significant standing with one may create minor penalties with the others who notice the relationship. Each house tracks reputation on the standard -100 to +100 scale, but each uses a distinct tier model that reflects its internal culture. Standing with a house is not just a number; it determines which personnel will deal with you, which information they share, and what they can offer.
 
 > Full house definitions: [`docs/world/vampire_houses.md`](../world/vampire_houses.md)
+
+**Founding Houses:** the seven Founding Houses (Noctis, Valenor, Draven, Seraphe, Morcant, Kaelor, Vesper — see [`docs/world/factions/vampire_houses/HOUSE_PROFILES.md`](../world/factions/vampire_houses/HOUSE_PROFILES.md)) do **not** have implemented reputation tracks. They use narrative standing bands managed by the AI Director until individual tier tables are authored. Writers must not assume system-tracked reputation exists for them.
 
 ---
 

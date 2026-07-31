@@ -1,0 +1,561 @@
+Core Philosophy
+
+Every faction exists to answer one question:
+
+How does this group believe civilization should survive the Long Decline?
+
+No faction should exist simply to be “good” or “evil.”
+
+Every organization should have understandable goals, strengths, flaws, and internal disagreements.
+
+Every faction believes it is helping preserve civilization, even when those methods conflict.
+
+⸻
+
+Tier I — Continental Powers
+
+Implement the following major factions.
+
+⸻
+
+The Imperial Council
+
+Type:
+Continental Government
+
+Government:
+
+Representative council.
+
+No emperor.
+
+No king.
+
+Each major race elects representatives.
+
+Primary Responsibilities:
+
+* Maintain peace
+* Coordinate diplomacy
+* Build infrastructure
+* Maintain trade
+* Protect civilization
+
+Strengths:
+
+* Stable government
+* Professional administration
+* Infrastructure
+* Diplomacy
+
+Weaknesses:
+
+* Political deadlock
+* Regional disagreements
+* Bureaucracy
+* Corruption
+
+View of the Divine Chorus:
+
+Respected protectors of cosmic order.
+
+Not expected to solve mortal politics.
+
+View of the Long Decline:
+
+The greatest threat facing civilization.
+
+Many members underestimate its true cause.
+
+Player Interaction:
+
+Political quests.
+
+Regional disputes.
+
+Council decisions.
+
+Diplomatic missions.
+
+⸻
+
+The Great Library
+
+Type:
+
+Academic Institution
+
+Purpose:
+
+Preserve all knowledge.
+
+Canonical Motto:
+
+“Knowledge belongs to tomorrow. What is forgotten belongs to oblivion.”
+
+Responsibilities:
+
+* History
+* Maps
+* Languages
+* Ancient civilizations
+* Magical research
+* Preservation
+
+View of the Long Decline:
+
+Knowledge lost can never truly be recovered.
+
+Player Interaction:
+
+Historical investigations.
+
+Lore.
+
+Journal integration.
+
+Artifact recovery.
+
+Scholar quests.
+
+⸻
+
+The Covenant
+
+Type:
+
+Continental Religious Organization
+
+Purpose:
+
+Maintain temples.
+
+Protect shrines.
+
+Teach the traditions of the Divine Chorus.
+
+Preserve sacred history.
+
+Structure:
+
+* High Council
+* Regional Clergy
+* Shrine Keepers
+* Temple Wardens
+* Pilgrim Orders
+
+View of the Divine Chorus:
+
+Cosmic caretakers rather than miracle workers.
+
+View of the Long Decline:
+
+An existential and spiritual crisis.
+
+Player Interaction:
+
+Shrines.
+
+Pilgrimages.
+
+Religious festivals.
+
+Historical records.
+
+Community support.
+
+⸻
+
+Imperial Army
+
+Purpose:
+
+Protect civilization.
+
+Defend trade.
+
+Respond to monster threats.
+
+Assist frontier settlements.
+
+Branches:
+
+* Infantry
+* Engineers
+* Scouts
+* Medical Corps
+* Frontier Rangers
+
+⸻
+
+Tier II — Major Institutions
+
+Implement:
+
+Merchant Guild
+
+Smiths’ Guild
+
+Alchemists’ Consortium
+
+Explorers’ Guild
+
+Builders’ Guild
+
+Each faction should include:
+
+Purpose
+
+History
+
+Leadership
+
+Responsibilities
+
+Relationship with the Imperial Council
+
+Relationship with the Great Library
+
+Gameplay interactions
+
+⸻
+
+Tier III — Military & Civil Orders
+
+Implement:
+
+Frontier Rangers
+
+Purpose:
+
+Protect roads.
+
+Scout dangerous regions.
+
+Track monsters.
+
+Guide expeditions.
+
+They know the wilderness better than anyone else.
+
+Our Ranger companion should likely have connections to this organization.
+
+⸻
+
+Shrine Wardens
+
+Independent caretakers of shrines.
+
+Maintain sacred sites.
+
+Protect traditions.
+
+Assist pilgrims.
+
+Document local history.
+
+Strongly influenced by the World State.
+
+⸻
+
+Library Expedition Corps
+
+Field researchers working for the Great Library.
+
+Responsibilities:
+
+* Recover ruins
+* Escort scholars
+* Retrieve artifacts
+* Document discoveries
+
+Major quest-giving organization.
+
+⸻
+
+Tier IV — Noble Houses
+
+Create eight founding noble houses.
+
+Implement:
+
+House Aldenmoor
+
+House Soleth
+
+House Merveth
+
+House Ledric
+
+House Caelum
+
+House Varric
+
+House Thornvale
+
+House Ashwyn
+
+Each House should define:
+
+* Crest
+* Motto
+* Primary influence
+* Political priorities
+* Historic achievements
+* Allies
+* Rivals
+
+No House should be entirely heroic or villainous.
+
+⸻
+
+Tier V — Non-Human Factions
+
+Implement:
+
+Elven Houses
+
+Dwarven Holds
+
+Orc Clans
+
+Goblin Tribes
+
+Design Philosophy:
+
+Avoid fantasy stereotypes.
+
+Each possesses:
+
+Government
+
+Culture
+
+Traditions
+
+Architecture
+
+Military
+
+Relationships with humanity
+
+History
+
+Modern goals
+
+⸻
+
+Tier VI — Secret Organizations
+
+Implement:
+
+The Veiled Order
+
+Purpose:
+
+Quietly investigate forgotten history.
+
+Watch for evidence connected to the Forgotten Eighth.
+
+Protect dangerous knowledge.
+
+Operate mostly in secrecy.
+
+Some Archivists suspect their existence.
+
+Most citizens do not.
+
+⸻
+
+Black Market Network
+
+Illegal trade.
+
+Rare artifacts.
+
+Smuggling.
+
+Information.
+
+⸻
+
+Assassins’ Circle
+
+Small.
+
+Professional.
+
+Political.
+
+Rarely encountered.
+
+Never portrayed as cartoonishly evil.
+
+⸻
+
+Criminal Organizations
+
+Regional:
+
+Bandits
+
+Smugglers
+
+Pirates
+
+Local gangs
+
+Avoid world-spanning criminal empires.
+
+Keep criminal groups regional and believable.
+
+⸻
+
+Faction Relationships
+
+Document alliances and rivalries.
+
+Examples:
+
+Imperial Council ↔ Great Library
+
+Mutual dependence.
+
+Political tension.
+
+⸻
+
+Great Library ↔ Covenant
+
+Mutual respect.
+
+Different interpretations of history.
+
+⸻
+
+Merchant Guild ↔ Builders’ Guild
+
+Close cooperation.
+
+⸻
+
+Explorers’ Guild ↔ Great Library
+
+Constant partnership.
+
+⸻
+
+Frontier Rangers ↔ Imperial Army
+
+Operational independence.
+
+Military support.
+
+⸻
+
+Shrine Wardens ↔ Covenant
+
+Independent but cooperative.
+
+⸻
+
+Veiled Order ↔ Great Library
+
+Officially denied.
+
+Unofficially acknowledged by a select few.
+
+⸻
+
+Reputation System
+
+Every major faction should maintain its own reputation with the player.
+
+Examples:
+
+* Trust
+* Political influence
+* Access to services
+* Discounts
+* Special quests
+* Unique dialogue
+* Story branching
+
+Do not implement a single universal reputation meter.
+
+Different factions should react differently to the player’s choices.
+
+⸻
+
+World State Integration
+
+Every faction must respond dynamically to changes in the World State.
+
+Examples:
+
+Imperial Council
+
+* Redirects aid.
+* Strengthens defenses.
+* Debates emergency measures.
+
+Great Library
+
+* Sends archivists to endangered regions.
+* Prioritizes preserving threatened knowledge.
+
+Covenant
+
+* Organizes relief efforts.
+* Restores shrines.
+* Supports local communities.
+
+Merchant Guild
+
+* Changes caravan routes.
+* Responds to economic instability.
+
+Builders’ Guild
+
+* Repairs roads.
+* Restores bridges.
+* Rebuilds damaged settlements.
+
+Frontier Rangers
+
+* Increase patrols.
+* Investigate new corruption zones.
+* Warn settlements of emerging dangers.
+
+NPC dialogue, quests, settlements, and environmental storytelling should visibly reflect these changes.
+
+⸻
+
+Canonical Design Rules
+
+Every new faction added to the project must define:
+
+* Purpose
+* History
+* Leadership
+* Core Values
+* Allies
+* Rivals
+* View of the Divine Chorus
+* View of the Long Decline
+* Gameplay Function
+* Relationship to the World State
+
+No faction should exist solely as exposition or decoration.
+
+Every organization should contribute meaningfully to the player’s understanding of the world and reinforce the central themes of the project.
+
+⸻
+
+Developer Notes
+
+This Faction Bible should become one of the project’s core reference documents.
+
+Future quests, companions, settlements, political conflicts, dialogue, region design, and environmental storytelling should reference these factions consistently.
+
+The guiding philosophy is that the world feels alive because its institutions continue pursuing their own goals whether or not the player is present. The player influences history, but the continent is sustained by countless ordinary people and organizations working to preserve civilization in the face of the Long Decline.

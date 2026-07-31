@@ -4,6 +4,8 @@
 
 **Module:** `world_state.py`
 
+> **Design canon:** The Living World Difficulty System — what the World State *means* and how the world responds to it — is defined in [`docs/design/world_state/`](../design/world_state/README.md). This file documents the current runtime implementation; the design folder is the target model (ten categories vs. today's single `world_chaos` aggregate).
+
 ---
 
 ## Overview

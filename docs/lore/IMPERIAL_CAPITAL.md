@@ -54,6 +54,8 @@ The monarchy is old enough that its origins are Second Age. The current dynasty 
 
 It is not. But the presentation is convincing enough that questioning it publicly requires either extraordinary evidence or extraordinary protection.
 
+**The federal frame:** the Queen's sovereignty is over the Capital Province. Continental matters — inter-realm law, diplomacy, trade, infrastructure, defense coordination — belong to the **Imperial Council**, the representative body of every recognized kingdom, province, race, and major territory, on which Queen Merveth sits as a voting member without absolute authority over it. See [`docs/world/factions/GOVERNMENT.md`](../world/factions/GOVERNMENT.md) — canonical for the continental structure.
+
 The Royal Government is where the Capital's political Corruption is most concentrated. Ambitious officials have always existed. The Corruption does not create their ambition — it removes the friction that once kept that ambition within manageable limits.
 
 ### Military High Command
@@ -232,3 +234,4 @@ For players who have uncovered early evidence of the Great Forgetting, the Capit
 | July 2026 | Created — Imperial Capital lore document; city districts; institutions (Royal Government, Military High Command, Mages Guild HQ, Major Temples, Universities, gnomish community); Corruption's political expression; campaign significance |
 | July 2026 | Expanded — framing updated to cultural and intellectual center (not only political); Academic Quarter expanded with Museums, Translation Halls, Observatory, Scholar's District; "scholars from every kingdom travel here" established |
 | July 2026 | Added Key Figures section — House Aldenmoor founding account (military opportunism at Age of Sundering collapse; three-generation consolidation); Queen Merveth Aldenmoor (third generation; Corruption amplification: competence turning toward threat suppression); Marshal Edric Voss (Military High Command head; institutional-loyalty amplification; Talos's unresolved history with him established) |
+| July 2026 | Added federal frame note — Queen sovereign of the Capital Province; continental matters handled by the Imperial Council (see `docs/world/factions/GOVERNMENT.md`) |
