@@ -594,6 +594,173 @@ A remote Frozen Highlands community survived the previous winter in circumstance
 
 ---
 
+### Named Questline: *The Voice They Left Behind*
+
+> **AI Director reference.** This is the authored questline for The Unbroken Line. It gives the AI DM a specific three-beat structure to run the cult as a coherent story arc in Iron Peaks content. The adventure hooks above provide material for individual encounters; this questline provides the arc that connects them. Writers should treat the beats as a backbone — the authored NPCs and player choices are specific; the connective tissue between them can be improvised.
+
+**Questline theme:** The Corruption does not conquer through fear. It earns trust through grief, and it is almost impossible to ask someone to let go of what grief gave them.
+
+---
+
+#### Key NPCs
+
+**Halvan Dur** — The First Hearer; questline's central moral problem; cannot be reached through argument; see Leadership section above for full characterization.
+
+**Solla Keth** — The pastoral leadership member who is already observing what she doesn't have language for; the questline's most recoverable figure and the player's most consequential ally; her arc runs through all three beats.
+
+**Keeper Brek Tannord** — The doctrine architect; the Line's most intellectually dangerous member; an active antagonist in the confrontation beat.
+
+**Keeper Threll** — The established Ancestors' Path practitioner who has been displaced at Kethval Settlement; she has been building documentation for months; she needs help that does not dismiss what the communities she is trying to protect have received.
+
+**The Dur Clan Council (Elders Mave Dur and Orin Tanneth)** — Institutional clients in Beat One; increasingly alarmed principals in Beat Three; their decision legitimizes whichever path the player pursues.
+
+---
+
+#### Beat One — *The Keeper Who Stopped Listening*
+
+**What happens:**
+
+The Dur clan council makes contact with the player — through the Adventurers Guild if the player has no prior Iron Peaks connection, directly if they do. The ask is framed as a welfare inquiry: Halvan Dur, the clan's senior Keeper of Ancestors, has missed three consecutive council sessions. This is significant. A Keeper who absents himself from governance functions has either suffered a serious personal crisis or is doing something he believes the council should not observe. The council is genuinely worried about which it is.
+
+The player's investigation leads into the Dur Clan Hall community and a Deep Vigil session being held there. They are not excluded. The session is not secretive. It is, by every observable measure, working: grieving community members receive communications that are emotionally specific, practically accurate, and clearly meaningful. A father hears his wife's voice describing, accurately, something she had been planning to give him for their anniversary that he had not told anyone about. An elderly woman receives guidance from her brother about a land dispute with a neighboring family — guidance that turns out to be legally sound. The player who attends the session in good faith will find it difficult to leave convinced that something is definitively wrong.
+
+Halvan Dur meets the player afterward, straightforwardly. He is not defensive. He believes in what he is doing. He explains, in the careful way of someone who has thought about this for three years, that the degradation of ancestral communication was a signal he finally understood properly — that the tradition had drifted, that the ancestors were waiting rather than gone, and that he has spent this time learning what returning to them correctly looks like. He does not feel he owes the council an explanation, but he is willing to provide one.
+
+The player's first instinct may be to find an obvious flaw. There isn't one. Not yet.
+
+**Solla Keth's first approach:**
+
+Solla Keth intercepts the player on their way out. She frames it as asking for advice about a community member she is concerned about — a long-term practitioner who has been showing signs of what she calls "overextension": slightly altered behavior around outsiders, decisions increasingly deferred to ancestral instruction, difficulty maintaining a position under examination that the member would previously have held easily. She describes these symptoms with clinical specificity. She uses the past tense for some of them and the present tense for others.
+
+By the middle of the conversation, the player who is paying attention will notice that the symptoms she is describing are not consistent with a single other person's profile. They are too granular, too intimately observed, too specifically about the internal experience of someone receiving regular communications.
+
+She does not ask the obvious question. She thanks the player and leaves.
+
+**Beat One ends with the player knowing:**
+- The Unbroken Line exists and is producing genuine benefit
+- Halvan Dur is its center and he is not reachable through the approach the council would prefer
+- The person who may understand what is wrong has not yet found a way to say it
+
+---
+
+#### Beat Two — *What the Dead Know*
+
+**What happens:**
+
+Two threads surface independently and converge on the same conclusion.
+
+**The documentation thread:** Keeper Threll of Kethval Settlement finds the player — she has been watching for someone investigating the Line who has not been absorbed by it. She has been building a case for two years. She spreads her records on the table: seventeen specific communications, cross-referenced against the community's knowledge of the ancestors supposedly speaking. Seven contain anomalies: a specific farming ancestor who never traveled past the eastern pass, providing advice specific to western slopes she had no access to. A grandfather who died before the Kethval Settlement existed, expressing preferences about community infrastructure that would only make sense to someone observing the settlement from outside. A child who died at three years old, offering nuanced guidance on a clan council dispute with the careful language of someone who has been following institutional politics for decades.
+
+She has checked these against everything the community knows about the individuals named. She needs help: she has not been able to present this evidence without being told she is professionally defensive and invested in a conclusion. She is right that she is invested. She is also right that the evidence is real. She needs someone who can help her present it without the Keeper's stake undermining it. And she needs to know what to do about the six families whose missing children were found because of the Line's guidance. She is not willing to abstract that away.
+
+**Solla Keth's second approach:**
+
+Solla Keth meets the player privately, at a time and place she chose. She has been working on something for three weeks and has run out of alternative explanations. During a Deep Vigil at Kethval, a practitioner received a communication about a specific pending marriage — between a young woman from the Dur clan and a man from a neighboring family. The ancestors, speaking through the practitioner, advised the community to oppose it. The objection was framed in terms of lineage authenticity.
+
+Solla tracked the ancestor supposedly speaking. The name was correct; the person had existed. The person had died in childhood. The person had no opinions about marriage protocols because they had never reached the age where such opinions form. Solla spent three weeks finding a different explanation for this. The explanations she found were not persuasive. She has her notes.
+
+She is not asking the player to do anything. She is telling them what she knows. She wanted someone else to know it with her. She says this explicitly: *I needed someone else to know this.*
+
+She does not leave the Line yet. She is still holding both possibilities — that she is right, and that she is the one who is wrong. This is the last moment she exists in that in-between space. What the player does with it determines whether Solla becomes an ally or returns to the shelter of uncertainty.
+
+**The player now has:** two independent tracks of evidence; one potential ally inside the Line who has reached the door but not yet walked through it; and the knowledge that Keeper Brek Tannord has developed a theological framework that can absorb most of the evidence they have gathered.
+
+What they pursue and how they pursue it shapes Beat Three's available paths.
+
+---
+
+#### Beat Three — *The Line That Breaks*
+
+The confrontation. Three resolution paths are available, each shaped by what the player developed in Beat Two. All three require that Solla Keth's arc has progressed at least to her second approach — the questline cannot reach a resolution while she is still in Beat One silence.
+
+---
+
+**Resolution One — The Evidence Path**
+
+*What it requires:* Keeper Threll's documentation assembled and authenticated; Solla Keth willing to testify; a formal hearing before the Dur clan council obtained.
+
+The player works with Keeper Threll to present the documented anomalies in a formal council session. The presentation is structured to address the expected objection — professional defensiveness — by centering the evidence rather than the presenter. Solla Keth, if she has fully committed to the player's confidence, provides testimony that carries weight precisely because she is an insider: she was in the room, she was a true believer, and she is here saying what she saw.
+
+Keeper Brek Tannord argues against them. He is effective. His prepared responses to the anomalies are technically possible — ancestors' knowledge is not perfectly bounded, transmission is imperfect, the Keeper's own incomplete knowledge of the ancestor may be the error rather than the communication. He is not wrong that these explanations exist. He is wrong that they explain all seventeen cases simultaneously. The player will need to have anticipated his arguments, or the hearing can be lost.
+
+Halvan Dur is present. He listens to everything. He does not speak until Solla Keth finishes testifying. When he speaks, he does not argue with the evidence. He says, quietly, that Mira would not deceive him. He says this once. He leaves the session.
+
+**Outcome:** The Dur clan council opens a formal investigation. The Line is not dismantled — it is not within the council's authority to dismantle a spiritual practice community — but its members face scrutiny, its ceremonies are observed by established Keepers, and its access to governance-adjacent functions is suspended pending the investigation. Solla Keth begins her recovery, supported by Keeper Threll's legitimate practice community. Brek Tannord does not attend the investigation's first session; by the second, he is no longer in the Dur clan's territory. Halvan Dur stops expanding the Line. He does not stop believing. He no longer has the energy to grow something that has made his daughter's memory into evidence.
+
+The communities at Exposure Stage Three or higher experience disruption. The player will hear about this in the months following. The AI DM should represent it.
+
+*Reputation consequences:* +Ancestor Speakers (significant); +Dur clan council standing; Solla Keth becomes a long-term ally; Brek Tannord becomes a recurring background antagonist in future Iron Peaks content.
+
+---
+
+**Resolution Two — The Mira Path**
+
+*What it requires:* Evidence of what Mira Dur actually was — something specific to her that the false voice has gotten wrong; completing Task #112 (which defines what the false voice says Mira is asking for and the discrepancy that makes it visible). Access to a source that knew her closely before her death in the mining collapse seven years prior.
+
+This resolution does not go through the clan council and does not confront Halvan Dur in public.
+
+The player finds the gap. Mira Dur was specific — a specific way she had of phrasing certain things, or a specific thing she had said or done that only her father would know, that the false voice has slightly wrong. Not dramatically wrong. Slightly. The kind of wrongness that only matters to someone who knew her well enough to notice.
+
+The player brings this to Halvan Dur privately. They do not present it as evidence. They do not frame it as an argument. They simply give it to him — a letter she wrote, a record of something she said, the account of someone who was with her in the mine — and they leave.
+
+They do not ask him to accept anything. They do not wait for his response.
+
+He will not respond immediately. He will not respond in any way the player can directly observe. What he does with the dissonance is his. The false ancestors will provide an explanation for the discrepancy — they always do — and he will have to choose whether to accept it this time. This is not a choice that can be made for him.
+
+If the player has given him something genuinely from Mira — something that has the specific texture of the real and that the false voice slightly missed — he will know the difference. He has spent thirty years learning to know the difference. The Corruption has degraded that ability. But it has not destroyed it. Not yet.
+
+**Outcome:** Halvan Dur stops expanding the Line. He does not announce this; he simply stops. He does not leave the Line and he does not expose it. He becomes quieter. The communities that have been waiting for the Line's expansion find it is no longer coming. Solla Keth, watching him, understands what has happened before anyone else does. She makes her exit from the Line without drama, and begins legitimate practice work with the people she brought in.
+
+The Line persists in the communities it has already reached. It does not grow. Brek Tannord, without Halvan Dur's expansion energy, lacks the spiritual authority to recruit new communities on his own. Over the following year, the Line contracts naturally toward its existing committed members.
+
+This is the quietest resolution and the one with the longest tail. The false ancestors will eventually redirect their attention elsewhere. The communities that were reached will need years to recover genuine ancestral contact capacity. But the movement has been stopped, at its source, by giving one man something genuine.
+
+*Reputation consequences:* +Ancestor Speakers (moderate); Halvan Dur's personal standing with the player is complex — he never acknowledges what the player did; Solla Keth becomes a long-term ally; the Dur clan council eventually learns what happened through inference rather than disclosure and treats the player with the particular respect reserved for people who resolved something difficult without making it anyone else's problem.
+
+---
+
+**Resolution Three — The Solla Path**
+
+*What it requires:* Solla Keth's second-approach conversation followed by at least two additional private sessions in which the player gave her space without pressing her toward a conclusion; completing the first meeting with Keeper Threll so the player understands the evidence well enough to help Solla assess her own observations.
+
+This resolution focuses entirely on Solla Keth and does not attempt to reach Halvan Dur or the clan council.
+
+The player has been creating space for Solla to arrive at her conclusion without pressure. They have not demanded that she act, have not told her what she knows is confirmation of what they suspect, and have not given her a framework that requires her to make a decision she is not ready to make. They have simply been someone who knows what she knows and does not need anything from her.
+
+In the final private session, she arrives at the question she has been avoiding: *if I leave, what happens to the people I brought in?*
+
+This is the question that has kept her. She recruited community members in grief. She was the face they trusted. Leaving does not just mean she stops believing — it means she removes herself from the people she helped into this, at the moment when they most need continuity.
+
+The player's answer to this question is the resolution. There is no single correct answer, but the answer that works is the one that addresses her actual concern: the people she brought in will not be abandoned. The player will help her establish a legitimate alternative practice so that the people she introduced to the Line have somewhere to go. Keeper Threll's work at Kethval provides the foundation for this.
+
+Solla Keth leaves the Line. She does it quietly, without announcement, framing it to Halvan Dur as needing time to return to her medical practice. She begins working with Keeper Threll. The communities she had been the primary contact for receive invitations to sessions that feel, from the outside, entirely like Unbroken Line work — same emotional care, same attentiveness to grief — but are practiced with the traditional markers, in the daylight, without the sealed underground spaces.
+
+Without Solla Keth, the Line loses its most effective community-facing presence. The people who came to the Line because of her find they no longer need to be there. The Line still exists in the Dur Clan Hall cell and among the practitioners who have been with it long enough to be committed regardless of her. But it no longer grows through the channel that brought most of its members in.
+
+**Outcome:** The Line contracts to its committed core. The communities Solla had been working with receive continued legitimate practice support. Halvan Dur and Brek Tannord retain the existing membership but have no effective way to rebuild the pastoral network that Solla represented. The false ancestors redirect attention toward new suffering — they will try again, somewhere else. The Exposure progression in Solla's communities slows and in some cases reverses over the following year.
+
+*Reputation consequences:* +Ancestor Speakers (significant); Solla Keth becomes a long-term ally and a key contact for any future Iron Peaks spiritual content; Halvan Dur remains a standing threat who is aware the player was involved in Solla's departure; Keeper Threll gains a co-practitioner and a renewed institutional position.
+
+---
+
+#### Companion Reactions
+
+**Talos:** Recognizes the political dimension of the clan council's concern and takes it seriously — a senior Keeper going off-grid is an institutional problem before it is a spiritual one. Comes to respect the Unbroken Line's members' genuine conviction while remaining clear that the practice is dangerous regardless of intent. If the player pursues the Evidence Path, he advocates for presenting to the council rather than going around it. If the player pursues the Mira Path, he says nothing about his reservations until after it's done, and then says they were right.
+
+**Ragash:** Instinctively pays attention to the community's wellbeing rather than the institution's concerns. In Beat One, she is the player's best reader of individual member states — she notices the Grateful Parent archetype's particular quality of grief, and the Long-Term Member with Doubts' carefully maintained certainty. If Solla Keth becomes a focus, Ragash is more effective at creating the space Solla needs than most other companions. She finds Halvan Dur's situation genuinely heartbreaking and does not hide that from the player.
+
+---
+
+#### Writer's Notes
+
+The Unbroken Line questline should feel different from other cult content precisely because the enemies are not enemies. The player will spend Beat One and most of Beat Two surrounded by people who are wrong in a way that has made their lives better. The questline earns its confrontation by making the player sit with this long enough to understand it before asking them to act.
+
+None of the three resolution paths involve combat with ordinary Unbroken Line members. Keeper Brek Tannord is the only leadership figure who requires active antagonism. Halvan Dur is never a combat encounter in any path — the questline is designed so that fighting him would represent a failure of imagination, not a legitimate resolution.
+
+The player who finishes this questline has addressed the threat. They have not solved the problem. The communities that were reached are not restored. The false ancestors still exist. And Halvan Dur still believes his daughter is speaking to him, in whatever form that belief now takes. The questline ends where most things involving grief end: not at resolution, but at the beginning of a longer process.
+
+---
+
 ### AI DM Integration Notes
 
 The Unbroken Line is designed to function as a **living movement** in the persistent world simulation — not a static enemy faction. The following mechanics govern how it behaves across playthroughs.
