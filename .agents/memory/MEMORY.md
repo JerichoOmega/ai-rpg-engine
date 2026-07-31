@@ -1,1 +1,2 @@
 - [Integration pass fixes](integration-pass.md) — catalogue of broken imports + schema mismatches found and fixed in the Task 3 integration pass.
+- [Lore Bible Canon](lore-bible-canon.md) — docs/lore/ is the single source of truth; immutable rules, prohibited actions, file index.

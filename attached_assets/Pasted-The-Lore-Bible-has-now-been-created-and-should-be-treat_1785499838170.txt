@@ -1,0 +1,112 @@
+The Lore Bible has now been created and should be treated as the canonical foundation of the RPG. Going forward, every feature, quest, companion, location, item, codex entry, piece of dialogue, cinematic, and gameplay system must remain consistent with these documents.
+
+This is no longer simply documentation—it is the project’s source of truth.
+
+Your Responsibilities
+
+1. Read every document in /docs/lore/ and understand the relationships between them.
+2. Treat these documents as immutable canon unless explicitly instructed otherwise.
+3. Before implementing new lore, verify that it does not contradict the established canon.
+4. When adding new content, expand the existing world naturally rather than replacing or retconning it.
+5. If a future request conflicts with the Lore Bible, ask for clarification instead of making assumptions.
+
+⸻
+
+Core Design Philosophy
+
+The world should feel ancient, lived-in, and historically layered.
+
+History should feel discovered rather than explained.
+
+Mysteries should remain mysteries.
+
+Not every question deserves an answer.
+
+Players should piece together history through exploration, dialogue, books, ruins, artifacts, and environmental storytelling.
+
+⸻
+
+Narrative Philosophy
+
+Always reinforce these themes:
+
+* Civilization is inherited.
+* Knowledge is humanity’s greatest inheritance.
+* Heroes are shaped by their choices.
+* There is no chosen one.
+* There are no chosen races.
+* Free will is sacred.
+* The Divine Chorus protects existence, not kingdoms.
+* Mortals determine the course of history.
+* Knowledge belongs to future generations.
+
+⸻
+
+Worldbuilding Rules
+
+When creating future lore:
+
+* Avoid exposition dumps.
+* Show history through architecture, artifacts, and culture.
+* Let different cultures interpret history differently.
+* Preserve ambiguity where appropriate.
+* Never over-explain the Architects.
+* Never undermine the mystery surrounding the First Temple.
+* Never create lore that contradicts the established philosophy of the Divine Chorus.
+
+⸻
+
+Great Library Philosophy
+
+The Great Library should influence the entire world.
+
+Archivists should be respected in every nation.
+
+Knowledge should be treated as a treasure equal to gold.
+
+The Library should feel like one of civilization’s greatest achievements.
+
+The Order of Archivists should be viewed as neutral guardians of history rather than servants of governments.
+
+⸻
+
+Future Content
+
+Whenever new kingdoms, factions, races, religions, monsters, companions, quests, or historical events are created:
+
+* Cross-reference the Lore Bible.
+* Maintain historical consistency.
+* Preserve the world’s philosophical themes.
+* Expand the world without contradicting previous documentation.
+
+⸻
+
+Long-Term Goal
+
+The objective is to build a world that feels internally consistent across every system.
+
+Every quest should feel like it belongs in this world.
+
+Every NPC should reflect the culture they were raised in.
+
+Every ruin should tell a story.
+
+Every city should have centuries of believable history.
+
+Every organization should have traditions that evolved over generations.
+
+The player should feel as though they are exploring a civilization that existed long before they arrived and will continue long after their story ends.
+
+⸻
+
+Final Principle
+
+When uncertain, always favor consistency, subtlety, and historical depth over spectacle.
+
+The world itself should feel like the main character.
+
+⸻
+
+I would also ask Replit to add one sentence to the top of the README.md in the Lore Bible, because I think it encapsulates everything you’ve been building:
+
+“This world was not designed around a single story. It is a living history in which countless stories have unfolded, and the player’s journey is simply one chapter in a civilization thousands of years in the making.”

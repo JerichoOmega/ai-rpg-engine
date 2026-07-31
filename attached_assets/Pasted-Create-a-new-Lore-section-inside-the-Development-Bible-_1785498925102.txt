@@ -1,0 +1,206 @@
+Create a new Lore section inside the Development Bible. This is canonical worldbuilding and should be treated as the official source of truth for all future story, dialogue, quests, worldbuilding, and gameplay systems.
+
+⸻
+
+HISTORY_BIBLE.md
+
+Document the historical foundation of the world.
+
+Core Principles
+
+* History belongs to mortals.
+* The Divine Chorus preserves existence, not history.
+* There are no chosen races.
+* There is no chosen one.
+* There are no divine bloodlines.
+* Kingdoms rise and fall because of mortal choices.
+* Heroes become heroes through circumstance, sacrifice, and decisions—not destiny.
+* The Chorus only intervenes when the stability of existence itself is threatened.
+
+⸻
+
+Historical Ages
+
+Create sections for:
+
+1. Age of Awakening
+    * First Song
+    * Divine Chorus awakens
+    * First intelligent races emerge
+    * No organized religion
+2. Age of Discovery
+    * Writing
+    * First cities
+    * First temples
+    * First schools of magic
+    * First Temple constructed
+3. Age of Unity
+    * First great empire
+    * Great Library founded
+    * Universities established
+    * Roads
+    * Trade
+    * Scientific advancement
+    * Forgotten Eighth meets the ordinary mortal
+4. The Long Decline
+    * Corruption spreads slowly
+    * Reality begins breaking
+    * Civilizations collapse
+    * Chorus spends centuries attempting to save the Eighth
+5. The Sundering
+    * Eighth imprisoned
+    * Continents permanently scarred
+    * Magic permanently altered
+    * History forever changed
+6. Age of Restoration
+    * Modern kingdoms rise
+    * Records reconstructed
+    * Knowledge partially lost
+    * People genuinely believe there were always seven Divine Chorus members
+7. Present Age
+    * Beginning of the game
+    * History appears understood but is actually incomplete
+
+⸻
+
+DIVINE_CHORUS_PHILOSOPHY.md
+
+Document these immutable rules.
+
+The Divine Chorus
+
+The Chorus preserves reality.
+
+They do not govern kingdoms.
+
+They do not choose rulers.
+
+They do not manipulate politics.
+
+They do not create chosen heroes.
+
+They do not determine destiny.
+
+They deeply care about mortals but intentionally refrain from controlling mortal history.
+
+Their responsibilities include:
+
+* Primordial Energy
+* Cosmic balance
+* The Final Verse
+* Stability of existence
+* Reality itself
+
+They only intervene directly when the cosmos itself is threatened.
+
+The Forgotten Eighth is the defining historical example of such intervention.
+
+⸻
+
+Free Will
+
+Free will is sacred.
+
+The Chorus believes removing mortal choice would ultimately destroy civilization.
+
+Mortals must inherit both the triumphs and failures of their own decisions.
+
+⸻
+
+IMPERIAL_CAPITAL.md
+
+The Imperial Capital is the cultural and intellectual center of civilization.
+
+It contains:
+
+* Government
+* Great Library
+* Universities
+* Museums
+* Archives
+* Translation Halls
+* Observatory
+* Scholar’s District
+
+The city has served as the intellectual heart of the world for centuries.
+
+Scholars from every kingdom travel here.
+
+⸻
+
+GREAT_LIBRARY.md
+
+The Great Library is one of the oldest and most respected institutions in the world.
+
+Its purpose is preserving civilization’s collective memory.
+
+Entrance Inscription
+
+“Tomorrow inherits only what we preserve today.”
+
+⸻
+
+Order of Archivists
+
+Mission:
+
+Preserve knowledge regardless of politics.
+
+Their loyalty is:
+
+* Truth
+* History
+* Knowledge
+* Future generations
+
+Not kings.
+
+Not kingdoms.
+
+⸻
+
+Official Oath
+
+“Knowledge is not ours to possess, but ours to protect. We preserve today so that tomorrow may understand. Let no truth be hidden through fear, no history be forgotten through neglect, and no voice be silenced by our own hands. We are not the owners of knowledge—we are its stewards.”
+
+After the oath, the Chief Archivist says:
+
+“Then carry tomorrow well.”
+
+⸻
+
+Scholar Traditions
+
+Common sayings include:
+
+“The future remembers only what we choose to preserve.”
+
+“Tomorrow is built upon what we refuse to forget.”
+
+These are not official mottos but traditional sayings passed through generations of scholars.
+
+⸻
+
+Archivist Traditions
+
+Every archivist receives a blank journal upon joining the Order.
+
+The first page contains the official oath.
+
+The remaining pages are filled throughout their life with discoveries, observations, sketches, translations, and research.
+
+Upon death, the journal is returned to the Great Library and permanently archived.
+
+Every archivist ultimately becomes part of the history they dedicated their life to preserving.
+
+⸻
+
+Design Philosophy
+
+The Great Library is not simply a building.
+
+It is a living institution representing humanity’s commitment to preserving knowledge across generations.
+
+Knowledge is viewed as humanity’s inheritance rather than its possession.
+
+All future quests, dialogue, codex entries, NPCs, historians, archivists, universities, and lore systems should remain consistent with this philosophy.
