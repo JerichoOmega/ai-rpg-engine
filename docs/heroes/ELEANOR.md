@@ -322,6 +322,120 @@ The revelation that she is a Harmonic Soul arrives at the same moment she realiz
 
 ---
 
+#### Valdris's Research Files — Specific Content for the Beat Two Discovery Scene
+
+> **AI Director reference.** This section defines what is actually in the files so the discovery scene can be run with precision. The emotional stakes of Beat Two depend on this content being specific, not improvised.
+
+---
+
+**What the Party Finds**
+
+The files are not labeled as a secondary research track. They are bound under an official-sounding title: **"Secondary Field Observations — Rare Elemental Affinities under Anomalous Conditions (Corruption Adjacent)."** The title places them squarely within the Guild's authorized Corruption documentation work. Nothing about the cover is unusual.
+
+What is unusual is the depth of the subject record inside. A routine field behavioral profile runs four to six pages. Eleanor's runs forty-three.
+
+Valdris uses a distinctive notation system — observation numbers cross-referenced to subject record entries using a two-letter prefix and a bracketed date code he developed for his own archiving practice. Eleanor recognizes this format immediately. She has seen it on papers across his desk for years. No one else in the Guild uses it.
+
+He also uses a particular phrase in his observation headings when he considers a finding significant: *"Warrants sustained attention."* Eleanor has heard him say this aloud, in his precise and measured way, when he encountered something that genuinely surprised him. She sees it seven times in her file. She sees it nowhere else in the research bundle.
+
+---
+
+**The Five Key Findings**
+
+**Finding 1 — Harmonic Insulation (Observation Entry 4, early in the file)**
+
+Under Corruption-adjacent conditions, single-element mages experience casting disruption — the Corruption introduces what Valdris terms "affinitive dissonance," a interference between the mage's elemental channel and the Corruption's own distorting presence. The disruption is proportional to the strength of the mage's affinity: the more developed the elemental connection, the more the Corruption can find and press against it.
+
+Eleanor shows no dissonance response. Her casting in Corruption-adjacent conditions is as stable as her casting anywhere else.
+
+Valdris's note, marked *"Warrants sustained attention"*:
+
+> *"Subject does not exhibit the expected affinitive disruption pattern. Initial hypothesis: affinity too undeveloped for the Corruption's standard interference mechanism. This hypothesis is incorrect — subject's raw output far exceeds developmental instability as an explanation. Revised hypothesis: subject's connection to elemental sources does not operate through the same channels that Corruption disruption targets. She is not immune. She is simply not reachable by the usual means. The mechanism of this insulation is the central question."*
+
+**Finding 2 — Perceptual Range and the Awareness Problem (Observation Entry 9, with a marginal note added later)**
+
+Eleanor can sense the Corruption's presence at distances significantly greater than any single-element specialist tested under comparable conditions. She experiences it as a kind of dissonance — a chord that doesn't resolve, a note that shouldn't be there. Valdris documented this first in her early Guild assessments as an interesting anomaly. The secondary file records the rate at which this range expanded as the Corruption's regional spread increased.
+
+The marginal note, added in a slightly different ink — meaning it was written later, after the primary entry:
+
+> *"The range expansion is not linear. It tracks the Corruption's own growth. This is not merely enhanced sensitivity — she is perceiving the Corruption through whatever connection she has to the underlying source. Which raises the reciprocal question, which I have not resolved: if she can sense it with increasing clarity as it grows, is it also becoming increasingly aware of her?"*
+
+He does not answer the question in the file. The marginal note ends there.
+
+**Finding 3 — The Personal Profile (the pages Sera found first)**
+
+Embedded in the middle of the research bundle, between two sections of elemental output data, is a section Valdris titled simply *"Subject Behavioral Record."* It is not a casting log. It is a personal inventory.
+
+It contains:
+- Summaries of Eleanor's family correspondence, drawn from letters she wrote from Guild premises that passed through the institutional mail system Valdris had access to as a senior member
+- Notes on her relationships within the Guild — Fen described as "primary emotional anchor in institutional context; high influence on subject's risk tolerance"; Sera described as "produces performance elevation in subject under competitive framing"
+- Documentation of Eleanor's responses to professional setbacks — two specific instances where her work was criticized by senior members, and Valdris's clinical observations of how she recovered
+- A section on what he calls "subject's trust architecture" — who she trusts, how quickly, what causes her to extend trust, and what would have to happen to damage it
+
+This section has nothing to do with Corruption research. It is a map of Eleanor as a person. It was assembled over years, quietly, by the person she most trusted in the Guild.
+
+**Finding 4 — Theoretical Propagation Risk (Observation Entry 17, near the end, marked *"Warrants sustained attention"*)**
+
+Valdris's theoretical extrapolation from his collected data: what would happen if a Harmonic Soul were directly exposed to a significant Corruption source, rather than merely operating in Corruption-adjacent conditions.
+
+His analysis, written in his characteristically precise academic register:
+
+> *"Single-element corruption produces amplified-and-destabilized versions of the subject's existing affinity. The mechanism is the Corruption's exploitation of a single channel — fire mages become uncontrolled combustion; water mages become drowning. The damage is proportional to affinity strength and is, critically, contained within the affected channel.*
+>
+> *A Harmonic Soul's corruption does not follow this model. There is no single channel to exploit. The connection runs to the source beneath all channels. The Corruption's amplification, in such a case, would not be channeled — it would propagate simultaneously across all elemental expressions available from a unified source. The effect would not be localized. I do not currently have a framework for modeling the scale.*
+>
+> *This is theoretical. I set it down here because someone should set it down. The person most qualified to evaluate the risk is the subject herself. I have not told her."*
+
+**Finding 5 — The Unnamed Correspondent (final pages, partial correspondence record)**
+
+The last section of the bundle contains copies of written exchanges between Valdris and a party he refers to throughout only as *"the circle's inquiry."* The party is never named. The correspondence is framed as academic consultation.
+
+The questions asked of Valdris across twelve exchanges, read in sequence, form a line:
+- *Can a Harmonic Soul's connection to the unified source be externally mapped?*
+- *What conditions would make that connection accessible to a third party?*
+- *Is the harmonic insulation effect (referenced Finding 1) a property of the individual or of the connection itself?*
+- *If the connection rather than the individual — could it be redirected, or used as a conduit, without the subject's awareness or consent?*
+
+Valdris's early responses push back on the ethical framing of these questions. He notes, twice, that the inquiry is moving from academic to operational in ways he finds uncomfortable.
+
+His later responses do not contain these objections.
+
+The final exchange in the file is a question: *"When the subject returns from field commission, will you have completed the behavioral profile we discussed?"*
+
+Valdris's response, the last page in the bundle: *"Yes."*
+
+---
+
+**What the Corruption's Interest Appears to Be**
+
+The files do not state this directly — Valdris is an academic, and the unnamed correspondent is careful. But read together, what the corrupted faction appears to want from Valdris's research is this:
+
+A Harmonic Soul connected to Primordial Magic is simultaneously the greatest threat to the Corruption's spread and its greatest potential asset. A Harmonic Soul who remains herself can perceive the Corruption through the unified source — seeing its pattern, its mechanism, its reach — in ways that elementally-limited mages cannot. That perceptual access is dangerous to the Corruption's project.
+
+But a Harmonic Soul who has been mapped — whose trust architecture is documented, whose emotional anchors are known, whose connection to the unified source is understood well enough to be exploited — is a different proposition. The corrupted faction's interest is not in destroying Eleanor. It is in understanding whether she can be used as a conduit: someone whose connection runs to the source of all elemental magic, turned toward the Corruption's purposes rather than against them.
+
+The research does not conclude whether this is possible. The correspondence suggests that the unnamed circle believes it might be, and that Valdris's behavioral profile was the prerequisite for attempting it.
+
+---
+
+**How Eleanor Recognizes the Files**
+
+Three things, in sequence, before she has read past the first section:
+
+1. The notation format — the two-letter prefix and bracketed date code, which she has seen on papers on his desk for three years
+2. The phrase *"Warrants sustained attention"* on the fourth observation header
+3. A reference in the behavioral profile section to a specific conversation — a moment from her second year at the Guild when she failed a casting assessment and cried, quietly, in a corridor she thought was empty. She did not know Valdris had seen her. The file notes it as *"Subject's response to public professional failure — contained; private distress visible when unobserved."*
+
+She read past that entry. She kept reading. She read all of it.
+
+*What this means for the discovery scene:* Eleanor does not have a dramatic reaction when she recognizes the files. She goes quiet. She keeps reading. The party, if present, will notice that she has stopped responding to things said to her. She is not dissociating — she is finishing. She will not stop until she has read every page. When she is done, she sets the file down precisely and does not say anything for a moment.
+
+What she says first, to whoever is closest: *"He knew what I was before I did."*
+
+She is not asking for a response. She is stating a fact she needs to say aloud before she can think about anything else.
+
+---
+
 **Beat Three — "What Remains"**
 
 *When:* Late campaign. Convergence of the Guild questline and the Fractured Circle's climax.
