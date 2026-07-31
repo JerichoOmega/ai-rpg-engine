@@ -385,14 +385,42 @@ def load_game():
     # WORLD STATE
     # =========================
 
+    # If the save was written in the old flat
+    # format (world_state contents at top
+    # level, no nested "world_state" key),
+    # collect those keys before updating so
+    # legacy data is not silently discarded.
+
+    _WORLD_STATE_KEYS = {
+        "time", "player", "inventory",
+        "quests", "companions", "factions",
+        "regions", "world_conditions",
+        "story_memory", "events", "history",
+        "sessions", "civil_war",
+        "cult_rising", "mages_rebellion",
+        "dragon_alive", "world_chaos",
+        "npcs",
+    }
+
+    if "world_state" in save_data:
+
+        _raw_ws = save_data["world_state"]
+
+    else:
+
+        # Legacy flat format — gather top-
+        # level world-state keys.
+
+        _raw_ws = {
+            k: save_data[k]
+            for k in save_data
+            if k in _WORLD_STATE_KEYS
+        }
+
     world_state.clear()
 
     world_state.update(
-
-        save_data.get(
-            "world_state",
-            {}
-        )
+        _raw_ws
     )
 
     # Backfill any keys absent in pre-refactor
@@ -712,37 +740,38 @@ def validate_save_data(
 
 ):
 
-    required_keys = [
+    # A save file is valid if it is a JSON
+    # object that contains at least a "player"
+    # key (the minimum marker for a game save).
+    # load_game() uses .get() with safe defaults
+    # for every other key, so strict key
+    # requirements here would incorrectly
+    # reject pre-refactor saves that are
+    # perfectly loadable.
 
-        "player",
+    if not isinstance(save_data, dict):
 
-        "inventory",
+        print(
+            "\nSave file is not a"
+            " valid JSON object."
+        )
 
-        "equipment",
+        return False
 
-        "progression",
+    if (
 
-        "skills",
+        "player" not in save_data
 
-        "world_state",
+        and "world_state" not in save_data
 
-        "story_state",
+    ):
 
-        "social_state",
+        print(
+            "\nSave file missing required"
+            " keys — may not be a game save."
+        )
 
-        "dm_state"
-    ]
-
-    for key in required_keys:
-
-        if key not in save_data:
-
-            print(
-                f"\nMissing save key:"
-                f" {key}"
-            )
-
-            return False
+        return False
 
     return True
 

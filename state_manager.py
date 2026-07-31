@@ -170,6 +170,15 @@ def load_game():
         # LOAD INTO MEMORY
         # =========================
 
+        # Snapshot the live state so we can
+        # restore it if validation fails —
+        # prevents a rejected load from
+        # corrupting the current session.
+
+        _snapshot = copy.deepcopy(
+            world_state
+        )
+
         world_state.clear()
 
         world_state.update(
@@ -194,6 +203,13 @@ def load_game():
 
             print(
                 "\nSave validation failed."
+                " Restoring previous state."
+            )
+
+            world_state.clear()
+
+            world_state.update(
+                _snapshot
             )
 
             return False
@@ -328,6 +344,9 @@ def validate_world_state(
 
 ):
 
+    # "npcs" is owned by npc_manager.py and is
+    # not a key in the world_state schema; it
+    # has been removed from the required list.
     required_sections = [
 
         "time",
@@ -341,8 +360,6 @@ def validate_world_state(
         "factions",
 
         "regions",
-
-        "npcs",
 
         "quests",
 
