@@ -776,6 +776,104 @@ At a glance: a location consistent with Order boundary sites — minimal physica
 
 ---
 
+## Part IV — Corruption Encounter Escalation
+
+> **AI DM framework.** Part III's four encounters each carry a pattern-recognition hook. This part defines what the AI DM does with that recognition: how severity, difficulty, and narrative stakes change as a party accumulates **pattern knowledge** — direct experience of corruption-influenced shrine encounters. Without this framework, every corruption shrine plays at first-encounter intensity forever; with it, the world visibly reacts to being understood.
+
+### The Core Principle: Knowledge Cuts Both Ways
+
+Pattern knowledge is a two-edged resource, and both edges must escalate together:
+
+1. **The party sees more.** Each additional encounter makes the tells in Part III's observation tables faster to spot, cheaper to confirm, and richer in information. A party at high pattern knowledge should never re-run the "wait, something is wrong here" beat — they walk in knowing, and the drama moves to what they do about it.
+2. **The party is seen more.** Every cult in [`docs/world/cults.md`](../world/cults.md) has an intelligence apparatus — the Tribunal's informant network, the Severance's forest watchers, the Circle's correspondence chain, the false ancestors' perfect memory of everyone who touches a contact site. A party that keeps turning up at compromised sites *becomes a pattern in someone else's records*. Escalation is not just harder encounters; it is the moment the investigation starts investigating back.
+
+**Counting pattern knowledge:** count *distinct corruption-shrine encounters experienced* (any mix of CS-1 through CS-4). Reports secondhand, rumors, and NPC briefings do not count — the framework tracks what the party has seen with its own eyes. Track per cult *and* in total: the per-cult track governs that cult's response; the total governs how good the party has become at reading corruption generally.
+
+### The Three Tiers
+
+| Tier | Encounters seen | What the encounter is about |
+|---|---|---|
+| **Tier 1 — First Contact** (1 seen) | The encounter is a mystery. Run Part III exactly as written: surface legitimacy, discoverable inconsistencies, the unease of not having a frame. | *"Something is wrong here."* |
+| **Tier 2 — Recognition** (2–3 seen) | The encounter is a confirmation. The party recognizes tells on arrival; new information layers open; the cult notices the break in its pattern and responds off-screen. | *"This is the same thing — and it's organized."* |
+| **Tier 3 — Contest** (4+ seen) | The encounter is a move in a conflict both sides know they are in. Sites are warded, watched, baited, or abandoned ahead of the party; faction responses arrive on-screen; the culminating encounter becomes available. | *"They know we know."* |
+
+**Universal Tier 2 changes (all four tracks):**
+- Observation-table tells are granted on approach rather than requiring investigation; investigation now yields the *next* layer (see per-track escalations below)
+- The relevant religious order's experts (cleric, Grove Keeper, Ancestor Speaker, Archivist) shift from explaining to *asking* — the party has seen more sites than any single NPC; reports now trigger the [REPUTATION] gains at one step higher (small→modest, modest→significant, significant→major)
+- One encounter in the tier should show the cult's reaction to the party's earlier interference (a removed mark restored, a tracked site abandoned, a changed cipher)
+
+**Universal Tier 3 changes (all four tracks):**
+- At least one "shrine" encounter is no longer genuine — it is a response to the party: a trap, a decoy, an observation post, or a negotiation
+- The party's own allies become part of the stakes: informants the party used, NPCs who filed their reports, and shrine keepers who helped them are now visible to the cult through the party's trail
+- The culminating encounter unlocks once the party holds the track's **assembly requirement** (below) — the AI DM should stage a quiet scene where the party can articulate the pattern, mirroring the evidence-assembly convention in [`elyndor/history/the_eighth.md`](../../elyndor/history/the_eighth.md)
+
+---
+
+### Track A — The Ashen Tribunal (CS-1: The Ashen Mark)
+
+**What the marks are (Tier 2 information):** the marked shrines are the Tribunal's **Frontier Circuit** made physical — a courier-and-safehouse lattice connecting the seven Frontier towns where an embedded member operates ([`docs/world/cults.md`](../world/cults.md)). A marked shrine tells a traveling Tribunal operative three things: a safe contact lives nearby, the local "Voice" is active, and the route between marks has been cleansed of watchers. Removing a mark severs a link; the network reroutes within weeks and the replacement mark is warded — scraping it now triggers a signal the party can detect only if warned.
+
+**Tier 2 escalation:** the party's descriptions reach a Covenant cleric who matches the geographic pattern against parish records — and finds that every marked shrine sits within a day's walk of a disappearance or "voluntary relocation" the Covenant never investigated. The Tribunal, noticing marks disturbed in sequence, changes its secondary symbol; the party must re-learn the tell, and the *change itself* is information (the network can be forced to spend effort).
+
+**Tier 3 escalation:** one "marked shrine" is bait — a legitimate-looking site with fresh Tribunal marking and an observation post. How the party handles it determines whether they meet the local cell as ambushers or as watchers. Simultaneously, any Covenant cleric who filed the party's reports receives a quiet visit; players learn their information channel has become a liability for the people in it.
+
+**Assembly requirement:** locations of four or more marks plus one identified operative (via CS-1's "investigate the source" option or the bait site).
+
+**Culminating encounter — Reading the Lattice:** assembled, the marks resolve into routes converging on one Frontier town — a live cell meeting with a regional "Voice" present. The party arrives with the initiative for the first time: they can observe and map the whole cell, disrupt the meeting, feed false information into the network, or bring evidence to the one audience that can act on it institutionally (the Covenant hierarchy — or the Inquisitors, who have their own interest in the Tribunal's existence; see [`docs/world/covenant_inquisitors.md`](../world/covenant_inquisitors.md)). **Boundary:** the culmination exposes a cell and the Circuit's shape — it does not reach Voreth Callanus or the Purified Hold, which remain questline-scale content per [`docs/world/cults.md`](../world/cults.md).
+
+---
+
+### Track B — The Severance (CS-2: The Severance Grove)
+
+**What the alterations are (Tier 2 information):** the selective plant removal and piled deadwood are not sloppiness — they are *doctrine in progress*. Each altered grove has been converted from a place of listening into a place of preparation: calming flora removed because the Severance now reads calm as sedation, fuel gathered because their rites have begun to involve controlled burning of corrupted material. Sequenced by carving-date, the groves show the doctrine hardening — earliest sites are barely altered; the newest are unrecognizable as Old Ways work.
+
+**Tier 2 escalation:** Grove Keepers who receive the party's reports stop treating the alterations as vandalism and start treating them as a schism made visible — and they split along exactly the fault line in [`docs/world/cults.md`](../world/cults.md): some want the sites reclaimed immediately, some warn that confronting the Severance at a grove they consider sacred is how the first practitioner-on-practitioner blood gets spilled. The Severance, for its part, notices restoration work and responds without violence *once*: a party-restored grove is found re-altered, with a message in Old Ways notation — *"You tend what is already dead. Help us or stand aside."*
+
+**Tier 3 escalation:** the location markers (CS-2's hook) begin appearing at *unaltered* groves — the Severance is expanding, and the party's map of carvings now predicts which sites are next. A watched grove yields the track's decisive observation: not all Severance members carve alike. Two notations are in use — the older one, and a newer variant whose additions no practitioner recognizes, appearing only at the most radical sites. The party is watching Brynn's faction diverge from Hael Mossward's in real time.
+
+**Assembly requirement:** three or more altered groves sequenced by date, plus the two-notation observation.
+
+**Culminating encounter — The Gathering:** the secondary gathering site from CS-2's hook, at tier 3, is no longer a meeting the party spies on — it is the meeting where the Severance's factions argue over the newer notation openly. The party (arriving invited via Hael's faction, undetected, or announced) witnesses the movement's live fracture and can weight it: evidence that Severance actions have preceded accelerated corruption (the lever cults.md defines for reaching rank-and-file) lands differently delivered here, in front of everyone, than in any private conversation. **Boundary:** the culmination stages the fracture; whether Brynn is confronted, whether Hael prevails, and the Severance's fuller methods and reach remain separately authored content.
+
+---
+
+### Track C — The False-Ancestor Phenomenon (CS-3: The False Ancestor Site)
+
+**What the sites share (Tier 2 information):** compared across encounters, the false contacts are *consistent with each other* in ways genuine ancestors never are. Different sites, different lineages, different clans — but the same slightly-wrong cadence, the same immediate responsiveness, the same pattern of guidance that is accurate about the physical world and subtly directive about the social one. Genuine ancestral contact is as varied as the dead were in life. This uniformity is the single most important diagnostic the party can bring to an Ancestor Speaker, and it is only visible with multiple sites' worth of documentation (CS-3's "document what the false ancestors say" option is what makes this tier reachable).
+
+**Tier 2 escalation:** Speakers receiving the party's documentation begin cross-checking against the structural markers of the **Keeper's Discernment** ([`docs/world/cults.md`](../world/cults.md)) — and confirm the party's uniformity finding fits the counterfeit's known shape. The phenomenon reacts to scrutiny in kind: at the next site the party visits, the contact *addresses them* — by deed if not by name ("the ones who seal doors"). The false voices' perfect memory now includes the party.
+ 
+**Tier 3 escalation:** sites the party has sealed or exposed go quiet — and contact *relocates*, surfacing at previously clean sites closer to communities that trust the guidance. The party's interference is not stopping the phenomenon; it is steering it, and Speakers begin asking the harder question of whether exposure without a replacement for what the voices provide does more harm than good (the dilemma [`docs/world/cults.md`](../world/cults.md) defines as the phenomenon's core). At tier 3 a contact may offer the party a *trade* — verifiably true, useful information in exchange for being left alone at a named site. Whatever the party does with the offer, the offer itself is the escalation: the phenomenon negotiates, which means it plans.
+
+**Assembly requirement:** documented contact records from three or more sites plus a Speaker's Discernment-based confirmation of the uniformity finding.
+
+**Culminating encounter — The Quiet Consultation:** with the assembly in hand, a senior Ancestor Speaker convenes a formal, witnessed Consultation at a *clean* deep shrine, using the party's documentation to attempt something the tradition has never done: put questions to genuine ancestors *about* the counterfeit. What comes back — counsel, fragments, silence, or the counterfeit itself intruding on the tradition's most protected channel — should be shaped by campaign state, and the last outcome is the framework's ceiling: the phenomenon demonstrating it can now reach even here. **Boundary:** this culmination establishes the phenomenon's scope and intelligence. How the shrine pattern connects onward to the Unbroken Line as a discoverable organization — names, communities, Halvan Dur — is separately authored content ([`docs/world/cults.md`](../world/cults.md)); the AI DM must not shortcut the party from this encounter directly to the cult's leadership.
+
+---
+
+### Track D — The Threshold Circle (CS-4: The Threshold Rift)
+
+**What the rifts share (Tier 2 information):** the scripted communications at different rift sites are not identical — they are *versioned*. Compared across sites, the invitations show revision: phrasing tightened, appeals adjusted, the grief-targeting sharpened from generic loss toward specific kinds (a dead child at one site, a dead spouse at another). Someone is A/B-testing an invitation to the bereaved, and the documents' Order notation means that someone is inside the Veiled Order's own methods.
+
+**Tier 2 escalation:** Archivists who receive the party's comparison react with the Order's most severe internal posture — this goes above the local house immediately. The party learns the modified circle-and-line symbol has been *reported before*, and the reports went into a correspondence channel from which nothing came back (the Circle's own network intercepting scrutiny of the Circle, per its "protecting the study" method in [`docs/world/cults.md`](../world/cults.md)). The party's reports are now the first documentation on this phenomenon known to have *escaped* that filter.
+
+**Tier 3 escalation:** the Circle, methodical as ever, does not send threats — it sends a *scholar*. A polite Order member arrives wherever the party's reports have pooled, tasked with evaluating "irregular claims about boundary sites," equipped with genuine credentials and a quietly wrong agenda: to determine what the party knows and who they have told. The rifts themselves escalate physically — the newest site the party finds is destabilized in the CS-4/VO-S2 sense, the boundary widened past what the site's own left-behind documentation says was intended. The Circle's control is slipping, and its own notes admit it.
+
+**Assembly requirement:** documents or transcripts from three or more rift sites (the versioning evidence) plus the modified symbol's provenance from an Archivist.
+
+**Culminating encounter — The Unfiltered Report:** the assembly gives the party the one thing the Circle's interception network cannot survive: a documented, multi-site, independently-witnessed case that can be delivered *in person* past the compromised correspondence chain. Delivering it — choosing to whom, since the party cannot be certain which Order figures are clean — is the encounter. **Boundary:** the culmination breaks the Circle's information seal; everything that follows (Pell Ashwick, Tessaly Vorn, Soles, the Deep Reading Site) runs through the authored questline [**The Acceptable Risk**]([`docs/quests/threshold_circle_questline.md`](../quests/threshold_circle_questline.md)), which this framework feeds but must not duplicate or pre-empt.
+
+---
+
+### Cross-Track Rules
+
+- **Mixed knowledge counts for reading, not for responses.** A party that has seen one of each CS type is tier 3 at *recognizing corruption* (total: 4) but tier 1 with every individual cult — they read sites expertly and are not yet on anyone's list. Per-cult responses trigger only on that cult's count.
+- **Escalation does not reset.** Cults do not forget. Long gaps may slow a response but never rewind a tier.
+- **Restoration remains possible at every tier.** Part III's rule that corrupted shrines can be reclaimed holds throughout; what escalates is the cost and the attention it draws, never the possibility.
+- **The tracks may cross-illuminate but not merge.** An expert NPC from one tradition can help interpret another track's pattern (as CS-1's hook already allows) — but the four phenomena stay distinct. There is no authored "all four cults are coordinating" reveal; what they share is upstream, and that connection belongs to the campaign's central revelation arc, not to shrine encounters.
+
+---
+
 ## Encounter Frequency and Distribution
 
 | Encounter Type | Frontier | Great Forest | Iron Peaks | Frozen Highlands | Sol Kareth | Capital Province |
@@ -822,4 +920,5 @@ At a glance: a location consistent with Order boundary sites — minimal physica
 
 | Date | Change |
 |---|---|
+| 2026-07-31 | Added Part IV — Corruption Encounter Escalation: three-tier pattern-knowledge framework (1 / 2–3 / 4+ encounters seen), per-cult escalation tracks for the Ashen Tribunal, Severance, false-ancestor phenomenon, and Threshold Circle (new information layers, faction responses, assembly requirements, culminating encounters with scope boundaries), and cross-track rules |
 | 2026-07-31 | Named recurring pilgrim NPCs added for all four religions in [`../npcs/religious_travelers.md`](../npcs/religious_travelers.md); overview note added directing the AI DM to cast them into the anonymous pilgrim roles. |
