@@ -286,8 +286,56 @@ See: [`docs/known_issues.md`](docs/known_issues.md) BUG-002.
 
 ---
 
+## Decision 016 — Predefined Hero Roster for Phase 1; Custom Hero Deferred to Phase 2
+
+**Decision:** The initial version of the game uses a roster of **predefined, story-driven heroes**. Players select one hero before starting a campaign. A fully customizable Custom Hero system is explicitly deferred to Phase 2 and is out of scope for the current build.
+
+**Source document:** [`docs/PLAYER_SYSTEM.md`](docs/PLAYER_SYSTEM.md)
+
+**Phase 1 — Predefined Hero Roster (current scope):**
+
+Five confirmed playable heroes, each with a unique identity, backstory, class, equipment loadout, and authored story dialogue:
+
+| Hero | Race | Class |
+|---|---|---|
+| Talos | Elf | Knight |
+| Eleanor | Human | Mage |
+| Ragash | Orc | Houndmaster |
+| Ronan | Human | Werewolf |
+| Torren | Human | Master Blacksmith |
+
+**Phase 2 — Custom Hero System (future; not designed):**
+- Character name, appearance, class, and background selection
+- No UI, screens, or code for this system should be built in Phase 1
+
+**Reason:** Predefined heroes enable deep companion interactions, meaningful story integration, authored dialogue, and polished per-hero writing. A custom character system would require content to accommodate an unknown identity — significantly increasing content scope and reducing narrative depth for Phase 1.
+
+**Alternatives Considered:**
+- Custom hero from the start — rejected; too broad a content surface before core systems are stable; narrative depth suffers
+- Hybrid (pick class + predefined identity) — not adopted; predefined heroes are preferred for Phase 1 story integration
+
+**Trade-offs:**
+- ✅ Deeper story integration per hero; polished writing; companion dialogue can reference the hero's known history
+- ✅ Smaller scope for Phase 1; each hero's combat kit can be designed as a coherent whole
+- ❌ Players cannot project their own character onto the protagonist in Phase 1
+- ❌ Adds Phase 2 migration burden if Custom Hero requires different code paths
+
+**Architecture Requirement:**
+The hero framework must support both predefined and custom heroes **without a major rewrite** when Phase 2 arrives. In practice:
+- Do not hardcode hero name, class, or backstory as constants
+- Store hero identity in data (`world_state` or a hero config dict), not inline strings
+- Keep class selection, stat initialization, and equipment loadout data-driven
+- A custom hero must eventually be loadable through the same code path as a predefined hero
+
+**Rule:** Do not write code that assumes every playable character is always predefined. Do not begin Custom Hero UI or character-creation flows until Phase 2 is explicitly scoped.
+
+**Current Status:** [CONFIRMED — design direction] Phase 1 predefined roster is active. Phase 2 is deferred with no design yet.
+
+---
+
 ## Revision History
 
 | Date | Change |
 |---|---|
 | July 2026 | Initial document created from codebase analysis |
+| July 2026 | Decision 016 added — Predefined Hero Roster (Phase 1) and Custom Hero deferral (Phase 2) |
