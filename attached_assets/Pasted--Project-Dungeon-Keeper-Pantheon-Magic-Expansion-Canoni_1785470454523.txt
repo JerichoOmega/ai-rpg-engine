@@ -1,0 +1,178 @@
+# Project Dungeon Keeper - Pantheon & Magic Expansion (Canonical Update)
+
+Analyze the entire repository before making any changes.
+
+Pay particular attention to:
+
+- docs/world/religions.md
+- docs/world/WORLD_BIBLE.md
+- docs/characters/ELEANOR.md
+- docs/heroes/ELEANOR.md
+- docs/systems/dynamic_story_arcs.md
+- Any existing documentation referencing Primordial Magic, the Divine Chorus, elemental magic, or the Mages Guild.
+
+Do NOT overwrite existing canon.
+
+Expand the existing documentation.
+
+---
+
+# GOAL
+
+Deepen the world's mythology without changing the established lore.
+
+The current Primordial Magic and Divine Chorus framework remains canonical.
+
+This update expands it.
+
+---
+
+# PRIMORDIAL MAGIC
+
+Primordial Energy is the source of all magic.
+
+The Ancient God is connected to its origin.
+
+The Divine Chorus did not create magic.
+
+Instead, each member of the Divine Chorus became the Divine Steward of one aspect of Primordial Energy.
+
+Each god taught mortals how to safely channel their aspect.
+
+The Mages Guild studies these teachings academically.
+
+Temples preserve them spiritually.
+
+Both are valid paths to understanding magic.
+
+---
+
+# THE DIVINE CHORUS
+
+Expand the Divine Chorus into a fully realized pantheon.
+
+Each deity should have:
+
+- A unique proper name.
+- An ancient honorific title.
+- An elemental stewardship.
+- A central virtue or philosophy.
+- A recognizable personality.
+- Sacred symbols.
+- Sacred animals.
+- Sacred plants.
+- Festivals.
+- Traditional prayers.
+- Temple architecture.
+- Clergy traditions.
+- Relationships with the other members of the Divine Chorus.
+
+Avoid generic names such as "God of Fire."
+
+Instead use names that sound ancient and become naturally associated with their element through worldbuilding.
+
+Examples of titles:
+
+"The First Flame"
+
+"Keeper of the Endless Tide"
+
+"Heart of the Mountain"
+
+"Voice of the Tempest"
+
+Titles should sound legendary rather than descriptive.
+
+---
+
+# DIVINE PHILOSOPHY
+
+Each deity represents more than an element.
+
+Examples:
+
+Fire:
+Passion
+Sacrifice
+Courage
+Renewal
+
+Water:
+Wisdom
+Healing
+Adaptation
+Patience
+
+Earth:
+Duty
+Endurance
+Tradition
+Family
+
+Storm:
+Freedom
+Discovery
+Change
+Determination
+
+The gods should influence culture as much as magic.
+
+---
+
+# ELEANOR
+
+Expand Eleanor's personal quest.
+
+Throughout the story she demonstrates the impossible ability to harmonize multiple elemental aspects.
+
+Neither Eleanor nor the Mages Guild understands why.
+
+Late in her companion quest she discovers an ancient sanctuary connected to one of the Divine Chorus.
+
+There she learns the truth.
+
+She is a Harmonic Soul.
+
+This is an exceptionally rare state in which an individual is naturally attuned to Primordial Energy itself rather than a single elemental aspect.
+
+The gods did not grant this gift.
+
+They simply recognize what she already is.
+
+Because of this...
+
+She perceives harmony where other mages perceive separation.
+
+She becomes capable of combining elemental magic in ways believed impossible.
+
+This revelation explains her abilities without making her a chosen savior.
+
+Her greatest strength is understanding rather than raw power.
+
+---
+
+# MAGIC DESIGN
+
+Expand the repository with a dedicated Magic Bible.
+
+Include:
+
+- Primordial Energy
+- Divine Stewardship
+- Elemental Affinity
+- Magical Education
+- The Mages Guild
+- Temple Magic
+- Magical Crystals as natural conductors and reservoirs of Primordial Energy
+- Ancient Artifacts
+- Corruption's influence on magic
+- Limitations of spellcasting
+- Why most mages cannot combine elemental aspects
+
+---
+
+# LONG-TERM GOAL
+
+Project Dungeon Keeper's mythology should feel ancient, internally consistent, and deeply interconnected.
+
+Magic, religion, history, companions, factions, and the main story should all trace back to the same foundational truths while preserving mystery and leaving room for future expansion.

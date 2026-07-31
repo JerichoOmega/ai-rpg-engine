@@ -134,12 +134,20 @@ Ancient First Age sanctuaries dedicated exclusively to one god still exist. Thes
 | **Virtues** | Courage, justice, the making of things that endure |
 | **Followers** | Rulers, soldiers, smiths, civic leaders; most closely associated with the Solari Covenant |
 | **Symbol** | A rising sun with eight rays; a flame that does not cast shadow |
+| **Sacred Animals** | Eagle (clarity of vision, height, the surveying eye of leadership); Lion (courage and sovereignty without cruelty) |
+| **Sacred Plants** | Sunflower (faces the light without flinching; follows purpose); Torch lily (flame-colored blooms; grows where others have burned) |
+| **Festivals** | **The Kindling** (early spring — civic leaders light new fires marking new endeavors; the Covenant performs public rites of purpose); **The Long Watch** (winter solstice — fires are kept burning through the longest night; letting them go out is considered ill omen) |
+| **Traditional Prayer** | *"Let my purpose be clear. Let my will be steady. Let what I build outlast the doubt."* — said before civic decisions, before battle, before beginning something significant |
+| **Temple Architecture** | Tall, open to the sky; spires oriented east to catch dawn light; a central fire always burns at the altar and may never be extinguished; columns rather than enclosed walls where climate allows; all interior surfaces angled to direct firelight upward |
+| **Clergy Traditions** | Dawn prayers facing east, performed in view of the rising sun; new initiates spend one night without fire to understand what Solaryn provides before they can tend the flame; senior clergy maintain the Covenant's perpetual fires; Solaryn's priests are expected to lead by visible example — a cleric who preaches courage but lives timidly is considered dishonored |
 | **Ancient Temple** | The Radiant Spire — in The Capital Province; the Covenant's most sacred pilgrimage destination |
 | **Sacred Relic** | **Solaryn's Ember** — a fragment of fire that has burned since the First Age; said to be a piece of the original flame that became civilization itself; does not consume what it touches unless Solaryn wills it |
 
 **Character:** Solaryn is not a god of warmth. He is a god of fire as force — as the thing that clears away what is old to make room for what will be built. His Ember is not a comfort. It is a purpose. Smiths and soldiers alike pray to him not for safety but for clarity: the burning away of hesitation.
 
 The Solari Covenant's institutional focus on Solaryn — and their claim that he represents the whole of right civilization — is a theological overreach that other Chorus traditions have long viewed with skepticism. Solaryn is one essential part of creation. Not the most essential.
+
+**Relationships within the Chorus:** Deep respect for Tharok — fire and earth together produce civilization; the two aspects are practically inseparable in any culture that builds. Genuine respect for Sylvara, complicated by fire's destructive relationship with the living world; they have what the Chorus traditions call an ancient understanding — Solaryn clears, Sylvara grows, neither apologizes for what they are. Respectful distance from Morvel; light and shadow define each other but do not share space. Solaryn considers Zephyros necessary and occasionally exasperating.
 
 ---
 
@@ -154,12 +162,20 @@ The Solari Covenant's institutional focus on Solaryn — and their claim that he
 | **Virtues** | Compassion, care for the suffering, the grace of return |
 | **Followers** | Healers, midwives, those who work with the dying, physicians, those in grief; common among coastal communities |
 | **Symbol** | A wave that returns to shore; a teardrop encircling a spark of life |
+| **Sacred Animals** | Heron (patient stillness; strikes with precision when the moment arrives); Otter (adaptation; playfulness even in difficulty; thrives in water without being consumed by it) |
+| **Sacred Plants** | Water lily (beauty that emerges from depth and returns to it); Willow (grief that bends in every wind without breaking; roots that hold even in flood) |
+| **Festivals** | **The Returning** (autumn — honoring those who have died in the past year; not mourning but witnessing; stories are told, not elegies delivered); **The Thaw** (early spring — life returning after winter; healing rituals, blessing of new births, renewal of healing practices) |
+| **Traditional Prayer** | *"Let me endure what must be endured. Let my hands be gentle enough to help."* — said before healing work, before sitting with someone in grief, before delivering difficult news |
+| **Temple Architecture** | Low to the ground; built near water or with reflecting pools at the center; curved walls rather than angular; openings that admit rain; interiors emphasize stillness and shadow; the sound of water is considered part of the sacred space |
+| **Clergy Traditions** | Neressa's healers are trained to sit with suffering before attempting to fix it — to witness first, then act; the tendency to immediately solve is considered a spiritual weakness in Neressa's tradition; clergy carry a small vial of blessed water at all times; grief rites led by Neressa's priests are practiced across many cultures even where her name is not formally used |
 | **Ancient Temple** | The Sanctuary of Returning Tides — an ancient site on a rocky coast, half-submerged at high water |
 | **Sacred Relic** | **Neressa's Tear** — a drop of water that never evaporates, held in a crystal vial; healers believe that touching it to a wound draws Neressa's attention |
 
 **Character:** Neressa is the most consistently present of the Chorus in daily life — because suffering is daily life. She is not prayed to for victory. She is prayed to when people do not know how they will bear what they are carrying. Her theology is not optimistic in the conventional sense: she does not promise that things will be fine. She promises that people can endure what seems unendurable, because they have before.
 
 The grief rites practiced in many cultures — including elements of The Old Ways — carry echoes of Neressa's theology even where her name is not used.
+
+**Relationships within the Chorus:** Closest to Sylvara — healing and growth are intertwined at the root; water makes growth possible, and Sylvara's living world produces the plants that heal. Deep and careful partnership with Morvel — Neressa's healers and Morvel's witnesses often work together at deathbeds; Neressa eases the crossing, Morvel bears witness to it; the two traditions share more theology than either publicly acknowledges. Complicated relationship with Solaryn — fire drives people toward action before they have healed; both are necessary, but their practitioners often disagree about timing.
 
 ---
 
@@ -174,12 +190,20 @@ The grief rites practiced in many cultures — including elements of The Old Way
 | **Virtues** | Patience, skill, the refusal to do shoddy work |
 | **Followers** | Blacksmiths, stonemasons, architects, miners, engineers; deeply revered among dwarves of the Iron Peaks |
 | **Symbol** | An anvil split by a single crack that did not break it; a mountain with deep roots visible |
+| **Sacred Animals** | Bear (endurance; strength that does not need to be demonstrated; patience before it acts); Tortoise (protection; patience; the understanding that slow and steady is not weakness) |
+| **Sacred Plants** | Oak (endurance through centuries; roots as deep as the canopy is wide; shelter for what lives beneath it); Stonecress (grows in rock faces where nothing should grow; persists where others cannot) |
+| **Festivals** | **The First Strike** (communal marking of a major construction or craft endeavor; the community gathers for the first strike of hammer or the laying of the first stone); **The Long Fire** (midwinter — fires burn all night in workshops; craftsmen work through the night on something significant; the act of working through darkness is itself the devotion) |
+| **Traditional Prayer** | *"Let what I build outlast my name."* — said before beginning significant work; craftsmen across cultures murmur variations of this regardless of formal devotion |
+| **Temple Architecture** | Low, massive, thick walls; interior often partially underground or embedded in bedrock; dwarven halls are the most faithful expression of this tradition; no decoration for its own sake — every carved detail has meaning and function; the Hall of First Forging contains no unnecessary stone |
+| **Clergy Traditions** | Tharok's clergy are trained craftsmen; they do not bless work from a distance — they participate in it; a Tharok priest who cannot work with their hands is considered spiritually incomplete; the tradition holds that prayer to Tharok is most genuine when performed through sustained skilled labor; initiates must complete a significant work project before ordination |
 | **Ancient Temple** | The Hall of First Forging — deep within the Iron Peaks; dwarven legend holds this is where the first tools were made |
 | **Sacred Relic** | **Tharok's Anvil** — a flat stone the size of a hand that is indestructible by any force yet tested; craftsmen touch it before beginning significant work |
 
 **Character:** Tharok is the most dwarven of the Chorus by cultural association, though dwarves themselves would say it differently — that Tharok chose to make himself known through stone because stone is honest. His theology is entirely about work: the ethical obligation to make things that will last, to not cut corners, to not build something you know will fail and let someone else discover it.
 
 Dwarven ancestor veneration (The Ancestors' Path) and devotion to Tharok are deeply intertwined in Iron Peaks culture. To honor your ancestors is to honor what they built; to honor Tharok is to build things worthy of your descendants.
+
+**Relationships within the Chorus:** Natural alliance with Solaryn — fire and earth together produce civilization; the smith's forge requires both; their traditions rarely disagree on practical matters. Deep respect for Eldris — craft and legacy are inseparable; Tharok builds the things that Eldris holds across generations; dwarven practice blends both so thoroughly that separating them is a theological exercise. Polite but substantive disagreement with Zephyros — permanence and change are in productive tension; Tharok's tradition holds that some things should not change, while Zephyros's holds that nothing can be held against the wind forever; both are correct, and the argument is ongoing.
 
 ---
 
@@ -193,13 +217,21 @@ Dwarven ancestor veneration (The Ancestors' Path) and devotion to Tharok are dee
 | **Domain** | Travel, freedom, change, possibility, the courage to leave what is familiar |
 | **Virtues** | Openness, adaptability, the wisdom that comes only from moving through the world |
 | **Followers** | Travelers, merchants, sailors, scouts, anyone who has left home by choice or necessity |
-| **Symbol** | A spiral of wind surrounding a open road; a compass without a fixed north |
+| **Symbol** | A spiral of wind surrounding an open road; a compass without a fixed north |
+| **Sacred Animals** | Swallow (long migration; returns home by instinct regardless of distance); Swift (never lands; said to sleep on the wind; lives entirely in motion) |
+| **Sacred Plants** | Dandelion (seeds carried by any wind to root anywhere; adaptable, persistent, found everywhere); Meadow grass (bends to every wind without breaking; holds its ground while remaining moveable) |
+| **Festivals** | **The First Road** (opening of spring travel season; travelers make offerings before setting out; merchants bless their goods; the tradition is observed at crossroads and city gates more than in temples); **The Crossroads Festival** (celebrated wherever two significant roads meet; merchants, pilgrims, and wanderers gather; no fixed date — it happens when enough travelers converge) |
+| **Traditional Prayer** | Often improvised — Zephyros's clergy teach that the best prayer to the Wandering Wind is specific to this moment, this crossroads, this departure. The traditional form: *"I am here. I am going. Let the road be honest."* |
+| **Temple Architecture** | No walls, or walls open on all sides; elevated locations preferred — mountain passes, hilltops, clifftops above harbors; the High Crossing is a marked stone at a windy pass with grooves worn by generations of hands; nothing is built that blocks the wind |
+| **Clergy Traditions** | Zephyros's clergy travel; they do not maintain permanent temples; they are recognized by their symbol and their willingness to stop at any crossroads; a Zephyros priest who has not undertaken a significant journey in a year is considered to have lost the thread of their devotion; they carry maps and add to them throughout their lives |
 | **Ancient Temple** | The High Crossing — a windswept pass through a mountain range; the site is open to the sky; there are no walls |
 | **Sacred Relic** | **Zephyros's Breath** — a hollow bone flute carved from a creature that no longer exists; when played by a genuine traveler at a crossroads, it produces a note that carries further than any wind |
 
 **Character:** Zephyros is the easiest of the Chorus to approach because his theology asks for nothing except motion. You do not pray to him at a shrine. You pray to him at the beginning of a journey. He is the god of the moment between where you were and where you are going — the possibility that lives in not yet having arrived.
 
 Most people who do not consider themselves religious will still murmur something to Zephyros before a long road. It costs nothing and the wind is unpredictable anyway.
+
+**Relationships within the Chorus:** Natural affinity with Sylvara — wind carries seeds; the living world's spread depends on movement; they work together at the level of the world's basic systems. Genuine warmth toward Neressa — wind and water shape landscapes together; storms require both; there is something like fondness in how their traditions describe each other. Productive philosophical disagreement with Tharok — change and permanence are both necessary; neither is wrong; the argument continues. Considers Solaryn necessary but occasionally too certain.
 
 ---
 
@@ -214,12 +246,20 @@ Most people who do not consider themselves religious will still murmur something
 | **Virtues** | Stewardship, patience, the understanding that all things are connected |
 | **Followers** | Farmers, foresters, healers who work with plants, elven communities, those who practice The Old Ways |
 | **Symbol** | A tree whose roots and branches mirror each other; a circle of the four seasons |
+| **Sacred Animals** | Deer (forest intelligence; reads the living world through attention; embodies the seasonal cycle); Crow (memory; pattern recognition; understands systems; carries knowledge across distances) |
+| **Sacred Plants** | Mistletoe (grows between worlds — on other trees, in winter when nothing else grows; the plant of thresholds and persistence); Elder tree (used in medicine and protection; associated with long memory; one of the few plants that offers both healing and harm) |
+| **Festivals** | **The Turning** (each of the four seasonal transitions is marked; the Autumn Turning — when the cycle of growth completes — is the most significant; offerings of harvest are returned to the earth); **The Long Green** (midsummer — the living world at its fullest expression; Old Ways communities spend the night outdoors; no fires; the darkness is part of the celebration) |
+| **Traditional Prayer** | *"I am part of what grows. I take only what I need. I return what I can."* — said before hunting, harvesting, cutting timber, or clearing land; the obligation of reciprocity is central to Sylvara's theology |
+| **Temple Architecture** | The First Grove has no constructed architecture — it is a grove of ancient trees, the central one marked by generations of carved symbols. Most Sylvara practice happens outdoors. Indoor shrines use living wood, soil, and running water; nothing artificial or refined; the space should smell of earth and growing things |
+| **Clergy Traditions** | Old Ways practitioners serve as Sylvara's clergy; training is apprenticeship-based, not institutional; practitioners learn the Great Pattern through years of observation before they learn to act on it; they do not proselytize — Sylvara's tradition holds that the living world speaks for itself to those willing to listen; senior practitioners are distinguished by depth of knowledge, not title |
 | **Ancient Temple** | The First Grove — somewhere in the Great Forest; its location is known only to senior Old Ways practitioners; some believe it is the oldest living place in the world |
 | **Sacred Relic** | **Sylvara's Seed** — a single seed that has never germinated and never decayed; Old Ways tradition holds that it was the first living thing to survive the imprisonment's shockwave |
 
 **Character:** Sylvara is not the god of nature as wilderness. She is the god of nature as pattern — as the system underlying all living things, the balance that makes life possible in the first place. The Old Ways' central concept of "the Living World" and "the Great Pattern" is, at the theological core, an expression of Sylvara's domain.
 
 The Corruption, in Sylvara's terms, is not merely a magical corruption. It is a violation of the pattern that holds the living world together. Her priests experience the Corruption's spread as personal, visceral grief in a way that other traditions do not.
+
+**Relationships within the Chorus:** Closest to Neressa — water and life are inseparable; the two traditions share more practice than either formally acknowledges; Old Ways healing and Neressa's healing traditions draw from the same root knowledge. Deep understanding with Morvel — death is part of the cycle; the forest floor is made of what fell; Sylvara does not grieve Morvel's domain, she understands it as essential to hers. Ancient understanding with Solaryn — fire clears; the living world needs clearing and sometimes grieves it; the agreement between them is not comfortable but it is real. Genuine partnership with Zephyros — wind carries seeds; growth depends on movement; the two aspects have always worked together at the level of the world's basic systems.
 
 ---
 
@@ -234,12 +274,20 @@ The Corruption, in Sylvara's terms, is not merely a magical corruption. It is a 
 | **Virtues** | Honesty, the refusal to look away from what is true, the courage to witness |
 | **Followers** | The Veiled Order (primary devotion); those who work with the dying; scholars of hidden truths |
 | **Symbol** | A lantern at the edge of a dark threshold; a single eye held open |
+| **Sacred Animals** | Owl (sees clearly in darkness; associated with the threshold moment; patient hunter); Moth (moves toward light from darkness; transforms; exists at the boundary between states) |
+| **Sacred Plants** | Nightshade (beautiful and dangerous; a plant that exists at the threshold between medicine and poison; grows at the edges of things); Poppy (sleep and the boundary of consciousness; used in death rites; the transition between waking and the unreachable) |
+| **Festivals** | **The Long Night** (the longest night of the year — a vigil kept for those who died in the past year; stories are told, not elegies; the Veiled Order teaches that the deceased should be witnessed, not mourned, on this night); **The Unveiling** (private and personal — a practitioner's ceremony of acknowledging a truth they have been avoiding; no fixed date; performed when it is needed) |
+| **Traditional Prayer** | *"I see what is here. I do not look away."* — said at deathbeds, before difficult revelations, at the beginning of Veiled Order scholarly work, before any moment that requires facing something unwelcome |
+| **Temple Architecture** | The Threshold Chamber is found, not built — its location is different for each seeker; most Morvel shrines are small, enclosed, lit by a single flame, with a mirror and a bowl of still water; the emphasis is on sight, not comfort; no decoration distracts from the purpose of seeing clearly |
+| **Clergy Traditions** | Veiled Order scholars serve as Morvel's primary practitioners; they are required to sit with the dying; to document what would otherwise be forgotten; to undergo periodic personal unveilings — examinations of their own self-deceptions — as a condition of continued practice; a Veiled Order scholar who has not performed a personal unveiling in more than a year is considered to have drifted from the practice; outsiders frequently misread this tradition as morbid; practitioners consider it the most honest form of living |
 | **Ancient Temple** | The Threshold Chamber — a sealed First Age sanctuary; its location shifts across historical records; the Veiled Order believes it can only be found by those who are ready |
 | **Sacred Relic** | **Morvel's Lantern** — a flame that burns without fuel and cannot be extinguished; it casts light that shows things as they truly are, not as they appear |
 
 **Character:** Morvel is the most misunderstood member of the Chorus. Non-practitioners often conflate him with death-worship or nihilism. His theology is the opposite: he is the god of *clarity* — the understanding that can only come when the distortions of fear and desire are finally stripped away. Death is the clearest moment most people will ever experience. He wants mortals to learn, before that moment, what they could see in it.
 
 The Veiled Order's central concept — "the Unveiled" — is the state of understanding that Morvel's domain offers at the threshold. Their scholarly practice is an attempt to approximate this clarity while still alive.
+
+**Relationships within the Chorus:** Deep and careful partnership with Neressa — death is a transition, and Neressa's healers and Morvel's witnesses often work in the same rooms, doing different work; the two traditions share genuine theological respect; Neressa eases the crossing, Morvel witnesses it; together they hold the most significant threshold most mortals will encounter. Deep connection to Eldris — every death is part of the thread; Morvel witnesses the endings that Eldris holds in continuity; they are not in conflict, though their perspectives are nearly opposite. Respectful distance from Solaryn — light and shadow define each other and both know it; Solaryn's tradition of building against darkness and Morvel's tradition of witnessing what cannot be avoided are not enemies, but they rarely share space. Understanding with Sylvara — death is part of the cycle; Morvel does not grieve what is natural, and Sylvara's tradition recognizes this.
 
 ---
 
@@ -254,12 +302,42 @@ The Veiled Order's central concept — "the Unveiled" — is the state of unders
 | **Virtues** | Loyalty to what was built before you, the understanding that actions have consequences beyond one life |
 | **Followers** | Dwarven clans of the Iron Peaks; Frozen Highlands communities; those who practice The Ancestors' Path; anyone whose identity is bound to family and lineage |
 | **Symbol** | An unbroken thread stretching between two hands; a family tree with living branches and deep roots |
+| **Sacred Animals** | Spider (weaves a web of connections; patient; the maker of patterns that hold); Salmon (returns to its origin regardless of distance; the cycle of lineage made visible) |
+| **Sacred Plants** | Yew (the longest-lived tree; present at births and deaths across centuries; found in burial grounds; outlasts everything planted near it); Ivy (clings; persists; grows across gaps; connects across time what distance would separate) |
+| **Festivals** | **The Remembering** (practiced on the anniversary of a clan's founding or a family's most significant event; not a fixed calendar date — each family marks their own; stories of ancestors are told, obligations are renewed); **The Naming** (when a child receives their formal name, Eldris is invoked — names carry lineage; the naming ceremony is considered the child's first acknowledgment of the thread they now extend) |
+| **Traditional Prayer** | *"What was given to me, I hold. What I hold, I will pass on."* — said at births, deaths, and at moments of inheritance, obligation, or significant family decision |
+| **Temple Architecture** | The Archive of Threads is underground, with walls of carved record — lineage marks, clan symbols, names accumulated over generations. Most Eldris practice happens within family spaces: hearthsides, burial grounds, the places where lineage gathers naturally. There is no public temple tradition in the Solaryn sense; Eldris is practiced in private and communal family contexts, not civic ones |
+| **Clergy Traditions** | Eldris has no formal clergy in the conventional sense — clan elders and lineage keepers serve the function; the Ancestors' Path's tradition of elder wisdom is Eldris's clergy in practice; they are distinguished by age, memory, and the trust of their community rather than by ordination; they maintain the oral and written records of the lineages in their care |
 | **Ancient Temple** | The Archive of Threads — said to be a subterranean structure older than the oldest dwarven excavation; it contains, according to legend, a thread for every lineage that has ever existed |
 | **Sacred Relic** | **Eldris's Loom** — a fragment of impossibly fine thread that, when held, shows the holder a single true memory from their lineage; not their memory — a memory that was lived before them |
 
 **Character:** Eldris is the god of the living's obligation to the dead, and the dead's investment in the living. Ancestor veneration as practiced in The Ancestors' Path is, theologically, an acknowledgment of Eldris's fundamental teaching: that you are not who you are in isolation. You are the latest expression of a long thread, and the thread will continue after you.
 
 The Corruption's disruption of ancestral communication — the degraded contact that Ancestors' Path practitioners are experiencing — is, in Eldris's terms, an attack on the thread itself. This is considered sacrilegious by the tradition at a level that makes it difficult to speak about calmly.
+
+**Relationships within the Chorus:** Natural partnership with Tharok — craft and legacy are inseparable; Tharok builds the things that Eldris holds across generations; dwarven practice blends both so thoroughly that separating them is a theological exercise rather than a practical one. Deep connection to Morvel — the thread includes its endings; every death is part of the lineage; Eldris holds the whole thread while Morvel witnesses each individual ending; their domains are complementary rather than competing. Gentle counterpoint to Zephyros — the thread grounds what the wind would carry away; Eldris holds what Zephyros would release; the tension between them is productive and ancient, neither resolved nor hostile.
+
+---
+
+## Divine Relationships — Overview
+
+The seven members of the Chorus are not in conflict. They are in relationship — ancient, specific, and sometimes complicated. The following summarizes the primary dynamics:
+
+| Pair | Relationship |
+|---|---|
+| **Solaryn & Tharok** | Deep natural alliance — fire and earth build civilization together; rarely in disagreement |
+| **Solaryn & Sylvara** | Ancient understanding — fire clears, Sylvara grows; not comfortable but real; mutually necessary |
+| **Solaryn & Morvel** | Respectful distance — light and shadow define each other; their domains do not overlap |
+| **Solaryn & Zephyros** | Mutual recognition; Solaryn finds Zephyros necessary and occasionally too casual |
+| **Neressa & Sylvara** | Closest relationship in the Chorus — water and life share a root; their traditions overlap most |
+| **Neressa & Morvel** | Deep partnership at the threshold — she eases the crossing; he witnesses it; rarely acknowledged publicly |
+| **Neressa & Solaryn** | Complicated — fire drives forward before healing is complete; both necessary; timing is the argument |
+| **Tharok & Eldris** | Inseparable in practice — craft and legacy intertwine; dwarven tradition blends both |
+| **Tharok & Zephyros** | Productive philosophical disagreement — permanence vs. change; ongoing; neither wrong |
+| **Zephyros & Sylvara** | Natural partnership — wind carries seeds; growth depends on movement; ancient working relationship |
+| **Zephyros & Eldris** | Gentle tension — the wind would release what the thread holds; both are needed; argument is ancient |
+| **Sylvara & Morvel** | Deep understanding — death is part of the cycle; neither grieves the other's domain |
+| **Morvel & Eldris** | Complementary — Morvel witnesses each ending; Eldris holds the whole thread; together they hold time |
 
 ---
 
@@ -302,6 +380,54 @@ The Solari Covenant's institutional emphasis on Solaryn — and their implied cl
 
 ---
 
+## Magical Crystals
+
+Magical crystals are natural formations that occur in areas where Primordial Magic is concentrated or has been concentrated for long periods. They are not created — they accumulate, the way mineral deposits accumulate around a spring, because Primordial Magic moves through the world and leaves residue where it pools.
+
+### How Crystals Form
+
+Crystals form over centuries at:
+- Sites near ancient temples or First Age sanctuaries
+- Deep earth locations where elemental aspects are strong (volcanic formations for fire-aspect crystals; riverbeds for water-aspect; deep mountain stone for earth-aspect)
+- Places where significant magical events occurred — battlefields of First Age conflicts, the sites of great workings
+- Locations where the boundary between elemental aspects is thin — coastlines produce water-aspect crystals; mountain passes produce wind-aspect formations
+
+Crystals take on the aspect of their environment. A crystal formed near the Hall of First Forging is earth-aspect. A crystal from a high coastal cliff might be water-aspect or wind-aspect depending on which force is stronger in that specific location.
+
+### Properties
+
+| Property | Description |
+|---|---|
+| **Elemental aspect** | Each crystal carries one dominant elemental aspect; mixed-aspect crystals exist but are rare and unstable |
+| **Conductivity** | Crystals channel their aspect more efficiently than a mage alone; used in Guild research equipment and refined religious tools |
+| **Reservoir capacity** | Crystals can store Primordial Magic over time; a sufficiently charged crystal can be drawn on during casting |
+| **Resonance** | Two crystals of the same aspect in proximity amplify each other; used to construct larger working spaces |
+| **Decay** | Crystals used heavily lose their clarity over time; spent crystals become inert stone; this is a natural process and not considered damage |
+
+### Uses
+
+**Mages Guild:** Crystals are core to Guild research infrastructure. Measurement instruments, experimental containment, and long-term observation require crystal components. Guild researchers also use crystals to extend what a single practitioner can safely attempt — the crystal absorbs overflow rather than the mage.
+
+**Religious practice:** Crystals are used in shrines, in healing work, and in ritual contexts. A Neressa healer who works with a water-aspect crystal believes the crystal helps her alignment with her steward's domain. A Tharok craftsman who keeps an earth-aspect crystal at his forge considers it part of his practice.
+
+**Crafted artifacts:** The most significant magical items in the world contain refined crystals. The refinement process — removing impurities and aligning the crystal's internal structure — is itself a form of magic; a craft that Tharok's tradition considers sacred.
+
+### Corruption's Effect on Crystals
+
+The Corruption does not simply destroy crystals. It inverts them.
+
+A crystal exposed to significant Corruption becomes a **corrupted node** — a reservoir of Corruption rather than Primordial Magic. Corrupted crystals:
+- Emit a subtle wrongness detectable by sensitive practitioners
+- Actively destabilize magical workings performed near them
+- Draw further Corruption toward themselves, accelerating the spread
+- Cannot be cleansed by conventional means; they must be physically removed and either contained or destroyed
+
+Corrupted crystal nodes have been found near the sites of major Corruption events. Guild scholars and Old Ways practitioners both treat their discovery as an urgent priority — a corrupted node left in place is a seed.
+
+> **Design note for writers:** Magical crystals are a worldbuilding detail, not a power-up mechanic. Their presence should texture locations and NPCs rather than serving primarily as inventory items. A Tharok priest's earth-aspect crystal at his forge tells you something about him. A corrupted node found in an ancient sanctuary tells you the Corruption has been here longer than anyone suspected.
+
+---
+
 ## The Corruption and Magic
 
 The Corruption distorts Primordial Magic at its source. This is its most fundamental effect — and the most difficult to explain to those who understand magic either academically or spiritually.
@@ -311,6 +437,7 @@ The Corruption distorts Primordial Magic at its source. This is its most fundame
 - **Amplification without control:** The Corruption does not block Primordial Magic. It amplifies it — removing the natural limits that keep a mage's power from harming them or others. A corrupted fire mage does not lose their fire. They lose the discipline that kept it from consuming everything.
 - **Elemental blurring:** Prolonged Corruption exposure begins to blur elemental affinities. Mages who were once reliably fire-aligned begin to produce unpredictable results. This is deeply frightening to Guild-trained practitioners.
 - **Shrine corruption:** Sacred sites and shrines that draw on Primordial Magic can be corrupted, turning them from places of healing or clarity into nodes of instability that affect the surrounding area.
+- **Crystal inversion:** Natural magical crystals are converted into corrupted nodes — reservoirs of Corruption rather than Primordial Magic; seeds of further spread. (See Magical Crystals section above.)
 - **Steward interference:** The Corruption corrupts the relationship between mortals and the Divine Chorus — degrading prayer, disrupting ancestral contact (as The Ancestors' Path is experiencing), and poisoning the connection between natural practitioners and Sylvara's domain.
 
 ### What Neither Framework Can Fully Explain
@@ -342,3 +469,4 @@ This does not make her the most powerful mage in history. Primordial Magic is no
 | Date | Change |
 |---|---|
 | July 2026 | Created — Primordial Magic framework, Seven Elemental Aspects, Magic Limitations, Two Approaches, Divine Chorus with seven complete god entries, Sacred Relics, Eleanor's Harmonic Soul, Corruption and Magic |
+| July 2026 | Expanded — each god entry expanded with Sacred Animals, Sacred Plants, Festivals, Traditional Prayer, Temple Architecture, Clergy Traditions, and Relationships within the Chorus; Divine Relationships Overview table added; Magical Crystals section added (formation, properties, uses, Corruption inversion) |
