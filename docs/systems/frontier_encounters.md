@@ -132,7 +132,7 @@ This encounter clarifies for the party that there is a political division in the
 
 #### SF-C3 — The Debt Runner (Quest Entry Point)
 
-**When to use:** Party has neutral or positive Stonefang reputation; Grakkor has identified them as potentially useful; campaign stage is appropriate for the Stonefang quest
+**When to use:** No minimum Stonefang reputation required — this is the primary quest entry point and must be available from neutral or no-prior-standing. The runner finds the party when the campaign stage is appropriate for the Stonefang quest regardless of prior reputation. Version A fires if the party has a prior Debt of Steel owed to them; Version B fires for all other cases, including first contact.
 
 **What the party sees:**  
 A single Stonefang goblin moving quickly but openly — not trying to hide, which is notable. The runner carries a sealed message marked with Grakkor's personal sigil (a stone fang design recognizable to anyone with any Stonefang knowledge). The runner is looking for the party specifically, or looking for someone and finds the party.
@@ -200,7 +200,8 @@ This is information, not a contact — yet. The party can:
 
 | Approach | Outcome |
 |---|---|
-| Follow the trail | Leads to a Mossroot scout observation post; the scouts were already watching the party; they are neither hidden nor aggressive — they retreat when approached but leave a single marker at the post (a carved stick that an Old Ways practitioner or Mossroot-knowledgeable character can identify as "we have seen you; we choose not to engage") |
+| Follow the trail — **Ragash is in the party** | Use the canonical first-contact scene in [`docs/encounters/mossroot_first_contact.md`](../encounters/mossroot_first_contact.md). That document governs: Ragash leads the approach, Thorn makes initial contact, Vess appears and assesses the party. **This scene supersedes the observation-post variant below whenever Ragash is present.** |
+| Follow the trail — **Ragash is absent** | Leads to a Mossroot scout observation post; the scouts were already watching the party; they are neither hidden nor aggressive — they retreat when approached but leave a single marker at the post (a carved stick that an Old Ways practitioner or Mossroot-knowledgeable character can identify as "we have seen you; we choose not to engage") |
 | Ignore it and continue | The Mossroot scout reports back to Vess; next encounter is MR-C2 |
 | Leave a non-threatening gesture at the trail (offer, placed without pursuit) | A scout retrieves it; not acknowledged yet but noted; accelerates trust-building in future contacts |
 | Set a trap | Scouts detect the trap and disappear completely; Mossroot contact is harder to initiate for the next several sessions |
@@ -365,9 +366,8 @@ How existing reputation changes what encounter type fires:
 |---|---|---|
 | Below −20 | SF-C2 (Varkk's patrol, hostile) | Combat likely |
 | −20 to 0 | SF-C1 (assessment patrol) or SF-C2 | Tone is aggressive |
-| 0 to 15 | SF-C1 (standard patrol) | Assessment, not hostile |
-| 15 to 25 | SF-C3 (Debt Runner) becomes available | Quest entry opens |
-| 25+ | SF-C4 (alliance contact) | Grakkor uses party as a resource |
+| 0 to 20 | SF-C1 (standard patrol); SF-C3 available | SF-C3 has no minimum reputation — it fires when campaign stage is appropriate; SF-C1 fills other travel legs |
+| 20+ | SF-C4 (alliance contact) | Grakkor uses party as a resource; SF-C3 no longer the primary contact type |
 
 | Mossroot Standing | Contact Type | Notes |
 |---|---|---|
