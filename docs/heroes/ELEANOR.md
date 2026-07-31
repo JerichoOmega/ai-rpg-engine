@@ -97,8 +97,22 @@ Young — visibly so. Carries herself with more confidence than her age might su
 ### Equipment
 Light armor or mage robes. Her focus — staff, wand, orb, or crystal — is her primary weapon. The focus should feel like a natural extension of her rather than something imposed on her.
 
-### Recognizable Personal Detail
-⚠️ NOT YET DEFINED — Eleanor's equivalent of Talos's bead bracelet; a meaningful personal detail tied to her family or her earliest magical training should be established.
+### Recognizable Personal Detail — Her Mother's Ribbon
+
+A short length of faded blue ribbon, always on her focus: tied just below the head of a staff or wand, or knotted around the setting, cradle, or carry-cord of an orb or crystal.
+
+**Where it came from:** The morning Eleanor left home for the Guild's testing, her mother cut the ribbon from the sleeve of her own best dress and tied it around Eleanor's first practice wand. What she said was not a speech: *"So you take some of home with you."* Eleanor was too nervous to answer. She has kept it ever since. Whatever the family could or could not give her by way of standing in the Guild, this was the thing her mother could give with her own hands — and it is the one she kept.
+
+**What it is now:** The ribbon has outlived that first wand and every focus since. Whenever Eleanor acquires a new staff, wand, or orb, the first thing she does — before attuning it, before testing it — is untie the ribbon from the old focus and tie it to the new one. The knot is always the same: her mother's knot, the one used for feed sacks and bootlaces back home. One end of the ribbon is singed from an early miscast in her first Guild year. She has never trimmed it. The singe is part of the story now.
+
+**What it represents:** Talos's bracelet accumulates — one bead from each child, a record of everyone he has protected. Eleanor's ribbon *persists* — one object, from one morning, carried through everything. It is her family's belief in her made physical: not a credential, not an introduction, but the sleeve off her mother's best dress. It is also the quiet answer to her deepest anxiety. The Guild sees a phenomenon; the sanctuary saw a Harmonic Soul; the ribbon says someone saw *a daughter* first. The most important thing she carries into every fight is not magical at all.
+
+**Gameplay surfacing (canonical behaviors):**
+
+- **Visible on her focus at all times** — part of her silhouette; the small ordinary thing on the extraordinary instrument.
+- **The re-tying ritual** — an authored moment every time Eleanor's focus is upgraded or replaced: she transfers the ribbon first, always. Companions who witness it more than once may ask; she answers plainly and warmly, and only at deeper relationship levels tells the whole story of the morning she left home.
+- **Travel and camp** — when she is homesick, frightened, or has just received family news, she touches the knot without noticing she is doing it. The AI DM should use this as her physical tell, equivalent to Talos finding the orphanage.
+- **Under stress in combat** — after a casting that frightens even her, her hand goes to the ribbon before it goes to her next spell.
 
 ### Silhouette
 Young, lighter build, with a focus that is active — not merely held. Eleanor in combat should look like someone in conversation with something, not someone wielding a tool.
@@ -298,6 +312,8 @@ The beat establishes Eleanor's Guild relationships as living, present things —
 
 One document in the commission materials contains a request that goes slightly further than documentation: a set of behavioral observations Eleanor is asked to record about her own casting under Corruption-adjacent conditions. The request fits within the commission's framework. Valdris's signature is at the bottom. Eleanor is likely to comply — it is the kind of thing she would do without thinking twice, because Valdris asked.
 
+**The ribbon in Beat One:** The commission arrives alongside a letter from home. Eleanor reads the family letter first — she always reads the family letter first — and as she reads, her free hand finds the ribbon on her focus and rests on the knot. If any companion notices and asks, she tells the short version of the story, warm and unguarded. This is the beat's quiet purpose: the audience must see what the ribbon means to her *before* Beat Two shows them who else has been watching it.
+
 *What this beat does:* Roots the questline in Eleanor's lived relationship with the Guild before anything goes wrong. The normal world must exist before it can be lost.
 
 ---
@@ -371,6 +387,7 @@ It contains:
 - Notes on her relationships within the Guild — Fen described as "primary emotional anchor in institutional context; high influence on subject's risk tolerance"; Sera described as "produces performance elevation in subject under competitive framing"
 - Documentation of Eleanor's responses to professional setbacks — two specific instances where her work was criticized by senior members, and Valdris's clinical observations of how she recovered
 - A section on what he calls "subject's trust architecture" — who she trusts, how quickly, what causes her to extend trust, and what would have to happen to damage it
+- A single entry, three lines long, documenting the ribbon: *"Subject transfers a fabric token (maternal origin) to each successive focus before attunement. Ritualized; consistent across four focus replacements. Primary self-regulation anchor — subject contacts the token under stress, family-related stimuli, and post-casting instability. Removal or loss of the token would be significantly destabilizing."* It is the shortest entry in the behavioral record, and — for players who saw Beat One — the most violating: the most private ordinary thing she does, catalogued as a lever
 
 This section has nothing to do with Corruption research. It is a map of Eleanor as a person. It was assembled over years, quietly, by the person she most trusted in the Guild.
 
@@ -445,6 +462,8 @@ The party locates Valdris. He does not believe he has done wrong — or more pre
 Fen's resolution depends on what the party has done and how much time remains. He can be found. He is not fully gone — the Corruption found something small in him, and small corruptions are sometimes survivable if they are caught. Eleanor reaching him requires her to see him clearly: not as the friend she hoped he was, and not as a stranger the Corruption has made of him, but as a person who made a frightened, foolish choice and needs her to hold that clearly enough to offer him a way out.
 
 Sera ends the arc as the person most adjacent to Eleanor's Guild life who did not fall — not because she was stronger or better, but because her position outside Eleanor's trust circle also placed her outside the Corruption's reach into Eleanor's world. Eleanor must decide what to do with that. The rival who sounded the alarm is not automatically a friend. But she is something.
+
+**The ribbon in Beat Three:** Eleanor has read the three-line entry Valdris kept about the ribbon. The AI DM should let this land in the confrontation without a speech: at some point while Valdris explains himself, Eleanor's hand starts toward the knot — her lifelong tell — and stops. She has learned that even this was observed, recorded, assessed as a lever. Whether she completes the gesture anyway is one of the scene's most telling beats: reaching for it in front of him is a refusal to let his cataloguing poison what the ribbon actually is. If a companion notices, that is the moment to play. After the arc, in the first quiet camp scene, she re-ties her mother's knot — slowly, deliberately, watched or unwatched — and the gesture belongs to her again.
 
 *What this beat does:* Lands the questline's three relationships at distinct points that map onto Eleanor's possible resolutions:
 - Valdris represents trust that was not entirely misplaced but was not as mutual as she believed
@@ -685,3 +704,4 @@ She may be the companion who most directly asks whether the Eighth could have be
 | July 2026 | Added The Forgotten Eighth revelation response |
 | July 2026 | Added Valdris's Research Files subsection (five specific findings, recognition triggers, unnamed correspondent progression, Corruption's interest in Harmonic Souls) |
 | July 2026 | Added Post-Arc Resolution — Sera (two resolution paths, Guild standing notes); added Sera entry to Relationship Dynamics |
+| July 2026 | Defined her Recognizable Personal Detail — her mother's ribbon (origin, re-tying ritual, gameplay surfacing); wove the ribbon through the Guild questline (Beat One introduction, Valdris behavioral-record entry, Beat Three confrontation and reclamation) |
