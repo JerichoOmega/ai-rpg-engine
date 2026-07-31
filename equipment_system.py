@@ -179,6 +179,43 @@ def equip_slot_only(item_key):
 
     equipment[slot] = item_key
 
+    # Keep world_state display fields in sync for weapon slot
+    _sync_weapon_display()
+
+
+# =========================
+# SYNC WEAPON DISPLAY FIELDS
+# =========================
+
+def _sync_weapon_display():
+    """Keep world_state[\"player\"][\"equipped_weapon\"] and weapon_bonus
+    in sync with the authoritative equipment[\"weapon\"] slot.
+
+    Called by equip_slot_only, equip_item, and unequip_item so that
+    every code path (shop display, inventory screen, dialogue) reads
+    the same state as combat.
+    """
+
+    weapon_key = equipment.get("weapon")
+
+    ws_player = world_state["player"]
+
+    if weapon_key:
+
+        item = ITEM_DATABASE.get(weapon_key, {})
+
+        ws_player["equipped_weapon"] = weapon_key
+
+        ws_player["weapon_bonus"]    = item.get(
+            "attack_bonus", 0
+        )
+
+    else:
+
+        ws_player["equipped_weapon"] = ""
+
+        ws_player["weapon_bonus"]    = 0
+
 
 # =========================
 # EQUIP ITEM
@@ -242,6 +279,10 @@ def equip_item(
         item_name
     )
 
+    # Keep world_state display fields in sync for weapon slot
+    if slot == "weapon":
+        _sync_weapon_display()
+
     print(
         f"\nEquipped:"
         f" {item_name}"
@@ -285,6 +326,10 @@ def unequip_item(
     )
 
     equipment[slot] = None
+
+    # Keep world_state display fields in sync for weapon slot
+    if slot == "weapon":
+        _sync_weapon_display()
 
     print(
         f"\nUnequipped:"
