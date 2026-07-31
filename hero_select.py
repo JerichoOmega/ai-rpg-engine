@@ -20,6 +20,10 @@ from hero_roster import HERO_ROSTER, HERO_ORDER
 
 from world_state import world_state, ensure_world_state_defaults
 
+from equipment_system import equipment
+
+from skill_tree import player_skills
+
 
 # =========================
 # APPLY HERO
@@ -201,11 +205,27 @@ def select_hero():
 
     hero = HERO_ROSTER[chosen_key]
 
-    # Reset world state to a clean new-game baseline before
-    # applying the hero so no prior session's quest/faction/inventory
-    # state leaks into the new playthrough.
+    # ── Full new-game reset ────────────────────────────────────────
+    # Clear every global that carries per-run state so that no prior
+    # session's progress leaks into the freshly chosen hero.
+
+    # 1. world_state (quests, factions, regions, inventory, etc.)
     world_state.clear()
     ensure_world_state_defaults()
+
+    # 2. Equipment slots — previously equipped items must not persist.
+    for slot in list(equipment.keys()):
+        equipment[slot] = None
+
+    # 3. Player runtime state — status effects bleed into first combat.
+    from player import player as _player
+    _player.status_effects = []
+
+    # 4. Skill points and unlocked skills — skills grant stat bonuses
+    #    that are captured by sync_world_state_from_player(); leaving
+    #    them set would double-apply those bonuses on the new hero.
+    player_skills["available_points"] = 3
+    player_skills["unlocked_skills"]  = []
 
     apply_hero(chosen_key)
 
