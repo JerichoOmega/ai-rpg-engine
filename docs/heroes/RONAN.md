@@ -162,6 +162,8 @@ Ronan discovers that the question he has been asking — "how do I get rid of th
 
 ### The Hidden Pack
 
+> **Full canonical definition:** [`docs/world/hidden_pack.md`](../world/hidden_pack.md) — named members, internal factions, daily life, encounter structure, and companion cross-references. Use that document for all Hidden Pack content. The summary below is an arc overview only.
+
 During the personal quest, the party encounters a small, secretive community of werewolves — not a kingdom or organized civilization, but a nomadic pack that has survived for generations by staying hidden. They move constantly through remote regions of the continent. Very few outsiders know they exist.
 
 This encounter is the **turning point** of Ronan's arc.
