@@ -160,9 +160,40 @@ The quest confirms that the curse cannot be removed. Ronan's arc becomes about w
 **Resolution C — The Wrong Question**
 Ronan discovers that the question he has been asking — "how do I get rid of this?" — was never the right question. The right question is "how do I stop letting this define everything?" He may or may not find a cure. But he stops organizing his entire life around the fear of himself.
 
+### The Hidden Pack
+
+During the personal quest, the party encounters a small, secretive community of werewolves — not a kingdom or organized civilization, but a nomadic pack that has survived for generations by staying hidden. They move constantly through remote regions of the continent. Very few outsiders know they exist.
+
+This encounter is the **turning point** of Ronan's arc.
+
+For most of his life, Ronan has believed he is alone in what he carries. The Hidden Pack dismantles that belief entirely. He meets people who understand exactly what he is experiencing — not theoretically, not with sympathy from the outside, but from inside the same condition.
+
+What he finds is not a single answer. The pack contains multitudes:
+
+- Some members have mastered the curse; others still struggle every day
+- Some have embraced their dual nature as identity; others continue fighting it
+- Some advocate complete isolation from the wider world; others believe coexistence with humanity is possible
+- There are disagreements, internal conflicts, and genuinely different philosophies about what it means to live this way
+
+This is the design point: **the pack is not presented as the correct answer to Ronan's situation**. It is presented as proof that there is no single answer — and that other people have faced the same question and made different choices and survived.
+
+What the pack gives Ronan is not resolution. It is belonging. For the first time, he is somewhere that is not defined by what he might do to someone if he loses control.
+
+**Narrative shift:** Before the Hidden Pack, Ronan's quest is about escaping the curse. After it, his quest becomes about deciding the kind of man he wants to be while living with it. This is the reframe that makes Resolution C possible — and that makes Resolutions A and B feel earned rather than external.
+
+#### Companion Reactions During This Encounter
+
+**Eleanor** is immediately fascinated by the pack's history and traditions. She asks questions, takes in everything she can learn about lycanthropy, and approaches the pack with the same open curiosity she brings to anything she wants to understand. Part of this is intellectual — she is a mage; knowledge is how she engages with the world. Part of it is personal: she wants to understand Ronan better, and this is the closest she has come to a source. Her eagerness is genuine. The pack generally receives it well.
+
+**Ragash** feels immediately at home. Her years working with animals and pack animals in particular have given her an instinctive understanding of the dynamics here — the hierarchy, the loyalty structures, the way the pack communicates without speaking. She forms friendships quickly. Some pack members find her directness unusual; most find it refreshing. Her presence here is one of the moments where her background serves the party in a way that has nothing to do with combat.
+
+**Talos** is cautious throughout. His military experience has made him skeptical of anything powerful that he does not fully understand — and a community of werewolves qualifies. He watches carefully and says less than usual. Over time, as he observes how the pack protects one another, honors its traditions, and manages its internal conflicts with genuine discipline, his position shifts. He does not announce this shift. But his behavior changes. By the end, he has developed genuine respect for the pack — the kind that, for Talos, has to be demonstrated rather than declared.
+
 ### Emotional Core
 
 Ronan's quest is about self-acceptance that is earned, not given. Whatever the player guides him toward, it should not be easy, and it should feel like his — not imposed.
+
+The Hidden Pack is the moment the quest stops being about the curse and starts being about the person.
 
 ---
 
