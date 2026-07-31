@@ -234,6 +234,12 @@ def load_game():
 
             return False
 
+        # Re-populate the combat-side Player object from the
+        # just-loaded world_state["player"] so combat.py always
+        # sees the selected hero's stats, not stale defaults.
+        from player import sync_player_from_world_state
+        sync_player_from_world_state()
+
         print(
             "\n=== GAME LOADED ==="
         )

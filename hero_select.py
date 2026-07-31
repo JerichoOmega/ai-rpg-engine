@@ -90,25 +90,12 @@ def apply_hero(hero_key):
     # combat.py imports `player` from player.py and reads `.hp`,
     # `.attack_bonus`, etc. directly. Keep these in sync so both
     # paths see the same values.
+    # sync_player_from_world_state() reads back from world_state so
+    # it picks up the values we just wrote above.
 
-    try:
+    from player import sync_player_from_world_state
 
-        from player import player as player_obj
-
-        player_obj.name          = hero["name"]
-        player_obj.hp            = hero["hp"]
-        player_obj.max_hp        = hero["max_hp"]
-        player_obj.attack_bonus  = hero["attack_bonus"]
-        player_obj.defense       = hero["defense"]
-        player_obj.evasion       = hero["dodge"]
-        player_obj.level         = hero["level"]
-        player_obj.gold          = hero["gold"]
-
-    except Exception:
-
-        # If the Player import ever changes, don't crash hero select —
-        # world_state["player"] is the save-persistent truth anyway.
-        pass
+    sync_player_from_world_state()
 
 
 # =========================

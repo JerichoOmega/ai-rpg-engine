@@ -594,6 +594,12 @@ def load_game():
 
     dm_state.update(_dm)
 
+    # Re-populate the combat-side Player object from the just-loaded
+    # world_state["player"] so every field (name, class, race,
+    # hero_key, inventory, etc.) is current in both representations.
+    from player import sync_player_from_world_state
+    sync_player_from_world_state()
+
     print(
         "\n=== GAME LOADED ==="
     )
