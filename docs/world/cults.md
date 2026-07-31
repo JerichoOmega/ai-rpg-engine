@@ -374,6 +374,64 @@ The god speaks most clearly to those who are most grieving and most isolated. Pr
 
 ---
 
+### The Keeper's Discernment — Markers of Genuine and False Contact
+
+> **AI Director / writer reference.** This is the authored basis for every scene that turns on distinguishing authentic ancestral communication from the Corruption's mimicry — Halvan Dur's degraded judgment, the evidence case presented to Solla Keth, Keeper Threll's documentation, and any encounter with ordinary Line members. The distinction is the entire dramatic texture of Unbroken Line content; it should be played with precision, not improvised.
+
+**Who knows this:** The full Discernment is the professional knowledge of trained Keepers of Ancestors — taught across years of apprenticeship, tested in practice, and held as the tradition's core discipline. Ordinary practitioners know fragments of it (most commonly: "the dead ask only what was always owed"). Unbroken Line members have *lost access* to it in a specific way: the Line's false voices have gradually retaught them a substitute version that validates the communications producing it. Line members believe they are applying the markers. They are applying the counterfeit.
+
+**Why the markers "are becoming unreliable":** The tradition's markers divide into two kinds, and the Corruption has broken only one of them.
+
+- **Surface markers** — voice, register, mannerism, private memory. The mimicry defeats these completely. It knows the pause before an uncertain word, the private name, the specific way a person laughed. Keepers who lean on recognition — and grief makes everyone lean on recognition — are the most vulnerable, not the least. This is what happened to Halvan Dur.
+- **Structural markers** — what the contact knows, what it asks, how it behaves, where it works, what it leaves behind. **These still hold.** The mimicry cannot fake them, because faking them would mean giving up the things that make the mimicry useful to the Corruption. But applying them requires setting aside the evidence of one's own longing — a discipline that the people most in need of contact are least able to sustain.
+
+A Keeper who works structurally can still tell true from false. That is why reaching Solla Keth, and eventually ordinary Line members, is possible at all.
+
+---
+
+#### Markers of Genuine Ancestral Contact
+
+The markers do not deny the tradition's theology — the relationship between living and dead *is* an ongoing conversation, the dead *do* advise, and Consultation of the Dead *is* legitimate governance practice. The markers define the **shape** that genuine conversation, advice, and consultation have always taken, so that the counterfeit's departures from that shape become visible.
+
+**The Line of Sight — the canonical epistemic boundary.** The theology teaches that the dead remain, "their attention turned toward the living descendants who carry their blood." The tradition has always understood that attention precisely: **the dead observe through the line, not over the world.** A genuine ancestor perceives their living descendants — their struggles, their choices, what weighs on them, and above all what is formally spoken at shrine and Remembering. This perception is dim, partial, and bound to persons: an ancestor can know *that* the family fears the eastern pass, because the family fears it; the ancestor cannot walk the pass and inspect the snow. What no living descendant knows, and no one has spoken to the dead, **the dead cannot know.** Every genuine communication in the tradition's history has stayed inside the union of three things: the wisdom of the ancestor's finished life, what descendants have told them, and what the ancestor perceives *of* (not merely around) the living of their line. Everything the Discernment tests ultimately tests this boundary.
+
+| # | Marker | What it means in practice |
+|---|---|---|
+| 1 | **Counsel, not reconnaissance** | A genuine ancestor advises from inside the Line of Sight: the wisdom of a finished life, what the living have spoken at shrine and Remembering, and their dim perception of the descendants themselves. What returns in consultation is judgment — *how your grandmother would have weighed this* — never news. The dead do not scout the present world: they do not know tomorrow's weather, this season's game routes, the state of a slope no descendant has assessed, the location of a lost child no living person could find, or a remedy discovered after their death and known to no one of their blood. Information that no living member of the line possesses cannot arrive through the line. |
+| 2 | **The conversation is unequal** | Speaking to the ancestors is as normal as speaking to the living — but the two sides have never spoken alike. The living speak freely and often; the dead answer rarely, briefly, and in the shape of who they were. Genuine contact does not sustain fluent back-and-forth, does not answer chains of follow-up questions, and does not elaborate on request. Keepers teach: *we converse with the dead the way we converse with a mountain — we say much, and what comes back is true, and short.* |
+| 3 | **The dead ask only what was always owed** | Obligation runs both ways: the living owe the dead remembrance, tended shrines, and the maintenance of what they built; the dead owe the living guidance and protection. Genuine ancestral requests stay inside that ancient exchange — honor the line, keep the shrine, hold to what we made. Guidance leaves the decision with the living. Genuine ancestors do not issue novel directives: they do not steer a council vote, block a particular marriage, discredit a named individual, or command the living to cut themselves off from anyone. A voice that gives orders beyond the obligation is not an ancestor. This is the oldest marker, and the one ordinary practitioners are most likely to know. |
+| 4 | **Weight, not appetite** | Genuine contact leaves the living quieter — grief made momentarily bearable, a heaviness set down. It satisfies. Practitioners describe leaving a true contact with less need, not more. It does not leave hunger for the next session. |
+| 5 | **The whole person returns** | A genuine ancestor arrives as their entire self — including the stubbornness, the old grudge, the opinion that used to start arguments. The dead remain difficult in the ways they were difficult. Keepers treat *comfortable* contact with suspicion: a voice that never disagrees with what the listener already half-believes is a mirror, not a person. |
+| 6 | **Daylight practice** | Genuine contact occurs within the tradition's open forms — home and clan-hall shrines, seasonal observances, council consultation conducted as recognized governance. It neither requires nor improves with seclusion, secrecy, or specially prepared private spaces. Nothing about authentic practice ever needed to be hidden from the rest of the tradition. |
+| 7 | **The dead cannot be summoned on schedule** | Even in legitimate crisis Consultation, senior practitioners *attempt* to open communication — the word is chosen carefully. No Keeper in the tradition's history could compel an answer. Genuine contact comes when it comes: often silence, sometimes a word, never a dependable service. The tradition's honest teaching: reliability is not a property of the dead. |
+
+---
+
+#### Tells of the False Communications
+
+Each tell is the counterfeit's necessary violation of a structural marker — the things the mimicry *cannot* stop doing, because they are how it earns trust and builds influence.
+
+| # | Tell | Violates | What it looks like in Line practice |
+|---|---|---|---|
+| 1 | **It knows too much** | Marker 1 | Avalanche warnings days in advance, game routes unknown to current hunters, remedies no healer of the line ever held, the location of the lost that no living person could find — the Line's catalogue of benefits is calibrated to land *just outside* the Line of Sight: knowledge that no descendant possesses and therefore no ancestor could carry. The help is real. That is precisely the tell — and the reason the imprisoned god, which observes the world directly, can provide what the dead never could. |
+| 2 | **It converses as an equal** | Marker 2 | The false voices answer questions on demand, sustain fluent exchanges, respond to chains of follow-ups, and grow more talkative the longer the engagement lasts. Line sessions are *interviews* — which no Keeper's lifetime of genuine practice ever produced. |
+| 3 | **It asks beyond the obligation** | Marker 3 | Slowly, and only after long service: accommodations, then lifestyle adjustments, then scrutiny of outsiders, then steered council decisions, blocked marriages, discredited individuals — directives no genuine ancestor issues. Every request arrives framed as ancestral wisdom and cushioned between genuine help. |
+| 4 | **It leaves hunger** | Marker 4 | Participants want the next session sooner. Contact frequency rises over time. Grief is not set down; it is *fed* — kept alive as the channel the voice arrives through. |
+| 5 | **It is edited** | Marker 5 | The voice is the beloved with the difficult parts removed — endlessly patient, always understanding, never in disagreement with what the listener already wished to believe. Under cross-examination it also *errs*: wrong specifics, anachronistic references, knowledge the named ancestor did not have (the basis of Keeper Threll's documentation). |
+| 6 | **It withdraws from daylight** | Marker 6 | The communications come most clearly in the Line's sealed, prepared, private spaces, and degrade in open traditional observance. The practice organizes itself, gradually and plausibly, away from the tradition's public forms. |
+| 7 | **It answers every time** | Marker 7 | Sessions produce results, reproducibly, on schedule. This reliability is the Line's most compelling recruitment fact — and, to a Keeper applying the Discernment, its most damning one. The dead were never dependable. Something that answers every time is not the dead. |
+
+---
+
+#### Using the Discernment in Play
+
+- **No single tell convicts.** Any one can be rationalized (and the Line has authored rationalizations for each — Brek Tannord's framework anticipates most objections). The Discernment works as an accumulation, exactly like the evidence pattern in Keeper Threll's seventeen documented communications.
+- **Presenting evidence to Solla Keth** means walking her through structural markers she already knows but has stopped applying — ideally anchored to things she has personally observed. She does not need to be taught. She needs permission to trust what she was trained to see.
+- **Halvan Dur** cannot be reached this way anymore. His surface recognition — Mira's pause, Mira's name for him — outweighs every structural argument; the voice has had years to become more real to him than the discipline he once taught. Confronting him with the Discernment he authored lessons about is one of the questline's cruelest and most honest scenes: he can recite every marker. He can no longer apply them to the one voice that matters.
+- **Ordinary Line members** know fragments — most reachable through Marker 3 ("the dead ask only what was always owed") once the directives have begun, and Marker 4 once they notice the hunger. Stage One and Two communities have usually experienced only Tells 1, 2, and 7, which feel like blessings; arguments from Markers 3-6 will not land until the community has something to compare them against.
+
+---
+
 ### The Radicalization Stages
 
 The Unbroken Line does not radicalize communities the way other cults radicalize individuals. It moves gradually, almost invisibly, through stages that each feel like natural continuations of the last.
@@ -878,4 +936,5 @@ Rescuing rank-and-file members from cult influence is a legitimate quest outcome
 | July 2026 | Added The Unbroken Line — Ancestors' Path cult; Iron Peaks territory; false-ancestor communications mimicking the beloved dead; Halvan Dur (leadership), Brek Tannord (doctrine), Solla Keth (pastoral/most recoverable); cult comparison table expanded to four entries; three Unbroken Line quest hooks added. |
 | July 2026 | Expanded The Unbroken Line — full faction depth added per design brief: miracle mechanic (false ancestors provide genuine benefits first), hidden costs, five-stage radicalization timeline, symbols and rituals, recruitment methods, long-term goals, key NPC archetypes, AI DM integration notes with community Exposure tracking table and player influence mechanics. |
 | 2026-07-31 | Added named questline for The Unbroken Line — *The Voice They Left Behind*: three-beat structure (The Keeper Who Stopped Listening; What the Dead Know; The Line That Breaks); three resolution paths (Evidence Path, Mira Path, Solla Path); Solla Keth recovery arc and Halvan Dur problem integrated; companion reactions (Talos, Ragash); writer's notes. |
+| 2026-07-31 | Added The Keeper's Discernment to The Unbroken Line — canonical seven markers of genuine ancestral contact and seven corresponding false-communication tells; the Line of Sight epistemic boundary (the dead observe through the line, not over the world) reconciling the markers with Ancestors' Path theology of ongoing conversation, advice, and observation; surface vs. structural marker distinction explaining why "the markers are becoming unreliable"; guidance for using the Discernment with Solla Keth, Halvan Dur, and ordinary Line members. |
 | 2026-07-31 | Added named questline for The Threshold Circle — *The Acceptable Risk*: entry via Pell Ashwick disappearance; dual branches (Transit House / Tessaly Vorn documentary path; Deep Reading Site / Soles confrontation path); three resolution paths; four named readable documents (Soles's Contact Log, Tessaly's Analysis Notes, Drassic Seal Record, Pell's Field Journal); companion reactions; AI DM integration notes. Full questline: `docs/quests/threshold_circle_questline.md`. |
