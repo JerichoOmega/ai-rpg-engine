@@ -234,6 +234,84 @@ Discovering this evidence is one of the major revelation threads of the main cam
 
 ---
 
+## Physical Evidence of the Great Forgetting
+
+> **AI Director / writer reference.** These are the authored, placeable pieces of evidence. Each is written at two levels: **scholar level** (what the item actually is — never revealed to the player directly) and **player discovery level** (what a player sees and what questions it should raise). Each piece is discoverable independently and in any order. **No single piece tells the full story.** Individually, each supports only Layer 1 of the Campaign Revelation ("something is wrong about the historical record"); assembled, they point toward Layers 2 and 3. None of them names the Eighth, depicts her clearly, or explains the Sundering — that truth arrives only through the authored revelation sequence.
+
+### Rules for Using This Evidence
+
+1. **Never confirm.** NPC scholars who examine these items should offer mundane explanations (artistic license, damage, regional variation, miscounting) that almost hold. The player should be the one who notices the explanations don't quite fit *together*.
+2. **The pattern is the clue.** Any one anomaly is dismissible. The discovery moment the campaign is building toward is the player realizing that every anomaly is the *same* anomaly: an eighth of something, removed carefully.
+3. **Removal was reverent, not violent.** Wherever the eighth element was taken out, it was done with care — sealed, veiled, lifted away — never smashed or defaced in anger. Players who look closely should sense grief in the erasure, which quietly foreshadows the truth that the Forgetting was an act of mourning as much as concealment.
+
+---
+
+### 1. The Octave Frieze — Iron Peaks (the Forgotten Halls)
+
+**Scholar level:** A processional frieze carved into a gallery wall deep in the Forgotten Halls, dating to the Age of Awakening — among the oldest intact figurative carvings on the continent. It depicts the Divine Chorus as eight robed figures walking in procession, each carrying a different offering. At some point after the Sundering, someone descended into the Halls specifically to address the eighth figure: it was not chiseled away but covered — fitted with a carved stone panel, cut to match the wall, sealed with masonry techniques of remarkable quality. The panel has partially slipped over the centuries. One carved hand, holding its offering, is visible at the seam.
+
+**Player discovery level:** The party finds a magnificent ancient carving of the seven gods — but the procession's spacing is wrong. There is room for one more. Close inspection (or Torren's smith's eye for stonework) reveals the eighth position is a *panel*, newer than the wall, and behind its slipped edge: a hand, holding something. Questions raised: *Who covers a carving instead of destroying it? Why go to this much trouble this far underground? What is the eighth figure holding?*
+
+**Interpretation trap:** Dwarven lore-keepers attribute the panel to an ancient repair of water damage. The masonry is too good for the explanation to be tested easily.
+
+---
+
+### 2. The Unsealed Circle — Great Forest (Old Ways grove near Old Aranor)
+
+**Scholar level:** An ancient Old Ways ritual grove deep in the forest predates the Great Forgetting. Its stone ring holds eight sanctified spaces — seven bearing the worn elemental markers of the Chorus, and an eighth that was never destroyed, never repurposed, and never rededicated. The Old Ways' most conservative circles have tended the empty space for as long as their tradition remembers, without knowing why. The instruction survives as pure practice: *the eighth bed is swept, and nothing is planted in it.* This is a living fossil of eight-member observance — the Forgetting erased the reason but not the ritual.
+
+**Player discovery level:** In a tended grove, seven shrine-spaces hold offerings — and an eighth space is immaculately kept and completely empty. A keeper, asked why, answers without embarrassment: *"We keep it clear. We have always kept it clear."* Asked for whom: *"That isn't kept."* Questions raised: *Rituals don't survive without reasons. Who was the eighth space for — and why does no one find the not-knowing strange?*
+
+**Interpretation trap:** Covenant scholars call it a "threshold space" common to nature worship. Old Ways keepers do not argue. They also do not plant anything in it.
+
+---
+
+### 3. Catalogue Entry 8-Null — Capital Province (the Great Library, sealed collection)
+
+**Scholar level:** The Great Library's oldest surviving acquisition ledger — pre-Sundering, recopied by generations of archivists who preserved even what they could not read — contains repeated references to a work titled (in the oldest recoverable rendering) *The Eight Verses of the Chorus*. The ledger records its shelving, its recopying, and then — in a later hand — its transfer, marked with a sigil used nowhere else in the Library's records. The work itself is not on any shelf. It is not recorded as lost, burned, or stolen; the Library's meticulous loss-registers, which account for every other missing pre-Sundering title, simply never mention it. It was not lost. It was *removed from the category of things that can be lost.*
+
+**Player discovery level:** A player researching the Chorus (or assisting a Library commission) finds ledger lines referencing a title that contradicts every hymnal in circulation — *Eight* Verses, where all known liturgy has seven — plus an unexplained transfer sigil and a loss-register that is suspiciously silent. Questions raised: *A scribe's error, repeated across recopyings for centuries? Where does the sigil lead? What kind of removal doesn't count as a loss?*
+
+**Interpretation trap:** Senior archivists cite scribal error — "eight" and "seven" differ by one stroke in the old script. The explanation accounts for one entry. It does not account for eleven of them, in six different hands.
+
+---
+
+### 4. The Empty Plinth — Sol Kareth (buried sanctuary beneath the Whispering Sands)
+
+**Scholar level:** A pre-Sundering temple, buried by the shifting desert and structurally intact, built on an eightfold floor plan: a central chamber ringed by eight alcoves. Seven hold statues of the Chorus in the archaic Sol Kareth style. The eighth alcove holds an empty plinth — and the evidence of a careful removal: chisel-marks around the statue's original seating, drag-grooves in the floor leading toward the entrance, and the mounting points for a veil or screen that once covered the alcove *before* the statue was taken. Whoever removed it veiled it first. The temple was buried by nature, not by design — the desert simply finished what the Forgetting began.
+
+**Player discovery level:** The party enters a perfectly preserved buried temple and counts: eight alcoves, seven gods, one empty plinth with drag-marks. The architecture makes the eighth alcove structurally identical to the others — it was not a storeroom, not an entrance, not decoration. Something stood there, and someone took it away with enormous care. Questions raised: *Which god is missing? Why remove one statue and leave seven? Why veil it before removing it — who was not supposed to see, or was it the statue that was being spared the sight?*
+
+**Interpretation trap:** Sol Kareth antiquarians suggest looters took the eighth statue. Looters do not veil what they steal, and they do not leave seven others behind.
+
+---
+
+### 5. The Silent Stanza — Frozen Highlands (barrow-field lintel stones)
+
+**Scholar level:** The oldest burial lintels in the Highlands barrow-fields carry the ancestral funeral song of the Ancestors' Path in archaic script — a song still sung today. The modern song has seven stanzas, one for each steward of the dead's journey. The carved version has eight stanza-markers. The eighth stanza is not carved as text: in every surviving instance, the space beneath the eighth marker is filled with a single repeated glyph that the Path's own loremasters translate as *"held"* or *"kept back"* — the notation their tradition uses for words that exist but must not be spoken aloud. The stanza was not erased. It was *silenced*, and the silence was recorded — which is, itself, a form of remembering.
+
+**Player discovery level:** A Highlands elder sings the seven-stanza funeral song at a barrow; a literate party member counts eight stanza-markers on the lintel overhead, the last filled with one repeating glyph. Asked, the elder says the glyph means the stanza is *kept* — and that this is simply how the song is. Questions raised: *Kept from whom? A song is not stone — someone chose to carve the silence. What did the eighth stanza say, and why does the most memory-obsessed culture on the continent keep a hole in its own oldest song?*
+
+**Interpretation trap:** Path loremasters treat the held stanza as referring to the unknowable Final Verse — a humility marker. It is a good explanation. It does not explain why the glyph appears *only* in songs old enough to predate the Forgetting.
+
+---
+
+### Regional Coverage and Assembly
+
+| Evidence | Region | Revelation layer it supports |
+|---|---|---|
+| The Octave Frieze | Iron Peaks | Layer 1 — the record is wrong (eight figures) |
+| The Unsealed Circle | Great Forest | Layer 1 — practice outlived its reason (eighth space) |
+| Catalogue Entry 8-Null | Capital Province | Layers 1–2 — deliberate removal by an organized hand |
+| The Empty Plinth | Sol Kareth | Layers 1–2 — reverent erasure; grief in the method |
+| The Silent Stanza | Frozen Highlands | Layers 1–3 — the erasure was *recorded*; someone wanted the silence itself remembered |
+
+**Frontier placement note:** The Frontier holds no unique authored piece — deliberately. Its ruins (Kingsfall, the Fallen City) postdate the Forgetting or belong to disputed mortal history. Frontier-based campaigns should route players toward the evidence via rumor, salvaged fragments, and Explorers' Guild or Library Expedition Corps contracts rather than local discovery. The Forgetting is oldest where civilization is oldest.
+
+**Assembly moment:** When a party has found any three pieces, the AI Director should engineer a quiet scene — a campfire, a library table, a scholar NPC — where the pattern can be said aloud for the first time: *every anomaly is the number eight, and every removal was done with care.* That sentence is the hinge between Layer 1 and Layer 2 of the Campaign Revelation. It should never be handed to the player by an NPC before the player is reaching for it.
+
+---
+
 ## The Corruption's True Nature
 
 The Corruption that bleeds from the Eighth's failing prison is not simple evil.
@@ -309,3 +387,4 @@ These questions should not have clean answers. The mythology is designed to gene
 | July 2026 | Created — The Forgotten Eighth established as canonical; the Ancient God confirmed as former member of the Divine Chorus; her story, the Great Forgetting, the Imprisonment as tragedy, the Corruption's true nature as amplified virtue, and companion revelation responses all documented |
 | July 2026 | Major revision — "The Final Verse" established as the world's canonical term for death; The Five Stages of the Fall formally named and documented (Love, Grief, Obsession, Justification, Hatred); Stage IV (Justification) established as the true root of corruption through self-compromise; Stage V (Hatred) added with her perspective that the Chorus betrayed her first; "Time Among Mortals" expanded with why she found mortal life extraordinary; "The Mortal She Loved" expanded with specific qualities (kindness, humor, compassion, appreciation of ordinary life); Chorus's mourning and comfort attempt added to the Final Verse section |
 | July 2026 | "The Sundering" established as the canonical event name for the Eighth's imprisonment; section renamed accordingly |
+| July 2026 | Added Physical Evidence of the Great Forgetting — five authored, placeable evidence pieces (Octave Frieze, Unsealed Circle, Catalogue Entry 8-Null, Empty Plinth, Silent Stanza) with scholar/player levels, interpretation traps, regional coverage table, Frontier routing note, and the three-piece assembly moment |
