@@ -90,6 +90,12 @@ SAVE_FILE = "save_data.json"
 
 def save_game():
 
+    # Capture any combat-side mutations (HP, gold, stats) into
+    # world_state["player"] before serialising so that progress
+    # made since hero selection is not lost.
+    from player import sync_world_state_from_player
+    sync_world_state_from_player()
+
     save_data = {
 
         # =========================
