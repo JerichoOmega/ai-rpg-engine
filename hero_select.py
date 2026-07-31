@@ -115,10 +115,13 @@ def apply_hero(hero_key):
     _weapon_display = hero["equipped_weapon"]
     _weapon_key     = _WEAPON_DISPLAY_TO_KEY.get(_weapon_display)
 
-    player_ws["inventory"] = [
-        item for item in hero["inventory"]
-        if item != _weapon_display
-    ]
+    # Remove exactly ONE copy of the equipped weapon from inventory —
+    # the item now lives in the weapon slot. Any duplicate copies
+    # (e.g. Ronan's two Short Swords) remain as carried items.
+    _inv = list(hero["inventory"])
+    if _weapon_display in _inv:
+        _inv.remove(_weapon_display)
+    player_ws["inventory"] = _inv
     player_ws["level"]            = hero["level"]
     player_ws["xp"]               = hero["xp"]
     player_ws["xp_to_next_level"] = hero["xp_to_next_level"]
