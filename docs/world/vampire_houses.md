@@ -426,6 +426,117 @@ Diplomatic access to any house requires demonstrating something the house values
 
 ---
 
+## First Contact — How Houses Find You
+
+Each house monitors the world differently. None of them advertise for help. A player who has not given a house a reason to notice them does not exist, as far as that house is concerned.
+
+The entry conditions below define what a player must have done for each house to decide that contact is worth the exposure. These are the thresholds the AI Director uses to determine when to surface a house's first approach. Entry is not automatic at threshold — the AI Director should time the approach to a natural moment in the campaign — but the threshold is the prerequisite.
+
+> **Writer's rule:** A house contacts the player because the player has become useful or relevant to that house's current situation. No house reaches out from altruism, curiosity, or because the player seems like an interesting person. The contact happens because someone in the house ran a calculation and the player was on the favorable side of it.
+
+---
+
+### House Vetharis — First Contact
+
+**Who decides:** Cassiel makes the decision. No Vetharis operative initiates contact with an outsider without his awareness and approval, because unauthorized contact is exposure, and exposure is the only thing Cassiel cannot recover from.
+
+**How contact is made:** A sealed letter arrives through three intermediaries, none of whom know who sent it. The letter names a specific inn room in the Capital Province and a specific hour. The text is brief, precise, and demonstrates knowledge of the player that only someone with extensive surveillance capability could have. Whoever wrote it has been watching.
+
+**Entry threshold — any two of the following, or the exposure trigger:**
+
+*Demonstrated political usefulness:*
+- The player has built meaningful reputation with at least one major institutional faction — Mages Guild, the provincial government, a religious order, or the Adventurers Guild at significant standing. Cassiel values players who have leverage inside institutions. Someone who can move in those spaces without leaving a trail is worth knowing.
+
+*Demonstrated discretion:*
+- The player has resolved at least one politically sensitive situation without creating public spectacle. The definition of "spectacle" is specific: no witnesses who couldn't be managed, no documentation that reached official record, no subsequent investigation. Cassiel does not require that the player share his values — only that they are capable of the kind of work that doesn't create follow-on problems.
+
+*Institutional footprint suggesting information value:*
+- The player has accessed the Restricted Collection of the Great Library, built meaningful reputation with the Veiled Order, or otherwise acquired or engaged with information of the kind that Vetharis would want to know about. Specifically: if the player has encountered anything touching on the Great Forgetting, Cassiel finds this significant. He has been watching the information landscape around that subject for decades and has specific questions he cannot answer through his own network.
+
+*The exposure trigger — overrides the two-condition requirement:*
+- The player has come close enough to a Vetharis operation — encountered an agent without recognizing them, investigated a situation involving a Vetharis-placed asset, or operated in a space where Vetharis has standing interests — that Cassiel determines controlled contact is safer than leaving the player as an unmanaged variable. In this case, contact is not an invitation; it is preemptive management of a risk. The player will not know this until later, if ever.
+
+**What Cassiel is looking for in a first impression:**
+
+The meeting is not with Cassiel. It is with a Vetharis operative whose job is to assess whether the player is what Cassiel's surveillance suggests — capable, discrete, and not ideologically rigid about who they work with. The operative asks questions that are not what they appear to be: questions about how the player handled a past situation, framed as polite conversation. The player who understands they are being evaluated and behaves accordingly is the player Cassiel wants to deal with.
+
+A player who demands to know who sent the letter before committing to anything will be told — truthfully — that the identity of the principal is not relevant to whether the work is worth doing, and that they are welcome to leave. The player who walks out has failed the assessment. The player who stays and asks smart questions about the job has passed it.
+
+**What disqualifies a player from Vetharis contact:**
+- A reputation for overt violence as a first resort — Cassiel explicitly does not want someone who makes scenes
+- Known connection to House Drakmor or active collaboration with Drakmor operations — he will not hand Morreth an information source
+- Having exposed or burned a Vetharis-adjacent asset previously, even unknowingly — he is patient, but he tracks costs
+
+---
+
+### House Drakmor — First Contact
+
+**Who decides:** Morreth decides which players are worth her time. Commander Valdrek Ash makes the operational call about timing — he knows her standards and can initiate contact when the conditions are right without waiting for her personal review of each case.
+
+**How contact is made:** A Drakmor courier — a soldier, not a spy — delivers a message to the player at whatever frontier settlement they are currently in. The courier does not pretend to be anything other than what they are: Drakmor does not use euphemisms. The message includes a meeting location, a time, and the clear implication that this is not a request. Whether it actually requires compliance is one of the things the meeting is designed to test.
+
+**Entry threshold — the Frontier presence condition plus one capability marker:**
+
+*Frontier presence (required):*
+- The player must be operating in or have passed through Drakmor-claimed or Drakmor-adjacent territory. Drakmor's watch-posts register who enters their terrain. A player who has never been in the Frontier does not exist to Drakmor; a player who operates there regularly has been in Drakmor's awareness for some time before contact. Morreth is not in the business of reaching outside her territory for resources she can find within it.
+
+*Combat reputation (one of the following):*
+- The player has resolved a significant Frontier combat situation — cleared a Corruption-influenced threat from a settlement or trade route, demonstrated tactical competence in a situation that Drakmor's watch-posts observed or heard about, or survived an encounter with Drakmor-adjacent forces in a way that demonstrated professional capability rather than luck.
+- The player has a reputation in the Frontier mercenary circuit — not necessarily famous, but known enough that Darvish Corr, Valdrek Ash, or another Drakmor-adjacent contact has heard their name attached to a specific capability.
+- The player has dealt with a situation involving Expansion-ist-held checkpoints or Old Guard-operated territory in a way that demonstrated they understand how military organizations actually function, not just what they are.
+
+**Why this player, at this moment:**
+
+The Fang-Hold Ultimatum is not the kind of mission Drakmor can run with its own people: sending a Drakmor soldier into Fang-Hold to pressure the council would immediately signal Drakmor's interest and stiffen the Iron Serration's position. Morreth needs an outsider who has enough demonstrated capability to be useful but no visible connection to Drakmor's operations. The player who has established a frontier reputation without aligning with any of her direct competitors is exactly the resource the situation requires.
+
+This is the pattern for all Drakmor first contact: they reach out when they have a specific problem that requires a specific capability they cannot source internally without creating a political problem. The player is not a partner; they are a tool the house has decided is worth picking up. Morreth respects tools that perform well. She does not pretend they are anything else.
+
+**What Morreth (via Ash) is looking for in a first impression:**
+
+The meeting is with Ash, not Morreth. He presents the situation, the objective, and the constraints without preamble and then stops. He is measuring two things: whether the player asks intelligent operational questions (does this person understand what they're being asked to do?) and whether the player immediately objects to the moral weight of the request (this is not a person who operates in Morreth's register). A player who demands justification for why Drakmor wants the road is given one sentence and not asked again. A player who asks about the Iron Serration captain's specific contract terms is given a complete answer and noted as capable.
+
+**What disqualifies a player from Drakmor contact:**
+- Known alliance with or active employment by House Vetharis — Morreth does not share assets with Cassiel
+- A public reputation for ideological commitment to protecting settlements from military pressure — this player will not do the job as asked, and Drakmor does not audition contractors they expect to refuse
+- Having previously destroyed rather than secured a Drakmor supply route — even if the reason was defensible, the operational record is what matters
+
+---
+
+### House Soleth — First Contact
+
+**Who decides:** The Archivist decides. No Soleth operative makes contact with an outsider without his explicit authorization, because contact is the one action that cannot be undone. A person who knows Soleth exists is a permanent variable in the Archivist's risk assessment. He does not create new variables without compelling reason.
+
+**How contact is made:** Contact is never direct. The player receives a request from a human scholar — not a vampire, someone who has worked with Soleth operatives for years in exchange for access to historical materials — who asks them to meet a "private collector of antiquities" at a specific address. The collector is a Soleth operative (Mira Deln). The Archivist is not named, is not present, and may not be acknowledged at all during a first meeting, depending on how the player handles the approach.
+
+**Entry threshold — knowledge marker plus discretion demonstration:**
+
+*Knowledge marker (required):*
+- The player has engaged with evidence of the Great Forgetting in a meaningful way. Not simply encountered a First Age ruin — that is too common to be a signal. Specifically: the player has accessed Great Library materials that touch on the subject; interacted with Carros or his research on the Forgetting; found or recovered a ruin depicting eight figures rather than seven and investigated rather than simply looted it; or demonstrated in conversation or action that they are operating with an understanding of the Eighth's existence that predates any official acknowledgment of it.
+
+This is the rarest trigger in the game for a reason: the Archivist has been alive since before the Great Forgetting. A player who has independently reached the edge of that knowledge is, from his perspective, simultaneously the most valuable external resource he has encountered in centuries and the most significant information security risk he faces. He does not reach out to such players quickly. He observes them first.
+
+*Observation period:*
+- Between when the player first crosses the knowledge threshold and when Soleth initiates contact, the Archivist conducts an observation period of variable length. A Preservationist operative monitors what the player does with what they know: do they broadcast it, attempt to sell it, pursue it further through channels that would attract attention, or handle it with the kind of care that suggests they understand its weight? A player who treats discovery of the Eighth's existence as a treasure to monetize will not receive contact. A player who pursues it carefully, protects it selectively, and demonstrates they understand that what they have found is dangerous will.
+
+*Discretion demonstration (what ends the observation period):*
+- The player has handled a piece of sensitive historical knowledge in a way that demonstrates they are capable of the kind of discretion Soleth's operation requires. This does not mean secrecy for its own sake — it means showing that the player makes deliberate choices about what to share with whom. A player who shared evidence of the Eighth with the Veiled Order but not with the Mages Guild, or who recovered something from a site and returned to investigate rather than publicizing what was found, has passed the Archivist's informal evaluation.
+
+*The urgency override:*
+- Contact may be initiated before the observation period is complete if the Archivist's timeline requires it. The Sol Kareth excavation authorized by the Mages Guild runs on a four-day window: if the player crosses the knowledge threshold at the wrong time, the Archivist must make contact before he has finished assessing them. In this case, Mira Deln's approach is more careful, more layered, and the first meeting gives the player less information than it otherwise would. The Archivist is gathering data while deploying them, which is not his preference.
+
+**What the Archivist is looking for in a first impression:**
+
+The Archivist will not be present at the first meeting. Mira Deln is his assessment instrument. She presents the situation with characteristic Soleth precision — enough to establish what is needed, not enough to give a complete picture before she has decided the player is trustworthy. She is measuring: how the player handles receiving partial information; whether they ask the right questions or the wrong ones; and whether they treat the situation as a job or as an investigation.
+
+A player who immediately asks who the principal is and demands full disclosure before agreeing to anything is given a truthful answer about the confidential nature of the operation and observed for how they handle that answer. A player who accepts partial information and asks about the operational specifics has demonstrated the kind of epistemic discipline the Archivist respects. A player who asks what will be done with the tablets after retrieval — rather than asking only about payment or logistics — is a player the Archivist will want to speak with directly.
+
+**What disqualifies a player from Soleth contact:**
+- Known connection to the Weaponizer faction within Soleth before the official introduction — the Archivist does not want players who have been pre-positioned by the faction he is already managing carefully
+- A reputation for sharing historical finds publicly or with the Mages Guild without selectivity — this player is an information security risk Soleth cannot manage
+- Having disturbed or looted a Soleth archive site previously — the Archivist tracks his sites, and the player who damaged one has already introduced themselves through their actions
+
+---
+
 ## Vampire House Quests
 
 Each house offers at least one named quest that puts the player inside its politics. These are not generic monster-hunt contracts — they are invitations into a house's internal logic. Accepting a quest from one house may create consequences with the others.
@@ -756,3 +867,4 @@ These profiles exist so writers can portray each NPC consistently across multipl
 | July 2026 | Added vampire house quests — two named quests per house, reputation cross-reference table, and writer design notes |
 | July 2026 | Expanded *The Fraying Edge* — fully authors the Iron Peaks archive silence hook with named site (Keth-Dural complex), named agents (Harvel Dun, Cassilda Vrehn), specific Corruption-driven danger (Remnant Intellect), and the Archivist's specific reason for silence |
 | July 2026 | Added Recurring Quest NPC Profiles — six profiles (Brennan Ashfield, Sera Vaine, Commander Valdrek Ash, Sergeant Hallec, Darvish Corr, Mira Deln) with role, personality, speech, motivation, and memorable detail |
+| 2026-07-31 | Added First Contact section — entry conditions for all three houses: Vetharis (political usefulness + discretion + exposure trigger), Drakmor (Frontier presence + combat reputation + specific capability gap), Soleth (knowledge marker + observation period + discretion demonstration); includes disqualifying conditions and first-impression assessment notes for each house |
