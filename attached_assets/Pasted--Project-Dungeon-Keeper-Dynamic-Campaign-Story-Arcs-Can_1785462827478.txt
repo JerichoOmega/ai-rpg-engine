@@ -1,0 +1,184 @@
+# Project Dungeon Keeper - Dynamic Campaign Story Arcs (Canonical Update)
+
+Analyze the current repository and expand the Game Bible and World Bible with the following design philosophy.
+
+## IMPORTANT
+
+- Preserve all existing lore.
+- Do NOT implement gameplay systems or code.
+- Expand documentation only.
+- Cross-reference all existing campaign and AI Dungeon Master documentation.
+
+---
+
+# DYNAMIC CAMPAIGN STORY ARCS
+
+Project Dungeon Keeper features one handcrafted main story shared across every campaign.
+
+However, each campaign should also feature one or more major Dynamic Story Arcs.
+
+These are large-scale world events unique to that particular playthrough.
+
+The AI Dungeon Master selects these story arcs during campaign generation.
+
+These arcs become part of that world's history and significantly influence:
+
+- Regions
+- Major factions
+- Companion stories
+- Questlines
+- Enemy types
+- World events
+- Politics
+- Exploration
+
+The main story never changes.
+
+The world's response to the Corruption does.
+
+---
+
+# CAMPAIGN PHILOSOPHY
+
+The goal is NOT procedural storytelling.
+
+The goal is handcrafted storytelling with dynamic world variation.
+
+Players should finish different campaigns with dramatically different experiences while still sharing the same central narrative.
+
+Each campaign should feel like another telling of the same legend.
+
+---
+
+# EXAMPLE STORY ARC
+
+## The Fractured Circle
+
+In this campaign variation, the Corruption quietly spreads throughout portions of the Mages Guild.
+
+Rather than beginning with obvious villains, respected scholars and researchers slowly become obsessed with understanding the Corruption.
+
+Some begin secretly communicating with cultists.
+
+Others believe the ancient god's power can be studied or controlled.
+
+Eventually portions of the Mages Guild become intertwined with one of the world's cults.
+
+---
+
+# UNIQUE CAMPAIGN FEATURES
+
+This campaign uniquely introduces:
+
+- Magic-using cultists
+- Corrupted battle mages
+- Ritualists
+- Arcane priests
+- Forbidden magical research
+- Secret magical laboratories
+- Corrupted magical archives
+
+These enemy types exist ONLY during this campaign variation.
+
+They should not automatically appear in other campaigns.
+
+---
+
+# ELEANOR'S PERSONAL STORY
+
+This campaign becomes deeply personal for Eleanor.
+
+Many of the corrupted individuals are:
+
+- Former teachers
+- Fellow students
+- Friends
+- Mentors
+- Researchers she admired
+
+Her story becomes one of heartbreak rather than hatred.
+
+She must confront the realization that good intentions do not protect people from the Corruption.
+
+---
+
+# COMPANION DYNAMICS
+
+## Talos
+
+Talos initially views the situation pragmatically.
+
+Those serving the cult must be stopped.
+
+His military background makes him prioritize protecting innocent lives.
+
+---
+
+## Ragash
+
+Ragash understands Eleanor's emotional conflict.
+
+Having experienced rejection herself, she empathizes with watching people she respected lose themselves.
+
+She becomes Eleanor's emotional support throughout this campaign.
+
+---
+
+## Ronan
+
+Because Ronan constantly fears losing himself to his curse, he understands that corruption is not always a conscious choice.
+
+He reminds Eleanor that some victims may still be worth saving.
+
+---
+
+# DYNAMIC ENEMY DESIGN
+
+Each Dynamic Story Arc should introduce enemies unique to that campaign.
+
+Examples:
+
+The Fractured Circle
+
+- Magic-using cultists
+- Corrupted scholars
+- Arcane summoners
+
+Other future campaign arcs should likewise introduce their own unique enemy variants appropriate to their story.
+
+This makes each campaign feel mechanically and narratively distinct.
+
+---
+
+# AI DUNGEON MASTER PHILOSOPHY
+
+The AI Dungeon Master should select one or more major Dynamic Story Arcs during campaign generation.
+
+These story arcs should:
+
+- Influence world events
+- Affect companion storylines
+- Introduce unique encounters
+- Create campaign-exclusive enemies
+- Modify faction relationships
+- Change questlines
+
+Not every campaign should contain every story arc.
+
+Campaign identity should emerge from the selected arcs.
+
+---
+
+# DESIGN GOAL
+
+Players should be able to compare campaigns and discover they experienced fundamentally different versions of the same world.
+
+For example:
+
+One player may remember a campaign where the Mages Guild slowly fell into corruption and magic-using cultists became one of the game's defining enemies.
+
+Another player may never encounter this storyline because their campaign focused on an entirely different regional crisis.
+
+These differences should encourage replayability while preserving the handcrafted central narrative.
+
+This philosophy should become canonical within the Game Bible, World Bible, AI Dungeon Master documentation, and future campaign design documents.
