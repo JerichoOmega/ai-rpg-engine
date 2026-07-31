@@ -2,7 +2,7 @@
 
 > **Canon Status:** CONFIRMED — 2026-07-31.  
 > **Authority:** This document defines the non-negotiable rules for companion design. All current and future companions must satisfy every section of this document. Individual Hero Bibles must be consistent with these rules and may not contradict them.  
-> **Cross-references:** [`docs/HERO_BIBLE.md`](../../HERO_BIBLE.md) · [`docs/CHARACTER_DESIGN_GUIDE.md`](../../CHARACTER_DESIGN_GUIDE.md) · [`COMPANION_PROGRESSIONS.md`](COMPANION_PROGRESSIONS.md) · [`COMPANION_RELATIONSHIPS.md`](COMPANION_RELATIONSHIPS.md) · [`JOURNEY_CONVERSATIONS.md`](JOURNEY_CONVERSATIONS.md)
+> **Cross-references:** [`docs/HERO_BIBLE.md`](../../HERO_BIBLE.md) · [`docs/CHARACTER_DESIGN_GUIDE.md`](../../CHARACTER_DESIGN_GUIDE.md) · [`COMPANION_PROGRESSIONS.md`](COMPANION_PROGRESSIONS.md) · [`COMPANION_RELATIONSHIPS.md`](COMPANION_RELATIONSHIPS.md) · [`JOURNEY_CONVERSATIONS.md`](JOURNEY_CONVERSATIONS.md) · [`docs/companions/COMPANION_REACTIVITY_STANDARD.md`](../../companions/COMPANION_REACTIVITY_STANDARD.md) (mandatory reactivity triggers) · [`docs/world/factions/FACTION_BIBLE.md`](../../world/factions/FACTION_BIBLE.md) · [`docs/design/world_state/README.md`](../world_state/README.md) (the Living World companions react to)
 
 ---
 

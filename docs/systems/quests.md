@@ -28,6 +28,26 @@ Players should remember quests because of their stories, not their rewards. Ques
 
 ---
 
+## Major Quest Integration Standard
+
+> **Canon Status:** CONFIRMED — 2026-07-31. Applies to all major quests (campaign-arc quests, faction questlines, and any quest whose outcome the world should remember). Companion to [`../design/VISIBLE_CONSEQUENCES.md`](../design/VISIBLE_CONSEQUENCES.md) and [`../design/PLAYER_COMMUNICATION.md`](../design/PLAYER_COMMUNICATION.md).
+
+**No major quest may exist in isolation.** Every major quest's design must specify all seven of the following, per outcome tier (see [`../design/world_state/CONSEQUENCES.md`](../design/world_state/CONSEQUENCES.md) for the five-tier outcome model):
+
+| Requirement | What must be specified |
+|---|---|
+| **Immediate consequences** | What changes the moment the quest resolves — scene-level results the player witnesses |
+| **Long-term consequences** | What the outcome does weeks or months later; different tiers ripple differently |
+| **World State impact** | Which World State categories the outcome moves, and how ([`../design/world_state/WORLD_STATE_SYSTEM.md`](../design/world_state/WORLD_STATE_SYSTEM.md)) |
+| **Faction reactions** | How each invested faction responds, through its own interests ([`../world/factions/FACTION_BIBLE.md`](../world/factions/FACTION_BIBLE.md), [`reputation.md`](reputation.md)) |
+| **Companion reactions** | Reaction beats per the [`../companions/COMPANION_REACTIVITY_STANDARD.md`](../companions/COMPANION_REACTIVITY_STANDARD.md) |
+| **Regional changes** | The visible changes required by [`../design/VISIBLE_CONSEQUENCES.md`](../design/VISIBLE_CONSEQUENCES.md) — at least two visible consequence channels per outcome, with physical regional changes where applicable |
+| **Journal updates** | What the journal records at resolution and as ripples land ([`journal_system.md`](journal_system.md)) |
+
+A major quest design that leaves any row blank is incomplete. Minor/side quests should satisfy the spirit of this table but are not bound to all seven rows.
+
+---
+
 ## Overview
 
 The quest system combines a static quest database with a procedural generation layer and a tracking system embedded in `world_state`. Quest completion drives faction reputation, XP, gold, and narrative events.

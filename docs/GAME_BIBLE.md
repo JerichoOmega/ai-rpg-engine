@@ -105,6 +105,8 @@ The game does not require real-time AI model access to function. The LLM layer (
 
 ## Core Design Pillars
 
+> The pillars below are the *technical/architectural* pillars of the current implementation. The project's nine non-negotiable *player-experience* pillars (Living World, Meaningful Consequences, Tactical Combat, Handcrafted Storytelling, Companion-Driven Narrative, Preservation of Civilization, Player Choice Without Binary Morality, World State Simulation, Quality Over Quantity) are canon in [`docs/design/CORE_DESIGN_PILLARS.md`](design/CORE_DESIGN_PILLARS.md). Every future feature must support at least one experience pillar and pass [`docs/design/FEATURE_EVALUATION.md`](design/FEATURE_EVALUATION.md).
+
 ### 1. Reactive World
 The world changes in response to player actions. Faction reputation, completed quests, world events, and story memory all accumulate and affect future encounters, available quests, narrative tone, and NPC behavior.
 

@@ -2,7 +2,7 @@
 
 > **Document Status:** Canonical as of July 2026.  
 > **Authority:** This document defines the canonical regions, organizations, factions, religion framework, reputation philosophy, travel encounter framework, and encounter philosophy for the game world. All future world design must align with these principles.  
-> **Cross-references:** [`docs/GAME_BIBLE.md`](../GAME_BIBLE.md) · [`docs/systems/world_regions.md`](../systems/world_regions.md) · [`docs/systems/reputation.md`](../systems/reputation.md) · [`elyndor/`](../../elyndor/) · [`docs/CAMPAIGN_DESIGN.md`](../CAMPAIGN_DESIGN.md)
+> **Cross-references:** [`docs/GAME_BIBLE.md`](../GAME_BIBLE.md) · [`docs/systems/world_regions.md`](../systems/world_regions.md) · [`docs/systems/reputation.md`](../systems/reputation.md) · [`elyndor/`](../../elyndor/) · [`docs/CAMPAIGN_DESIGN.md`](../CAMPAIGN_DESIGN.md) · [`docs/world/factions/FACTION_BIBLE.md`](factions/FACTION_BIBLE.md) · [`docs/design/CORE_DESIGN_PILLARS.md`](../design/CORE_DESIGN_PILLARS.md) · [`docs/design/world_state/README.md`](../design/world_state/README.md) (Living World system) · [`docs/design/companions/COMPANION_BIBLE.md`](../design/companions/COMPANION_BIBLE.md) · [`docs/systems/quests.md`](../systems/quests.md) (Quest Bible: philosophy & integration standard)
 
 ---
 

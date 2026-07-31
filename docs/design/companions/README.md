@@ -45,6 +45,10 @@ If a proposed companion can be summarized entirely by their combat role, they ha
 
 ---
 
+## Mandatory Standard
+
+All companions must also satisfy the **[Companion Reactivity Standard](../../companions/COMPANION_REACTIVITY_STANDARD.md)** (`docs/companions/COMPANION_REACTIVITY_STANDARD.md`) — eight mandatory reactivity triggers, craft rules, and the per-companion minimum authored kit.
+
 ## Document History
 
 | Date | Change |

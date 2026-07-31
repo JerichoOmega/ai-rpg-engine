@@ -3,6 +3,7 @@
 > **Canon Status:** Confirmed — established July 2026. **Foundational design pillar.**
 > **Authority:** This folder is the canonical design reference for the Living World Difficulty System — how the world responds to player action and inaction, and how difficulty emerges from consequence rather than artificial scaling. All future quest, region, faction, companion, and world design documents must reference and comply with this system.
 > **Relationship to the technical doc:** [`docs/systems/world_state.md`](../../systems/world_state.md) documents the *runtime* `world_state` object (schema, helpers, save compatibility). This folder documents the *design* the runtime serves. Where implementation lags design, this folder is the target; the systems doc is the current truth of the code.
+> **Related standards:** [`../CORE_DESIGN_PILLARS.md`](../CORE_DESIGN_PILLARS.md) (Pillars 1, 2, 8) · [`../VISIBLE_CONSEQUENCES.md`](../VISIBLE_CONSEQUENCES.md) · [`../PLAYER_COMMUNICATION.md`](../PLAYER_COMMUNICATION.md) · [`docs/companions/COMPANION_REACTIVITY_STANDARD.md`](../../companions/COMPANION_REACTIVITY_STANDARD.md) · [`docs/world/factions/FACTION_BIBLE.md`](../../world/factions/FACTION_BIBLE.md)
 
 ---
 

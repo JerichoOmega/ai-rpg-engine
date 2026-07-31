@@ -12,6 +12,8 @@ Two travel encounter categories — **Pilgrims** (Social Encounters) and **Hidde
 
 Both types support the full range of player approaches: combat, diplomacy, investigation, stealth, and avoidance. Encounters marked **[QUEST HOOK]** can open into a fuller questline. Encounters marked **[REPUTATION]** affect standing with the associated religious order.
 
+**Named recurring pilgrims:** each religion has at least one named, recurring pilgrim NPC the AI DM can cast into the anonymous roles below (with slot mappings, secrets, and recurrence arcs) — see [`../npcs/religious_travelers.md`](../npcs/religious_travelers.md). Prefer casting a named NPC on second and later occurrences of the same encounter type.
+
 ---
 
 ## Part I — Pilgrimage Encounters
@@ -813,3 +815,11 @@ At a glance: a location consistent with Order boundary sites — minimal physica
 | Report Threshold Rift to Order | The Veiled Archivists | Full report | Major gain |
 | Harm any pilgrim | Associated order | Any harm | Major loss |
 | Defile any shrine | Associated order | Defacement | Significant loss |
+
+---
+
+## Document History
+
+| Date | Change |
+|---|---|
+| 2026-07-31 | Named recurring pilgrim NPCs added for all four religions in [`../npcs/religious_travelers.md`](../npcs/religious_travelers.md); overview note added directing the AI DM to cast them into the anonymous pilgrim roles. |

@@ -2,7 +2,7 @@
 
 > **Canon Status:** Confirmed — established July 2026. Core reference document.
 > **Authority:** Master faction reference. Future quests, companions, settlements, political conflicts, dialogue, region design, and environmental storytelling must reference these factions consistently. Detailed per-faction documents (cross-referenced below) remain authoritative for their subjects.
-> **Cross-references:** [`README.md`](README.md) · [`GOVERNMENT.md`](GOVERNMENT.md) · [`FACTION_RELATIONSHIPS.md`](FACTION_RELATIONSHIPS.md) · [`docs/world/WORLD_BIBLE.md`](../WORLD_BIBLE.md)
+> **Cross-references:** [`README.md`](README.md) · [`GOVERNMENT.md`](GOVERNMENT.md) · [`FACTION_RELATIONSHIPS.md`](FACTION_RELATIONSHIPS.md) · [`docs/world/WORLD_BIBLE.md`](../WORLD_BIBLE.md) · [`docs/GAME_BIBLE.md`](../../GAME_BIBLE.md) · [`docs/design/world_state/WORLD_REACTIONS.md`](../../design/world_state/WORLD_REACTIONS.md) (how factions respond to World State) · [`docs/design/companions/COMPANION_BIBLE.md`](../../design/companions/COMPANION_BIBLE.md) (companion faction ties) · [`docs/systems/quests.md`](../../systems/quests.md) (faction reactions required for major quests)
 
 ---
 
