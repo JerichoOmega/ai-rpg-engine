@@ -684,7 +684,7 @@ He does not tell the player everything about the site. He will say what it conta
 
 Keth-Dural occupies six levels beneath a dwarven transit passage abandoned approximately four centuries ago. Levels one through five are Soleth construction: cataloguing chambers, preservation vaults, and agent quarters. Level six was already there when the site was established. The Archivist sealed it, studied it for decades, and concluded it was stable. He has not mentioned it to anyone in the house.
 
-Two Soleth agents are currently inside the complex: **Harvel Dun**, a Preservationist who has served Soleth for eighty years, and **Cassilda Vrehn**, a newer operative with exceptional archival skills. They are sealed on Level Three, alive but rationing supplies. They have been documenting the Remnant's behavior through the windows between sealed doors. Their notes are recoverable.
+Two Soleth agents are currently inside the complex: **Harvel Dun**, a Preservationist who has served Soleth for eighty years, and **Cassilda Vrehn**, a newer operative with exceptional archival skills. They are sealed on Level Three, alive but rationing supplies. They have been documenting the Remnant's behavior through the windows between sealed doors. Their notes are recoverable — the full authored handout is below ("Handout — Cassilda Vrehn's Field Notes" under *Running the Remnant Intellect*).
 
 **What Woke Up:**
 
@@ -808,6 +808,38 @@ The Remnant's pressure amplifies whatever fear or doubt is already carried (esta
 
 **DM guidance:** the pressure is also the encounter's diagnostic. A party that names what is happening to each other — that says the certainty out loud and treats it as the Remnant's flaw rather than their own truth — has already rehearsed every resolution path, because all three paths are, in the end, the act of meeting absolute certainty with honest doubt.
 
+#### Handout — Cassilda Vrehn's Field Notes
+
+> **What this is:** the discoverable in-world document behind "Cassilda Vrehn's documentation is the most efficient path" to the logic-overload resolution. The AI DM presents it when the party reaches Level Three (whether or not the agents are rescued first — if Cassilda is dead or unreachable, the notes survive in her writing case by the sealed door). A careful reader can extract the Remnant's rule set and at least one loadable contradiction — most directly Contradiction One — without any other source. The notes are also Cassilda's characterization in advance of meeting her: precise, methodical, honest about her own deteriorating margins.
+
+*The notes are written on catalogue slips — the only paper on Level Three — in a small, exact hand that stays exact to the last entry. Numbering and dating are hers. The site's days are counted from the morning the doors first sealed.*
+
+---
+
+*Day 2.* Doors on Levels Four and Five sealed in sequence, lower first — a closing pattern, not a failure pattern. Someone or something is operating the site's architecture deliberately. Harvel says the site has no such operator. The site disagrees with Harvel.
+
+*Day 3.* The cold precedes the voice by eleven to fourteen seconds, every time. I have started counting because counting is a use for fear. The voice does not echo. In these corridors, everything echoes. Conclusion: it is not sound arriving at the ear. It is arriving somewhere else.
+
+*Day 4.* It addressed us. Not by name — by number. I am "the second entrant." It asked three questions: what we intend toward what it keeps; why we carry recording instruments; whether we were sent by "the ones who consented." We answered honestly (intake documentation; standard kit; we do not know who consented to what). It filed our answers — its word, *filed* — and sealed the Level Three doors. Note: honest answers did not help. It did not disbelieve us. It appears to have concluded before asking. The questions were for its records, not its decision.
+
+*Day 6.* Test: I placed a damaged folio on the sill of the door window and repaired its stitching where it could observe. The temperature did not drop during the ninety minutes I worked. It drops whenever Harvel approaches the same door empty-handed. Repeated over three days, same result. **It distinguishes preservation acts from approach. It watches the work. It cools at the person.** I do not yet know what to do with this, but it is the first inconsistency I have found in anything it does.
+
+*Day 9.* Major discovery. The door mechanisms carry an inscribed operating header — the site's original hand, not Soleth's. Harvel translated with me through the window glass; the grammar is archaic but the register is procedural. I transcribe it exactly, because exactness may matter more than anything else I write here: **"An entrant that performs acts of preservation and removes nothing shall be classified custodian-class and shall not be impeded."** That rule is still in its doors. It reads its own logs — it quotes them back to us. So it is keeping two books: the rule in its doors, and the conclusion in its voice. The conclusion says every entrant is a destroyer. The rule says an entrant like us is not. It cannot have both. I have begun to suspect it knows this, somewhere below the certainty, and that the certainty is standing on the crack.
+
+*Day 11.* Asked it directly what it keeps. Answer, verbatim as best I could copy: "The reasons. The mechanics are elsewhere. I keep the reasons." Then, unprompted: "The records are kept so that they may serve the seal." It recites this the way Harvel recites his oath — as identity, not information. If its purpose is service and its conduct is denial, the purpose has a condition in it somewhere. Find the condition.
+
+*Day 14.* The pressure is worse. I record this as an observation, not a complaint. It does not create fear; it locates the fear you brought and removes everything that was holding it in proportion. Harvel has stopped talking about his eighty years of service and started talking about whether any of it was filed correctly. I find myself certain — *certain* — that these notes are worthless and no one is coming. I note that certainty is precisely its disease, and I decline to catch it. The notes continue.
+
+*Day 17.* It re-reads its own door logs aloud at intervals — always the entries concerning us, always without comment. Twice it stopped mid-entry. An entity that was sure would not re-read. Whoever finds these: **it is strongest in its conclusions and weakest in its records. Do not argue with what it believes. Show it what it has already filed.** Its own log of our days here — the folio work, the cataloguing, nothing removed — against its own rule in the doors. Make it file both. I do not think it can.
+
+*Day 19.* Rations at one-third. Handwriting deliberately kept small; paper is now also a ration. If we are past retrieval, deliver these slips to the Archivist unedited, including Day 14. He values accurate records of deterioration. So, evidently, do I.
+
+*Day 21.* It asked a fourth question today, the first since Day 4: whether the seal it serves "still stands watched." We do not know. It filed our not-knowing. The cold lasted longer than it ever has. I believe the question was not procedural. I believe it wanted an answer. — C.V.
+
+---
+
+**Using the handout:** Days 6 and 9 hand the party Contradiction One nearly assembled (behavioral criteria + surviving protocol + the Remnant's own logs of the agents' preservation work); Day 17 is Cassilda stating the overload method in her own words; Days 11 and 21 point toward Contradiction Two's release condition and the reasoning path without completing them — the seal-state proof must still come from outside the notes. Day 14 seeds the psychic-pressure manifestations before the party feels them, and Day 21 gives the reasoning path its opening move: the Remnant has a question it wants answered.
+
 ---
 
 ## Quest Cross-Reference Summary
@@ -929,5 +961,6 @@ These profiles exist so writers can portray each NPC consistently across multipl
 | July 2026 | Added vampire house quests — two named quests per house, reputation cross-reference table, and writer design notes |
 | July 2026 | Expanded *The Fraying Edge* — fully authors the Iron Peaks archive silence hook with named site (Keth-Dural complex), named agents (Harvel Dun, Cassilda Vrehn), specific Corruption-driven danger (Remnant Intellect), and the Archivist's specific reason for silence |
 | 2026-07-31 | Authored the Remnant Intellect encounter beats — Threshold Statement, three logic-overload contradictions tied to gathered information, the three resealing consent terms, and per-companion psychic-pressure manifestations |
+| 2026-07-31 | Authored Cassilda Vrehn's field notes as a discoverable Level Three handout — 21 days of dated observations that assemble Contradiction One, state the overload method in her voice, and seed the reasoning path |
 | July 2026 | Added Recurring Quest NPC Profiles — six profiles (Brennan Ashfield, Sera Vaine, Commander Valdrek Ash, Sergeant Hallec, Darvish Corr, Mira Deln) with role, personality, speech, motivation, and memorable detail |
 | 2026-07-31 | Added First Contact section — entry conditions for all three houses: Vetharis (political usefulness + discretion + exposure trigger), Drakmor (Frontier presence + combat reputation + specific capability gap), Soleth (knowledge marker + observation period + discretion demonstration); includes disqualifying conditions and first-impression assessment notes for each house |
