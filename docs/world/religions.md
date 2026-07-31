@@ -109,7 +109,7 @@ The Covenant's hierarchy has begun to splinter over how to respond to the world'
 
 - **The Restorationists** believe the world's decay is a sign that civilization must be defended more vigorously — tighter order, stricter enforcement, expanded Covenant authority
 - **The Reformists** believe the Covenant's political corruption is itself a manifestation of the wider Corruption; they advocate withdrawal from governance and return to purely spiritual practice
-- **The Inquisitors** (a faction within the hierarchy, not yet officially sanctioned) have concluded that rooting out Corruption requires extraordinary measures; their methods are becoming increasingly difficult to distinguish from the problem they claim to solve
+- **The Inquisitors** (a faction within the hierarchy, not yet officially sanctioned) have concluded that rooting out Corruption requires extraordinary measures; their methods are becoming increasingly difficult to distinguish from the problem they claim to solve — see [`docs/world/covenant_inquisitors.md`](covenant_inquisitors.md) for full faction definition including leadership, methods, reach, and encounter hooks
 
 ---
 
