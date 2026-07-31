@@ -196,8 +196,185 @@ Diplomatic access to any house requires demonstrating something the house values
 
 ---
 
+## Vampire House Quests
+
+Each house offers at least one named quest that puts the player inside its politics. These are not generic monster-hunt contracts — they are invitations into a house's internal logic. Accepting a quest from one house may create consequences with the others.
+
+All quests require that the player demonstrate something the house values before access is granted. Trust is not assumed; it is purchased incrementally through prior action and reputation.
+
+---
+
+### House Vetharis Quests
+
+#### Quest: *The Aldric Hourne Problem*
+
+**Hook:** A sealed letter arrives through three intermediaries, none of whom know who sent it. The letter names a specific inn room in the Capital Province and a specific hour. Whoever wrote it knows something about the player that only someone with extensive surveillance capability could know.
+
+The meeting is with a Vetharis operative — not Cassiel himself, not yet — who presents the situation plainly: Lord Cassiel's current human identity (Aldric Hourne, senior provincial advisor) is under quiet investigation by a royal auditor named Brennan Ashfield. Ashfield is methodical, incorruptible, and has begun noticing inconsistencies in Aldric Hourne's personal history spanning forty years of public records. He has not yet reached a conclusion. He is close.
+
+Cassiel does not want Ashfield dead. A dead auditor becomes an investigation. He wants Ashfield discredited, redirected, or given something more compelling to investigate — without any connection to Vetharis or Hourne.
+
+**Objectives:**
+- Investigate Brennan Ashfield's current evidence and how far his inquiry has progressed
+- Choose an approach: discover and surface a genuine scandal in Ashfield's personal history; fabricate a more damaging investigation target and plant it in Ashfield's awareness; or identify a third party who has reason to want Ashfield removed from his position and broker that removal
+- Ensure no connection between the operation and Hourne or any known Vetharis agent survives the resolution
+
+**Player choices and consequences:**
+- Using genuine scandal (if discovered) is the most durable solution — Ashfield's credibility is damaged and he cannot recover it. High Vetharis reputation gain.
+- Fabrication works but carries risk: if Ashfield eventually disproves it, the investigation resumes with greater urgency.
+- Brokering Ashfield's reassignment through a third party is clean, but it creates an obligation to that third party — one Cassiel will note, not necessarily with gratitude.
+- Players who warn Ashfield about Vetharis earn permanent Vetharis hostility but may open a relationship with the provincial government's investigative apparatus.
+
+**Reputation consequences:**
+- Completing the quest as requested: +Vetharis, no change to Drakmor or Soleth
+- If the player uses overt violence at any point: Vetharis penalizes them for incompetence regardless of whether the job is done — they were told specifically not to create a spectacle
+- If House Drakmor learns of the Hourne identity (possible if the player is careless): Drakmor gains leverage over Vetharis; Drakmor reputation improves slightly, Vetharis suffers a political setback
+
+**Quest reward:** Access to a Vetharis information broker in the Capital; one piece of intelligence about a current world event that is not available through any other faction.
+
+---
+
+#### Quest: *The Impatient Ones*
+
+**Hook:** A second Vetharis quest, available only after completing *The Aldric Hourne Problem* and demonstrating continued discretion. This time the approach comes from a member of the Impatient Faction — a vampire named Sera Vaine who operates as a trade guild assessor — without Cassiel's knowledge.
+
+Sera believes Cassiel is being too slow. The Corruption is destabilizing the political structures Vetharis depends on, and she has identified a specific regional governor who is actively cooperating with a Corruption-influenced cult in exchange for continued personal stability. Sera wants this exposed — loudly, through the right institutions — in a way that both removes the governor and demonstrates that the Impatient Faction's more aggressive approach produces faster results than Cassiel's patience.
+
+The complication: Cassiel has no idea this is happening. Helping Sera means acting against what Cassiel would sanction. Refusing Sera means she approaches someone less reliable.
+
+**Player choices and consequences:**
+- Help Sera and keep Cassiel ignorant: the governor falls, the cult loses a protector, the Impatient Faction gains internal credibility. Cassiel eventually discovers what happened; his response depends on whether the outcome served Vetharis interests (+Vetharis overall, but Cassiel personally distrusts the player for a time)
+- Help Sera and report to Cassiel afterward: Cassiel contains the fallout and gains leverage over Sera. +Vetharis (Cassiel tier), neutral to Sera
+- Refuse Sera and report to Cassiel: +Vetharis (Cassiel tier), Sera becomes a future complication
+- Refuse and say nothing: Sera finds someone else; the governor falls anyway but more messily; no faction reward
+
+**Reputation consequences:**
+- The targeted governor had mercenary contracts with House Drakmor; the governor's fall disrupts those contracts: -Drakmor (minor) regardless of approach
+- The cult the governor was protecting may have had knowledge Soleth wanted; Soleth's response depends on whether the player preserved or destroyed cult records during the operation
+
+---
+
+### House Drakmor Quests
+
+#### Quest: *The Fang-Hold Ultimatum*
+
+**Hook:** A Drakmor courier — a soldier, not a spy; Drakmor does not use euphemisms — delivers a message to the player at whatever frontier settlement they are currently in. Lady Morreth Drakmor is aware of the player's reputation. She has a use for someone with that reputation. The message includes a meeting location, a time, and the implication that this is not a request.
+
+The meeting, if attended, is with Commander Valdrek Ash, one of Morreth's senior officers. He presents the situation without ceremony: Fang-Hold, a mid-sized frontier trading post, sits on a road that Drakmor is consolidating as a supply corridor. The town council has been slow to formalize an arrangement. The delay is because a mercenary company called the Iron Serration, currently under contract to protect Fang-Hold, has advised the council that Drakmor's terms are unfavorable and that alternatives exist.
+
+The Iron Serration's captain, a woman named Darvish Corr, is well-regarded and well-connected. Killing her would be straightforward but would create problems — her company has standing contracts with three other frontier towns, and making martyrs is bad policy. Drakmor wants Fang-Hold's cooperation. They want Corr gone, or converted, or discredited. Results matter; methods are the player's concern.
+
+**Objectives:**
+- Resolve the Iron Serration situation in a way that removes their opposition to the Drakmor arrangement
+- Ensure Fang-Hold's council formalizes cooperation with Drakmor
+
+**Player choices and consequences:**
+- Negotiate with Corr: she is a professional, not an idealist. If the player can offer her a better contract or demonstrate that Drakmor's terms are genuinely preferable to the alternative, she may advise the council to accept. This is the cleanest resolution and earns Drakmor's grudging respect for pragmatism.
+- Discredit Corr: evidence of past contract breaches exists if the player investigates her company's history. Exposing it would damage her credibility with the council. Morally ambiguous; effective.
+- Remove Corr by force: Drakmor accepts this result but notes the bluntness. The three other towns Corr had contracts with are now without protection and will need to be managed. This creates follow-on consequences in the region.
+- Warn Fang-Hold and side against Drakmor: the town gains advance warning, the Iron Serration stays, and Drakmor's consolidation of the road is delayed. Permanent Drakmor hostility; potential relationship with Fang-Hold's council and the Iron Serration.
+
+**Reputation consequences:**
+- Completing the quest as requested: +Drakmor. The road consolidation advances.
+- Vetharis has agents in Fang-Hold's merchant council; if Drakmor's influence expands there, Vetharis loses a foothold: -Vetharis (minor)
+- If the player negotiates Corr into the Drakmor arrangement rather than removing her, Morreth respects the efficiency but Valdrek Ash dislikes being outmaneuvered. Internal Drakmor friction — useful for future navigation.
+
+**Quest reward:** Access to Drakmor supply caches in the Frontier; one piece of military intelligence about current territorial threats.
+
+---
+
+#### Quest: *The Soldier Who Remembered*
+
+**Hook:** Available after completing *The Fang-Hold Ultimatum*. A member of the Old Guard — a vampire who has served Morreth for four centuries and currently operates under the name Sergeant Hallec — approaches the player privately. He does not frame it as a Drakmor mission. He frames it as a personal matter that Morreth does not need to know about yet.
+
+A Corruption-influenced creature has taken up residence in an ancient battlefield site that Hallec considers significant — a place where Drakmor won a decisive engagement two centuries ago and Hallec lost soldiers he considered brothers. The creature is not a military threat. It is a desecration. Hallec wants it removed and the site secured, but going through official Drakmor channels would require explaining why he cares, and he is not willing to do that.
+
+**Player choices and consequences:**
+- Help Hallec and keep it quiet: personal loyalty quest; Hallec becomes a private contact with long institutional memory of Drakmor's politics and vulnerabilities. +Drakmor (Hallec tier).
+- Help Hallec and tell Morreth: she finds it interesting that Hallec has attachments he hides. She does not punish him — she catalogs it. The player has given her information she will use. +Drakmor (Morreth tier), -Drakmor (Hallec tier).
+- Investigate the site independently without helping Hallec: the battlefield contains strategic records from two centuries ago that document the full scope of Drakmor's military operations in that period. This information is valuable to Vetharis and Soleth. Taking it without either Hallec's or Morreth's knowledge creates future complications.
+
+**Reputation consequences:**
+- If Corruption creature is destroyed: minor positive effect on regional stability, noted by Soleth's agents who were monitoring the site's historical value.
+
+---
+
+### House Soleth Quests
+
+#### Quest: *What the Desert Remembers*
+
+**Hook:** Contact from Soleth is not direct. The player receives a request from a scholar at the Sol Kareth Mages Guild chapter — not a vampire, a human who has worked with Soleth operatives for years in exchange for access to historical materials — who asks them to meet a "private collector of antiquities" at a specific address in the city.
+
+The collector is a Soleth operative named Mira Deln, who has been embedded in Sol Kareth's scholarly community for decades. She presents the situation with characteristic Soleth precision: a sealed vault beneath a recently identified ruin site contains clay tablets that predate the current civilization. A Mages Guild excavation team has been authorized to open the site in four days. The tablets document the original binding ritual of the imprisoned god — the mechanics of how the seal was constructed and what it requires to hold.
+
+The Archivist believes this information is too consequential to be placed in the Mages Guild's archive, where access is imperfectly controlled and where it might be shared with parties whose judgment cannot be verified. He wants the tablets retrieved intact before the excavation team reaches them, and he wants it done in a way that leaves the Guild believing the vault contained only degraded materials not worth cataloguing.
+
+**Objectives:**
+- Gain access to the sealed vault before the excavation team arrives
+- Retrieve the specific tablets (Mira Deln can identify them from the Archivist's descriptions)
+- Leave the site in a condition that does not invite further scrutiny
+
+**Player choices and consequences:**
+- Retrieve the tablets for Soleth as requested: +Soleth. The Archivist has the information; the Mages Guild does not. The binding ritual's documentation is now in Soleth's archive. This has long-term campaign consequences — if the seal weakens or needs reinforcement, Soleth is the only faction with the relevant knowledge.
+- Retrieve the tablets and make copies before delivering them to Soleth: Soleth's operatives will eventually discover this. The Archivist's response is not anger — he is curious about what the player intended to do with the copies. This opens a negotiation rather than a conflict.
+- Retrieve the tablets and give them to the Mages Guild instead: significant +Mages Guild reputation. Soleth becomes deeply wary of the player. The Mages Guild now has information they do not fully understand, with unpredictable long-term consequences.
+- Retrieve the tablets and keep them: both Soleth and the Mages Guild will eventually pursue this. Not recommended without a specific plan.
+- Leave the tablets in the vault and let the excavation proceed: the Mages Guild gets the tablets, Soleth is disappointed but not hostile, and the player learns what the Mages Guild does with the information — which itself becomes a future quest thread.
+
+**Reputation consequences:**
+- Completing the quest for Soleth: +Soleth, no immediate Vetharis or Drakmor change
+- If Vetharis agents in Sol Kareth's merchant community learn the player accessed pre-Corruption records, they will want to know what was found: Vetharis makes quiet contact, requesting information +Vetharis (minor opportunity)
+- The Mages Guild's excavation team, if blocked or the vault is found disturbed, will investigate who accessed the site: potential reputation consequences with the Mages Guild depending on how clean the player's exit was
+
+**Quest reward:** Access to the Archivist through Mira Deln — subsequent Soleth quests become available; one piece of historical intelligence about a current campaign mystery, drawn from the archive.
+
+---
+
+#### Quest: *The Fraying Edge*
+
+**Hook:** Available after completing *What the Desert Remembers*. The Archivist makes contact himself this time — not through an intermediary but through a letter written in his careful, qualified hand. He acknowledges that what he is about to ask is outside the standard arrangement. He would not ask if he had another option.
+
+One of Soleth's deep archive sites in the Iron Peaks — a sealed complex beneath an abandoned dwarven passage — has gone quiet. Soleth's two agents stationed there have not responded to contact in three weeks. The site contains irreplaceable records from before the Age of Legends, including documentation of vampire social organization during the period before the three houses formed. The Archivist cannot send a Soleth response team without revealing the site's location to other Soleth members who do not currently know it exists. He needs outside help.
+
+What the player finds at the site will depend on current campaign state and The Corruption's progression — the agents may be dead, transformed, trapped, or something more complicated. The records are the priority; the agents are a secondary concern the Archivist acknowledges with visible difficulty.
+
+**Player choices and consequences:**
+- Recover the records and return them to Soleth: +Soleth. If the agents are alive, rescuing them also earns personal loyalty from a faction that is not generally emotional about anything.
+- Recover the records and discover what happened to the agents — then decide whether to tell the Archivist the full truth: his reaction to an honest account of what occurred is one of the more revealing moments of Soleth characterization. He does not punish honesty. He values it precisely because it is rare.
+- Discover that a Drakmor patrol destroyed the site entrance inadvertently during a territorial survey (possible outcome): this is exactly the situation the Archivist regards as the argument for why Drakmor should not be allowed near things that matter. The player navigates whether to confront Drakmor, seek compensation, or absorb the loss. Inter-house consequences depend on approach.
+- Discover that the Weaponizer faction within Soleth deliberately silenced the site to force the Archivist's hand on the question of sharing archive content (possible outcome): significant internal Soleth political event. The player must decide whether to expose the Weaponizers to the Archivist or to keep the information and use it.
+
+**Reputation consequences:**
+- Completing the quest as requested: +Soleth (Archivist tier — the most valuable tier)
+- If Drakmor was responsible and the player confronts them directly: -Drakmor, +Soleth
+- If the internal Weaponizer plot is exposed: Soleth internal politics shift; the Archivist's willingness to share archive knowledge may increase as a result, affecting future quest availability
+
+---
+
+## Quest Cross-Reference Summary
+
+The following table documents confirmed reputation consequences across houses for the quests above. Writers should use this when designing encounters and dialogue that reference the player's faction standing.
+
+| Quest | Completing House | Vetharis Effect | Drakmor Effect | Soleth Effect |
+|---|---|---|---|---|
+| *The Aldric Hourne Problem* | Vetharis | +Vetharis | Minor -Drakmor (if careless) | Neutral |
+| *The Impatient Ones* | Vetharis | +Vetharis (complex) | Minor -Drakmor | Variable |
+| *The Fang-Hold Ultimatum* | Drakmor | Minor -Vetharis | +Drakmor | Neutral |
+| *The Soldier Who Remembered* | Drakmor | Neutral | +Drakmor (variable tier) | Minor (observer) |
+| *What the Desert Remembers* | Soleth | Minor opportunity | Neutral | +Soleth |
+| *The Fraying Edge* | Soleth | Neutral | Variable | +Soleth (Archivist tier) |
+
+### Design Note for Writers
+
+These quests are entry points, not conclusions. The player's choices within each quest — how they complete the objective, what they preserve or destroy, who they tell — are as important as whether they complete it at all. A player who finishes every quest on this list without understanding why any house operates the way it does has missed the design intent.
+
+Each house should feel distinct at the table level: a Vetharis quest session should feel like a procedural thriller; a Drakmor quest session should feel like a military operation where the player's restraint is the variable; a Soleth quest session should feel like archaeology in the dark with something moving nearby.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — three houses named and fully developed: Vetharis (political manipulation), Drakmor (military conquest), Soleth (ancient knowledge and vampire survival) |
+| July 2026 | Added vampire house quests — two named quests per house, reputation cross-reference table, and writer design notes |
