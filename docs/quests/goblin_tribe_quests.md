@@ -10,6 +10,8 @@
 
 These quests are the primary entry points for goblin political engagement. Each tribe has one named quest that activates the tribe's reputation track and opens the possibility of sustained diplomatic, military, or informational relationships. They are not exhaustive — they are the opening moves.
 
+> **Tier 2:** Each tribe has a second named quest unlocked by high reputation — "The Proving Ground" (Stonefang), "The Warren Below" (Mossroot), and "The Second Fire" (Ashfire). See [`goblin_tribe_quests_tier2.md`](goblin_tribe_quests_tier2.md).
+
 Each quest supports multiple resolution approaches per the Player Choice Philosophy. Writers and the AI DM should present all viable paths and let player choices determine outcomes and reputation consequences.
 
 **Prerequisite standing:** None. These quests are accessible from the start of a Frontier campaign, though the party's prior encounter history with each tribe will affect how they are received at the outset.

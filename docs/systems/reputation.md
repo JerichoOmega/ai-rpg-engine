@@ -66,7 +66,7 @@ Three tribes are tracked independently. Standing with one does not transfer to o
 - Recognizing Ashfire territorial claims (e.g., in negotiating safe passage through their zone) creates an Ashfire gain with no automatic effect on the other two — but the Stonefang will note it
 - Brokering peace or a territorial agreement between any two tribes creates a smaller gain with the third (they observe that the party can operate as a neutral political actor)
 
-> Full tribal definitions: [`docs/world/goblin_tribes.md`](../world/goblin_tribes.md)
+> Full tribal definitions: [`docs/world/goblin_tribes.md`](../world/goblin_tribes.md) · High-reputation unique quests per tribe: [`docs/quests/goblin_tribe_quests_tier2.md`](../quests/goblin_tribe_quests_tier2.md)
 
 ### Religious Orders (detail)
 
