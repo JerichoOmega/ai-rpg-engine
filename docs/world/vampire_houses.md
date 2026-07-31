@@ -265,6 +265,28 @@ The measurable effect: Soleth is now running two parallel information-sharing po
 
 ---
 
+## Companion Reactions to the Vampire Houses
+
+Each companion holds a distinct position on the Vampire Houses. These opinions do not disappear — they should surface in dialogue, camp conversations, and moments where the party must decide how to engage.
+
+### Talos
+
+Talos deeply distrusts all Vampire Houses. His military experience has taught him that vampires rarely act without hidden motives — and his read is accurate. He will only tolerate cooperation if innocent lives are immediately at risk and no better option exists. Even then, he does not pretend the cooperation is anything other than necessity. He watches the vampires throughout any joint operation and does not relax until it is over.
+
+### Eleanor
+
+Eleanor believes every situation deserves understanding before violence. She initially hopes diplomacy may be possible — that intelligence and genuine communication could produce an outcome that protects lives on all sides. As the story progresses and she witnesses what the Houses actually do with power, she slowly reaches a harder conclusion: that some Vampire Lords cannot be redeemed, not because redemption is philosophically impossible, but because they do not want it. This realization costs her something.
+
+### Ragash
+
+Ragash judges individuals by their actions rather than what they are. She is willing to negotiate with a vampire if negotiation protects innocent people or her companions. She applies the same standard she applies to anyone: what are you doing, and who does it harm? She never fully trusts vampires — the pattern of their behavior across centuries earns that — but she does not treat the category as a verdict before the evidence is in.
+
+### Ronan
+
+Because Ronan understands what it feels like to be feared and mistrusted because of what he is, he does not immediately condemn every vampire. He knows the difference between a creature struggling against its nature and one that has embraced cruelty as identity. He has no patience for the latter. He does not extend sympathy to vampires who prey on innocent people willingly — the curse does not excuse the choice. But he holds the question open longer than Talos does, and for different reasons.
+
+---
+
 ## Design Notes
 
 ### Vampire Types by House

@@ -154,6 +154,31 @@ Every companion should sound unique **without a portrait visible**.
 
 ---
 
+## Party as Family
+
+The companions should gradually become a family over the course of a campaign.
+
+This is not a design metaphor — it is a design requirement. Relationships must continuously evolve:
+
+- Friendships deepen through shared crisis and revealed character
+- Trust grows through demonstrated reliability, not declaration
+- Disagreements emerge naturally when companions' values or experiences point in different directions
+- Protectiveness develops as companions recognize what each person provides that cannot be replaced
+
+**Eleanor** is the emotional heart of the party — the person who inspires hope and reminds everyone why they are still fighting. Other companions come to understand this and protect it, each in their own way.
+
+**Ragash and Eleanor:** Ragash recognizes Eleanor's value to the group not sentimentally but practically — and becomes as protective of her as Talos is, for her own reasons.
+
+**Ragash and Ronan:** One of the strongest friendships in the party. Built on mutual recognition of what it means to be an outsider, and Ragash's unperformed acceptance of Ronan's condition without judgment.
+
+**Dynamic Campaign Story Arcs** should strengthen different relationships depending on which arc is active. Different campaigns produce different emotional experiences within the party — not only different world events.
+
+> The target: a player who finishes a campaign should feel that these specific companions, in this specific campaign, became something to each other that could not have been scripted. The relationships should feel earned.
+
+See [`docs/systems/dynamic_story_arcs.md`](systems/dynamic_story_arcs.md) for campaign-specific companion interactions.
+
+---
+
 ## Document History
 
 | Date | Change |

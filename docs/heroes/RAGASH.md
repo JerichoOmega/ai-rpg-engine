@@ -171,10 +171,20 @@ Ragash's quest is about whether someone who was told she did not belong can buil
 Mutual respect — deep and immediate, the kind that forms between two people who recognize the same quality in each other before they have words for it. Both Talos and Ragash are protectors who have learned not to rely on anyone. Both lead with action, not speech. Depending on player choices, this mutual recognition can develop into a slow-burn romance. Neither would say it first.
 
 ### Eleanor
-*(Relationship not yet defined — to be established.)*
+
+Ragash gradually comes to understand why Talos is so protective of Eleanor. Initially she assumes it is because Talos sees Eleanor as inexperienced — someone who needs looking after until she finds her footing. Over time, through watching Eleanor with the party, she reaches a different conclusion.
+
+Eleanor is the emotional heart of the group. She inspires hope. She sees goodness in people when they have stopped seeing it in themselves. She reminds everyone why they are still fighting. Ragash — who has spent much of her life without that kind of presence — recognizes its value in a way that is not sentimental but practical: losing Eleanor would break something within the party that could not be repaired.
+
+Ragash becomes just as protective of Eleanor as Talos. Not because Eleanor is weak — she is not — but because Ragash understands what she provides and what it would cost to lose her.
 
 ### Ronan
-*(Relationship not yet defined — to be established.)*
+
+Ragash and Ronan develop one of the strongest friendships in the party. The foundation is recognition: Ragash has spent most of her life as an outsider to her own people, and she understands viscerally what it is to feel like that. She does not need Ronan to explain his situation to her. She already knows what it looks like.
+
+Her years raising and training hounds have also given her a particular understanding of fear and instinct — how those things shape behavior without defining worth. She sees Ronan as a man struggling against his curse, not as the curse itself. She never judges him for his condition. She does not treat it as something he needs to apologize for.
+
+She becomes one of the first companions Ronan genuinely trusts. Alongside Eleanor — who offers hope through belief in his humanity — Ragash offers something different: acceptance through the absence of judgment. Eleanor sees who Ronan could be. Ragash accepts who he is now. Both matter to him, and in different ways.
 
 ### Steven
 *(Relationship not yet defined — to be established.)*

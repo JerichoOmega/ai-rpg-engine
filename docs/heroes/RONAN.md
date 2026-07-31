@@ -177,7 +177,13 @@ During **The Fractured Circle** campaign arc, the relationship inverts: Eleanor'
 Talos is cautious around Ronan — not hostile, and not personal. His concern is protective of others: if Ronan loses control, who gets hurt? Over time, as Ronan demonstrates the extent of his effort and his self-awareness, Talos's caution can evolve into genuine respect. They share more than either would say out loud: both have learned to manage something difficult alone.
 
 ### Ragash
-*(Relationship not yet defined — to be established.)*
+### Ragash
+
+Ragash becomes one of the first companions Ronan genuinely trusts. She does not approach his condition with the careful, considered openness that Eleanor does — she approaches it with simple, unperformed acceptance. She has spent years working with animals that others feared or dismissed, and she recognizes the pattern: fear and instinct do not define what a creature is, or what it is capable of.
+
+She never asks him to justify his curse or to demonstrate that he is not dangerous. She takes the evidence of his behavior as it comes. This is, for Ronan, more disarming than sympathy. He knows how to receive pity. He does not know what to do with someone who simply does not make it a question.
+
+Alongside Eleanor — who offers hope through her belief in who he can become — Ragash offers something he has rarely had: acceptance of who he is right now, without conditions attached.
 
 ### Steven
 *(Relationship not yet defined — to be established.)*

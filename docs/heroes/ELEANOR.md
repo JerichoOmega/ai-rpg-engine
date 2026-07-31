@@ -176,7 +176,10 @@ Eleanor and Ronan's relationship can develop into romance depending on player ch
 Throughout most of the game, Eleanor is positioned to help Ronan. During **The Fractured Circle** campaign arc, this dynamic inverts: Ronan becomes one of Eleanor's strongest emotional supports as she watches respected Guild members fall to the Corruption. Because he understands the fear of losing oneself, he can reach her in ways no other companion does. This is one of the moments where his growth pays off in service of her story. See [`docs/systems/dynamic_story_arcs.md`](../systems/dynamic_story_arcs.md).
 
 ### Ragash
-*(Relationship not yet defined — to be established when Ragash's arc is more fully developed.)*
+
+Ragash becomes one of Eleanor's most important protectors — not because Eleanor cannot protect herself, but because Ragash understands Eleanor's value to the group in a way that goes beyond combat capability. She recognizes that Eleanor is the emotional center of the party: the person who reminds everyone why they are still fighting, who sees goodness in people when they have stopped seeing it in themselves. Ragash, who grew up without that kind of presence, does not take it for granted.
+
+Eleanor may not always be aware of the full depth of Ragash's protectiveness. Ragash does not announce it. But it is there, steady and deliberate, in the choices she makes when the party is under threat.
 
 ### Steven
 *(Relationship not yet defined — to be established when Steven's arc is more fully developed.)*

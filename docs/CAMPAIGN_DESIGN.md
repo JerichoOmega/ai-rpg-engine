@@ -127,6 +127,25 @@ Every campaign should feel like a **new telling of the same epic legend**.
 
 ---
 
+## Villain Cooperation Philosophy
+
+Not every villain is an immediate enemy. Not every enemy is fought immediately.
+
+Players may cooperate with morally evil factions when circumstances demand it. This is not a moral endorsement — it is a consequence of a world complex enough to produce situations where the lesser evil is choosing to work with something you distrust.
+
+**This applies specifically to the Vampire Houses**, and may apply to other factions as the world develops.
+
+When the player cooperates with a faction that is fundamentally self-serving or harmful:
+
+- Companion reactions should reflect their individual positions — not a unified party opinion
+- Other factions should notice and respond; alliances with vampires cost something with factions that oppose them
+- The cooperation should carry consequences that persist beyond the immediate situation
+- The game should never frame such cooperation as morally neutral; the world remembers, and companions remember
+
+The player's choices matter. The world should demonstrate that they do.
+
+---
+
 ## Dungeon Master Philosophy
 
 The AI Dungeon Master is **not** responsible for creating completely different stories between playthroughs.

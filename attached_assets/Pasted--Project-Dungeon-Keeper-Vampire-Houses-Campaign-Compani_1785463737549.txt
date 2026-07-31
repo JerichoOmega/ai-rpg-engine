@@ -1,0 +1,288 @@
+# Project Dungeon Keeper - Vampire Houses & Campaign Companion Expansion (Canonical Update)
+
+Analyze the current repository and expand the Game Bible, World Bible, Hero Bible, and AI Dungeon Master documentation using the following design philosophy.
+
+## IMPORTANT
+
+- Preserve all existing lore.
+- Do NOT replace existing companion relationships.
+- Expand existing documentation.
+- Do NOT implement gameplay systems or code.
+- Cross-reference existing companion, faction, and campaign documentation.
+
+---
+
+# VAMPIRE HOUSE PHILOSOPHY
+
+The Vampire Houses are one of the world's primary supernatural powers.
+
+They are NOT misunderstood heroes.
+
+They are fundamentally one of the world's major evil factions.
+
+However...
+
+They are intelligent civilizations with their own politics, goals, rivalries, and philosophies.
+
+The player may interact with them.
+
+The player may negotiate with them.
+
+The player may temporarily cooperate with them.
+
+The player may even make temporary alliances when facing greater threats.
+
+This should never imply that the Vampire Houses are morally good.
+
+Their goals ultimately serve themselves.
+
+They often manipulate others for power, influence, knowledge, or survival.
+
+---
+
+# THREE MAJOR VAMPIRE HOUSES
+
+The world contains three major Vampire Houses.
+
+Their names, histories, and leaders will be developed later.
+
+Current design philosophy:
+
+• Each house occupies a different region of the continent.
+
+• One house secretly operates within the Capital, manipulating politics and noble families from the shadows.
+
+• The remaining two houses should naturally fit other regions of the world.
+
+Each house should possess:
+
+- Unique leadership
+- Unique philosophy
+- Political goals
+- Territory
+- Internal politics
+- Rivalries with other houses
+
+The houses should compete with one another as often as they cooperate.
+
+---
+
+# PLAYER INTERACTION
+
+Players should be able to interact with Vampire Houses in multiple ways.
+
+Examples include:
+
+- Negotiation
+- Temporary alliances
+- Information gathering
+- Political agreements
+- Hostile confrontations
+- Infiltration
+- Deception
+
+Combat should remain an option, but not the only option.
+
+Every interaction should carry meaningful consequences.
+
+Helping one Vampire House may anger another.
+
+Other factions may lose trust in the player.
+
+Companions may react differently depending on the player's choices.
+
+---
+
+# COMPANION REACTIONS
+
+Each companion should possess their own opinions regarding the Vampire Houses.
+
+## Talos
+
+Talos deeply distrusts all Vampire Houses.
+
+His military experience has taught him that vampires rarely act without hidden motives.
+
+He will only tolerate cooperation if innocent lives are immediately at risk.
+
+---
+
+## Eleanor
+
+Eleanor believes every situation deserves understanding before violence.
+
+She initially hopes diplomacy may save lives.
+
+As the story progresses, she slowly realizes that some Vampire Lords cannot be redeemed.
+
+---
+
+## Ragash
+
+Ragash judges individuals by their actions rather than appearances.
+
+She is willing to negotiate if it protects innocent people or her companions.
+
+She never fully trusts vampires.
+
+---
+
+## Ronan
+
+Because Ronan understands what it feels like to be feared because of what he is, he does not immediately condemn every vampire.
+
+However...
+
+He has no patience for vampires who willingly prey upon innocent people.
+
+He understands the difference between struggling against one's nature and embracing cruelty.
+
+---
+
+# DESIGN PHILOSOPHY
+
+Villains are not always immediate enemies.
+
+Enemies are not always fought immediately.
+
+Players may cooperate with morally evil factions when circumstances demand it.
+
+Such decisions should always produce meaningful long-term consequences.
+
+The world should remember these decisions.
+
+---
+
+# CAMPAIGN-SPECIFIC COMPANION RELATIONSHIPS
+
+Dynamic Campaign Story Arcs should also create unique companion interactions that only occur during those campaigns.
+
+These interactions should deepen relationships and provide additional replay value.
+
+---
+
+# THE FRACTURED CIRCLE
+
+If Eleanor and Ronan are both active companions during this campaign...
+
+Additional dialogue, camp conversations, and story events become available.
+
+As Eleanor watches respected members of the Mages Guild succumb to the Corruption...
+
+Ronan becomes one of her greatest emotional supports.
+
+Earlier in the story...
+
+Eleanor helped Ronan fight despair during his struggle with lycanthropy.
+
+During this campaign...
+
+Their roles reverse.
+
+Ronan encourages Eleanor not to lose hope.
+
+He reminds her that those who have fallen were once good people.
+
+He understands what it feels like to fear losing yourself.
+
+This campaign demonstrates Ronan's emotional growth.
+
+He is no longer only someone who needs help.
+
+He has become someone capable of helping others.
+
+---
+
+# RAGASH & ELEANOR
+
+Throughout the main story...
+
+Ragash gradually realizes why Talos is so protective of Eleanor.
+
+Initially...
+
+She assumes Talos simply sees Eleanor as inexperienced.
+
+Over time...
+
+She comes to understand Eleanor's true importance.
+
+Eleanor is the emotional heart of the party.
+
+She inspires hope.
+
+She sees goodness in others.
+
+She reminds everyone why they continue fighting.
+
+Eventually...
+
+Ragash becomes just as protective of Eleanor as Talos.
+
+Not because Eleanor is weak...
+
+But because she recognizes that losing Eleanor would break something within the entire group.
+
+---
+
+# RAGASH & RONAN
+
+Ragash and Ronan gradually develop one of the strongest friendships within the party.
+
+Because Ragash has spent much of her life isolated from her own people...
+
+She understands what it feels like to feel like an outsider.
+
+Her experience raising and training hounds has also taught her that fear and instinct do not define a person's worth.
+
+She sees Ronan as a man struggling against his curse rather than a monster.
+
+She never judges him for his condition.
+
+She becomes one of the first companions Ronan truly trusts.
+
+Alongside Eleanor...
+
+Ragash becomes one of the most important companions in Ronan's personal quest.
+
+Together...
+
+Eleanor offers hope through knowledge.
+
+Ragash offers acceptance through compassion.
+
+---
+
+# PARTY PHILOSOPHY
+
+The companions should gradually become a family.
+
+Relationships should continuously evolve.
+
+Friendships should deepen.
+
+Trust should grow.
+
+Disagreements should naturally occur.
+
+Dynamic Campaign Story Arcs should strengthen different relationships depending on which story arc is active.
+
+This ensures that different campaigns produce different emotional experiences for the player.
+
+---
+
+# DESIGN GOAL
+
+Project Dungeon Keeper should feel like a handcrafted tabletop RPG campaign.
+
+The player's choices matter.
+
+Companion relationships matter.
+
+Faction relationships matter.
+
+Every campaign should tell the same epic story...
+
+But the emotional journey should feel different depending on the world's evolving events and the companions present throughout that playthrough.
+
+These additions should become canonical and be integrated into the Game Bible, Hero Bible, Companion Relationship documentation, World Bible, and AI Dungeon Master documentation.
