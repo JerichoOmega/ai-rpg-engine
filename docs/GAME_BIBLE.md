@@ -494,38 +494,59 @@ When a faction becomes `hostile`, a `faction_hostile` event fires on the event b
 
 ## Exploration & World
 
-### Regions (`region_manager.py`)
-Each region is defined in `REGIONS` with:
+> **Full technical spec:** [`docs/systems/world_regions.md`](systems/world_regions.md)
 
-| Field | Notes |
+The game uses a **two-layer exploration system**: a strategic continent map for travel between major locations, and handcrafted explorable regions for detailed gameplay within each destination.
+
+### Layer 1 — Strategic Continent Map
+
+Players select destinations across the continent rather than manually traversing the world. The map is inspired by Solasta's strategic travel layer.
+
+Travel between locations may trigger:
+
+| Event type | Description |
 |---|---|
-| `display_name` | Human-readable name |
-| `biome` | Terrain type |
-| `danger` | Encounter difficulty modifier |
-| `faction` | Controlling faction |
-| `weather` | Current weather string |
-| `stability` | 0–100 stability value |
-| `prosperity` | 0–100 prosperity value |
-| `corrupted` | Bool |
+| Random encounters | Combat or non-combat events on the road |
+| Story events | Narrative moments tied to world state |
+| Companion conversations | Character moments during the journey |
+| Merchant caravans | Trading opportunities mid-travel |
+| Ambushes | Enemy interception attempts |
+| Dynamic world events | Events driven by current world conditions |
 
-Regions evolve over time via `evolve_world_regions()`. Corruption can spread. Weather changes. Faction control can shift.
+> Travel should feel like a journey rather than a loading screen.
 
-The default starting region is `kingdom_capital`.
+The continent map **evolves throughout the story** — reflecting world events, political changes, and the consequences of player decisions. Locations may open, close, become contested, or change in character as the campaign progresses.
 
-### Travel (`travel_manager.py`)
-`travel_to_region(destination)` moves the player and generates an encounter via `encounter_manager.generate_encounter()`. `get_travel_options()` returns available destinations from the current region.
+### Layer 2 — Regional Exploration
 
-### Settlements (`settlement_manager.py`)
-Settlements exist within regions. Each has prosperity, security, and service availability. `show_all_settlements()` prints a summary. Settlements generate rumors. Rumors feed into `dialogue_manager.generate_rumor()`.
+Upon arriving at a destination, the player enters a **handcrafted explorable region**.
 
-### Dungeons (`dungeon_manager.py`)
-A `DUNGEONS` dict defines dungeon locations. Dungeon state is serialized by `save_manager.py`. Full dungeon crawl mechanics are ⚠️ **NOT YET FULLY DEFINED** beyond the data structures.
+Each region contains:
+- Main story content
+- Side quests
+- Hidden areas
+- Dungeons
+- Companion content
+- Treasure
+- Environmental storytelling
 
-### World Map (`world_map.py`)
-Provides a text-based map representation. Currently a standalone display module.
+Regions reward exploration while avoiding unnecessary empty space.
 
-### Hub (`hub.py`)
-Defines a central hub location. Currently a standalone module, not integrated into the main game loop.
+### Design Philosophy
+
+The continent should feel vast without requiring players to manually traverse every mile. The strategic map handles scale; the regions handle depth.
+
+### Technical Implementation (Terminal Prototype)
+
+The terminal prototype implements a simplified version of this system:
+
+- **Regions** (`region_manager.py`) — named regions with biome, danger, faction, weather, stability, prosperity. Evolve each tick via `evolve_world_regions()`.
+- **Travel** (`travel_manager.py`) — `travel_to_region(destination)` moves the player and generates an encounter.
+- **Settlements** (`settlement_manager.py`) — sub-region locations with services and rumors.
+- **Dungeons** (`dungeon_manager.py`) — data structures defined; full crawl mechanics ⚠️ **NOT YET IMPLEMENTED**.
+- **World Map** (`world_map.py`) — static text display; not connected to live region state.
+
+The two-layer strategic/regional structure described above is the **design target** for the 3D game. The terminal prototype's region data model (biome, danger, faction, weather) carries forward; the visual map and travel UI will be replaced.
 
 ---
 

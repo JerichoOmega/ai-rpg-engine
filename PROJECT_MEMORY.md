@@ -133,6 +133,8 @@ Full issue list: [`docs/known_issues.md`](docs/known_issues.md)
 
 6. **Predefined hero roster for Phase 1** — players choose from the five confirmed heroes (Talos, Eleanor, Ragash, Ronan, Steven) at new game start. A Custom Hero system is a planned future phase and must NOT influence current design. The hero framework must support both predefined and custom heroes without a major rewrite. Full rules: [`docs/PLAYER_SYSTEM.md`](docs/PLAYER_SYSTEM.md).
 
+10. **World travel: two-layer exploration system** — strategic continent map (Solasta-inspired) for destination selection; handcrafted explorable regions on arrival. Travel triggers random encounters, story events, companion conversations, caravans, and ambushes. Continent map evolves to reflect world events and player decisions. Terminal prototype's region data model carries forward; map UI and travel layer are 3D targets.
+
 9. **Hero Bible: mechanics grow from character, not slot-filling** — every companion has a Core Wound that connects to personality, dialogue, combat role, unique passive, personal quest, and relationships. No two companions share a passive. One-sentence gameplay identity drives all design decisions. Full system: [`docs/HERO_BIBLE.md`](docs/HERO_BIBLE.md) · [`docs/CHARACTER_DESIGN_GUIDE.md`](docs/CHARACTER_DESIGN_GUIDE.md).
 
 8. **Progression: level 25 cap, shared XP, companion scaling** — max level is 25; XP from all sources is awarded to the entire roster (not just active party); new companions join immediately at the player's current level with appropriate stats, gear, and abilities. No grinding required for roster changes. Full spec: [`docs/systems/progression_skills.md`](docs/systems/progression_skills.md).

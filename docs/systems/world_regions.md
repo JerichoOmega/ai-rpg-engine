@@ -12,6 +12,30 @@ The world is divided into named regions. Each region has its own biome, danger l
 
 ---
 
+## Canonical Design Direction
+
+The following defines the target exploration system. See **Current Implementation** below for the terminal prototype's current state.
+
+### Two-Layer Exploration System
+
+**Layer 1 — Strategic Continent Map**
+
+Travel between major locations occurs on a continent map (inspired by Solasta). Players select destinations rather than manually traversing the world. Travel can trigger: random encounters, story events, companion conversations, merchant caravans, ambushes, and dynamic world events. The map evolves throughout the story to reflect world events, political changes, and player decisions.
+
+> Travel should feel like a journey rather than a loading screen.
+
+**Layer 2 — Regional Exploration**
+
+On arrival, the player enters a handcrafted explorable region containing: main story content, side quests, hidden areas, dungeons, companion content, treasure, and environmental storytelling. Regions reward exploration without unnecessary empty space.
+
+### Design Philosophy
+
+The continent should feel vast without requiring players to traverse every mile. The strategic map handles scale; regions provide depth.
+
+---
+
+---
+
 ## Region System
 
 ### Region Data (`region_manager.py`)
@@ -228,13 +252,19 @@ World events are appended to `world_state["events"]` via `activate_world_event()
 
 ## Future Expansion
 
-- Dynamic region generation (procedural biomes, names).
-- Full dungeon crawl system with floor maps and room events.
-- World map updated dynamically as regions are discovered.
-- Hub as a persistent player base with upgrades.
-- Region conquest / liberation mechanics.
-- Climate and season effects on region conditions.
-- Faction wars shifting region control dynamically.
+**Canonical targets (confirmed design direction):**
+- Strategic continent map — visual, selectable destination layer with travel events
+- Continent map evolves dynamically to reflect world events and player choices
+- Handcrafted regions with story content, side quests, hidden areas, dungeons, and environmental storytelling
+
+**Not yet defined:**
+- Dynamic region generation (procedural biomes, names)
+- Full dungeon crawl system with floor maps and room events
+- World map updated dynamically as regions are discovered
+- Hub as a persistent player base with upgrades
+- Region conquest / liberation mechanics
+- Climate and season effects on region conditions
+- Faction wars shifting region control dynamically
 
 ---
 
@@ -260,3 +290,4 @@ World events are appended to `world_state["events"]` via `activate_world_event()
 | Date | Change |
 |---|---|
 | July 2026 | Initial documentation; dual discovery state issue noted |
+| July 2026 | Added canonical design direction: two-layer exploration system (strategic continent map + handcrafted regions) |
