@@ -374,8 +374,59 @@ This is the scenario the Archivist considers carefully before taking any action.
 
 **Encounter hooks:**
 
-- Wenne approaches the player (or a Mages Guild contact the player already has) with a specific, urgent question about an anomalous site — one that matches an anchor-site candidate. He needs field data he can't get through official channels. He is not forthcoming about why.
+- Wenne approaches the player (or a Mages Guild contact the player already has) with a specific, urgent question about an anomalous site — one that matches an anchor-site candidate. He needs field data he can't get through official channels. He is not forthcoming about why. (His authored confrontation scene is *The Source Question*, below.)
 - Theranel is present at a gathering, event, or ruin site and is clearly more interested in something there than his cover story accounts for. He notices when the player notices. (His authored first meeting is *The Catalogue Evening*, below.)
+
+---
+
+### Confronting Wenne — *The Source Question*
+
+> **Scope:** authored dialogue beats for the moment a player traces the anomalous precision in Wenne's research back toward its source and puts the question to him. Three approaches are authored — direct accusation, indirect inquiry, and evidence-in-hand — plus what he reveals and withholds under each, and what he does after the conversation. Writers should run this in Wenne's study at the Sol Kareth chapter: his ground, surrounded by seven years of maps, which matters to how it plays.
+
+**The tell that gets players here:** Wenne's research outputs are anomalously precise in ways that have no visible source (per *Using This Channel in Play*, above). A player with Guild access who compares his published spread-rate work against the chapter's actual instrument records will find conclusions the data cannot support — baselines he should not have, correlations that require documents no Guild catalogue lists.
+
+**The constant across all approaches:** Wenne does not lie well and knows it, so he does not lie — he *manages scope*. His defense is built of true sentences arranged to stop short. Writers should play his framework (*information in service of stopping the Corruption is worth the compromise; I am not harming anyone; the source has never asked me for anything dangerous*) as something he recites under pressure in increasingly worn form — and the scene's engine is that the third clause of the framework is already dead: Theranel *did* ask for something — the excavation field notes — and Wenne knows what that request probably meant. Every approach below is a different route to the same cliff: making him say that part out loud.
+
+---
+
+**Approach 1 — Direct accusation** (*"Your data has a source you're not declaring. Who is it?"*)
+
+He does not bluster. He goes very still, aligns the papers in front of him, and answers with the sentence he has prepared for this moment for two years:
+
+> *"Every conclusion I have published is verifiable against the field readings. Check them. I invite it."* — true, and not an answer, and he knows the player will notice it is not an answer.
+
+Pressed, he concedes ground in a fixed order (writers should hold this sequence): first, that he has "a private source of historical baselines" (framing it as the scholarly commonplace it almost is); second, that the source's identity is not something he can verify himself — *"I deal with an intermediary. I have always assumed a private collection"*; third — only if the player is persistent and not hostile — the sentence closest to confession he can manage unaided:
+
+> *"I want you to understand the order it happened in. First the fragment was right. Then the baselines were right. By the time he asked me for something, I had eighteen months of being right behind me. Do you know what it costs a cartographer to give back the only accurate map?"*
+
+**What he withholds under this approach:** Theranel's name, the excavation field notes (the thing he is actually ashamed of), and the destabilization review's existence. Direct pressure hardens exactly these three. **What ends the conversation:** any threat to go to Guild leadership *tonight* — he stops talking entirely and asks the player to leave, courteously, with his hands flat on the desk.
+
+**Approach 2 — Indirect inquiry** (the player pretends not to know; asks for help interpreting an "anomalous" reading, or brings him field data near an anchor-site candidate)
+
+This approach gets more than accusation does, because Wenne's love of the work is the one uncompromised thing left in him and it makes him careless. Given a genuine puzzle he leans in, and the authored beat is the slip writers should build toward: explaining the player's data, he reaches without thinking for a baseline he could not legitimately have —
+
+> *"That's not anomalous, that's almost exactly the pre-intensification signature for that terrain type — "* and then the stop. Mid-sentence. Because he has just heard himself cite a number that exists nowhere in the Guild's records, to a stranger, and the player watches him hear it.
+
+What he does with the stop is the branch: if the player lets it pass, he retreats into method (*"— which is an extrapolation, you understand, a modeling assumption"*) and the scene ends with both of them knowing a door was briefly open. If the player names it gently — not as an accusation, as a colleague noticing — Wenne sits back and delivers the most he reveals under any approach short of evidence: the whole shape of the arrangement (an intermediary, two years, materials whose provenance he cannot cite, his private-collection hypothesis and the fact that he has been careful never to test it), because confession to a fellow scholar who *asked instead of accused* is the version of this conversation he has been rehearsing alone. **What he still withholds:** Theranel's name — he says, accurately, *"If I name him and I am wrong about what he is, I've ruined a private citizen. If I'm right about what he might be, I've endangered you."* Both halves of that sentence are load-bearing; he has noticed more than he admits.
+
+**Approach 3 — Evidence in hand** (the player arrives knowing Theranel's identity — his name, or worse, what he actually is or who he works for)
+
+The prepared defenses are useless and Wenne does not attempt them. The authored beat: he listens without interrupting, then asks one question, and writers should let it land in silence first —
+
+> *"Did he ever exist? Theranel. The collector. Was any of it —"* he stops, and restarts with precision, because precision is what he has instead of composure: *"I am asking whether the man I dealt with was a person who found things, or a person who was sent."*
+
+If the answer is "sent" (or anything implying an organization), the framework dies in front of the player, third clause first: *"He asked me for the excavation notes,"* Wenne says — volunteering, for the first time in the scene and possibly the first time aloud, the thing every other approach failed to extract. *"Sites, not documents. Locations of dig teams. I gave a man who was sent by someone the positions of working scholars, and I invoiced it to myself as ethics."* Under this approach he withholds nothing about the exchange — including the destabilization review, which he describes unprompted, staring at the middle distance, as *"the one where I proved his questions were the right ones."* **The one thing he asks for:** forty-eight hours before the player takes it to anyone, *"not to run — to write it down properly. If this ends me, it will at least be accurately documented."* Whether the player grants this matters (below). He means it; running has never once occurred to him, which is itself the measure of the man.
+
+---
+
+**After the conversation — what Wenne does.** Keyed to how the scene ended, not which approach opened it:
+
+- **If the player left without proof and without an understanding** (accusation rebuffed, or the slip let pass): Wenne does *not* alert Theranel — instructing his source to hide would collapse the private-collection hypothesis he needs. Instead he does something more human and more damning: he goes back through two years of exchange records and begins annotating them — building the honest file he should have kept from the start. He destroys nothing. The file's existence makes the eventual exposure scene (whoever triggers it) far worse or far better depending on who finds it first.
+- **If he confessed to a colleague** (Approach 2, gentle route): he suspends the channel — misses his next scheduled exchange with Theranel without explanation, which Theranel, being what he is, correctly reads as *someone got to him* and reports upward. The player's kindness, unavoidably, is what warns the Weaponizers. Wenne spends the interval drafting and re-drafting a disclosure to the chapter he cannot make himself send. If the player returns within a season, the draft is the scene's payoff: he asks them to read it and tell him if it is accurate. It is. It is also unsent.
+- **If confronted with evidence and granted his forty-eight hours:** he uses them exactly as stated — produces a complete, chronological, self-indicting account of the exchange (every material, both directions, including the field notes and the destabilization review), addressed to Guild oversight, and hands it to the player unsealed: *"You found it. You should decide who reads it."* This document is the cleanest evidence trail into the channel that exists anywhere, and giving the player custody of it is simultaneously an act of integrity and the last delegation of responsibility from a man whose whole failure was delegating responsibility to a framework.
+- **If confronted with evidence and refused the forty-eight hours:** he confesses to Senior Examiner Dorne's office himself, that evening, before the player can report it — not to get ahead of the story, but because being reported *for* it rather than reporting it is the one remaining distinction he can still control. The confession is complete except for one omission he cannot bring himself to include: the field notes. The Guild learns of them anyway, later, and the omission costs him more than the channel did.
+
+**Writers' note:** in no version does Wenne flee, bargain, or turn antagonist. His arc is a rigorous mind discovering that rigor applied to everything except oneself is just craftsmanship. Whether he ends the campaign disgraced, quietly rehabilitated as the Guild's best cautionary expert on the anchor-site problem, or the author of its honest record depends on the player — every ending should turn on choices in this scene, and the AI DM should not soften the field-notes admission: it is the cost the whole channel storyline has been accruing toward. (What the Guild institutionally does with an exposure runs through Senior Examiner Dorne's office and is authored separately; the Archivist's reactions are canon above, in *The Archivist's Awareness*.)
 
 ---
 
@@ -1022,5 +1073,6 @@ These profiles exist so writers can portray each NPC consistently across multipl
 | 2026-07-31 | Authored Cassilda Vrehn's field notes as a discoverable Level Three handout — 21 days of dated observations that assemble Contradiction One, state the overload method in her voice, and seed the reasoning path |
 | 2026-07-31 | Authored the Cassiel contact scene after the Sixth Level — his verbatim question for the Remnant, why he asks it in person, the one-question-for-one-question trade, availability by prior Remnant outcome, and consequences for every player response |
 | 2026-07-31 | Authored Voss Theranel's first-contact scene (*The Catalogue Evening*) — location and trigger, opening exchange, what he offers, his three assessment questions, suspicious vs. accepting branches, and the cover-break contingency |
+| 2026-07-31 | Authored Aldric Wenne's confrontation scene (*The Source Question*) — dialogue beats for direct accusation, indirect inquiry, and evidence-in-hand approaches; what he reveals and withholds under each; and his four post-conversation outcomes |
 | July 2026 | Added Recurring Quest NPC Profiles — six profiles (Brennan Ashfield, Sera Vaine, Commander Valdrek Ash, Sergeant Hallec, Darvish Corr, Mira Deln) with role, personality, speech, motivation, and memorable detail |
 | 2026-07-31 | Added First Contact section — entry conditions for all three houses: Vetharis (political usefulness + discretion + exposure trigger), Drakmor (Frontier presence + combat reputation + specific capability gap), Soleth (knowledge marker + observation period + discretion demonstration); includes disqualifying conditions and first-impression assessment notes for each house |
