@@ -20,7 +20,7 @@ Read `CANON_RULES.md` first. It contains the immutable principles that govern al
 |---|---|
 | `DEVELOPMENT_REFERENCE.md` | **Start here for new sessions** — canon constitution; reading order; development guidelines |
 | `CANON_RULES.md` | Immutable design principles |
-| `HISTORY_BIBLE.md` | The Seven Ages — each era described as a broad historical period |
+| `HISTORY_BIBLE.md` | The Four Ages — each era described as a broad historical period (Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration) |
 | `TIMELINE.md` | Concise chronological reference for developers |
 | `DIVINE_CHORUS.md` | Philosophy, responsibilities, and limits of the Divine Chorus |
 | `ARCHITECTS.md` | What is known — and what must never be explained — about the Architects |

@@ -49,15 +49,15 @@
 39. [Goblin Tribes](world/goblin_tribes.md) *(separate file)*
 40. [Religions of Elyndor](world/religions.md) *(separate file)*
 41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*
-42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework)*
+42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework: Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration)*
 43. [Magic Bible](../elyndor/magic/MAGIC_BIBLE.md) *(separate file — Primordial Magic, Divine Chorus, magic limitations, Eleanor's Harmonic Soul)*
 44. [Journey System](systems/journey_system.md) *(separate file — travel as storytelling, camp philosophy, companion relationships, interaction scheduling, camp evolution)*
 45. [The Forgotten Eighth](../elyndor/history/the_eighth.md) *(separate file — the Ancient God's true identity, the Great Forgetting, the Imprisonment as tragedy, Corruption as amplified virtue)*
 46. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 47. [Lore Bible — README](lore/README.md) *(separate file — Lore Bible index and usage guide; read this first)*
 48. [Lore Bible — Canon Rules](lore/CANON_RULES.md) *(separate file — immutable design principles: no chosen one, no chosen races, Chorus limits, Architects rules, Forgotten Eighth canon)*
-49. [Lore Bible — History](lore/HISTORY_BIBLE.md) *(separate file — Seven Ages narrative companion; campaign tone and worldbuilding reference)*
-50. [Lore Bible — Timeline](lore/TIMELINE.md) *(separate file — concise chronological developer reference covering all Seven Ages with key canonical facts)*
+49. [Lore Bible — History](lore/HISTORY_BIBLE.md) *(separate file — Four Ages narrative companion: Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration; campaign tone and worldbuilding reference)*
+50. [Lore Bible — Timeline](lore/TIMELINE.md) *(separate file — concise chronological developer reference covering all Four Ages with key canonical facts)*
 51. [Lore Bible — Divine Chorus](lore/DIVINE_CHORUS.md) *(separate file — canonical Chorus philosophy, responsibilities, limits, the Final Verse, and writing guidance)*
 52. [Lore Bible — Divine Chorus Philosophy (extended)](lore/DIVINE_CHORUS_PHILOSOPHY.md) *(separate file — expanded Chorus philosophy: Five Tensions, Free Will Is Sacred, What Chorus Does NOT Do)*
 53. [Lore Bible — Architects](lore/ARCHITECTS.md) *(separate file — the Architects: what is known, the central design principle, content guidance, prohibited actions)*

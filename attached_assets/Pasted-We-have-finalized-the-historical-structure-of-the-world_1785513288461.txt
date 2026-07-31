@@ -1,0 +1,121 @@
+We have finalized the historical structure of the world and are simplifying the historical timeline.
+
+This is now canonical and supersedes any previous versions of the historical ages.
+
+Please update the Lore Bible and any supporting documentation to reflect the following four-age historical model.
+
+⸻
+
+Canonical Historical Ages
+
+Age I — The Age of Awakening
+
+The age in which the world itself began to take shape.
+
+Major Events
+
+* The First Song.
+* The Divine Chorus awakens.
+* Primordial Energy begins stabilizing.
+* The first intelligent races emerge.
+* The earliest civilizations form.
+* The First Temple is established.
+* The foundations of magic, culture, and civilization are laid.
+
+This is an age of discovery, exploration, and beginnings.
+
+⸻
+
+Age II — The Age of Harmony
+
+The greatest age of civilization.
+
+This becomes the world’s Golden Age.
+
+Major Events
+
+* The First Empire rises.
+* The Great Library is founded.
+* Universities and centers of learning flourish.
+* Trade routes connect civilizations.
+* Magic reaches its greatest advancement.
+* The Forgotten Eighth falls in love with an ordinary mortal.
+* The mortal eventually sings the Final Verse.
+* The Long Decline begins during the closing centuries of this age.
+
+The Long Decline is not its own historical age.
+
+It is considered the tragic final chapter of the Age of Harmony.
+
+⸻
+
+Age III — The Age of Sundering
+
+The greatest catastrophe in recorded history.
+
+Major Events
+
+* The Eighth’s corruption spreads.
+* Reality itself begins to fracture.
+* Civilizations collapse.
+* The Divine Chorus spends centuries attempting to save their sister.
+* The Sundering permanently reshapes the continent.
+* The Forgotten Eighth is imprisoned.
+* Much of history is deliberately obscured or forgotten during the aftermath.
+
+This is remembered as the darkest age in history.
+
+⸻
+
+Age IV — The Age of Restoration
+
+The modern age.
+
+Civilization rebuilds from the ashes of the Sundering.
+
+Major Events
+
+* New kingdoms emerge.
+* Modern cultures develop.
+* The Imperial Capital becomes the intellectual heart of civilization.
+* The Great Library preserves what remains of the ancient world.
+* Most people genuinely believe there have always been seven members of the Divine Chorus.
+* The game begins near the end of this age.
+
+⸻
+
+Historical Philosophy
+
+The four ages represent the natural life cycle of civilization:
+
+Awakening
+→ Birth
+
+Harmony
+→ Flourishing
+
+Sundering
+→ Collapse
+
+Restoration
+→ Recovery
+
+This structure should be reflected consistently throughout the Lore Bible, codex entries, historical documents, educational materials, and future worldbuilding.
+
+⸻
+
+Documentation Updates
+
+Update all relevant lore documentation to replace any previous multi-age historical framework with this canonical four-age model.
+
+If references to the previous structure remain, adapt them naturally rather than simply deleting content.
+
+The objective is to preserve existing lore while organizing it under this simplified historical framework.
+
+⸻
+
+Developer Note
+
+This four-age structure is intended to make the world’s history easier for players to understand while still supporting thousands of years of lore.
+
+Future historical events should always be categorized under one of these four ages unless the project owner explicitly establishes a new historical era.
