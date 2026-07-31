@@ -77,7 +77,139 @@ What the Sealed Archive contains is not fully known even to its current custodia
 
 What can be said: the Sealed Archive contains the most complete surviving account of the First Age's defining event on the continent. It contains documents that use eight-member Chorus theology as unremarkable background. It contains Corruption research from scholars who understood what they were looking at.
 
-It also contains materials that were placed there by House Soleth — the vampire house of ancient knowledge — under an arrangement that predates the current dynasty. What Soleth contributed, and what they received in exchange, is part of the Archive's sealed record.
+It also contains materials that were placed there by House Soleth — the vampire house of ancient knowledge — under an arrangement that predates the current dynasty. The specific categories of contribution, the exchange terms, and the Archivist's current knowledge of what was deposited are defined in the House Soleth and the Sealed Archive section below.
+
+---
+
+## House Soleth and the Sealed Archive
+
+> **AI Director reference.** This section defines the specific content of House Soleth's contribution to the Sealed Archive, the terms of the exchange, and what the current parties (Director Maret Cosse, the Archivist) actually know. Players who have built significant reputation with House Soleth and who reach the Great Library have a direct path to the revelation arc's most significant materials — but the path runs through a relationship, not a credential.
+
+---
+
+### What Soleth Contributed
+
+The arrangement was initiated in the early Second Age — within living memory of the Archivist, who was already old when the Library was founded. At that time, the Great Forgetting was still an active process: documents were being removed from circulation, records were being altered, certain scholarly lineages were being quietly discouraged from continuing their research. The Archivist recognized what was happening and made a decision that he has never publicly explained: he contributed the most significant portion of House Soleth's First Age holdings to the Library's sealed collection.
+
+His stated reason, in the arrangement's fragmented documentation: *"A single repository is always at risk. A distributed archive survives what a concentrated one does not."*
+
+What he did not state, but what is legible from the timing: he was not certain his own archive complexes would survive whatever was suppressing First Age records. Placing copies — and in some cases originals — in a public institution with political neutrality and stone walls gave those materials a form of protection his private holdings could not guarantee. The Library's institutional survival across the Third Age's wars has, in retrospect, proven his caution correct.
+
+**The four categories of Soleth contribution:**
+
+---
+
+**Category 1 — The Unreduced Texts**
+
+First Age theological documents that still use eight-member Chorus theology as unremarkable background. Not fragments. Not damaged copies with visible gaps. Intact texts in which the Eighth is simply present — cited in theological arguments, mentioned in religious calendar references, treated as a member of the Chorus in the same matter-of-fact register as any other.
+
+These documents predate the Forgetting because the Archivist collected them before the Forgetting was complete. A scholar reading them does not encounter evidence of erasure — they encounter a theology that has eight members, written by people for whom that was simply true.
+
+This is what makes them the most significant materials in the Sealed Archive. The Open and Restricted Collections contain post-Forgetting documents — texts where scholars can find gaps, anomalies, passages that work around a reference rather than including it. The Unreduced Texts require no detective work. They simply say what they say.
+
+There are eleven intact documents in this category. The Archivist knows this precisely. He personally selected and catalogued them before contributing them to the arrangement.
+
+---
+
+**Category 2 — The Transition Record**
+
+Documentation of the early Second Age period when the Great Forgetting was actively progressing. Not a record of the Sundering itself — the Archivist was not present for that event, and he does not claim to understand its full nature. What this record documents is what he observed afterward: the systematic removal of the Eighth from institutional memory across the continent's surviving civilizations.
+
+Specifically: how different institutions handled the removal (some by destroying documents, some by sealing them, some by allowing certain scholarly traditions to simply end without successors), the geographic progression of erasure across different regions (it moved from the political center outward, which the Archivist notes without explicitly stating what that implies), communities and scholarly lineages that resisted and what happened to them, and the documents that were sealed versus destroyed — a distinction that, the Archivist observes, suggests that whoever coordinated the Forgetting was not simply destroying history but managing it.
+
+*For writers:* The Transition Record is the most dangerous document in the Sealed Archive, not because of what it says about the Eighth, but because of what it says about the Forgetting. It implies — without stating directly — that the erasure of the Eighth was coordinated, intentional, and executed by parties who did not want to destroy the truth permanently, only to make it inaccessible. Someone made the Sealed Archive possible by choosing sealed over destroyed. The Transition Record is the closest thing to evidence of who made that choice and why.
+
+---
+
+**Category 3 — The Soleth Accounting**
+
+A document the Archivist wrote in the early Second Age, when his own memories of the First Age's end were still clear.
+
+It is not an official document. It is a personal record — structured like a witness account, written in the careful, heavily qualified language that is now simply characteristic of how the Archivist speaks. It covers what he observed during the period of the Sundering and its immediate aftermath, what he cannot verify and explicitly marks as uncertain, and what he believes happened based on what he witnessed.
+
+He does not name the Eighth by her true name, because he does not know it. She had been referred to by titles for as long as he could remember, and he cannot determine whether a true name ever existed or was simply the first thing erased. He refers to her throughout as "the Eighth Sister" — a designation he notes is factual even if it is not intimate.
+
+He placed the Accounting in the Library's sealed collection because he did not trust any single location, including his own archive complexes, to preserve it indefinitely. He has not asked the Library to return it. He has never confirmed or denied its existence to any Director, including Maret — who found a fragmentary reference to it in the arrangement's documentation and has spent four years trying to determine whether what she found is real.
+
+*The Archivist's current position on the Accounting:* He would neither confirm nor deny its existence to any party. If pressed — by a player who has earned enough of his trust to ask directly — he would answer that it is there, that he put it there deliberately, and that the question of who should read it is one he has not resolved. He wrote it as insurance against his own death. He is still alive. He does not know what that means for the document's purpose.
+
+---
+
+**Category 4 — Third Age Emergency Additions and the Site Maps**
+
+Two categories that arrived under different circumstances than the original Second Age contribution:
+
+**The Site Maps** — Cartographic and architectural documentation of First Age sites that Soleth identified, surveyed, and in some cases partially excavated before those sites were sealed, destroyed, or became inaccessible. These are functional archival documents: they record physical locations, structural layouts, and the Archivist's observations about what those sites contained and what condition they were in at the time of survey.
+
+Some of the sites the maps describe no longer exist in any accessible form. Some exist and are currently being disturbed by the Corruption. A player with access to the Site Maps has a significant practical advantage in the revelation arc — not because the maps identify what is at each location, but because they identify that something is there and what its structural form suggests about its First Age purpose.
+
+**The Third Age Emergency Additions** — Materials contributed during the Third Age's final decade, during the same period when early Corruption research was being sealed by other institutions. These were added under urgent circumstances: Soleth agents routed materials out of archive sites being threatened by Third Age warfare (and, toward the end of that period, by early Corruption disturbances) through the standing Library arrangement.
+
+The Archivist's knowledge of this category is incomplete. He did not personally select these materials — they were handled through Preservationist intermediaries during a period of significant house instability. He knows approximately what was contributed in terms of subject area and origin site, but not the specific documents. Some of what is in this category may duplicate materials in other Soleth archives. Some of it may be the only surviving copy. He does not currently know which.
+
+*For writers:* The Third Age Emergency Additions are the most variable part of the Soleth contribution — the category where the AI Director has the most latitude to place specific materials relevant to a given campaign's revelation arc. What is canonical is the category itself (Third Age, urgent circumstances, Preservation-handled, incomplete Archivist knowledge) and the subject areas (Corruption research from scholars who understood what they were looking at; site documentation from archives that were subsequently destroyed).
+
+---
+
+### What House Soleth Received
+
+The exchange terms as reconstructed from the fragmented documentation. Two terms are clearly established; the third is partially lost.
+
+---
+
+**Term 1 — Standing Research Access**
+
+Soleth operatives presenting a specific credential receive access to the full Restricted Collection without institutional record. The credential is a document written in a cipher — a specific notation system developed for this arrangement and known only to the Library's successive Directors and to the Archivist. The cipher has been passed from Director to Director for the Library's entire history; it is the one piece of the arrangement that has survived every transition intact.
+
+In practice: a Soleth operative appearing at the Library with this credential is processed through the admissions system as a scholar with an obscure institutional affiliation that the staff have been instructed not to press for details about. Their research requests are fulfilled. Their identity is not recorded in the admissions log.
+
+Maret is aware of this credential. She has used it twice — not to grant Soleth access, but to identify requests that were coming from Soleth operatives she had not been informed about. She finds this use of her own institutional knowledge ambiguously satisfying.
+
+---
+
+**Term 2 — Preservation Commitment**
+
+The Library commits to maintaining Soleth's contributed materials indefinitely under the Sealed Archive's protocols, and to notifying a designated Soleth contact channel if those materials face any threat of destruction, transfer, or institutional compromise.
+
+This term has been honored continuously for the arrangement's entire history. No Director has tested what happens if it is violated. Maret suspects the enforcement mechanism exists and is something she does not want to discover accidentally.
+
+The designated contact channel is a specific address in the Academic Quarter — a building whose current occupant is a gnomish scholarly organization with no apparent connection to vampires. The Library sends formal preservation status updates there once per decade. They have always been acknowledged.
+
+---
+
+**Term 3 — Partially Lost**
+
+The fragmented documentation contains references to a third term that neither the Library's current records nor apparently the Archivist's own documentation fully preserve. The surviving fragment describes it only as "access to be rendered upon request, in the form and at the time to be specified by the party of the second arrangement."
+
+Maret's working theory: the third term was an option — a call, in the language of negotiation — that Soleth has not yet exercised. Whatever they were reserving the right to request, they have not asked for it yet. Whether this is because they have not needed it, because the right lapsed after some period she cannot determine, or because the Archivist is waiting for something specific, she does not know.
+
+The Archivist's position on the third term: he knows what it is and has not used it. He will not confirm or deny this to any party. If the moment comes when he believes it should be used, he will use it. The moment has not come.
+
+*For writers:* The third term is deliberately left unresolved as a campaign hook. The AI Director should determine its nature based on the campaign's needs — possibilities include the right to withdraw the contributed materials, the right to access a specific sealed Library material not in the Soleth contribution, or the right to request the Library's institutional endorsement for a specific Soleth action. What it cannot be is trivial; the Archivist does not negotiate trivial terms.
+
+---
+
+### What Each Party Currently Knows
+
+| Party | What They Know About the Contribution | What They Don't Know |
+|---|---|---|
+| **The Archivist** | Categories 1–3 precisely; Category 4 approximately by subject area but not specific documents | Which Category 4 materials are unique vs. duplicated elsewhere; whether the Library's copies are the only surviving versions of certain materials |
+| **Director Maret Cosse** | That the contribution exists and is substantial; that Category 1 and Category 3 are among it; the general subject areas | The specific documents; whether the Soleth Accounting (Category 3) is what she thinks it is; the full terms of the exchange including Term 3 |
+| **The Sealed Archive's gnomish custodians** | The physical location and organizational structure of the contributed materials; which items have been accessed and when | Their content, their significance, or the fact that they are Soleth contributions rather than standard Sealed Archive materials |
+| **The Weaponizer faction within Soleth** | That the Library arrangement exists; that Soleth contributed significant First Age materials | The specific content of the Accounting; that Category 4 may contain materials the Archivist himself cannot fully identify |
+| **The Preservationist faction within Soleth** | The arrangement's existence and basic terms | Term 3; the Accounting's existence (the Archivist has not disclosed it internally) |
+
+---
+
+### The Arrangement as a Campaign Path
+
+A player who has built significant reputation with House Soleth and arrives at the Great Library has a path that players without that relationship do not:
+
+The Soleth credential bypasses the Restricted Collection gatekeeping entirely — not the Sealed Archive itself, but the layers of institutional friction that make the Restricted Collection take months to access through normal channels. More significantly, a player with Soleth standing may, at high enough reputation, be able to speak with the Archivist directly about the Library arrangement — including requesting that he authorize Library access to specific Soleth-contributed materials.
+
+This is not a simple unlock. The Archivist's authorization would require him to believe that what the player is doing with that access serves a purpose he cares about. He does not grant access to the curious. He does not grant it to the merely powerful. He grants it, if he grants it, to someone he has concluded is working on the same problem he has been working on for centuries, and who is further along than he expected anyone to get.
+
+The Accounting — if a player can reach it — is the Sealed Archive's most significant single document for the revelation arc. It does not prove the Eighth existed; the Unreduced Texts do that. What it does is provide a witness account of the Sundering's immediate aftermath from someone who was alive when it happened, who was watching carefully, and who spent the next several centuries trying to understand what he had seen.
 
 ---
 
@@ -337,3 +469,4 @@ It also shapes the tension at the Library's core. An institution devoted to pres
 | July 2026 | Created — Great Library lore document; collections (Open, Restricted, Sealed Archive); the Veiled Archivists and Carros; gnomish archivist staff; the Library's relationship to the Great Forgetting; access structure as campaign tool |
 | July 2026 | Major expansion — Entrance Inscription added; Order of Archivists established as named institution (mission, loyalty, Official Oath, Chief Archivist's response); Scholar Traditions (common sayings); Archivist Traditions (blank journal; journals permanently archived at death); Design Philosophy section added |
 | July 2026 | Added Key Personnel section — Director Maret Cosse (gnome; 43-year tenure; five character beats: carrying the Archive, the Veiled Archivists, private conclusions, responding to close questions, the Soleth arrangement); note on Chief Archivist and Senior Index reporting structure |
+| July 2026 | Added House Soleth and the Sealed Archive section — four contribution categories (Unreduced Texts, Transition Record, Soleth Accounting, Third Age Emergency Additions and Site Maps); three exchange terms (standing research access, preservation commitment, partially-lost third term); knowledge table by party; the arrangement as a campaign path |

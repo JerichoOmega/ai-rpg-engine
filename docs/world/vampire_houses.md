@@ -162,6 +162,16 @@ Soleth's internal conflict is fundamentally philosophical rather than personal. 
 
 **The fault line:** The Archivist has not resolved the debate between Preservationists and Weaponizers, and his deliberate non-resolution is beginning to be read by both factions as a form of endorsement of the other. His patience may be his greatest asset and his greatest liability simultaneously. The question of what Soleth knows about The Corruption — and whether they will share it — is potentially the most consequential unanswered question in vampire politics.
 
+### The Great Library Arrangement
+
+House Soleth entered an arrangement with the Great Library in the early Second Age — within the Archivist's own memory, negotiated by him personally. He contributed significant portions of Soleth's First Age holdings to the Library's Sealed Archive, receiving standing research access and a preservation commitment in return. A third term exists in the original agreement whose details are partially lost to both parties.
+
+The contributed materials include four categories: intact First Age theological documents that still reference the Eighth as unremarkable background (the Unreduced Texts); a record of the Great Forgetting's active progression in the early Second Age (the Transition Record); a personal witness account the Archivist wrote himself (the Soleth Accounting); and Third Age emergency additions routed through Preservationist intermediaries during a period of archive disruption that the Archivist did not personally oversee.
+
+The Archivist has never confirmed or denied the Accounting's existence to any Library Director or to any member of his own house. The Weaponizer faction does not know it exists. The Library's Director (Maret Cosse) has found a fragmentary reference to it and cannot verify whether it is real.
+
+The arrangement is the most direct path players with high Soleth reputation have to the Sealed Archive's most significant revelation-arc materials. Full details in [`docs/lore/GREAT_LIBRARY.md`](../lore/GREAT_LIBRARY.md) — House Soleth and the Sealed Archive section.
+
 ---
 
 ## Inter-House Dynamics
