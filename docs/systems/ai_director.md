@@ -209,13 +209,44 @@ The villain "Varkun" is confirmed as a character name in the codebase. All other
 
 ---
 
+## Campaign Narrative Framework
+
+The AI Director's variation system is directly connected to the game's main story structure. See [`docs/GAME_BIBLE.md — Main Story`](../GAME_BIBLE.md) and [`elyndor/history/the_corruption.md`](../../elyndor/history/the_corruption.md) for full details.
+
+### The Corruption as Campaign Seed
+
+Every campaign shares the same central threat — an imprisoned god's weakening seal leaking The Corruption into the world. What varies between campaigns is **how The Corruption manifests**:
+
+| Corruption type | World state signals | AI Director role |
+|---|---|---|
+| **Political** | `civil_war`, hostile faction reputations | Emphasize faction conflict, betrayals, oppressive rulers |
+| **Natural** | High `world_chaos`, corrupted regions | Emphasize twisted environments, wildlife encounters, crop/settlement failures |
+| **Religious** | `cult_rising`, `mages_rebellion` | Emphasize cult spread, fractured alliances, ancient temple events |
+| **Arcane** | `mages_rebellion`, unstable magic flags | Emphasize magical disasters, relic activations, mage encounters |
+
+The existing `world_state` flags (`civil_war`, `cult_rising`, `mages_rebellion`, `world_chaos`) already align with these corruption types. Future DM Brain expansion should use these flags to **seed the campaign's corruption emphasis** at campaign start and reinforce it through narrative event selection throughout the playthrough.
+
+### Campaign Manager Connection
+
+`campaign_manager.py`'s `campaign_state` has:
+- `"main_threat"` — currently `"shadow_cult"`; should eventually support multiple threat types
+- `"campaign_stage"` — currently `"emergence"`; maps to how far the god's influence has spread
+
+These fields are the natural home for tracking which corruption type is dominant in the current campaign.
+
+---
+
 ## Future Expansion
 
-- Real LLM integration via `llm_bridge.py` function replacement.
-- DM Brain issuing proactive narrative prompts (not just reacting to events).
-- Multi-act campaign scripting built on `campaign_manager.py`.
-- Emotion/relationship tracking to personalize narrative tone.
-- Persistent DM memory across sessions via `memory_engine.py`.
+**Canonical targets (connected to main story framework):**
+- Campaign corruption type selected at start; AI Director seeds `world_state` flags to match and reinforces throughout
+- DM Brain issuing proactive narrative prompts tied to active corruption type (not just reacting to events)
+- Multi-act campaign scripting: Corruption grows across acts until confrontation with its source
+
+**Not yet defined:**
+- Real LLM integration via `llm_bridge.py` function replacement
+- Emotion/relationship tracking to personalize narrative tone
+- Persistent DM memory across sessions via `memory_engine.py`
 
 ---
 

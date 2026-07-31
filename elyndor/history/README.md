@@ -14,6 +14,27 @@
 
 ---
 
+## Confirmed Historical Events
+
+| Event | Status | File |
+|---|---|---|
+| **The Ancient God's imprisonment** | [CONFIRMED — exists; details unknown] | [`the_corruption.md`](the_corruption.md) |
+| **The weakening of the prison seal** | [CONFIRMED — ongoing at campaign start] | [`the_corruption.md`](the_corruption.md) |
+| **The Corruption** | [CONFIRMED — canonical world phenomenon] | [`the_corruption.md`](the_corruption.md) |
+
+### What Is Not Yet Defined
+
+The following are intentional mysteries — do not define them without explicit canonical direction:
+
+- The god's name
+- Why it was sealed
+- Who sealed it
+- Whether the seal can be repaired
+- What happens if the god fully awakens
+- When the original imprisonment occurred (which age)
+
+---
+
 ## Filing Rules
 
 - Historical events get their own files: `<event_or_period>.md`

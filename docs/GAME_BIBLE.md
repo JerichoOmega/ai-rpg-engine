@@ -592,6 +592,62 @@ The DM Brain subscribes to:
 
 ---
 
+## Main Story
+
+> **Universe lore:** [`elyndor/history/the_corruption.md`](../elyndor/history/the_corruption.md)
+
+### The Central Conflict
+
+An ancient god was imprisoned long ago by forces now forgotten. At the start of every campaign, the god remains sealed — but its prison has begun to weaken. As the seal deteriorates, the god's presence slowly leaks into the world.
+
+This presence is **The Corruption**.
+
+### The Corruption
+
+The Corruption is not mind control. It does not force people to become evil. Instead, it **amplifies existing flaws** — fear, hatred, greed, ambition, despair, and violence already present in the world.
+
+| What it affects | How |
+|---|---|
+| People & rulers | Amplifies flaws; ambitious rulers become tyrants; fearful communities turn hostile |
+| Religion | Cults receive whispers; holy orders fracture; ancient temples awaken |
+| Nature | Forests twist; crops fail; wildlife mutates; ancient monsters wake |
+| Magic | Spells become unstable; ancient relics activate; magical disasters multiply |
+
+> **Individuals remain responsible for their choices.** The Corruption accelerates darkness that already exists — it does not create it.
+
+### The Mystery
+
+Most people in the world do not know the true cause of the world's decline. Each faction has its own explanation, creating political conflict and misinformation throughout the campaign. The player experiences the consequences of the god's influence long before discovering its existence. The mystery unfolds gradually through exploration, quests, companion stories, ancient records, and environmental storytelling.
+
+The imprisoned god is not simply a final boss — its awakening is the **catalyst for the entire campaign**.
+
+### Campaign Variations
+
+Every campaign shares the same overarching threat — the imprisoned god is awakening — but **how The Corruption spreads differs between playthroughs**:
+
+| Variation type | Manifestations |
+|---|---|
+| **Political** | Kingdoms descend into civil war; nobles become oppressive; assassinations multiply |
+| **Natural** | Forests become cursed; crops fail; wildlife mutates; ecosystems collapse |
+| **Religious** | Cults spread rapidly; holy orders fracture; ancient temples awaken; religious war erupts |
+| **Arcane** | Magic becomes unstable; ancient relics activate; mages lose control; magical disasters multiply |
+
+Multiple types may appear in a single campaign, but each playthrough emphasizes different aspects of the world's decline.
+
+### Design Philosophy
+
+The main story framework is **consistent across campaigns; the expression is variable**:
+
+- The imprisoned god is awakening — always
+- The world is falling into chaos — always
+- The player must uncover the truth — always
+
+What changes: how The Corruption manifests, which factions rise or fall, which companions join the party, regional events, quest availability, world state, and the consequences of player choices.
+
+This creates a game with a **handcrafted central narrative** while allowing the AI Director to generate meaningful variation across multiple playthroughs. Every campaign should feel like a different telling of the same great legend — not an entirely unrelated story.
+
+---
+
 ## Narrative & Story Generation
 
 ### Story Generation (`story.py`)

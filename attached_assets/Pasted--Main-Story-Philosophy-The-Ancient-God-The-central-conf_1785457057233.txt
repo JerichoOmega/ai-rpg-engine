@@ -1,0 +1,111 @@
+# Main Story Philosophy
+
+## The Ancient God
+
+The central conflict of Project Dungeon Keeper revolves around an ancient god imprisoned long ago by forces now forgotten.
+
+The god remains sealed at the beginning of every campaign.
+
+However, its prison has begun to weaken.
+
+As the seal deteriorates, the god's presence slowly leaks into the world.
+
+This presence is known as **The Corruption**.
+
+---
+
+## The Corruption
+
+The Corruption is not mind control.
+
+It does not force people to become evil.
+
+Instead, it amplifies existing flaws, fears, hatred, greed, ambition, despair, and violence.
+
+Examples include:
+
+- Corrupt rulers becoming tyrants.
+- Fearful villages becoming hostile to outsiders.
+- Cults hearing whispers from the imprisoned god.
+- Forests becoming twisted.
+- Wildlife becoming unnaturally aggressive.
+- Ancient monsters awakening.
+- Magic becoming unstable.
+- Ancient ruins stirring once again.
+
+The Corruption accelerates darkness that already exists.
+
+Individuals remain responsible for their choices.
+
+---
+
+## Campaign Variations
+
+Every campaign begins with the same overarching threat:
+
+**The imprisoned god is awakening.**
+
+However, the way The Corruption spreads differs between campaigns.
+
+Examples include:
+
+### Political Corruption
+
+- Kingdoms descend into civil war.
+- Nobles become increasingly oppressive.
+- Assassinations and betrayals become common.
+
+### Natural Corruption
+
+- Forests become cursed.
+- Crops fail.
+- Wildlife mutates.
+- Entire ecosystems collapse.
+
+### Religious Corruption
+
+- Cults spread rapidly.
+- Holy orders fracture.
+- Ancient temples awaken.
+- Religious conflict erupts.
+
+### Arcane Corruption
+
+- Magic becomes unstable.
+- Ancient relics activate.
+- Mages lose control of powerful spells.
+- Magical disasters become common.
+
+Multiple corruption types may appear during a single campaign, but each playthrough emphasizes different aspects of the world's decline.
+
+---
+
+## Story Philosophy
+
+The ancient god is not simply the final boss.
+
+Its awakening serves as the catalyst for the entire campaign.
+
+The player experiences the consequences of its influence long before discovering its existence.
+
+The mystery surrounding the Corruption should unfold gradually through exploration, quests, companion stories, ancient records, and environmental storytelling.
+
+Most people in the world do not know the true cause of the world's decline.
+
+Each faction has its own explanation, creating political conflict and misinformation throughout the campaign.
+
+---
+
+## Design Philosophy
+
+The main story remains consistent across campaigns:
+
+- The imprisoned god is awakening.
+- The world is slowly falling into chaos.
+- The player must uncover the truth.
+
+What changes between campaigns is how the Corruption manifests, which factions rise or fall, which companions join the party, regional events, quests, world states, and the consequences of player choices.
+
+This creates a game with a handcrafted central narrative while allowing the AI Dungeon Master to generate meaningful variation across multiple playthroughs.
+
+The goal is for every campaign to feel like a different telling of the same great legend rather than an entirely unrelated story.
