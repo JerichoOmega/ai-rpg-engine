@@ -361,6 +361,122 @@ She is not hopeful or pessimistic about this. She is accurate. Skarra's awarenes
 
 ---
 
+## Companion Events — Corrupted Wildlife Detection
+
+These events trigger when the party is traveling in the Frontier or the Great Forest and Ragash's hounds detect corrupted wildlife. They are distinct from the goblin trail detection events in one critical way: goblin trails are a tactical problem Ragash knows how to read. Corrupted wildlife is something her hounds have never been trained to find — and the fact that they find it anyway, and react to it with behavior she does not recognize, unsettles her in a way that enemy camps do not.
+
+**Trigger conditions:**
+- Party is traveling in the Frontier or the Great Forest
+- Ragash is in the active party
+- A corrupted animal (corrupted predator, corrupted wildlife pack, or significantly affected creature) is within range of the current path
+
+**The behavioral difference:** Trained hounds have consistent responses to different threat types. A human trail produces alert, purposeful tracking. A predator produces a specific kind of readiness — contained aggression, forward orientation, held energy. A goblin camp produces what Ragash describes as "professional interest." What corrupted wildlife produces is none of these. The hounds pick up the presence and then do something trained hounds should not do: they become uncertain. The behavioral tell is not aggression or pursuit. It is hesitation. Ragash has spent years with these animals. She knows their uncertainty is information.
+
+**Design note:** These events function as early warnings that change how the party can approach a corrupted wildlife encounter. A party that acts on the warning has positional advantage, tactical options, and the chance to avoid a direct confrontation they were not prepared for. A party that ignores the warning proceeds into the encounter with no preparation. The AI Director should honor the difference.
+
+---
+
+### Event 1 — The Stop (Frontier)
+
+**When it triggers:** The party is moving through Frontier terrain — open plain, scrub forest, or rocky ground — within range of a corrupted predator or a pack of corrupted animals. The encounter would otherwise be a surprise.
+
+**What happens:**
+
+Ragash's hounds stop. Not the controlled, deliberate halt of a hunt lock — not the coiled attention of pursuit — just: stop. All three of them, mid-stride, within a few seconds of each other. Dusk's nose works once, low and fast, and then she doesn't move again.
+
+Ragash stops with them. She doesn't say anything for a moment. She watches the hounds, then looks ahead, then watches the hounds again.
+
+> "Something's wrong with an animal up there."
+
+If a companion or the player asks what she means:
+
+> "They're not tracking it. They found it and they stopped. That's not what they do with predators."
+
+She crouches briefly beside Dusk, one hand resting on the hound's back. The touch is brief and practical, but she leaves her hand there a half-second longer than necessary.
+
+> "Whatever's ahead — it doesn't smell right to them. They can't decide what it is, and they know what everything is."
+
+She straightens.
+
+> "We don't go that way without knowing what we're walking into."
+
+**What the party gains:**
+
+- **Direction and distance:** The hounds stopped facing a specific vector. Ragash can estimate rough distance based on how they reacted — the earlier in a track they halt, the farther the subject is. A complete stop before alert means significant presence at considerable distance, which gives the party real time.
+- **Flanking approach:** The hounds' orientation gives the party the corrupted animal's probable position without the party having entered its awareness. Ragash can direct the group around the scent cone to approach from downwind and with terrain cover.
+- **Choice of engagement:** Corrupted predators in the Frontier do not behave like uncorrupted ones. They do not follow natural prey behavior — they do not retreat when threatened, do not stop when satisfied, do not observe territory boundaries. Knowing one is ahead of the party before the party is in its range is the difference between a prepared fight and a desperate one.
+- **Non-engagement route:** If the party prefers to avoid the encounter entirely, Ragash can direct the group on a wide arc. She will not counsel this or argue against it — she presents it as an option.
+
+**Ragash's read on the situation:**
+
+> "Your call. But whatever that is, it's not acting like prey and it's not acting like a predator. Something in between. Those are the ones that don't stop."
+
+She does not elaborate unless asked. If asked:
+
+> "A normal predator hunts because it's hungry. This — the ones that are wrong like this — they hunt because that's all that's left of them. There's no satisfied state. You either stop them or you don't."
+
+**Relationship note:** This is the event that introduces players to Ragash's understanding of the Corruption as something that hollows out natural creatures — amplifies what they were until there is nothing left but the drive, stripped of everything that made it functional. She does not use the word Corruption unless the party has been discussing it. She describes it the way a hunter describes a disease in game populations: practically, without sentiment, with a specific and serious attention to what it means for everyone nearby.
+
+Her care for the hounds is visible in the pause before she gives orders. She will not send them ahead to investigate. She will not use them as bait. She keeps them close while she decides.
+
+---
+
+### Event 2 — The Wrong Smell (Great Forest)
+
+**When it triggers:** The party is moving through the Great Forest, within range of corrupted wildlife — particularly any animal the hounds have encountered before in its uncorrupted form. The encounter is most resonant when the corrupted animal is a type that should be familiar: deer, wolf, boar.
+
+**What happens:**
+
+One of Ragash's hounds — the younger one, not Dusk — pulls forward on her own, interested. Normal. Then she tracks a few paces off the path, nose down, and something changes. She stops. She shakes her head — a physical, involuntary motion, like clearing water — and comes back.
+
+Ragash is already watching her when she returns.
+
+The hound circles twice, unsettled, and then sits down and looks up at Ragash with an expression that is, for a trained hound, unusual: waiting to be told what that was.
+
+> "That's a first."
+
+She goes to the hound, crouches, examines the ground where the animal tracked. She doesn't find a trail she can read easily.
+
+> "She picked up a prey scent. Came back confused."
+
+She looks in the direction the hound was tracking. The forest is quiet in a way that isn't quite peaceful.
+
+> "Something out there used to be prey. Whatever it is now — she didn't know what to do with it."
+
+**What the party gains:**
+
+- **Regional warning:** This event does not point to a single location the way the Frontier event does — it signals that Corruption is actively affecting wildlife in this part of the Great Forest. The party is in a zone where the natural hierarchy of predator and prey has been disrupted. Every subsequent encounter with wildlife in this area should be treated differently than normal.
+- **Atmospheric intelligence for the AI Director:** The Great Forest Corruption does not manifest uniformly. A hound's reaction to a specific scent is the most granular possible indicator that something has changed in a specific location. If the AI Director knows that Ragash's hound reacted at this spot, it can use that marker to calibrate what the party encounters in the next few encounters from this position.
+- **Approach advisory:** The hound's confusion is informative. An animal that smells like prey but triggers hesitation in a trained tracker is an animal that may not behave like prey when encountered. It may not run. It may not maintain a prey animal's natural wariness. It may approach rather than flee. The party should not assume standard encounter behavior.
+
+**The emotional weight:**
+
+Ragash does not show distress. She shows something more controlled than distress: heightened attention and a kind of careful quiet.
+
+She brings the hound back to her side — not with a command, with a touch on the neck — and keeps a hand there for a moment. This is not standard. Her hounds work independently; she does not leash them or hold them close during travel. Keeping one physically near her, after that, is a choice she makes without explaining it.
+
+If a companion asks what she's thinking:
+
+> "My hounds don't get confused by prey. That's what they're for. If they don't know what something is —"
+
+She doesn't finish the sentence. She doesn't need to.
+
+> "We watch our footing from here."
+
+**The harder question this event can open:**
+
+If the party engages the conversation, Ragash will eventually land on a specific concern she does not usually voice:
+
+> "If something that started as a deer can end up like that — " a beat — "I want to know what it does to a predator. To something that already hunts."
+
+She is not asking rhetorically. She is thinking about her hounds. The Corruption makes predators into things that don't stop. Her hounds are predators. She has raised them from pups. She has never lost one.
+
+This is not the event where that fear is resolved or directly confronted. It is the event where it becomes visible — briefly, and to a player paying attention.
+
+**Relationship note:** Unlike the Frontier event, which is primarily tactical, this event is primarily emotional — and Ragash handles it in her characteristic mode: by becoming more practical, not less. The additional care she takes with the hounds after this encounter is how she processes the fear. She does not name it. She acts on it.
+
+---
+
 ## The Forgotten Eighth — Revelation Response
 
 When the party learns the truth about the Ancient God — that she was one of the Chorus, that the Chorus imprisoned their sister, that none of this is simple — Ragash sees flawed individuals making impossible decisions.
@@ -384,3 +500,4 @@ She may ask, quietly and practically, what the party intends to do with this inf
 | July 2026 | Created — full Hero Bible entry established |
 | July 2026 | Added Companion Events — Goblin Trail Detection section (three specific events: Stonefang, Mossroot, Ashfire) |
 | July 2026 | Added The Forgotten Eighth revelation response |
+| July 2026 | Added Companion Events — Corrupted Wildlife Detection section (two events: The Stop / Frontier early warning; The Wrong Smell / Great Forest emotional resonance) |
