@@ -51,6 +51,13 @@ def start_new_game():
         "\nStarting new adventure..."
     )
 
+    # Reset the game loop state so run_game() starts fresh even when
+    # a prior adventure set running=False or advanced day/tick.
+    from game_loop import game_state
+    game_state["running"]  = True
+    game_state["day"]      = 1
+    game_state["tick"]     = 0
+
     select_hero()
 
     run_game()
