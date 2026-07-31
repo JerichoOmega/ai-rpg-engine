@@ -6,6 +6,14 @@
 
 ---
 
+## Entrance Inscription
+
+> *"Tomorrow inherits only what we preserve today."*
+
+This inscription appears above the Great Library's primary entrance. It is the institution's founding statement and its operating philosophy made visible.
+
+---
+
 ## What the Great Library Is
 
 The Great Library of the Capital is the largest archive of recorded knowledge on the continent.
@@ -73,6 +81,63 @@ It also contains materials that were placed there by House Soleth — the vampir
 
 ---
 
+## The Order of Archivists
+
+The Order of Archivists is the Great Library's own institutional body — the scholars, researchers, and preservationists who staff the Library and carry its mission forward across generations. They are distinct from the Veiled Order's archivists, who operate within the Library under a separate arrangement.
+
+### Mission
+
+The Order preserves knowledge regardless of politics.
+
+Their loyalty is explicitly and formally stated as being to:
+
+- Truth
+- History
+- Knowledge
+- Future generations
+
+Not to kings. Not to kingdoms. Not to the institutions that fund them or the dynasties that currently hold power. This is not a philosophical abstraction — it is the founding principle of the Order, embedded in their oath, their traditions, and the institutional structure that has allowed the Library to survive every political upheaval of the past several centuries.
+
+Whether the Order fully lives up to this principle — given the existence of the Sealed Archive and the gaps in the Restricted Collection — is a question the Library's own senior scholars do not discuss publicly.
+
+### The Official Oath
+
+Every archivist, upon joining the Order, takes the following oath:
+
+> *"Knowledge is not ours to possess, but ours to protect. We preserve today so that tomorrow may understand. Let no truth be hidden through fear, no history be forgotten through neglect, and no voice be silenced by our own hands. We are not the owners of knowledge — we are its stewards."*
+
+When the oath is complete, the Chief Archivist responds:
+
+> *"Then carry tomorrow well."*
+
+This exchange is the same whether the new archivist is joining as a junior cataloguer or as a senior scholar. The oath does not change with rank. The responsibility it names does not either.
+
+### Scholar Traditions
+
+Common sayings passed through generations of Library scholars — not official mottos, but living phrases:
+
+> *"The future remembers only what we choose to preserve."*
+
+> *"Tomorrow is built upon what we refuse to forget."*
+
+These phrases appear in correspondence, carved into study carrels, written in the margins of personal journals. They are informal, ubiquitous, and — among scholars who have worked in the Library long enough to see what is kept and what is not — occasionally ironic.
+
+### Archivist Traditions
+
+Upon joining the Order, every archivist receives a **blank journal**.
+
+The first page contains the official oath, written out in full in the archivist's own hand.
+
+The remaining pages are the archivist's own — filled throughout their life with discoveries, observations, sketches, translations, copied passages, research notes, and whatever else they judge worth preserving from their work.
+
+Upon the archivist's death, the journal is returned to the Great Library and permanently archived.
+
+Every archivist ultimately becomes part of the history they dedicated their life to preserving.
+
+> **For writers:** These journals are a significant resource. A player who gains access to the archived journals of a deceased Veiled Archivist, a former Chief Archivist, or any scholar whose career touched the Sealed Archive may find things in those personal records that could not survive in official documents.
+
+---
+
 ## The Veiled Archivists
 
 The Veiled Order maintains a formal relationship with the Great Library that is older than the current building's Third Age expansion.
@@ -130,8 +195,23 @@ A player who has built reputation with the Veiled Order has the most direct path
 
 ---
 
+## Design Philosophy
+
+The Great Library is not simply a building.
+
+It is a living institution representing civilization's commitment to preserving knowledge across generations. Knowledge is viewed here not as possession but as inheritance — something received from those who came before and owed to those who come after.
+
+This philosophy shapes everything: why archivists take an oath to truth rather than to rulers, why the blank journal tradition exists, why the entrance inscription says what it says, and why the Order's founding documents describe their purpose in terms of future generations rather than present authority.
+
+It also shapes the tension at the Library's core. An institution devoted to preserving all knowledge, that also maintains a Sealed Archive specifically designed to prevent access to certain knowledge, is an institution in conflict with itself. The Order's scholars are aware of this tension. The ones who have been there longest have learned to live with it rather than resolve it.
+
+> **All future quests, dialogue, codex entries, NPCs, historians, archivists, universities, and lore systems should remain consistent with this philosophy.** The Great Library treats knowledge as humanity's inheritance, not its possession. Characters who work within or around the Library should reflect this — including in how they rationalize the gaps.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — Great Library lore document; collections (Open, Restricted, Sealed Archive); the Veiled Archivists and Carros; gnomish archivist staff; the Library's relationship to the Great Forgetting; access structure as campaign tool |
+| July 2026 | Major expansion — Entrance Inscription added; Order of Archivists established as named institution (mission, loyalty, Official Oath, Chief Archivist's response); Scholar Traditions (common sayings); Archivist Traditions (blank journal; journals permanently archived at death); Design Philosophy section added |

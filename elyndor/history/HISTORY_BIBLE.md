@@ -34,9 +34,9 @@ This is the mythical beginning of recorded history — the era when the world wa
 - The first civilizations began forming — early predecessors to the kingdoms of the Second Age
 - The gods walked among mortals directly, before their withdrawal
 
-### The Imprisonment
+### The Sundering
 
-At some point during the First Age, one member of the Divine Chorus — now known only as **The Forgotten Eighth** — became changed by forces she had encountered beyond the boundaries of Creation. She had gone searching for what cannot be found: a way to undo the death of a mortal she had loved. The search exposed her to things outside Creation entirely. By the time the Chorus intervened, she was no longer the being they had known.
+The event in which the Chorus imprisoned the Eighth is known canonically as **The Sundering**. At some point during the First Age, one member of the Divine Chorus — now known only as **The Forgotten Eighth** — became changed by forces she had encountered beyond the boundaries of Creation. She had gone searching for what cannot be found: a way to undo the death of a mortal she had loved. The search exposed her to things outside Creation entirely. By the time the Chorus intervened, she was no longer the being they had known.
 
 The rest of the Divine Chorus imprisoned her. Not as punishment. Not as victory. As the only means they could find to prevent what she had brought back from destroying what they had spent the entirety of creation maintaining.
 

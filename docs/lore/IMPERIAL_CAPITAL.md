@@ -8,9 +8,9 @@
 
 ## What the Capital Is
 
-The Imperial Capital is the continent's center of gravity.
+The Imperial Capital is the cultural and intellectual center of civilization — and its political center of gravity.
 
-Not geographically — it is not at the continent's heart. It is the center of gravity because everything that matters eventually passes through it: military commands, trade agreements, religious edicts, scholarly publications, noble marriages, political crises, and the quiet decisions that determine who holds power and for how long.
+Everything that matters eventually passes through it: military commands, trade agreements, religious edicts, scholarly publications, noble marriages, political crises, and the quiet decisions that determine who holds power and for how long. Scholars from every kingdom travel here. The institutions concentrated in this city represent the accumulated knowledge, authority, and memory of the entire continent.
 
 Other regions produce things the Capital needs. The Iron Peaks produce metals, stone, and craft. The Great Forest produces timber, rare herbs, and magical materials. Sol Kareth produces trade goods and accumulated wealth. The Frontier produces resources and problems in roughly equal measure. The Frozen Highlands produce nothing the Capital values except soldiers.
 
@@ -34,7 +34,7 @@ The Capital is not a single texture. It is several cities occupying the same geo
 
 **The Crown District** — the administrative heart. The Royal Palace and its attendant structures: ministries, courts, archives, barracks, the ceremonial spaces where governance is performed for those who need to see it performed. Architecture here is designed to communicate permanence and authority. Most of it succeeds.
 
-**The Academic Quarter** — the universities, the Great Library, the Mages Guild Headquarters, and the dense network of boarding houses, taverns, and small bookshops that exist to support people who spend their lives inside institutions. The Academic Quarter is the noisiest part of the Capital in terms of ideas; it is also the most politically unpredictable, because scholars are difficult to frighten and excellent at publicizing what frightens them.
+**The Academic Quarter** — the universities, the Great Library, the Mages Guild Headquarters, the Museums, the Translation Halls, the Observatory, and the dense network of boarding houses, taverns, and small bookshops that exist to support people who spend their lives inside institutions. The Scholar's District occupies the Academic Quarter's quieter eastern edge — residential blocks given over almost entirely to academics, researchers, and the people who support them. The Academic Quarter is the noisiest part of the Capital in terms of ideas; it is also the most politically unpredictable, because scholars are difficult to frighten and excellent at publicizing what frightens them.
 
 **The Temple District** — the major temples of the Divine Chorus. Every member of the Chorus has a temple here, and the Solari Covenant's Radiant Spire dominates the skyline. The Temple District is both genuinely sacred and deeply political. The line between a theological pronouncement and a political one is, in the Temple District, a matter of professional interpretation.
 
@@ -129,3 +129,4 @@ For players who have uncovered early evidence of the Great Forgetting, the Capit
 | Date | Change |
 |---|---|
 | July 2026 | Created — Imperial Capital lore document; city districts; institutions (Royal Government, Military High Command, Mages Guild HQ, Major Temples, Universities, gnomish community); Corruption's political expression; campaign significance |
+| July 2026 | Expanded — framing updated to cultural and intellectual center (not only political); Academic Quarter expanded with Museums, Translation Halls, Observatory, Scholar's District; "scholars from every kingdom travel here" established |

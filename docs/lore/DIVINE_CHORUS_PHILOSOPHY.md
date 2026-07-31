@@ -20,6 +20,30 @@ This is the most important thing to hold onto when writing them. They think on a
 
 ---
 
+## What the Divine Chorus Does Not Do
+
+These are immutable rules. No canonical content may feature the Chorus doing any of the following:
+
+- **Govern kingdoms.** They do not build, maintain, or dismantle political structures.
+- **Choose rulers.** No monarch, warlord, or leader holds power because the Chorus selected them.
+- **Manipulate politics.** They do not intervene in mortal power disputes, even when those disputes produce suffering they could see coming.
+- **Create chosen heroes.** No individual is touched by divine selection. Heroes are made by circumstance, sacrifice, and decision.
+- **Determine destiny.** There is no prophecy of Chorus origin. There is no fate they have authored for any mortal.
+
+The Chorus deeply cares about mortals. That care is expressed through stewardship of the elemental forces that make mortal life possible — not through control of what mortals do with that life.
+
+Their responsibilities are specifically:
+
+- Primordial Energy
+- Cosmic balance
+- The Final Verse
+- The stability of existence
+- Reality itself
+
+They intervene directly only when the cosmos itself is threatened. The Forgotten Eighth's fall is the single defining historical example of such intervention — and even then, it took the Chorus centuries of attempting every alternative before they acted.
+
+---
+
 ## What the Divine Chorus Is Not
 
 They are not:
@@ -29,6 +53,18 @@ They are not:
 - **Indifferent.** They love the world they maintain. They love, as individuals, in ways that have led to mistakes. The tragedy of the Eighth is not possible in a pantheon that does not feel.
 - **Villains.** The Chorus made an irreversible decision that they believed was necessary and have mourned ever since. They did not stop loving their sister when they sealed her away. The most ancient records say this clearly. Their traditions, read carefully, still whisper it.
 - **Heroes.** Whether there was another way is a question the campaign leaves open. Whether the Great Forgetting was justified — whether allowing the world to forget an entire member of its founding divine family was mercy or self-protection — is not answered.
+
+---
+
+## Free Will Is Sacred
+
+Free will is among the Chorus's most deeply held convictions about mortal life.
+
+They believe that removing mortal choice — even in service of better outcomes — would ultimately destroy civilization. Mortals must inherit both the triumphs and the failures of their own decisions. A world where the Chorus guided every mortal choice toward good outcomes would not be a world of mortals at all. It would be a managed system, and what it produced would not be the kind of life the Chorus stewards existence to protect.
+
+This is why they do not intervene in politics, wars, famines, or the rise and fall of kingdoms — even when they could see those outcomes clearly. The cost of intervention is the cost of what mortals become when they no longer bear full responsibility for what they build.
+
+> **For writers:** This principle is the reason no NPC can credibly claim that the Chorus told them to do something, chose them for a purpose, or sent them a vision with specific instructions. The Chorus communicates through the structure of the world — through the elemental forces they steward, through the balance they maintain — not through personal divine direction.
 
 ---
 
@@ -152,3 +188,4 @@ The Chorus's restraint after her fall — their increased caution about what the
 | Date | Change |
 |---|---|
 | July 2026 | Created — Divine Chorus Philosophy consolidated from MAGIC_BIBLE.md, the_eighth.md, and CAMPAIGN_DESIGN.md; writer guidance section; The Final Verse; the Five Tensions; The Forgotten Eighth summary |
+| July 2026 | Expanded — "What the Chorus Does NOT Do" section added (immutable rules: no kingdoms, no chosen rulers, no political manipulation, no chosen heroes, no destiny); responsibilities list formalized; intervention threshold defined (cosmos-level only); "Free Will Is Sacred" section added |

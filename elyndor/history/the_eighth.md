@@ -194,11 +194,13 @@ She was not different in the way a person changes over time. She was different i
 
 ---
 
-## The Imprisonment
+## The Sundering
 
-The Divine Chorus imprisoned the Eighth.
+The event in which the Divine Chorus imprisoned the Eighth is known canonically as **The Sundering**.
 
-This was not a victory.
+This is the correct term in all content, dialogue, codex entries, and lore references. "The Imprisonment" is an acceptable descriptive phrase in scholarly writing. "The Sundering" is the historical name.
+
+The Sundering was not a victory.
 
 The Chorus did not imprison her because they had stopped loving her, or because they judged her, or because they believed she deserved punishment. They imprisoned her because they believed there was no other means of preserving Creation from the forces she had brought back with her from beyond its boundaries — forces that, through her, were beginning to affect the world.
 
@@ -306,3 +308,4 @@ These questions should not have clean answers. The mythology is designed to gene
 |---|---|
 | July 2026 | Created — The Forgotten Eighth established as canonical; the Ancient God confirmed as former member of the Divine Chorus; her story, the Great Forgetting, the Imprisonment as tragedy, the Corruption's true nature as amplified virtue, and companion revelation responses all documented |
 | July 2026 | Major revision — "The Final Verse" established as the world's canonical term for death; The Five Stages of the Fall formally named and documented (Love, Grief, Obsession, Justification, Hatred); Stage IV (Justification) established as the true root of corruption through self-compromise; Stage V (Hatred) added with her perspective that the Chorus betrayed her first; "Time Among Mortals" expanded with why she found mortal life extraordinary; "The Mortal She Loved" expanded with specific qualities (kindness, humor, compassion, appreciation of ordinary life); Chorus's mourning and comfort attempt added to the Final Verse section |
+| July 2026 | "The Sundering" established as the canonical event name for the Eighth's imprisonment; section renamed accordingly |
