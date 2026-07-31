@@ -129,6 +129,40 @@ Her story in this arc is one of **heartbreak rather than hatred**. She must conf
 
 Eleanor's personal arc during the Fractured Circle is one of the clearest expressions of the game's core Corruption principle: it amplifies existing flaws, it does not manufacture evil from nothing.
 
+---
+
+**Named Guild NPCs for the Fractured Circle**
+
+The following named figures from Eleanor's Guild history are the specific people who give The Fractured Circle its emotional weight. Writers and the AI DM should use these characters rather than generic "former colleagues":
+
+| NPC | Role | What the Corruption Amplifies |
+|---|---|---|
+| **Archmagus Valdris Corne** | Eleanor's mentor; championed her admission | His academic love for Eleanor as a research subject; the distinction between caring for her and studying her was always blurry |
+| **Sera Mathlin** | Eleanor's rival; same approximate rank | Not corrupted — her position outside Eleanor's trust circle placed her outside the Corruption's access to Eleanor's world; she is the one who sounds the alarm |
+| **Fen Dossett** | Eleanor's closest Guild friend | A quiet wish to matter; the Corruption told him his contribution was essential and he chose not to look too closely at what he was contributing to |
+
+Full NPC definitions — backstory, role, relationship to Eleanor, arc-resolution outcomes — are in [`docs/heroes/ELEANOR.md`](../heroes/ELEANOR.md), Mages Guild Questline section.
+
+---
+
+**The Three-Beat Questline Structure**
+
+Eleanor's Guild questline runs in parallel with The Fractured Circle and provides the authored story moments the arc executes against:
+
+1. **"The Weight of Letters" (early campaign)** — Guild correspondence establishes the relationships as living things; an official commission from Valdris plants the first seed of unease; everything still looks normal
+2. **"The Wrong Questions" (mid campaign)** — Fen's letters stop; the party finds evidence of unauthorized Corruption research using Valdris's methodology; Sera arrives with information she cannot take anywhere else; the Harmonic Soul revelation happens here or adjacent — Eleanor learns what she is at the same moment she learns she may have been a research subject as much as a student
+3. **"What Remains" (late campaign)** — Confrontation with Valdris, Fen's resolution, and Eleanor's decision about what relationship she wants with the Guild going forward
+
+---
+
+**What The Corruption Amplified in Each Figure**
+
+Valdris's flaw was pre-existing: the academic love of the question more than the person. He genuinely cared for Eleanor and genuinely catalogued her. Both were always true. The Corruption did not create the second part — it simply made him stop pretending the distinction between them was settled.
+
+Fen's flaw was small enough that it should have been safe: a wish to be significant. A quiet belief that he was unremarkable standing next to someone extraordinary. Small corruptions can be survived if they are caught. Whether they are caught depends on the player.
+
+Sera is the negative space: the rival who was too far outside Eleanor's warmth to be approached through it, and therefore too far outside the Corruption's leverage over Eleanor to be turned. She ends the arc as the person most adjacent to Eleanor's Guild life who did not fall. What Eleanor does with that is one of the arc's most telling character moments.
+
 See [`docs/heroes/ELEANOR.md`](../heroes/ELEANOR.md)
 
 ---

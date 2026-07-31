@@ -216,6 +216,153 @@ Eleanor's quest is not about defeating an enemy and not about learning a new pow
 
 ---
 
+### Mages Guild Questline — "The Weight of What We Build"
+
+This questline provides the specific story content through which Eleanor's external arc and the Fractured Circle campaign arc are lived. It supplies named people, authored moments, and a three-beat structure for The Fractured Circle to execute against.
+
+See also: [`docs/systems/dynamic_story_arcs.md`](../systems/dynamic_story_arcs.md) — The Fractured Circle, Eleanor's Personal Story.
+
+---
+
+#### What Eleanor Wants From the Guild
+
+Eleanor did not join the Mages Guild because the Guild asked her to. She joined because her family believed it was the right place for someone like her — and because she agreed.
+
+Her family is not wealthy or well-connected. They scraped together what was needed to give her access to the testing process, and she passed it in a way that made the examiners uncomfortable. The Guild accepted her not out of enthusiasm but out of professional obligation: she was too significant to turn away. She has spent her time there proving that what they found was a gift, not a liability.
+
+**What Eleanor wants from the Guild:**
+- **Recognition** — that her abilities are real, stable, and useful, not a matter of luck or instability waiting to manifest catastrophically
+- **Advancement** — to a rank where she can support her family materially, not just in aspiration
+- **Belonging** — she wants to earn her place among people who understand what magic is, so that the loneliness of being extraordinary has a context
+
+**What the Guild wants from Eleanor:**
+- A field asset whose abilities produce results no single-element specialist can replicate
+- A research subject — whether or not anyone has admitted this to Eleanor directly, her case files are among the most studied in the institution's history
+- A success story, if she survives: proof that the admission process caught something valuable rather than something dangerous
+
+These wants are not in conflict at the surface level. They become a problem when the Corruption arrives and reveals that the Guild's academic interest in Eleanor was never purely collegial.
+
+---
+
+#### Key Named NPCs
+
+**Archmagus Valdris Corne — Mentor**
+
+Valdris is Senior Theorist in the Guild's Division of Elemental Research and the person most directly responsible for Eleanor's admission. He argued for her when other senior members wanted her observed at a distance rather than educated. He is methodical, patient, and genuinely fond of Eleanor in the way a careful person becomes fond of something they believe in.
+
+His flaw — the thing the Corruption will amplify — is that he loves the academic question more than the person. He has always catalogued Eleanor's abilities not only to help her develop them but because she represents a theoretical mystery he has spent his career trying to solve. The distinction between "mentor who studies his student to protect her" and "researcher who mentors his subject to study her" has been blurry enough that Valdris himself has never resolved it clearly. The Corruption does not manufacture this ambiguity. It simply removes the blurriness and leaves him with the answer he was already moving toward.
+
+By the time Eleanor realizes what he has become, Valdris has been crossing lines for long enough that the man who championed her is no longer fully present. What remains still believes he is helping her. That is what makes confronting him so difficult.
+
+*Role in the questline:* Inciting presence in Beat One; central revelation in Beat Two; confrontation and resolution in Beat Three.
+
+---
+
+**Sera Mathlin — Rival**
+
+Sera is a Guild prodigy of Eleanor's approximate age who has earned every rank she holds through meticulous, conventional excellence. She is not wrong about the fact that Eleanor received mentorship she did not, exceptions she did not, and institutional attention she would never have been granted. She resents this with a precision that Eleanor's warmth cannot entirely disarm.
+
+Sera is not a villain. Her frustration is legitimate and her observations are sharp. Her rivalry has made her into someone who watches the Guild's senior figures with a critical eye that Eleanor's gratitude prevents.
+
+During The Fractured Circle, it is Sera who first notices something is wrong with Valdris — months before Eleanor could have seen it — because she was watching him without any of the protective warmth that would have softened what she was seeing. She goes to Eleanor not out of friendship but out of necessity: Eleanor is the one person who might believe her, and who has the most to lose if she is right.
+
+What Eleanor does with this — how she receives information from the person she has spent years treating as an obstacle — is one of the questline's most telling character moments.
+
+*Role in the questline:* Background presence in Beat One; catalyst and reluctant ally in Beat Two; possible ongoing relationship in Beat Three depending on player choices.
+
+---
+
+**Fen Dossett — Friend**
+
+Fen is a junior mage and Eleanor's closest friend from her Guild years. He is self-deprecating, genuinely kind, and exactly the kind of person Eleanor gravitates toward: someone whose warmth is not competitive, who celebrates what she can do without needing it to reflect well on him.
+
+His corruption is the most personally devastating because there was no obvious crack for the Corruption to find. Fen did not have dangerous ambition or unstable obsessions. What he had was something much smaller: a deep, quiet wish to matter. To have his work be significant. To stop being the unremarkable mage standing next to the extraordinary one.
+
+The Corruption found that wanting and made it enormous. Someone told Fen that the research he was assisting would change the world's understanding of magic, and that his contribution was essential. He believed them because it was what he most needed to hear. By the time Eleanor finds him, he has been helping the corrupted faction long enough to be implicated — not as a true believer, but as someone who chose not to look too closely at what he was contributing to.
+
+He can be reached. Whether there is time, and whether Eleanor can see him clearly enough through her grief to actually reach him, depends on the player.
+
+*Role in the questline:* Active friend in Beat One; increasingly absent, then alarming in Beat Two; the emotional crisis of Beat Three.
+
+---
+
+#### The Three-Beat Structure
+
+**Beat One — "The Weight of Letters"**
+
+*When:* Early campaign. Trigger is flexible — Guild correspondence, an official commission, or a Guild representative encountered in the field.
+
+Eleanor receives word from her Guild contacts. A letter from Fen, characteristically warm and slightly self-deprecating. An official field assessment commission routed through Valdris — the Guild wants documentation of Corruption effects in the region, and Eleanor is the most qualified field mage available. Sera is not mentioned; she rarely is.
+
+The beat establishes Eleanor's Guild relationships as living, present things — not backstory but ongoing — and the Guild's official position on Corruption research as systematic and careful.
+
+One document in the commission materials contains a request that goes slightly further than documentation: a set of behavioral observations Eleanor is asked to record about her own casting under Corruption-adjacent conditions. The request fits within the commission's framework. Valdris's signature is at the bottom. Eleanor is likely to comply — it is the kind of thing she would do without thinking twice, because Valdris asked.
+
+*What this beat does:* Roots the questline in Eleanor's lived relationship with the Guild before anything goes wrong. The normal world must exist before it can be lost.
+
+---
+
+**Beat Two — "The Wrong Questions"**
+
+*When:* Mid campaign, as The Fractured Circle arc escalates.
+
+Fen's letters slow and then stop. Eleanor notices, but there are many possible explanations. When a letter does arrive, something about it is slightly different — not wrong enough to be certain, wrong enough to notice.
+
+The party encounters evidence of unauthorized Corruption research at a location they are investigating. Eleanor recognizes the methodology. It is Valdris's.
+
+Sera finds her. This is not comfortable. Sera has not come to apologize for years of rivalry, and Eleanor has not forgotten the particular ways that rivalry has manifested. But Sera has information she cannot take to anyone else within the Guild — everyone she might have gone to is either implicated or too close to those who are. She came to Eleanor because Eleanor is outside the direct chain and because, Sera admits reluctantly, Eleanor is the one person she trusts to take it seriously rather than dismiss it as rival-motivated suspicion.
+
+What Sera has observed: Valdris has been conducting a secondary research track alongside his official Corruption documentation work — one focused specifically on field mage behavioral profiles during Corruption exposure. The most extensive profile in his files belongs to Eleanor.
+
+The Harmonic Soul revelation — Eleanor's visit to the First Age sanctuary — happens in this beat or immediately adjacent to it. The timing is not accidental. Eleanor goes in hoping to understand how to be less dangerous to the people around her. She comes out having been told what she is. She emerges from that experience into the knowledge that Valdris has been studying her not only as a mage but as a phenomenon — and that someone in the corrupted faction almost certainly knows what he found.
+
+The revelation that she is a Harmonic Soul arrives at the same moment she realizes that her mentor's academic love for that mystery may have made her a target. Being seen as extraordinary is something she has wanted since she joined the Guild. The Corruption has shown her what "being seen" can cost.
+
+*What this beat does:* Brings the questline's emotional stakes into direct contact with Eleanor's core wound. It is not just that people she trusted are falling — it is that one of them may have been treating her as a subject rather than a person the entire time.
+
+---
+
+**Beat Three — "What Remains"**
+
+*When:* Late campaign. Convergence of the Guild questline and the Fractured Circle's climax.
+
+The party locates Valdris. He does not believe he has done wrong — or more precisely, he believes that what he has done was ultimately in service of understanding Eleanor, which he has conflated with caring for her. The confrontation is not a villain's monologue. It is the conversation Eleanor could not have prepared for: a man who genuinely loved her work explaining, with academic precision, why he helped people who wanted to use her.
+
+Fen's resolution depends on what the party has done and how much time remains. He can be found. He is not fully gone — the Corruption found something small in him, and small corruptions are sometimes survivable if they are caught. Eleanor reaching him requires her to see him clearly: not as the friend she hoped he was, and not as a stranger the Corruption has made of him, but as a person who made a frightened, foolish choice and needs her to hold that clearly enough to offer him a way out.
+
+Sera ends the arc as the person most adjacent to Eleanor's Guild life who did not fall — not because she was stronger or better, but because her position outside Eleanor's trust circle also placed her outside the Corruption's reach into Eleanor's world. Eleanor must decide what to do with that. The rival who sounded the alarm is not automatically a friend. But she is something.
+
+*What this beat does:* Lands the questline's three relationships at distinct points that map onto Eleanor's possible resolutions:
+- Valdris represents trust that was not entirely misplaced but was not as mutual as she believed
+- Fen represents trust that was entirely real but not sturdy enough to survive what was offered to him
+- Sera represents unexpected territory — connection that might grow from the absence of warmth
+
+---
+
+#### The Questline and the External Arc Resolutions
+
+The Guild questline provides the specific content through which Eleanor's three possible external arc resolutions are lived:
+
+**Resolution A — The Cost of Clarity:** Fen cannot be reached in time. Valdris's full crossing point was reached earlier than Eleanor could have intervened. She must act against people she loved with clear eyes and come through it having learned that seeing people clearly is its own form of love — not a lesser version of the warmth she started with.
+
+**Resolution B — Vindicated:** Fen is reached. Eleanor's belief that he was still the person she knew — that the Corruption found something small, not something essential — turns out to be right. He did not fully become what they made him think he wanted. Her seeing him clearly was not naive. It was accurate.
+
+**Resolution C — The Third Thing:** The outcome for Fen and Valdris is not clean in either direction. Eleanor grieves what is broken, makes decisions with incomplete information, and comes through it understanding that the question was never "should I have trusted them?" The question is what she does now with the love that has nowhere to go.
+
+---
+
+#### Eleanor and the Guild After the Arc
+
+Regardless of resolution, Eleanor's relationship with the Mages Guild is fundamentally changed:
+
+- She has been used as a research subject without her full informed consent. Even if Valdris's intentions were not purely malicious, the distinction between "studying her to help her" and "helping her in order to study her" was never resolved in her favor.
+- She has also helped the Guild survive something it did not fully recognize in itself. Both things are true.
+- She is now the most significant field mage the Guild has produced in this generation, and they know it, and she knows they know it, and that knowledge sits differently than it did before.
+
+She does not leave the Guild. She does not have to. But she returns to it — if she returns — on different terms than the ones she arrived with.
+
+---
+
 ## Relationship Dynamics
 
 ### Talos
