@@ -33,14 +33,25 @@ player = Player()
 # =========================
 
 def sync_world_state_from_player():
-    """Write the Player object's combat-mutated fields back into
-    world_state["player"] before every save.
+    """Write Player object combat fields back into world_state["player"].
 
-    Combat.py mutates the Player object directly (player.hp, etc.).
-    world_state["player"] is the authoritative persisted representation.
-    Calling this before each save ensures combat progress (HP changes,
-    stat mutations, gold spent in shop, etc.) is captured in the save
-    rather than overwritten by the initial hero selection values.
+    ⚠ IMPORTANT — call-site constraints
+    -------------------------------------
+    world_state["player"] is the single authoritative persisted
+    representation. Engine helpers (add_gold, remove_gold, heal_player,
+    damage_player, complete_quest, etc.) update world_state["player"]
+    directly and do NOT touch the Player object. If this function is
+    called after any of those helpers run, it will overwrite their
+    correct world_state values with the stale Player-object values,
+    causing purchases, rewards, and healing to be silently lost.
+
+    This function must therefore NOT be called in save paths.
+    It is provided for the specific case where a future refactor
+    establishes combat.py as the sole mutation point and routes all
+    HP/gold changes exclusively through the Player object.
+
+    Safe call sites: apply_hero() (hero selection, before any helpers
+    have run) or unit tests that control the full mutation sequence.
 
     Field mapping notes
     -------------------
