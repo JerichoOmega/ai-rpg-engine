@@ -11,6 +11,10 @@ from save_manager import (
     autosave
 )
 
+from hero_select import (
+    select_hero
+)
+
 # =========================
 # MAIN MENU
 # =========================
@@ -46,6 +50,8 @@ def start_new_game():
     print(
         "\nStarting new adventure..."
     )
+
+    select_hero()
 
     run_game()
 
