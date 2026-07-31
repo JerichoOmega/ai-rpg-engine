@@ -223,6 +223,8 @@ Practitioners who have maintained ancestral communication their entire lives are
 
 A more alarming phenomenon: some practitioners are receiving communications they do not recognize. Voices that claim to be ancestors but do not speak like ancestors. The tradition has always distinguished between genuine ancestral contact and spiritual deception; but the usual markers of that distinction are becoming unreliable.
 
+A small group of practitioners in the Iron Peaks has drawn the worst possible conclusion from this unreliability: that the degraded connection is punishment for the tradition's drift from authentic practice, and that the voices they are now receiving — voices that demand isolation and the exclusion of outsiders — are the true ancestors calling them back. This group, known informally as **The Unbroken Line**, represents the Ancestors' Path's Corruption-influenced cult. See [`docs/world/cults.md`](cults.md) for full definition.
+
 Some practitioners believe The Corruption is actively poisoning the connection between the living and the dead — and that restoring it requires understanding what is causing the wider deterioration. This has led a small number of Ancestors' Path practitioners far from their traditional communities in search of answers.
 
 ---
@@ -323,13 +325,14 @@ The Solari Covenant's Inquisitor faction and the Old Ways' Severance splinter ar
 
 ### Named Cults
 
-Three named cults are fully defined for use in quests and encounters: [`docs/world/cults.md`](cults.md)
+Four named cults are fully defined for use in quests and encounters: [`docs/world/cults.md`](cults.md)
 
 | Cult | Origin Religion | Radicalization | Primary Territory |
 |---|---|---|---|
 | **The Ashen Tribunal** | Solari Covenant | High | Capital Province; Frontier cities |
 | **The Severance** | The Old Ways | Medium | Great Forest; Frontier margins |
 | **The Threshold Circle** | The Veiled Order | Low-to-medium | Scattered; secretive |
+| **The Unbroken Line** | The Ancestors' Path | Medium | Iron Peaks; limited Frozen Highlands |
 
 ### Cults as Gameplay Elements
 
