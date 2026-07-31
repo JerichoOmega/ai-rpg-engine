@@ -1,0 +1,508 @@
+Analyze the existing project documentation and update the project to reflect the following as the canonical design philosophy moving forward.
+
+Do NOT implement gameplay code.
+
+Do NOT overwrite existing lore unless it directly conflicts with the decisions below.
+
+Expand documentation while preserving all existing character lore and worldbuilding.
+
+---
+
+# PROJECT DUNGEON KEEPER
+## CORE DESIGN PHILOSOPHY
+
+Project Dungeon Keeper is a handcrafted tactical RPG with a dynamic AI Dungeon Master.
+
+The game is built around:
+
+- Tactical turn-based combat
+- Memorable handcrafted companions
+- Meaningful player choices
+- Dynamic campaign variation
+- A living world
+- High replayability
+
+Replayability should come from the world evolving differently each campaign rather than replacing the main story.
+
+---
+
+# MAIN STORY
+
+Every campaign begins with the same central premise.
+
+An ancient god remains imprisoned beneath the world.
+
+Its prison has begun to weaken.
+
+Its influence slowly spreads throughout the continent.
+
+This influence is known as:
+
+## The Corruption
+
+The Corruption does NOT mind-control people.
+
+Instead it amplifies what already exists.
+
+Examples include:
+
+- Greed
+- Fear
+- Hatred
+- Pride
+- Ambition
+- Violence
+- Despair
+
+Examples within the world:
+
+- Governments become increasingly corrupt.
+- Noble houses betray one another.
+- Forests slowly become twisted.
+- Wildlife becomes more aggressive.
+- Ancient monsters awaken.
+- Cults begin hearing whispers.
+- Magic becomes unstable.
+- Long-forgotten ruins begin awakening.
+
+People remain responsible for their own actions.
+
+The Corruption simply accelerates darkness already present.
+
+---
+
+# CAMPAIGN PHILOSOPHY
+
+Every campaign tells the same overarching story.
+
+The ancient god is awakening.
+
+What changes is how the world reacts.
+
+The AI Dungeon Master dynamically changes:
+
+- Companion availability
+- Recruitment order
+- Regional events
+- Political conflicts
+- World events
+- Hidden dungeons
+- Secret bosses
+- Rare merchants
+- Side quests
+- Companion quests
+- Random travel encounters
+- Regional outcomes
+- Town survival
+- Faction relationships
+- Consequences of player choices
+
+Every campaign should feel like another telling of the same epic legend rather than an entirely different story.
+
+---
+
+# DUNGEON MASTER PHILOSOPHY
+
+The AI Dungeon Master does NOT create an entirely new story.
+
+Instead it personalizes each campaign.
+
+It should:
+
+- React to player decisions
+- Select encounters appropriate for the current campaign
+- Manage world events
+- Control pacing
+- Maintain lore consistency
+- Create memorable emergent stories
+
+The AI should always respect established lore.
+
+Randomness should enhance storytelling rather than replace it.
+
+---
+
+# WORLD STRUCTURE
+
+The world uses two exploration layers.
+
+## Strategic Layer
+
+Travel occurs on a continent map similar to Solasta.
+
+Players travel between major locations.
+
+Travel itself is gameplay.
+
+Possible travel encounters include:
+
+Combat
+
+- Goblin camps
+- Orc warbands
+- Bandit ambushes
+- Corrupted wildlife
+- Vampire covens
+- Werewolf packs
+- Necromancer rituals
+- Trolls
+- Ancient monsters
+
+Social
+
+- Traveling merchants
+- Refugees
+- Pilgrims
+- Wandering musicians
+- Mercenary companies
+
+Discovery
+
+- Ancient ruins
+- Hidden shrines
+- Forgotten watchtowers
+- Treasure maps
+- Secret caves
+- World bosses
+
+Companion Events
+
+Examples:
+
+Talos recognizes an old battlefield.
+
+Eleanor senses magical disturbances.
+
+Ragash's hounds detect hidden trails.
+
+Ronan hears distant howls.
+
+Steven discovers hidden mine entrances.
+
+Travel should never feel like simply moving from Point A to Point B.
+
+---
+
+## Regional Exploration
+
+Upon arrival, players enter handcrafted explorable regions.
+
+Regions contain:
+
+- Main quests
+- Side quests
+- Companion quests
+- Hidden dungeons
+- Secret bosses
+- Treasure
+- Environmental storytelling
+- Crafting resources
+- Optional encounters
+
+Every region should have its own identity.
+
+---
+
+# CANON REGIONS
+
+## The Frontier
+
+The untamed edge of civilization.
+
+Known for:
+
+- Frontier towns
+- Military outposts
+- Goblin tribes
+- Orc warbands
+- Refugee camps
+- Ruined watchtowers
+- Ancient battlefields
+- Dangerous trade routes
+
+The Frontier often experiences the Corruption before the rest of the continent.
+
+---
+
+## The Great Forest
+
+Known for:
+
+- Ancient forests
+- Elven settlements
+- Magical wildlife
+- Hidden shrines
+- Ancient ruins
+- Rare herbs
+
+As corruption spreads portions of the forest become twisted.
+
+---
+
+## The Iron Peaks
+
+Massive mountain range.
+
+Known for:
+
+- Dwarven strongholds
+- Mining operations
+- Ancient underground cities
+- Frozen passes
+- Dragons
+- Endless cave systems
+
+Steven's abilities should naturally excel here.
+
+---
+
+## The Frozen Highlands
+
+Known for:
+
+- Snow-covered wilderness
+- Ice caves
+- Ancient fortresses
+- Giant beasts
+- Harsh weather
+- Northern settlements
+
+---
+
+## The Desert Kingdom
+
+Known for:
+
+- Oasis cities
+- Merchant caravans
+- Ancient tombs
+- Buried civilizations
+- Sandstorms
+- Forgotten temples
+
+---
+
+## The Capital Province
+
+Political center of the continent.
+
+Known for:
+
+- Great cities
+- Noble houses
+- Government
+- Military command
+- Political intrigue
+- Trade
+
+The condition of this region changes depending upon campaign events.
+
+---
+
+# WORLD ENCOUNTERS
+
+Not every encounter should immediately become combat.
+
+Many encounters should present choices.
+
+Example:
+
+A goblin camp is discovered.
+
+Possible options:
+
+- Attack
+- Scout
+- Sneak through
+- Wait until night
+- Avoid entirely
+
+Player decisions should create future consequences.
+
+Ignoring encounters should sometimes allow threats to grow.
+
+---
+
+# INTELLIGENT FACTIONS
+
+Not every intelligent creature is automatically evil.
+
+Examples include:
+
+- Goblins
+- Orcs
+- Vampires
+- Werewolves
+- Witches
+- Necromancers
+- Cults
+- Mercenary companies
+
+Each faction should have:
+
+- Goals
+- Territory
+- Leadership
+- Politics
+- Internal conflicts
+
+Diplomacy should sometimes be possible.
+
+---
+
+# VAMPIRES
+
+Vampires are one of the world's major supernatural factions.
+
+They should never feel like generic enemies.
+
+Possible forms include:
+
+- Ancient vampire lords
+- Vampire nobles
+- Newly turned vampires
+- Feral vampires
+- Secret vampire covens
+
+Campaigns may feature very different levels of vampire activity.
+
+Some campaigns may barely feature them.
+
+Others may revolve around stopping an expanding vampire threat.
+
+---
+
+# HERO PHILOSOPHY
+
+Every companion should feel handcrafted.
+
+Mechanics should emerge naturally from personality.
+
+Each companion should possess:
+
+- Unique gameplay
+- Unique dialogue
+- Unique visuals
+- Personal quest
+- Relationship dynamics
+- Emotional growth
+
+No companion should feel interchangeable.
+
+---
+
+# CORE WOUND PHILOSOPHY
+
+Every companion has one defining emotional wound.
+
+This wound shapes:
+
+- Personality
+- Dialogue
+- Combat style
+- Relationships
+- Character growth
+
+Examples:
+
+Talos
+
+Lost faith in governments after years of war.
+
+Eleanor
+
+Believes the world is good and trusts too easily.
+
+Ragash
+
+Rejected by her own people.
+
+Ronan
+
+Believes his curse makes him dangerous to others.
+
+Steven
+
+His mysterious identity defines his journey.
+
+---
+
+# TALOS
+
+Expand Talos using the Hero Bible.
+
+Core identity:
+
+A warrior who fights to protect innocent people rather than governments.
+
+Expand:
+
+- Guardian's Resolve passive
+- Battlecry signature ability
+- Shield Stance mastery
+- Companion relationships
+- Personal quest
+- Love of children
+- Orphanage visits
+- Bead bracelet symbolism
+
+Talos should become the defining protector companion.
+
+---
+
+# HERO BIBLE TEMPLATE
+
+Every companion should contain:
+
+Hero Summary
+
+Core Identity
+
+Core Wound
+
+Core Belief
+
+Greatest Fear
+
+Driving Goal
+
+Combat Identity
+
+Unique Passive
+
+Signature Ability
+
+Personal Quest
+
+Relationship Dynamics
+
+Visual Identity
+
+Voice & Dialogue
+
+Gameplay Identity
+
+Each hero should answer one question:
+
+"What makes this companion irreplaceable?"
+
+---
+
+# DOCUMENTATION
+
+Update or create:
+
+- GAME_BIBLE.md
+- WORLD_BIBLE.md
+- HERO_BIBLE.md
+- HERO_TEMPLATE.md
+- CHARACTER_DESIGN_GUIDE.md
+- HEROES/TALOS.md
+- PROJECT_MEMORY.md
+- AI_CONTINUATION_GUIDE.md
+
+Cross-reference all documents.
+
+These decisions should now be considered canonical and serve as the foundation for all future development.
+
+Do not implement gameplay systems or code during this task.

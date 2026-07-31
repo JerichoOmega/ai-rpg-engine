@@ -20,10 +20,16 @@ In order of importance after `AI_START_HERE.md`:
 | `PROJECT_STATE.md` | Current project health — completion %, bugs, priorities. Always check first. |
 | `PROJECT_MEMORY.md` | Full project quick-start — architecture, rules, common mistakes, file map |
 | `docs/GAME_BIBLE.md` | What the game is, every confirmed mechanic |
+| `docs/CAMPAIGN_DESIGN.md` | Canonical campaign design philosophy — Handcrafted First, DM role, replayability framework |
 | `docs/COMBAT_SYSTEM.md` | Canonical combat design — grid, AP economy, facing, downed/death, party rules |
+| `docs/world/WORLD_BIBLE.md` | Canonical regions (6), travel encounters, encounter philosophy, intelligent factions, vampires |
 | `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
 | `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |
-| `docs/heroes/TALOS.md` | Full Hero Bible entry for Talos (only complete entry currently) |
+| `docs/heroes/TALOS.md` | Full Hero Bible — Talos |
+| `docs/heroes/ELEANOR.md` | Full Hero Bible — Eleanor |
+| `docs/heroes/RAGASH.md` | Full Hero Bible — Ragash |
+| `docs/heroes/RONAN.md` | Full Hero Bible — Ronan |
+| `docs/heroes/STEVEN.md` | Full Hero Bible — Steven |
 | `docs/architecture.md` | How modules connect, data flow |
 | `docs/systems/world_state.md` | The central state object — everything reads from it |
 | `docs/coding_standards.md` | How code is written here |

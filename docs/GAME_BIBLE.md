@@ -42,7 +42,8 @@
 33. [Future Expansion Opportunities](#future-expansion-opportunities)
 34. [Player Character Philosophy](PLAYER_SYSTEM.md) *(separate file)*
 35. [Campaign Design Philosophy](CAMPAIGN_DESIGN.md) *(separate file)*
-36. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+36. [World Bible](world/WORLD_BIBLE.md) *(separate file)*
+37. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -469,6 +470,26 @@ Procedural quest generation layer. Can create new quest hooks dynamically.
 
 ---
 
+## Intelligent Factions Design Philosophy
+
+Not every intelligent creature or group in this world is automatically evil.
+
+Each faction in the world — whether goblin tribes, orc warbands, vampire covens, werewolf packs, witches, necromancers, cults, or mercenary companies — must possess:
+
+- **Goals** — what they are trying to achieve
+- **Territory** — where they operate and why
+- **Leadership** — who leads and how that leadership holds
+- **Politics** — internal power dynamics; factions are not monoliths
+- **Internal conflicts** — dissent, fracture, and competing interests exist within every group
+
+Diplomacy should sometimes be possible. The player's first instinct should not always be violence.
+
+### Vampires
+
+Vampires are one of the world's major supernatural factions and should never feel like generic enemies. They range from ancient vampire lords (politically significant, planning in decades) to vampire nobles (society-embedded, may operate under other identities), newly turned individuals (may not have chosen their condition), feral vampires (lost to instinct), and secret covens (operating within cities). Campaign vampire presence varies widely — some campaigns barely feature them; others may center on stopping an expanding vampire threat. Full details: [`docs/world/WORLD_BIBLE.md`](world/WORLD_BIBLE.md)
+
+---
+
 ## Factions
 
 Four factions are tracked in `world_state["factions"]`:
@@ -495,9 +516,25 @@ When a faction becomes `hostile`, a `faction_hostile` event fires on the event b
 
 ## Exploration & World
 
-> **Full technical spec:** [`docs/systems/world_regions.md`](systems/world_regions.md)
+> **Full technical spec:** [`docs/systems/world_regions.md`](systems/world_regions.md)  
+> **Canonical regions, travel encounters & faction design:** [`docs/world/WORLD_BIBLE.md`](world/WORLD_BIBLE.md)
 
 The game uses a **two-layer exploration system**: a strategic continent map for travel between major locations, and handcrafted explorable regions for detailed gameplay within each destination.
+
+### Canonical Regions
+
+Six regions are confirmed canon. Each has a distinct identity and a relationship to The Corruption.
+
+| Region | Character | Corruption note |
+|---|---|---|
+| **The Frontier** | Untamed edge of civilization; frontier towns, military outposts, goblin/orc presence | First to show Corruption — weakest institutions fall first |
+| **The Great Forest** | Ancient forests, elven settlements, magical wildlife, hidden shrines | Portions become twisted as Corruption spreads |
+| **The Iron Peaks** | Massive mountain range; dwarven strongholds, cave systems, dragons | Wakes ancient buried things; Steven excels here |
+| **The Frozen Highlands** | Remote northern wilderness; ice caves, ancient fortresses, giant beasts | Corruption arrives late but hits hard |
+| **The Desert Kingdom** | Oasis cities, merchant caravans, ancient tombs, buried civilizations | Wakes what was buried under sand |
+| **The Capital Province** | Political center; noble houses, government, military, trade intrigue | Most responsive to player choices; Political Corruption most visible |
+
+Full region details: [`docs/world/WORLD_BIBLE.md`](world/WORLD_BIBLE.md)
 
 ### Layer 1 — Strategic Continent Map
 

@@ -34,6 +34,16 @@ Every companion must have all of the following:
 
 > No companion should ever feel interchangeable.
 
+### The Irreplaceability Test
+
+Every companion must be able to answer this question:
+
+> **"What makes this companion irreplaceable?"**
+
+Not "what role do they fill" — any class can fill a role. The question is: what does *this specific person* bring that no other character in the roster could? What would the party lose — mechanically, emotionally, narratively — if they were not there?
+
+If the answer is only a class or stat type, the companion is not finished.
+
 ---
 
 ## Core Wound Philosophy

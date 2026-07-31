@@ -208,7 +208,23 @@ Mutual respect — the kind that grows between two people who recognize the same
 Talos remains cautious around Ronan — not personally, but practically. He does not fear who Ronan is. He fears what Ronan's curse could do to someone nearby if control slips. His concern is protective of others, not hostile toward Ronan. Over time, as Ronan demonstrates control and intent, this caution can evolve into genuine mutual respect.
 
 ### Steven
-*(Relationship not yet defined — to be established when Steven's Hero Bible entry is written.)*
+Talos and Steven share something unusual: a form of communication that does not require words. Talos does not try to fill Steven's silence, does not treat it as a problem to solve, and does not speak louder or more slowly as if that would help. He simply adjusts — treating Steven's gestures and expressions as a complete language, because they are. For Steven, this is rarer than it should be.
+
+Whether this mutual ease deepens into something more — genuine understanding, a specific trust, a friendship built in the particular quiet they share — depends on the events of the campaign and the player's choices.
+
+---
+
+## Orphanages & Children
+
+Every town Talos visits — every single one — he finds the orphanage.
+
+He does not announce it. He does not explain it to the party. He simply goes. He greets the children at eye level — which requires the large, heavily armored elf to kneel. He tells them stories of grand adventures with enough detail to feel real and enough hope to feel possible. He has an inexhaustible supply. He always has time.
+
+The bead bracelet tells the history of this habit. Each bead was gifted to him by a child he met during his travels — given willingly, remembered specifically. He knows where each one came from. He does not speak about the bracelet unless someone asks directly, and even then he answers plainly, without sentiment: *"One from each."*
+
+This is the private Talos the public Talos protects. The intimidating exterior — the height, the scars, the full plate — is not armor against the world. It is armor for the people who need protecting. What it protects is someone who kneels to talk to children and wears their gifts on his wrist into every battle he fights.
+
+> The contrast between his appearance and this detail is the character. It should appear naturally and frequently in gameplay — never as a narrative set-piece, always as a thing he simply does.
 
 ---
 
@@ -220,12 +236,12 @@ The following personal details are confirmed canon and should appear naturally t
 |---|---|
 | **Loves wine** | A genuine pleasure he does not apologize for |
 | **Favorite food: roasted duck** | Specific; he will mention it unprompted |
-| **Always visits orphanages** | Every town; greets children; tells them stories of grand adventures |
+| **Always visits orphanages** | Every town, without exception; kneels to greet children; tells stories |
 | **Loves telling stories** | Especially to children; has an inexhaustible supply |
-| **Bead bracelet** | One bead from each child he has met on his travels; worn always |
+| **Bead bracelet** | One bead from each child he has met on his travels; worn always; knows where each came from |
 | **No racial prejudice** | Hard line; anyone who expresses it loses his respect immediately |
 
-These details should **contrast with his intimidating appearance**. The large, scarred, armored soldier who kneels down to talk to children at eye level — that contrast is character.
+These details should **contrast with his intimidating appearance**. The large, scarred, armored soldier who kneels down to talk to children at eye level — that contrast is the character.
 
 ---
 
