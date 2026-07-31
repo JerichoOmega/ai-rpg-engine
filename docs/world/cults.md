@@ -516,6 +516,42 @@ Most mainstream Ancestors' Path practitioners would identify this as a meaningfu
 - Is aware that some of what the ancestors are asking troubles him; has concluded that this discomfort reflects insufficient trust, not evidence that something is wrong with the communications
 - Physically: spare, formal, slow to speak; absolute when he does; his certainty has the quality of stone — not aggressive, simply unmoved
 
+---
+
+#### Mira Dur — Who She Was, and What the False Voice Says She Wants
+
+> **Writer / AI Director reference.** Mira is the emotional center of the Unbroken Line's origin. Scenes involving Halvan Dur should be built from these specifics, not from generalized grief.
+
+**Who she was in life:**
+
+- **A mine surveyor — and a famously stubborn one.** Mira Dur assessed shafts and galleries for the Dur clan workings. Her professional signature was refusing to certify anything she had not walked herself: *"I don't sign for stone I haven't touched."* She died at thirty-one, in the collapse of a gallery she was surveying precisely because she would not take the previous surveyor's report on faith. The collapse was not her error — the fault lay deeper than any survey of the period could have found. Her father knows this. It has never helped.
+- **She teased the tradition she loved him for.** Mira was warm, blunt, and irreverent about her father's vocation in the way only a believer's child can be. Her name for him — the one no one else used, the one the false voice knew — was **"Old Ears."** Her standing joke was that the dead had all the time in the world and the living didn't: *"The living first, Old Ears. The dead will keep."* She attended every Remembering and needled him through every one of them.
+- **She wanted daylight.** After a decade underground, Mira told her father — more than once, and once formally, in the way the tradition treats such requests as binding — that when her time came she wanted her name-stone set on the surface, in the wind, not in the clan crypt galleries. *"I've spent enough of my life under stone."* Halvan honored it. Her name-stone stands above the Varn-Dur workings, on open ground. He cut it himself.
+
+**What the false communication says she is asking for:**
+
+The voice that speaks as Mira has, over the past year, converged on a single escalating request — the demand driving Halvan Dur's current push to expand the Line and the reason its resources are being gathered:
+
+> *Reopen the collapsed gallery where she died. Consecrate it as the Line's Deep Hall — a sealed sanctuary at the place "where the stone remembers her" — and gather the Line's practitioners there, because the ancestors can be reached most clearly where the dead were last among the living.*
+
+The request is framed as reunion: she is not asking her father for a shrine, she is asking him to come to where she is, and to bring the others, so that what the Line has restored can be completed. Every stage of the Line's recent escalation — the expansion into new communities, the recruitment of practitioners, the accumulation of quiet influence over clan resources — is, in Halvan Dur's understanding, in service of this. He believes he is building the place where he will finally, fully, reach her.
+
+**The discrepancy — what the false voice has gotten wrong:**
+
+The immediate, usable discrepancies are small — texture, not doctrine, exactly as the Mira Path requires:
+
+- **The Kettle.** The voice calls the mine *the Varn-Dur working* — its charter name, the name in clan records and in the grief spoken aloud at Deep Vigils. Mira never called it that in her life. She and her crew called it *the Kettle*, for how it held heat. Her father may be the only living person who would notice — and he has not noticed, because noticing would require listening the way a Keeper listens instead of the way a father does.
+- **The marginalia voice.** Mira's survey ledgers are full of her actual register — dry jokes, complaints about cold food, blunt shorthand. The voice speaks in her rhythms but in the Line's vocabulary: *authenticity, drift, the old ways of the line.* Mira, in thirty-one years, never once talked like that. Set a ledger page beside a transcript of a session and the gap is visible.
+
+Behind the small tells stands the large one — corroborating pattern evidence rather than the opening move: **the real Mira wanted out of the deep.** She bound her own father, formally, to daylight — and the voice wearing her asks him to build her memory a sealed hall under the mountain and bring the living down into it. This is not an information failure on the god's part. The god observes the world directly; it saw the request made and honored, and it knows the name-stone stands in the wind. It suppresses the daylight promise deliberately — acknowledging it would undermine the one demand that serves its purpose — and it is confident in the suppression, because it has watched Halvan Dur for seven years and knows he cannot bear to weigh his daughter's last wish against the hope of reaching her again. The Corruption does not need to outargue the promise. It only needs the grief to outweigh it. Presented alone, the Deep Hall contradiction can be explained away ("death changes what the dead need"); presented *after* the small tells have opened a crack, it is the weight that widens it.
+
+**What a player who knows her can use — and what they cannot:**
+
+- **Cannot be used:** Argument. Reciting these facts to Halvan Dur is worthless — he knows them all, and any framing of them as *evidence against the voice* will be received as an attack on his daughter and answered by the false ancestors with an explanation, as always. The name-stone itself, presented as proof ("would she ask for a Deep Hall?"), fails the same way: Brek Tannord's framework has already prepared the answer that death changes what the dead need.
+- **Can be used:** Something genuinely hers, given without argument, per the Mira Path — her survey ledgers with their marginal jokes in her hand; the testimony of a surviving crew member who can say what she called the mine and what she said about the deep; the formal daylight request itself, if the player learns of it from clan record or from whoever witnessed it. Lead with the small, textural things (the Kettle, the ledgers); let the daylight promise arrive as the accumulating weight, not the opening argument. Delivered privately, without asking him to conclude anything, these carry the specific texture of the real — and the one thing thirty years of Keeper's discipline still knows how to recognize is texture. The player leaves. What he does with the dissonance is his.
+
+---
+
 **Keeper Brek Tannord** (leadership — doctrine and strategy)
 
 - Fifty-one; former practicing advocate in clan legal proceedings before becoming a full-time practitioner; knows how to construct an argument and how to dismantle one
@@ -759,7 +795,7 @@ The communities at Exposure Stage Three or higher experience disruption. The pla
 
 **Resolution Two — The Mira Path**
 
-*What it requires:* Evidence of what Mira Dur actually was — something specific to her that the false voice has gotten wrong; completing Task #112 (which defines what the false voice says Mira is asking for and the discrepancy that makes it visible). Access to a source that knew her closely before her death in the mining collapse seven years prior.
+*What it requires:* Evidence of what Mira Dur actually was — something specific to her that the false voice has gotten wrong; the false voice's demand and its discrepancy are fully defined in the **Mira Dur** section of the Leadership profiles above (the Deep Hall demand vs. her binding daylight request). Access to a source that knew her closely before her death in the mining collapse seven years prior.
 
 This resolution does not go through the clan council and does not confront Halvan Dur in public.
 
@@ -935,6 +971,7 @@ Rescuing rank-and-file members from cult influence is a legitimate quest outcome
 | July 2026 | Created — three named cults defined: the Ashen Tribunal (Solari Covenant origin), the Severance (Old Ways origin), the Threshold Circle (Veiled Order origin). |
 | July 2026 | Added The Unbroken Line — Ancestors' Path cult; Iron Peaks territory; false-ancestor communications mimicking the beloved dead; Halvan Dur (leadership), Brek Tannord (doctrine), Solla Keth (pastoral/most recoverable); cult comparison table expanded to four entries; three Unbroken Line quest hooks added. |
 | July 2026 | Expanded The Unbroken Line — full faction depth added per design brief: miracle mechanic (false ancestors provide genuine benefits first), hidden costs, five-stage radicalization timeline, symbols and rituals, recruitment methods, long-term goals, key NPC archetypes, AI DM integration notes with community Exposure tracking table and player influence mechanics. |
+| 2026-07-31 | Authored Mira Dur — who she was in life (surveyor who signed only for stone she touched; "Old Ears"; the binding daylight request), the false voice's Deep Hall demand driving Halvan Dur's escalation, the discrepancy that anchors the Mira Path, the Kettle verbal tell, and player use/misuse notes; Mira Path requirement text updated to point to the new section. |
 | 2026-07-31 | Added named questline for The Unbroken Line — *The Voice They Left Behind*: three-beat structure (The Keeper Who Stopped Listening; What the Dead Know; The Line That Breaks); three resolution paths (Evidence Path, Mira Path, Solla Path); Solla Keth recovery arc and Halvan Dur problem integrated; companion reactions (Talos, Ragash); writer's notes. |
 | 2026-07-31 | Added The Keeper's Discernment to The Unbroken Line — canonical seven markers of genuine ancestral contact and seven corresponding false-communication tells; the Line of Sight epistemic boundary (the dead observe through the line, not over the world) reconciling the markers with Ancestors' Path theology of ongoing conversation, advice, and observation; surface vs. structural marker distinction explaining why "the markers are becoming unreliable"; guidance for using the Discernment with Solla Keth, Halvan Dur, and ordinary Line members. |
 | 2026-07-31 | Added named questline for The Threshold Circle — *The Acceptable Risk*: entry via Pell Ashwick disappearance; dual branches (Transit House / Tessaly Vorn documentary path; Deep Reading Site / Soles confrontation path); three resolution paths; four named readable documents (Soles's Contact Log, Tessaly's Analysis Notes, Drassic Seal Record, Pell's Field Journal); companion reactions; AI DM integration notes. Full questline: `docs/quests/threshold_circle_questline.md`. |
