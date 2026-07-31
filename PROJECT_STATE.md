@@ -50,7 +50,7 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 - All 55 Python files pass syntax checks.
 - All 31 engine modules import without errors.
 - 12 known issues remain (see [`docs/known_issues.md`](docs/known_issues.md)); none are currently crashers.
-- The `player.py` / `world_state["player"]` dual-state was eliminated this session — `world_state` is now the sole authority.
+- The `player.py` / `world_state["player"]` desync was fixed this session — combat now immediately echoes HP mutations to both representations; `world_state["player"]` is the persistence authority; see 2026-07-31 handoff for synchronization boundary details.
 
 ---
 
@@ -137,7 +137,7 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 | ID | Severity | Summary |
 |---|---|---|
 | BUG-001 | 🔴 | `validate_world_state()` fails on new game — `npcs` key never initialized |
-| BUG-002 | ✅ RESOLVED | Player stat divergence — eliminated 2026-07-31; `world_state` is now sole authority |
+| BUG-002 | ✅ RESOLVED | Player stat desync — fixed 2026-07-31; combat now immediately echoes HP mutations to `world_state["player"]["hp"]`; `world_state` is persistence authority; `Player` object drives runtime with immediate mirroring |
 | BUG-003 | 🟠 | `rebels` faction in state but absent from manager |
 | BUG-004 | 🟡 | Dual region discovery state (two separate tracking locations) |
 | BUG-005 | 🟡 | Quest `type` field absent — faction bonus never fires |
@@ -152,7 +152,7 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 | Item | Impact |
 |---|---|
 | Legacy modules (`factions.py`, `regions.py`, `loot.py`, `memory.py`) coexist with manager equivalents | Confusing; dead code risk; import ambiguity |
-| ~~`player.py` singleton alongside `world_state["player"]`~~ | ✅ Resolved 2026-07-31 — `world_state` is sole authority |
+| ~~`player.py` / `world_state["player"]` desync risk~~ | ✅ Resolved 2026-07-31 — combat immediately echoes HP mutations; `sync_world_state_from_player()` called before every save; synchronization boundaries documented in 2026-07-31 handoff |
 | No formal test suite | Regressions caught manually only |
 | `world_social_reaction()` is dead code in `faction_manager.py` | Noise |
 | `hub.py` and `world_map.py` unintegrated | Modules with no callers |

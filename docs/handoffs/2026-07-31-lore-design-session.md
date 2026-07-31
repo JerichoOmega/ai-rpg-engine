@@ -34,7 +34,7 @@
 
 ### Engine Stabilization (Tasks #76 and related)
 
-- [x] Eliminated dual player representation — `world_state` is now sole authority; `Player` object mirrors rather than leads
+- [x] Fixed player stat desync — `world_state["player"]` is now the persistence authority; combat immediately echoes HP mutations to both representations; `sync_world_state_from_player()` called before every save
 - [x] Mirrored combat HP mutations to `world_state`; full world reset on new game
 - [x] Fixed level-up stats lost at save (syncing Player after `check_level_up`)
 - [x] Fixed skill/equip mirror + `magic_power` load sync
@@ -153,7 +153,7 @@ None.
 
 ## Architecture Changes
 
-**Engine:** `world_state` is now the sole authority for all player stats. The `Player` object is a mirror — it reads from and writes to `world_state`, never the reverse. This was the session's most significant architectural change. See engine commits referencing Task #76.
+**Engine:** `world_state["player"]` is now the canonical **persistence authority** — it is the save/load representation for all player state. The `Player` object still drives runtime combat: `player.hp` is mutated directly during combat, then immediately echoed to `world_state["player"]["hp"]` after each mutation. `sync_world_state_from_player()` copies all player fields into `world_state["player"]` before every save; the reverse function re-populates the `Player` object on load. This session's work ensured HP mutations are always echoed immediately (fixing the desync) and that new-game reset correctly initializes both representations. The synchronization boundaries are: **combat** (mutates `player` object, immediately mirrors HP to `world_state`), **skills/equipment** (use both representations), **save** (calls `sync_world_state_from_player()` first), **load** (populates `Player` from `world_state`). See engine commits referencing Task #76.
 
 **Lore:** `docs/lore/civilization/` folder created as a new canonical location for First Empire content. Future civilization-scale lore documents should be placed here.
 
@@ -184,7 +184,7 @@ N/A
 
 | Bug | Severity | Resolution |
 |---|---|---|
-| Dual player representation — `player.py` and `world_state["player"]` diverging after combat | 🔴 | Eliminated; `world_state` is sole authority; `Player` object mirrors |
+| Player stat desync — `player.py` and `world_state["player"]` diverging after combat | 🔴 | Fixed: combat now immediately echoes HP mutations to `world_state["player"]["hp"]`; `sync_world_state_from_player()` called before every save; `world_state` is the persistence authority; `Player` object drives runtime combat with immediate mirroring |
 | Level-up stat changes lost at save | 🔴 | Fixed: Player synced after `check_level_up` |
 | `progression_state` leaking XP/level/tier across new games | 🟠 | Reset on new game |
 | Equipment/status effects/player skills not reset on new game | 🟠 | Full reset on new game |
@@ -214,7 +214,7 @@ None introduced this session.
 
 **First Empire collapse was not a political failure** — The First Council's institutions remained sound. The Empire fell because the natural laws of reality were unraveling during the Long Decline. Writers must not portray the collapse as resulting from political corruption or governance failure.
 
-**world_state is the sole player-stat authority** — The `Player` object mirrors `world_state["player"]`, never the reverse. No new code should read player stats from the `Player` singleton without understanding this.
+**world_state is the persistence authority for player state** — `world_state["player"]` is the canonical save/load representation. The `Player` object still drives runtime combat: `player.hp` is mutated directly and immediately echoed to `world_state["player"]["hp"]` after each mutation. Synchronization boundaries: combat uses `player` object (with immediate HP mirroring), skills/equipment use both, save calls `sync_world_state_from_player()` first, load populates `Player` from `world_state`. Do not add code that reads or writes player stats without understanding these boundaries.
 
 **Soleth Accounting is the Sealed Archive's most significant revelation-arc document** — The Archivist's personal witness account of the Sundering's aftermath. Its existence has not been confirmed or denied to any Director (including Maret) and the Weaponizers do not know it exists. This must remain secret until a player earns access through both Soleth reputation and Maret trust.
 
@@ -282,7 +282,7 @@ None introduced this session.
 
 ## Warnings
 
-> ⚠️ **`world_state` is now the sole player-stat authority.** The `Player` object is a mirror. Any new code that reads player HP, stats, or inventory from `player.py` directly rather than `world_state["player"]` is incorrect. Read the engine stabilization commits before touching player stat code.
+> ⚠️ **Player-state has two synchronized representations.** `world_state["player"]` is the persistence authority (save/load). The `Player` object drives runtime combat and is immediately echoed to `world_state["player"]["hp"]` after each HP mutation. `sync_world_state_from_player()` must be called before every save. Do not add new code that reads or writes player stats without first reading `player.py` and understanding the synchronization boundaries (combat, skills/equipment, save/load).
 
 > ⚠️ **The Soleth Accounting must remain secret.** It is the Sealed Archive's most significant revelation-arc document. Maret does not know if it is real. The Weaponizers do not know it exists. Do not reference it in any accessible content (Open or Restricted Collection, NPC dialogue) until a player has earned access through both Soleth reputation and Maret trust.
 
