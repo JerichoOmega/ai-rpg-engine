@@ -1,0 +1,516 @@
+Preparation happens in civilization.
+
+Adventure happens in the wilderness.
+
+The player should rarely feel forced into unnecessary menu management or repetitive maintenance systems.
+
+⸻
+
+Safe Areas
+
+Cities, towns, inns, guild halls, forts, and other secure locations act as preparation hubs.
+
+Players can:
+
+* Shop
+* Upgrade equipment
+* Accept quests
+* Change party members
+* Talk with NPCs
+* Advance companion storylines
+* Learn recipes
+* Learn alchemy formulas
+
+These locations represent civilization.
+
+⸻
+
+Crafting Philosophy
+
+Crafting is intentionally lightweight.
+
+Players may craft outside of combat, regardless of location, provided they possess the required ingredients.
+
+Crafting is unavailable only when:
+
+* actively in combat
+* being pursued during scripted events
+* participating in time-sensitive story sequences
+
+There is no requirement to locate crafting stations or camps.
+
+The assumption is that the party takes a few moments to prepare items.
+
+⸻
+
+Cooking
+
+Cooking serves as an optional support mechanic.
+
+Food is not required for survival.
+
+There are:
+
+* no hunger systems
+* no starvation mechanics
+* no mandatory meals
+
+Food serves two primary purposes:
+
+* moderate healing outside combat
+* temporary stat bonuses
+
+Food should never replace potions.
+
+Instead:
+
+Potions = emergency recovery
+
+Food = preparation and sustained adventuring
+
+Regional recipes should reinforce worldbuilding and local culture.
+
+⸻
+
+Alchemy
+
+Alchemy follows the same philosophy.
+
+Players may craft potions whenever they are not in combat.
+
+Requirements:
+
+* learned formula
+* required ingredients
+
+Potion crafting should be immediate and intuitive.
+
+No crafting stations are required.
+
+⸻
+
+Companion Passive Skills
+
+Companions contribute outside combat.
+
+Examples include:
+
+Torren
+
+* improved smithing efficiency
+
+Healer
+
+* stronger crafted potions
+
+Ranger
+
+* increased herb gathering
+
+Eleanor
+
+* preserves rare magical reagents
+
+Future companions should provide exploration and crafting benefits that reflect their personalities and professions.
+
+These bonuses should be meaningful without forcing specific party compositions.
+
+⸻
+
+Party Structure
+
+Canonical party system:
+
+* six permanent companions
+* four active party members
+
+Companions may be swapped in civilization and other designated safe locations.
+
+Inactive companions remain part of the broader expedition narratively.
+
+⸻
+
+Journey Conversations
+
+There is no traditional camp system similar to Baldur’s Gate 3 or Solasta.
+
+Instead, the game uses Journey Conversations.
+
+These occur naturally while:
+
+* traveling
+* exploring
+* leaving towns
+* entering new regions
+* completing quests
+
+Companions converse while the player continues moving.
+
+Journey Conversations exist to:
+
+* build relationships
+* reveal character history
+* unlock personal quests
+* create companion banter
+* develop romances
+
+Travel itself becomes the primary storytelling space.
+
+⸻
+
+Companion Approval
+
+Approval is based upon personal principles rather than morality.
+
+Each companion evaluates decisions according to their own beliefs.
+
+Approval unlocks:
+
+* additional conversations
+* deeper relationships
+* companion quests
+* optional scenes
+* romance (where applicable)
+
+Companions generally do not abandon the party unless the player repeatedly violates their core values through significant actions.
+
+⸻
+
+Quest Philosophy
+
+Every quest should matter.
+
+Avoid generic filler objectives.
+
+Before approving a quest, it should ideally satisfy most of the following:
+
+* teaches something about the world
+* develops a character
+* presents an interesting decision
+* changes the player’s understanding
+* leaves a lasting consequence
+
+Players should remember quests because of their stories rather than their rewards.
+
+Quest design should draw inspiration from The Witcher 3, emphasizing memorable narratives and meaningful consequences over repetitive objectives.
+
+⸻
+
+World State System
+
+One of the game’s core mechanics.
+
+This is not a morality system.
+
+It tracks the overall condition of civilization as the player progresses.
+
+Helping people…
+
+Protecting knowledge…
+
+Resolving conflicts…
+
+Preserving communities…
+
+All contribute toward slowing the Long Decline.
+
+The corruption cannot be permanently stopped.
+
+However, the player can strengthen civilization’s ability to endure it.
+
+This buys the world time.
+
+Helping the world matters.
+
+Ignoring suffering allows the decline to advance more quickly.
+
+⸻
+
+World State Visibility
+
+World State is not displayed constantly.
+
+Instead, it exists within the Journal.
+
+Players must intentionally view it.
+
+Avoid visible morality meters.
+
+Avoid percentages.
+
+Avoid alignment systems.
+
+Instead use descriptive assessments such as:
+
+* Flourishing
+* Stable
+* Holding
+* Strained
+* Declining
+* Fading
+* On the Brink
+
+World State should feel observational rather than mechanical.
+
+⸻
+
+Living Chronicle
+
+The Journal becomes a living archive inspired by the Great Library.
+
+It expands naturally as the player discovers the world.
+
+Major sections include:
+
+World State
+
+Current condition of civilization.
+
+Regional observations.
+
+Scholar assessments.
+
+Communities helped.
+
+Knowledge preserved.
+
+Major historical developments.
+
+⸻
+
+Bestiary
+
+Creature entries expand over time.
+
+Initially:
+
+Unknown creature.
+
+Later:
+
+Habitat.
+
+Behavior.
+
+Weaknesses.
+
+Lore.
+
+Historical notes.
+
+⸻
+
+Flora & Fauna
+
+Plants.
+
+Animals.
+
+Crafting materials.
+
+Medicinal properties.
+
+Regional distribution.
+
+⸻
+
+People
+
+Important NPCs.
+
+Relationships.
+
+Biographical notes.
+
+Quest progression.
+
+Entries update throughout the story.
+
+⸻
+
+Locations
+
+Cities.
+
+Ruins.
+
+Temples.
+
+Dungeons.
+
+Landmarks.
+
+Historical discoveries gradually expand each entry.
+
+⸻
+
+History
+
+The Four Ages.
+
+The First Empire.
+
+The Great Library.
+
+The Divine Chorus.
+
+The Forgotten Eighth.
+
+Historical discoveries should expand existing entries rather than overwrite previous understanding.
+
+⸻
+
+Recipes
+
+Cooking recipes.
+
+Regional cuisine.
+
+Unlocked naturally through exploration, merchants, and quests.
+
+⸻
+
+Alchemy
+
+Potion formulas.
+
+Reagent information.
+
+Crafting notes.
+
+⸻
+
+Character Menu
+
+Separate from the Journal.
+
+Contains:
+
+* attributes
+* equipment
+* resistances
+* weapon proficiencies
+* active effects
+* character progression
+
+This menu answers:
+
+“Who am I?”
+
+⸻
+
+Party Menu
+
+Contains:
+
+* all companions
+* active party selection
+* biographies
+* trust levels
+* personal quest progression
+
+This menu answers:
+
+“Who is traveling with me?”
+
+⸻
+
+Inventory
+
+Organized into:
+
+* Weapons
+* Armor
+* Accessories
+* Consumables
+* Crafting Materials
+* Quest Items
+* Valuables
+
+Inventory remains clean and intuitive.
+
+⸻
+
+Statistics
+
+Statistics are intentionally separated from World State.
+
+Examples include:
+
+* enemies defeated
+* quests completed
+* distance traveled
+* gold earned
+* deaths
+* potions crafted
+* meals cooked
+* treasures discovered
+* hours played
+
+Statistics answer:
+
+“What have I accomplished?”
+
+World State answers:
+
+“What has happened to the world?”
+
+These systems should never overlap.
+
+⸻
+
+UI Philosophy
+
+Adopt a two-layer menu system.
+
+Quick Access Wheel
+
+Accessible during gameplay.
+
+Contains:
+
+* Inventory
+* Journal
+* Map
+* Quests
+* Party
+* Crafting
+* Return
+
+These are the most frequently accessed gameplay menus.
+
+⸻
+
+Pause Menu
+
+Contains:
+
+* Character
+* Statistics
+* Settings
+* Save
+* Load
+* Accessibility
+* Return to Title
+
+This menu manages the player rather than the world.
+
+⸻
+
+Design Philosophy
+
+Every system should reinforce the central themes of the game.
+
+Knowledge grows.
+
+Relationships deepen.
+
+Civilization endures.
+
+Small acts matter.
+
+The player is not the Chosen One.
+
+The player changes history through countless ordinary decisions that collectively leave the world stronger than they found it.
+
+The goal is for every gameplay system—from crafting and companion conversations to the Journal and World State—to support that philosophy through mechanics, not just dialogue or lore
