@@ -51,7 +51,9 @@
 41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*
 42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework: Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration)*
 43. [Magic Bible](../elyndor/magic/MAGIC_BIBLE.md) *(separate file — Primordial Magic, Divine Chorus, magic limitations, Eleanor's Harmonic Soul)*
-44. [Journey System](systems/journey_system.md) *(separate file — travel as storytelling, camp philosophy, companion relationships, interaction scheduling, camp evolution)*
+44. [Journey System](systems/journey_system.md) *(separate file — Journey Conversations, travel as storytelling, companion relationships, interaction scheduling, relationship evolution)*
+57. [Journal System — Living Chronicle](systems/journal_system.md) *(separate file — World State, Bestiary, Flora & Fauna, People, Locations, History, Recipes, Alchemy)*
+58. [Crafting, Cooking & Alchemy](systems/crafting.md) *(separate file — crafting philosophy, cooking as optional support, alchemy, companion passive crafting skills, safe area activities, canonical inventory categories)*
 45. [The Forgotten Eighth](../elyndor/history/the_eighth.md) *(separate file — the Ancient God's true identity, the Great Forgetting, the Imprisonment as tragedy, Corruption as amplified virtue)*
 46. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 47. [Lore Bible — README](lore/README.md) *(separate file — Lore Bible index and usage guide; read this first)*
@@ -219,6 +221,40 @@ The player starts from a CLI menu offering a new game or load. Once in the game,
 
 ## Core Gameplay Loop
 
+### Canonical Design Loop
+
+```
+CIVILIZATION
+    ↓
+PREPARE
+(Shop · Upgrade · Accept Quests · Swap Companions · Learn Recipes/Formulas)
+    ↓
+TRAVEL
+(Journey Conversations · Companion relationships deepen · Encounters possible)
+    ↓
+EXPLORE
+(Investigation · Discovery · NPC interaction)
+    ↓
+COMBAT
+(Tactical encounters · Boss fights · Corruption-influenced threats)
+    ↓
+DISCOVERY
+(Lore · Story flags · World State changes · Bestiary/Journal entries)
+    ↓
+MEANINGFUL CHOICES
+(Faction consequences · Community impact · Long Decline affected)
+    ↓
+RETURN TO CIVILIZATION
+    ↓
+(repeat)
+```
+
+**Design principle:** Preparation happens in civilization. Adventure happens in the wilderness. The player should rarely feel forced into unnecessary menu management or repetitive maintenance systems. Every loop should leave the world measurably different.
+
+### Terminal Prototype Loop
+
+The current Python implementation uses a simplified loop:
+
 ```
 MAIN MENU
     │
@@ -292,7 +328,11 @@ Shield-bearing heroes may spend their **Support Action** to enter Shield Stance 
 
 ### Party
 
-Four active heroes in combat. Party composition is locked during combat; swapping is available freely outside combat.
+**Canonical party structure:** Six permanent companions available to the player; four active in the party at any time. Inactive companions remain part of the expedition narratively — they are present in the world, not absent from it.
+
+Party composition changes are available in **civilization and other designated safe locations** (cities, towns, inns, guild halls, forts). Composition is locked during combat.
+
+> Full companion roster: [`docs/HERO_BIBLE.md`](HERO_BIBLE.md) and individual hero files in [`docs/heroes/`](heroes/)
 
 ### Current Terminal Prototype
 
@@ -882,19 +922,47 @@ Managed by `companion_manager.py`. A `COMPANIONS` dict defines recruitable compa
 
 ⚠️ The terminal prototype infrastructure exists. Full ability implementation, recruitment conditions, and Hero Bible integration are not yet implemented.
 
-### Journey System — How Companion Relationships Develop
+### Journey Conversations — How Companion Relationships Develop
 
-Companion relationships are not built at a hub between missions. They develop **during travel** — on the road, at camp, through shared hardship and shared rest.
+There is no traditional camp system similar to Baldur's Gate 3 or Solasta. Instead, the game uses **Journey Conversations**.
+
+Journey Conversations occur naturally while:
+- Traveling between destinations
+- Exploring wilderness and ruins
+- Leaving towns
+- Entering new regions
+- Completing quests
+
+Companions converse while the player continues moving. **Travel itself becomes the primary storytelling space.** Relationships are not built at a hub between missions — they develop on the road, through shared hardship and shared rest.
+
+Journey Conversations exist to:
+- Build companion relationships
+- Reveal character history
+- Unlock personal quests
+- Create companion banter
+- Develop romances (where applicable)
 
 The Journey System governs:
-- How travel segments distribute companion interactions across camps
 - An invisible interaction scheduler that prevents conversation stacking and maintains emotional pacing
-- Six camp event types: Companion Conversation, Group Conversation, Player Activity, Story Event, World Event, Quiet Camp
-- A full companion relationship network (every pair, not only player↔companion)
+- Conversation priority tiers: Main Story → Companion Quest → Significant Emotional → Character Development → Casual/Humor → Ambient
+- A full companion relationship network (every companion pair, not only player↔companion)
 - Corruption resistance as the primary mechanical reward for relationship depth
 - Companion interventions during critical Corruption moments — available only when the relationship has been earned
 - Dynamic Dialogue Memory — past interactions are referenced in future dialogue
-- Camp evolution from strangers (early game) through trust (mid game) to family (late game)
+- Relationship evolution from strangers (early game) through trust (mid game) to family (late game)
+
+### Companion Approval
+
+Approval is based on **personal principles rather than morality.** Each companion evaluates the player's decisions according to their own beliefs — not a shared moral framework.
+
+Approval unlocks:
+- Additional conversations
+- Deeper relationships
+- Companion quests
+- Optional scenes
+- Romance (where applicable)
+
+Companions generally do not abandon the party unless the player repeatedly violates their core values through significant actions. Disapproval is expressed through conversation and relationship distance, not through mechanical penalties or departure.
 
 Full system: [`docs/systems/journey_system.md`](systems/journey_system.md)
 
@@ -902,7 +970,51 @@ Full system: [`docs/systems/journey_system.md`](systems/journey_system.md)
 
 ## User Interface Philosophy
 
-The game is **entirely text-based** (terminal). There is no graphical UI.
+### Canonical UI Design — Two-Layer Menu System
+
+The target UI uses a **two-layer menu system** designed around how often each function is needed during play.
+
+#### Quick Access Wheel
+
+Accessible during gameplay without entering a pause state. Contains the seven most frequently needed functions:
+
+| Option | Purpose |
+|---|---|
+| **Inventory** | View and manage items |
+| **Journal** | Living Chronicle — World State, Bestiary, Locations, History, Recipes, Alchemy |
+| **Map** | World and regional maps |
+| **Quests** | Active and completed quests |
+| **Party** | Companion roster, trust levels, active selection |
+| **Crafting** | Cooking and Alchemy |
+| **Return** | Close the wheel |
+
+#### Pause Menu
+
+Manages the player rather than the world. Accessed separately from the Quick Access Wheel.
+
+| Option | Purpose |
+|---|---|
+| **Character** | Attributes, equipment, resistances, weapon proficiencies, active effects, progression |
+| **Statistics** | Enemies defeated, quests completed, distance traveled, gold earned, deaths, potions crafted, etc. |
+| **Settings** | Game options |
+| **Save** | Save game |
+| **Load** | Load a previous save |
+| **Accessibility** | Accessibility options |
+| **Return to Title** | Exit to main menu |
+
+#### Design Principle
+
+> Every menu answers a specific question. The Quick Access Wheel answers questions about the world. The Pause Menu answers questions about the player and the game session.
+
+The Statistics screen and the World State (Journal) are **explicitly separated**: Statistics track what the player has done; World State tracks what happened to the world as a result. These systems should never overlap.
+
+Full Journal system: [`docs/systems/journal_system.md`](systems/journal_system.md)
+
+---
+
+### Current Terminal Prototype UI
+
+The current Python implementation is **entirely text-based** (terminal):
 
 - All output is `print()` statements to stdout.
 - All input is `input()` prompts.
@@ -910,7 +1022,7 @@ The game is **entirely text-based** (terminal). There is no graphical UI.
 - Status information is shown on demand (player stats, regions, story, world events).
 - A separate Flask browser application (`app.py`) exists in the repository but is not part of the terminal game's UX.
 
-⚠️ **NOT YET DEFINED** — No formal UI style guide exists. Color, formatting conventions (beyond `===` banners), or screen layout standards have not been specified.
+The canonical two-layer UI design above is the **target for the 3D game**. The terminal prototype predates it.
 
 ---
 
@@ -1048,6 +1160,6 @@ These are **possible** future directions, not confirmed designs:
 - **Lore and World-Building** — The faction names and world flags (civil_war, dragon_alive, etc.) are named placeholders ready for lore expansion. A full world history, NPC backstories, and location lore can be layered in without changing the data structure. World-building should expand from the single playable continent outward.
 - **3D Engine Implementation** — The current terminal prototype's systems (combat, quests, factions, economy, AI Director) translate directly to the 3D target. The game logic layer does not depend on the rendering layer.
 - **Real LLM Integration** — Swapping `llm_bridge.py` mock implementations for real API calls (OpenAI, Anthropic, local model) requires only changes inside that file.
-- **Crafting System** — The economy and inventory infrastructure supports crafting but no crafting system is currently implemented.
+- **Crafting System** — Crafting, Cooking, and Alchemy are now defined canonical systems. See [`docs/systems/crafting.md`](systems/crafting.md). Implementation in the terminal prototype is pending.
 - **Campaign Mode** — `campaign_manager.py` tracks act progression. A scripted multi-act campaign can be built on top of this.
 - **Procedural World Generation** — The region and settlement systems support dynamic creation; a procedural generator could be added.

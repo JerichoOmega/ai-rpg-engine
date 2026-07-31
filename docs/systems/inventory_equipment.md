@@ -6,6 +6,28 @@
 
 ---
 
+## Canonical Inventory Categories
+
+> **Canon Status:** CONFIRMED — 2026-07-31.
+
+The player inventory is organized into **seven categories**:
+
+| Category | Contents |
+|---|---|
+| **Weapons** | All weapon types; equippable items |
+| **Armor** | Body armor, helmets, shields |
+| **Accessories** | Rings, amulets, utility wearables |
+| **Consumables** | Potions, prepared food, single-use items |
+| **Crafting Materials** | Raw ingredients — herbs, ores, reagents, gathered materials |
+| **Quest Items** | Items tied to active or completed quests; cannot be sold or discarded |
+| **Valuables** | Coins, gems, artwork, tradeable goods |
+
+Inventory should remain **clean and intuitive.** Category organization reduces search time and avoids friction. The current terminal prototype uses a flat item list — the category structure is the design target for the 3D game.
+
+For crafting material use, see [`docs/systems/crafting.md`](crafting.md).
+
+---
+
 ## Overview
 
 Items exist in the player's inventory as name strings. Equipment is a separate slot system that applies stat modifiers. Loot is generated post-combat. The shop provides a buy/sell interface with inflation-adjusted pricing.
@@ -235,3 +257,4 @@ buy_item("Health Potion")
 | Date | Change |
 |---|---|
 | July 2026 | Initial documentation; inventory import anti-pattern documented |
+| 2026-07-31 | Canonical inventory categories added (seven categories: Weapons, Armor, Accessories, Consumables, Crafting Materials, Quest Items, Valuables) |

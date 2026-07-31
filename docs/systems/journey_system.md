@@ -6,6 +6,21 @@
 
 ---
 
+## Journey Conversations — Canonical Design
+
+> **Design update — 2026-07-31:** The primary storytelling mechanism during travel is **Journey Conversations**, not a traditional camp system. There is no mandatory camp hub similar to Baldur's Gate 3 or Solasta. Companions converse while the player continues moving — leaving towns, entering new regions, traveling between destinations, completing quests. The camp philosophy below documents the rest and recovery layer that coexists with Journey Conversations; it is not the primary relationship-building mechanism.
+
+Journey Conversations occur naturally during:
+- Travel between destinations
+- Exploration of wilderness and ruins
+- Departing towns and settlements
+- Arriving in new regions
+- Quest completion moments
+
+**Travel itself is the primary storytelling space.** The scheduler, priority tiers, relationship network, and companion interventions documented below apply to Journey Conversations throughout the journey — not only at camp stops.
+
+---
+
 ## Design Philosophy
 
 Project Dungeon Keeper is not a game where companions simply accompany the player.
@@ -441,3 +456,4 @@ The goal is for players to finish Project Dungeon Keeper feeling that they did n
 | Date | Change |
 |---|---|
 | July 2026 | Created — Journey System, Camp Philosophy, Interaction Scheduling, Conversation Queue, Relationship Network, Corruption Resistance, Companion Interventions, Dialogue Memory, Camp Evolution, Gameplay Rewards Philosophy |
+| 2026-07-31 | Design update — Journey Conversations established as the canonical primary storytelling mechanism; camp system reframed as the rest/recovery layer; conversations now occur during travel, not only at camp stops; companion approval system (principle-based, not morality-based) documented |

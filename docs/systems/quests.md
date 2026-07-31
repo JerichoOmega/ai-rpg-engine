@@ -6,6 +6,28 @@
 
 ---
 
+## Quest Design Philosophy
+
+> **Canon Status:** CONFIRMED — 2026-07-31.
+
+Every quest should matter. Avoid generic filler objectives.
+
+Before approving a quest, it should ideally satisfy most of the following:
+
+| Criterion | Question |
+|---|---|
+| **Teaches** | Does it teach the player something about the world? |
+| **Develops** | Does it develop a character — companion, NPC, or the player's understanding of themselves? |
+| **Decides** | Does it present an interesting decision with no obvious correct answer? |
+| **Changes** | Does it change the player's understanding of something they thought they knew? |
+| **Consequences** | Does it leave a lasting consequence in the world or a relationship? |
+
+Players should remember quests because of their stories, not their rewards. Quest design draws inspiration from **The Witcher 3**: memorable narratives and meaningful consequences over repetitive objectives.
+
+> **The test:** If a quest could be removed from the game without anyone noticing it was gone, it should not be in the game.
+
+---
+
 ## Overview
 
 The quest system combines a static quest database with a procedural generation layer and a tracking system embedded in `world_state`. Quest completion drives faction reputation, XP, gold, and narrative events.
@@ -168,3 +190,4 @@ emit("quest_completed", quest_name=name, quest=quest_data)
 | Date | Change |
 |---|---|
 | July 2026 | Initial documentation; faction bonus handler forward-compat noted |
+| 2026-07-31 | Quest Design Philosophy section added — five-criterion checklist, Witcher 3 inspiration, canonical design standard |
