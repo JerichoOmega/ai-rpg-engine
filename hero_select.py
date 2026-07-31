@@ -103,24 +103,16 @@ def apply_hero(hero_key):
     player_ws["equipped_weapon"]  = hero["equipped_weapon"]
     player_ws["weapon_bonus"]     = hero["weapon_bonus"]
 
-    # Build inventory WITHOUT the equipped weapon — it now lives in
-    # the equipment slot, not the bag.  Other items (consumables,
-    # shields-in-bag, etc.) remain in inventory.
-    _WEAPON_DISPLAY_TO_KEY = {
-        "Longsword":         "longsword",
-        "Apprentice's Staff": "apprentices_staff",
-        "Short Sword":       "short_sword",
-        "Forging Hammer":    "forging_hammer",
-    }
-    _weapon_display = hero["equipped_weapon"]
-    _weapon_key     = _WEAPON_DISPLAY_TO_KEY.get(_weapon_display)
-
-    # Remove exactly ONE copy of the equipped weapon from inventory —
-    # the item now lives in the weapon slot. Any duplicate copies
-    # (e.g. Ronan's two Short Swords) remain as carried items.
+    # Build inventory: start from the full roster list, then remove
+    # exactly one copy of each starting-equipment item (it moves into
+    # its slot).  Duplicates (e.g. Ronan's two Short Swords) and
+    # consumables (Healing Potion, Repair Kit) remain in the bag.
     _inv = list(hero["inventory"])
-    if _weapon_display in _inv:
-        _inv.remove(_weapon_display)
+    _starting_eq = hero.get("starting_equipment", {})
+    for _item_key in _starting_eq.values():
+        if _item_key in _inv:
+            _inv.remove(_item_key)
+
     player_ws["inventory"] = _inv
     player_ws["level"]            = hero["level"]
     player_ws["xp"]               = hero["xp"]
@@ -134,14 +126,14 @@ def apply_hero(hero_key):
     # chosen (used for dialogue hooks, companion reactions, etc.)
     player_ws["hero_key"] = key
 
-    # ── Populate equipment slot for the starting weapon ────────────
-    # equip_slot_only() records the weapon in the equipment dict
-    # WITHOUT adding its stat bonus — the hero roster's attack_bonus
-    # already includes the weapon's contribution.  This ensures later
+    # ── Populate equipment slots for all starting items ────────────
+    # equip_slot_only() records each item in its slot WITHOUT adding
+    # its stat bonus — the hero roster's attack_bonus/defense already
+    # include each item's contribution.  This ensures later
     # unequip/swap operations (which call remove_item_stats) correctly
-    # subtract the weapon bonus rather than treating the slot as empty.
-    if _weapon_key:
-        equip_slot_only(_weapon_key)
+    # subtract the bonuses rather than treating slots as empty.
+    for _item_key in _starting_eq.values():
+        equip_slot_only(_item_key)
 
     # ── Sync the Player object (used by combat.py) ─────────────────
     # combat.py imports `player` from player.py and reads `.hp`,

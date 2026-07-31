@@ -32,10 +32,12 @@ equipment = {
 ITEM_DATABASE = {
 
     # =========================
-    # HERO STARTING WEAPONS
+    # HERO STARTING ITEMS
+    # Keys match hero inventory display names exactly so that
+    # equip/unequip operations work without any translation layer.
     # =========================
 
-    "longsword": {
+    "Longsword": {
 
         "slot": "weapon",
 
@@ -46,7 +48,7 @@ ITEM_DATABASE = {
         "rarity": "common"
     },
 
-    "knights_shield": {
+    "Knight's Shield": {
 
         "slot": "armor",
 
@@ -57,7 +59,7 @@ ITEM_DATABASE = {
         "rarity": "common"
     },
 
-    "apprentices_staff": {
+    "Apprentice's Staff": {
 
         "slot": "weapon",
 
@@ -68,7 +70,7 @@ ITEM_DATABASE = {
         "rarity": "common"
     },
 
-    "short_sword": {
+    "Short Sword": {
 
         "slot": "weapon",
 
@@ -79,7 +81,7 @@ ITEM_DATABASE = {
         "rarity": "common"
     },
 
-    "forging_hammer": {
+    "Forging Hammer": {
 
         "slot": "weapon",
 

@@ -49,9 +49,13 @@ HERO_ROSTER = {
         "gold":           30,
 
         # ── Equipment ──────────────────────────────────
-        "equipped_weapon": "Longsword",
-        "weapon_bonus":    4,
-        "inventory":      ["Longsword", "Knight's Shield"],
+        # starting_equipment: slot → item display name (must match ITEM_DATABASE keys)
+        # These items are moved into equipment slots at hero selection;
+        # attack_bonus/defense already include their contributions.
+        "equipped_weapon":    "Longsword",
+        "weapon_bonus":       4,
+        "starting_equipment": {"weapon": "Longsword", "armor": "Knight's Shield"},
+        "inventory":          ["Longsword", "Knight's Shield"],
 
         # ── Progression ────────────────────────────────
         "level":          1,
@@ -83,9 +87,10 @@ HERO_ROSTER = {
         "gold":           20,
 
         # ── Equipment ──────────────────────────────────
-        "equipped_weapon": "Apprentice's Staff",
-        "weapon_bonus":    6,
-        "inventory":      ["Apprentice's Staff", "Healing Potion"],
+        "equipped_weapon":    "Apprentice's Staff",
+        "weapon_bonus":       6,
+        "starting_equipment": {"weapon": "Apprentice's Staff"},
+        "inventory":          ["Apprentice's Staff", "Healing Potion"],
 
         # ── Progression ────────────────────────────────
         "level":          1,
@@ -117,9 +122,10 @@ HERO_ROSTER = {
         "gold":           15,
 
         # ── Equipment ──────────────────────────────────
-        "equipped_weapon": "Longsword",
-        "weapon_bonus":    4,
-        "inventory":      ["Longsword", "Healing Potion"],
+        "equipped_weapon":    "Longsword",
+        "weapon_bonus":       4,
+        "starting_equipment": {"weapon": "Longsword"},
+        "inventory":          ["Longsword", "Healing Potion"],
 
         # ── Progression ────────────────────────────────
         "level":          1,
@@ -151,9 +157,10 @@ HERO_ROSTER = {
         "gold":           10,
 
         # ── Equipment ──────────────────────────────────
-        "equipped_weapon": "Short Sword",
-        "weapon_bonus":    3,
-        "inventory":      ["Short Sword", "Short Sword"],
+        "equipped_weapon":    "Short Sword",
+        "weapon_bonus":       3,
+        "starting_equipment": {"weapon": "Short Sword"},
+        "inventory":          ["Short Sword", "Short Sword"],
 
         # ── Progression ────────────────────────────────
         "level":          1,
@@ -185,9 +192,10 @@ HERO_ROSTER = {
         "gold":           40,
 
         # ── Equipment ──────────────────────────────────
-        "equipped_weapon": "Forging Hammer",
-        "weapon_bonus":    5,
-        "inventory":      ["Forging Hammer", "Repair Kit"],
+        "equipped_weapon":    "Forging Hammer",
+        "weapon_bonus":       5,
+        "starting_equipment": {"weapon": "Forging Hammer"},
+        "inventory":          ["Forging Hammer", "Repair Kit"],
 
         # ── Progression ────────────────────────────────
         "level":          1,
