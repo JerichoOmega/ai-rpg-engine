@@ -90,6 +90,15 @@ SAVE_FILE = "save_data.json"
 
 def save_game():
 
+    # Capture combat- / skill- / equipment-mutated Player object fields
+    # into world_state["player"] before serialising.  world_state is the
+    # single authoritative persisted representation; this call makes
+    # sure any direct `player.*` mutations since the last save are
+    # reflected there.  Gold, inventory, name, class, race, hero_key and
+    # other world-state-helper-managed fields are NOT overwritten.
+    from player import sync_world_state_from_player
+    sync_world_state_from_player()
+
     save_data = {
 
         # =========================
@@ -98,24 +107,14 @@ def save_game():
 
         "save_version": 2,
 
-        # =========================
-        # PLAYER
-        # =========================
-
-        "player": {
-
-            "hp": player.hp,
-
-            "max_hp": player.max_hp,
-
-            "attack_bonus": player.attack_bonus,
-
-            "defense": player.defense,
-
-            "magic_power": player.magic_power,
-
-            "evasion": player.evasion
-        },
+        # NOTE: the top-level "player" section has been removed.
+        # world_state["player"] (serialised below) is the single
+        # authoritative representation; duplicating combat-side
+        # Player fields here created a split that caused stale
+        # values to win on load.  The load path's hasattr/setattr
+        # loop now receives an empty dict and is a no-op; the
+        # subsequent sync_player_from_world_state() call restores
+        # the Player object from world_state["player"].
 
         # =========================
         # INVENTORY

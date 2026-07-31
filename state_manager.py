@@ -25,6 +25,13 @@ def save_game():
 
     try:
 
+        # Capture combat- / skill- / equipment-mutated Player object
+        # fields into world_state["player"] before serialising so that
+        # direct `player.*` mutations are persisted alongside the
+        # world-state-helper-managed fields.
+        from player import sync_world_state_from_player
+        sync_world_state_from_player()
+
         save_data = {
 
             "version": SAVE_VERSION,

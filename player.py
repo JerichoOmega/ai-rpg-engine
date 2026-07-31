@@ -33,25 +33,21 @@ player = Player()
 # =========================
 
 def sync_world_state_from_player():
-    """Write Player object combat fields back into world_state["player"].
+    """Capture combat- and equipment-mutated Player fields into
+    world_state["player"] before every save.
 
-    ⚠ IMPORTANT — call-site constraints
-    -------------------------------------
-    world_state["player"] is the single authoritative persisted
-    representation. Engine helpers (add_gold, remove_gold, heal_player,
-    damage_player, complete_quest, etc.) update world_state["player"]
-    directly and do NOT touch the Player object. If this function is
-    called after any of those helpers run, it will overwrite their
-    correct world_state values with the stale Player-object values,
-    causing purchases, rewards, and healing to be silently lost.
+    Call once at the very start of every save path so that:
+    - Combat HP changes (player.hp -= damage, player.hp += heal)
+    - Skill/equipment stat bonuses (player.attack_bonus, .defense,
+      .max_hp, .magic_power, .evasion)
+    are persisted alongside the world-state-managed fields.
 
-    This function must therefore NOT be called in save paths.
-    It is provided for the specific case where a future refactor
-    establishes combat.py as the sole mutation point and routes all
-    HP/gold changes exclusively through the Player object.
-
-    Safe call sites: apply_hero() (hero selection, before any helpers
-    have run) or unit tests that control the full mutation sequence.
+    Only the fields that the Player object owns as its mutation surface
+    are written. Fields managed exclusively by world_state helpers
+    (gold, inventory, name, class, race, hero_key, xp, resource…) are
+    deliberately NOT touched — those are already authoritative in
+    world_state["player"] from add_gold / remove_gold / add_item /
+    apply_hero etc.
 
     Field mapping notes
     -------------------
@@ -67,14 +63,16 @@ def sync_world_state_from_player():
 
         return
 
+    # Combat / equipment / skill-mutated fields only.
+    # Do NOT overwrite gold, inventory, name, class, race, hero_key,
+    # xp, resource — those are authoritative in world_state already.
     ws["hp"]           = player.hp
     ws["max_hp"]       = player.max_hp
     ws["attack_bonus"] = player.attack_bonus
     ws["defense"]      = player.defense
     ws["dodge"]        = player.evasion
+    ws["magic_power"]  = player.magic_power
     ws["level"]        = player.level
-    ws["gold"]         = player.gold
-    ws["name"]         = player.name
 
 
 # =========================
