@@ -266,6 +266,12 @@ def apply_skill_effects(
             "evasion_bonus"
         ]
 
+    # Mirror all stat changes into world_state["player"] immediately
+    # so world-state consumers (UI, AI DM, saves) see the current
+    # values without waiting for the next pre-save sync.
+    from player import sync_world_state_from_player
+    sync_world_state_from_player()
+
 # =========================
 # GAIN SKILL POINT
 # =========================

@@ -81,6 +81,10 @@ def apply_hero(hero_key):
     player_ws["level"]            = hero["level"]
     player_ws["xp"]               = hero["xp"]
     player_ws["xp_to_next_level"] = hero["xp_to_next_level"]
+    # Always reset magic_power to 0 at hero selection — heroes have no
+    # starting magic; skills grant it during play.  Without this reset,
+    # a prior session's persisted magic_power could bleed into the new hero.
+    player_ws["magic_power"]      = 0
 
     # Store the roster key so save/load can identify which hero was
     # chosen (used for dialogue hooks, companion reactions, etc.)

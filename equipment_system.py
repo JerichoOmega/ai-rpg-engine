@@ -231,6 +231,11 @@ def apply_item_stats(
         "defense_bonus"
     ]
 
+    # Mirror stat changes into world_state["player"] immediately so
+    # world-state consumers see up-to-date values before the next save.
+    from player import sync_world_state_from_player
+    sync_world_state_from_player()
+
 # =========================
 # REMOVE ITEM STATS
 # =========================
@@ -256,6 +261,10 @@ def remove_item_stats(
     player.defense -= item[
         "defense_bonus"
     ]
+
+    # Mirror stat changes into world_state["player"] immediately.
+    from player import sync_world_state_from_player
+    sync_world_state_from_player()
 
 # =========================
 # SHOW EQUIPMENT

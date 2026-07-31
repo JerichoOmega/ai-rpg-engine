@@ -107,5 +107,6 @@ def sync_player_from_world_state():
     player.attack_bonus = ws.get("attack_bonus",  player.attack_bonus)
     player.defense      = ws.get("defense",       player.defense)
     player.evasion      = ws.get("dodge",         player.evasion)
+    player.magic_power  = ws.get("magic_power",   player.magic_power)
     player.level        = ws.get("level",         player.level)
     player.gold         = ws.get("gold",          player.gold)
