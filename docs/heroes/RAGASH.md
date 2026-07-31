@@ -361,9 +361,26 @@ She is not hopeful or pessimistic about this. She is accurate. Skarra's awarenes
 
 ---
 
+## The Forgotten Eighth — Revelation Response
+
+When the party learns the truth about the Ancient God — that she was one of the Chorus, that the Chorus imprisoned their sister, that none of this is simple — Ragash sees flawed individuals making impossible decisions.
+
+She does not reduce anyone involved to heroes or villains. She has spent her life in a world that tried to reduce her to a category — orc, outsider, dangerous — and she knows what that costs both the one being categorized and the one doing the categorizing. She will not do it to the Chorus. She will not do it to the Eighth.
+
+What she sees is: a being who could not put something down, and a group of beings who had to take it from her. Neither of those things makes the participants good or evil. It makes them real.
+
+She may be the companion who is least philosophically destabilized by the revelation — not because it does not matter to her, but because she has always known that people are complicated and that impossible situations exist. She has built her life around navigating exactly those facts.
+
+Her companion response: *"You want me to say who was right. I'm not going to. They were all trying to hold something that couldn't be held. The tragedy is that someone had to make the call."*
+
+She may ask, quietly and practically, what the party intends to do with this information. She processes by planning.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry established |
 | July 2026 | Added Companion Events — Goblin Trail Detection section (three specific events: Stonefang, Mossroot, Ashfire) |
+| July 2026 | Added The Forgotten Eighth revelation response |

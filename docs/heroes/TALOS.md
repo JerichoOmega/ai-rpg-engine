@@ -274,8 +274,27 @@ Every design decision about his abilities, positioning, and passive should serve
 
 ---
 
+## The Forgotten Eighth — Revelation Response
+
+When the party learns the truth about the Ancient God — that she was the Eighth member of the Divine Chorus, that she was imprisoned by her family, that the source of the Corruption is grief and obsession rather than malice — Talos responds through the lens of leadership and impossible duty.
+
+He does not celebrate the Chorus's decision. He does not condemn it.
+
+He understands the weight of a command that cannot be given without grief — the order that has to be followed anyway, the decision that is right and devastating simultaneously. He has carried commands like that. He has given them.
+
+What he says is likely measured and short. Something about what it costs to hold the line when holding the line means losing something you cannot replace. He does not offer comfort. He offers recognition.
+
+What he does not say: that they were wrong. What he also does not say: that they were right.
+
+His companion response: *"I've given orders that cost me. I understand the burden they carried. That doesn't make it less."*
+
+The revelation may shift how he understands the institutions he has spent his life serving and then losing faith in — not toward cynicism, but toward a more specific kind of grief. Even the gods, it turns out, have to make choices they will carry forever.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry established from canonical design direction |
+| July 2026 | Added The Forgotten Eighth revelation response |

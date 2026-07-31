@@ -271,8 +271,25 @@ His Werewolf Form is the escalation option when standard approaches have failed.
 
 ---
 
+## The Forgotten Eighth — Revelation Response
+
+When the party learns the truth about the Ancient God — that she began as a member of the Divine Chorus, that the Corruption is the amplified remnant of grief and obsession, that she was not born monstrous — Ronan understands in a way the other companions do not.
+
+He recognizes the danger of obsession because he lives with his own version of it. His curse is a thing inside him that is him — something that came from who he is and what happened to him — and his fear is that losing control of it would make him into something he cannot come back from. The Eighth's story is that fear made real, at the largest possible scale.
+
+She did not begin as a monster. She became one. The path from love to obsession did not require a moment of choice — it required only the refusal, again and again, to put something down.
+
+He understands that. He may be the companion who is most shaken by the revelation, not because it is hopeless, but because it is the thing he has always been afraid of, and now he knows it happened to someone with more power and more time than he will ever have.
+
+His companion response is likely quiet. Not eloquent. He may simply say that he understands how it starts — the refusing to accept something. And then nothing for a long time.
+
+What the revelation gives him: a reason to be more committed to the work of putting the thing down before it becomes something he cannot. The Eighth's story is not his fate. It is a warning he takes personally.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry established |
+| July 2026 | Added The Forgotten Eighth revelation response |

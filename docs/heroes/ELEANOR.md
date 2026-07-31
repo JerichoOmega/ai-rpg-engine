@@ -429,9 +429,28 @@ Her Rare Elemental Casting opens options that no single-element mage could acces
 
 ---
 
+## The Forgotten Eighth — Revelation Response
+
+When the party learns the truth about the Ancient God — that she was the Eighth member of the Divine Chorus, that she was imprisoned by her family, that the source of the Corruption is grief — Eleanor's understanding of faith is shaken.
+
+Not destroyed. Shaken.
+
+She has built her faith on a relationship with the Divine Chorus as beings of goodness and purpose. The revelation does not disprove that. But it complicates it in a way she will need time to process: the gods are neither perfect nor monstrous. They are capable of love. They are capable of grief. They are capable of making terrible decisions that emerge directly from how much they cared.
+
+Her faith evolves — from certainty into understanding. This is not a lesser faith. It is a more honest one.
+
+What makes this revelation uniquely personal for Eleanor: her own Harmonic Soul nature connects her to Primordial Magic at a level that even the Chorus finds remarkable. She is already outside the categories. Learning that the Chorus itself has categories it cannot account for — a sister who could not be held within the framework — lands differently for her than it would for someone who fits neatly inside the established order.
+
+Her companion response: *"I thought loving the gods meant believing they were perfect. Maybe it means understanding that they aren't — and that they act anyway, and carry what it costs."*
+
+She may be the companion who most directly asks whether the Eighth could have been saved. Not as an accusation — as a genuine question that she cannot stop turning over.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry established |
 | July 2026 | Expanded — Harmonic Soul revelation added to Personal Quest; Signature Ability canonical context added; cross-referenced to Magic Bible |
+| July 2026 | Added The Forgotten Eighth revelation response |

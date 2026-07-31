@@ -121,6 +121,22 @@ This is not a collection of competing gods. It is one pantheon. The Solari Coven
 
 Ancient First Age sanctuaries dedicated exclusively to one god still exist. These are rare, sacred, and significant.
 
+### The Nature of the Divine Chorus
+
+The Divine Chorus are not perfect gods.
+
+They are primordial beings responsible for maintaining reality itself — beings of cosmic scope and ancient perspective. Their decisions are made from a vantage point that often conflicts with mortal morality, because their responsibility is not to any one life or any one moment, but to the continuing existence of the whole.
+
+Sometimes their actions benefit humanity directly. Sometimes they cause immense suffering. **Neither outcome is driven by cruelty.** They prioritize balance, stability, stewardship, and the preservation of Creation.
+
+What distinguishes them from simple forces of nature is that they are not indifferent. They are capable of love. They are capable of grief. They are capable of making terrible decisions — and of understanding, afterward, what those decisions cost.
+
+Their flaws make them more real, not less divine.
+
+The most difficult truth about the Chorus: the greatest wound they carry — the imprisonment of the Eighth — was the right choice and a tragedy simultaneously. They did not stop loving their sister when they sealed her away. They have not stopped since. This is what the most ancient records say, and this is what their traditions, read carefully, still whisper.
+
+> **For writers:** The Chorus should never be written as all-knowing or infallible. They should also never be written as villains. They are beings who have maintained the world's elemental balance for thousands of years, who have loved and grieved, and who made an irreversible decision that they believe was necessary and have mourned ever since. The correct emotional register is: *immense*, *complicated*, and *real*.
+
 ---
 
 ### Solaryn, the First Flame

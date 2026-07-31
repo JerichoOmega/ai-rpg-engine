@@ -52,7 +52,8 @@
 42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework)*
 43. [Magic Bible](../elyndor/magic/MAGIC_BIBLE.md) *(separate file — Primordial Magic, Divine Chorus, magic limitations, Eleanor's Harmonic Soul)*
 44. [Journey System](systems/journey_system.md) *(separate file — travel as storytelling, camp philosophy, companion relationships, interaction scheduling, camp evolution)*
-45. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+45. [The Forgotten Eighth](../elyndor/history/the_eighth.md) *(separate file — the Ancient God's true identity, the Great Forgetting, the Imprisonment as tragedy, Corruption as amplified virtue)*
+46. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 

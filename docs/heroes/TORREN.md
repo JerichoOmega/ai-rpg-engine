@@ -326,8 +326,25 @@ This is not a position he argues. It is a position he demonstrates.
 
 ---
 
+## The Forgotten Eighth — Revelation Response
+
+When the party learns the truth about the Ancient God — that she was one of the Chorus, that she was sealed away by her family, that the prison is the greatest containment structure ever built — Torren approaches the revelation through the lens of craft, systems, and design.
+
+He does not lead with blame. His first instinct is not *who was right* but *was there another way*.
+
+He studies the prison itself. He considers what it would take to build something that could hold a god — the engineering, the intent, the decision-making about what level of permanence to commit to. He respects the craftsmanship of the solution while questioning whether containment was the only answer. He knows from his own work that the first solution that presents itself is not always the right one, and that a solution built under grief and urgency carries the shape of the moment it was made in.
+
+He does not condemn the Chorus. He does not absolve them. He asks the question a builder asks: *given what they knew, given how much time they had, given what was at stake — did they make the best structure they could? And: was there a design they didn't think of?*
+
+His companion response: *"They built something that would hold. I understand that instinct. I also know that 'hold' isn't always the same as 'solve.' What they built has been leaking for a thousand years. That's a design problem."*
+
+This is not coldness. It is the way Torren processes grief — through the question of what could have been made differently, so that the next thing can be better.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry for Torren; Stephen retired as canonical companion; Torren is a complete redesign, not a rename |
+| July 2026 | Added The Forgotten Eighth revelation response |

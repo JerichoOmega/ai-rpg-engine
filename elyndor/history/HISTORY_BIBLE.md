@@ -36,23 +36,42 @@ This is the mythical beginning of recorded history — the era when the world wa
 
 ### The Imprisonment
 
-At some point during the First Age, the Ancient God's growing corruption began threatening the entire world. Its influence had turned toward something that could not be contained by ordinary means.
+At some point during the First Age, one member of the Divine Chorus — now known only as **The Forgotten Eighth** — became changed by forces she had encountered beyond the boundaries of Creation. She had gone searching for what cannot be found: a way to undo the death of a mortal she had loved. The search exposed her to things outside Creation entirely. By the time the Chorus intervened, she was no longer the being they had known.
 
-A legendary alliance formed in response — heroes, powerful mages, divine champions, and ancient dragons united against the threat. What followed was a confrontation of such scale that it reshaped continents and fundamentally altered the nature of magic. The Ancient God was imprisoned beneath the world.
+The rest of the Divine Chorus imprisoned her. Not as punishment. Not as victory. As the only means they could find to prevent what she had brought back from destroying what they had spent the entirety of creation maintaining.
+
+What followed was a confrontation of such scale that it reshaped continents and fundamentally altered the nature of magic. The Chorus mourned what they had to do. They have never stopped loving their sister.
 
 The gods withdrew from directly walking among mortals following this event. The dragons, whose involvement in the imprisonment came at enormous cost, became increasingly rare — a decline that continued through subsequent ages.
+
+Full account of the Eighth, the imprisonment, and its aftermath: [`elyndor/history/the_eighth.md`](the_eighth.md)
+
+### The Great Forgetting
+
+Following the imprisonment, the Eighth's existence was gradually erased from the historical record. Some records were intentionally sealed. Others were lost through time, war, and civilizational collapse. The Age of Wars destroyed much of what might have preserved the truth.
+
+The result: modern civilizations genuinely believe the Divine Chorus has always had seven members. The number eight does not appear in mainstream theology. Evidence that it was once different survives only in the oldest ruins, forgotten temples, and ancient records that few can access and fewer can read.
+
+**The Great Forgetting is the reason the player begins the campaign without knowing the truth.** The revelation that the Chorus had an eighth member — and that the source of the Corruption is grief — is the campaign's spine.
 
 ### What Remains Deliberately Unknown
 
 > ⚠️ The following details are **intentional mysteries** — do not define them without explicit canonical direction:
 
-- The Ancient God's name
-- The specific nature of its corruption and why the world could not simply defeat it
-- Who performed the sealing (the alliance is confirmed to have existed; its specific members are not)
+- The Eighth's true name (erased; the campaign's deepest mystery)
+- Her elemental stewardship within the Chorus
+- The identity of the mortal she loved
+- Who among the Chorus performed the sealing's specific components
 - The precise mechanics of the prison
 - Whether the seal can be repaired
-- What happens if the god fully awakens
+- What happens if she fully awakens
 - Exactly when during the First Age this occurred
+
+**Now established as canonical** (not mysteries):
+- The Ancient God is The Forgotten Eighth — a former member of the Divine Chorus
+- She was imprisoned by the rest of the Chorus because of what she had become after searching beyond Creation
+- The imprisonment was a tragedy, not a victory; the Chorus mourned and continues to mourn
+- The Corruption amplifies virtue past the point where it remains itself; it is not simple evil
 
 These mysteries are part of the game's central story and will be revealed — or not — through deliberate narrative design, not background documentation.
 
@@ -66,6 +85,7 @@ These mysteries are part of the game's central story and will be revealed — or
 | **Lost civilizations** | Several peoples who existed in the First Age do not have surviving descendants |
 | **Dragon rarity** | Dragons became rare following the imprisonment event; those that remain are ancient |
 | **Changed magic** | The imprisonment changed the nature of magic; magic-users of later ages work within these altered laws without fully understanding why they exist |
+| **The Great Forgetting** | The Eighth's existence was erased from history over generations; modern civilizations believe the Chorus has always had seven members; discovering the truth is the campaign's central revelation arc |
 
 **Theme:** Sacrifice — the founding act of the world's current order required a cost that is still being paid.
 
@@ -203,6 +223,7 @@ History in Elyndor exists to **explain the present**.
 | Topic | File |
 |---|---|
 | The Ancient God and The Corruption | [`elyndor/history/the_corruption.md`](the_corruption.md) |
+| The Forgotten Eighth — full account | [`elyndor/history/the_eighth.md`](the_eighth.md) |
 | Canonical regions and their current state | [`docs/world/WORLD_BIBLE.md`](../../docs/world/WORLD_BIBLE.md) |
 | Vampire Houses (Third Age expansion) | [`docs/world/vampire_houses.md`](../../docs/world/vampire_houses.md) |
 | Talos (Third Age military service) | [`docs/heroes/TALOS.md`](../../docs/heroes/TALOS.md) |
@@ -216,3 +237,4 @@ History in Elyndor exists to **explain the present**.
 | Date | Change |
 |---|---|
 | July 2026 | Created — Four Ages framework established: Age of Creation, Age of Kingdoms, Age of Wars, Age of Shadows |
+| July 2026 | Expanded — The Ancient God identified as The Forgotten Eighth; Great Forgetting added as First Age legacy; mystery list updated to reflect what is now canonical; cross-reference to the_eighth.md added |

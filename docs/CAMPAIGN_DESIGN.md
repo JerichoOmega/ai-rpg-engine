@@ -6,6 +6,28 @@
 
 ---
 
+## Core Design Philosophy
+
+Project Dungeon Keeper is not built on a simple conflict between good and evil.
+
+It is built on the collision between virtues that have lost their balance:
+
+| Tension | What It Means in the World |
+|---|---|
+| **Balance vs. Obsession** | The Eighth's story; Ronan's fear of his own curse; Eleanor's faith evolving past certainty |
+| **Acceptance vs. Attachment** | The inability to let go as the source of the world's greatest wound |
+| **Wisdom vs. Knowledge** | The Mages Guild's academic mastery vs. the understanding that knowledge without reverence is dangerous |
+| **Duty vs. Compassion** | Talos's relationship to institutions; the Chorus's impossible choice |
+| **Perspective vs. Emotion** | The Chorus's cosmic view vs. the mortal experience; what is lost and gained at each scale |
+
+Every major storyline, companion arc, piece of mythology, and world event should reinforce these tensions — never resolving them cleanly, never declaring one side correct.
+
+**The player should never feel that there is a single objectively right answer.**
+
+This philosophy unifies the lore, companion arcs, worldbuilding, corruption system, and campaign without being stated explicitly to the player. It should be felt, not lectured.
+
+---
+
 ## The Core Premise
 
 Every campaign begins with the same central premise:
@@ -200,9 +222,29 @@ A player who finishes one campaign should immediately want to start another — 
 
 ---
 
+## The Narrative Goal
+
+Players should not finish the campaign believing they defeated evil.
+
+They should leave questioning:
+
+- Was the Divine Chorus justified in imprisoning the Eighth?
+- Could she have been saved?
+- What would I have done in their place?
+- Can love exist without becoming obsession?
+- Can duty exist without sacrificing compassion?
+- Is the Corruption evil — or is it a warning about what virtue costs when it has no limits?
+
+The campaign should generate discussion rather than provide answers. The mythology should feel ancient, internally consistent, and unresolved in the ways that matter most.
+
+**The ultimate goal:** a world where every major character, companion, religion, and historical event explores a different facet of the same central idea — every virtue becomes destructive when it loses balance — without ever stating that idea aloud.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — established Handcrafted First principle, Replayability Philosophy, DM role, Design Goal, and dynamic variation framework |
 | July 2026 | Dynamic Story Arcs section added; The Fractured Circle documented as example arc |
+| July 2026 | Core Design Philosophy added (Balance vs. Obsession etc.); The Narrative Goal section added; Journey System section added |
