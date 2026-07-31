@@ -268,9 +268,12 @@ Arc definitions and design framework: [`docs/systems/dynamic_story_arcs.md`](dyn
 
 **Current confirmed arcs:**
 
-| Arc | Primary Faction | Corruption Type |
-|---|---|---|
-| **The Fractured Circle** | Mages Guild | Arcane |
+| Arc | Primary Faction | Corruption Type | Companion Spotlight |
+|---|---|---|---|
+| **The Fractured Circle** | Mages Guild | Arcane | Eleanor & Ronan |
+| **The Broken Crown** | The Capital (military / governing apparatus) | Political | Talos & Eleanor |
+| **The Hungry Dark** | Great Forest ecosystem / goblin tribes | Natural | Ragash & Ronan |
+| **The Veiled Order** | Religious orders / Threshold Circle cult | Religious | Ronan & Talos |
 
 ---
 
