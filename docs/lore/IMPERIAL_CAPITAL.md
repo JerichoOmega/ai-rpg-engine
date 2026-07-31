@@ -184,7 +184,7 @@ Talos served under Voss during the middle period of Merveth's predecessor's reig
 
 The order that ended Talos's career came from Voss.
 
-The specifics of the order are **not yet defined** — that detail belongs to Talos's personal quest beats, which are a separate task. What is established:
+The specifics of the order are defined in Talos's personal quest arc ([`docs/heroes/TALOS.md`](../heroes/TALOS.md) — Vellmar's Ford): the directive to withdraw and destroy the bridge at Vellmar's Ford before refugees could cross. What is established here:
 - Voss gave the order. He gave it as an institutional directive, not as a personal act, and he believed — believes still — that this distinction matters.
 - Talos refused. His refusal was not the act of someone who misunderstood the chain of command; he understood it precisely and rejected it.
 - The Military's official account of Talos's departure frames it as insubordination. This framing serves the institution. It also, Voss would say, serves Talos — the alternative framing was worse.
@@ -235,3 +235,4 @@ For players who have uncovered early evidence of the Great Forgetting, the Capit
 | July 2026 | Expanded — framing updated to cultural and intellectual center (not only political); Academic Quarter expanded with Museums, Translation Halls, Observatory, Scholar's District; "scholars from every kingdom travel here" established |
 | July 2026 | Added Key Figures section — House Aldenmoor founding account (military opportunism at Age of Sundering collapse; three-generation consolidation); Queen Merveth Aldenmoor (third generation; Corruption amplification: competence turning toward threat suppression); Marshal Edric Voss (Military High Command head; institutional-loyalty amplification; Talos's unresolved history with him established) |
 | July 2026 | Added federal frame note — Queen sovereign of the Capital Province; continental matters handled by the Imperial Council (see `docs/world/factions/GOVERNMENT.md`) |
+| July 2026 | Voss order specifics resolved — now defined as the Vellmar's Ford directive in `docs/heroes/TALOS.md` (Personal Quest) |

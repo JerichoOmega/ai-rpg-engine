@@ -177,6 +177,49 @@ These are design directions, not implemented abilities. Exact mechanics defined 
 
 Talos's personal quest challenges his foundational belief that every government and institution inevitably becomes corrupt and fails the people it claims to protect.
 
+### The Order That Ended His Career — Vellmar's Ford (Canon)
+
+> This defines the order referenced in [`docs/lore/IMPERIAL_CAPITAL.md`](../lore/IMPERIAL_CAPITAL.md) (Marshal Edric Voss — "The order that ended Talos's career came from Voss"). That document remains authoritative for Voss himself and the eventual Capital reunion dynamic.
+
+During the middle centuries of the Age of Restoration ([`elyndor/history/HISTORY_BIBLE.md`](../../elyndor/history/HISTORY_BIBLE.md) — canonical placement of his service), Talos held a garrison command in the eastern marches under then-General Edric Voss. A raider confederation had broken through the outer line, and refugees from three burned villages were massing on the far bank of the river crossing at **Vellmar's Ford** — whose bridge was the last intact crossing on the eastern supply route.
+
+Voss's order was institutionally flawless: **withdraw the garrison and destroy the bridge before nightfall.** The raiders were hours behind the refugees. If the bridge stood when they arrived, they would take the supply route and the eastern command's whole line would fold — costing, by Voss's arithmetic, far more lives than the crowd on the far bank. The refugees could not be evacuated in time. The order did not mention them. It did not need to.
+
+Talos refused. He held the ford through the night with volunteers, brought the refugees across, and burned the bridge at dawn — half a day late. The crossing held, barely; eleven of his soldiers died buying the delay, and the raiders, denied the bridge, sacked a garrison town further south that the eastern command had thinned to reinforce him. Voss's arithmetic was not wrong. Neither was Talos's refusal. **That is the wound:** Talos saved the people in front of him and can never fully prove the cost was worth it — and Voss executed the institution's logic and can never fully prove it would have been.
+
+The Military's official record reads *insubordination at Vellmar's Ford*. Voss has never added a word to it. Talos left the service within the year.
+
+Among the refugees he brought across was a child who gave him the **first bead** of his bracelet.
+
+### Named Figures from His Past
+
+**Marshal Edric Voss** — the mentor who gave the order. Fully defined in [`docs/lore/IMPERIAL_CAPITAL.md`](../lore/IMPERIAL_CAPITAL.md). The Capital reunion scene is authored separately; this arc defines what stands between them.
+
+**Commander Brena Vael** — Talos's second at Vellmar's Ford, and the officer who obeyed. While Talos held the bridge, Vael carried out her half of the directive: she sealed the southern crossing on schedule, exactly as ordered, and watched the far bank empty in the wrong direction. She stayed in the service. Twenty years later she commands an eastern detachment, competent and respected, and she has spent her career quietly proving to herself that staying was the way to prevent the next Vellmar's Ford. She does not hate Talos. She envies him exactly once a year, on the anniversary, and despises herself for it. Vael is what Talos would have become if he had stayed — the living counter-argument, worn by the same wound.
+
+### The Turning Point — The Second Ford
+
+The arc's authored turning point, structurally parallel to The Hidden Pack in Ronan's arc: the moment the quest stops being about his past and starts being about what he does with it.
+
+Mid-campaign, the party crosses paths with Vael's detachment outside a Frontier settlement as the Corruption's pressure mounts. Vael has just received an order with the same shape as the one from twenty years ago — **withdraw, seal the pass, leave the settlement to what is coming** — issued through a High Command that is no longer merely cold but Corruption-amplified ([`docs/lore/IMPERIAL_CAPITAL.md`](../lore/IMPERIAL_CAPITAL.md)). She recognizes the shape. So does Talos, the moment he reads it.
+
+The confrontation is not between Talos and Vael's soldiers. It is between Talos and the man he was the night before he refused — played out in Vael, who has one evening to decide, and who asks him the question no one else alive is entitled to ask: *"Was it worth it? Not the people — I know about the people. The rest of it. Was it worth it?"*
+
+**Player-influenced outcomes of The Second Ford:**
+
+- **Vael refuses the order** — she holds the pass with the party's help. The settlement stands; her career ends. She tells Talos: *"Now I find out what the other road costs."* (Feeds Resolution A or C.)
+- **Vael obeys the order** — the party defends the settlement without her, or fails to. Talos watches the institution eat another good officer. (Feeds Resolution B.)
+- **Vael finds the third path** — with the player's help she executes the letter of the order while defeating its purpose (delayed withdrawal, "misrouted" supplies, an evacuation the order didn't forbid). Imperfect, deniable, human. (Feeds Resolution C.)
+
+**Narrative shift:** Before The Second Ford, Talos's quest is about the order he refused. After it, the quest becomes about whether refusal is the only honest answer — or just the one he could live with. This is what makes all three resolutions feel earned rather than assigned.
+
+#### Companion Reactions During This Encounter
+
+- **Eleanor** is shaken that the order is real paper with real seals — institutions had been an abstraction to her.
+- **Ragash** judges no one; she watches who feeds the refugees and remembers it.
+- **Ronan** recognizes the private arithmetic — he has spent his life deciding how close to people he can safely stand.
+- **Torren** inspects the pass fortifications and says quietly that they were built to be held. Someone intended better, once.
+
 ### Player Influence
 
 The player's choices can guide Talos toward one of three resolutions:
@@ -238,7 +281,7 @@ The following personal details are confirmed canon and should appear naturally t
 | **Loves telling stories** | Especially to children; has an inexhaustible supply |
 | **Bead bracelet** | One bead from each child he has met on his travels; worn always; knows where each came from |
 | **No racial prejudice** | Hard line; anyone who expresses it loses his respect immediately |
-| **Served in the Capital's military** | During the latter years of the Third Age (the Age of Wars); his worldview — the pragmatism, the military discipline, the exhaustion with institutions that claim to represent order while serving only themselves — was forged in that era; the Capital he defended was already a product of everything the Age of Wars had corroded |
+| **Served in the Capital's military** | During the middle centuries of the Age of Restoration ([`elyndor/history/HISTORY_BIBLE.md`](../../elyndor/history/HISTORY_BIBLE.md)); his worldview — the pragmatism, the military discipline, the exhaustion with institutions that claim to represent order while serving only themselves — was forged in that era; the Capital he defended was already a product of everything the Age of Restoration had built and corroded |
 
 These details should **contrast with his intimidating appearance**. The large, scarred, armored soldier who kneels down to talk to children at eye level — that contrast is the character.
 
@@ -298,3 +341,4 @@ The revelation may shift how he understands the institutions he has spent his li
 |---|---|
 | July 2026 | Created — full Hero Bible entry established from canonical design direction |
 | July 2026 | Added The Forgotten Eighth revelation response |
+| July 2026 | Personal Quest beats authored — Vellmar's Ford order defined (resolves the Voss order referenced in `docs/lore/IMPERIAL_CAPITAL.md`); Commander Brena Vael introduced; The Second Ford turning point with player-influenced outcomes and companion reactions |
