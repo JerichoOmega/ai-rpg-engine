@@ -459,20 +459,76 @@ The Archivist believes this information is too consequential to be placed in the
 
 **Hook:** Available after completing *What the Desert Remembers*. The Archivist makes contact himself this time — not through an intermediary but through a letter written in his careful, qualified hand. He acknowledges that what he is about to ask is outside the standard arrangement. He would not ask if he had another option.
 
-One of Soleth's deep archive sites in the Iron Peaks — a sealed complex beneath an abandoned dwarven passage — has gone quiet. Soleth's two agents stationed there have not responded to contact in three weeks. The site contains irreplaceable records from before the Age of Legends, including documentation of vampire social organization during the period before the three houses formed. The Archivist cannot send a Soleth response team without revealing the site's location to other Soleth members who do not currently know it exists. He needs outside help.
+He names the site: the **Keth-Dural complex**, an unofficial Soleth designation that appears on no map the Archivist has shared with the broader house. One of Soleth's deep archive sites in the Iron Peaks — a sealed complex beneath an abandoned dwarven transit passage — has gone quiet. The two agents stationed there have not responded to contact in three weeks. He cannot send a Soleth response team without revealing the site's location to house members who do not currently know it exists. He needs outside help.
 
-What the player finds at the site will depend on current campaign state and The Corruption's progression — the agents may be dead, transformed, trapped, or something more complicated. The records are the priority; the agents are a secondary concern the Archivist acknowledges with visible difficulty.
+He does not tell the player everything about the site. He will say what it contains: irreplaceable records from before the Age of Legends, including documentation of vampire social organization during the period before the three houses formed. He will not say — not yet — that there is a sixth level, and that the sixth level is not Soleth's construction.
+
+**The Site:**
+
+Keth-Dural occupies six levels beneath a dwarven transit passage abandoned approximately four centuries ago. Levels one through five are Soleth construction: cataloguing chambers, preservation vaults, and agent quarters. Level six was already there when the site was established. The Archivist sealed it, studied it for decades, and concluded it was stable. He has not mentioned it to anyone in the house.
+
+Two Soleth agents are currently inside the complex: **Harvel Dun**, a Preservationist who has served Soleth for eighty years, and **Cassilda Vrehn**, a newer operative with exceptional archival skills. They are sealed on Level Three, alive but rationing supplies. They have been documenting the Remnant's behavior through the windows between sealed doors. Their notes are recoverable.
+
+**What Woke Up:**
+
+Level Six contains a **Remnant Intellect** — a constructed reasoning entity created before the Age of Legends to serve as an archive guardian. It has no body. It manifests as voice, localized cold, and architectural control: doors seal and unseal according to logic the agents cannot decode. It also exerts targeted psychic pressure that amplifies whatever fear or doubt a person is already carrying. A Corruption-amplified grief becomes incapacitating. A reasonable suspicion becomes certainty of betrayal.
+
+The Remnant cannot be killed through conventional means. It can be reasoned with, overloaded with logical contradictions until its governing rules fail, or resealed if the player locates and restores the original containment mechanism on Level Six — which the Archivist can describe from his survey notes, once he admits the level exists.
+
+The Remnant is not malicious. It is ancient logic operating in damaged form. The Corruption did not create cruelty in it — there was none to amplify. What it amplified was its certainty: it now believes, without qualification or doubt, that every person who has entered the complex intends to destroy what it guards. That belief drives everything it does.
+
+The agents are not dead because they stopped moving toward Level Six. The Remnant's threat radius is not unlimited. They are alive precisely because they stopped.
+
+**What the Sixth Level Contains:**
+
+The vault the Remnant was built to guard predates Soleth's occupation of the site by an unknown span. It holds records created by the same civilization that constructed the god's prison — not the mechanics of the sealing ritual (those are in Sol Kareth, in the tablets from *What the Desert Remembers*), but the philosophical and material basis of the decision: why imprisonment was chosen over destruction, what the builders believed about the god's nature, and whether they expected the seal to hold permanently.
+
+The Remnant was built by those same people. It has direct, experiential knowledge of the seal's design intent. It may know things no surviving document records. Whether it will share that knowledge is a separate question from whether the player can reach it.
+
+**Why the Archivist Went Quiet:**
+
+He knew the Remnant had reactivated — a perimeter monitoring system registered the activity before the agents stopped communicating. He did not tell anyone because the Weaponizer faction within Soleth has been arguing for months that the archives contain information about the god's seal that should be leveraged. If the Weaponizers learn that a working intelligence built by the seal's original architects exists in Level Six — an entity that might know how the seal was weakened, what it requires to hold, and whether it can be repaired — they will move immediately to interrogate it and take whatever it says to the other houses as a bargaining position.
+
+The Archivist is not certain the Remnant's knowledge should be anyone's bargaining chip. He went quiet to buy time to think. He has not finished thinking. The agents' deteriorating situation has ended his window.
+
+**Objectives:**
+- Reach Harvel Dun and Cassilda Vrehn and establish their status
+- Navigate or neutralize the Remnant's control of the complex
+- Reach Level Six and assess what the vault contains
+- Return to the Archivist with a full account of what was found and what was done with it
 
 **Player choices and consequences:**
-- Recover the records and return them to Soleth: +Soleth. If the agents are alive, rescuing them also earns personal loyalty from a faction that is not generally emotional about anything.
-- Recover the records and discover what happened to the agents — then decide whether to tell the Archivist the full truth: his reaction to an honest account of what occurred is one of the more revealing moments of Soleth characterization. He does not punish honesty. He values it precisely because it is rare.
-- Discover that a Drakmor patrol destroyed the site entrance inadvertently during a territorial survey (possible outcome): this is exactly the situation the Archivist regards as the argument for why Drakmor should not be allowed near things that matter. The player navigates whether to confront Drakmor, seek compensation, or absorb the loss. Inter-house consequences depend on approach.
-- Discover that the Weaponizer faction within Soleth deliberately silenced the site to force the Archivist's hand on the question of sharing archive content (possible outcome): significant internal Soleth political event. The player must decide whether to expose the Weaponizers to the Archivist or to keep the information and use it.
+
+*Regarding the agents:*
+- Extracting both agents intact earns personal loyalty from Harvel Dun, who has decades of Soleth institutional memory and will share observations about the Archivist's blind spots that no official briefing would include. Cassilda Vrehn, if rescued, has been documenting the Remnant's behavior for weeks and can help the player interpret what they encounter on Level Six.
+- If the player cannot reach the agents before addressing the Remnant, the Archivist accepts this. He does not punish efficiency. He notes it.
+
+*Regarding the Remnant:*
+- Reasoning with the Remnant: possible but difficult. It requires either information about the current state of the god's prison (which may satisfy its protective logic — the archive is already engaged with the threat it was built against) or a demonstration that the player serves the same purpose it does. Success opens a conversation. The Remnant will answer questions about the vault's contents in the careful, qualified language of something that has been sealed away since before living memory and is not certain how much of what it knows still applies.
+- Overloading its logic: the Remnant's governing rules can be contradicted into temporary shutdown. This requires identifying what it believes about the current situation and finding a statement it cannot process. Cassilda Vrehn's documentation is the most efficient path to this. The shutdown is not permanent — the Remnant reactivates within days — but it gives the player access to Level Six without confrontation.
+- Resealing it: the original containment mechanism is on Level Six. Restoring it requires technical archival skill (Harvel Dun can assist) and something the Remnant must agree to — it was originally sealed with its consent. Getting that consent requires communicating with it first. If successful, the Remnant returns to dormancy. The Archivist regards this as the correct outcome and will say so.
+- Destruction: no conventional method works. If the player attempts destruction without understanding what the Remnant is, they will waste time and the Remnant will treat the attempt as confirmation of its threat assessment. If the player has Weaponizer contacts within Soleth, those contacts may offer an unconventional method — one the Archivist will consider a significant violation if he learns it was used.
+
+*Regarding what the Archivist withheld:*
+- When the player reaches Level Six, they will know the Archivist knew about it and said nothing. How they handle this determines the character of the relationship going forward: confronting him directly produces one of the more revealing moments of his characterization — he does not deflect, he explains, and the explanation is an honest account of the calculation he made. Players who accept his reasoning gain access to a deeper tier of collaboration. Players who report him to other Soleth contacts (if any are available) create internal political turbulence that the Weaponizers will exploit.
+- Discovering a Drakmor patrol has inadvertently damaged the site exterior during a territorial survey (possible finding during approach): this is exactly the situation the Archivist regards as the argument for why Drakmor should not be allowed near things that matter. The player must decide whether to confront Drakmor, seek compensation through other channels, or absorb the finding and not tell the Archivist how bad the exterior damage is.
+
+*Regarding Level Six's contents:*
+- Returning the vault contents to the Archivist intact and providing a full honest account of what the Remnant said: the highest-value outcome. The Archivist will not share what he learns with the broader house immediately, but the player has given him information that will shape Soleth's long-term position on the seal question.
+- Recovering the vault contents and making copies before delivering them to the Archivist: he discovers this within weeks. His response is characteristically measured — he asks what the player intends to do with the copies and listens to the answer before deciding anything. This becomes a negotiation.
+- Sharing the vault contents or the Remnant's knowledge with the Weaponizer faction: significant internal Soleth political consequence. The Weaponizers now have material to work with. The Archivist's response is one of the more revealing moments in his characterization — he does not punish it with anger, but he closes a door the player did not know was open.
+- Sharing the vault contents with the Mages Guild: the Guild has context for pre-Age of Legends records that Soleth lacks. The scholarship will eventually produce conclusions. What those conclusions are becomes a future quest thread. +Mages Guild; Soleth trust in the player is significantly damaged.
+- Withholding what the Remnant said from the Archivist: he will know the player is withholding something. He does not demand disclosure. He reduces the information he offers in exchange. This is a long-term cost paid in access rather than standing.
 
 **Reputation consequences:**
-- Completing the quest as requested: +Soleth (Archivist tier — the most valuable tier)
-- If Drakmor was responsible and the player confronts them directly: -Drakmor, +Soleth
-- If the internal Weaponizer plot is exposed: Soleth internal politics shift; the Archivist's willingness to share archive knowledge may increase as a result, affecting future quest availability
+- Completing the quest with full disclosure to the Archivist: +Soleth (Archivist tier — the most consequential tier of Soleth standing)
+- If the Weaponizer faction receives Level Six content: Soleth internal politics shift permanently; subsequent Soleth encounters may present different faction contacts than expected
+- If Drakmor was responsible for exterior damage and the player confronts them directly: -Drakmor, +Soleth
+- If the Weaponizer internal plot to silence the site is discovered and exposed: Soleth internal politics shift; the Archivist's willingness to share archive knowledge may increase as a result, affecting future quest availability
+- If Drakmor learns a pre-Age of Legends vault exists in the Iron Peaks: they will want access. Morreth's interest is territorial, not scholarly, but she understands leverage. Minor Drakmor complication depending on how the player's connection to the site becomes known.
+- If Vetharis learns the player interacted with a reasoning entity from the age of the god's sealing: Cassiel will make quiet contact within the campaign arc. He has a specific question he would like the player to ask the Remnant, if it can still be asked. This opens a future quest thread.
+
+**Quest reward:** Access to the Archivist at the highest tier of Soleth collaboration — he provides one piece of direct knowledge from the Remnant's account, specific and verifiable, about the nature of the god's prison. What piece he shares depends on what the player chose to tell him. He never gives everything. He gives what he thinks the player can be trusted to have.
 
 ---
 
@@ -487,7 +543,7 @@ The following table documents confirmed reputation consequences across houses fo
 | *The Fang-Hold Ultimatum* | Drakmor | Minor -Vetharis | +Drakmor | Neutral |
 | *The Soldier Who Remembered* | Drakmor | Neutral | +Drakmor (variable tier) | Minor (observer) |
 | *What the Desert Remembers* | Soleth | Minor opportunity | Neutral | +Soleth |
-| *The Fraying Edge* | Soleth | Neutral | Variable | +Soleth (Archivist tier) |
+| *The Fraying Edge* | Soleth | Minor (Cassiel contact) | Variable | +Soleth (Archivist tier — highest) |
 
 ### Design Note for Writers
 
@@ -503,3 +559,4 @@ Each house should feel distinct at the table level: a Vetharis quest session sho
 |---|---|
 | July 2026 | Created — three houses named and fully developed: Vetharis (political manipulation), Drakmor (military conquest), Soleth (ancient knowledge and vampire survival) |
 | July 2026 | Added vampire house quests — two named quests per house, reputation cross-reference table, and writer design notes |
+| July 2026 | Expanded *The Fraying Edge* — fully authors the Iron Peaks archive silence hook with named site (Keth-Dural complex), named agents (Harvel Dun, Cassilda Vrehn), specific Corruption-driven danger (Remnant Intellect), and the Archivist's specific reason for silence |
