@@ -18,7 +18,8 @@ Read `CANON_RULES.md` first. It contains the immutable principles that govern al
 
 | File | Contents |
 |---|---|
-| `CANON_RULES.md` | Immutable design principles — read this first |
+| `DEVELOPMENT_REFERENCE.md` | **Start here for new sessions** — canon constitution; reading order; development guidelines |
+| `CANON_RULES.md` | Immutable design principles |
 | `HISTORY_BIBLE.md` | The Seven Ages — each era described as a broad historical period |
 | `TIMELINE.md` | Concise chronological reference for developers |
 | `DIVINE_CHORUS.md` | Philosophy, responsibilities, and limits of the Divine Chorus |
