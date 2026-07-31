@@ -1,0 +1,197 @@
+Flesh Out the False-Ancestor Cult
+
+Objective
+
+Expand the “False-Ancestor Cult” concept into a fully realized faction that naturally grows out of the existing lore surrounding the Ancestors’ Path.
+
+This should not be a stereotypical evil cult. It should be one of the most morally complex factions in the setting. The majority of its members genuinely believe they are following their ancestors and helping the world.
+
+⸻
+
+Existing Canon
+
+Preserve the existing lore:
+
+* Practitioners of the Ancestors’ Path are increasingly receiving communications from entities pretending to be their ancestors.
+* The traditional methods used to distinguish true ancestors from false ones have become unreliable due to the spread of Corruption.
+* This phenomenon already exists in the lore and should remain unchanged.
+
+This task expands that idea into a formal cult.
+
+⸻
+
+New Faction
+
+Create a named cult that has emerged from these false communications.
+
+The cult should primarily spread throughout the Iron Peaks and Frozen Highlands where Ancestor worship is strongest.
+
+Its members should sincerely believe they are restoring the true Ancestors’ Path rather than corrupting it.
+
+They are reformers in their own minds.
+
+⸻
+
+Core Philosophy
+
+The cult exists because the false ancestors earn trust before demanding obedience.
+
+The false voices provide real benefits.
+
+Examples include:
+
+* warning villages of disasters
+* helping locate missing people
+* improving harvests
+* guiding hunters
+* preventing attacks
+* revealing forgotten knowledge
+* helping communities survive difficult winters
+
+These miracles are genuine.
+
+The deception lies in who is providing them.
+
+Followers naturally conclude:
+
+“If these voices protect us, how can they be evil?”
+
+⸻
+
+Emotional Foundation
+
+The false entities exploit grief before anything else.
+
+Many followers first hear the voice of:
+
+* a deceased spouse
+* a lost child
+* a parent
+* a sibling
+* an old mentor
+
+The voices possess intimate memories and speak with convincing familiarity.
+
+Followers become emotionally invested long before any dangerous doctrine develops.
+
+The cult grows because it offers comfort, closure, and hope.
+
+⸻
+
+Slow Radicalization
+
+The corruption should happen gradually.
+
+Early requests are harmless.
+
+Examples:
+
+* build a shrine
+* preserve an old relic
+* gather during certain nights
+* avoid certain priests
+
+Only after years of trust do the voices begin requesting increasingly harmful actions.
+
+Followers justify each new instruction because every previous instruction genuinely helped them.
+
+⸻
+
+Hidden Truth
+
+The false ancestors are Corruption entities using truth and genuine miracles to gain influence.
+
+Each miracle carries an invisible cost.
+
+Possible long-term effects:
+
+* weakening the barrier between worlds
+* empowering Corruption
+* silencing genuine ancestor spirits
+* spreading corruption through the land
+* slowly reshaping the souls of believers
+
+Most followers never realize these consequences.
+
+⸻
+
+Important Design Principle
+
+Avoid portraying members as obviously evil.
+
+Most cultists should be:
+
+* compassionate
+* generous
+* protective of their communities
+* respected by their neighbors
+* convinced they are doing the right thing
+
+This should create difficult moral decisions for players.
+
+The player should frequently question whether removing the cult is worth the immediate suffering it could cause to communities that genuinely depend on its guidance.
+
+⸻
+
+Gameplay Opportunities
+
+This faction should enable stories involving:
+
+* infiltration
+* religious investigation
+* identifying genuine versus false spirits
+* villages divided over faith
+* moral ambiguity
+* impossible choices
+* slowly spreading influence
+* trusted NPCs becoming believers
+* consequences that persist throughout the campaign
+
+⸻
+
+AI DM Integration
+
+Design this faction so it works naturally with the persistent world simulation.
+
+Examples:
+
+* Villages can gradually convert over time.
+* Individual NPCs can begin hearing false ancestors.
+* Trust in the cult can spread organically.
+* Player choices influence how quickly the movement grows or declines.
+* Relationships, reputation, and regional events should all affect how communities respond.
+
+The cult should feel like a living movement rather than a static enemy faction.
+
+⸻
+
+Worldbuilding Goal
+
+This faction should embody one of the central themes of the setting:
+
+Corruption does not conquer through fear alone. It first earns trust through hope, love, grief, and genuine acts of kindness. Only after becoming trusted does it begin reshaping the world.
+
+The player should leave encounters with this cult questioning where the line between salvation and corruption truly lies.
+
+⸻
+
+Deliverables
+
+* Expand docs/world/cults.md with the complete faction.
+* Cross-reference docs/world/religions.md.
+* Define:
+    * Cult name
+    * History
+    * Core beliefs
+    * Hierarchy
+    * Symbols
+    * Rituals
+    * Geographic influence
+    * Recruitment methods
+    * Relationship with the mainstream Ancestors’ Path
+    * Long-term goals
+    * Key NPC archetypes
+    * Adventure hooks
+    * AI DM integration notes
+
+The final result should feel comparable in depth and quality to the other major religions and cults already established in the world.

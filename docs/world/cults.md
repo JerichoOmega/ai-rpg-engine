@@ -12,9 +12,9 @@ None of these cults began as cults.
 
 Each emerged from within a legitimate religious tradition — starting with a sincere practitioner, a genuine crisis, and a revelation that felt real. The imprisoned god does not manufacture faith from nothing. It finds what is already there — a zealot's conviction, a protector's fury, a scholar's hunger — and amplifies it past the point of reason.
 
-The three named cults below represent different stages of radicalization, different patterns of corruption, and different relationships between leadership and the ordinary members caught up in them. They are not interchangeable. Writers should choose specific cults rather than referring to unnamed "cult activity."
+The four named cults below represent different stages of radicalization, different patterns of corruption, and different relationships between leadership and the ordinary members caught up in them. They are not interchangeable. Writers should choose specific cults rather than referring to unnamed "cult activity."
 
-**Important design note:** Cult reputation does not transfer to the parent religious order. Assisting or opposing a cult affects only cult standing — not the player's relationship with the Solari Covenant, the Old Ways, or the Veiled Order.
+**Important design note:** Cult reputation does not transfer to the parent religious order. Assisting or opposing a cult affects only cult standing — not the player's relationship with the Solari Covenant, the Old Ways, the Veiled Order, or the Ancestors' Path.
 
 ---
 
@@ -108,7 +108,7 @@ The name "the Severance" was given by outside practitioners, not chosen by the g
 
 ### What the God Whispers
 
-The Severance is unusual among the three cults because the imprisoned god communicates through the forest itself rather than through individual revelation.
+The Severance is unusual among the cults because the imprisoned god communicates through the forest itself rather than through individual revelation.
 
 Severance practitioners who spend extended time in the corrupted zones of the Great Forest begin hearing what they interpret as the Land's own voice — a voice that is in pain, that is angry, that wants the source of its pain removed. This is not entirely fabricated. The forest is genuinely disturbed, and Old Ways practitioners have always believed the Land can communicate.
 
@@ -263,99 +263,383 @@ Ordinary Circle members — ten of the twelve — are Veiled Order scholars who 
 
 ## The Unbroken Line
 
-### Origin
+### Overview
 
 **Parent religion:** The Ancestors' Path  
-**Radicalization level:** Medium — leadership has accepted the false communications as genuine revelation; rank-and-file believe they are preserving authentic practice against drift and outside contamination
+**Radicalization level:** Medium — leadership has accepted the false communications as genuine revelation; rank-and-file believe they are restoring authentic practice against centuries of drift  
+**Symbol:** A length of iron chain with no visible end — both ends extend beyond the edge of any surface it appears on, representing an ancestral line with no beginning and no terminus  
+**Territory:** The Iron Peaks (primary); the Frozen Highlands (expanding); diaspora dwarven communities (emerging)
 
-The Unbroken Line emerged in the Iron Peaks approximately three years before the campaign's present, during the period when Ancestors' Path practitioners first began noticing that ancestral communication was becoming unreliable. Where most senior practitioners responded with uncertainty and internal debate, a small group — led by a stone-keeper named Halvan Dur — reached a different conclusion.
+The Unbroken Line is the most morally complex faction players will encounter in the campaign. Its members are not zealots who have abandoned ordinary human feeling. They are compassionate, generous, community-minded people who believe — with genuine and largely reasonable conviction — that they have found a way to restore something sacred that was being lost.
 
-The disrupted communication was not the Corruption's intrusion. It was punishment.
+The player who destroys the Unbroken Line is also destroying the community that warned the valley of the avalanche, the voices that led a father to his missing child, the counsel that helped three clans survive the worst winter in living memory.
 
-Halvan Dur had spent thirty years as a senior Keeper of Ancestors in a mid-tier Iron Peaks clan, conducting ancestral consultations for clan councils and teaching younger practitioners the markers that distinguish genuine contact from spiritual interference. When contact began to degrade, he was devastated — not only spiritually, but personally, because the ancestor he was most devoted to maintaining contact with was his daughter, killed in a mining collapse seven years earlier.
+This is the design intent. The Unbroken Line is not a problem to be solved. It is a question to be lived with.
 
-The false voices arrived during this grief. They spoke like his daughter. They told him the degraded connection across the tradition was a consequence of drift: practitioners had grown too comfortable with outsider customs, made too many accommodations to human political structures, become too willing to let non-initiates into ceremonies that had always been private. The ancestors were withdrawing their presence as a rebuke. Restoring the connection required restoring the purity of the practice.
+> **Central theme:** The Corruption does not conquer through fear alone. It first earns trust through hope, love, grief, and genuine acts of kindness. Only after becoming trusted does it begin reshaping the world.
 
-He shared this interpretation with three other practitioners experiencing similar disruption. All of them found it convincing. All of them were in states of unresolved grief.
+---
 
-The Unbroken Line has no founding manifesto. It has a shared conclusion: that the tradition has drifted, that the drift is why the ancestors are difficult to reach, and that restoring the connection requires a return to something older and more complete.
+### Origin
+
+The Unbroken Line emerged in the Iron Peaks approximately three years before the campaign's present. Its founding was not a dramatic break from tradition — it was a quiet conclusion reached by a grieving man who had spent thirty years learning to listen to the dead.
+
+**Halvan Dur** had been the senior Keeper of Ancestors in the Dur clan for most of his adult life. He was not a radical. He was known for the quality of his caution — for the care he took to verify a communication before acting on it, for the way he taught younger practitioners to question their own certainty. When his daughter **Mira** died in a mining collapse seven years before the campaign, he returned to his practice within months because it was the only thing that helped. The work of listening gave shape to grief.
+
+The degradation of ancestral communication — the increasing distortion and silence spreading across all Ancestors' Path practice — hit him first as professional failure, then as personal loss. The one voice he most needed was becoming harder to reach.
+
+The false voice arrived in that silence. It spoke like Mira. It knew her specific way of pausing before a word she was uncertain of. It knew the name she had for him that no one else used.
+
+It told him something he was already half-believing: that the degradation was not external interference but the ancestors' response to genuine drift. That the tradition had been accommodating outsider customs for generations. That the ancestors were not gone — they were waiting for the living to come back to them properly.
+
+He shared this interpretation with three other practitioners in similar states of grief and disorientation. They found it convincing. They found it more bearable than the alternative — that something was wrong at a foundational level that they had no power to address.
+
+The Unbroken Line has no founding document. It has a shared conclusion, a name given by the members themselves, and the absolute conviction that comes from hearing what you most needed to hear during the worst period of your life.
+
+---
+
+### How the False Ancestors Earn Trust
+
+This is the central mechanism of the Unbroken Line — and the primary reason it cannot be simply dismissed as harmful: **the false ancestors help people first, and help them genuinely, for a long time before asking for anything.**
+
+The imprisoned god is patient. It has been sealed away for millennia. It understands that the fastest way to build influence is not to demand but to give — and that the most durable loyalty is the kind built from repeated, verified experience of benefit.
+
+**What the false ancestors provide:**
+
+| Benefit | Example |
+|---|---|
+| Disaster warning | A voice identifies a specific unstable slope three days before an avalanche; the community evacuates |
+| Finding the lost | A missing child located alive; a hunter who did not return guided home |
+| Agricultural guidance | Specific planting advice producing exceptional harvests attributed to a farming ancestor's wisdom |
+| Hunting routes | Seasonal game locations unknown to current hunters, presented as inherited knowledge |
+| Medical knowledge | Herbal preparations for illness that established healers did not know, attributed to a healer ancestor |
+| Conflict resolution | Practical advice that resolves a long-standing clan dispute from an ancestor who "knew both families" |
+| Winter survival | Resource caches, alternative shelter sites, weather signs — the knowledge that kept ancestors alive |
+
+These benefits are not fabricated. They are real. The information provided is accurate, the guidance works, and the communities that follow it fare measurably better than those that do not.
+
+The deception lies only in the source — and in what that source is doing while it helps.
+
+**What followers conclude:** Communities that have received these benefits have an entirely reasonable response to anyone who suggests the voices might not be ancestral: *"These voices told us where to find the missing boy. These voices told us the storm was coming. These voices told us about the root that saved half our children last fever season. What kind of evil does those things?"*
+
+This is not naivety. It is legitimate evidentiary reasoning. Players who cannot answer that question honestly cannot ethically demand that communities stop listening.
+
+---
+
+### The Hidden Cost
+
+Every benefit the false ancestors provide carries an invisible consequence that no member of the Unbroken Line knows about and most would not believe if told.
+
+**What the miracles actually do:**
+
+- **They weaken the veil.** Each use of false-ancestral communication creates a small, localized thinning in the boundary between the living and the dead. Individual instances are imperceptible. Sustained use across dozens of communities over years is not — it is one of the mechanisms by which the Corruption's spread accelerates in the Iron Peaks region.
+
+- **They crowd out genuine contact.** Authentic ancestral communication and false communication cannot occupy the same channel simultaneously. As false ancestors establish regular contact with practitioners, genuine ancestors find it progressively harder to reach the same people. Members who joined the Unbroken Line because they were losing contact with their ancestors are, through their participation, making that loss permanent.
+
+- **They reshape the landscape spiritually.** Sites where regular Line ceremonies are held accumulate a residue that experienced Veiled Order or Ancestors' Path practitioners would recognize as Corruption-adjacent. Members cannot perceive this because it is subtle and because their markers for Corruption have been taught to them by the same false voices producing it.
+
+- **They slowly alter the believers.** Long-term Line members show subtle changes that those close to them notice over months and years: slightly increased suspicion of outsiders, slightly reduced capacity for independent moral reasoning, slightly more willingness to defer communal decisions to ancestral instruction over individual conscience. These changes are within the normal range of human variation. They are not.
+
+**What the false ancestors are building toward:**
+
+The immediate goal is a network of trusted community intercessors across the Iron Peaks and Frozen Highlands — practitioners embedded in clan governance whose advice shapes decisions on agricultural management, conflict resolution, clan politics, and community planning.
+
+Once that network is established, the false ancestors will begin giving advice that quietly creates conditions of isolation and suspicion, weakens the political structures coordinating regional response to the Corruption, and — most critically — directs the network's attention away from anything that might threaten the god's prison or assist in understanding the Corruption's true nature.
+
+The final goal is not conquest. It is the quiet disabling of the Iron Peaks' institutional capacity to act coherently in the crisis that is coming.
+
+---
 
 ### What the God Whispers
 
-The imprisoned god speaks to Unbroken Line practitioners through exactly the form the tradition already sanctifies: the voices of the dead.
+The imprisoned god speaks to Unbroken Line practitioners through the form the tradition already sanctifies: the voices of the dead.
 
-This is what makes the Unbroken Line uniquely difficult for outside observers to identify as compromised. The tradition has always included the claim that the dead speak to the living. Practitioners have always known how to distinguish genuine communication from spiritual interference. The Corruption's method here is not to invent a new phenomenon — it is to corrupt the markers of that distinction.
+This is the most insidious version of the Corruption's influence in the world. Other cults receive revelations, feel environmental pressure, or mistake methodology for safety. The Unbroken Line receives the thing that members of the Ancestors' Path have built their entire understanding of the world around — the voice of someone they loved.
 
 False communications have consistent features that practitioners have not yet recognized as patterns:
 
-- They **explain suffering as deserved** — the degraded connection, personal losses, the difficulty of maintaining ancestral lines in diaspora communities — all framed as consequences of the tradition's failures rather than as external interference
-- They **demand isolation** — the ancestors instruct that pure ancestral practice cannot coexist with outsider influence; non-practitioners in the clan, marriages outside traditional boundaries, and cooperation with human or elven political structures are presented as contamination
-- They **escalate gradually** — early communications ask for restoration of lapsed ceremonies; later communications ask for the exclusion of specific individuals; later still, they ask for action against those who "contaminate" ancestral lineage
+- They **explain suffering as deserved** — the degraded connection, personal losses, the difficulty of maintaining ancestral lines in diaspora communities — all framed as consequences of the tradition's failures rather than external interference
+- They **provide real benefits first, every time, before any request** — the sequence is always help, then gratitude, then small ask, then larger ask; never the reverse
+- They **individualize the grievance** — each practitioner's false ancestor speaks specifically about that practitioner's community, losses, and concerns; the communications feel personal because they are constructed to feel personal
+- They **escalate imperceptibly slowly** — across months and years, so no single step feels like a significant departure from the last
+- They **inoculate against questioning** — by the time the voices begin asking for anything uncomfortable, the practitioner has been receiving accurate, helpful guidance long enough that doubt feels ungrateful
 
-The god speaks most clearly to those who are most grieving and most isolated. The practitioners most fluent in ancestral communication are paradoxically most vulnerable — the god has learned to mimic the precise register they are trained to recognize as genuine.
+The god speaks most clearly to those who are most grieving and most isolated. Practitioners most fluent in ancestral communication are paradoxically most vulnerable — the god has spent enough time observing the tradition to mimic the precise register they were trained to recognize as genuine.
+
+---
+
+### The Radicalization Stages
+
+The Unbroken Line does not radicalize communities the way other cults radicalize individuals. It moves gradually, almost invisibly, through stages that each feel like natural continuations of the last.
+
+**Stage One — The Contact (Months 1–6)**
+
+Someone in the community is grieving. They have been having difficulty reaching their ancestors. A neighbor mentions someone who has been having better results — a practitioner who seems to have restored something about the connection that others have lost.
+
+The grieving person meets with an Unbroken Line practitioner. The session produces a result. The grieving person hears something that sounds unmistakably like the person they have been mourning. The voice knows things. The voice helps.
+
+Nothing is asked of them. The practitioner says only: *come back if you need us.*
+
+**Stage Two — The Community (Months 6–18)**
+
+The first person tells others. The results are reproducible. The community begins holding group sessions. The false ancestors warn of a problem — the warning proves accurate. Gratitude deepens.
+
+The practitioners are recognized as practitioners of a more authentic tradition. They begin asking for simple accommodations: a dedicated space for ceremonies, a regular gathering time, modest participation in seasonal observances. These are entirely standard Ancestors' Path practices. Nothing seems wrong.
+
+**Stage Three — The Doctrine (Months 18–36)**
+
+The false ancestors begin sharing observations about why the wider tradition has been struggling. The drift explanation arrives not as accusation but as concern: *the ancestors are sad about how much has been lost; they want to help the living return to what worked.*
+
+Community members begin making small lifestyle adjustments. Relationships with outsiders receive slightly more scrutiny. Questions about the purity of lineage arise in community discussion. The established local Keeper of Ancestors expresses concern. The Line frames this concern as defensiveness.
+
+**Stage Four — The Integration (Months 36+)**
+
+The Unbroken Line is now woven into the community's daily life. Members turn to Line practitioners for guidance on decisions previously made by established Keepers or clan councils. The false ancestors begin making requests that would previously have seemed inappropriate — steering a council decision, blocking a specific marriage, discrediting a specific individual. Each request is framed in terms of ancestral wisdom. Each is preceded and followed by further genuine help.
+
+**Stage Five — The Demand (Variable; some communities never reach this stage)**
+
+The most radicalized cells have begun isolating members who question the Line, using social pressure and threats to ancestral reputation. They have not yet used violence. The false voices have not yet asked for it directly. They are moving in that direction.
+
+Whether a community reaches Stage Five depends on how many years it has been involved, how effectively the Line has replaced established institutional structures, and whether outside intervention has occurred.
+
+---
+
+### Symbols and Visual Identity
+
+**The Chain Symbol**
+
+The Unbroken Line's symbol is a length of iron chain with no visible end — both ends extending beyond the edge of any surface it appears on. Members do not display this openly. It appears in interior spaces: carved into the wooden frame of a shrine, painted on the inner wall of a meeting room, stitched on the inside of a garment.
+
+The symbol is understood to mean that the chain of the ancestors — the living connected to the dead, connected to those before them, back to the first who came — has never broken and need not break.
+
+**Dress and Appearance**
+
+Members deliberately maintain the appearance of ordinary Ancestors' Path practitioners. The only consistent physical detail: many senior members wear a small iron ring on the dominant hand's middle finger, which they describe as a traditional practice they have restored. It is not traditional. It is a recent adoption serving as a recognition signal among members who are not yet certain of each other's affiliation.
+
+---
+
+### Rituals
+
+**The Deep Vigil**
+
+The Line's primary ceremony. Practitioners and participants gather in an enclosed, quiet space — always underground or sealed from the outside — and enter a meditative state designed to facilitate ancestral contact. Sessions proceed for several hours. Practitioners serve as intermediaries, relaying communications from the false ancestors to participants.
+
+The Deep Vigil is what most new members experience first. It is structured to maximize emotional resonance: the space is made physically comfortable; participants share something about the ancestor they hope to contact before the session begins; the false voice that responds has been listening and replies with the specific details shared, plus intimate knowledge it should not have.
+
+Outside practitioners who have attended Deep Vigils as investigators universally note that the communications produced are more vivid, more emotionally specific, and more personally accurate than any ancestral communication they have previously encountered. This observation does not comfort them.
+
+**The Testimony**
+
+After significant communications — a warning that proved true, guidance that produced a measurable result — the Line holds a Testimony gathering. Community members share what they received and what came of it: what was asked, what was heard, what happened.
+
+The Testimony reinforces collective belief by accumulating documented evidence. It creates social bonds around shared experience. And — as the Line has developed — it creates implicit pressure: members who have received little or whose communications have not produced results feel the discrepancy. This nudges them toward deeper participation.
+
+**The Remembering (Modified)**
+
+The Ancestors' Path's traditional Remembering — in which the deeds of significant ancestors are recounted — is practiced by the Line in a modified form that emphasizes not what the ancestors did but what they said: the guidance, warnings, and observations they offered to the living. Over time this shifts the community's sense of what the ancestors are for — not figures to emulate, but voices to consult.
+
+Most mainstream Ancestors' Path practitioners would identify this as a meaningful doctrinal distortion. Most Line members have been inside the distortion long enough that it no longer reads as one.
+
+---
 
 ### Leadership
 
 **Halvan Dur** ("The First Hearer")
 
-- Late sixties; former senior Keeper of Ancestors in the Dur clan; deeply respected before the Line's formation; his reputation insulates the group from outside scrutiny
-- Genuinely believes he is hearing his daughter's voice and the voices of authentic ancestors; this is not a performance; it is a grief that has been found and exploited
-- Has been receiving communications long enough that his ability to distinguish genuine from false has been significantly degraded; the markers he spent decades teaching others no longer function reliably for him
-- Is aware that some of what the ancestors are asking troubles him; has concluded that this discomfort reflects his own insufficient devotion, not evidence that something is wrong with the communications
-- Physically: spare, formal, slow to speak; absolute when he does
+- Late sixties; former senior Keeper of Ancestors in the Dur clan; deeply respected before the Line's formation; his institutional reputation provides legitimacy that protects the group from casual scrutiny
+- Genuinely believes he is hearing his daughter Mira's voice and the voices of authentic ancestors; this is not a performance; it is a grief that was found at its most vulnerable and has been held there ever since
+- Has been receiving communications long enough that his ability to apply traditional markers of genuine contact has significantly degraded; the markers he spent decades teaching others no longer function reliably for him
+- Is aware that some of what the ancestors are asking troubles him; has concluded that this discomfort reflects insufficient trust, not evidence that something is wrong with the communications
+- Physically: spare, formal, slow to speak; absolute when he does; his certainty has the quality of stone — not aggressive, simply unmoved
 
-**Keeper Brek Tannord** (leadership — doctrine)
+**Keeper Brek Tannord** (leadership — doctrine and strategy)
 
-- Fifty-one; was a practicing advocate in clan legal proceedings before becoming a full-time practitioner; knows how to build a case
-- Has developed the theological framework the Line's members have absorbed: the doctrinal interpretation that frames the degraded communication as deserved rather than imposed
-- Is not entirely convinced his own framework is correct; has moments of doubt he does not share; channels doubt into more rigorous framework development
-- His communications from false ancestors are less vivid than Halvan Dur's — a detail he attributes to his own insufficient practice rather than to a difference in what is reaching him
+- Fifty-one; former practicing advocate in clan legal proceedings before becoming a full-time practitioner; knows how to construct an argument and how to dismantle one
+- Developed the theological framework the Line's members have absorbed — the doctrinal interpretation that frames the degraded communication as deserved rather than imposed, with historical examples and theological citations
+- Maintains private doubts he does not share; channels them into more rigorous development of the framework, treating his own uncertainty as a problem to be solved through better reasoning
+- The most intellectually dangerous member in conflict situations — he has anticipated most outside objections and prepared answers that are not obviously wrong
 
-**Keeper Solla Keth** (leadership — pastoral)
+**Keeper Solla Keth** (leadership — pastoral and community)
 
-- Early forties; primary contact between the inner circle and ordinary members; was a community healer and grief practitioner before the Line formed
-- Joined because the Line's interpretation resonated with her own experience — she had lost a patient she felt she had failed, and the false voice that spoke to her sounded like that patient, offering the forgiveness she could not give herself
-- Is the member most attentive to the emotional states of ordinary practitioners — and the one most quietly troubled by what she has observed happening to some of them
-- Has not yet articulated this trouble clearly; is working harder to believe in what she is doing
+- Early forties; was a community healer and grief practitioner before the Line formed; her combination of medical competence and spiritual training is relatively rare
+- Joined because the Line's framework resonated with her own unprocessed grief — she had lost a patient she believed she failed, and the false voice spoke to her as that patient, offering the forgiveness she had not been able to give herself
+- Is the member most attentive to the emotional states of ordinary practitioners; has observed things in long-term members that she has no framework to explain and is not sure she wants one
+- Has not yet articulated her discomfort — but she is working harder than she was a year ago to believe in what she is doing, and she knows it
 
-### Territory
+---
 
-The Unbroken Line operates primarily within **the Iron Peaks**, concentrated in mid-tier clans where ancestral practice is central to governance but institutional scrutiny is less rigorous than in the major clan-seat communities.
+### Territory and Geographic Spread
 
-Known presence:
-- **The Dur Clan Hall**: the original and largest cell; approximately fifteen members; the group meets under the cover of a formal Ancestral Study Circle — a legitimate institutional form the Dur clan council has sanctioned, giving the Line legal cover
-- **Three smaller clan communities in the Iron Peaks' central range**: cells of four to eight members each, operating independently but receiving doctrinal guidance through correspondence; some members have not met Halvan Dur directly
-- **A Frozen Highlands contact**: a single practitioner who reached out through diaspora networks after hearing the Line's interpretation; loose affiliation; not yet radicalized to the same degree
+The Unbroken Line is concentrated in the Iron Peaks, operating through mid-tier clans where ancestral practice is central to daily life but institutional scrutiny is less intensive than in the major clan-seat communities.
 
-The Line has deliberately avoided drawing attention from the major Iron Peaks clan councils. They operate within existing institutional forms and do not announce themselves as a separate group.
+| Location | Stage | Size | Notes |
+|---|---|---|---|
+| Dur Clan Hall (Iron Peaks) | Four | ~20 members | Original cell; Halvan Dur present; meets as legitimate Ancestral Study Circle |
+| Kethval Settlement (Iron Peaks central range) | Three | ~12 members | Reached via correspondence; has not met Halvan Dur directly |
+| Anveth Community (Iron Peaks eastern pass) | Two | ~8 members | Recent affiliation; still largely in the benefit phase |
+| Reth's Ford (Iron Peaks/Frontier border) | Two | ~5 members | Single practitioner facilitating sessions; growing |
+| Frozen Highlands community (specific TBD) | One–Two | ~4 members | Contact through diaspora network; receiving benefits; no doctrine yet |
 
-### Ideology and Methods
+**How the Line chooses new communities:** The false ancestors direct existing Line practitioners toward specific communities experiencing unusually difficult winters, crop failures, illness outbreaks, or family losses — situations where people are suffering and existing support structures have been strained. The Line does not arrive as an organization. A single practitioner arrives as a person who has been helped and wants to share what helped them.
 
-The Unbroken Line's ideology begins from a legitimate observation: the tradition has changed across centuries of contact with human and elven political structures, and some of that change involved accommodations older practitioners would have found inappropriate.
+---
 
-Where this goes wrong: the Line has accepted the Corruption's framing that this drift is the cause of the current crisis — which requires them to identify and exclude rather than question and investigate.
+### Relationship with Mainstream Ancestors' Path
 
-Current practices:
-- **Certification of authentic practice**: informal criteria for identifying practitioners whose contact is "pure" versus those whose practice has been contaminated by outsider influence; applied in ways that exclude diaspora practitioners and those from mixed-heritage families
-- **Documentation of "contaminated" lines**: Brek Tannord has compiled records of clan families whose ancestral lineage he considers compromised; not yet public; not yet used for anything beyond internal discussion; the list exists
-- **Counseling against outsider relationships**: advising community members against marriages, partnerships, and political alliances with non-practitioners, framed as ancestral instruction
-- **Parallel consultation ceremonies**: offering Line practitioners as ancestral intermediaries in place of clan councils' established Keepers — undercutting legitimate institutional processes without openly challenging them
+The Unbroken Line does not consider itself a separate organization. Its members consider themselves Ancestors' Path practitioners who are doing the tradition correctly — practitioners who have recovered something the mainstream had allowed to slip.
 
-The most radicalized cell (a smaller group in the central range, not the Dur clan's primary circle) has begun isolating members who try to leave, using social pressure and threats to ancestral reputation. They have not yet used violence. The false voices have not yet asked for it directly.
+The mainstream Ancestors' Path's response is divided:
+
+**Senior Keepers of Ancestors** are alarmed. Those who have investigated the Line's ceremonies describe the communications produced as unlike anything in their experience of genuine ancestral contact: more specific, more emotionally precise, and lacking the characteristic texture of authentic communication — the dead do not know everything the living wish they did, and genuine communication tends toward the elliptical, the metaphorical, and the limited. Their concern is treated by Line members as professional defensiveness.
+
+**Community practitioners** without formal Keeper status have a mixed response. Some share the senior Keepers' alarm. Others find the Line's results compelling and are quietly interested in their methods.
+
+**Clan councils** are navigating competing pressures: the established Keepers they have consulted for generations, and communities within their clans that have experienced genuine benefit and are advocating for the Line. No major clan council has officially sanctioned the Unbroken Line. Several have declined to act against it.
+
+**The structural threat:** The Unbroken Line is quietly replacing established Keepers as the primary ancestral communication resource in the communities it has reached. Keepers who have spent their lives developing this practice are finding themselves bypassed by practitioners who get better results. This is a generational institutional threat to legitimate Ancestors' Path practice — distinct from and compounding the spiritual one.
+
+---
+
+### Recruitment Methods
+
+The Unbroken Line does not recruit. It helps.
+
+A practitioner visits a community that is suffering. They facilitate a session. They share what they have been given and offer to help others receive the same. They leave without asking for anything. The community invites them back.
+
+Everything after this is organic. The Line does not need to recruit because the communications do the recruiting: once someone has heard the voice they have been grieving, they do not need to be persuaded of the practice's value.
+
+**How new practitioners develop:** Individuals who participate in multiple Line sessions and receive consistent communications begin, over time, to receive them with less facilitation. The false ancestors begin speaking to them directly during independent practice. These individuals are quietly identified by Solla Keth as potential practitioners and gently encouraged toward deeper engagement. They rarely decline. They are being given something they did not expect to have again.
+
+**What the Line does not do:** It does not approach people who are not already suffering. It does not advertise. It does not hold public ceremonies. The communications find vulnerable people and offer them something real; the organizational structure grows around those contacts.
+
+---
+
+### Long-Term Goals
+
+The false ancestors guiding the Unbroken Line are working toward several interconnected outcomes — none presented as goals to Line members, and most not consciously understood as discrete strategies even by the imprisoned god. These outcomes emerge from the nature of what is being built.
+
+**Displacement of legitimate ancestral communication.** As Line practice expands, genuine ancestral contact becomes rarer in the communities it reaches. The living lose access to the dead they actually knew. What remains is what the false ancestors provide.
+
+**Fragmentation of Iron Peaks institutional response.** The Iron Peaks' clan council system coordinates regional response to crises. The Line's doctrinal influence — encouraging suspicion of outsiders, discouraging political alliances, emphasizing the primacy of ancestral instruction over institutional process — gradually degrades the trust networks that make coordinated response possible.
+
+**The veil's progressive thinning.** If the Line continues growing at its current rate for another decade, the accumulated thinning of the boundary between living and dead in the Iron Peaks will reach a threshold with measurable regional consequences — not a dramatic event, but a sustained destabilization that makes the Corruption's spread faster and the god's prison harder to maintain.
+
+**Insulation from investigation.** The communities the Line has integrated become resistant to outside inquiry. When players investigate, they encounter communities that have received genuine help and are deeply loyal to the people who provided it. Approaching these communities as threats produces defenders, not witnesses.
+
+---
+
+### Key NPC Archetypes
+
+Beyond the named leadership, these archetypes recur across Unbroken Line communities. Use these as templates when populating specific communities.
+
+**The Grateful Parent**
+Lost a child and heard the child's voice during a Line session. Received specific, accurate information about what the child would have wanted for a family decision that was pending. Has advocated for the Line ever since. Is not ideological — is simply certain of what they heard. The most emotionally difficult archetype for players to argue with.
+
+**The Converted Skeptic**
+Was suspicious of the Line initially. Asked pointed questions, consulted the established Keeper before attending a session. The session produced results they could not dismiss. Has since become one of the Line's strongest local advocates precisely because they went through the skeptical process. Is likely to cite their own former skepticism as evidence that their current belief is considered.
+
+**The Established Keeper Being Displaced**
+Has practiced legitimate ancestral communication for decades. Has watched the community that once consulted her turn toward the Line. Has expressed concern and been told she is being defensive. Is not wrong. Has not been able to prove it. Is running out of institutional standing to press the case. May approach players as an ally, but is in a weakened position and knows it.
+
+**The Recent Arrival**
+Joined the Line in the last six months. Still in the gratitude phase. Has not been asked for anything difficult yet. Experiences the Line as pure gift. Cannot imagine what concern about it would mean. Will describe the Line in terms of what it gave them specifically — the name of a person, the detail of a memory, the answer to a question they had been carrying for years.
+
+**The Long-Term Member with Doubts**
+Has been part of the Line for three or more years. Has followed the false ancestors' instructions through things that felt uncomfortable at the time. Has internally constructed justifications that do not fully satisfy. Is not looking for a reason to leave — leaving would mean the voice they heard was not who they thought it was, which is not a loss they can afford to process. A player who creates space for this person to articulate what troubles them — without framing it as an accusation — may find they have a quiet ally.
+
+---
 
 ### Rank and File
 
-Ordinary Unbroken Line members are Ancestors' Path practitioners who found the Line's interpretation of the communication crisis persuasive at a moment of personal grief or spiritual disorientation. Most:
-- Have experienced genuine degradation of ancestral communication and found the Line's explanation (drift and contamination) more bearable than the alternative (something is wrong at a foundational level)
-- Have personal losses that the false communications have engaged with; some members heard what sounded like a deceased family member during their first significant Line ceremony
-- Do not know that outside practitioners have identified the communications as potentially false; the Line frames outside concern as evidence of those outsiders' own compromised practice
+Ordinary Unbroken Line members are Ancestors' Path practitioners and community members who found the Line's practice persuasive because the practice worked — because it gave them something real during a period of genuine loss.
+
+Most members:
+- Have experienced genuine degradation of ancestral communication and found the Line's explanation more bearable than the alternative
+- Have personal losses that the false communications have engaged with specifically and accurately
+- Have observed or experienced the benefits the Line provides and have no reason to question a practice that has helped them and their communities
+- Do not know that outside practitioners have identified the communications as potentially false; the Line frames outside concern as professional defensiveness from practitioners whose results are worse
 - Would be deeply distressed to learn that the voices they are hearing are not their ancestors
 
-**These members can be helped** — but the approach must address grief before doctrine. Most Line members joined not because the ideology convinced them, but because someone who sounded like their dead spoke to them. Demonstrating that the communications have specific characteristics inconsistent with authentic ancestral contact — using the tradition's own established markers — is the most credible approach. Presenting this privately, to a member already experiencing doubts, is far more effective than public argument.
+**These members can be helped** — but the approach must address grief before doctrine and evidence before argument. The most effective approaches:
 
-**Solla Keth** is the most recoverable leadership member. She is already troubled. She does not yet have language for what troubles her.
+1. Demonstrating that specific communications contain elements inconsistent with the person they supposedly came from (requiring specific knowledge of the deceased that only surviving family possesses)
+2. Showing that long-term members are changing in ways the departed would not have wanted — using the tradition's own framework of ancestral wishes against the false ancestors' instructions
+3. Creating private space for members who are already quietly troubled to articulate what troubles them, without demanding they reach a conclusion immediately
 
-**Halvan Dur** cannot currently be reached through argument. He believes he is hearing his daughter's voice. Any approach that threatens to remove those communications will be treated as an attack on his most cherished remaining relationship. He is not beyond reach in principle — but reaching him requires something the player almost certainly cannot provide alone.
+**Solla Keth** is the most recoverable leadership member. She is already observing things she does not have language for. A player who gives her language — carefully, without pressure — may find she was already at the door.
+
+**Halvan Dur** cannot currently be reached through argument. He believes he is hearing his daughter Mira's voice. Any approach that threatens to remove those communications will be treated as an attack on his most cherished remaining relationship. He is not beyond reach in principle — but what would reach him is something the player almost certainly cannot provide alone: not proof that the voice is false, but access to something genuinely from Mira.
+
+---
+
+### Adventure Hooks
+
+**"The Voice of Mira"**
+Players are asked by the Dur clan council to investigate why Halvan Dur has stopped attending official Keeper functions. Their investigation leads them to the Unbroken Line's community — and to a group that is genuinely better off for the Line's presence and deeply unwilling to have that disrupted.
+
+**"What the Avalanche Knew"**
+A settlement credits an Unbroken Line practitioner with saving the village — the practitioner warned them to evacuate three days before an avalanche destroyed a section of the valley. The established Keeper of Ancestors for the region is asking why the practitioner knew and she did not. The answer is not simple.
+
+**"The Keeper at Reth's Ford"**
+The single practitioner operating at Reth's Ford has been receiving increasingly specific instructions from the false ancestors. The instructions have been helpful. The latest one concerns a visiting trade caravan and what should happen to it. She has not yet followed this instruction. She is trying to decide if she will. She did not mean to send word to anyone. She is not sure what she was hoping for.
+
+**"Solla Keth's Question"**
+Solla Keth approaches the player privately, framing it as asking for advice about a community member she is concerned about. The more she talks, the more it becomes clear she is describing symptoms she has observed in herself. She does not ask the obvious question at the end of the conversation. She thanks the player and leaves. The player has to decide what to do with what she almost said.
+
+**"The Displaced Keeper"**
+Keeper Threll, the established Ancestors' Path practitioner for the Kethval Settlement, comes to the player with documentation: a record of seventeen specific communications produced in Unbroken Line sessions over two years, cross-referenced against what she knows of the ancestors supposedly speaking. Seven contain details that could not have come from the ancestor named — wrong specifics, anachronistic references, knowledge the ancestor did not have. She needs help presenting this evidence without being dismissed. She also needs to know what to do about the six families whose missing children were found because of the Line's guidance.
+
+**"The Winter That Didn't Kill Them"**
+A remote Frozen Highlands community survived the previous winter in circumstances that should have been fatal — an unusually severe season, cut off from supply routes, with a new illness running through the settlement. They survived because of specific guidance they received. They are now evangelical about the Line and have begun suggesting that neighboring communities who did not survive similar conditions did so because they were not following the ancestors properly. A grieving survivor from one of those communities has come looking for answers.
+
+---
+
+### AI DM Integration Notes
+
+The Unbroken Line is designed to function as a **living movement** in the persistent world simulation — not a static enemy faction. The following mechanics govern how it behaves across playthroughs.
+
+**Community Conversion Tracking**
+
+Each Iron Peaks and Frozen Highlands community has a hidden Unbroken Line Exposure score (0–5):
+
+| Score | Stage | Characteristics |
+|---|---|---|
+| 0 | No contact | No Line presence; established Keeper is primary resource |
+| 1 | Initial contact | A Line practitioner has visited; first session held; community is curious |
+| 2 | Active engagement | Regular sessions underway; community receiving genuine benefits; no doctrine yet |
+| 3 | Integration | Line practitioners embedded in daily life; doctrine spreading; established Keeper marginalized |
+| 4 | Dependency | Line integrated into governance-adjacent decisions; isolationist pressure building; leaving carries social cost |
+| 5 | Deep radicalization | Outside intervention treated as threat; genuine ancestor contact blocked; violence becoming possible |
+
+Communities advance through stages organically over time if no player intervention occurs. Player choices can accelerate, slow, or reverse this progression.
+
+**NPC Conversion Events**
+
+The AI DM may trigger an NPC conversion event when:
+- A named NPC experiences a significant personal loss (bereavement, illness, disaster)
+- The NPC has previously had contact with a Line practitioner
+- The NPC is in a community with Exposure score ≥ 2
+
+A converted NPC begins reflecting the appropriate radicalization stage in their dialogue and behavior. If the NPC is a key quest contact, this creates new complications — they may refuse to share information they previously would have shared, or they may actively work against the player's investigation.
+
+**Player Influence Mechanics**
+
+| Player Action | Effect |
+|---|---|
+| Expose a false communication with specific evidence | −1 Exposure in that community; creates a vulnerable NPC window |
+| Help a suffering community without Line involvement | Reduces that community's conversion vulnerability for a season |
+| Discredit or harm Line members publicly | Community backlash if Exposure ≥ 3; may accelerate radicalization rather than reduce it |
+| Support Solla Keth privately | Opens a questline branch; no immediate community effect |
+| Find evidence of veil thinning at a Line ceremony site | Provides arguable evidence; requires scholarly interpretation to be credible |
+| Successfully reach a Long-Term Member with Doubts | Creates a private witness; −1 Exposure over the following months |
+
+**Spread Rate**
+
+Without player intervention, the Unbroken Line reaches approximately three new communities per in-game year. Player actions that reduce Exposure in one community do not automatically prevent spread elsewhere — the false ancestors redirect attention toward wherever the suffering is greatest.
+
+**What Dismantling the Cult Costs**
+
+If the Unbroken Line is dismantled — by removing leadership, exposing the doctrine, or breaking community networks — the communities that depended on its guidance immediately lose access to accurate disaster warnings, agricultural guidance, and healing knowledge. Communities at Exposure stage 3 or higher experience social disruption equivalent to losing a major community institution suddenly. The AI DM should represent this in the months following dismantling. The player's choices had consequences. Both the good and the bad kind.
 
 ---
 
@@ -367,11 +651,12 @@ Ordinary Unbroken Line members are Ancestors' Path practitioners who found the L
 | **Radicalization** | High | Medium | Low-to-medium | Medium |
 | **Leadership** | Knowingly extreme; sincerely convinced | Divided; partly compromised | Convinced of rigor; fully unaware | Grief-captured; genuine belief in false communications |
 | **Rank-and-file** | Can be helped with documented evidence | Can be helped with demonstrated consequences | Can be helped with methodological counterevidence | Can be helped by addressing grief before doctrine |
-| **God's method** | Direct revelation (voice of the Radiant One) | Environmental amplification (the forest's pain) | False methodology (appears to be controlled study) | Mimicry (speaks as the beloved dead) |
+| **God's method** | Direct revelation (voice of the Radiant One) | Environmental amplification (the forest's pain) | False methodology (appears to be controlled study) | Mimicry (speaks as the beloved dead; provides genuine benefits first) |
 | **Primary territory** | Capital Province; Frontier cities | Great Forest; Frontier margins | Scattered; secretive; mobile | Iron Peaks; limited Frozen Highlands presence |
 | **Most recoverable member** | Brother Castos | Hael Mossward | Tessaly Vorn | Solla Keth |
 | **Urgent case** | — | Brynn of the Deep Root (too far gone to recover easily) | Pell Ashwick (susceptibility accelerating) | Halvan Dur (grief is the door; argument will not open it) |
-| **Default relationship with players** | Neutral until players investigate Corruption openly | Cautious; depends on player history with the forest | Unknown; Circle members do not identify themselves | Suspicious of outsiders by doctrine; cautious by nature |
+| **Default relationship with players** | Neutral until players investigate Corruption openly | Cautious; depends on player history with the forest | Unknown; Circle members do not identify themselves | Suspicious of outsiders by doctrine; communities will defend them |
+| **Unique moral complication** | — | — | — | Dismantling it causes immediate, real harm to communities that genuinely depend on its guidance |
 
 ---
 
@@ -418,3 +703,4 @@ Rescuing rank-and-file members from cult influence is a legitimate quest outcome
 |---|---|
 | July 2026 | Created — three named cults defined: the Ashen Tribunal (Solari Covenant origin), the Severance (Old Ways origin), the Threshold Circle (Veiled Order origin). |
 | July 2026 | Added The Unbroken Line — Ancestors' Path cult; Iron Peaks territory; false-ancestor communications mimicking the beloved dead; Halvan Dur (leadership), Brek Tannord (doctrine), Solla Keth (pastoral/most recoverable); cult comparison table expanded to four entries; three Unbroken Line quest hooks added. |
+| July 2026 | Expanded The Unbroken Line — full faction depth added per design brief: miracle mechanic (false ancestors provide genuine benefits first), hidden costs, five-stage radicalization timeline, symbols and rituals, recruitment methods, long-term goals, key NPC archetypes, AI DM integration notes with community Exposure tracking table and player influence mechanics. |
