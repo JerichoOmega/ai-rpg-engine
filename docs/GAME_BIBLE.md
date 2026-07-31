@@ -54,10 +54,16 @@
 44. [Journey System](systems/journey_system.md) *(separate file — travel as storytelling, camp philosophy, companion relationships, interaction scheduling, camp evolution)*
 45. [The Forgotten Eighth](../elyndor/history/the_eighth.md) *(separate file — the Ancient God's true identity, the Great Forgetting, the Imprisonment as tragedy, Corruption as amplified virtue)*
 46. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
-47. [Lore Bible — History](lore/HISTORY_BIBLE.md) *(separate file — writer-facing Four Ages narrative companion; campaign tone and worldbuilding reference)*
-48. [Lore Bible — Divine Chorus Philosophy](lore/DIVINE_CHORUS_PHILOSOPHY.md) *(separate file — the Chorus's nature, the Final Verse, the Five Tensions, the Forgotten Eighth summary, writer guidance)*
-49. [Lore Bible — Imperial Capital](lore/IMPERIAL_CAPITAL.md) *(separate file — the Capital city, its institutions, districts, Corruption expression, and campaign significance)*
-50. [Lore Bible — Great Library](lore/GREAT_LIBRARY.md) *(separate file — the continent's largest archive, its collections, the Sealed Archive, the Great Forgetting's gaps, and access as campaign tool)*
+47. [Lore Bible — README](lore/README.md) *(separate file — Lore Bible index and usage guide; read this first)*
+48. [Lore Bible — Canon Rules](lore/CANON_RULES.md) *(separate file — immutable design principles: no chosen one, no chosen races, Chorus limits, Architects rules, Forgotten Eighth canon)*
+49. [Lore Bible — History](lore/HISTORY_BIBLE.md) *(separate file — Seven Ages narrative companion; campaign tone and worldbuilding reference)*
+50. [Lore Bible — Timeline](lore/TIMELINE.md) *(separate file — concise chronological developer reference covering all Seven Ages with key canonical facts)*
+51. [Lore Bible — Divine Chorus](lore/DIVINE_CHORUS.md) *(separate file — canonical Chorus philosophy, responsibilities, limits, the Final Verse, and writing guidance)*
+52. [Lore Bible — Divine Chorus Philosophy (extended)](lore/DIVINE_CHORUS_PHILOSOPHY.md) *(separate file — expanded Chorus philosophy: Five Tensions, Free Will Is Sacred, What Chorus Does NOT Do)*
+53. [Lore Bible — Architects](lore/ARCHITECTS.md) *(separate file — the Architects: what is known, the central design principle, content guidance, prohibited actions)*
+54. [Lore Bible — First Temple](lore/FIRST_TEMPLE.md) *(separate file — oldest temple to the Chorus, the sealed structure beneath it, and the design principle that it is never resolved)*
+55. [Lore Bible — Imperial Capital](lore/IMPERIAL_CAPITAL.md) *(separate file — the Capital city, its institutions, districts, Corruption expression, and campaign significance)*
+56. [Lore Bible — Great Library](lore/GREAT_LIBRARY.md) *(separate file — the continent's largest archive, Order of Archivists, Official Oath, traditions, and the Sealed Archive)*
 
 ---
 
