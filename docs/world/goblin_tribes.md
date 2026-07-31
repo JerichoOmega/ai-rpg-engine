@@ -287,6 +287,8 @@ The secondary threat is Varkk. If Varkk decides Krath's Corruption is power wort
 - Krath can serve as a boss encounter with a moral layer — he is not evil, he is lost; destroying him is a loss the tribe will feel
 - Varkk's interest in the Corruption can seed a longer arc: he may attempt to deliberately expose himself or others to whatever affected Krath
 
+> **Running Krath:** His full stat block, phase behavior, encounter triggers, diplomacy handling, non-lethal resolutions, and campaign-stage progression are authored in [`docs/encounters/krath_the_unyielding.md`](../encounters/krath_the_unyielding.md). The AI Director should use that file rather than improvising the encounter.
+
 ---
 
 ### Mossroot Tribe — Corruption Manifestation

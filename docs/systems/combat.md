@@ -100,7 +100,7 @@ Enemies are dicts defined in `enemy_manager.py`:
     "hp":            30,
     "max_hp":        30,
     "damage":        8,
-    "crit_chance":   0.1,       # float, 0.0–1.0
+    "crit_chance":   10,        # percent, 1–100 (roll <= crit_chance on a d100)
     "elite":         False,     # enhanced stats flag
     "boss":          False,     # triggers boss behavior
     "status_effects": []        # active effects list
