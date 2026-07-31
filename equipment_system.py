@@ -31,6 +31,69 @@ equipment = {
 
 ITEM_DATABASE = {
 
+    # =========================
+    # HERO STARTING WEAPONS
+    # =========================
+
+    "longsword": {
+
+        "slot": "weapon",
+
+        "attack_bonus": 4,
+
+        "defense_bonus": 0,
+
+        "rarity": "common"
+    },
+
+    "knights_shield": {
+
+        "slot": "armor",
+
+        "attack_bonus": 0,
+
+        "defense_bonus": 3,
+
+        "rarity": "common"
+    },
+
+    "apprentices_staff": {
+
+        "slot": "weapon",
+
+        "attack_bonus": 6,
+
+        "defense_bonus": 0,
+
+        "rarity": "common"
+    },
+
+    "short_sword": {
+
+        "slot": "weapon",
+
+        "attack_bonus": 3,
+
+        "defense_bonus": 0,
+
+        "rarity": "common"
+    },
+
+    "forging_hammer": {
+
+        "slot": "weapon",
+
+        "attack_bonus": 5,
+
+        "defense_bonus": 0,
+
+        "rarity": "common"
+    },
+
+    # =========================
+    # DROPPED / PURCHASABLE
+    # =========================
+
     "iron_sword": {
 
         "slot": "weapon",
@@ -86,6 +149,34 @@ ITEM_DATABASE = {
         "rarity": "epic"
     }
 }
+
+# =========================
+# EQUIP STARTING ITEM
+# =========================
+
+def equip_slot_only(item_key):
+    """Record a starting item as equipped WITHOUT applying its stat bonus.
+
+    Used at hero selection when the hero roster's attack_bonus/defense
+    already includes the equipped weapon's contribution.  Populating
+    the equipment slot ensures the equipment system correctly tracks
+    what is worn for later unequip/swap operations (remove_item_stats
+    will then correctly subtract the weapon bonus when it is changed).
+
+    Does NOT add the item to or remove it from inventory — callers
+    are responsible for building the inventory list as needed.
+    """
+
+    item = ITEM_DATABASE.get(item_key)
+
+    if not item:
+
+        return
+
+    slot = item["slot"]
+
+    equipment[slot] = item_key
+
 
 # =========================
 # EQUIP ITEM

@@ -20,7 +20,7 @@ from hero_roster import HERO_ROSTER, HERO_ORDER
 
 from world_state import world_state, ensure_world_state_defaults
 
-from equipment_system import equipment
+from equipment_system import equipment, equip_slot_only
 
 from skill_tree import player_skills
 
@@ -102,7 +102,23 @@ def apply_hero(hero_key):
     player_ws["gold"]             = hero["gold"]
     player_ws["equipped_weapon"]  = hero["equipped_weapon"]
     player_ws["weapon_bonus"]     = hero["weapon_bonus"]
-    player_ws["inventory"]        = list(hero["inventory"])
+
+    # Build inventory WITHOUT the equipped weapon — it now lives in
+    # the equipment slot, not the bag.  Other items (consumables,
+    # shields-in-bag, etc.) remain in inventory.
+    _WEAPON_DISPLAY_TO_KEY = {
+        "Longsword":         "longsword",
+        "Apprentice's Staff": "apprentices_staff",
+        "Short Sword":       "short_sword",
+        "Forging Hammer":    "forging_hammer",
+    }
+    _weapon_display = hero["equipped_weapon"]
+    _weapon_key     = _WEAPON_DISPLAY_TO_KEY.get(_weapon_display)
+
+    player_ws["inventory"] = [
+        item for item in hero["inventory"]
+        if item != _weapon_display
+    ]
     player_ws["level"]            = hero["level"]
     player_ws["xp"]               = hero["xp"]
     player_ws["xp_to_next_level"] = hero["xp_to_next_level"]
@@ -114,6 +130,15 @@ def apply_hero(hero_key):
     # Store the roster key so save/load can identify which hero was
     # chosen (used for dialogue hooks, companion reactions, etc.)
     player_ws["hero_key"] = key
+
+    # ── Populate equipment slot for the starting weapon ────────────
+    # equip_slot_only() records the weapon in the equipment dict
+    # WITHOUT adding its stat bonus — the hero roster's attack_bonus
+    # already includes the weapon's contribution.  This ensures later
+    # unequip/swap operations (which call remove_item_stats) correctly
+    # subtract the weapon bonus rather than treating the slot as empty.
+    if _weapon_key:
+        equip_slot_only(_weapon_key)
 
     # ── Sync the Player object (used by combat.py) ─────────────────
     # combat.py imports `player` from player.py and reads `.hp`,
