@@ -221,6 +221,12 @@ The Circle believes it is in a controlled study relationship with a powerful ent
 - Does not know the full scope of what the Circle is doing; believes he has joined a classified research group
 - His "unusual aptitude" is not aptitude — he is unusually susceptible to the god's influence, which is why Soles recruited him
 
+### Named Questline
+
+**[The Acceptable Risk](../quests/threshold_circle_questline.md)** — entry via the disappearance of Pell Ashwick; two branches (reaching Tessaly Vorn through the Transit House's documentary evidence; or confronting Soles directly at the Deep Reading Site); three resolution paths; the god's manipulation visible through four named documents players can read. Full questline: [`docs/quests/threshold_circle_questline.md`](../quests/threshold_circle_questline.md).
+
+---
+
 ### Territory
 
 The Threshold Circle operates out of Veiled Order facilities but maintains a separate network of three private locations the Order does not know about:
@@ -872,3 +878,4 @@ Rescuing rank-and-file members from cult influence is a legitimate quest outcome
 | July 2026 | Added The Unbroken Line — Ancestors' Path cult; Iron Peaks territory; false-ancestor communications mimicking the beloved dead; Halvan Dur (leadership), Brek Tannord (doctrine), Solla Keth (pastoral/most recoverable); cult comparison table expanded to four entries; three Unbroken Line quest hooks added. |
 | July 2026 | Expanded The Unbroken Line — full faction depth added per design brief: miracle mechanic (false ancestors provide genuine benefits first), hidden costs, five-stage radicalization timeline, symbols and rituals, recruitment methods, long-term goals, key NPC archetypes, AI DM integration notes with community Exposure tracking table and player influence mechanics. |
 | 2026-07-31 | Added named questline for The Unbroken Line — *The Voice They Left Behind*: three-beat structure (The Keeper Who Stopped Listening; What the Dead Know; The Line That Breaks); three resolution paths (Evidence Path, Mira Path, Solla Path); Solla Keth recovery arc and Halvan Dur problem integrated; companion reactions (Talos, Ragash); writer's notes. |
+| 2026-07-31 | Added named questline for The Threshold Circle — *The Acceptable Risk*: entry via Pell Ashwick disappearance; dual branches (Transit House / Tessaly Vorn documentary path; Deep Reading Site / Soles confrontation path); three resolution paths; four named readable documents (Soles's Contact Log, Tessaly's Analysis Notes, Drassic Seal Record, Pell's Field Journal); companion reactions; AI DM integration notes. Full questline: `docs/quests/threshold_circle_questline.md`. |
