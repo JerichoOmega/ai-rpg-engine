@@ -1,117 +1,92 @@
 {
-    "time": {
-        "day": 1,
-        "hour": 8,
-        "weather": "clear"
-    },
-    "player": {
-        "name": "Adventurer",
-        "class": "Mage",
-        "hp": 75,
-        "max_hp": 90,
-        "gold": 150,
-        "level": 3,
-        "xp": 0,
-        "xp_to_next_level": 100,
-        "resource_name": "Stamina",
-        "resource": 100,
-        "max_resource": 100,
-        "attack_bonus": 16,
-        "defense": 0,
-        "dodge": 0,
-        "reputation": 0,
-        "inventory": [
-            "Healing Potion",
-            "Epic Shadow Staff"
-        ],
-        "equipped_weapon": "Epic Shadow Staff",
-        "weapon_bonus": 7,
-        "status_effects": []
-    },
-    "companions": {
-        "party": [
-            "Mira",
-            "Kael"
-        ],
-        "recruited": [
-            "Mira",
-            "Kael"
-        ],
-        "relationships": {
-            "Mira": 0,
-            "Kael": 0
+    "version": 1,
+    "world_state": {
+        "time": {
+            "day": 1,
+            "hour": 8,
+            "season": "spring"
         },
-        "loyalty": {
-            "Mira": 50,
-            "Kael": 50
-        }
-    },
-    "world_conditions": {
-        "world_chaos": 0,
+        "player": {
+            "name": "Wanderer",
+            "level": 1,
+            "xp": 75,
+            "xp_to_next_level": 100,
+            "gold": 77,
+            "hp": 42,
+            "max_hp": 100,
+            "resource_name": "Stamina",
+            "resource": 100,
+            "max_resource": 100,
+            "attack_bonus": 5,
+            "defense": 2,
+            "dodge": 5,
+            "weapon_bonus": 0,
+            "equipped_weapon": "Rusty Sword",
+            "inventory": [
+                "Dragon Slayer"
+            ],
+            "class": "Warrior"
+        },
+        "inventory": {
+            "items": [],
+            "gold": 0
+        },
+        "quests": {
+            "active": [
+                "Necromancer Purge"
+            ],
+            "completed": [
+                "Cult Hunt",
+                "Dragon Slayer"
+            ],
+            "failed": [
+                "Necromancer Purge"
+            ],
+            "progress": {}
+        },
+        "companions": {
+            "party": [],
+            "relationships": {},
+            "loyalty": {}
+        },
+        "factions": {
+            "kingdom": 10,
+            "mages_guild": -100,
+            "shadow_cult": 0,
+            "rebels": 0
+        },
+        "regions": {
+            "current_region": "kingdom_capital",
+            "discovered_regions": [
+                "kingdom_capital"
+            ],
+            "faction_control": {},
+            "current_location": null
+        },
+        "world_conditions": {
+            "world_chaos": 0,
+            "active_disasters": []
+        },
+        "story_memory": {
+            "major_choices": [],
+            "important_flags": {}
+        },
+        "events": [],
+        "history": {
+            "major_events": [
+                "Cult Hunt"
+            ],
+            "choices": [],
+            "discovered_lore": []
+        },
+        "sessions": {
+            "session_count": 1,
+            "last_session_summary": ""
+        },
         "civil_war": false,
         "cult_rising": false,
         "mages_rebellion": false,
-        "dragon_awakened": false
-    },
-    "factions": {
-        "kingdom": 25,
-        "shadow_cult": 0,
-        "mages_guild": 0,
-        "neutral": 0
-    },
-    "regions": {
-        "current_region": "kingdom_capital",
-        "discovered_regions": [],
-        "faction_control": {
-            "kingdom_capital": "kingdom",
-            "shadow_marsh": "shadow_cult",
-            "frostpeak_mountains": "neutral",
-            "arcane_ruins": "mages_guild",
-            "ashen_wastes": "neutral"
-        }
-    },
-    "npcs": {
-        "King Aldric": {
-            "alive": true,
-            "location": "kingdom_capital",
-            "relationship": 0,
-            "role": "king"
-        },
-        "Archmage Seraph": {
-            "alive": true,
-            "location": "arcane_ruins",
-            "relationship": 0,
-            "role": "mage_leader"
-        },
-        "Shade Prophet": {
-            "alive": true,
-            "location": "shadow_marsh",
-            "relationship": 0,
-            "role": "cult_leader"
-        }
-    },
-    "quests": {
-        "active": [],
-        "completed": [],
-        "failed": [],
-        "progress": {
-            "Cult Hunt": 2
-        }
-    },
-    "story_memory": {
-        "used_dark_magic": false,
-        "dragon_slain": true,
-        "merciful": false,
-        "ruthless": false,
-        "cult_connections": false
-    },
-    "history": {
-        "choices": [],
-        "discovered_lore": [],
-        "major_events": []
-    },
-    "events": {
-        "active": [],
-        "completed": []
+        "dragon_alive": true,
+        "world_chaos": 0
     }
 }
