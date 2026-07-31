@@ -62,7 +62,7 @@ The Age of Harmony is the high-water mark of mortal civilization. A genuine gold
 
 ### The Golden Era
 
-- **The First Empire rises** — the continent's disparate kingdoms and peoples unified under a single political structure for the first and only time in recorded history; built through genuine advantages that made membership more valuable than independence
+- **The First Empire rises** — the continent's disparate kingdoms and peoples unified under a single political structure for the first and only time in recorded history; built through genuine advantages that made membership more valuable than independence; see [`docs/lore/civilization/`](../../docs/lore/civilization/) for the full canonical account of the First Empire, the First Council, and the fall
 - **The Great Library founded** — the continent's central repository of knowledge, established to preserve what had been discovered against the next catastrophe; see [`docs/lore/GREAT_LIBRARY.md`](../../docs/lore/GREAT_LIBRARY.md)
 - **Universities and centers of learning flourish** — formal institutions of general scholarship emerge; the tradition of systematic secular learning takes root
 - **Trade routes connect civilizations** — the empire's infrastructure connected regions in ways they had never been connected before; the routes that still exist in the Age of Restoration trace back to this era

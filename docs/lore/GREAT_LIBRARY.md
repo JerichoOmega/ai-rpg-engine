@@ -18,7 +18,7 @@ This inscription appears above the Great Library's primary entrance. It is the i
 
 The Great Library of the Capital is the largest archive of recorded knowledge on the continent.
 
-It was founded during the Second Age, when the newly established political center of the continent recognized that institutional memory required physical infrastructure. The kingdoms that had survived the First Age's end possessed historical records, magical research, religious texts, lineage documents, trade histories, and maps — and no single place where any of it could be consulted, compared, or preserved against the next catastrophe.
+It was founded during the Second Age — during the First Empire's golden era — when the newly established political center of the continent recognized that institutional memory required physical infrastructure. The Library's founding was a direct expression of the First Empire's governing philosophy; see [`docs/lore/civilization/FIRST_EMPIRE.md`](civilization/FIRST_EMPIRE.md). The kingdoms that had survived the First Age's end possessed historical records, magical research, religious texts, lineage documents, trade histories, and maps — and no single place where any of it could be consulted, compared, or preserved against the next catastrophe.
 
 The Library was the answer to that problem. It has been accumulating material ever since.
 
