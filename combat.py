@@ -4,6 +4,10 @@ from player import (
     player
 )
 
+from world_state import (
+    world_state
+)
+
 from event_bus import (
     emit
 )
@@ -354,6 +358,9 @@ def player_turn(
             player.max_hp
         )
 
+        # Mirror into world_state so both representations agree.
+        world_state["player"]["hp"] = player.hp
+
         print(
             f"\nYou recover"
             f" {heal} HP."
@@ -566,6 +573,9 @@ def enemy_turns(
                 0
             )
 
+            # Mirror into world_state so both representations agree.
+            world_state["player"]["hp"] = player.hp
+
             print(
                 f"\n{enemy['name']}"
                 f" hits you for"
@@ -637,6 +647,9 @@ def process_combat_statuses(
                 player.status_effects
             )
         )
+
+        # Mirror into world_state so both representations agree.
+        world_state["player"]["hp"] = player.hp
 
     # =========================
     # ENEMIES

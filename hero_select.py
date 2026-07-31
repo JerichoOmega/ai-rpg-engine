@@ -18,7 +18,7 @@ apply_hero(hero_key: str) -> None
 
 from hero_roster import HERO_ROSTER, HERO_ORDER
 
-from world_state import world_state
+from world_state import world_state, ensure_world_state_defaults
 
 
 # =========================
@@ -196,6 +196,12 @@ def select_hero():
         )
 
     hero = HERO_ROSTER[chosen_key]
+
+    # Reset world state to a clean new-game baseline before
+    # applying the hero so no prior session's quest/faction/inventory
+    # state leaks into the new playthrough.
+    world_state.clear()
+    ensure_world_state_defaults()
 
     apply_hero(chosen_key)
 
