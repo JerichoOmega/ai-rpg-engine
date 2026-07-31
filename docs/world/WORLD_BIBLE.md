@@ -318,15 +318,21 @@ Each religion is developed with:
 
 Religion should affect politics, culture, and daily life throughout the world. It is not background dressing — it is a system that shapes how people think, what they fight over, and who they trust.
 
-### Current Status
 
-⚠️ **NOT YET DEFINED** — The specific major religions, their names, their deities or beliefs, their territories, and their relationship to The Corruption have not been established. Do not invent this content without explicit canonical direction.
+### Established Religions
 
-What is confirmed:
-- There will be a small number of major religions (not dozens)
-- Religion will have real political and cultural influence
-- Some religious orders will fracture under The Corruption's influence (confirmed in Corruption lore)
-- Cults receiving whispers from the imprisoned god exist and are distinct from legitimate religious practice
+Four major religions are defined in full: [`docs/world/religions.md`](religions.md)
+
+| Religion | Core Belief | Primary Territory |
+|---|---|---|
+| **The Solari Covenant** | The Sun God orders and preserves civilization | The Capital Province; Sol Kareth |
+| **The Old Ways** | Nature is sacred; all life is connected | The Great Forest; The Frontier |
+| **The Ancestors' Path** | The dead guide the living; lineage is sacred | The Iron Peaks; The Frozen Highlands |
+| **The Veiled Order** | Death is transition; knowledge is the only permanent thing | All regions (small; secretive) |
+
+Each religion includes: theology, traditions, territory, political influence, and how The Corruption is affecting it. The distinction between legitimate religious practice and corruption-influenced cults is fully documented in [`docs/world/religions.md`](religions.md).
+
+Each religion has an associated order with separate reputation tracking. See [`docs/systems/reputation.md`](../systems/reputation.md).
 
 ---
 

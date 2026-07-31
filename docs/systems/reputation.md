@@ -47,8 +47,23 @@ The following factions are confirmed to have separate reputation tracking:
 | **Mages Guild** | The arcane institution; magical services and Eleanor's faction |
 | **Vampire Houses** | Three separate houses, each tracked independently |
 | **Goblin Tribes** | Three separate tribes, each tracked independently |
-| **Religious Orders** | ⚠️ NOT YET DEFINED — depends on religion framework |
+| **Religious Orders** | Four orders, each tracked independently — see below |
 | **Mercenary Companies** | ⚠️ NOT YET DEFINED — specific companies to be established |
+
+### Religious Orders (detail)
+
+Four orders are tracked independently, one per major religion:
+
+| Order | Parent Religion | Reputation Character |
+|---|---|---|
+| **The Covenant Clergy** | The Solari Covenant | Institutional and political; affected by civic decisions, treatment of Covenant property, and alliances with nobility |
+| **The Grove Keepers** | The Old Ways | Decentralized; affected by environmental choices, treatment of sacred groves, and relations with elven communities |
+| **The Ancestor Speakers** | The Ancestors' Path | Clan-linked; clan-specific sub-reputation feeds into tradition-wide standing; dwarven and Highlands communities treated separately |
+| **The Veiled Archivists** | The Veiled Order | Information-sensitive; affected by what the player does with knowledge the Order shares, and whether they expose or protect Order members |
+
+Standing with one order does not transfer to others. The Solari Covenant and the Old Ways have significant historical tension — high standing with one creates a small baseline penalty with the other unless the player actively manages both relationships.
+
+> Full religion definitions: [`docs/world/religions.md`](../world/religions.md)
 
 Additional factions may be added as the world is developed. Each new faction with meaningful player interaction should have its own reputation track.
 
