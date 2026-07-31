@@ -242,4 +242,136 @@ The tribes are political entities, not saviors. They will not sacrifice their in
 
 ### The Corruption and the Tribes
 
-The Corruption's effect on goblin tribes is not yet fully defined. As a design direction: goblins are smaller communities than human kingdoms, which means The Corruption's influence may manifest faster and be harder to contain — but also that the tribes may be more nimble in recognizing and responding to something going wrong in their own ranks. The Mossroot, with their close relationship to the natural world, may notice environmental Corruption indicators before larger civilizations do.
+Goblins are smaller communities than human kingdoms. The Corruption's influence moves faster through them and is harder to contain — there are fewer institutions to absorb the pressure, and when a leader or champion is affected, the ripple reaches the whole tribe quickly. The tribes' advantage is the opposite side of the same coin: they are close-knit enough that something wrong becomes visible before it becomes unmanageable, if anyone is paying attention.
+
+Each tribe is affected differently. The specific manifestations are defined below in the Corruption Effects section.
+
+---
+
+## Corruption Effects by Tribe
+
+> **Authority:** This section is canonical. All encounters, quests, and AI Director decisions involving goblin tribes and The Corruption must align with the manifestations defined here.
+
+The Corruption does not affect the three tribes in the same way. It finds the fracture lines already present in each community and pries them open. The Stonefang's fracture is aggression. The Mossroot's is the land they depend on. The Ashfire's is the ambition holding a fragile new unity together.
+
+---
+
+### Stonefang Tribe — Corruption Manifestation
+
+**How the Corruption is currently affecting the tribe:**
+
+The Corruption has entered the Stonefang through their most celebrated quality: physical dominance. Warriors who were already the tribe's strongest fighters are being pushed past their limits — not metaphorically, but literally. Several of Stonefang's veteran raiders have begun exhibiting uncontrolled aggression that extends beyond combat into daily life. Minor disputes that would previously have been resolved through the formalized Proving structure are escalating into lethal violence. At least two Stonefang goblins have been killed in unsanctioned brawls since the change began.
+
+The epicenter is a warrior the tribe calls **Krath the Unyielding** — a champion who has always been the tribe's most powerful fighter and who is now becoming something more and less than that simultaneously. Krath wins every confrontation. He also cannot stop. His hunting parties kill more than the tribe can use. He has twice ignored Grakkor's direct orders to disengage during a raid, both times citing enemies that other warriors could not see.
+
+Grakkor knows something is wrong with Krath. He does not yet have a name for it, and his culture does not give him good tools for recognizing a supernatural problem — a warrior who wins is a warrior who is right, by every framework the Stonefang have. This is the trap The Corruption has set: the thing it is doing to Krath looks like strength, right up until it destroys him and takes part of the tribe with it.
+
+**Visible signs:**
+- Stonefang raiding parties are hitting targets harder than economics justify — burning rather than looting, killing rather than capturing
+- Trophy displays near Krath's tent have grown grotesque; trophies have begun appearing that cannot be explained by any acknowledged raid
+- Stonefang warriors who spend extended time near Krath are showing elevated aggression themselves; the effect does not spread uniformly, but proximity matters
+- Varkk, Grakkor's deputy, is watching Krath closely — not out of concern, but out of interest. If Krath represents a new kind of power, Varkk wants it
+- Animals near the Fang-Hold have begun avoiding the settlement; the hounds the Stonefang use for hunting refuse to approach Krath's tent
+
+**Campaign consequence if left unaddressed:**
+
+Krath's trajectory ends in one of two ways: he destroys himself in a confrontation he cannot survive, or he becomes something that destroys others. If left alone long enough, the latter happens first. A Corrupted champion at the head of a Stonefang raiding force — one that no longer calculates risk, that does not stop when a fight is won, that is drawing other warriors into its orbit — is not a raiding tribe anymore. It is a weapon pointed at everything in range.
+
+The secondary threat is Varkk. If Varkk decides Krath's Corruption is power worth having, the tribe splits: Grakkor's faction trying to contain the problem, Varkk's faction believing the problem is actually an opportunity. A civil conflict within the Stonefang, driven by a Corrupted champion and a deputy who wants what the champion has, destabilizes the eastern Frontier in ways that outlast the original threat.
+
+**What writers can do with this:**
+- The party may encounter a Stonefang raiding party that hits a target with disproportionate violence — first sign something is different
+- Grakkor could be a reluctant quest source: he needs the problem solved but cannot admit publicly that his best warrior has become a threat without triggering a leadership challenge
+- Krath can serve as a boss encounter with a moral layer — he is not evil, he is lost; destroying him is a loss the tribe will feel
+- Varkk's interest in the Corruption can seed a longer arc: he may attempt to deliberately expose himself or others to whatever affected Krath
+
+---
+
+### Mossroot Tribe — Corruption Manifestation
+
+**How the Corruption is currently affecting the tribe:**
+
+The Mossroot read the land. This is not poetic — it is literal. Their survival as a nomadic hunting tribe depends on deep pattern recognition: what the animals do, where the water moves, which plants grow in disturbed soil, which sounds are absent when they should be present. Their tradition of the Quiet Passage formalizes something the whole tribe practices constantly: understanding precedes action.
+
+This makes them the first community on the Frontier to recognize that something is wrong with the natural world — and the first to be trapped by what that wrongness does to the things they depend on.
+
+The Corruption is moving through the Great Forest margins that form the Mossroot's primary hunting grounds. It is not dramatic. It does not announce itself with visible rot or sudden monster incursions. It is subtle: prey animals behaving wrongly, then behaving dangerously, then disappearing. Game that the Mossroot have hunted in a specific valley for three generations is gone. In its place, the animals that remain are wrong in ways that are hard to articulate and easy to dismiss — until one of them kills a hunter who had tracked that species for decades and knew exactly what to expect from it.
+
+**The corrupted prey:** The Mossroot have named the phenomenon — they call it **"the hollow game."** Animals affected by the Corruption look like what they were. They smell like what they were. They move like what they were, mostly. But they make decisions that no healthy animal makes: they do not flee from fire; they double back on hunters who have lost the trail; some have been observed returning to a kill site multiple times after the kill has been taken, circling without purpose. Two hunters have been killed in the past season by animals that should have run.
+
+Elder Speaker Vess does not have a name for the force behind this. She has a name for the pattern: things that should be alive in one way are alive in a different and wrong way. She has presented this to the council. The council is discussing it. The council's conservative decision structure, its greatest strength in stable times, is becoming a vulnerability in this one: the situation is moving faster than the council can.
+
+**Visible signs:**
+- Specific hunting grounds have gone quiet — not depleted, silent; the absence of normal animal behavior is itself a signal
+- Named animals in the Mossroot's tracking tradition have begun behaving erratically; when the Mossroot's naming tradition meets an animal that no longer acts like the creature that was named, it creates genuine cultural distress
+- The Deep Warren's entrance tunnels have begun to show signs of intrusion by animals that do not belong underground; the Mossroot are spending resources keeping something out that should not want in
+- Vess has ordered hunting parties to travel in larger groups than usual; she has not explained the full reason to the wider tribe, only to the council
+- There is a particular meadow in the forest margins — a place where the Mossroot have met in good seasons for generations — that the whole tribe now avoids without having formally decided to avoid it
+
+**Campaign consequence if left unaddressed:**
+
+The Mossroot's survival model depends on the land working the way they understand it. If the Corruption continues to spread through their hunting grounds, the tribe faces a choice between two bad options: move into contested territory (Stonefang raiding range to the east, closer proximity to the elven settlements they have carefully not crowded to the west) or stay and watch their food supply become something that hunts them.
+
+The deeper consequence is the council's paralysis. Vess sees the problem clearly, but the council structure requires four of six votes to act on major decisions, and two elders are not yet convinced this is the Corruption rather than a bad season. If the party brings external evidence that this is a real and escalating threat — information from the Mages Guild, a pattern observed elsewhere, or direct confrontation with a clearly Corrupted animal specimen — the council may be unlocked. If not, the window for organized response closes.
+
+The Mossroot also represent the continent's early warning system for Corruption spread through the natural world. Their knowledge of where the hollow game has appeared, where the silent zones are, and how quickly those zones are expanding is information no other faction has. If the tribe is destroyed or dispersed, that intelligence is lost.
+
+**What writers can do with this:**
+- A Mossroot hunter can be an early encounter that drops a warning the party may not understand yet: "the game is hollow" — something to investigate later
+- Vess can be a quest source who needs the party to do what the council's structure prevents the tribe from doing unilaterally: investigate, confirm, or confront
+- A corrupted animal encounter can demonstrate the Corruption through the Mossroot lens — not a monster, not a clear enemy, but something familiar and wrong in a way that requires a different kind of response
+- The council's debate can be a social challenge: the party must convince a skeptical elder, not defeat an enemy
+- The Mossroot's environmental knowledge can be a reward: in exchange for help addressing the hollow game, Vess provides the party with information about Corruption spread that no one else on the Frontier has
+
+---
+
+### Ashfire Tribe — Corruption Manifestation
+
+**How the Corruption is currently affecting the tribe:**
+
+The Ashfire's Corruption is the most politically dangerous of the three. It is not targeting a warrior or a food supply. It is targeting the idea that holds the tribe together.
+
+Skarra Ashfire built her coalition on a specific argument: that goblins who stay fragmented will always be exploited, and that unity, maintained honestly and kept durable, is the only path to survival. This argument requires that she be right, and that the coalition believe she is right, consistently enough to hold through the inevitable frictions of governing eight formerly separate clans under a single authority.
+
+The Corruption has found the thing this argument cannot tolerate: a faction within the tribe that has decided Skarra's principles are a liability.
+
+**The Burned Claw faction:** Within the Ashfire, a subset drawn primarily from the two clans that resisted unification — one of which was defeated militarily, the other of which had its leader leave the Frontier — has been receiving whispers. Not literally, in most cases: The Corruption's influence on them is better described as an amplification. Resentments that were manageable have become convictions. Grievances that were political are becoming theological. The Burned Claw faction now believes that Skarra's restraint — her refusal to make Ash Oaths she cannot keep, her carefully managed relationships with outside factions, her ideology of durability over expansion — is weakness masquerading as wisdom, and that the Ashfire should be taking what they can reach rather than negotiating for less.
+
+**Fire-Speaker Durn** is the figure the Burned Claw have chosen to center. Durn is old, deeply respected, and has genuine ideological tensions with Skarra. He has not endorsed the Burned Claw. But he has not condemned them, because their critique of Skarra's pragmatism touches something real in his own concerns about whether the Ashfire's political identity is crowding out its spiritual one. The Corruption is exploiting the gap between Durn's legitimate concerns and the Burned Claw's radicalized version of those concerns — using him as a figure of legitimacy for a faction he has not chosen to lead.
+
+**Visible signs:**
+- Skarra has had to discipline two Burned Claw members for unauthorized raids that violated agreements she had reached with Frontier settlements — the kind of agreements that, if broken, would damage her long-term political position
+- The Unification Fire ceremony last year had visible tension: Burned Claw faction members attended but did not participate in the clan-acknowledgment portion, which is the ceremony's central act
+- Durn has begun delivering council speeches about "the old purpose" that Skarra finds ambiguous enough to be concerning but not explicit enough to challenge directly
+- Inner council members from the first-unification clans are asking Skarra privately whether she has a plan for the Burned Claw; she is giving answers that satisfy no one, including herself
+- Several Burned Claw members have been observed near one of the shrines that the Corruption has been using as anchor points in the Frontier; whether they went there deliberately or stumbled upon it is not known
+
+**Campaign consequence if left unaddressed:**
+
+The Burned Claw faction is not strong enough to overthrow Skarra through direct confrontation. What they can do is erode the condition that makes the Ashfire function: trust that Ash Oaths are honored and that Ashfire commitments mean what they say. If enough unauthorized actions occur — raids that Skarra hasn't sanctioned, agreements that Burned Claw members violate on her behalf, violence against parties that had reached terms with the unified tribe — the political project falls apart from the outside. Frontier settlements stop treating the Ashfire as a reliable negotiating partner. Sol Kareth's trade factors close the door on ongoing talks. The Adventurers Guild issues contracts.
+
+The internal consequence is worse. If Durn is drawn fully into the Burned Claw's orbit — genuinely, not as a misused symbol — Skarra faces a legitimacy crisis that her practical authority cannot resolve. The Unification Fire tradition deliberately centers Durn as the ceremonial voice of the tribe precisely because Skarra wanted the tribe to be bigger than any individual. That design decision becomes a vulnerability if the person at the center of the ceremony is working against her.
+
+A Corrupted Ashfire splinter, operating with the cultural legitimacy of the Fire-Speaker and the grievances of the defeated clans, is a faction that makes every other political dynamic on the Frontier harder to navigate — not because it wins, but because it destabilizes everything around it.
+
+**What writers can do with this:**
+- Skarra can be a reluctant quest source who needs the party to do something about the Burned Claw without triggering an internal conflict she is not ready to fight — she needs evidence, not suspicion
+- Durn can be a moral complexity: he is not a villain, he has legitimate concerns, and the party may have to help him see that his legitimacy is being borrowed by people whose goals he does not share
+- An encounter with Burned Claw raiders who invoke the Ashfire name while doing something Skarra has explicitly prohibited creates political consequences the party has to navigate
+- The shrine connection — Burned Claw members near a Corruption anchor point — can become a direct confrontation or an investigative thread
+- A party with high Ashfire reputation may be trusted by Skarra before they have earned it, because she needs allies she can use; this creates an opportunity and a responsibility
+
+---
+
+### Cross-Tribe Corruption Dynamics
+
+The three manifestations are separate but not unconnected. Writers and the AI Director should treat the following as active possibilities:
+
+| Dynamic | Description |
+|---|---|
+| **Mossroot as early warning** | If the party learns about the hollow game from the Mossroot, they have a head start on understanding what they will eventually encounter in Stonefang and Ashfire territory |
+| **Stonefang instability enables Ashfire ambition** | If Krath's Corruption triggers a leadership crisis in the Stonefang, the Ashfire are positioned to press into contested territory — and the Burned Claw will argue they should, hard |
+| **Burned Claw and hollow game** | If the Burned Claw are deliberately interfacing with a Corruption shrine, and the shrine is the same source driving the hollow game into Mossroot territory, the party may be able to demonstrate this to Vess — giving her concrete external information that breaks the council's impasse |
+| **Krath and the Burned Claw** | The Burned Claw's interest in raw power may extend to knowledge of what happened to Krath; if they believe they can weaponize or recruit a Corrupted Stonefang champion, the cross-tribal threat escalates significantly |
+
+The AI Director should not force these connections — they should be available as the party's choices and discoveries open them up. A campaign that engages with goblin diplomacy will naturally encounter these threads. A campaign that treats the tribes as combat encounters will find the consequences arriving unexpectedly later.
