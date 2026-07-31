@@ -477,6 +477,111 @@ She does not leave the Guild. She does not have to. But she returns to it — if
 
 ---
 
+#### Post-Arc Resolution — Sera
+
+> **AI Director reference.** This section defines the authored scene for Sera's post-arc resolution. It should be triggered after the Fractured Circle concludes and the immediate crisis has settled — not in the aftermath but in the after, once there is space to have a conversation that is not about survival.
+
+---
+
+**The Scene — "What You Were Watching For"**
+
+**Trigger:** The Fractured Circle arc has ended. Valdris and Fen's fates are resolved. The corrupted faction's work has been exposed. The scene triggers when Eleanor is alone or near-alone — in a Guild archive room, a courtyard, a corridor between places she was going — and Sera finds her.
+
+Sera does not send word ahead. She simply arrives. This is consistent with who she is.
+
+---
+
+**How the Scene Opens**
+
+Sera does not open with warmth because she does not have warmth to offer here. What she has is precision. She sits down without being invited, in the way of someone who has decided to do something and is doing it before she can think herself out of it.
+
+> "I've been trying to figure out why I came to you."
+
+Not *I'm glad I came to you.* Not *I hope you understand why I did.* She is thinking aloud in the specific register of someone who has been turning something over and has not resolved it yet.
+
+> "I watched Valdris because I resented him. That's what I've been sitting with. I was watching the man who championed you — who gave you what he never gave anyone else — and I was watching him because I wanted to find something wrong with him. Because that would have been a kind of answer."
+
+She does not look away when she says this.
+
+> "And then there was something wrong with him. And I was the only one close enough to see it, because you were too close, and everyone else was looking somewhere else. And the reason I was that close was resentment."
+
+A pause.
+
+> "I don't know what to do with that."
+
+---
+
+**The Player Choice**
+
+Eleanor can respond in two ways. Neither is the "right" answer — they map onto who Eleanor has become through her arc resolution.
+
+---
+
+**Path 1 — Something More**
+
+Eleanor doesn't reach for warmth here. She reaches for honesty, which is different.
+
+> "I've been thinking about it too. Not just that you were right about Valdris. About what it says about how I was looking at him. I trusted him in a way that made me not able to see him. You couldn't trust him — you never had reason to — and that kept your eyes clear. I'm not sure I know how to think about that yet."
+
+She is saying something harder than *thank you.* She is saying that Sera's sharpness — the quality Eleanor has spent years experiencing as rivalry — was the thing that protected her. This costs Eleanor something to acknowledge. Sera registers that it costs her.
+
+What Sera says, after a moment:
+
+> "You're not what I thought you were, either."
+
+Not a compliment. Not quite. But said in the tone of someone updating an assessment they held for a long time.
+
+The scene ends practically — Sera names something she is working on, something that the Guild's current state requires, something she could not do alone. She does not frame it as asking for help. She frames it as information. Eleanor can receive this as the opening it is.
+
+*What this produces:* Not friendship in the conventional sense — these two people are too different for easy warmth, and the years of rivalry don't dissolve. What it produces is a working relationship on equal terms, with both of them knowing exactly what the other is. Sera is not in Eleanor's debt. Eleanor is not in Sera's. They are starting from the actual ground rather than the stories they told about each other.
+
+In the Guild going forward, they are not allies in the performed sense. They are two people who, when something matters, will tell each other the truth.
+
+---
+
+**Path 2 — Acknowledgment Without Change**
+
+Eleanor receives what Sera said and gives it back to her cleanly.
+
+> "What you did mattered. I want you to know I understand that. Not just that you came to me — that you came to me knowing I might not believe you, knowing what you were risking, knowing that I was the last person who would want to hear it."
+
+Sera listens. She does not deflect.
+
+> "I didn't do it for you."
+
+Eleanor:
+
+> "I know. That's what made it worth something."
+
+A long pause. Sera stands.
+
+> "The Guild is going to need people watching the parts of it that are hardest to see from the inside."
+
+She leaves it there. She does not say *I'll be one of those people.* She does not say *you should be too.* But she has named what she is, in the register of someone who has been doing this without a name for it, and she is leaving that acknowledgment in the room.
+
+*What this produces:* The rivalry doesn't dissolve. Neither of them pretends it does. But it has a different texture now — they both know that when it actually mattered, they were on the same side, for different reasons. That knowledge is real and permanent. The relationship is still what it was; it is just also now this.
+
+Eleanor does not champion Sera to the Guild the way Valdris championed Eleanor (with costs). She does not advocate for her or make her case. What she does: when the Guild asks what Sera did, Eleanor says what is true, without softening it in either direction. That is enough. It is more, in the long run, than a recommendation.
+
+---
+
+**Sera's Guild Standing After the Arc**
+
+Sera's action — going outside the institutional chain to an active field mage rather than a senior figure — was a significant professional risk under any ordinary reading of Guild protocol. It was also correct. The corrupted faction's exposure makes this legible.
+
+What the Guild sees, after the fact:
+- A junior theorist who identified a problem that senior members missed or ignored
+- Someone who was watching the institution's senior figures with an accuracy that the usual channels did not produce
+- A mage who took the risk of being wrong — of being dismissed as rivalry-motivated — because she was more concerned with what was actually happening than with how it would look
+
+This does not automatically advance Sera. Institutions process disruptive correctness slowly. But it places her in a different category than before. She is no longer simply the prodigy who resented the exception. She is also the person who saw what the exception was for, before it was too late.
+
+**In Path 1:** Sera and Eleanor's working relationship, visible within the Guild, signals that the institution's two most significant young mages are not in opposition. This is noticed. The institutional attention that was previously split unevenly toward Eleanor begins, gradually, to acknowledge Sera's record on its own terms. She advances not because Eleanor championed her but because what she did is now on record, and the record is good.
+
+**In Path 2:** Sera's standing improves on its own merits. Eleanor's honest account of Sera's role — said plainly when the Guild asks, without advocacy — is more durable than endorsement. The rivalry is known. The fact that Eleanor does not minimize what Sera did, even though Eleanor had every social incentive to be the sole protagonist of her own story, is itself a kind of testimony.
+
+---
+
 ## Relationship Dynamics
 
 ### Talos
@@ -492,6 +597,16 @@ Throughout most of the game, Eleanor is positioned to help Ronan. During **The F
 Ragash becomes one of Eleanor's most important protectors — not because Eleanor cannot protect herself, but because Ragash understands Eleanor's value to the group in a way that goes beyond combat capability. She recognizes that Eleanor is the emotional center of the party: the person who reminds everyone why they are still fighting, who sees goodness in people when they have stopped seeing it in themselves. Ragash, who grew up without that kind of presence, does not take it for granted.
 
 Eleanor may not always be aware of the full depth of Ragash's protectiveness. Ragash does not announce it. But it is there, steady and deliberate, in the choices she makes when the party is under threat.
+
+### Sera Mathlin
+
+Sera is not Eleanor's friend. She is also not, after the Fractured Circle, simply her rival.
+
+The years of rivalry are real and not dissolved — Sera's grievances were legitimate, and both of them know it. What the arc adds is a layer that sits on top of that without replacing it: Sera saw what Eleanor couldn't, acted on it at professional risk, and came to Eleanor rather than anyone else. Eleanor knows why she came. The reason was not warmth. It was accuracy — Sera calculated that Eleanor was the one person who would take it seriously, and she was right.
+
+What Eleanor does with this depends on player choices (see Post-Arc Resolution — Sera, above). In either path, what remains is a relationship that has been changed by one event without being remade by it. They still see the institution differently. They still read people differently. Sera's sharpness still registers to Eleanor as something that requires navigation. But they both know the score now, and that knowledge is permanent.
+
+Eleanor does not advocate for Sera within the Guild. What she does is more durable: she tells the truth about Sera's role when the institution asks, without softening it in either direction. In the long run, this matters more.
 
 ### Torren
 
@@ -568,3 +683,5 @@ She may be the companion who most directly asks whether the Eighth could have be
 | July 2026 | Created — full Hero Bible entry established |
 | July 2026 | Expanded — Harmonic Soul revelation added to Personal Quest; Signature Ability canonical context added; cross-referenced to Magic Bible |
 | July 2026 | Added The Forgotten Eighth revelation response |
+| July 2026 | Added Valdris's Research Files subsection (five specific findings, recognition triggers, unnamed correspondent progression, Corruption's interest in Harmonic Souls) |
+| July 2026 | Added Post-Arc Resolution — Sera (two resolution paths, Guild standing notes); added Sera entry to Relationship Dynamics |
