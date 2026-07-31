@@ -2,7 +2,7 @@
 
 > **This is the first document every future AI or developer should read.**  
 > It answers the question: *"Where is this project right now?"*  
-> Last updated: July 2026.
+> Last updated: 2026-07-31.
 
 ---
 
@@ -18,7 +18,7 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 
 | Area | % Complete | Notes |
 |---|---|---|
-| Core engine (loop, state, events) | 90% | Working; minor gaps noted below |
+| Core engine (loop, state, events) | 95% | Dual player-state eliminated; `world_state` is sole authority; hero items and new-game reset fixed |
 | Combat system | 75% | Terminal prototype functional; canonical 3D tactical design (grid, AP, facing, downed) documented in `docs/COMBAT_SYSTEM.md` — not yet implemented |
 | Quest system | 65% | CRUD complete; faction bonus wiring is present but never fires (missing `type` field) |
 | Progression / levelling | 60% | XP and level-up logic works; skill tree scaffolded; canonical design (level 25 cap, shared XP, companion scaling) documented — not yet implemented |
@@ -32,13 +32,13 @@ Semantic versioning is not yet formally adopted. This version tag reflects the c
 | Inventory / equipment | 80% | Canonical path established; equipment slots work; loot rarity works |
 | UI / menus | 30% | Terminal-only; hub.py and world_map.py exist but are not integrated |
 | Documentation | 95% | All major documents written; revision/update cadence not yet established |
-| **Overall** | **~58%** | Playable engine; content and polish incomplete |
+| **Overall** | **~63%** | Engine stabilized; major lore Bible expansion completed |
 
 ---
 
 ## Last Updated
 
-July 2026 — Integration pass (Task 3) completed; full documentation suite generated.
+2026-07-31 — Engine stabilization (dual player-state eliminated; hero items; new-game reset); major lore Bible expansion (Four Ages framework, First Empire, Great Library Director, Soleth Archive, Capital dynasty).
 
 ---
 
@@ -50,7 +50,7 @@ July 2026 — Integration pass (Task 3) completed; full documentation suite gene
 - All 55 Python files pass syntax checks.
 - All 31 engine modules import without errors.
 - 12 known issues remain (see [`docs/known_issues.md`](docs/known_issues.md)); none are currently crashers.
-- The most significant risk is the `player.py` singleton / `world_state["player"]` divergence, which can cause silent stat desync after combat.
+- The `player.py` / `world_state["player"]` dual-state was eliminated this session — `world_state` is now the sole authority.
 
 ---
 
@@ -123,10 +123,10 @@ July 2026 — Integration pass (Task 3) completed; full documentation suite gene
 ## Highest Priority Tasks
 
 1. **Fix `validate_world_state()`** — add `"npcs"` key initialization in `ensure_world_state_defaults()` to resolve validation failure on new games. (🔴 severity)
-2. **Resolve player state divergence** — decide canonical source for player stats during combat: `player.py` singleton vs `world_state["player"]`. Document the decision. (🟠 severity)
-3. **Add `rebels` to `faction_manager.FACTIONS`** — or remove it from world_state if it is not a real faction. (🟠 severity)
-4. **Add `type` field to quest_database entries** — so the faction +10 bonus handler fires as designed. (🟡 severity)
-5. **Connect real LLM** — swap mock functions in `llm_bridge.py` with real API calls.
+2. **Add `rebels` to `faction_manager.FACTIONS`** — or remove it from world_state if it is not a real faction. (🟠 severity)
+3. **Add `type` field to quest_database entries** — so the faction +10 bonus handler fires as designed. (🟡 severity)
+4. **Connect real LLM** — swap mock functions in `llm_bridge.py` with real API calls.
+5. **Define Voss's order (Task #122)** — structural load-bearer for Talos's personal quest arc; needed before Capital Province content can be run.
 
 *Full list with severity ratings: [`docs/known_issues.md`](docs/known_issues.md)*
 
@@ -137,7 +137,7 @@ July 2026 — Integration pass (Task 3) completed; full documentation suite gene
 | ID | Severity | Summary |
 |---|---|---|
 | BUG-001 | 🔴 | `validate_world_state()` fails on new game — `npcs` key never initialized |
-| BUG-002 | 🟠 | Player stat divergence — singleton vs world_state can desync after combat |
+| BUG-002 | ✅ RESOLVED | Player stat divergence — eliminated 2026-07-31; `world_state` is now sole authority |
 | BUG-003 | 🟠 | `rebels` faction in state but absent from manager |
 | BUG-004 | 🟡 | Dual region discovery state (two separate tracking locations) |
 | BUG-005 | 🟡 | Quest `type` field absent — faction bonus never fires |
@@ -152,7 +152,7 @@ July 2026 — Integration pass (Task 3) completed; full documentation suite gene
 | Item | Impact |
 |---|---|
 | Legacy modules (`factions.py`, `regions.py`, `loot.py`, `memory.py`) coexist with manager equivalents | Confusing; dead code risk; import ambiguity |
-| `player.py` singleton alongside `world_state["player"]` | Silent divergence risk |
+| ~~`player.py` singleton alongside `world_state["player"]`~~ | ✅ Resolved 2026-07-31 — `world_state` is sole authority |
 | No formal test suite | Regressions caught manually only |
 | `world_social_reaction()` is dead code in `faction_manager.py` | Noise |
 | `hub.py` and `world_map.py` unintegrated | Modules with no callers |
@@ -219,10 +219,14 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 3. Add `rebels` to `faction_manager.FACTIONS` dict
 
 **Short term (system completion):**
-4. Resolve `player.py` / `world_state["player"]` divergence — pick one canonical source
-5. Unify region discovery state
-6. Persist NPC changes in save
-7. Remove or archive legacy root modules (`factions.py`, `regions.py`, `loot.py`, `memory.py`)
+4. Unify region discovery state
+5. Persist NPC changes in save
+6. Remove or archive legacy root modules (`factions.py`, `regions.py`, `loot.py`, `memory.py`)
+
+**Lore (highest-value open items):**
+7. Define the order Voss gave Talos (Task #122) — prerequisite for Capital Province personal quest arc
+8. Author the Soleth Accounting's specific contents (Task #120) — prerequisite for Great Library endgame revelation scene
+9. Define vampire house player entry points (Task #81) — prerequisite for all three house questlines
 
 **Medium term (features):**
 8. Implement hero selection screen at new game start (roster UI, hero confirmation, stat/equipment initialization by hero)
@@ -239,9 +243,12 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 
 ## Recently Completed Work
 
+- **Engine stabilization (2026-07-31):** Eliminated dual player-state (`world_state` is now sole authority); fixed hero starting items and equipment; fixed new-game reset (progression, equipment, skills); fixed level-up stat persistence; fixed `equipped_weapon`/`weapon_bonus` sync
+- **Lore Bible expansion (2026-07-31):** Four Ages canonical framework; First Empire / First Council (`docs/lore/civilization/`); Great Library Director (Maret Cosse); House Soleth Sealed Archive contribution and exchange terms; Capital Province ruling dynasty (House Aldenmoor) and Key Figures (Queen Merveth, Marshal Voss); Ragash and Eleanor hero arc depth; Mossroot first contact scene
+- **Full session handoff:** See [`docs/handoffs/2026-07-31-lore-design-session.md`](docs/handoffs/2026-07-31-lore-design-session.md) for complete session record
 - **Integration pass (Task 3):** Fixed 8 broken imports, removed duplicate DM brain logic from `llm_bridge.py`, fixed 3 world_state path errors in `story.py`, added save migration guard (`ensure_world_state_defaults()`), fixed quest event payload, fixed faction event handler
 - **Documentation suite:** Created 27 documentation files covering game bible, all systems, architecture, known issues, roadmap, governance, AI continuation guide, and handoff system
-- **Full session handoff:** See [`docs/handoffs/2026-07-30-documentation-session.md`](docs/handoffs/2026-07-30-documentation-session.md) for complete session record
+- **Prior session handoff:** See [`docs/handoffs/2026-07-30-documentation-session.md`](docs/handoffs/2026-07-30-documentation-session.md)
 
 ---
 
