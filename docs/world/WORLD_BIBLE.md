@@ -429,7 +429,15 @@ There are three major vampire houses. Each house has different goals, philosophi
 | **Maintaining secrecy** | Survival through invisibility within society |
 | **Survival of vampire society** | Protecting the existence of their kind above all |
 
-The three houses are ⚠️ **NOT YET NAMED** — their names, specific philosophies, leadership, and territories require dedicated authorship. The above represents confirmed design directions, not final assignments.
+The three houses are fully developed in [`docs/world/vampire_houses.md`](vampire_houses.md).
+
+| House | Philosophy | Lord | Primary Territory |
+|---|---|---|---|
+| **House Vetharis** | Political manipulation — power through influence, placement, and information | Lord Cassiel Vetharis (currently operating as "Aldric Hourne") | The Capital Province; major trade cities across the continent |
+| **House Drakmor** | Military conquest — power through force and territorial control | Lady Morreth Drakmor | The Frontier and border regions |
+| **House Soleth** | Ancient knowledge and survival of vampire society — power through accumulated history and secrets | The Archivist (personal name unused for centuries) | Hidden archive complexes, ancient ruins, underground vaults |
+
+Each house has distinct leadership, internal politics, and fault lines. See [`docs/world/vampire_houses.md`](vampire_houses.md) for the full canonical record.
 
 ### Confirmed Vampire Types
 
@@ -486,3 +494,4 @@ Full consequences and mechanics: [`docs/systems/reputation.md`](../systems/reput
 |---|---|
 | July 2026 | Created — canonical regions, travel encounters, encounter philosophy, intelligent factions, and vampires established |
 | July 2026 | Expanded — World Philosophy, Frozen Highlands culture, Sol Kareth name, Iron Peaks dwarven identity, Goblin Tribes (Stonefang/Mossroot/Ashfire), three vampire houses, Adventurers Guild, Mages Guild, Religion framework, Reputation system summary added |
+| July 2026 | Vampire Factions — three houses named and developed: House Vetharis (political manipulation), House Drakmor (military conquest), House Soleth (ancient knowledge). Full document: [`vampire_houses.md`](vampire_houses.md) |
