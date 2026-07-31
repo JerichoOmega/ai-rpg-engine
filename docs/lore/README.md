@@ -1,5 +1,7 @@
 # Lore Bible
 
+*"This world was not designed around a single story. It is a living history in which countless stories have unfolded, and the player's journey is simply one chapter in a civilization thousands of years in the making."*
+
 This folder contains the canonical worldbuilding for the RPG. Any future content — quests, dialogue, codex entries, NPCs, companions, systems, and story events — must remain consistent with these documents.
 
 If a future idea contradicts anything written here, **these files take precedence** until they are intentionally revised. A revision requires a deliberate decision, not a workaround.
