@@ -236,17 +236,21 @@ Sol Kareth has outlasted kingdoms that rose and fell while it traded. Its age is
 
 ### The Capital Province
 
-The political center of the continent.
+The political, military, educational, and cultural heart of the continent.
 
 | Characteristic | Detail |
 |---|---|
 | **Tone** | Intricate, political, high-stakes; power concentrated and contested |
-| **Settlements** | Great cities, noble estates |
-| **Content** | Noble house politics, government, military headquarters, trade, political intrigue |
+| **Settlements** | Great cities, noble districts, royal estates |
+| **Institutions** | Royal Government, Military High Command, Mages Guild Headquarters, Major Temples, Universities, Great Libraries |
+| **Economy** | International trade hub; the continent's primary commercial center |
+| **Military** | Majority of the continent's military stationed here; smaller garrisons protect towns, forts, roads, and trade routes throughout the continent |
 | **Corruption** | Political Corruption is most visible here — powerful people becoming worse versions of themselves |
 | **Campaign sensitivity** | The condition of The Capital Province changes depending on campaign events; it is the world's most responsive region to player choices |
 
 The Capital Province is where decisions made everywhere else eventually land. Campaigns that end here often culminate in confrontations not just with monsters, but with the human darkness The Corruption has amplified.
+
+**Talos connection:** Talos once served within the Capital's military before losing faith in the government. This history continues to influence his personal story — the Capital is not an abstraction to him. He has walked its halls, followed its orders, and watched what happened when its institutions chose power over people. See [`docs/heroes/TALOS.md`](../heroes/TALOS.md).
 
 ---
 
@@ -255,6 +259,10 @@ The Capital Province is where decisions made everywhere else eventually land. Ca
 ### Adventurers Guild
 
 One of the most respected **neutral organizations** on the continent.
+
+**Primary headquarters:** The Frontier. The Guild's main base of operations is located there because it is where demand for Guild services is highest — constant monster activity, ancient ruins, exploration opportunities, untapped riches, and dangerous frontiers requiring experienced contractors.
+
+**Branch offices** exist in most larger cities across the continent.
 
 The Guild operates across all regions and maintains relationships with most major factions without being formally allied with any of them. This neutrality is its most valuable asset.
 
@@ -277,6 +285,8 @@ The Guild serves as a **major source of optional quests and world information**.
 ### Mages Guild
 
 The continent's primary magical institution.
+
+**Headquarters:** The Capital. The Guild's central operations are based here, alongside the continent's other major institutions.
 
 The Mages Guild is **respected but not universally trusted**. Its members hold significant knowledge and power, which makes them valuable to some factions and threatening to others.
 
@@ -317,6 +327,51 @@ What is confirmed:
 - Religion will have real political and cultural influence
 - Some religious orders will fracture under The Corruption's influence (confirmed in Corruption lore)
 - Cults receiving whispers from the imprisoned god exist and are distinct from legitimate religious practice
+
+---
+
+## Player Choice Philosophy
+
+This game is built on **tabletop-inspired roleplaying**. Combat is never the only solution.
+
+Whenever appropriate, encounters should support multiple approaches:
+
+| Approach | Description |
+|---|---|
+| **Combat** | Direct resolution through force |
+| **Diplomacy** | Reaching agreement through communication and negotiation |
+| **Negotiation** | Finding terms both parties can accept |
+| **Intimidation** | Using credible threat to change behavior |
+| **Stealth** | Bypassing situations without confrontation |
+| **Deception** | Using misdirection or false pretenses |
+| **Avoidance** | Choosing not to engage at all |
+| **Bribery** | Using resources to change outcomes |
+| **Investigation** | Uncovering information that changes the situation |
+
+> Players should be encouraged to solve problems in the manner that best fits their character.
+
+The AI Dungeon Master should support creativity, meaningful choices, and emergent storytelling while remaining faithful to established lore.
+
+---
+
+## Goblin Diplomacy
+
+Goblins are **intelligent people** — not mindless enemies.
+
+Depending on reputation, circumstances, and tribal leadership, players may be able to:
+
+- Negotiate
+- Form temporary alliances
+- Trade
+- Accept quests from goblin leaders
+- Resolve territorial disputes
+- Broker peace between tribes or between a tribe and a neighboring settlement
+- Recruit information
+- Avoid unnecessary bloodshed entirely
+
+Combat remains a valid solution — but never the only solution.
+
+Player decisions involving goblins should have **meaningful consequences** that may influence future encounters and regional politics. A reputation built with one tribe does not automatically carry to the others. Helping the Mossroot Tribe may complicate future dealings with the Stonefang Tribe if their interests conflict.
 
 ---
 
@@ -494,4 +549,5 @@ Full consequences and mechanics: [`docs/systems/reputation.md`](../systems/reput
 |---|---|
 | July 2026 | Created — canonical regions, travel encounters, encounter philosophy, intelligent factions, and vampires established |
 | July 2026 | Expanded — World Philosophy, Frozen Highlands culture, Sol Kareth name, Iron Peaks dwarven identity, Goblin Tribes (Stonefang/Mossroot/Ashfire), three vampire houses, Adventurers Guild, Mages Guild, Religion framework, Reputation system summary added |
+| July 2026 | Expanded — Capital Province details (Royal Government, Military HQ, org locations, Talos connection), Adventurers Guild HQ in The Frontier, Mages Guild HQ in Capital, Player Choice Philosophy, Goblin Diplomacy framework added |
 | July 2026 | Vampire Factions — three houses named and developed: House Vetharis (political manipulation), House Drakmor (military conquest), House Soleth (ancient knowledge). Full document: [`vampire_houses.md`](vampire_houses.md) |

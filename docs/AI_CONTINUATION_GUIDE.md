@@ -22,7 +22,9 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/GAME_BIBLE.md` | What the game is, every confirmed mechanic |
 | `docs/CAMPAIGN_DESIGN.md` | Canonical campaign design philosophy — Handcrafted First, DM role, replayability framework |
 | `docs/COMBAT_SYSTEM.md` | Canonical combat design — grid, AP economy, facing, downed/death, party rules |
-| `docs/world/WORLD_BIBLE.md` | Canonical regions (6), travel encounters, encounter philosophy, intelligent factions, vampires |
+| `docs/world/WORLD_BIBLE.md` | Canonical regions, travel encounters, encounter philosophy, intelligent factions, goblin tribes, vampires, player choice philosophy |
+| `docs/world/RACES.md` | Six playable races; race design philosophy; non-playable intelligent races |
+| `docs/world/vampire_houses.md` | Three vampire houses: Vetharis (political), Drakmor (military), Soleth (knowledge) |
 | `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
 | `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |
 | `docs/heroes/TALOS.md` | Full Hero Bible — Talos |

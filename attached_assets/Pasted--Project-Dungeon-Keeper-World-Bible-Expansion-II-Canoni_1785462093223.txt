@@ -1,0 +1,257 @@
+# Project Dungeon Keeper - World Bible Expansion II (Canonical Update)
+
+Analyze the current repository and expand the World Bible and Game Bible using the following information.
+
+## IMPORTANT
+
+- Preserve all existing lore.
+- Expand documentation only.
+- Do NOT implement gameplay systems or code.
+- Cross-reference existing documentation whenever appropriate.
+
+---
+
+# PLAYABLE RACES
+
+The playable races at launch are intentionally limited to establish a focused and believable world.
+
+## Playable Races
+
+- Humans
+- Elves
+- Dwarves
+- Orcs
+- Halflings
+- Gnomes
+
+Each race should possess its own history, traditions, architecture, values, and culture.
+
+A race should never define an individual's personality.
+
+Not every dwarf enjoys mining.
+
+Not every elf embraces ancient traditions.
+
+Not every orc seeks battle.
+
+Individuals should be shaped by their experiences rather than stereotypes.
+
+---
+
+# NON-PLAYABLE INTELLIGENT RACES
+
+Some intelligent peoples exist within the world but are not playable.
+
+Current example:
+
+- Goblins
+
+Additional intelligent races may be introduced in future worldbuilding if they naturally fit the setting.
+
+---
+
+# THE CAPITAL
+
+The Capital is the political, military, educational, and cultural heart of the continent.
+
+It is known for:
+
+- Royal Government
+- Military High Command
+- Mages Guild Headquarters
+- Major Temples
+- Universities
+- Great Libraries
+- International Trade
+- Noble Districts
+
+Talos once served within the Capital's military before losing faith in the government.
+
+This connection should continue influencing his personal story.
+
+The majority of the continent's military is stationed within the Capital.
+
+Smaller garrisons exist throughout the continent to protect towns, forts, roads, and trade routes.
+
+---
+
+# ADVENTURERS GUILD
+
+The primary headquarters of the Adventurers Guild is located within The Frontier.
+
+Reasons include:
+
+- Constant monster activity
+- Ancient ruins
+- Exploration opportunities
+- New discoveries
+- Untapped riches
+- Dangerous frontiers
+
+The guild should also maintain smaller branch offices throughout larger cities.
+
+The Adventurers Guild serves as one of the player's primary sources of:
+
+- Contracts
+- Exploration requests
+- Rumors
+- Bounties
+- Optional quests
+
+---
+
+# MAGES GUILD
+
+The Mages Guild headquarters is located in the Capital.
+
+Responsibilities include:
+
+- Training mages
+- Magical research
+- Preserving magical knowledge
+- Studying magical anomalies
+- Investigating the Corruption
+- Securing dangerous magical artifacts
+
+---
+
+# VAMPIRE HOUSES
+
+The world contains three major Vampire Houses.
+
+Their names and detailed histories will be developed later.
+
+Current canonical design philosophy:
+
+- Each house occupies a different region of the continent.
+- Each possesses its own leadership.
+- Each follows different philosophies.
+- Each maintains different long-term goals.
+- They should compete with one another as often as they cooperate.
+
+One house is politically influential within the Capital.
+
+The remaining houses should naturally fit other regions of the world.
+
+Vampires are a major supernatural power rather than generic monsters.
+
+---
+
+# GOBLIN TRIBES
+
+Three major goblin tribes currently exist.
+
+## Stonefang Tribe
+
+- Aggressive
+- Territorial
+- Strong warriors
+- Frequent raiders
+
+---
+
+## Mossroot Tribe
+
+- Hunters
+- Survivalists
+- Deep connection to nature
+- Prefer avoiding unnecessary conflict
+
+---
+
+## Ashfire Tribe
+
+- Recently united
+- Ambitious leadership
+- Rapid expansion
+- Becoming a major regional power
+
+Each tribe should possess:
+
+- Leaders
+- Territory
+- Traditions
+- Internal politics
+- Relationships with neighboring civilizations
+
+---
+
+# PLAYER CHOICE PHILOSOPHY
+
+Project Dungeon Keeper embraces tabletop-inspired roleplaying.
+
+Combat should never be the only solution.
+
+Whenever appropriate, encounters should support multiple approaches.
+
+Examples include:
+
+- Combat
+- Diplomacy
+- Negotiation
+- Intimidation
+- Stealth
+- Deception
+- Avoidance
+- Bribery
+- Investigation
+
+Players should be encouraged to solve problems in the manner that best fits their character.
+
+---
+
+# GOBLIN DIPLOMACY
+
+Goblins are intelligent people rather than mindless enemies.
+
+Depending on reputation, circumstances, and tribal leadership, players may be able to:
+
+- Negotiate
+- Form temporary alliances
+- Trade
+- Accept quests
+- Resolve territorial disputes
+- Broker peace
+- Recruit information
+- Avoid unnecessary bloodshed
+
+Combat should remain a valid solution but never the only solution.
+
+Player decisions involving goblins should have meaningful consequences that may influence future encounters and regional politics.
+
+---
+
+# REPUTATION PHILOSOPHY
+
+Faction reputation is heavily inspired by Fallout: New Vegas.
+
+Each major faction tracks the player's reputation independently.
+
+Reputation should significantly influence:
+
+- Dialogue
+- Quest availability
+- Prices
+- Safe passage
+- Political relationships
+- Alliances
+- Hostility
+- World events
+
+The world should remember the player's actions.
+
+There should never be a universal "Good" or "Evil" reputation meter.
+
+Instead, every faction forms its own opinion of the player based on the player's decisions.
+
+---
+
+# DESIGN GOAL
+
+The ultimate objective is to create a living fantasy world that feels like a tabletop RPG campaign.
+
+The player should feel free to approach situations however they choose.
+
+The AI Dungeon Master should support creativity, meaningful choices, and emergent storytelling while remaining faithful to the established lore.
+
+These additions should become canonical and be integrated into the World Bible, Game Bible, and all future design documentation.

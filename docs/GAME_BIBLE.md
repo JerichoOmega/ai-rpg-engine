@@ -10,7 +10,8 @@
 1. [Executive Summary](#executive-summary)
 2. [Vision Statement](#vision-statement)
 3. [Core Design Pillars](#core-design-pillars)
-4. [Genre](#genre)
+4. [Playable Races](#playable-races)
+5. [Genre](#genre)
 5. [Target Audience](#target-audience)
 6. [Gameplay Overview](#gameplay-overview)
 7. [Player Experience Goals](#player-experience-goals)
@@ -43,7 +44,9 @@
 34. [Player Character Philosophy](PLAYER_SYSTEM.md) *(separate file)*
 35. [Campaign Design Philosophy](CAMPAIGN_DESIGN.md) *(separate file)*
 36. [World Bible](world/WORLD_BIBLE.md) *(separate file)*
-37. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+37. [Playable Races](world/RACES.md) *(separate file)*
+38. [Vampire Houses](world/vampire_houses.md) *(separate file)*
+39. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -97,6 +100,27 @@ The visual design (in the 3D target) prioritizes clear communication of game sta
 
 ### 6. No External Dependencies at Runtime (Current Prototype)
 The current terminal prototype runs entirely in Python with no external API calls required. The LLM layer is a drop-in module. This principle carries forward: the game must be functional without requiring a live AI connection.
+
+---
+
+## Playable Races
+
+Six races are confirmed playable at launch. Race defines cultural context — not personality.
+
+> Not every dwarf enjoys mining. Not every elf embraces ancient traditions. Not every orc seeks battle. Individuals are shaped by experience, not ancestry.
+
+| Race | Notes |
+|---|---|
+| **Humans** | Most widespread; culturally diverse |
+| **Elves** | Long-lived; associated with the Great Forest and ancient traditions |
+| **Dwarves** | Homeland in the Iron Peaks; mining and forging tradition |
+| **Orcs** | Own society, culture, and politics — not defined by conflict |
+| **Halflings** | ⚠️ Culture and history NOT YET DEFINED |
+| **Gnomes** | ⚠️ Culture and history NOT YET DEFINED |
+
+**Non-playable intelligent races:** Goblins (three named tribes — Stonefang, Mossroot, Ashfire). Other intelligent races may be introduced if they naturally fit the setting.
+
+Full race design philosophy: [`docs/world/RACES.md`](world/RACES.md)
 
 ---
 
