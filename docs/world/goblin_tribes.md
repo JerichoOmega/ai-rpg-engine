@@ -223,6 +223,8 @@ Ragash is an orc. Her hounds are trained trackers. Both facts are relevant to go
 
 **Diplomatic implications:** If Ragash is the party member who initiates contact with a goblin tribe, the tribe's initial assessment will be colored by her species in complex ways. This is not a simple positive or negative — it is nuance that writers and the AI Director should treat as an opportunity, not a shortcut.
 
+**First contact scene — Mossroot:** A full authored scene covering how Ragash leads the approach, Thorn's initial contact, Vess's appearance and assessment, and the two branches (party stays back vs. follows uninvited) is documented in [`docs/encounters/mossroot_first_contact.md`](../encounters/mossroot_first_contact.md). The AI Director should use this file rather than improvising the scene.
+
 ---
 
 ## Design Notes for Writers
