@@ -85,6 +85,8 @@ Travel is gameplay. Moving between locations on the strategic map can trigger en
 | Secret caves | Hidden areas; may hold rare content |
 | World bosses | Major encounters; campaign-significant |
 
+> **Authored encounter table:** Frontier travel encounters — including named goblin tribe contact entries, reputation-modified variants, companion Frontier events, and AI DM sequencing guidance — are fully defined in [`docs/systems/frontier_encounters.md`](../systems/frontier_encounters.md). Use that document for Frontier encounter placement rather than improvising from the categories below.
+
 ### Companion Events
 
 Travel triggers companion-specific moments tied to each hero's identity and history.
