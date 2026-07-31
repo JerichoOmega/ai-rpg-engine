@@ -110,10 +110,13 @@ These are directions, not commitments. Do not implement without explicit design 
 - File: [`docs/world/religions.md`](world/religions.md)
 - Expand with pilgrim NPCs, shrine locations, cult detail, order quest depth.
 
-### [FUTURE] Magic Bible
-- Define the canonical rules of magic in Elyndor: how it works, what changed after the First Age imprisonment, why certain magic is unstable, how the Mages Guild regulates it.
-- File to create: `elyndor/magic/MAGIC_BIBLE.md`
-- Every spell, magical item, and arcane phenomenon in the game should be derivable from these rules.
+### [CONFIRMED] Magic Bible
+- Primordial Magic framework established: seven elemental aspects, magic limitations (one affinity per mage; rare second), Divine Chorus as stewards of each aspect.
+- Seven gods fully developed: Solaryn, Neressa, Tharok, Zephyros, Sylvara, Morvel, Eldris — each with title, element, virtues, followers, symbol, ancient temple, and sacred relic.
+- Eleanor's Harmonic Soul revelation documented: she is connected to Primordial Magic itself, not a single element.
+- Mages Guild (academic) vs. religion (spiritual) philosophical tension documented.
+- File: [`elyndor/magic/MAGIC_BIBLE.md`](../elyndor/magic/MAGIC_BIBLE.md)
+- Expand with: per-element spell examples, guild training curriculum, relic quest hooks, individual god questlines.
 
 ### [FUTURE] Monster & Bestiary Bible
 - Define canonical creature types: origins, behaviors, ecological roles, connection to the Corruption.

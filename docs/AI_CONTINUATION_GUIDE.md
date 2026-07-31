@@ -33,6 +33,7 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/encounters/religious_encounters.md` | Religious pilgrimage and shrine encounters for the travel encounter tables |
 | `docs/quests/goblin_tribe_quests.md` | One named quest per goblin tribe: Stonefang, Mossroot, Ashfire |
 | `elyndor/history/HISTORY_BIBLE.md` | Four Ages framework: Age of Creation, Age of Kingdoms, Age of Wars (Talos served here; Vampire Houses expanded here), Age of Shadows (present) |
+| `elyndor/magic/MAGIC_BIBLE.md` | Primordial Magic rules; seven elemental aspects; Divine Chorus (seven gods, relics, temples); magic limitations; Mages Guild vs. religion tension; Eleanor's Harmonic Soul exception |
 | `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
 | `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |
 | `docs/heroes/TALOS.md` | Full Hero Bible — Talos |

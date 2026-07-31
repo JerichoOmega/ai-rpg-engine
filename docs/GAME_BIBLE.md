@@ -50,7 +50,8 @@
 40. [Religions of Elyndor](world/religions.md) *(separate file)*
 41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*
 42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework)*
-43. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+43. [Magic Bible](../elyndor/magic/MAGIC_BIBLE.md) *(separate file — Primordial Magic, Divine Chorus, magic limitations, Eleanor's Harmonic Soul)*
+44. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 

@@ -1,0 +1,485 @@
+# Project Dungeon Keeper - Canonical Worldbuilding Expansion (Repository Update)
+
+Analyze the entire repository before making any changes.
+
+Read and cross-reference all existing documentation, including but not limited to:
+
+- Game Bible
+- World Bible
+- Hero Bible
+- Companion documentation
+- Religion documentation
+- Magic documentation
+- Dynamic Story Arc documentation
+- AI Dungeon Master documentation
+- Region documentation
+- Reputation System
+- Faction documentation
+- Roadmap
+
+Do NOT overwrite existing canon.
+
+Expand the documentation while preserving everything already established.
+
+This update is a canonical lore expansion.
+
+---
+
+# OVERALL GOAL
+
+Continue evolving Project Dungeon Keeper into a cohesive fantasy world where every major system supports every other system.
+
+Magic, religion, history, companions, factions, exploration, and the main story should all feel interconnected.
+
+The world should feel ancient, lived-in, and internally consistent.
+
+---
+
+# WORLD HISTORY
+
+Create a dedicated History Bible if one does not already exist.
+
+Divide history into Four Ages.
+
+Each Age should have its own identity, major events, philosophy, and lasting consequences.
+
+---
+
+## The First Age
+
+### The Age of Creation
+
+"When gods still walked among mortals."
+
+The Ancient God created the world and Primordial Magic.
+
+During this era:
+
+- the first races emerged
+- dragons were common
+- magic flowed freely
+- civilizations began forming
+
+Eventually the Ancient God's influence became corrupted.
+
+A legendary alliance of heroes, ancient dragons, powerful mages, and divine champions imprisoned the Ancient God beneath the world.
+
+The battle reshaped continents.
+
+Magic itself changed forever.
+
+Afterward, the gods ceased walking openly among mortals.
+
+Legacy:
+
+- Ancient God imprisoned
+- Primordial ruins
+- Legendary relics
+- Lost civilizations
+- Dragons becoming incredibly rare
+
+Theme:
+
+Sacrifice
+
+Lesson:
+
+Unity can overcome impossible darkness.
+
+---
+
+## The Second Age
+
+### The Age of Kingdoms
+
+Civilization flourished.
+
+Modern kingdoms were founded.
+
+The Capital became the center of politics.
+
+The Iron Peaks became the dwarven homeland.
+
+The Great Forest flourished.
+
+Sol Kareth became a center of commerce and scholarship.
+
+The Mages Guild was founded.
+
+The teachings of the Divine Chorus spread across the continent.
+
+Theme:
+
+Hope
+
+Lesson:
+
+Peace must be protected.
+
+---
+
+## The Third Age
+
+### The Age of Wars
+
+Old alliances failed.
+
+Kingdoms fought for centuries.
+
+Borders shifted.
+
+Cities fell.
+
+Knowledge was lost.
+
+The Vampire Houses quietly expanded.
+
+Goblin tribes became stronger.
+
+The Corruption slowly returned unnoticed.
+
+Talos served during the later years of this age.
+
+Theme:
+
+Pride
+
+Lesson:
+
+Division destroys what previous generations build.
+
+---
+
+## The Fourth Age
+
+### The Age of Shadows
+
+This is the current age.
+
+Kingdoms rebuild.
+
+Trade resumes.
+
+Most believe peace has returned.
+
+Meanwhile...
+
+The Corruption quietly spreads.
+
+Ancient ruins awaken.
+
+Dark magic resurfaces.
+
+Only a handful recognize the true threat.
+
+The player's story begins during the earliest years of this age.
+
+Theme:
+
+Choice
+
+Lesson:
+
+History influences the future but never decides it.
+
+---
+
+# MAGIC
+
+Create a dedicated Magic Bible if one does not already exist.
+
+---
+
+## Primordial Magic
+
+Primordial Magic is the original magical force woven into creation by the Ancient God.
+
+It is the foundation of every magical discipline.
+
+Everything magical ultimately traces back to Primordial Energy.
+
+---
+
+## The Divine Chorus
+
+The Divine Chorus did NOT create magic.
+
+Instead...
+
+Each member of the Divine Chorus became the Divine Steward of one aspect of Primordial Magic after the Ancient God was imprisoned.
+
+Their purpose is maintaining harmony and teaching mortals how to safely wield Primordial Magic.
+
+They are guardians.
+
+Teachers.
+
+Stewards.
+
+Not creators.
+
+---
+
+# RELIGION
+
+The Divine Chorus is the world's primary faith.
+
+Nearly every civilized culture recognizes every member of the Divine Chorus.
+
+This is not a collection of competing religions.
+
+It is one shared faith.
+
+People may personally revere one god more than another.
+
+However...
+
+They still believe in and honor the entire Divine Chorus.
+
+No god is considered more important than another.
+
+Each represents an essential part of creation.
+
+---
+
+## Personal Devotion
+
+Individuals often develop a stronger relationship with one member of the Divine Chorus.
+
+This is a personal devotion.
+
+Examples:
+
+- Blacksmiths often revere Solaryn.
+- Healers commonly pray to Neressa.
+- Builders and craftsmen often seek Tharok's blessing.
+- Travelers frequently ask Zephyros for guidance.
+
+This does NOT replace belief in the rest of the Chorus.
+
+---
+
+## Temples
+
+Most temples are dedicated to the Divine Chorus as a whole.
+
+Within each temple are shrines honoring every member.
+
+People simply spend more time praying at the shrine of the god whose virtues they seek guidance from.
+
+Ancient First Age sanctuaries dedicated exclusively to one god still exist.
+
+These are rare sacred places with immense historical significance.
+
+---
+
+## Philosophy
+
+The central teaching of the Divine Chorus is Balance.
+
+Suggested ancient scripture:
+
+"No flame burns without air.
+
+No river flows without stone.
+
+No mountain stands without time.
+
+No life exists without balance."
+
+Balance is the foundation of creation.
+
+---
+
+# THE DIVINE CHORUS
+
+The gods should each possess:
+
+- a true name
+- a title
+- an element
+- virtues
+- followers
+- symbols
+- ancient temples
+- sacred relics
+
+The title should reflect mythology rather than simply saying "God of Fire."
+
+For example:
+
+Solaryn, the First Flame
+
+Rather than:
+
+God of Fire.
+
+Develop the remaining members of the Divine Chorus using this philosophy.
+
+Each god should feel ancient, unique, and memorable.
+
+---
+
+# RELICS
+
+Each member of the Divine Chorus possesses one legendary First Age relic.
+
+These relics are symbols of their teachings rather than simply powerful magical artifacts.
+
+Examples include:
+
+- Solaryn's Ember
+- Neressa's Tear
+- Tharok's Anvil
+
+Additional relics should follow this design philosophy.
+
+These relics should become important historical artifacts and potential future quest objectives.
+
+---
+
+# MAGES GUILD
+
+The Mages Guild approaches magic academically.
+
+Religion approaches magic spiritually.
+
+Neither philosophy is considered objectively correct.
+
+Both are different ways of understanding the same Primordial Magic.
+
+This philosophical difference should influence dialogue, quests, and worldbuilding.
+
+---
+
+# MAGIC LIMITATIONS
+
+Most mages naturally possess an affinity for one elemental aspect of Primordial Magic.
+
+Some exceptionally gifted mages may eventually master a second affinity after years of study.
+
+Attempting to channel multiple elements without proper affinity is dangerous.
+
+This limitation is accepted as a fundamental law of magic.
+
+---
+
+# ELEANOR
+
+Expand Eleanor's companion quest.
+
+From the beginning of the story...
+
+Eleanor naturally combines multiple elemental affinities.
+
+This should be considered impossible according to modern magical understanding.
+
+Even the Mages Guild cannot explain it.
+
+Some scholars admire her.
+
+Others fear her.
+
+Others wish to study her.
+
+Eventually...
+
+Her companion quest leads the party to an ancient First Age sanctuary connected to one member of the Divine Chorus.
+
+There...
+
+Eleanor encounters one of the gods.
+
+She expects to learn how to control her gift.
+
+Instead...
+
+She learns why she possesses it.
+
+The god reveals that Eleanor is a Harmonic Soul.
+
+A Harmonic Soul is an extraordinarily rare individual naturally connected to Primordial Magic itself rather than a single elemental aspect.
+
+The gods did not create this gift.
+
+They simply recognize it.
+
+The elements are not truly separate.
+
+They are different expressions of one Primordial source.
+
+Most mages learn one note.
+
+Eleanor can hear the entire symphony.
+
+This revelation explains her unique abilities.
+
+It does NOT make her the chosen one.
+
+It does NOT make her the most powerful mage.
+
+It makes her uniquely capable of understanding the true nature of magic.
+
+Her strength comes from understanding rather than raw power.
+
+---
+
+# VAMPIRE HOUSES
+
+Continue expanding the Vampire Houses.
+
+They remain one of the world's major evil factions.
+
+They possess politics.
+
+Rivalries.
+
+Long-term ambitions.
+
+The player may negotiate with them.
+
+Temporarily ally with them.
+
+Or oppose them.
+
+Helping them should always produce meaningful consequences.
+
+Companions should react accordingly.
+
+---
+
+# COMPANION RELATIONSHIPS
+
+Continue expanding companion growth.
+
+Examples include:
+
+- Ronan supporting Eleanor during The Fractured Circle.
+- Ragash becoming increasingly protective of Eleanor.
+- Ragash helping Ronan accept himself.
+- Talos slowly learning to trust individuals rather than judging entire groups.
+- Ronan discovering the Hidden Pack during his personal quest.
+
+Relationships should continuously evolve.
+
+The companions should gradually become a family.
+
+---
+
+# WORLD DESIGN PHILOSOPHY
+
+Every major system should reinforce every other major system.
+
+History should explain politics.
+
+Religion should influence culture.
+
+Magic should influence exploration.
+
+Companions should respond to world events.
+
+Dynamic Campaign Story Arcs should create unique emotional experiences.
+
+The AI Dungeon Master should always build upon established canon rather than rewriting it.
+
+All additions should be integrated into the appropriate documentation and cross-referenced throughout the repository while preserving consistency.

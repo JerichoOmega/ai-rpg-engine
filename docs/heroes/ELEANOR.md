@@ -140,15 +140,64 @@ Eleanor's defining ability is her capacity to wield **multiple elements simultan
 
 The instability is not a punishment. It is the character.
 
+**Why this matters — canonical context:** Under the rules of magic in Elyndor, what Eleanor does should not be possible. Most mages develop affinity for one element and are limited to it for life. Exceptionally gifted mages may eventually develop partial affinity for a second after decades of study. Eleanor channels multiple elements simultaneously from the beginning, without the instability that should accompany every attempt. Neither the Mages Guild nor any religious tradition has a framework that accounts for her. Knowledgeable NPCs who observe her should register this — with admiration, fear, or careful academic interest, depending on who they are. See [`elyndor/magic/MAGIC_BIBLE.md`](../../elyndor/magic/MAGIC_BIBLE.md) for the canonical rules her ability violates.
+
 ---
 
 ## Personal Quest
 
 ### Theme
 
-Eleanor's personal quest challenges her belief that people, given the chance, will do the right thing. The specific shape of this challenge: she extends trust to someone or something during the campaign, and that trust is tested — or broken.
+Eleanor's personal quest has two intertwined threads: her external journey — the trust she extends to someone during the campaign and what happens when that trust is tested — and her internal journey — discovering the truth of what she actually is.
 
-### Player Influence
+These threads are not separate stories. The external betrayal (or vindication) and the internal revelation arrive around the same time, and they speak to each other. Understanding why she has her gift changes how she responds to what happens to her trust.
+
+---
+
+### The Harmonic Soul Revelation
+
+Midway through her companion quest, Eleanor's investigation of her own abilities leads the party to an **ancient First Age sanctuary** — a site dedicated to one member of the Divine Chorus, sealed since the Age of Creation and accessible only to someone who is genuinely searching for what is inside.
+
+Inside the sanctuary, **Eleanor encounters one of the gods**.
+
+She goes in expecting to learn **how to control her gift**.
+
+She learns instead **why she has it**.
+
+---
+
+**The Revelation:** Eleanor is a **Harmonic Soul** — an extraordinarily rare individual connected to Primordial Magic itself, rather than to a single elemental aspect. The fracturing of Primordial Magic after the Ancient God's imprisonment closed direct access to the unified source for ordinary mortals. Eleanor is one of the vanishingly rare exceptions: she did not receive an elemental affinity from the fracturing. She retained the connection that existed before it.
+
+This is not something the gods created. They cannot grant it or revoke it. They simply recognize it when they see it — and they have not seen it in a very long time.
+
+The god does not tell Eleanor what to do with this. The god tells her the truth about what she is, because she asked, and because she was ready to hear it.
+
+---
+
+**What This Does NOT Mean:**
+
+- It does not make Eleanor "the chosen one." The gods chose no one; the universe simply produced someone unusual.
+- It does not make her the most powerful mage in history. Primordial Magic is not a weapon. It is a fabric. Being able to hear all of it does not mean knowing how to use all of it perfectly.
+- It does not give her access to unlimited magical power. She is still limited by what she can actually translate into action — she has the perception, not the omnipotence.
+
+**What This DOES Mean:**
+
+- Eleanor uniquely understands the true nature of magic — not the elemental categories that post-imprisonment study has focused on, but the unified source beneath them.
+- Her strength comes from understanding rather than raw power. She can see connections, possibilities, and solutions that single-element mages cannot perceive.
+- She is capable of comprehending the Corruption in a way no one else is — including understanding aspects of what it is doing to Primordial Magic that the Mages Guild's elemental framework cannot model.
+- The god's words to her, spoken as she leaves: *"Most mages learn one note. You can hear the entire symphony. What you do with that hearing is yours to decide."*
+
+---
+
+**Eleanor's Response:**
+
+Eleanor came into the sanctuary hoping to learn how to be less dangerous to the people around her. She leaves having learned that what she is cannot be contained or minimized without losing something true about her. This parallels her external arc: the question was never whether to trust. The question was what to do with the vulnerability that comes with trusting.
+
+She does not walk out of the sanctuary feeling powerful. She walks out feeling seen — possibly for the first time — by something that did not require her to be smaller than she is. This is both a gift and a weight.
+
+---
+
+### Player Influence — External Arc
 
 **Resolution A — The Cost of Clarity**
 Eleanor's trust is betrayed in a way she cannot rationalize away. She emerges from it changed: still warm, but seeing people more clearly. She learns that loving someone well sometimes means seeing them honestly rather than hopefully. She does not become cynical. She becomes discerning.
@@ -159,9 +208,11 @@ Her faith in someone is challenged and ultimately proven right — not because s
 **Resolution C — The Third Thing**
 Eleanor discovers that the question is not "should I trust people?" but "what do I do with the hurt when trust goes wrong?" She finds a way to grieve what was broken without letting it close her off. The wound is not healed — it is metabolized.
 
+---
+
 ### Emotional Core
 
-Eleanor's quest is not about defeating an enemy. It is about what she does with being wrong about someone she believed in. Whatever resolution the player guides her toward, it should leave her changed — but recognizable.
+Eleanor's quest is not about defeating an enemy and not about learning a new power. It is about two things arriving at the same time: what she does with being wrong about someone she believed in, and what she does with being told the truth about who she is. Whatever resolution the player guides her toward on the external arc, the Harmonic Soul revelation is fixed — she will learn it. What it means to her depends on everything else that has happened.
 
 ---
 
@@ -233,3 +284,4 @@ Her Rare Elemental Casting opens options that no single-element mage could acces
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry established |
+| July 2026 | Expanded — Harmonic Soul revelation added to Personal Quest; Signature Ability canonical context added; cross-referenced to Magic Bible |

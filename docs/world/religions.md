@@ -6,11 +6,47 @@
 
 ---
 
+## The Divine Chorus: The Theological Foundation
+
+Before examining the four major religious traditions of Elyndor, it is necessary to understand the theological reality that underlies all of them.
+
+**The Divine Chorus is the world's primary faith.** Nearly every civilized culture, across all six regions, recognizes every member of the Divine Chorus. This is not a collection of competing gods demanding exclusive loyalty. It is one pantheon — seven divine stewards of the seven elemental aspects of Primordial Magic, each representing an essential and irreplaceable part of creation.
+
+The central teaching of the Divine Chorus is **Balance**:
+
+> *"No flame burns without air.*  
+> *No river flows without stone.*  
+> *No mountain stands without time.*  
+> *No life exists without balance."*
+
+No member of the Chorus is more important than another. Each represents something creation cannot function without.
+
+**Most temples are dedicated to the Divine Chorus as a whole.** Within each temple, individual shrines honor every member. Worshippers spend more time at the shrine of the god whose domain most reflects their current need — a smith before a forge, a traveler at the road's beginning, a parent watching a child suffer at Neressa's shrine. This is personal devotion, not theological exclusivity.
+
+**Ancient First Age sanctuaries dedicated exclusively to one god still exist.** These are rare, sacred, and historically significant — pre-dating the four religious traditions entirely.
+
+For the full canonical framework of the Divine Chorus — including all seven gods, their elements, their relics, and the magic system they steward — see [`elyndor/magic/MAGIC_BIBLE.md`](../../elyndor/magic/MAGIC_BIBLE.md).
+
+---
+
+### The Four Religious Traditions as Cultural Expressions
+
+The four major religious traditions below are not separate religions in the deepest theological sense. They are **cultural expressions** of how different peoples understand their relationship with different members of the Divine Chorus:
+
+- **The Solari Covenant** centers its devotion on Solaryn, the First Flame — civilization, order, and the courage to build
+- **The Old Ways** honors Sylvara, the Deep Root — nature, cycles, and the balance of the living world
+- **The Ancestors' Path** focuses on Eldris, the Long Thread, and Morvel, the Patient Witness — lineage, obligation, and the relationship between the living and the dead
+- **The Veiled Order** seeks the understanding of Morvel, the Patient Witness — death as transition, clarity, and the knowledge that most people cannot bear to approach
+
+These traditions do not disagree on whether the Divine Chorus exists. They disagree on **which aspect of creation deserves the most attention**, and on the practical and spiritual implications of that emphasis. This is the source of genuine theological tension — the Solari Covenant's institutional claim that civic order represents the whole of right religion is a position that every other tradition finds theologically presumptuous.
+
+---
+
 ## Overview
 
-Elyndor has four major religions. Each emerged from a different civilization and reflects the values and history of the people who built it.
+Elyndor has four major religious traditions. Each emerged from a different civilization and reflects the values and history of the people who built it.
 
-None of these religions are monoliths. Each has internal factions, regional variations, and points of fracture that The Corruption is actively exploiting. A player who learns to navigate religious politics will find allies, enemies, and questlines unavailable to those who treat faith as background dressing.
+None of these traditions are monoliths. Each has internal factions, regional variations, and points of fracture that The Corruption is actively exploiting. A player who learns to navigate religious politics will find allies, enemies, and questlines unavailable to those who treat faith as background dressing.
 
 | Religion | Core Belief | Primary Territory | Political Stance |
 |---|---|---|---|
@@ -339,3 +375,4 @@ Each of the four major religions has associated orders with separate reputation 
 | Date | Change |
 |---|---|
 | July 2026 | Created — four major religions established: The Solari Covenant, The Old Ways, The Ancestors' Path, The Veiled Order. Legitimate religion vs. cult distinction documented. |
+| July 2026 | Expanded — Divine Chorus theological foundation section added; four traditions reframed as cultural expressions of the shared Chorus faith; cross-referenced to Magic Bible |
