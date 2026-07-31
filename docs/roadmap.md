@@ -110,6 +110,18 @@ These are directions, not commitments. Do not implement without explicit design 
 - File: [`docs/world/religions.md`](world/religions.md)
 - Expand with pilgrim NPCs, shrine locations, cult detail, order quest depth.
 
+### [CONFIRMED] Journey System
+- Travel-first companion development framework established: camp is the primary narrative space, not a hub between missions.
+- Invisible interaction scheduler: distributes conversations across camps; every interaction has prerequisites, priority, cooldown, emotional weight, companion participation, and story dependency metadata.
+- Six camp event types: Companion Conversation, Group Conversation, Player Activity, Story Event, World Event, Quiet Camp.
+- Six conversation priority tiers: Main Story → Companion Quest/Romance → Significant Emotional → Character Development → Casual/Humor → Ambient.
+- Full companion relationship network (10 pairs plus player-companion); relationships evolve independently.
+- Corruption resistance as primary relationship reward (emotional resilience, not stat bonuses); companion interventions during critical moments.
+- Dynamic Dialogue Memory: past interactions referenced in future conversations.
+- Camp Evolution: Early (distant/formal) → Mid (shared meals, trust) → Late (family).
+- File: [`docs/systems/journey_system.md`](../docs/systems/journey_system.md)
+- Implement: relationship state representation in `world_state.py`; scheduler subsystem coordinated with DM Brain; camp event queue; dialogue memory store.
+
 ### [CONFIRMED] Magic Bible
 - Primordial Magic framework established: seven elemental aspects, magic limitations (one affinity per mage; rare second), Divine Chorus as stewards of each aspect.
 - Seven gods fully developed: Solaryn, Neressa, Tharok, Zephyros, Sylvara, Morvel, Eldris — each with title, element, virtues, followers, symbol, ancient temple, and sacred relic.

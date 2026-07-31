@@ -28,6 +28,7 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/world/religions.md` | Four major religions: Solari Covenant, The Old Ways, Ancestors' Path, Veiled Order; cults vs. legitimate religion; religious orders and reputation |
 | `docs/world/goblin_tribes.md` | Three tribes: Stonefang (Warchief Grakkor), Mossroot (Elder Vess), Ashfire (Warchief Skarra); leadership, territory, traditions, inter-tribe relationships |
 | `docs/systems/dynamic_story_arcs.md` | Dynamic Story Arc framework; The Fractured Circle (first confirmed arc); campaign-exclusive enemies; companion stakes per arc |
+| `docs/systems/journey_system.md` | Journey System: travel as storytelling; camp event types and scheduling; full companion relationship network; corruption resistance through bonds; camp evolution early→mid→late |
 | `docs/quests/religious_order_quests.md` | One named quest per religious order: The Inquisitor's Commission (Covenant), The Turning Grove (Old Ways), What the Ancestors Say (Ancestors' Path), The Archivist's Last Record (Veiled Order) |
 | `docs/world/cults.md` | Named cults players will encounter; how cults emerge from legitimate religion; cult mechanics in gameplay |
 | `docs/encounters/religious_encounters.md` | Religious pilgrimage and shrine encounters for the travel encounter tables |

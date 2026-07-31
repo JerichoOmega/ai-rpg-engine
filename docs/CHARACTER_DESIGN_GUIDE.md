@@ -177,6 +177,8 @@ This is not a design metaphor — it is a design requirement. Relationships must
 
 See [`docs/systems/dynamic_story_arcs.md`](systems/dynamic_story_arcs.md) for campaign-specific companion interactions.
 
+See [`docs/systems/journey_system.md`](systems/journey_system.md) for how companion relationships develop during travel — the interaction scheduler, camp event types, relationship growth mechanics, Corruption resistance through bonds, and camp evolution from strangers to family.
+
 ---
 
 ## Document History

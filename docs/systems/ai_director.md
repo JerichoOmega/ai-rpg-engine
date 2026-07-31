@@ -289,6 +289,8 @@ Arc definitions and design framework: [`docs/systems/dynamic_story_arcs.md`](dyn
 - Real LLM integration via `llm_bridge.py` function replacement
 - Emotion/relationship tracking to personalize narrative tone
 - Persistent DM memory across sessions via `memory_engine.py`
+- **Journey System interaction scheduler** — the AI Director needs to coordinate with a camp event queue that tracks: interaction prerequisites, priority tiers, companion cooldowns, emotional weight, and story dependencies. The DM Brain's story_pressure and current_focus should inform which interaction tier is appropriate at any camp (e.g., a "crisis" focus should suppress Low/Ambient interactions in favor of High/Very High). Full scheduler spec: [`docs/systems/journey_system.md`](journey_system.md)
+- **Relationship network tracking** — the full companion-to-companion relationship network (10 pairs plus player-companion) needs a state representation that the DM Brain can read when determining which interactions have met their prerequisites and which companions should receive cooldowns after focus
 
 ---
 

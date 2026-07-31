@@ -51,7 +51,8 @@
 41. [Dynamic Story Arcs](systems/dynamic_story_arcs.md) *(separate file)*
 42. [History Bible](../elyndor/history/HISTORY_BIBLE.md) *(separate file — Four Ages framework)*
 43. [Magic Bible](../elyndor/magic/MAGIC_BIBLE.md) *(separate file — Primordial Magic, Divine Chorus, magic limitations, Eleanor's Harmonic Soul)*
-44. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
+44. [Journey System](systems/journey_system.md) *(separate file — travel as storytelling, camp philosophy, companion relationships, interaction scheduling, camp evolution)*
+45. [Pronunciation Guide](PRONUNCIATION_GUIDE.md) *(separate file)*
 
 ---
 
@@ -869,6 +870,22 @@ Managed by `companion_manager.py`. A `COMPANIONS` dict defines recruitable compa
 - **Interaction:** `random_companion_banter()`, `show_party()`, `companion_story_reaction(event)`
 
 ⚠️ The terminal prototype infrastructure exists. Full ability implementation, recruitment conditions, and Hero Bible integration are not yet implemented.
+
+### Journey System — How Companion Relationships Develop
+
+Companion relationships are not built at a hub between missions. They develop **during travel** — on the road, at camp, through shared hardship and shared rest.
+
+The Journey System governs:
+- How travel segments distribute companion interactions across camps
+- An invisible interaction scheduler that prevents conversation stacking and maintains emotional pacing
+- Six camp event types: Companion Conversation, Group Conversation, Player Activity, Story Event, World Event, Quiet Camp
+- A full companion relationship network (every pair, not only player↔companion)
+- Corruption resistance as the primary mechanical reward for relationship depth
+- Companion interventions during critical Corruption moments — available only when the relationship has been earned
+- Dynamic Dialogue Memory — past interactions are referenced in future dialogue
+- Camp evolution from strangers (early game) through trust (mid game) to family (late game)
+
+Full system: [`docs/systems/journey_system.md`](systems/journey_system.md)
 
 ---
 

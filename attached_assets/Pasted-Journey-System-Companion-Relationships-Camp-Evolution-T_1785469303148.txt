@@ -1,0 +1,573 @@
+Journey System, Companion Relationships & Camp Evolution
+
+This is a canonical gameplay and narrative update for Project Dungeon Keeper.
+
+Integrate the following systems into the Development Bible, gameplay documentation, companion documentation, world systems, and future implementation roadmap.
+
+These systems are now considered part of the project’s long-term vision.
+
+⸻
+
+Design Philosophy
+
+Project Dungeon Keeper is not a game where companions simply accompany the player.
+
+It is a game where strangers gradually become a family.
+
+The player’s journey is not only about saving the world.
+
+It is about helping these companions grow together.
+
+The Journey System should reinforce the game’s central theme:
+
+The greatest battle is not against darkness… but against forgetting who you are.
+
+⸻
+
+The Journey System
+
+Replace the traditional “hub between missions” philosophy.
+
+Instead, companion development primarily occurs during travel.
+
+The journey itself is what builds relationships.
+
+Travel is no longer downtime.
+
+Travel becomes one of the primary methods of storytelling.
+
+⸻
+
+Overworld Travel
+
+Continue using the Solasta-inspired overworld travel system.
+
+While traveling between destinations:
+
+* The party travels in segments.
+* Periodically the party stops to establish camp.
+* Most camps are peaceful.
+* Some camps trigger dynamic interactions.
+* Others simply provide atmosphere.
+
+The player should gradually feel that weeks or months are passing as the companions travel together.
+
+⸻
+
+Camp Philosophy
+
+Camp is not merely a resting place.
+
+Camp is where companions reconnect after hardship.
+
+Mechanically:
+
+* Rest
+* Character management
+* Crafting
+* Equipment maintenance
+
+Narratively:
+
+* Conversations
+* Character development
+* Companion bonding
+* Reflection
+* Humor
+* Conflict resolution
+* Personal growth
+
+Camp represents emotional safety.
+
+Outside camp, the Corruption whispers.
+
+Inside camp, companions remind one another who they truly are.
+
+⸻
+
+Companion Interactions
+
+Companion interactions should never occur randomly.
+
+Every interaction has prerequisites.
+
+Examples include:
+
+* Story progression
+* Companion quests
+* Previous conversations
+* Relationship levels
+* Player choices
+* Combat outcomes
+* Recent injuries
+* Discovering important lore
+* Completing specific regions
+* Time since previous interaction
+
+This ensures every conversation feels earned.
+
+⸻
+
+Interaction Scheduling
+
+Do NOT allow multiple conversations to trigger back-to-back at the same camp.
+
+Instead:
+
+When several interactions become available during a single journey:
+
+The Journey System should intelligently distribute them across future camps.
+
+Example:
+
+Capital
+
+↓
+
+Travel Segment
+
+↓
+
+Camp
+
+Torren speaks with Ronan.
+
+↓
+
+Travel
+
+↓
+
+Camp
+
+No major interaction.
+
+Atmospheric camp only.
+
+↓
+
+Travel
+
+↓
+
+Camp
+
+Eleanor and Talos discuss recent events.
+
+↓
+
+Travel
+
+↓
+
+Storm Event
+
+↓
+
+Travel
+
+↓
+
+Camp
+
+Ragash and Torren interaction.
+
+↓
+
+Destination
+
+This creates natural pacing.
+
+⸻
+
+Conversation Queue
+
+Build an invisible interaction scheduler.
+
+Every interaction should contain metadata including:
+
+* Prerequisites
+* Priority
+* Cooldown
+* Emotional weight
+* Companion participation
+* Story dependencies
+
+The scheduler should determine which interaction is most appropriate for each camp.
+
+Unused interactions remain queued for later journeys.
+
+⸻
+
+Conversation Priorities
+
+Example priority levels:
+
+Highest
+
+* Main story events
+
+Very High
+
+* Companion quest progression
+* Romance progression
+
+High
+
+* Significant emotional moments
+
+Medium
+
+* Character development
+
+Low
+
+* Casual conversations
+* Humor
+* Campfire stories
+
+Ambient
+
+* Background life moments
+
+The system should naturally alternate between heavy and light scenes.
+
+⸻
+
+Companion Cooldowns
+
+After an emotionally significant interaction:
+
+That companion should receive an invisible cooldown before becoming the focus again.
+
+This naturally distributes attention across the cast.
+
+No companion should dominate camp conversations unless required by the story.
+
+⸻
+
+Ambient Camp Events
+
+Not every camp requires dialogue.
+
+Many camps should simply reinforce that the companions are becoming a family.
+
+Examples:
+
+Torren repairs armor.
+
+Talos sharpens his blade.
+
+Ronan quietly disappears into the woods before returning.
+
+Eleanor studies ancient texts.
+
+Ragash prepares dinner.
+
+Companions laugh together.
+
+Someone tells a story.
+
+A quiet evening passes peacefully.
+
+These moments build atmosphere without overwhelming the player.
+
+⸻
+
+Types of Camp Events
+
+Support multiple event categories.
+
+Companion Conversation
+
+Character development.
+
+⸻
+
+Group Conversation
+
+Entire party participates.
+
+⸻
+
+Player Activity
+
+Player chooses how to spend the evening.
+
+Examples:
+
+Train with Talos.
+
+Study with Eleanor.
+
+Hunt with Ronan.
+
+Help Torren forge equipment.
+
+Explore nearby ruins with Ragash.
+
+Cook for the party.
+
+Play games around the fire.
+
+⸻
+
+Story Event
+
+Major narrative progression.
+
+⸻
+
+World Event
+
+Travelers.
+
+Merchants.
+
+Weather.
+
+Ruins.
+
+Wildlife.
+
+Corruption sightings.
+
+Unexpected visitors.
+
+⸻
+
+Quiet Camp
+
+No major interaction.
+
+Only atmosphere.
+
+These moments are important for pacing.
+
+⸻
+
+Relationship System
+
+Relationships should not exist only between:
+
+Player ↔ Companion
+
+Instead maintain a complete relationship network.
+
+Examples:
+
+Player ↔ Ronan
+
+Player ↔ Torren
+
+Talos ↔ Ronan
+
+Talos ↔ Eleanor
+
+Torren ↔ Ragash
+
+Eleanor ↔ Ronan
+
+Every companion relationship evolves independently.
+
+⸻
+
+Relationship Growth
+
+Relationships improve through:
+
+Travel
+
+Shared combat
+
+Camp interactions
+
+Personal quests
+
+Helping one another
+
+Shared victories
+
+Resolving disagreements
+
+Acts of sacrifice
+
+Humor
+
+Trust
+
+Not every relationship grows equally.
+
+Some companions naturally become closer than others.
+
+⸻
+
+Corruption Resistance
+
+Relationship growth directly reinforces one of the game’s major themes.
+
+The Corruption isolates people.
+
+Companionship preserves identity.
+
+As trust deepens:
+
+Companions become more resistant to Corruption.
+
+This should never grant complete immunity.
+
+Instead relationships provide emotional resilience.
+
+The stronger the bonds…
+
+The longer companions can resist.
+
+⸻
+
+Companion Intervention System
+
+During critical Corruption moments:
+
+Companions with strong relationships may intervene.
+
+Examples:
+
+Torren pulls Ronan back from losing himself.
+
+Eleanor reminds Talos why he fights.
+
+Ragash comforts Eleanor after tragedy.
+
+These interventions are narrative moments supported by relationship progression.
+
+They are not magical powers.
+
+They represent trust.
+
+⸻
+
+Dynamic Dialogue Memory
+
+Every meaningful interaction should become a remembered event.
+
+Examples:
+
+Torren encouraged Ronan after the Wolf Den.
+
+Talos apologized to Eleanor after Iron Peaks.
+
+Ragash taught Torren wilderness survival.
+
+Eleanor helped Talos understand First Age history.
+
+Future dialogue should naturally reference these shared memories.
+
+This creates continuity throughout the adventure.
+
+⸻
+
+Camp Evolution
+
+Camp should visually and emotionally evolve.
+
+Early Game
+
+Companions remain distant.
+
+Separate tents.
+
+Minimal conversation.
+
+Formal interactions.
+
+⸻
+
+Mid Game
+
+Shared meals.
+
+Friendly teasing.
+
+Training together.
+
+Shared responsibilities.
+
+Trust develops.
+
+⸻
+
+Late Game
+
+Camp feels like home.
+
+Companions freely interact without player involvement.
+
+They joke.
+
+Argue.
+
+Support one another.
+
+Help one another.
+
+The player should realize:
+
+They are no longer a group of adventurers.
+
+They have become a family.
+
+⸻
+
+Gameplay Philosophy
+
+Relationship progression should not primarily reward:
+
+Attack bonuses.
+
+Critical chance.
+
+Raw statistics.
+
+Instead it should unlock:
+
+Greater Corruption resistance.
+
+Companion interventions.
+
+Unique conversations.
+
+Special cooperative combat abilities.
+
+Companion quest progression.
+
+Alternative story outcomes.
+
+New camp activities.
+
+Emotional payoffs.
+
+Mechanical bonuses should support the narrative rather than replace it.
+
+⸻
+
+Core Philosophy
+
+The Journey System exists because the world is not saved by a lone hero.
+
+It is saved by people who refuse to let one another face darkness alone.
+
+Every road traveled…
+
+Every campfire…
+
+Every shared hardship…
+
+Every laugh…
+
+Every disagreement resolved…
+
+Every memory created…
+
+Makes the party stronger—not simply because they gain experience, but because they strengthen the bonds that allow them to resist the Corruption together.
+
+The goal is for players to finish Project Dungeon Keeper feeling that they did not merely command a party of heroes—they watched five strangers gradually become a family, and that transformation was as important to saving the world as any battle they fought.

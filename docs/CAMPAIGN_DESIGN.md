@@ -109,6 +109,24 @@ Full arc definitions and design framework: [`docs/systems/dynamic_story_arcs.md`
 
 ---
 
+## The Journey System — Relationships Built During Travel
+
+Companion development does not happen at a hub between missions. It happens **during the journey itself** — on the road, at camp, through the accumulated weight of shared travel.
+
+The Journey System replaces the traditional hub philosophy with a travel-first model where:
+- Camp is both a mechanical rest point and the primary site of companion storytelling
+- An invisible interaction scheduler distributes conversations across camps to prevent stacking and control emotional pacing
+- Every interaction has prerequisites — no conversation triggers randomly; each must be earned
+- The full companion relationship network evolves independently (every pair, not only player↔companion)
+- Relationship depth provides Corruption resistance — the party's bonds are a direct mechanical counter to the Corruption's isolating influence
+- Camp visually and emotionally evolves from distant/formal (early game) to family (late game)
+
+> The Corruption isolates. Companionship preserves. The Journey System makes this the central mechanic of the game, not only the central theme.
+
+Full system design: [`docs/systems/journey_system.md`](systems/journey_system.md)
+
+---
+
 ## Replayability Philosophy
 
 Replayability comes from experiencing **a familiar world that changes in meaningful ways** — not from encountering a completely different game.
