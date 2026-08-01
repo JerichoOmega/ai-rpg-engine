@@ -14,8 +14,9 @@
 | # | ID | Status | Ruling Summary | Approved |
 |---|---|---|---|---|
 | 1 | D-01 | ✅ CANONICAL | **Four Ages framework adopted:** Age of Awakening → Age of Harmony → Age of Sundering → Age of Restoration. Long Decline is the final era of the Age of Harmony (not a separate Age). Full age names in canonical docs; "First Age / Third Age" shorthand allowed in in-world dialogue or scholarly references only; "Age I / II / III / IV" reserved for internal notes. Prior frameworks (Version A and Version B) archived for development-history reference only; obsolete framework names removed from canonical docs. | Jan 2026 |
+| 2 | D-02 | ✅ CANONICAL | **Three-stage sanctuary revelation for Eleanor's Harmonic Soul:** (1) **Resonance** — Eleanor senses Primordial resonance approaching the sanctuary; no voice, no vision, no deity. (2) **Discovery** — Eleanor reads preserved First Age scholarship on Harmonic Souls inside the sanctuary; realizes it describes her. She reaches the conclusion herself. (3) **Confirmation** — At the sanctuary's heart, an ancient chamber saturated with Primordial resonance responds naturally to her presence — not because she is chosen, but because she possesses the qualities the sanctuary was designed to recognize. **No god ever appears, speaks, or reveals Eleanor's identity.** Occurs during The Fractured Circle questline. Present companions witness resonance but experience nothing themselves; reactions vary by personality. Reinforces the theme *"history belongs to mortals."* | Jan 2026 |
 
-*(1 of 30 approved — running total.)*
+*(2 of 30 approved — running total.)*
 
 ---
 
@@ -140,6 +141,31 @@ Additional canonical rulings:
 - `LORE_CONSISTENCY_AUDIT.md` ❌ #4 auto-closes.
 
 **Priority:** Critical.
+
+**✅ RULING — CANONICAL (January 2026):**
+
+**Option 1 — APPROVED with layered stages.** The Harmonic Soul revelation occurs in three sequential stages during The Fractured Circle questline:
+
+**Stage 1 — Resonance**
+As Eleanor approaches the ancient sanctuary, she begins experiencing an overwhelming sense of Primordial resonance unlike anything she has ever felt before. This is not a vision. No voice speaks. No divine figure appears. She simply senses that the magic surrounding her is fundamentally different from anything she has studied. Something extraordinary is happening — but no answers are given yet.
+
+**Stage 2 — Discovery**
+Within the sanctuary, Eleanor discovers preserved First Age records, inscriptions, and magical research left behind by ancient scholars. These records describe the existence of Harmonic Souls and document observations about individuals capable of perceiving Primordial Magic as a unified whole rather than as isolated elements. Nothing explicitly identifies Eleanor. Instead, she gradually realizes that every description matches her own experiences throughout her life. **The sanctuary never tells her who she is. She reaches that conclusion herself.**
+
+**Stage 3 — Confirmation**
+At the sanctuary's heart lies an ancient chamber saturated with Primordial resonance. When Eleanor enters, the sanctuary responds naturally to her presence — not because it has chosen her, not because she is special to the gods, but because she possesses the qualities the sanctuary was originally designed to recognize. The response confirms the conclusion she has already reached. The sanctuary does not speak. No deity appears. No divine instruction is given. The place itself simply reacts in a way that no ordinary mage could trigger.
+
+**Additional canonical rulings:**
+- The Divine Chorus never appears, speaks directly to Eleanor, or gives personal guidance.
+- The gods never reveal Eleanor's identity.
+- Eleanor discovers the truth through observation, scholarship, and experience.
+- The sanctuary confirms her conclusion through ancient magical resonance rather than dialogue.
+- The revelation reinforces the world's central theme: *"History belongs to mortals."* Knowledge is preserved by civilizations, scholars, and sacred places — not by divine intervention.
+- The revelation occurs **during The Fractured Circle questline**, so Eleanor's emotional and personal journey culminates alongside the larger narrative.
+- Other companions present in the active party may witness the resonance but experience nothing themselves. Reactions vary by personality (Ronan senses nothing, Ragash's hounds may react to the resonance without understanding it, Talos observes with quiet respect, Torren treats the sanctuary as a work of craft worthy of study). This reinforces that the sanctuary responds specifically to a Harmonic Soul rather than creating a universal magical event.
+- `LORE_CONSISTENCY_AUDIT.md` ❌ #4 auto-closes on ruling application.
+
+**Applied to consolidation plan.** Awaiting all remaining rulings before repository modification begins.
 
 ---
 
