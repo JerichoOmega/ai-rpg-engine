@@ -715,4 +715,469 @@ Each entry below explains why an auto-resolution (§3.4, §3.5, §3.6, §3.9, §
 
 ---
 
-*End of report. Awaiting your review and rulings before any repository modification.*
+---
+
+# Part II — Vertical Slice Readiness Assessment
+
+> **Purpose:** Determine whether this project is ready to begin a **Vertical Slice** — a small but *complete-feeling* playable segment that demonstrates the target experience end-to-end (one region + one settlement + one dungeon + one questline + one companion recruit + one companion quest + one boss + one loop).
+>
+> **Method:** Every system and content area is scored against three criteria:
+> - **Design (Doc):** is the system canonically documented?
+> - **Prototype (Code):** does a functional terminal-prototype implementation exist?
+> - **Godot-ready:** is there enough information to reimplement in Godot without inventing new canon?
+>
+> **Verdict format:** ✅ Ready · 🟡 Partial · ❌ Missing.
+
+---
+
+## VS-1. Core Gameplay System Readiness
+
+| System | Design (Doc) | Prototype (Code) | Godot-Ready | Notes / Gaps |
+|---|---|---|---|---|
+| **Exploration** | ✅ Two-layer model documented (strategic continent map + handcrafted regions) — `docs/world/WORLD_BIBLE.md`, `docs/systems/world_regions.md` | 🟡 Region travel + `world_map.py` static display + `travel_manager.py` inter-region movement all present; no strategic-continent-map layer | 🟡 | Godot scene layout for the two-layer exploration is undefined. Dual region-discovery state is a known bug (BUG-004). |
+| **Combat** | ✅ Canonical `docs/COMBAT_SYSTEM.md` (grid, AP economy, facing, downed, shield stance, initiative, party of four) | 🟡 Terminal turn-based combat is functional (`combat.py`, `enemy_manager.py`, `bosses.py`, `status_effects.py`) but is a *placeholder* — no grid, no AP, no facing, no downed system | ❌ | The target combat system (3D tactical grid) has **zero** implementation yet. The terminal loop is not a stepping stone — it will be rewritten in Godot. Complete design however means no invention needed. |
+| **Dialogue** | 🟡 `dialogue_manager.py` + skill checks + rumor generation covered in `docs/GAME_BIBLE.md` and `docs/systems/npcs_companions.md`. **No dedicated `docs/systems/dialogue.md`.** | ✅ Terminal dialogue with persuasion/intimidation checks working | 🟡 | Dialogue framework doc for Godot (branching format, condition system, LLM-optional layer) is missing. |
+| **Companion System** | ✅ Hero Bibles complete for all five confirmed companions; `docs/HERO_BIBLE.md`, `docs/CHARACTER_DESIGN_GUIDE.md`, `docs/systems/npcs_companions.md`, `docs/systems/journey_system.md` | 🟡 `companion_manager.py` supports recruit/remove/loyalty/attack/ability; recruitment *conditions* per companion are not scripted; abilities are placeholder | 🟡 | Companion Expertise, Companion Evolution, Origin Character, and Settlement Dispersal are new canon with no docs (§2.3). Also blocks a decision on the roster (Corwin + Future Healer). |
+| **Progression** | ✅ Level 25 cap, shared XP across roster, new-companion auto-scaling documented in `docs/systems/progression_skills.md` | 🟡 XP and level counter working; per-level stat growth not applied; skill tree scaffold not wired to combat | 🟡 | Level-up stat curves per class (Talos/Eleanor/Ragash/Ronan/Torren) are undefined. Skill trees per companion (Torren has three named paths: Forge Master, Engineer, War Smith) are named but not filled with individual skill nodes. |
+| **Inventory** | ✅ Canonical path (`world_state["player"]["inventory"]`) documented in `docs/systems/inventory_equipment.md` | ✅ Functional (add/remove/has_item helpers) | ✅ | Ready as-is; port to Godot is straightforward. |
+| **Equipment** | ✅ Slots (weapon, armor, accessory) and stat application documented | ✅ Functional | ✅ | Ready. |
+| **Crafting** | ❌ ⚠ **NOT YET DEFINED** anywhere in the repo. `docs/roadmap.md` [FUTURE] entry only. Torren is thematically tied to crafting but there is no recipe database, no component-gathering system, no crafted-item catalog. | ❌ | ❌ | This is the largest single gap that could block the Torren companion quest if it depends on crafting mechanics. |
+| **Saving/Loading** | ✅ Both save systems + migration guard documented in `docs/systems/save_system.md` | ✅ Both functional; `ensure_world_state_defaults()` in place | 🟡 | Godot port will not use JSON+manager-dicts as-is — the save schema must be redefined against the new `world_state` shape, but the *strategy* is documented. |
+
+**Core Gameplay overall:** 🟡 **Design is 90% ready. Implementation is terminal-only.** The Godot Vertical Slice will build fresh code against the existing canon — no design invention needed except for crafting and skill-tree fill.
+
+---
+
+## VS-2. Vertical Slice Content Requirements
+
+Concrete assessment of the eight required VS deliverables against current documentation and content.
+
+### VS-2.1 One complete playable region
+
+**Status: 🟡 Design ready; Godot scene definition missing.**
+
+| Requirement | Status |
+|---|---|
+| Region designed? | ✅ Six canonical regions exist (`docs/world/WORLD_BIBLE.md`). **The Frontier** is the strongest candidate for VS-1 — the Corruption arrives there first, the goblin tribes are located there, and the region has the most authored content (`docs/quests/goblin_tribe_quests.md`, `docs/encounters/mossroot_first_contact.md`). |
+| Biome + danger + factions specified? | ✅ Every region has biome, danger level, faction control. |
+| Explorable content authored? | 🟡 Frontier has one first-contact encounter authored + three tribe questlines. Not enough content for a *full* region — needs 3–5 more location vignettes. |
+| Scene layout / map / traversal? | ❌ No Godot scene layout, no map graph, no traversal grid or nav mesh definition. |
+| Environmental storytelling beats? | 🟡 `docs/world/GEOGRAPHY_LANDMARKS.md` lists named landmarks; specific in-region storytelling beats not yet authored. |
+
+**Recommendation:** Ship VS-1 with **The Frontier** as the playable region. Design gap = Godot scene/map layout only.
+
+### VS-2.2 One settlement
+
+**Status: 🟡 Data exists; playable settlement scene undefined.**
+
+| Requirement | Status |
+|---|---|
+| Settlement data model? | ✅ `settlement_manager.py` has 12+ functions (prosperity, security, events, rumors, services). Serialized via save_manager. |
+| Named settlement content? | 🟡 Terminal prototype includes multiple settlements as data; none has an *authored* location doc (people, buildings, quest hooks, environmental beats). |
+| Settlement Dispersal spec? | ❌ New canon from current session. See §2.3 and §4.C6. |
+| Godot scene? | ❌ Undefined. |
+
+**Recommendation:** Author one full settlement (recommend: **a Frontier trading post/outpost** — thematically the ideal VS-1 hub). Includes NPC roster, dispersal layout for the five companions, service buildings, one merchant, at least one quest hook.
+
+### VS-2.3 One dungeon
+
+**Status: ❌ Dungeon design not authored; code stub only.**
+
+| Requirement | Status |
+|---|---|
+| Dungeon system design doc? | ❌ Missing (`docs/roadmap.md` #8 is the only reference). |
+| Dungeon data model? | 🟡 `dungeon_manager.py` has only `run_dungeon(dungeon_id)` — no floor/room/trap/loot-table sub-systems. |
+| Authored dungeon content? | ❌ Zero authored dungeons in the repo. |
+| Dungeon layout / architecture? | ❌ No canonical dungeon-layout system. |
+
+**Recommendation:** Author **one small dungeon (3–5 rooms)** tied to the Frontier questline (e.g., a corrupted watchtower or a Mossroot-territory ruin). Design gap is real here: dungeon-layout system needs a short design doc before authoring content.
+
+### VS-2.4 One major questline
+
+**Status: ✅ Fully authored; ready to script.**
+
+Three complete questlines authored:
+- `docs/quests/goblin_tribe_quests.md`: **The Debt Comes Due** (Stonefang, 5 stages), **What the Forest Carries** (Mossroot, 5 stages), **Smoke and Terms** (Ashfire, 5 stages).
+- `docs/quests/religious_order_quests.md`: four authored quests (Inquisitor's Commission, Turning Grove, What the Ancestors Say, Archivist's Last Record).
+- `docs/systems/dynamic_story_arcs.md`: **The Fractured Circle** (Eleanor's arc + Mages Guild corruption).
+
+**Recommendation:** Ship VS-1 with **What the Forest Carries** (Mossroot) — this quest already has a first-contact encounter authored (`docs/encounters/mossroot_first_contact.md`) and matches the Frontier setting.
+
+### VS-2.5 One companion recruitment
+
+**Status: 🟡 Companion is documented; recruitment scene is not.**
+
+Every one of the five confirmed companions is fully authored (Hero Bible + Character Sheet). Recruitment mechanics exist in code (`recruit_companion()`). What is missing:
+- The *narrative recruitment scenes* per companion — when, where, why the player first meets them, and what conditions unlock their recruitment.
+- The Torren Hero Bible refers to introductory scenes conceptually; no authored recruitment dialogue exists yet.
+
+**Recommendation:** Author **Talos's recruitment scene** for VS-1. Talos is the safest choice: earliest in the tone canon (mentor archetype), lowest romance/narrative risk, easiest to test.
+
+### VS-2.6 One companion quest
+
+**Status: ✅ Two authored, ready.**
+
+- **Eleanor's personal story** (The Fractured Circle) — fully authored in `docs/systems/dynamic_story_arcs.md` lines 116–170.
+- **Ronan's Hidden Pack** — key story beat authored in `docs/heroes/RONAN.md` Personal Quest section.
+- **Torren's Core Wound arc** — outlined but full quest not yet authored.
+
+**Recommendation:** Author **Eleanor's Fractured Circle arc** (already the most-developed) *or* pick a smaller companion quest suitable for VS-1 (recommend an earlier beat from Talos's arc since he's the recommended VS-1 recruit).
+
+### VS-2.7 One boss encounter
+
+**Status: 🟡 Boss system + several bosses in code; VS-1 boss not authored in canonical detail.**
+
+`bosses.py` has boss phase logic; `enemy_manager.py` has boss_phase_check. `docs/systems/combat.md` documents boss combat structure. Zero *named* bosses have been designed with narrative, mechanical, and thematic canon (name, backstory, phase transitions, dialogue, arena, defeat consequences).
+
+**Recommendation:** Design **one named Frontier boss** tied to the Mossroot questline (candidate: a Corruption-tainted alpha of the "hollow game" already referenced in `docs/world/goblin_tribes.md`). Needs a 1-page design doc.
+
+### VS-2.8 One fully playable gameplay loop
+
+**Status: 🟡 Terminal loop is complete; Godot loop requires all above + integration.**
+
+The terminal prototype demonstrates the full loop today: enter region → travel → explore → encounter → combat → loot → progression → quest update → save. This *proves the design is loop-complete*.
+
+**Recommendation:** VS-1 loop = **arrive at Frontier trading post → meet Talos → recruit Talos → accept Mossroot questline → travel to Mossroot territory → resolve first-contact encounter → explore a small corrupted ruin (dungeon) → boss fight → return to settlement → save/load → progress to next stage of quest.**
+
+---
+
+## VS-3. Technical Readiness
+
+### VS-3.1 Documentation availability by technical area
+
+| Area | Doc Present | Godot-Ready | Gap |
+|---|---|---|---|
+| **Scene Architecture** | ❌ | ❌ | No Godot scene tree design. No definition of scene granularity (per-region? per-settlement? per-encounter?). No scene transition rules. |
+| **Save System** | ✅ `docs/systems/save_system.md` + `world_state.py` migration guard | 🟡 | Strategy documented; Godot-side schema (Resource? JSON? Custom?) undefined. |
+| **Data Structures** | 🟡 `docs/systems/world_state.md` documents the 11 world_state sections. Companion, quest, region, enemy, item schemas exist as terminal-prototype dicts. | 🟡 | Godot equivalents (Resources, GDScript classes) undefined. No canonical mapping table from `world_state` sections to Godot resources. |
+| **Quest Framework** | ✅ `docs/systems/quests.md` + `docs/systems/dynamic_story_arcs.md` | 🟡 | Terminal quest DB structure ready; Godot quest-runner (node? Resource?) undefined. Branching quest state graph undefined. |
+| **Dialogue Framework** | 🟡 Scattered across `docs/systems/npcs_companions.md` + `docs/systems/journey_system.md` | ❌ | No dedicated framework doc. Godot dialogue engine (Dialogic? custom?) and format not chosen. |
+| **Combat Framework** | ✅ `docs/COMBAT_SYSTEM.md` (canonical target) + `docs/systems/combat.md` (terminal impl) | 🟡 | Grid resolution, action-point costs per skill, and skill-list-per-companion undefined at the numeric level. Turn order handling in Godot undefined. |
+| **AI Framework** | 🟡 `docs/systems/ai_director.md` + `dm_brain.py` + `llm_bridge.py` | 🟡 | DM Brain pacing works. LLM integration is mocked. Offline-First and AI Philosophy docs missing (§2.3). No decision on which LLM (or none) for VS-1. |
+| **UI Framework** | ❌ | ❌ | Terminal is text I/O. `ui_mockup/index.html` and `preview.py` exist as a *separate* Flask prototype — not the target UI. Godot UI framework (Control nodes, theme, HUD hierarchy) undefined. |
+| **Animation Pipeline** | ❌ | ❌ | ⚠ NOT YET DEFINED — no doc, no assets, no rig standard. |
+| **Audio Pipeline** | ❌ | ❌ | ⚠ NOT YET DEFINED — no doc, no assets. |
+
+### VS-3.2 Missing implementation documentation
+
+Ranked by priority for VS-1 start:
+
+**Critical (blocks Godot prototype start):**
+- `GDD/02_Prototype/01_Godot_Scene_Architecture.md` — how the target project is organized (main scene, region scene, combat scene, dialogue overlay, UI overlay).
+- `GDD/02_Prototype/02_Godot_Data_Model.md` — mapping from `world_state` sections to Godot Resources / autoload singletons.
+- `GDD/02_Prototype/03_Save_Schema_for_Godot.md` — how the JSON save format is loaded into Godot Resources.
+- `GDD/07_Systems/09_Dialogue.md` — dedicated dialogue framework spec (branching, conditions, LLM-optional layer).
+- `GDD/07_Systems/14_Corruption_System.md` — mechanical spec (currently only lore-side).
+
+**Important (needed before VS-1 completion):**
+- `GDD/07_Systems/11_Settlement.md` — companion dispersal, service nodes, rumor generation format.
+- `GDD/07_Systems/12_World_Events.md` — event triggers, tick cadence, world_state effects.
+- `GDD/07_Systems/13_Campaign_Manager.md` — act progression, arc selection.
+- `GDD/07_Systems/10_Relationship.md` — social-state + npc-relationship dual system.
+- `GDD/03_Core_Gameplay/09_Dungeon_System.md` — floor/room/trap/loot subsystem.
+- Numeric balance tables — per-class level-up stat curves, per-skill AP costs, per-enemy stat block templates.
+
+**Optional (can lean on placeholder decisions initially):**
+- UI theme and HUD hierarchy — a placeholder theme can carry VS-1.
+- Animation state machine spec — placeholder animations acceptable in VS-1.
+- Full audio pipeline — placeholder audio acceptable in VS-1.
+
+---
+
+## VS-4. Art Requirements — Placeholder Asset Plan
+
+**Guiding principle:** Vertical Slice validates the *loop and feel*, not final visual fidelity. Every asset below can be a placeholder unless explicitly noted.
+
+### VS-4.1 Characters
+
+| Companion | VS-1 Asset Need | Placeholder Recommendation |
+|---|---|---|
+| Talos | 3D model + idle + walk + attack (sword) + hit-react + one dialogue portrait | **Kenney Adventurers Pack** or a Mixamo-rigged free asset. Portrait: AI-generated or commissioned. |
+| Eleanor | (Not in VS-1 — deferred) | Skip for VS-1. |
+| Ragash | (Not in VS-1) | Skip. |
+| Ronan | (Not in VS-1) | Skip. |
+| Torren | (Not in VS-1) | Skip. |
+| Player (Origin: Talos) | Shares Talos rig with alternate outfit or none | Same asset as Talos, distinct highlight/marker. |
+
+### VS-4.2 Enemies
+
+| Enemy type | VS-1 Need | Placeholder |
+|---|---|---|
+| Goblin (Mossroot) — 2 variants | Non-hostile in first-contact then hostile in dungeon | Kenney goblin pack or Mixamo. |
+| Corrupted wildlife ("hollow game") | 1 variant | Recolored wolf/wildlife rig. |
+| VS-1 Boss (Corruption-tainted alpha) | 1 unique model | Larger recolored wolf with particle effect for corruption. |
+
+### VS-4.3 Environment
+
+| Location | VS-1 Need | Placeholder |
+|---|---|---|
+| Frontier trading post (settlement) | 1 hub scene with buildings, NPC spawn points, dispersal spots | Kenney low-poly medieval pack. |
+| Overworld (region layer) | 1 explorable area with paths, terrain, encounter zones | Godot terrain with Kenney nature pack. |
+| Small corrupted ruin (dungeon) | 3–5 rooms with lighting for corruption effect | Kenney dungeon pack + emissive/glow shader. |
+
+### VS-4.4 UI
+
+| Element | VS-1 Need | Placeholder |
+|---|---|---|
+| Main menu | Start / Load / Quit | Godot default theme + custom title. |
+| HUD (health / party / minimap) | Basic overlay | Rectangle-and-text placeholders. |
+| Dialogue overlay | Portrait + text + choices | Godot Panel + RichTextLabel. |
+| Inventory panel | Grid + tooltip | Godot GridContainer + Kenney UI icons. |
+| Combat UI (AP tracker, initiative order, action buttons) | Turn readable | Godot buttons + custom icons. |
+
+### VS-4.5 Icons
+
+| Category | VS-1 Need | Placeholder |
+|---|---|---|
+| Item icons (weapons, armor, potions) | ~20 icons | Kenney RPG icons pack (free CC0). |
+| Skill/ability icons | ~10 icons | Kenney or Game-icons.net (CC BY 3.0). |
+| Faction/reputation icons | ~5 icons | Custom simple SVG. |
+| Status effect icons | ~6 icons | Kenney or custom. |
+
+### VS-4.6 Animations
+
+| Type | VS-1 Need | Placeholder |
+|---|---|---|
+| Character base (idle/walk/run/attack/hit/death) | 6 clips per rig | Mixamo (free) — retargeted to placeholder rigs. |
+| Combat feedback (block, dodge, downed) | 3 clips | Mixamo or hand-authored. |
+| UI transitions | Fade, slide, pop | Godot Tween — no assets needed. |
+
+### VS-4.7 Sound
+
+| Type | VS-1 Need | Placeholder |
+|---|---|---|
+| Footsteps (grass/stone/wood) | 3 variants | freesound.org CC0. |
+| Combat SFX (sword swing, hit, block, dodge, downed) | ~8 clips | Kenney audio pack (CC0). |
+| UI SFX (button, dialogue tick, menu open/close) | ~5 clips | Kenney audio pack. |
+| Ambient (forest, settlement, dungeon) | 3 loops | freesound.org CC0. |
+
+### VS-4.8 Music
+
+| Track | VS-1 Need | Placeholder |
+|---|---|---|
+| Settlement ambient | 1 loop (~2 min) | AI-generated (Suno/Udio) *or* royalty-free (Kevin MacLeod / free-stock-music). |
+| Exploration | 1 loop | Royalty-free. |
+| Combat | 1 loop | Royalty-free. |
+| Boss | 1 loop | Royalty-free. |
+| Main menu | 1 loop | Royalty-free. |
+
+### VS-4.9 VFX
+
+| Effect | VS-1 Need | Placeholder |
+|---|---|---|
+| Corruption glow | Emissive particle system | GPUParticles3D + shader. |
+| Attack impact / hit flash | Simple particle burst | GPUParticles3D. |
+| Dialogue-hint highlight | Ring / arrow | Simple mesh + tween. |
+| Boss transition | Camera shake + fade | Godot camera + tween. |
+| Save/load indicator | UI-only | Godot Tween. |
+
+**Summary:** Every art requirement for VS-1 can be met with **free/CC0 asset packs (Kenney, Mixamo, freesound.org) + Godot-native shaders/particles + one commissioned or AI-generated dialogue portrait for Talos**. No custom-3D-modeling pipeline is required for VS-1.
+
+---
+
+## VS-5. Missing Design Documentation — Ranked
+
+**Critical (blocks VS-1 start):**
+- **Godot Scene Architecture** — how the project is organized in Godot.
+- **Godot Data Model** — `world_state` → Resources / autoload mapping.
+- **Save Schema for Godot** — how JSON save loads into Godot resources.
+- **Dialogue Framework** — dedicated system doc; branching + conditions + optional-AI layer.
+- **Difficulty Philosophy** — the "no Easy/Normal/Hard" rule the owner just canonized (§2.3).
+- **Offline-First** — the fundamental design pillar the owner just canonized (§2.3).
+- **AI Philosophy** — which optional AI enhancements are allowed, and where they are prohibited (§2.3).
+- **Living World Simulation** — priority order for world-state → rules → lore → NPC memory (§2.3).
+- **Origin Character** — NPC vs PC mode rules (§2.3).
+- **Companion Expertise** — out-of-combat contribution matrix per companion (§2.3).
+- **Companion Evolution** — post-personal-quest permanent behavior changes (§2.3).
+- **Settlement Dispersal** — companion appears somewhere appropriate in the hub (§2.3).
+- **Corruption Mechanical System** — how Corruption is tracked/propagated/expressed in gameplay (lore side exists; mechanical side does not).
+- **Ruling on the flagged contradictions (§3, §7)** — historical framework, Eleanor's revelation, companion roster (Corwin/Future Healer), player-state canonicality.
+
+**Important (blocks VS-1 completion but not start):**
+- **Dungeon System** — floor/room/trap/loot subsystem design.
+- **Settlement System** — service nodes, NPC spawn logic, rumor generation format.
+- **Relationship System** — dual social-state + npc-relationship spec unified.
+- **World Events System** — tick cadence, triggers, world_state effects.
+- **Campaign Manager** — act progression, arc selection.
+- **Numeric Balance Tables** — per-class level curves, AP costs, enemy stat blocks.
+- **VS-1 Settlement authored** — Frontier trading post: buildings, NPCs, dispersal points, quest hooks.
+- **VS-1 Dungeon authored** — 3–5 rooms tied to Mossroot questline.
+- **VS-1 Boss authored** — Corruption-tainted alpha with name, backstory, phase transitions.
+- **VS-1 Recruitment scene authored** — Talos's first-meeting sequence.
+- **Godot Prototype Plan** — scope and milestone plan for the VS-1 build.
+
+**Optional (can be added after VS-1):**
+- Bestiary Bible.
+- Culture Bible (especially Halflings + Gnomes still ⚠ NOT YET DEFINED).
+- Economy Bible.
+- Organizations expansion.
+- Multi-act campaign scripting.
+- Crafting system (**unless** VS-1 depends on Torren; Talos is recommended precisely to avoid this).
+- Full UI theme and HUD polish.
+- Full animation state machine.
+- Full audio pipeline and adaptive music mixer.
+
+---
+
+## VS-6. Development Risks
+
+Ranked by severity.
+
+**RISK-1 — Undefined Godot scene architecture (Critical).**
+No document exists describing how the target project is organized in Godot. Every implementation decision from day one is currently a guess. **Mitigation:** author `GDD/02_Prototype/01_Godot_Scene_Architecture.md` before any Godot code.
+
+**RISK-2 — Combat is a green-field rewrite (Critical).**
+The canonical grid+AP+facing+downed system has no implementation anywhere. The terminal loop is not a stepping stone. This is the single largest engineering investment for VS-1. **Mitigation:** write a small combat-only Godot spike (single tile, single hero, single enemy) before committing to the full VS-1 scope.
+
+**RISK-3 — Companion roster still unresolved (High).**
+Corwin and Future Healer canon-status blocks VS-1 companion-related decisions. If Corwin becomes canonical, expertise/evolution docs need a sixth entry each and combat balance shifts. **Mitigation:** rule §3.3 before VS-1 begins.
+
+**RISK-4 — Difficulty and AI philosophy not documented (High).**
+The owner has re-stated these as canon in the current session. Any Godot-side design decision made before those documents are authored risks contradicting the newly-canonized philosophies. **Mitigation:** author the Critical docs in §VS-5 before Godot work starts.
+
+**RISK-5 — Dialogue framework choice pending (High).**
+Godot has multiple dialogue plugins (Dialogic, custom) and mixing them is expensive. Deciding late will require re-authoring content. **Mitigation:** pick a dialogue tool in the Godot Prototype Plan doc.
+
+**RISK-6 — Crafting undefined (Medium; only relevant if Torren is in VS-1).**
+Torren is the fifth companion whose thematic identity is *restoration/crafting*. Any Torren VS-1 slice depends on crafting mechanics that do not exist yet. **Mitigation:** VS-1 uses Talos (recommended), which does not require crafting. Defer Torren-related content to VS-2 or later.
+
+**RISK-7 — Player-state divergence (Medium).**
+`player.py` vs `world_state["player"]` is unresolved (BUG-002, DECISION-007). Any new Godot implementation must pick one path. **Mitigation:** rule §3.11 before Godot save-schema is authored.
+
+**RISK-8 — Living World simulation cadence undefined (Medium).**
+The "world continues without the player" pillar needs a tick cadence and event-trigger model. Building the AI Director in Godot without these decisions produces the wrong pacing. **Mitigation:** rule §7 R9 (World Simulation persistence semantics) in the same session as Difficulty/Offline-First/AI-Philosophy docs.
+
+**RISK-9 — Scope creep from Origin Characters (Medium).**
+"Every companion is also a playable protagonist" is a permanent design pillar but a scope multiplier. **Mitigation:** VS-1 ships with **one** Origin (Talos). All authored content assumes Talos-POV. Other Origins are Phase-2 (not VS-1).
+
+**RISK-10 — Terminal engine may distract from Godot investment (Medium).**
+The terminal prototype is 90%+ complete on many systems. It may be tempting to add features to the terminal instead of committing to the Godot rewrite. **Mitigation:** Freeze the terminal engine at v0.4. Every new feature goes to Godot.
+
+**RISK-11 — Documentation churn resurgence (Low).**
+The Four→Seven→Four Ages history and Steven→Torren migration show canon has been rewritten mid-project. If it happens again during VS-1 (e.g., a companion is retired), work is invalidated. **Mitigation:** the Constitution's escalation clauses (Article VI, VII) already cover this — enforce them.
+
+**RISK-12 — Legacy code modules (Low).**
+`factions.py`, `regions.py`, `loot.py`, `memory.py` do not affect Godot but pollute the reference. **Mitigation:** at Godot boundary, do not port them; archive them under `docs/archive/legacy/`.
+
+---
+
+## VS-7. Recommended Next Steps — Roadmap to Vertical Slice
+
+This roadmap covers **only** the work required to reach a playable VS-1 in Godot. Nothing extra.
+
+### Phase 1 — Immediate Work Required (blocks VS-1 kick-off)
+
+Estimated: 1–2 weeks of design work, no Godot code yet.
+
+**P1.1 — Consolidation approval.**
+Owner reviews CONSOLIDATION_REPORT.md and rules on §3, §7. Consolidation proceeds per §6.
+
+**P1.2 — Canon-fresh docs (author the ten identified in §2.3 that don't need rulings):**
+- `GDD/03_Core_Gameplay/07_Difficulty_Philosophy.md`
+- `GDD/04_World/18_Living_World_Simulation.md`
+- `GDD/08_AI/01_AI_Philosophy.md`
+- `GDD/08_AI/02_Offline_First.md`
+- `GDD/05_Companions/03_Player_System_and_Origin.md`
+- `GDD/05_Companions/04_Companion_Expertise.md`
+- `GDD/05_Companions/05_Companion_Evolution.md`
+- `GDD/05_Companions/06_Settlement_Dispersal.md`
+
+**P1.3 — Ruling-dependent docs (author after §3 / §7 rulings):**
+- Companion roster resolution (Corwin, Future Healer).
+- Eleanor's Harmonic Soul delivery mechanism.
+- Player-state canonicality.
+- Historical-framework final confirmation + stale-reference cleanup.
+
+**P1.4 — Godot pre-flight (Critical missing implementation docs):**
+- `GDD/02_Prototype/01_Godot_Scene_Architecture.md`
+- `GDD/02_Prototype/02_Godot_Data_Model.md`
+- `GDD/02_Prototype/03_Save_Schema_for_Godot.md`
+- `GDD/07_Systems/09_Dialogue.md`
+- `GDD/07_Systems/14_Corruption_System.md`
+
+**Exit criteria for Phase 1:** All Critical docs in §VS-5 exist; all §3 rulings received; Godot Prototype Plan finalized.
+
+### Phase 2 — Prototype-Ready Work (VS-1 kick-off)
+
+Estimated: 3–6 weeks. First Godot code lands.
+
+**P2.1 — Godot project scaffolding.** Init the project; import the placeholder asset packs listed in §VS-4; set up the scene tree per `GDD/02_Prototype/01_Godot_Scene_Architecture.md`.
+
+**P2.2 — Data-model port.** Implement world_state as Godot autoload; port the 11 sections; port the save/load system per `GDD/02_Prototype/03_Save_Schema_for_Godot.md`.
+
+**P2.3 — Combat spike.** Single-hero, single-enemy, single-tile combat with movement points and one action point. **This spike alone tests RISK-2.**
+
+**P2.4 — Dialogue spike.** Load one branching conversation with skill-check nodes.
+
+**P2.5 — VS-1 content authoring (parallel):**
+- Frontier trading post (settlement) design doc.
+- Small corrupted ruin (dungeon) design doc.
+- Talos's recruitment scene authored.
+- VS-1 boss (Corruption-tainted alpha) design doc.
+- Mossroot questline scripted format.
+
+**Exit criteria for Phase 2:** Godot project builds and runs an empty scene; combat spike is playable; dialogue spike is playable; VS-1 content docs are complete.
+
+### Phase 3 — Vertical Slice Completion
+
+Estimated: 6–10 weeks. VS-1 becomes playable end-to-end.
+
+**P3.1 — Frontier region playable.** Overworld scene loads; player traverses; encounter zones function.
+
+**P3.2 — Trading-post settlement playable.** Player enters hub; companion dispersal system spawns Talos in appropriate location; Talos is recruitable; other NPCs interact.
+
+**P3.3 — Mossroot questline scripted.** Quest triggers, stages, and rewards implemented per `docs/quests/goblin_tribe_quests.md` and `docs/encounters/mossroot_first_contact.md`.
+
+**P3.4 — Small ruin dungeon playable.** 3–5 rooms; corruption VFX; loot; boss room.
+
+**P3.5 — Boss encounter functional.** Full phase logic per `docs/systems/combat.md` and `docs/COMBAT_SYSTEM.md`.
+
+**P3.6 — Save/load full-loop verified.** Player can save mid-quest, quit, reload, and complete.
+
+**P3.7 — HUD + Inventory + Basic UI.** Placeholder theme; readable in all scenes.
+
+**P3.8 — AI Director layer (mocked).** Pacing system runs; LLM calls remain mocked to preserve Offline-First.
+
+**Exit criteria for Phase 3:** Player can start the game, recruit Talos, complete the Mossroot questline, defeat the boss, save, reload, and continue — all in Godot, no missing systems.
+
+### Phase 4 — Early Access Preparation
+
+Estimated: 8–12 weeks after Phase 3.
+
+**P4.1 — VS-1 polish.** Replace placeholder art with a first pass of custom art in the VS-1 region.
+
+**P4.2 — Optional AI layer.** Wire real LLM to `llm_bridge.py` Godot equivalent; enable ambient rumors and tavern gossip *behind an opt-in flag*.
+
+**P4.3 — Companion Expertise beats.** Implement one Companion Expertise interaction per companion (out-of-combat contribution vignettes).
+
+**P4.4 — Second region prototype.** Iterate on the Godot architecture with a second region (Great Forest recommended) to validate the pattern.
+
+**P4.5 — Recruitment for a second companion.** Author Eleanor's recruitment scene + first Fractured Circle beat.
+
+**P4.6 — Playtest + iteration.** Structured playtests of VS-1 → VS-2 flow; iterate on difficulty (per Difficulty by Choice canon), pacing, and companion relationships.
+
+**P4.7 — Early Access candidate build.** Steam page, trailer, and packaged demo built from the VS-1 / VS-2 slice.
+
+**Exit criteria for Phase 4:** A playable, publishable Early Access candidate demonstrating the target experience with one full campaign region, two companions, and one story arc.
+
+---
+
+## VS-8. Vertical Slice Readiness — Bottom Line
+
+**Can VS-1 development begin today?** ❌ **Not today.** Design is 85% ready but the Critical documents in §VS-5 must be authored first (Phase 1) before Godot code lands.
+
+**Can VS-1 development begin in 1–2 weeks?** ✅ **Yes** — provided:
+1. Consolidation approval per Part I §9.
+2. §3 and §7 rulings received.
+3. Phase 1 documents authored per §VS-7.
+
+**Is the design foundation strong enough?** ✅ **Yes.** After Phase 1, the design is complete enough that no gameplay invention is required during Godot implementation. Every VS-1 requirement can be served by existing canon (regions, companions, questlines, boss framework, combat model, save system) plus the new documents this report identifies.
+
+**Is the scope realistic?** ✅ **Yes, with discipline.** VS-1 as scoped (Frontier + Talos + Mossroot + one dungeon + one boss + one loop) is achievable in 12–18 weeks *if* scope creep from Origin Characters, Custom Hero, real LLM integration, and Corwin/Future Healer is deferred to VS-2 or later.
+
+**Recommendation:** Approve consolidation, rule the flagged items, author Phase 1 docs, then start the Godot project. **The project is closer to VS-1-ready than it looks — the gap is small, well-defined, and non-inventive.**
+
+---
+
+*End of report — including Vertical Slice Readiness Assessment.*
+*Awaiting review and rulings before any repository modification.*
