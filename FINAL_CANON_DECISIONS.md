@@ -15,8 +15,9 @@
 |---|---|---|---|---|
 | 1 | D-01 | ✅ CANONICAL | **Four Ages framework adopted:** Age of Awakening → Age of Harmony → Age of Sundering → Age of Restoration. Long Decline is the final era of the Age of Harmony (not a separate Age). Full age names in canonical docs; "First Age / Third Age" shorthand allowed in in-world dialogue or scholarly references only; "Age I / II / III / IV" reserved for internal notes. Prior frameworks (Version A and Version B) archived for development-history reference only; obsolete framework names removed from canonical docs. | Jan 2026 |
 | 2 | D-02 | ✅ CANONICAL | **Three-stage sanctuary revelation for Eleanor's Harmonic Soul:** (1) **Resonance** — Eleanor senses Primordial resonance approaching the sanctuary; no voice, no vision, no deity. (2) **Discovery** — Eleanor reads preserved First Age scholarship on Harmonic Souls inside the sanctuary; realizes it describes her. She reaches the conclusion herself. (3) **Confirmation** — At the sanctuary's heart, an ancient chamber saturated with Primordial resonance responds naturally to her presence — not because she is chosen, but because she possesses the qualities the sanctuary was designed to recognize. **No god ever appears, speaks, or reveals Eleanor's identity.** Occurs during The Fractured Circle questline. Present companions witness resonance but experience nothing themselves; reactions vary by personality. Reinforces the theme *"history belongs to mortals."* | Jan 2026 |
+| 3 | D-03 | ✅ CANONICAL | **Companion roster remains five for VS-1 and Phase-2:** Talos, Eleanor, Ragash, Ronan, Torren. **Corwin** and the **Community Healer** are officially recognized as [PLANNED] future companions. Placeholder Hero Bible stubs created for both; included in Companion Expertise / Evolution / Settlement Behavior matrices as [PLANNED] entries. Full Hero Bibles, Core Wounds, recruitment quests, combat kits, relationship matrices, and Origin documentation for the two [PLANNED] companions **are not authored during consolidation** — they are deferred to a post-VS-1 design phase. Long-term roster expansion to seven companions remains on the roadmap; not required for VS-1. | Jan 2026 |
 
-*(2 of 30 approved — running total.)*
+*(3 of 30 approved — running total.)*
 
 ---
 
@@ -222,6 +223,30 @@ Every existing doc (`docs/PLAYER_SYSTEM.md`, `docs/characters/README.md`, `docs/
 - VS-1 companion (Talos) is unaffected.
 
 **Priority:** Critical.
+
+**✅ RULING — CANONICAL (January 2026):**
+
+**Option 4 — APPROVED.** The current canonical companion roster remains the five fully authored companions:
+
+1. **Talos**
+2. **Eleanor**
+3. **Ragash**
+4. **Ronan**
+5. **Torren**
+
+**Corwin** and the **Community Healer** are officially recognized as [PLANNED] future companions — not yet fully authored canonical companions.
+
+**Additional rulings:**
+- Create placeholder Hero Bible files for both **Corwin** and the **Community Healer**.
+- Mark both characters as **[PLANNED]** throughout the repository.
+- Include them in the Companion Expertise, Companion Evolution, and Settlement Behavior matrices as planned future entries.
+- **Do not author** their full Hero Bibles, Core Wounds, recruitment quests, combat kits, relationship matrices, or Origin Character documentation during this consolidation phase.
+- Their identities, personalities, and gameplay will be fully developed during a future design phase after the Vertical Slice has been completed and evaluated.
+- The **Vertical Slice continues to assume the current roster of five companions.**
+- The future roster expansion to seven companions remains part of the long-term roadmap but is not required for VS-1.
+- Terminology note: throughout all consolidated documentation, "Future Healer" (as used in the original problem statement) is superseded by the canonical placeholder name **"Community Healer."**
+
+**Applied to consolidation plan.** Awaiting all remaining rulings before repository modification begins.
 
 ---
 
