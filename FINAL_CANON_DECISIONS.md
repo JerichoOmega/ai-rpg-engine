@@ -2,10 +2,20 @@
 
 > **Purpose:** Consolidate every unresolved architectural, canon, and design decision identified in `CONSOLIDATION_REPORT.md` into a single ruling-ready document.
 > **Instruction:** Read each decision, rule on one option per decision, then return the ruled document. No repository changes will be made until every ruling is received.
-> **Status:** Awaiting rulings. Zero repository modifications made.
+> **Status:** Canon Lock phase — sequential rulings in progress.
 > **Author:** E1 (Project Consolidation Phase — decision-authoring pass).
 > **Date:** January 2026.
 > **Source of every decision below:** `CONSOLIDATION_REPORT.md` Part I §3 (contradictions), §4.C (new canon), §7 (R1–R10 high-risk), and Part II VS-3–VS-6 (VS-1 blockers).
+
+---
+
+## Running Approved Rulings
+
+| # | ID | Status | Ruling Summary | Approved |
+|---|---|---|---|---|
+| 1 | D-01 | ✅ CANONICAL | **Four Ages framework adopted:** Age of Awakening → Age of Harmony → Age of Sundering → Age of Restoration. Long Decline is the final era of the Age of Harmony (not a separate Age). Full age names in canonical docs; "First Age / Third Age" shorthand allowed in in-world dialogue or scholarly references only; "Age I / II / III / IV" reserved for internal notes. Prior frameworks (Version A and Version B) archived for development-history reference only; obsolete framework names removed from canonical docs. | Jan 2026 |
+
+*(1 of 30 approved — running total.)*
 
 ---
 
@@ -67,6 +77,25 @@ The *body content* of `docs/lore/HISTORY_BIBLE.md`, `docs/lore/TIMELINE.md`, `el
 - The revision-log entries in the two HISTORY_BIBLE.md files retain their history (for provenance) but a new final entry marks the ruling.
 
 **Priority:** Critical.
+
+**✅ RULING — CANONICAL (January 2026):**
+
+**Option 1 — APPROVED.** The canonical historical framework is:
+
+1. **Age of Awakening** — birth of the world; emergence of first civilizations; foundations of magic, the Divine Chorus, and the world's earliest history.
+2. **Age of Harmony** — the golden age of civilization; rise of kingdoms and empires; peace, prosperity, and unprecedented advancement. **The Long Decline is the final historical era of the Age of Harmony — during which corruption slowly erodes civilization — and is NOT a separate Age.**
+3. **Age of Sundering** — collapse of the old world; great wars; the fall of kingdoms and empires; corruption spreads openly; ancient powers are lost or forgotten.
+4. **Age of Restoration** — civilization struggles to rebuild; new kingdoms emerge; corruption remains an ever-present threat. **The game begins near the end of this Age**, when the fragile restoration is once again in danger.
+
+Additional canonical rulings:
+- The Long Decline remains a historical *period*, not an Age.
+- Previous frameworks (Version A: Creation/Kingdoms/Wars/Shadows; Version B: Seven Ages) are archived for development history only. They are no longer canonical and must not appear in current documentation.
+- Preserve revision history in archived development documents, but remove obsolete framework references from canonical Game Design Documents and Lore Bibles.
+- Canonical documentation uses the **full age names**: *Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration.*
+- Shorthand such as "First Age" or "Third Age" is permitted only in in-world dialogue or scholarly references.
+- "Age I / II / III / IV" notation is reserved for internal development notes and must not appear in canonical player-facing content.
+
+**Applied to consolidation plan.** Awaiting all remaining rulings before repository modification begins.
 
 ---
 
