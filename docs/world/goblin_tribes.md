@@ -327,6 +327,8 @@ The Mossroot also represent the continent's early warning system for Corruption 
 - The council's debate can be a social challenge: the party must convince a skeptical elder, not defeat an enemy
 - The Mossroot's environmental knowledge can be a reward: in exchange for help addressing the hollow game, Vess provides the party with information about Corruption spread that no one else on the Frontier has
 
+> **Running hollow game:** archetypes, encounter structure, investigation and non-combat resolutions, and campaign-stage escalation for hollow-game animal encounters are authored in [`docs/encounters/hollow_game_encounters.md`](../encounters/hollow_game_encounters.md). The AI Director should use that file rather than improvising corrupted-animal encounters.
+
 ---
 
 ### Ashfire Tribe — Corruption Manifestation

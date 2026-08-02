@@ -1,0 +1,74 @@
+Here’s a prompt you can give Replit that keeps it focused on synchronizing its understanding rather than changing your project prematurely.
+
+⸻
+
+Phase 1 Foundation Sync
+
+The project’s foundational worldbuilding has been substantially updated since your last review. Before performing any new development tasks, I want you to re-index the repository and synchronize your understanding of the current canonical state.
+
+Your objectives
+
+1. Read every lore, design, and canonical document in the repository.
+2. Treat the newest versions of the documents as the source of truth.
+3. Update your internal understanding of the project without making assumptions based on older information.
+4. Identify any outdated references, conflicting terminology, duplicate concepts, or legacy material that no longer matches current canon.
+5. Build an internal dependency map showing how the major documents connect.
+
+Canon Lock Rules
+
+Do not rewrite lore.
+
+Do not redesign canon.
+
+Do not invent new story content.
+
+Do not change gameplay systems.
+
+This is an analysis and synchronization pass only.
+
+During this pass, pay particular attention to:
+
+* WORLD_BIBLE_1.0.md
+* FINAL_CANON_DECISIONS.md
+* PHASE_1_CONSISTENCY_AUDIT.md
+* DIVINE_CHORUS.md
+* GOBLIN_CULTURE.md
+* vampire_houses.md
+* COMMON_PRAYERS_AND_BLESSINGS.md
+* COMMON_PROVERBS.md
+* RELIGIOUS_SYMBOLS_AND_ICONOGRAPHY.md
+* Legacy Character Reserve documentation
+* Hero documentation
+* Gameplay and GDD documents
+
+Verify understanding of the following foundations
+
+* The Four Ages
+* The Divine Chorus (Eight Voices and Heralds)
+* Corruption philosophy
+* Choice vs. Nature
+* Goblin civilization
+* Vampire civilization
+* Legacy Character Reserve policy
+* World Bible 1.0
+* Canon Lock process
+
+Deliverables
+
+When finished, provide:
+
+1. A summary of your current understanding of Elyndor.
+2. Any contradictions you discovered.
+3. Any stale files or references.
+4. Any documentation that should eventually be consolidated.
+5. Any questions that genuinely require clarification.
+
+Do not make repository changes yet.
+
+This is a synchronization pass only.
+
+After synchronization is complete, wait for my approval before beginning any implementation or repository modifications.
+
+⸻
+
+This prompt should let Replit “catch up” with everything you’ve established so it stops reasoning from outdated lore, while avoiding accidental changes before you’ve reviewed its understanding.

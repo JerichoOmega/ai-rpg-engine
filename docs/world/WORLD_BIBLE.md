@@ -57,7 +57,7 @@ Travel is gameplay. Moving between locations on the strategic map can trigger en
 | Goblin camps | Three named tribes; see Goblin Tribes section; may be negotiated |
 | Orc warbands | Organized; may have leadership worth targeting |
 | Bandit ambushes | Human antagonists; motivation-dependent |
-| Corrupted wildlife | Tied to The Corruption's spread in the region |
+| Corrupted wildlife | Tied to The Corruption's spread in the region; authored as "hollow game" — see [`docs/encounters/hollow_game_encounters.md`](../encounters/hollow_game_encounters.md) |
 | Vampire covens | Three major houses; see Vampire Factions section |
 | Werewolf packs | May include turned individuals rather than born werewolves |
 | Necromancer rituals | Risk of undead escalation if not interrupted |
