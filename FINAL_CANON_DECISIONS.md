@@ -15,9 +15,10 @@
 |---|---|---|---|---|
 | 1 | D-01 | ✅ CANONICAL | **Four Ages framework adopted:** Age of Awakening → Age of Harmony → Age of Sundering → Age of Restoration. Long Decline is the final era of the Age of Harmony (not a separate Age). Full age names in canonical docs; "First Age / Third Age" shorthand allowed in in-world dialogue or scholarly references only; "Age I / II / III / IV" reserved for internal notes. Prior frameworks (Version A and Version B) archived for development-history reference only; obsolete framework names removed from canonical docs. | Jan 2026 |
 | 2 | D-02 | ✅ CANONICAL | **Three-stage sanctuary revelation for Eleanor's Harmonic Soul:** (1) **Resonance** — Eleanor senses Primordial resonance approaching the sanctuary; no voice, no vision, no deity. (2) **Discovery** — Eleanor reads preserved First Age scholarship on Harmonic Souls inside the sanctuary; realizes it describes her. She reaches the conclusion herself. (3) **Confirmation** — At the sanctuary's heart, an ancient chamber saturated with Primordial resonance responds naturally to her presence — not because she is chosen, but because she possesses the qualities the sanctuary was designed to recognize. **No god ever appears, speaks, or reveals Eleanor's identity.** Occurs during The Fractured Circle questline. Present companions witness resonance but experience nothing themselves; reactions vary by personality. Reinforces the theme *"history belongs to mortals."* | Jan 2026 |
-| 3 | D-03 | ✅ CANONICAL (revised) | **Roster of seven canonical companions:** Talos, Eleanor, Ragash, Ronan, Torren, **Corwin** (Gnome male Ranger — Truth/Observation/Curiosity; long-time Corruption investigator; Marksman + Skirmisher combat trees; expertise in tracking, foraging, corruption investigation, environmental observation), **Community Healer** (female; community healer / battlefield physician; skilled in medicine, herbal remedies, restorative magic; tied to a refugee settlement; recruited via "A Light in the Ashes" — refuses to leave until player secures long-term aid through the Imperial Council; theme: Service, Compassion, Preservation; full Hero Bible + final name + race + combat specialization still to be authored). **Every companion** requires a Hero Bible, Core Wound, personal questline, Companion Expertise, Companion Evolution, Settlement behaviors, and Origin playthrough support. **Party: 7 recruitable / 4 active.** Safe settlements always contain every recruited companion. All companion systems assume the final roster of seven. **VS-1 still focuses on Talos as the primary Origin;** the remaining six companions arrive in later milestones per the roadmap. | Jan 2026 |
+| 3 | D-03 | ✅ CANONICAL | **Roster of seven canonical companions:** Talos, Eleanor, Ragash, Ronan, Torren, **Corwin** (Gnome male Ranger — Truth/Observation/Curiosity; long-time Corruption investigator; Marksman + Skirmisher combat trees; expertise in tracking, foraging, corruption investigation, environmental observation), **Community Healer** (female; community healer / battlefield physician; skilled in medicine, herbal remedies, restorative magic; tied to a refugee settlement; recruited via "A Light in the Ashes" — refuses to leave until player secures long-term aid through the Imperial Council; theme: Service, Compassion, Preservation; full Hero Bible + final name + race + combat specialization still to be authored). **Every companion** requires a Hero Bible, Core Wound, personal questline, Companion Expertise, Companion Evolution, Settlement behaviors, and Origin playthrough support. **Party: 7 recruitable / 4 active.** Safe settlements always contain every recruited companion. All companion systems assume the final roster of seven. **Canon ≠ implementation:** VS-1 implements only what the prototype needs (Talos primary Origin); remaining companions arrive per roadmap. | Jan 2026 |
+| 4 | D-04 | ✅ CANONICAL | **Primordial Magic originates from the collective First Song of all eight members of the Divine Chorus** during the Age of Awakening. The Forgotten Eighth is responsible for the **fracturing** of Primordial Magic during the Sundering — not for its creation. Fracturing produced the seven elemental aspects studied by modern mages. **Eleanor's Harmonic Soul connects to the original, unified Primordial Magic that existed before the Sundering — to the complete First Song itself, not to any individual Chorus member.** Reinforces the collective nature of the Divine Chorus and eliminates unintended "chosen one" implications. Magic Bible + Eleanor Hero Bible updated during the same pass. | Jan 2026 |
 
-*(3 of 30 approved — running total.)*
+*(4 of 30 approved — running total.)*
 
 ---
 
@@ -314,6 +315,24 @@ Every existing doc (`docs/PLAYER_SYSTEM.md`, `docs/characters/README.md`, `docs/
 - Eleanor's Harmonic Soul becomes a connection to the collective Chorus's work rather than the Eighth's individual work — resolves `LORE_CONSISTENCY_AUDIT.md` ⚠ #9 as a side effect.
 
 **Priority:** High.
+
+**✅ RULING — CANONICAL (January 2026):**
+
+**Option 1 — APPROVED.** Primordial Magic did not originate from the Forgotten Eighth alone. **Primordial Magic is the collective creation of the entire Divine Chorus, produced through the First Song during the Age of Awakening.**
+
+The Forgotten Eighth's role in the magic story is not that she *created* Primordial Magic, but that her imprisonment during the Sundering **fractured** the once-unified Primordial Magic into the seven elemental aspects studied by modern mages. This is the permanent canonical explanation for the origin of magic.
+
+**Additional canonical rulings:**
+- Primordial Magic originates from the collective First Song of all eight members of the Divine Chorus.
+- The Forgotten Eighth is responsible for the fracturing of Primordial Magic during the Sundering, not for its creation.
+- Eleanor's Harmonic Soul connects to the original, unified Primordial Magic that existed before the Sundering. **Her connection is to the complete First Song itself, not to any individual member of the Divine Chorus.**
+- This reinforces the project's core philosophy that no single god is solely responsible for creation, preserves the collective nature of the Divine Chorus, and eliminates any unintended "chosen one" implications.
+- Update the Magic Bible using the proposed wording (or equivalent that preserves this meaning): *"Primordial Magic is the original magical force that emerged from the First Song of the Divine Chorus during the Age of Awakening. The imprisonment of the Forgotten Eighth during the Sundering fractured it into seven elemental aspects — the form modern mages study today."*
+- Update Eleanor's Hero Bible in the same pass to explicitly state that her Harmonic Soul is connected to the collective, unfractured Primordial Magic rather than to the Forgotten Eighth specifically.
+- Add the explanation that the Sundering fractured Primordial Magic into the seven elemental aspects now studied by modern mages, ensuring this relationship is clearly documented within the Magic Bible.
+- Resolves `LORE_CONSISTENCY_AUDIT.md` ⚠ #2 and ⚠ #9 on ruling application.
+
+**Applied to consolidation plan.** Awaiting all remaining rulings before repository modification begins.
 
 ---
 
