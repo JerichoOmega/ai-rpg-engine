@@ -186,7 +186,7 @@ The contribution must genuinely improve the tribe. Only then is the youth consid
 
 - **Stonefang** — the youth earns a *second name* through their First Contribution, witnessed by the tribe. The name is announced by an elder, not chosen by the youth.
 - **Mossroot** — the youth walks the **Silence Watch** alone for the first time. When they return, if they can name three things that have changed since the previous dawn that no one else noticed, they are considered adult. (The Silence Watch itself counts as a contribution — protective observation of the tribe's territory.)
-- **Ashfire** — the **Naming Night**. Before the Naming Night is granted, the adolescent must complete a First Contribution recognized by an elder. Once the Contribution stands, the adolescent stands before the Council and speaks a name they would carry. Any elder may object. A rejected name must wait a full year before being tried again. Some Ashfire adults are still called by their child-name at forty.
+- **Ashfire** — the **Naming Night**. The First Contribution is completed during the events leading up to Naming Night; Naming Night itself is the **public ceremony that recognizes the completed Contribution and grants the goblin their adult name.** The adolescent stands before the Council and speaks a name they would carry. Any elder may object. A rejected name must wait a full year before being tried again. Some Ashfire adults are still called by their child-name at forty. *(Per canon ruling A2: this preserves both the universal First Contribution and Ashfire's unique Naming Night tradition — the ceremony recognizes the contribution rather than being conditionally preceded by it.)*
 
 ---
 
@@ -415,11 +415,7 @@ Chroniclers train apprentices for decades. When a chronicler dies, the apprentic
 
 ### Canonical Position on Vampires (Nuance)
 
-The world's central philosophy — *no intelligent race is born evil; individuals are judged by their choices* — applies here. However:
-
-- The established vampire houses remain **dangerous, expansionist, and primary antagonists**. Most vampires the player encounters will be enemies because of the choices they have made and the societies they support.
-- **Rare exceptions exist:** a vampire who rejects their house; a vampire living in isolation to avoid harming others; a vampire temporarily cooperating against a greater threat such as the Corruption; a vampire struggling against their nature rather than embracing it.
-- These are **exceptional, not common**. They reinforce the world's philosophy while preserving the vampire houses as major antagonistic powers.
+The world's central philosophy — *no intelligent race is born evil; individuals are judged by their choices* — applies here. Under V-3's canonical **Measure** system, exceptional vampires arise naturally: any vampire whose personal Measure is strict enough to prevent harm is, in the sense that matters, an exception — without requiring special-case lore. Goblins therefore judge vampires by their choices (their Measure, their House Doctrine, and whether their Withering has begun) rather than by category. Most vampires the player encounters will still be enemies because of the choices they have made and the societies they support; the door for individual moral variation is *ordinary* rather than *rare*.
 
 Goblins therefore view vampires this way:
 
@@ -535,20 +531,18 @@ These symbols appear woven into tapestries, carved into doorframes, and stitched
 
 ---
 
-## 33. Assumptions Made (Candidate Canon — Awaiting Explicit Approval)
+## 33. Canonical Notes
 
-The following integration choices were made by the author during this expansion pass. They are consistent with the user's directives but were not explicitly ruled on. Each remains candidate canon until confirmed in the Canon Lock phase.
+The eight integration decisions previously flagged as §33 Assumptions have been **ruled canonical** in Feb 2026 (see `FINAL_CANON_DECISIONS.md` — Canon Lock rulings A1–A8). Key final positions now integrated throughout this document:
 
-| # | Assumption | Rationale | Revisable Without Cascade? |
-|---|---|---|---|
-| A1 | **"The gods"** in §6's shamanic proverb refers specifically to the Divine Chorus (canonical). | Only one canonical divine framework exists in Elyndor. | Yes |
-| A2 | Existing per-tribe coming-of-age rites (Stonefang second-name, Mossroot Silence Watch, Ashfire Naming Night) are reframed as **the tribe's chosen form of** the universal First Contribution. Ashfire specifically requires a First Contribution *before* Naming Night is granted. | Reconciles new "First Contribution" canon with pre-existing rite canon without discarding either. | Yes — Ashfire ordering is the most revisable piece. |
-| A3 | **First Hearth Day** (new annual celebration) is distinct from **First Hearth Tending** (existing year-round rotating shifts). | Prevents contradiction with pre-existing First Hearth canon. | Yes |
-| A4 | The Corruption-response process in §19 is stated to be **canonical across all three tribes** while §27 retains each tribe's **cultural emotional response** (grieve / confront / contain). Process is uniform; feeling is tribal. | Preserves both the new "protocol" ruling and existing §27 canon. | Yes |
-| A5 | Chroniclers (§25) work alongside singers (§16) when preserving story songs. | Fills a natural cross-reference gap; no contradiction. | Yes |
-| A6 | **Beastfolk, Halflings, and Orcs exist as recognized peoples of Elyndor**, per §26's inter-race relationships. Elves, Humans, Dwarves, Gnomes, and Vampires were already established. | The user's candidate canon listed them as goblin neighbors, implying canonical existence. Ragash is a confirmed orc (D-03), so orcs are already canon. | Beastfolk / Halflings are the newest — flag if a different race framework applies. |
-| A7 | The vampire "rare exception" hook (§26 nuance) is available for later questline authoring but **no specific canonical exception vampire is named yet**. | Preserves flexibility per the user's ruling. | Yes |
-| A8 | **"Debts are how we remember"** was already a Stonefang proverb (§28). The Stonefang cultural loop between contribution, debt, and memory now maps cleanly to Justice §19 (Trial of Debts) and Death §7 (memorial stones for greatest contribution). | Consistency check — not a change. | N/A |
+- **A1** — *"The gods"* refers to the Divine Chorus (D-04c).
+- **A2** — First Contribution is universal; Ashfire's Naming Night is the *public ceremony recognizing* the completed Contribution and granting the adult name (see §10).
+- **A3** — First Hearth Day (annual) and First Hearth Tending (year-round) are distinct traditions.
+- **A4** — Corruption Response Protocol is universal; emotional response stays cultural (Stonefang confront / Mossroot grieve / Ashfire contain). Now theologically legible as *restoration of Chorus balance* under D-04c.
+- **A5** — Chroniclers and Story-Singers collaborate preserving oral history.
+- **A6** — Beastfolk and Halflings are canonical peoples of Elyndor (cultures to be authored later).
+- **A7** — Exceptional vampires arise through V-3's Measure system; no separate "rare exception" category required (updated in §26).
+- **A8** — Stonefang debt/memory/contribution loop preserved as internal consistency observation.
 
 ---
 
