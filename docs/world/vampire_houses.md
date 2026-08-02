@@ -3,17 +3,18 @@
 > **Canon Status:** Confirmed — established July 2026.  
 > **Authority:** This document defines the three canonical vampire houses, their names, philosophies, leadership, territories, and internal politics. All future content involving vampire factions must align with this document.  
 > **Cross-references:** [`docs/world/WORLD_BIBLE.md`](WORLD_BIBLE.md) · [`docs/GAME_BIBLE.md`](../GAME_BIBLE.md) · [`elyndor/history/the_corruption.md`](../../elyndor/history/the_corruption.md)
-> **See also:** [`docs/world/factions/vampire_houses/`](factions/vampire_houses/README.md) — the canonical Vampire Houses faction folder (design philosophy, the Veil, the Crimson Conclave, the full ten-house roster including the seven Founding Houses, bloodlines, history, culture, politics). That folder supplements this document; this document remains authoritative for the three Great Houses.
+> **See also:** [`docs/world/factions/vampire_houses/`](factions/vampire_houses/README.md) — the canonical Vampire Houses faction folder (design philosophy, the Veil, the Crimson Conclave, the full ten-house roster including the seven Founding Houses, bloodlines, history, culture, politics). That folder supplements this document; this document remains authoritative for the three Great Houses.  
+> **Foundation rulings:** [`VAMPIRE_CANON_AUDIT.md`](../../VAMPIRE_CANON_AUDIT.md) (root) records the Canon-Locked pillar rulings V-1 through V-6 (the Withering, feeding doctrine, consent in turning). Its "Three Houses" framing predates the ten-house roster; the roster here and in the faction folder is the current canon built on those rulings.
 
 ---
 
 ## Historical Context
 
-The Vampire Houses were not always as powerful as they are now. During the **Third Age — the Age of Wars** — while kingdoms fought each other for centuries, the Houses recognized the opportunity that political chaos provided. They expanded their influence, embedded in power structures, and established territorial positions they did not hold during the Second Age. The political chaos that devastated human kingdoms was, for the Houses, a period of quiet consolidation.
+The Vampire Houses were not always as powerful as they are now. During the **centuries of war in the Age of Restoration** — the same long conflicts in which Talos served ([`docs/heroes/TALOS.md`](../heroes/TALOS.md)) — while kingdoms fought each other, the Houses recognized the opportunity that political chaos provided. They expanded their influence, embedded in power structures, and established territorial positions they had not previously held. The political chaos that devastated human kingdoms was, for the Houses, a period of quiet consolidation.
 
 The current power of each house is partly a product of what they were able to accomplish while everyone else was distracted by war.
 
-See [`elyndor/history/HISTORY_BIBLE.md`](../../elyndor/history/HISTORY_BIBLE.md) — Third Age section.
+See [`elyndor/history/HISTORY_BIBLE.md`](../../elyndor/history/HISTORY_BIBLE.md) — Age of Restoration section.
 
 ---
 

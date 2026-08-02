@@ -35,7 +35,7 @@ In order of importance after `AI_START_HERE.md`:
 | `docs/world/cults.md` | Named cults players will encounter; how cults emerge from legitimate religion; cult mechanics in gameplay |
 | `docs/encounters/religious_encounters.md` | Religious pilgrimage and shrine encounters for the travel encounter tables |
 | `docs/quests/goblin_tribe_quests.md` | One named quest per goblin tribe: Stonefang, Mossroot, Ashfire |
-| `elyndor/history/HISTORY_BIBLE.md` | Four Ages framework: Age of Creation, Age of Kingdoms, Age of Wars (Talos served here; Vampire Houses expanded here), Age of Shadows (present) |
+| `elyndor/history/HISTORY_BIBLE.md` | Four Ages framework (canonical names per FINAL_CANON_DECISIONS.md D-01): Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration (present; Talos served and the Vampire Houses expanded during this age's wars) |
 | `elyndor/magic/MAGIC_BIBLE.md` | Primordial Magic rules; seven elemental aspects; Divine Chorus (seven gods, relics, temples); magic limitations; Mages Guild vs. religion tension; Eleanor's Harmonic Soul exception |
 | `docs/HERO_BIBLE.md` | Companion design philosophy — Core Wound system, design requirements, confirmed wounds |
 | `docs/CHARACTER_DESIGN_GUIDE.md` | How to design a new companion; checklist; mechanics-from-character principle |

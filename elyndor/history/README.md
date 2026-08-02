@@ -8,10 +8,12 @@
 
 | Age | Name | Theme | Status |
 |---|---|---|---|
-| **First** | The Age of Creation | Sacrifice | Mythologized; partially recorded; equivalent to the Age of Legends |
-| **Second** | The Age of Kingdoms | Hope | Recorded; reliable |
-| **Third** | The Age of Wars | Pride | Recorded; within living memory of oldest races |
-| **Fourth** | The Age of Shadows | Choice | Present day; still being written |
+| **First** | The Age of Awakening | Beginning | Mythologized; known through archaeology, myth, and oral tradition |
+| **Second** | The Age of Harmony | Flourishing | Recorded; filtered through post-Sundering reconstruction; ends with the Long Decline |
+| **Third** | The Age of Sundering | Collapse | The Eighth imprisoned; magic permanently altered; deliberately obscured |
+| **Fourth** | The Age of Restoration | Recovery | Present day; still being written; the game begins near its end |
+
+> Canonical age names per [`FINAL_CANON_DECISIONS.md`](../../FINAL_CANON_DECISIONS.md) (ruling D-01). The former labels Creation/Kingdoms/Wars/Shadows are deprecated.
 
 Full definitions, legacy tables, and cross-references: [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md)
 
@@ -21,12 +23,12 @@ Full definitions, legacy tables, and cross-references: [`HISTORY_BIBLE.md`](HIST
 
 | Event | Status | Age | File |
 |---|---|---|---|
-| **The Ancient God's imprisonment** | [CONFIRMED — legendary alliance; details of members unknown] | First Age | [`the_corruption.md`](the_corruption.md) |
-| **The Mages Guild founding** | [CONFIRMED] | Second Age | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
-| **The Age of Wars** | [CONFIRMED — centuries of conflict; Talos served in latter years] | Third Age | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
-| **The Vampire Houses' quiet expansion** | [CONFIRMED — exploited Third Age chaos] | Third Age | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
-| **The weakening of the prison seal** | [CONFIRMED — ongoing at campaign start] | Fourth Age | [`the_corruption.md`](the_corruption.md) |
-| **The Corruption** | [CONFIRMED — canonical world phenomenon] | Third Age onset; Fourth Age acceleration | [`the_corruption.md`](the_corruption.md) |
+| **The Ancient God's imprisonment** | [CONFIRMED — the Chorus imprisons the Eighth] | Age of Sundering | [`the_corruption.md`](the_corruption.md) |
+| **The Mages Guild** | [CONFIRMED — precursors in the Age of Harmony; current institutional form in the Age of Restoration; founding date not canonically fixed] | See status | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
+| **The centuries of war** | [CONFIRMED — centuries of conflict; Talos served in latter years] | Age of Restoration | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
+| **The Vampire Houses' quiet expansion** | [CONFIRMED — exploited the chaos of the Restoration-era wars] | Age of Restoration | [`HISTORY_BIBLE.md`](HISTORY_BIBLE.md) |
+| **The weakening of the prison seal** | [CONFIRMED — ongoing at campaign start] | Age of Restoration (present) | [`the_corruption.md`](the_corruption.md) |
+| **The Corruption** | [CONFIRMED — canonical world phenomenon] | Age of Sundering onset; Age of Restoration acceleration | [`the_corruption.md`](the_corruption.md) |
 
 ### Intentional Mysteries — Do Not Define Without Canonical Direction
 

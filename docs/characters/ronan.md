@@ -79,7 +79,7 @@ Two possible resolutions: he removes the curse, or he keeps it and learns to con
 - **Ragash** — She gets along with him because she understands his isolation. She knows what it is to be treated as something unwanted.
 - **Eleanor** — A romance develops between them. She actively tries to help him find a way to lift the curse.
 - **Talos** — Talos is wary of Ronan — not as a person, but because of the danger he poses to innocent people if he loses control. His concern is practical and protective, not personal animosity.
-- **Steven** — *(relationship not yet defined)*
+- **Torren** — see [`docs/heroes/RONAN.md`](../heroes/RONAN.md) for authored dynamics. *(Steven retired per `LEGACY_CHARACTER_RESERVE.md`; Torren replaces him.)*
 
 ---
 

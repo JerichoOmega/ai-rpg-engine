@@ -170,7 +170,7 @@ These threads are not separate stories. The external betrayal (or vindication) a
 
 ### The Harmonic Soul Revelation
 
-Midway through her companion quest, Eleanor's investigation of her own abilities leads the party to an **ancient First Age sanctuary** — a site dedicated to one member of the Divine Chorus, sealed since the Age of Creation and accessible only to someone who is genuinely searching for what is inside.
+Midway through her companion quest, Eleanor's investigation of her own abilities leads the party to an **ancient First Age sanctuary** — a site dedicated to one member of the Divine Chorus, sealed since the Age of Awakening and accessible only to someone who is genuinely searching for what is inside.
 
 Inside the sanctuary, **Eleanor encounters one of the gods**.
 

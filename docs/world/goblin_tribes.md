@@ -2,7 +2,8 @@
 
 > **Document Status:** Canonical as of July 2026.  
 > **Authority:** This document defines the canonical leadership, territory, traditions, and relationships for the three named goblin tribes. All future goblin content — quests, encounters, diplomacy, companion events — must align with these definitions.  
-> **Cross-references:** [`docs/world/WORLD_BIBLE.md`](WORLD_BIBLE.md) · [`docs/systems/reputation.md`](../systems/reputation.md) · [`docs/heroes/RAGASH.md`](../heroes/RAGASH.md)
+> **Cross-references:** [`docs/world/WORLD_BIBLE.md`](WORLD_BIBLE.md) · [`docs/systems/reputation.md`](../systems/reputation.md) · [`docs/heroes/RAGASH.md`](../heroes/RAGASH.md)  
+> **See also:** [`GOBLIN_CULTURE.md`](../../GOBLIN_CULTURE.md) (root) — Foundation-Locked cultural canon: burial rites, family structure, coming-of-age rites, the Council of Elders check on chieftainship, and the ruling that hostile goblins are Corrupted individuals, never a fourth tribe.
 
 ---
 

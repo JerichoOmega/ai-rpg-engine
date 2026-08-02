@@ -117,4 +117,4 @@ If you are an AI agent bootstrapping a new development session, read these files
 | 7 | `docs/lore/FIRST_TEMPLE.md` | The boundary that must never be crossed |
 | 8 | `docs/AI_CONTINUATION_GUIDE.md` | Full session bootstrap context |
 
-> **Note:** `elyndor/history/HISTORY_BIBLE.md` uses the obsolete Four Ages framework and is pending reconciliation with the Seven Ages canon. Until updated, defer to `docs/lore/HISTORY_BIBLE.md` and `docs/lore/TIMELINE.md` for historical structure.
+> **Note:** Both `elyndor/history/HISTORY_BIBLE.md` and `docs/lore/HISTORY_BIBLE.md` now use the canonical Four Ages framework — Awakening, Harmony, Sundering, Restoration — locked by `FINAL_CANON_DECISIONS.md` ruling D-01. The briefly adopted Seven Ages framework is superseded.

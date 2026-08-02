@@ -76,7 +76,7 @@ She finds the rare breed she has spent years searching for. Her first hound — 
 - **Ronan** — Gets along with him because she understands what is happening to him (the werewolf curse). She recognizes the loneliness of being an outsider.
 - **Talos** — *(relationship not yet defined; she secretly has feelings for him because of how he puts others first)*
 - **Eleanor** — *(relationship not yet defined)*
-- **Steven** — *(relationship not yet defined)*
+- **Torren** — see [`docs/heroes/RAGASH.md`](../heroes/RAGASH.md) for authored dynamics. *(Steven retired per `LEGACY_CHARACTER_RESERVE.md`; Torren replaces him.)*
 
 ---
 

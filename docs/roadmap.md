@@ -101,7 +101,7 @@ These are directions, not commitments. Do not implement without explicit design 
 - All lore additions go into `docs/GAME_BIBLE.md` first as confirmed canon.
 
 ### [CONFIRMED] History Bible
-- Four Ages framework established: Age of Creation, Age of Kingdoms, Age of Wars, Age of Shadows.
+- Four Ages framework established. *(Age names since superseded by FINAL_CANON_DECISIONS.md ruling D-01: Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration.)*
 - File: [`elyndor/history/HISTORY_BIBLE.md`](../elyndor/history/HISTORY_BIBLE.md)
 - Expand with per-age event files, named battles, regional histories, and artifact provenance.
 

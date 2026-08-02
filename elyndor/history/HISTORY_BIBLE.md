@@ -248,6 +248,6 @@ History in Elyndor exists to **explain the present**.
 
 | Date | Change |
 |---|---|
-| July 2026 | Created — Four Ages framework established: Age of Creation, Age of Kingdoms, Age of Wars, Age of Shadows |
+| July 2026 | Created — Four Ages framework established (original age names, since renamed per FINAL_CANON_DECISIONS.md ruling D-01) |
 | July 2026 | Expanded — The Ancient God identified as The Forgotten Eighth; Great Forgetting added as First Age legacy; mystery list updated to reflect what is now canonical; cross-reference to the_eighth.md added |
 | July 2026 | Revised — canonical framework updated to Four Ages per project owner directive: Age of Awakening (I), Age of Harmony (II), Age of Sundering (III), Age of Restoration (IV); Long Decline is now the tragic final chapter of Age II rather than a standalone age; Talos's military service remapped to Age of Restoration; Vampire House expansion remapped to early Age of Restoration; former "Present Age" / "Age of Shadows" is now the final era of Age IV |

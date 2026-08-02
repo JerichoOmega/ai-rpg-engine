@@ -349,7 +349,7 @@ A temple complex now sitting partially below the waterline along the Sapphire Co
 
 *Region: Frontier (northern)*
 
-A battlefield and collapsed fortification in the northern Frontier where, by most accounts, a kingdom's final military stand took place during the Age of Wars. The specific kingdom and conflict are disputed — several different traditions claim this as the site of their own history's defining defeat. The battlefield is large enough that portions remain unexamined, and the fortification's lower levels remain sealed.
+A battlefield and collapsed fortification in the northern Frontier where, by most accounts, a kingdom's final military stand took place during the wars of the Age of Restoration. The specific kingdom and conflict are disputed — several different traditions claim this as the site of their own history's defining defeat. The battlefield is large enough that portions remain unexamined, and the fortification's lower levels remain sealed.
 
 ---
 

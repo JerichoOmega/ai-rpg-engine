@@ -1,5 +1,7 @@
 # World Foundation Summary
 
+> ⚠️ **PARTIALLY SUPERSEDED (2026-08-02):** Portions of this compilation predate the Foundation Lock recorded in [`FINAL_CANON_DECISIONS.md`](../../../FINAL_CANON_DECISIONS.md). Known stale content: the dual Seven-Age/Four-Age framework discussion (D-01 locked a single Four Ages framework: Awakening · Harmony · Sundering · Restoration) and vampire house leader names (Serath Vetharis, Kira Drakmor, Mira Soleth are retired to [`LEGACY_CHARACTER_RESERVE.md`](../../../LEGACY_CHARACTER_RESERVE.md); current leaders are defined in [`docs/world/vampire_houses.md`](../../world/vampire_houses.md)). In any conflict, the source documents and Canon Lock rulings are authoritative.
+>
 > **Canon Status:** Reference document — read-only compilation. No new lore established here.  
 > **Purpose:** Consolidates all world canon from across the repository into a single indexed reference for writers and designers. Organized into three tiers: what is established, what is partially established, and what has not yet been defined.  
 > **Authority:** This document reflects the sources listed below. It does not override them. In any conflict between this summary and a source document, the source document is authoritative.  
@@ -11,7 +13,7 @@
 
 | File | Content Area |
 |---|---|
-| `docs/lore/HISTORY_BIBLE.md` | Seven Ages narrative framework |
+| `docs/lore/HISTORY_BIBLE.md` | Four Ages narrative framework (canonical per D-01) |
 | `docs/lore/TIMELINE.md` | Concise developer chronology |
 | `docs/lore/ARCHITECTS.md` | Pre-Chorus builders |
 | `docs/lore/DIVINE_CHORUS.md` | Chorus philosophy and structure |
@@ -47,12 +49,9 @@ Two documents describe the history of Elyndor using different frameworks and ter
 
 | Framework | Source | Ages |
 |---|---|---|
-| **Seven Ages** | `docs/lore/HISTORY_BIBLE.md` | Awakening · Discovery · Unity · Long Decline · Sundering · Restoration · Present |
-| **Four Ages** | `elyndor/history/HISTORY_BIBLE.md` | Creation · Kingdoms · Wars · Shadows |
+| **Four Ages (canonical)** | `docs/lore/HISTORY_BIBLE.md` · `elyndor/history/HISTORY_BIBLE.md` | Awakening · Harmony · Sundering · Restoration |
 
-Rough correspondence: The Four-Age model's Age of Creation spans roughly the Seven-Age model's first four ages (Awakening through Long Decline plus the Sundering). The Age of Kingdoms corresponds to the Age of Restoration. The Ages of Wars and Shadows correspond to the Second and Third Ages of the campaign-facing framework.
-
-**Neither framework should be treated as wrong.** Content using either model is valid. **A designer decision is needed** on whether to consolidate these into a single canonical numbering system, adopt one as the "public-facing" framework and one as the "scholarly" framework, or explicitly canonize both as co-existing scholarly traditions. Until that decision is made, both are confirmed canon.
+**The framework question is resolved.** [`FINAL_CANON_DECISIONS.md`](../../../FINAL_CANON_DECISIONS.md) ruling D-01 locked the single Four Ages framework above. The briefly adopted Seven Ages framework and the earlier Creation/Kingdoms/Wars/Shadows labels are both superseded. The Long Decline is the final chapter of the Age of Harmony, not a separate age.
 
 ---
 
@@ -446,9 +445,11 @@ Three canonical houses. Not monolithic — each has internal factions and politi
 
 | House | Territory | Leader | Character |
 |---|---|---|---|
-| **House Vetharis** | Imperial Capital (primary), surface political operations | Lord Commander Serath Vetharis | Political operators; most integrated into mortal society |
-| **House Drakmor** | Frontier and wilderness regions | Warlord Kira Drakmor | Military and territorial; most openly aggressive |
-| **House Soleth** | Sol Kareth, Iron Peaks deep passes | Archivist-Queen Mira Soleth | Knowledge-focused; excavation sites in Sol Kareth (two sealed) and Iron Peaks (one gone silent) |
+| **House Vetharis** | Imperial Capital (primary), surface political operations | Lord Cassiel Vetharis | Political operators; most integrated into mortal society |
+| **House Drakmor** | Frontier and wilderness regions | Lady Morreth Drakmor | Military and territorial; most openly aggressive |
+| **House Soleth** | Sol Kareth, Iron Peaks deep passes | The Archivist | Knowledge-focused; excavation sites in Sol Kareth (two sealed) and Iron Peaks (one gone silent) |
+
+*Leader names updated 2026-08-02 per [`docs/world/vampire_houses.md`](../../world/vampire_houses.md); the former names (Serath Vetharis, Kira Drakmor, Mira Soleth) are held in [`LEGACY_CHARACTER_RESERVE.md`](../../../LEGACY_CHARACTER_RESERVE.md).*
 
 ### Goblin Tribes
 

@@ -81,7 +81,7 @@ Fighting governments for how they treat their people. Confronting the personal c
 - **Eleanor** — Talos comes to trust her relatively quickly, largely because he recognizes her youth and naivety. Over time he becomes protective of her, particularly when she is on a quest alongside him.
 - **Ronan** — Talos is wary of Ronan — not as a person, but because of the danger Ronan poses to innocent people if he loses control of his werewolf form. His concern is practical, not personal.
 - **Ragash** — *(relationship not yet defined)*
-- **Steven** — *(relationship not yet defined)*
+- **Torren** — mutual respect built on discipline and craftsmanship; see [`docs/heroes/TALOS.md`](../heroes/TALOS.md) Relationship Dynamics. *(Steven retired per `LEGACY_CHARACTER_RESERVE.md`; Torren replaces him.)*
 
 ---
 

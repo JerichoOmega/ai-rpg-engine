@@ -77,7 +77,7 @@ She is betrayed by someone she trusted — which could result in her being expel
 - **Talos** — He comes to trust her surprisingly quickly, largely because he recognizes her youth and naivety. He grows protective of her over time.
 - **Ronan** — A romance develops between Eleanor and Ronan. She offers to help him with removing his werewolf curse.
 - **Ragash** — *(relationship not yet defined)*
-- **Steven** — *(relationship not yet defined)*
+- **Torren** — see [`docs/heroes/ELEANOR.md`](../heroes/ELEANOR.md) for authored dynamics. *(Steven retired per `LEGACY_CHARACTER_RESERVE.md`; Torren replaces him.)*
 
 ---
 

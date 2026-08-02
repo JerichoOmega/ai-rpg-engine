@@ -1,5 +1,7 @@
 # The Divine Chorus
 
+> **See also:** [`DIVINE_CHORUS.md`](../../DIVINE_CHORUS.md) (root) — the Foundation-Locked theological pillar: the eight named Voices (Aurelion, Kaelos, Elyra, Veridan, Solenne, Tyras, Lyssara, Noctis), the seven Heralds, and the Forgotten Eighth rulings (D-04c, D-05). This file supplements that pillar with philosophy and design guidance.
+
 The Divine Chorus are the gods of this world. They are not rulers of mortals. They are not dispensers of fate. They are the forces that keep existence itself from unraveling — and they have chosen, deliberately and consistently, to allow mortals to determine what that existence becomes.
 
 ---
