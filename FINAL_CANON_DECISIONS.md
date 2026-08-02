@@ -275,7 +275,7 @@ Every existing doc (`docs/PLAYER_SYSTEM.md`, `docs/characters/README.md`, `docs/
 - The Companion Relationship matrix, Companion Expertise system, Companion Evolution system, and Settlement Dispersal system all assume the final roster of **seven** companions (21 companion pairs + player↔each = 28 relationship channels).
 
 **Vertical Slice clarification:**
-The Vertical Slice does NOT need to include every companion. **VS-1 focuses on Talos as the primary Origin Character.** The remaining six companions are introduced in later milestones according to the roadmap. Corwin and Community Healer Hero Bibles are authored ahead of their respective milestone content.
+**Canon and implementation are separate concepts.** The final canonical roster consists of seven companions — this is a game-design fact. It is **not** a requirement to implement all seven before VS-1. The Vertical Slice implements only the companions required for the prototype (**Talos** as the primary Origin). The remaining six companions arrive in later milestones according to the implementation roadmap. Corwin and Community Healer Hero Bibles are authored ahead of their respective milestone content, not during VS-1.
 
 **Applied to consolidation plan.** Awaiting all remaining rulings before repository modification begins.
 
