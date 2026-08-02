@@ -7,6 +7,14 @@
 
 ---
 
+## Rulings Applied (updated as V-decisions are approved)
+
+| ID | Ruling | Date | Impact on Audit |
+|---|---|---|---|
+| **V-1** | ✅ **Vampires are a civilization that chose preservation over renewal.** The Three Houses are the "surviving arguments" of a collapsed vampire civilization. Vetharis preserves structure/control; Drakmor preserves strength/endurance; Soleth preserves memory/knowledge. Lost civilization stays mysterious — discovered through ruins/inscriptions/archives, never fully explained. Tone: ancient, static, burdened by past (opposite of goblins). Legacy Questline spine: *"Can vampires create something new without repeating the mistakes that destroyed what came before?"* Guiding principle: *"The Three Houses are not the remnants of vampire civilization — they are its surviving arguments."* | Feb 2026 | **Section 3.2 (Civilization vs Post-Civilization) now resolved via refined Option C.** All downstream V-decisions inherit this framing. Section 10's expansion authoring plan updates: instead of `VAMPIRE_CULTURE.md` (goblin-parallel) OR `VAMPIRE_CANONICAL_SILENCES.md`, the model is now **house-by-house philosophical preservation** — each house documents which aspects of the lost civilization it preserves, and how. The lost civilization itself is authored only as discoverable fragments, never as complete history. |
+
+---
+
 ## Files Reviewed
 
 | File | Vampire Content |
