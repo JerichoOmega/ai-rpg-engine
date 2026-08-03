@@ -1,0 +1,212 @@
+{
+  "id": "what_the_forest_carries",
+  "name": "What the Forest Carries",
+  "civilization": "mossroot",
+  "featured_companion": "corwin",
+  "theme": "Stewardship; understanding before action; preserve, do not conquer.",
+  "signature_encounter": "The Eight-Round Defense of the Living Ward",
+  "start_stage": "silent_forest",
+  "stages": [
+    {
+      "id": "silent_forest",
+      "title": "The Silent Forest",
+      "description": "The forest has gone unnaturally quiet. Birds, deer and even insects have fled. Something at its heart is failing.",
+      "objectives": [
+        {"id": "investigate_silence", "description": "Investigate why the forest has fallen silent."},
+        {"id": "track_wildlife", "description": "Track the direction the wildlife fled.", "optional": true}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "No birdsong. No wind through the leaves that should carry it. The Mossroot say the forest is holding its breath."},
+        {"type": "banter", "context": "forest.silent"},
+        {
+          "type": "dialogue",
+          "tree": {
+            "id": "forest.vess",
+            "start": "root",
+            "nodes": [
+              {"id": "root", "speaker": "Elder Vess", "text": "Outsider. The forest carries our dead, our memory, our covenant. Now it carries a sickness we cannot reach. Will you understand before you act?",
+               "choices": [
+                 {"key": "listen", "label": "Teach me what is failing.", "goto": "explain", "effects": [{"type": "affinity", "companion": "corwin", "amount": 3}]},
+                 {"key": "insight", "label": "[Insight] The silence spreads outward from one point, doesn't it?", "goto": "explain",
+                  "check": {"id": "forest.vess.insight", "skill": "insight", "difficulty": "medium", "companion_insight": {"companion": "corwin", "tier": "warming"}},
+                  "on_success_goto": "impressed", "on_failure_goto": "explain"}
+               ]},
+              {"id": "impressed", "speaker": "Elder Vess", "text": "You listen with your whole mind. Yes -- it spreads from the Living Ward at Heartgrove. Corwin knows the paths; trust his reading of them.",
+               "choices": [{"key": "ok", "label": "Then to Heartgrove.", "goto": "end", "effects": [{"type": "flag", "name": "forest_ward_source_known"}]}]},
+              {"id": "explain", "speaker": "Elder Vess", "text": "The Living Ward -- the ancient enchantment that keeps the Sleeping Warden at peace -- is failing. If it breaks, the Warden wakes in agony, corrupted.",
+               "choices": [{"key": "ok", "label": "Take me toward it.", "goto": "end"}]},
+              {"id": "end", "outcome": "briefed"}
+            ]
+          },
+          "on_outcome": {"briefed": [{"type": "complete_objective", "objective": "investigate_silence"}]}
+        },
+        {
+          "type": "speech_check",
+          "prompt": "You read the forest floor for the wildlife's escape routes.",
+          "id": "forest.track.cultural", "skill": "cultural", "difficulty": "easy",
+          "companion_insight": {"companion": "corwin", "tier": "warming"},
+          "on_success": [{"type": "flag", "name": "forest_tracked_wildlife"}, {"type": "complete_objective", "objective": "track_wildlife"}],
+          "on_failure": [{"type": "narrate", "text": "The trails scatter and fade, but they all lead away from Heartgrove."}]
+        }
+      ],
+      "next": "mothers_crossing"
+    },
+    {
+      "id": "mothers_crossing",
+      "title": "Mother's Crossing",
+      "description": "A river ford sacred to the Mossroot, where the corruption's edge first becomes visible.",
+      "objectives": [
+        {"id": "cross_safely", "description": "Cross Mother's Crossing and reach the Heartgrove path."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "At Mother's Crossing the water runs grey. Corwin kneels, presses a palm to the current, and grimaces."},
+        {"type": "banter", "context": "forest.crossing"},
+        {
+          "type": "choice",
+          "prompt": "The safe stones are hidden beneath grey water. How do you cross?",
+          "key": "forest.crossing.method",
+          "options": [
+            {"key": "corwin_reads", "label": "Let Corwin read the safe path.", "available_if": {"companion": "corwin"}, "locked_note": "Corwin is not with you", "effects": [{"type": "flag", "name": "forest_crossed_clean"}, {"type": "affinity", "companion": "corwin", "amount": 2}]},
+            {"key": "careful", "label": "Pick your own way across, slowly and carefully.", "effects": [{"type": "narrate", "text": "You cross soaked and shivering, but you cross."}]}
+          ]
+        },
+        {"type": "complete_objective", "objective": "cross_safely"}
+      ],
+      "next": "heartgrove"
+    },
+    {
+      "id": "heartgrove",
+      "title": "Heartgrove and the Failing Ward",
+      "description": "At the forest's heart stands the Living Ward -- and beneath it, the colossal Sleeping Warden, stirring in corrupted pain.",
+      "objectives": [
+        {"id": "assess_ward", "description": "Discover why the Living Ward is failing."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "Heartgrove: a cathedral of ancient trees. The Living Ward flickers like a guttering candle. Below it, something the size of a hill breathes unevenly -- the Sleeping Warden, a guardian of stone, wood, moss, root and earth."},
+        {
+          "type": "speech_check",
+          "prompt": "You study the Ward's failing weave.",
+          "id": "forest.ward.insight", "skill": "insight", "difficulty": "medium",
+          "preparation_flags": ["forest_ward_source_known"],
+          "companion_insight": {"companion": "corwin", "tier": "trusted"},
+          "on_success": [{"type": "flag", "name": "forest_ritual_understood"}, {"type": "complete_objective", "objective": "assess_ward"}, {"type": "narrate", "text": "You understand: the Ward is not broken, it is exhausted. It can be renewed by a ritual -- but only if it is defended while it works."}],
+          "on_failure": [{"type": "complete_objective", "objective": "assess_ward"}, {"type": "narrate", "text": "Corwin fills the gaps in your reading: the Ward must be renewed by ritual, and defended while it works."}]
+        }
+      ],
+      "next": "split_party"
+    },
+    {
+      "id": "split_party",
+      "title": "Two Burdens",
+      "description": "The Mossroot must be evacuated from the collapse radius while the Ward is renewed. The party must divide.",
+      "objectives": [
+        {"id": "divide_party", "description": "Divide the party between the ritual and the evacuation."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "There is not time for both tasks with one group. Corwin, who knows the ritual, should go forward. Others must shield the fleeing Mossroot."},
+        {
+          "type": "split_party",
+          "resolve": true,
+          "base_saved": 25,
+          "plan": {
+            "id": "forest.split",
+            "main_companion": "corwin",
+            "evacuation_group": ["kael", "lyra"],
+            "reunion_context": "forest.reunion"
+          }
+        },
+        {"type": "complete_objective", "objective": "divide_party"}
+      ],
+      "next": "restore_ward"
+    },
+    {
+      "id": "restore_ward",
+      "title": "Defend the Living Ward",
+      "description": "The renewal ritual takes eight rounds. It ends when the ritual succeeds -- not when the last enemy falls.",
+      "objectives": [
+        {"id": "defend_ritual", "description": "Protect the ritual for all eight rounds."},
+        {"id": "protect_saplings", "description": "Keep the sacred saplings from being trampled.", "optional": true}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "Corwin begins the renewal chant. Corrupted roots and thorn-beasts erupt from the treeline. Hold."},
+        {
+          "type": "encounter",
+          "spec": {
+            "id": "forest.ritual_defense", "name": "The Eight-Round Defense of the Living Ward", "type": "ritual_defense", "signature": true,
+            "rounds": 8,
+            "base_threat": 50,
+            "threat_step": 7,
+            "success_flag": "forest_ward_renewed",
+            "escalation": [
+              "Thorn-hounds test the perimeter.",
+              "Corrupted roots erupt beneath the circle.",
+              "Grasping vines reach for the saplings.",
+              "A tide of hollow woodland folk arrives.",
+              "The ground itself heaves as the Warden thrashes.",
+              "Spores dim the ritual light.",
+              "The corruption throws everything at the failing Ward.",
+              "Final surge -- the Ward flares as the renewal takes hold."
+            ],
+            "optional_objectives": [
+              {"id": "saplings_safe", "description": "The sacred saplings survived.", "requires": {"companion": "corwin", "tier": "trusted", "strength": 95}, "flag_if_met": "forest_saplings_saved"}
+            ],
+            "on_complete_flags": ["forest_ritual_defended"]
+          }
+        },
+        {"type": "complete_objective", "objective": "defend_ritual"},
+        {"type": "effects", "effects": [{"type": "complete_objective", "objective": "protect_saplings"}]}
+      ],
+      "next": "save_warden"
+    },
+    {
+      "id": "save_warden",
+      "title": "The Sleeping Warden",
+      "description": "The Warden is not to be slain but saved -- freed from corruption as the renewed Ward takes hold.",
+      "objectives": [
+        {"id": "save_warden_obj", "description": "Free the Sleeping Warden from corruption."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "The renewed Ward blazes. The Warden's colossal eyes clear of blight. It regards you -- ancient, weary, grateful -- and settles back into its long dream."},
+        {
+          "type": "choice",
+          "prompt": "As the Warden calms, how do you close the rite?",
+          "key": "forest.warden.close",
+          "options": [
+            {"key": "corwin_word", "label": "Let Corwin speak the Mossroot word of rest.", "available_if": {"companion": "corwin", "affinity_tier": "warming"}, "locked_note": "needs Corwin, warmed to you", "effects": [{"type": "flag", "name": "forest_warden_rest_spoken"}, {"type": "affinity", "companion": "corwin", "amount": 5}, {"type": "standing", "civ": "mossroot", "amount": 10}]},
+            {"key": "silent", "label": "Stand in silent respect as it sleeps.", "effects": [{"type": "standing", "civ": "mossroot", "amount": 5}]}
+          ]
+        },
+        {"type": "complete_objective", "objective": "save_warden_obj"}
+      ],
+      "next": "resolution"
+    },
+    {
+      "id": "resolution",
+      "title": "The Forest Breathes",
+      "description": "The party regroups. The forest, slowly, begins to wake.",
+      "objectives": [
+        {"id": "regroup", "description": "Regroup with the evacuation party."}
+      ],
+      "steps": [
+        {"type": "reunite"},
+        {"type": "narrate", "text": "Birdsong returns, tentative, then certain. Elder Vess bows -- not to a savior, but to a steward who understood before acting."},
+        {"type": "complete_objective", "objective": "regroup"}
+      ],
+      "next": null
+    }
+  ],
+  "consequences": [
+    {"type": "flag", "name": "forest_restored", "value": true},
+    {"type": "flag", "name": "wildlife_returned", "value": true},
+    {"type": "flag", "name": "mossroot_patrols_expanded", "value": true},
+    {"type": "flag", "name": "travel_safe_forest", "value": true},
+    {"type": "counter", "name": "mossroot_patrol_routes", "amount": 3},
+    {"type": "standing", "civ": "mossroot", "amount": 20},
+    {"type": "relationship", "civ_a": "mossroot", "civ_b": "humans", "amount": 10},
+
+    {"type": "flag", "name": "warden_distant_sightings", "value": true, "requires": "forest_warden_rest_spoken"},
+    {"type": "flag", "name": "sacred_saplings_grove", "value": true, "requires": "forest_saplings_saved"},
+
+    {"type": "future_hook", "name": "restored_warden_recurring_presence", "canon_pending": true}
+  ]
+}

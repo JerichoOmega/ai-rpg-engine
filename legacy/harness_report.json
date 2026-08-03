@@ -1,0 +1,41 @@
+{
+  "all_pass": true,
+  "results": [
+    {
+      "scenario": "debt_prepared_peace",
+      "quest": "debt_comes_due",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "scenario": "debt_minimal_truce",
+      "quest": "debt_comes_due",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "scenario": "forest_prepared",
+      "quest": "what_the_forest_carries",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "scenario": "forest_minimal_no_corwin",
+      "quest": "what_the_forest_carries",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "scenario": "forge_prepared",
+      "quest": "eternal_forge",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "scenario": "forge_minimal",
+      "quest": "eternal_forge",
+      "passed": true,
+      "failures": []
+    }
+  ]
+}

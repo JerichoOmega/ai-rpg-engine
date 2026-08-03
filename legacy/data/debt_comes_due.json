@@ -1,0 +1,214 @@
+{
+  "id": "debt_comes_due",
+  "name": "The Debt Comes Due",
+  "civilization": "humans_and_stonefang",
+  "featured_companion": "talos",
+  "theme": "Civilization before conflict; the player is catalyst, not savior.",
+  "signature_encounter": "The Corruption Breaks the Truce",
+  "start_stage": "opening",
+  "stages": [
+    {
+      "id": "opening",
+      "title": "Two Children by the Stream",
+      "description": "A Stonefang goblin child and a human child play beside a stream until fighting erupts in the distance. Each runs home to a frightened community.",
+      "objectives": [
+        {"id": "reach_frontier", "description": "Travel to the human frontier camp and Stonefang."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "You follow the children back toward two communities living an uneasy day's walk apart, both bracing for a war neither truly wants."},
+        {"type": "banter", "context": "debt.opening"},
+        {"type": "complete_objective", "objective": "reach_frontier"}
+      ],
+      "next": "investigation"
+    },
+    {
+      "id": "investigation",
+      "title": "Grievances on Both Sides",
+      "description": "Explore the Stonefang settlement and the frontier camp. Meet Chieftain Grakkor and Captain Thomas Rourke; gather reports, testimony, maps and evidence.",
+      "objectives": [
+        {"id": "hear_grakkor", "description": "Hear Chieftain Grakkor's account."},
+        {"id": "hear_rourke", "description": "Hear Captain Thomas Rourke's account."},
+        {"id": "gather_evidence", "description": "Gather evidence of the true cause.", "optional": true}
+      ],
+      "steps": [
+        {
+          "type": "dialogue",
+          "tree": {
+            "id": "debt.grakkor",
+            "start": "root",
+            "nodes": [
+              {"id": "root", "speaker": "Chieftain Grakkor", "text": "Human blades were seen near our watering stones. My people bury children while yours count cattle. Why should I trust another outsider?",
+               "choices": [
+                 {"key": "listen", "label": "I came to listen, not to judge. Tell me what your scouts saw.", "goto": "account",
+                  "effects": [{"type": "affinity", "companion": "talos", "amount": 3}]},
+                 {"key": "custom", "label": "[Cultural] Offer the Stonefang stoneword of parley before speaking.", "goto": "account",
+                  "requires_flag": "debt_goblin_customs_learned", "locked_note": "learn Stonefang customs first",
+                  "effects": [{"type": "standing", "civ": "stonefang", "amount": 10}]},
+                 {"key": "press", "label": "Your warriors may have struck first. I need the truth.", "goto": "account",
+                  "check": {"id": "debt.grakkor.insight", "skill": "insight", "difficulty": "medium", "civilization": "stonefang", "companion_insight": {"companion": "talos", "tier": "warming"}},
+                  "on_success_goto": "trust", "on_failure_goto": "account"}
+               ]},
+              {"id": "trust", "speaker": "Chieftain Grakkor", "text": "You see clearly. Neither side struck first with intent. Something drove the beasts and the lost ones toward us both.",
+               "choices": [{"key": "ok", "label": "Then we may still stop this.", "goto": "end", "effects": [{"type": "flag", "name": "debt_grakkor_trust"}]}]},
+              {"id": "account", "speaker": "Chieftain Grakkor", "text": "Corrupted things move at the treeline. My veteran Skarn lost his mate to them and now sees only human faces to blame.",
+               "choices": [{"key": "ok", "label": "I will weigh every account before I speak.", "goto": "end"}]},
+              {"id": "end", "outcome": "heard"}
+            ]
+          },
+          "on_outcome": {"heard": [{"type": "complete_objective", "objective": "hear_grakkor"}]}
+        },
+        {
+          "type": "dialogue",
+          "tree": {
+            "id": "debt.rourke",
+            "start": "root",
+            "nodes": [
+              {"id": "root", "speaker": "Captain Thomas Rourke", "text": "I am practical, stranger. I lost good people. I do not want a war, but I will not leave my camp undefended on a promise.",
+               "choices": [
+                 {"key": "honest", "label": "Then let us find the truth together, honestly.", "goto": "open", "effects": [{"type": "affinity", "companion": "talos", "amount": 3}]},
+                 {"key": "diplomacy", "label": "[Diplomacy] Both your peoples are being hunted by the same enemy.", "goto": "open",
+                  "check": {"id": "debt.rourke.diplomacy", "skill": "diplomacy", "difficulty": "medium", "preparation_flags": ["debt_grakkor_trust"]},
+                  "on_success_goto": "respect", "on_failure_goto": "open"}
+               ]},
+              {"id": "respect", "speaker": "Captain Thomas Rourke", "text": "You reason like someone who has buried people of their own. If the goblins will meet, I will listen.",
+               "choices": [{"key": "ok", "label": "I will arrange it.", "goto": "end", "effects": [{"type": "flag", "name": "debt_rourke_respect"}]}]},
+              {"id": "open", "speaker": "Captain Thomas Rourke", "text": "Bring me proof of a common enemy and I will consider standing down.",
+               "choices": [{"key": "ok", "label": "I will.", "goto": "end"}]},
+              {"id": "end", "outcome": "heard"}
+            ]
+          },
+          "on_outcome": {"heard": [{"type": "complete_objective", "objective": "hear_rourke"}]}
+        },
+        {
+          "type": "speech_check",
+          "prompt": "You examine tracks, wounds and torn maps around both camps.",
+          "id": "debt.evidence.insight", "skill": "insight", "difficulty": "medium",
+          "companion_insight": {"companion": "talos", "tier": "warming"},
+          "on_success": [{"type": "flag", "name": "debt_evidence_gathered"}, {"type": "complete_objective", "objective": "gather_evidence"}],
+          "on_failure": [{"type": "narrate", "text": "The signs are muddled, but a pattern of corruption lingers at the edges."}]
+        },
+        {
+          "type": "choice",
+          "prompt": "A Stonefang elder offers to teach you the customs of parley. Do you take the time?",
+          "key": "debt.learn_customs",
+          "options": [
+            {"key": "learn", "label": "Learn the Stonefang customs of parley.", "effects": [{"type": "flag", "name": "debt_goblin_customs_learned"}, {"type": "standing", "civ": "stonefang", "amount": 5}]},
+            {"key": "skip", "label": "There is no time; move to the negotiation.", "effects": []}
+          ]
+        }
+      ],
+      "next": "negotiation"
+    },
+    {
+      "id": "negotiation",
+      "title": "The Long Table",
+      "description": "Conversation-driven diplomacy. Both sides present legitimate grievances. Preparation shapes what is possible; speech supports it rather than replacing it.",
+      "objectives": [
+        {"id": "broker", "description": "Broker an understanding between Grakkor and Rourke."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "Grakkor and Rourke sit at opposite ends of a plank table. Their grieving veterans, Skarn and Halden, stand behind them like mirrored shadows."},
+        {
+          "type": "choice",
+          "prompt": "How do you open the negotiation?",
+          "key": "debt.negotiation.approach",
+          "options": [
+            {"key": "mediate", "label": "Mediate: name the corruption as the true enemy of both peoples.", "effects": [{"type": "flag", "name": "debt_named_common_enemy"}]},
+            {"key": "evidence", "label": "Present the evidence you gathered.", "available_if": {"flag": "debt_evidence_gathered"}, "locked_note": "requires gathered evidence", "effects": [{"type": "flag", "name": "debt_named_common_enemy"}, {"type": "flag", "name": "debt_evidence_shown"}]},
+            {"key": "pressure", "label": "Pressure both sides to disarm immediately.", "effects": [{"type": "standing", "civ": "humans", "amount": -3}, {"type": "standing", "civ": "stonefang", "amount": -3}]}
+          ]
+        },
+        {
+          "type": "speech_check",
+          "prompt": "You press for a lasting agreement.",
+          "id": "debt.negotiation.diplomacy", "skill": "diplomacy", "difficulty": "hard",
+          "preparation_flags": ["debt_named_common_enemy", "debt_evidence_shown", "debt_grakkor_trust", "debt_rourke_respect", "debt_goblin_customs_learned"],
+          "on_success": [{"type": "flag", "name": "debt_peace_brokered"}, {"type": "complete_objective", "objective": "broker"}, {"type": "narrate", "text": "Grakkor sets his axe flat on the table. Rourke, after a long breath, does the same."}],
+          "on_failure": [{"type": "flag", "name": "debt_uneasy_truce"}, {"type": "complete_objective", "objective": "broker"}, {"type": "narrate", "text": "No embrace, but a fragile truce holds: enough to face what is coming."}]
+        }
+      ],
+      "next": "crisis"
+    },
+    {
+      "id": "crisis",
+      "title": "The Corruption Breaks the Truce",
+      "description": "A major Corruption attack interrupts the talks. Corrupted wildlife and lost civilized folk assault both camps. Humans and goblins must fight as one.",
+      "objectives": [
+        {"id": "hold_camps", "description": "Repel the corrupted assault on the camps."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "Horns. Screaming. The treeline vomits corrupted beasts and hollow-eyed people who were once farmers and hunters. There is no time left to argue."},
+        {"type": "banter", "context": "debt.crisis"},
+        {
+          "type": "encounter",
+          "spec": {
+            "id": "debt.signature", "name": "The Corruption Breaks the Truce", "type": "multi_stage", "signature": true,
+            "waves": [
+              {"name": "Corrupted wildlife at the palisade", "threat": 55, "banter_context": "debt.crisis", "setback_flag": "debt_palisade_breached"},
+              {"name": "The lost ones surge the gate", "threat": 68, "setback_flag": "debt_gate_losses"},
+              {"name": "A corrupted alpha leads the charge", "threat": 82, "setback_flag": "debt_heavy_losses"}
+            ],
+            "on_complete_flags": ["debt_defended_together"]
+          }
+        },
+        {"type": "complete_objective", "objective": "hold_camps"}
+      ],
+      "next": "hero_moment"
+    },
+    {
+      "id": "hero_moment",
+      "title": "Hold the Line",
+      "description": "The civilians can escape only if someone holds the breach.",
+      "objectives": [
+        {"id": "cover_retreat", "description": "Decide how the civilians will escape."}
+      ],
+      "steps": [
+        {
+          "type": "choice",
+          "prompt": "The civilians are fleeing. What do you do?",
+          "key": "debt.hero_moment",
+          "options": [
+            {"key": "hold", "label": "Stay behind with Grakkor and Rourke to hold the line yourself.", "effects": [{"type": "flag", "name": "debt_player_held_line"}, {"type": "standing", "civ": "humans", "amount": 10}, {"type": "standing", "civ": "stonefang", "amount": 10}, {"type": "affinity", "companion": "talos", "amount": 6}]},
+            {"key": "organize", "label": "Organize the retreat and let the veterans hold.", "effects": [{"type": "flag", "name": "debt_veterans_held_line"}, {"type": "standing", "civ": "humans", "amount": 4}, {"type": "standing", "civ": "stonefang", "amount": 4}]}
+          ]
+        },
+        {"type": "narrate", "text": "Skarn and Halden, the two grieving veterans, fight back to back against the corruption. Grief becomes, for one moment, a shared cause.", "speaker": null},
+        {"type": "complete_objective", "objective": "cover_retreat"}
+      ],
+      "next": "resolution"
+    },
+    {
+      "id": "resolution",
+      "title": "The Caravan to a New Home",
+      "description": "Stonefang warriors escort the refugee caravan to Talos's multicultural hometown. Several volunteers choose to remain and help build the settlement.",
+      "objectives": [
+        {"id": "escort_caravan", "description": "See the refugee caravan safely to Talos's hometown."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "Under a Stonefang escort, the caravan winds toward Talos's hometown -- a settlement already known for welcoming strangers."},
+        {"type": "banter", "context": "debt.resolution"},
+        {"type": "narrate", "text": "At the gates, a handful of Stonefang volunteers lay down their war-paint and take up mason's tools. They mean to stay."},
+        {"type": "complete_objective", "objective": "escort_caravan"}
+      ],
+      "next": null
+    }
+  ],
+  "consequences": [
+    {"type": "flag", "name": "frontier_camp_closed", "value": true},
+    {"type": "flag", "name": "talos_town_growing", "value": true},
+    {"type": "counter", "name": "refugees_settled", "amount": 40},
+    {"type": "flag", "name": "travel_safe_frontier", "value": true},
+    {"type": "standing", "civ": "humans", "amount": 15},
+    {"type": "standing", "civ": "stonefang", "amount": 15},
+    {"type": "reputation", "faction": "kingdom", "amount": 10},
+
+    {"type": "relationship", "civ_a": "humans", "civ_b": "stonefang", "amount": 30, "requires": "debt_peace_brokered"},
+    {"type": "relationship", "civ_a": "humans", "civ_b": "stonefang", "amount": 12, "requires": "debt_uneasy_truce"},
+    {"type": "counter", "name": "stonefang_volunteers_settled", "amount": 5, "requires": "debt_peace_brokered"},
+    {"type": "counter", "name": "stonefang_volunteers_settled", "amount": 2, "requires": "debt_uneasy_truce"},
+    {"type": "flag", "name": "symbolic_goblins_remain_with_refugees", "value": true},
+
+    {"type": "future_hook", "name": "prosperous_town_of_new_beginnings", "canon_pending": false},
+    {"type": "future_hook", "name": "foundations_of_the_council_of_embers", "canon_pending": true}
+  ]
+}

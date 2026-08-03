@@ -7,6 +7,47 @@
 
 ---
 
+## [v0.5] — June 2026 — Legacy Questline Architecture [CONFIRMED]
+
+### Reusable, data-driven quest architecture (`legacy/` package)
+
+Delivered the production-quality quest architecture as the vertical slice
+implementing three approved Legacy Questlines: **The Debt Comes Due**,
+**What the Forest Carries**, and **Eternal Forge**. Quests are authored as
+JSON data and executed by a generic step-runner — a future questline needs a
+data file and a two-line registration, no engine code.
+
+**Reusable frameworks added (`legacy/framework/`):**
+- Quest Framework (`quest_framework.py`) — Quest/Stage/step-runner/QuestManager
+- Living World State Manager (`world_flags.py`)
+- Reputation hooks + Civilization Relationship Tracking (`reputation.py`)
+- Companion Affinity Hooks + Insight Gates + Banter (`companion_affinity.py`)
+- Speech Check Framework — 5 skills (`speech_checks.py`)
+- Dialogue Tree Framework (`dialogue_trees.py`)
+- Environmental Puzzle Framework (`puzzles.py`)
+- Timed Objective Framework (`timed_objectives.py`)
+- Multi-Stage Combat Encounters (`encounters.py`)
+- Split Party Framework (`split_party.py`)
+- Quest Consequence Framework (`consequences.py`)
+- IOAdapter (`io.py`) — Interactive/Scripted transports; registry (`registry.py`)
+
+**Content + tooling:**
+- `legacy/data/*.json` — the three quests (design authority)
+- `legacy/quests/*.py` — thin loaders + banter
+- `legacy/dev_tools.py` — permanent developer utilities
+- `legacy/harness.py` — automated regression (6/6 scenarios pass)
+- `legacy/menu.py` — in-game menu
+
+**Engine integration:**
+- `world_state.py` — added `world_state["legacy"]` namespace + save migration in `ensure_world_state_defaults()`
+- `game_loop.py` — main-menu option 11 "Legacy Questlines" (Exit → 12)
+- ~20 new event-bus events emitted by the frameworks
+
+**Docs:** `docs/systems/legacy_quest_framework.md`, `legacy/README.md`
+(deliverables report), `docs/handoffs/2026-06-15-legacy-questline-integration.md`.
+
+---
+
 ## [v0.4] — July 2026 — Integration Complete + Documentation Complete
 
 ### Integration Pass (Task 3) — All import errors and state inconsistencies resolved

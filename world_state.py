@@ -460,6 +460,18 @@ world_state = {
     # Each entry: level, xp, xp_to_next_level, max_hp, attack_bonus.
     # Populated lazily on first XP award and on companion recruit.
     "roster": {},
+
+    # --- Legacy Questline architecture (reusable framework state) ---
+    # Owned by the legacy.framework.* systems. Single namespace so the
+    # whole quest architecture saves/loads and migrates as one key.
+    "legacy": {
+        "quests": {},              # quest_id -> {state, current_stage, ...}
+        "living_world": {},        # Living-World flags and counters
+        "companion_affinity": {},  # companion name -> affinity int
+        "civilizations": {},       # civ -> {standing, relations}
+        "split_party": {},         # split-party plan state
+        "puzzles": {},             # puzzle_id -> {solved, missteps}
+    },
 }
 
 
@@ -693,6 +705,17 @@ def ensure_world_state_defaults():
             for sub_key, sub_val in sub_defaults.items():
                 if sub_key not in world_state[section]:
                     world_state[section][sub_key] = sub_val
+
+    # --- Legacy Questline architecture ---
+    # Single namespace holding all reusable-framework state. Deep-backfilled
+    # so saves written before the Legacy architecture load cleanly.
+    legacy = world_state.setdefault("legacy", {})
+    if not isinstance(legacy, dict):
+        legacy = world_state["legacy"] = {}
+    for sub_key in ("quests", "living_world", "companion_affinity",
+                    "civilizations", "split_party", "puzzles"):
+        if not isinstance(legacy.get(sub_key), dict):
+            legacy[sub_key] = {}
 
 
 # =========================

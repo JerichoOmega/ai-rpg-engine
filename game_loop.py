@@ -134,7 +134,11 @@ def show_main_menu():
     )
 
     print(
-        "11. Exit Game"
+        "11. Legacy Questlines"
+    )
+
+    print(
+        "12. Exit Game"
     )
 
 # =========================
@@ -453,10 +457,20 @@ def run_game():
             autosave()
 
         # =========================
-        # EXIT
+        # LEGACY QUESTLINES
         # =========================
 
         elif choice == "11":
+
+            from legacy.menu import show_legacy_menu
+
+            show_legacy_menu()
+
+        # =========================
+        # EXIT
+        # =========================
+
+        elif choice == "12":
 
             print(
                 "\nSaving before exit..."

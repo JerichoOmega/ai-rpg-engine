@@ -1,51 +1,53 @@
-# PRD.md — Elyndor Project Requirements
-
-> **Last updated:** February 2026 — Foundation Phase 1 CLOSED
-> **Status:** Transition from World Foundation → Content Production
+# PRD — Legacy Questline Architecture (Elyndor RPG)
 
 ## Original Problem Statement
+Implement three approved Legacy Questlines (The Debt Comes Due, What the
+Forest Carries, Eternal Forge) into the existing terminal Python RPG **as
+reusable systems** that establish the foundation for all future questlines.
+Preserve design pillars (Living World, companions never mandatory, natural
+speech checks, tactical combat that serves story). Do not redesign, simplify,
+or invent canon. Mark gaps `CANON_PENDING`.
 
-Offline-first, AI-driven RPG transitioning to a Godot prototype. Core pillars: Living World, Offline First, AI enhances but doesn't replace content, Difficulty naturally evolves, Every companion is a playable Origin Character.
+## User Choices (confirmed)
+- Full playable integration wired into `game_loop` + a runnable demo harness.
+- Both automated harness AND permanent developer debugging tools.
+- Canon: use "Captain Thomas Rourke" (package authority) over prompt's "Hawthorne".
+- Clean, standard, well-documented Python for new modules; preserve legacy style elsewhere.
+- Documentation-first: full framework docs, PROJECT_STATE/CHANGELOG/handoff updates.
 
-## Foundation Phase 1 — COMPLETE (Feb 2026)
+## Architecture
+Terminal Python RPG. `world_state.py` = single source of truth;
+`event_bus.py` = cross-module side effects; modular managers.
+New: `legacy/` package layered strictly on top of those two, with all quest
+content authored as JSON data executed by a generic step-runner.
 
-**15 canonical decisions approved.** All Foundation-Locked systems documented at authoring depth sufficient to support all downstream content production.
+## Core Requirements (static)
+Reusable frameworks: Quest, Companion Affinity + Banter, Dialogue Trees,
+Speech Checks (5 skills), Split Party, Timed Objectives, Multi-Stage
+Encounters, Environmental Puzzles, Living World State, Reputation,
+Civilization Relationships, Quest Consequences. Companions optional; speech
+checks never hard-fail the main quest; combat serves story with one signature
+encounter per quest; lasting Living-World consequences.
 
-**See:** `FOUNDATION_PHASE_1_HANDOFF.md` for complete status, dependency map, and remaining roadmap.
+## What's Been Implemented (2026-06-15)
+- 13 reusable framework modules (`legacy/framework/`).
+- 3 data-driven quests (`legacy/data/*.json` + `legacy/quests/*.py`) — verbatim from approved packages.
+- Signature encounters: Debt multi-stage "Corruption Breaks the Truce"; Forest 8-round ritual defence (ends on ritual success); Forge corrupted constructs + engineering puzzles.
+- `world_state["legacy"]` namespace + save migration; `game_loop` menu option 11.
+- Permanent dev tools (`legacy/dev_tools.py`) and automated harness (`legacy/harness.py`, 6/6 pass).
+- Full docs: `docs/systems/legacy_quest_framework.md`, `legacy/README.md`, handoff.
 
-## Foundation-Locked Systems (Do Not Redesign)
+## Canon Assumptions Pending Approval
+- Supporting NPC names not in packages: `Skarn`/`Halden` (grieving veterans), `Master Builder Durga`. JSON-only; renameable without code changes.
 
-1. Living World Design Pillar
-2. Choice vs. Nature pillar
-3. Preserving Wonder Directive
-4. Divine Chorus (D-04c — 8 Voices + 7 Heralds)
-5. Corruption as Imbalance
-6. Primordial Magic (D-04)
-7. Goblin Civilization (D-04b + A1–A8)
-8. Vampire Civilization (V-1 through V-6)
-9. Legacy Character Reserve (P-01)
-10. World Bible 1.0
-11. Canon Writing Standards
-12. Four Ages Framework (D-01)
-13. Eleanor's Harmonic Soul (D-02, D-04)
-14. Companion Roster of Seven (D-03)
-15. Forgotten Eighth Terminology (D-05)
+## Prioritized Backlog
+- P0: Canon approval/rename of placeholder NPC names.
+- P1: Additional engine reactions to `living_world_changed` (merchants, patrols, NPC schedules).
+- P1: Author the next Legacy Questline using the established JSON + 2-line registration pattern.
+- P2: Optional full turn-based combat integration for signature encounters (`encounters.launch_interactive`).
+- P2: Persist companion banter cooldowns; expand speech-check aptitude data.
 
-## Next Phase — Content Production (Phase 2 onward)
-
-**See:** `CONTENT_PRODUCTION_ROADMAP.md` for phased plan.
-
-**Recommended immediate next task:** Talos Hero Bible completion (unblocks VS-1 Godot prototype).
-
-## Reference Documents (Foundation Complete)
-
-- `FOUNDATION_PHASE_1_HANDOFF.md` — official close of Foundation Phase 1
-- `CONTENT_PRODUCTION_ROADMAP.md` — Phases 2–7 plan
-- `WORLD_BIBLE_1.0.md` — 20-minute entry-point
-- `FINAL_CANON_DECISIONS.md` — all 15 rulings
-- `DIVINE_CHORUS.md` · `GOBLIN_CULTURE.md` · `docs/world/vampire_houses.md` — foundation civilizations
-- `COMMON_PRAYERS_AND_BLESSINGS.md` · `COMMON_PROVERBS.md` · `RELIGIOUS_SYMBOLS_AND_ICONOGRAPHY.md` — everyday world
-- `LEGACY_CHARACTER_RESERVE.md` — Policy P-01
-- `PHASE_1_CONSISTENCY_AUDIT.md` — repository audit
-- `V5_V6_RECONCILIATION_REPORT.md` — data sync scheduled for Phase 2
-- `VAMPIRE_CANON_AUDIT.md` — closed audit reference
+## How to Run / Test
+- Play: `python main.py` → menu → 11. Legacy Questlines.
+- Regression: `python legacy/harness.py` (report: `legacy/harness_report.json`).
+- Dev tools: `from legacy import dev_tools`.

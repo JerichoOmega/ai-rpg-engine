@@ -1,0 +1,230 @@
+{
+  "id": "eternal_forge",
+  "name": "Eternal Forge",
+  "civilization": "dwarves",
+  "featured_companion": "talos",
+  "theme": "Legacy through craftsmanship: we build what should outlive us.",
+  "signature_encounter": "The Corrupted Constructs of the Foundation Chamber",
+  "start_stage": "arrival",
+  "stages": [
+    {
+      "id": "arrival",
+      "title": "The Silent Caravan",
+      "description": "A caravan of dwarven refugees arrives, silent and grieving. The great trade that once flowed from the Ancient Foundry has stopped.",
+      "objectives": [
+        {"id": "meet_refugees", "description": "Learn why the dwarves have fled the Foundry."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "The refugees do not speak of battle. They speak of a cold that came from below, and a Forge that would not light. Talos stands very still, reading the Maker's Marks on their tools."},
+        {"type": "banter", "context": "forge.arrival"},
+        {
+          "type": "dialogue",
+          "tree": {
+            "id": "forge.elder",
+            "start": "root",
+            "nodes": [
+              {"id": "root", "speaker": "Master Builder Durga", "text": "The Eternal Forge has gone cold, stranger. In a thousand years it never once died. We did not lose the Foundry to an enemy. We... left it.",
+               "choices": [
+                 {"key": "why", "label": "Why would you abandon it?", "goto": "explain"},
+                 {"key": "oath", "label": "[Cultural] 'Nothing lasts by accident.' What did the Builder's Oath demand of you?", "goto": "explain",
+                  "check": {"id": "forge.elder.cultural", "skill": "cultural", "difficulty": "medium", "companion_insight": {"companion": "talos", "tier": "warming"}},
+                  "on_success_goto": "respect", "on_failure_goto": "explain"}
+               ]},
+              {"id": "respect", "speaker": "Master Builder Durga", "text": "You know our words. Then you know we do not seal a thing lightly. We sealed the deepest chamber, and the Forge died with it. Restore the Forge -- but do not open what we closed.",
+               "choices": [{"key": "ok", "label": "I will restore only what is needed.", "goto": "end", "effects": [{"type": "flag", "name": "forge_oath_understood"}, {"type": "standing", "civ": "dwarves", "amount": 10}]}]},
+              {"id": "explain", "speaker": "Master Builder Durga", "text": "Something stirred in the depths. We evacuated and sealed the lower chamber to contain it. The Forge above needs relighting -- carefully, and no deeper.",
+               "choices": [{"key": "ok", "label": "I will help you relight it.", "goto": "end"}]},
+              {"id": "end", "outcome": "briefed"}
+            ]
+          },
+          "on_outcome": {"briefed": [{"type": "complete_objective", "objective": "meet_refugees"}, {"type": "affinity", "companion": "talos", "amount": 3}]}
+        }
+      ],
+      "next": "cold_forge"
+    },
+    {
+      "id": "cold_forge",
+      "title": "The Forge Gone Cold",
+      "description": "You enter the Ancient Foundry -- not a dungeon, but a sleeping city. Founders' Gallery, Workers' Hall, the Builder's Bench, all dark and still.",
+      "objectives": [
+        {"id": "read_city", "description": "Read the story the silent city tells."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "This is no ruin. Tools rest exactly where hands left them. Bread has petrified on tables. The Foundation Stones, each carved with a Maker's Mark, stand unbroken. A civilization did not fall here -- it walked out in order."},
+        {"type": "banter", "context": "forge.city"},
+        {
+          "type": "speech_check",
+          "prompt": "You study how the Foundry was left.",
+          "id": "forge.evacuation.insight", "skill": "insight", "difficulty": "medium",
+          "preparation_flags": ["forge_oath_understood"],
+          "companion_insight": {"companion": "talos", "tier": "warming"},
+          "on_success": [{"type": "flag", "name": "forge_evacuation_understood"}, {"type": "complete_objective", "objective": "read_city"}, {"type": "narrate", "text": "You are certain now: this was an evacuation, not a conquest. Doors barred from the outside, valuables shelved not looted, the deep stair sealed with a Master's Mark."}],
+          "on_failure": [{"type": "complete_objective", "objective": "read_city"}, {"type": "narrate", "text": "Talos traces a sealed doorway. 'They left on purpose,' he says quietly. 'And they closed the deep stair behind them.'", "speaker": null}]
+        }
+      ],
+      "next": "great_lift"
+    },
+    {
+      "id": "great_lift",
+      "title": "The Great Lift",
+      "description": "To reach the Forge's heart you must restore the Great Lift -- a masterpiece of counterweights and pressure that has sat idle for years.",
+      "objectives": [
+        {"id": "restore_lift", "description": "Restore and descend the Great Lift."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "The Great Lift is a cathedral of chain and stone. Restore it, and it will carry you down as it carried a thousand workers before you."},
+        {
+          "type": "puzzle",
+          "puzzle": {
+            "id": "forge.great_lift",
+            "title": "Restoring the Great Lift",
+            "description": "An engineering restoration, not a fight. Return the Lift to working order in the right order.",
+            "on_solve_flags": ["great_lift_restored"],
+            "steps": [
+              {"id": "pressure", "prompt": "The pressure gauges read empty. What first?", "actions": [
+                {"key": "prime", "label": "Prime the pressure reservoirs from the aqueduct valves."},
+                {"key": "force", "label": "Force the drive gear by hand."},
+                {"key": "cut", "label": "Cut the safety chains to lighten the car."}],
+               "correct": "prime", "hint": "A dwarven machine is fed before it is forced.",
+               "reveal_companion": "talos", "reveal_tier": "warming", "reveal_line": "Feed the reservoirs first. Force a cold system and you crack it."},
+              {"id": "counterweight", "prompt": "The counterweights hang unevenly.", "actions": [
+                {"key": "balance", "label": "Rebalance the counterweights to match the car's load."},
+                {"key": "drop", "label": "Drop all counterweights for maximum speed."}],
+               "correct": "balance", "hint": "Balance is the whole art of the Lift."},
+              {"id": "brake", "prompt": "Before descending, the brake governor.", "actions": [
+                {"key": "test", "label": "Test and set the brake governor."},
+                {"key": "skip", "label": "Skip the test; trust old work."}],
+               "correct": "test", "hint": "Nothing lasts by accident -- especially a brake."}
+            ]
+          }
+        },
+        {"type": "narrate", "text": "With a groan of waking chain, the Great Lift descends. Talos exhales as though the Foundry itself had drawn breath."},
+        {"type": "complete_objective", "objective": "restore_lift"}
+      ],
+      "next": "hall_of_faults"
+    },
+    {
+      "id": "hall_of_faults",
+      "title": "The Hall of Faults",
+      "description": "A hall where every failure in the Foundry's history is recorded honestly in stone, so no mistake is repeated. Its systems must be restored to feed the Forge.",
+      "objectives": [
+        {"id": "restore_infrastructure", "description": "Restore the Foundry's infrastructure through the Hall of Faults."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "The Hall of Faults lists a thousand honest failures, each with the name of the builder who owned it. Dwarves do not hide their mistakes; they carve them where the next generation must read them."},
+        {"type": "banter", "context": "forge.faults"},
+        {
+          "type": "puzzle",
+          "puzzle": {
+            "id": "forge.infrastructure",
+            "title": "Reviving the Foundry's Veins",
+            "description": "Restore heat, water and air to the Forge -- in the sequence the Hall of Faults warns is the only safe one.",
+            "on_solve_flags": ["forge_infrastructure_restored"],
+            "steps": [
+              {"id": "water", "prompt": "In what order do you revive the systems?", "actions": [
+                {"key": "water_first", "label": "Water first (cooling), then air, then heat."},
+                {"key": "heat_first", "label": "Heat first -- get it warm fast."}],
+               "correct": "water_first", "hint": "The Hall records the day a Forge was lit before its cooling ran. Read it.",
+               "reveal_companion": "talos", "reveal_tier": "trusted", "reveal_line": "Cooling before flame. It is the first fault ever carved here."},
+              {"id": "marks", "prompt": "The intake valves are unlabeled to outsiders.", "actions": [
+                {"key": "read_marks", "label": "Match each valve by its Maker's Mark to the Hall's ledger."},
+                {"key": "guess", "label": "Open them in a row and see what happens."}],
+               "correct": "read_marks", "hint": "Every valve carries the mark of the builder who set it."}
+            ]
+          }
+        },
+        {"type": "complete_objective", "objective": "restore_infrastructure"}
+      ],
+      "next": "foundation_chamber"
+    },
+    {
+      "id": "foundation_chamber",
+      "title": "The Foundation Chamber",
+      "description": "The heart of the Foundry, above the sealed deep stair. Corrupted constructs -- once the Foundry's own maintenance automata -- guard the way to the Forge.",
+      "objectives": [
+        {"id": "clear_constructs", "description": "Restore the Foundation Chamber's constructs or put them down."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "The Foundation Stones ring the chamber. Between you and the Forge stand the maintenance constructs -- proud dwarven work, now twisted by the cold from below. Talos grips his hammer, grieving for them already."},
+        {"type": "banter", "context": "forge.constructs"},
+        {
+          "type": "encounter",
+          "spec": {
+            "id": "forge.signature", "name": "The Corrupted Constructs of the Foundation Chamber", "type": "multi_stage", "signature": true,
+            "waves": [
+              {"name": "Hauler-constructs block the gantry", "threat": 58, "banter_context": "forge.constructs", "setback_flag": "forge_gantry_damaged"},
+              {"name": "A Foundry-warden construct awakens", "threat": 74, "setback_flag": "forge_warden_construct_rampage"},
+              {"name": "The corrupted core-tender makes its stand", "threat": 88, "setback_flag": "forge_core_damage"}
+            ],
+            "on_complete_flags": ["forge_chamber_secured"]
+          }
+        },
+        {
+          "type": "choice",
+          "prompt": "One battered hauler-construct still bears an intact Maker's Mark. What do you do?",
+          "key": "forge.construct.mark",
+          "options": [
+            {"key": "restore", "label": "Let Talos restore it by its Maker's Mark.", "available_if": {"companion": "talos", "affinity_tier": "warming"}, "locked_note": "needs Talos, warmed to you", "effects": [{"type": "flag", "name": "forge_construct_restored"}, {"type": "affinity", "companion": "talos", "amount": 6}, {"type": "standing", "civ": "dwarves", "amount": 8}]},
+            {"key": "retire", "label": "Retire it with respect.", "effects": [{"type": "standing", "civ": "dwarves", "amount": 3}]}
+          ]
+        },
+        {"type": "complete_objective", "objective": "clear_constructs"}
+      ],
+      "next": "relight"
+    },
+    {
+      "id": "relight",
+      "title": "The First Hammer Strike",
+      "description": "Relight the Eternal Forge with a single flame -- and go no deeper.",
+      "objectives": [
+        {"id": "relight_forge", "description": "Relight the Eternal Forge."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "The Forge waits, cold and vast. Talos offers you the first flame, but hesitates at the honor of the first strike."},
+        {
+          "type": "choice",
+          "prompt": "Who makes the first hammer strike on the relit Forge?",
+          "key": "forge.first_strike",
+          "options": [
+            {"key": "talos", "label": "Give the first strike to Talos.", "available_if": {"companion": "talos"}, "locked_note": "Talos is not with you", "effects": [{"type": "flag", "name": "forge_talos_first_strike"}, {"type": "affinity", "companion": "talos", "amount": 8}, {"type": "standing", "civ": "dwarves", "amount": 10}]},
+            {"key": "self", "label": "Make the first strike yourself, in the dwarves' honor.", "effects": [{"type": "standing", "civ": "dwarves", "amount": 6}]},
+            {"key": "durga", "label": "Reserve the honor for Master Builder Durga.", "effects": [{"type": "standing", "civ": "dwarves", "amount": 8}]}
+          ]
+        },
+        {"type": "narrate", "text": "A single flame catches. The Eternal Forge roars back to life, and its light fills a city that thought it had gone dark forever. The first hammer strike rings like a bell heard for miles."},
+        {"type": "complete_objective", "objective": "relight_forge"}
+      ],
+      "next": "resolution"
+    },
+    {
+      "id": "resolution",
+      "title": "What We Leave Sealed",
+      "description": "The Forge burns again. The deep stair remains closed, exactly as the dwarves intended.",
+      "objectives": [
+        {"id": "honor_seal", "description": "Honor the seal on the deepest chamber."}
+      ],
+      "steps": [
+        {"type": "narrate", "text": "You stand before the sealed deep stair. Whatever the dwarves closed away is not today's task. You restore only what was needed and leave the seal untouched."},
+        {"type": "banter", "context": "forge.resolution"},
+        {"type": "narrate", "text": "Talos sets his own Maker's Mark beside the ancient seal -- a promise that what should outlive them, will."},
+        {"type": "complete_objective", "objective": "honor_seal"}
+      ],
+      "next": null
+    }
+  ],
+  "consequences": [
+    {"type": "flag", "name": "eternal_forge_active", "value": true},
+    {"type": "flag", "name": "dwarven_trade_resumed", "value": true},
+    {"type": "flag", "name": "better_crafted_goods_available", "value": true},
+    {"type": "flag", "name": "roads_and_bridges_improving", "value": true},
+    {"type": "flag", "name": "foundry_renewed_hope", "value": true},
+    {"type": "counter", "name": "restored_infrastructure", "amount": 3},
+    {"type": "standing", "civ": "dwarves", "amount": 20},
+
+    {"type": "flag", "name": "foundry_construct_ally", "value": true, "requires": "forge_construct_restored"},
+
+    {"type": "flag", "name": "deep_stair_remains_sealed", "value": true},
+    {"type": "future_hook", "name": "sealed_lower_chamber", "canon_pending": true},
+    {"type": "future_hook", "name": "ancient_guardian_of_the_deep", "canon_pending": true}
+  ]
+}
