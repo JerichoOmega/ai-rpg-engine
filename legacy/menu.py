@@ -23,14 +23,15 @@ def show_legacy_menu() -> None:
 
     quests = manager.all()
 
-    print("\n=== LEGACY QUESTLINES ===")
+    print("\n=== QUESTS ===")
     for index, quest in enumerate(quests, start=1):
         status = manager.status(quest.id)
-        print(f"{index}. {quest.name}  [{status['state']}]"
-              f"  -- {quest.civilization}")
+        label = quest.civilization or quest.category
+        print(f"{index}. {quest.name}  [{quest.category}]  [{status['state']}]"
+              f"  -- {label}")
     print(f"{len(quests) + 1}. Back")
 
-    raw = input("\nChoose a questline: ").strip()
+    raw = input("\nChoose a quest: ").strip()
     try:
         choice = int(raw)
     except ValueError:

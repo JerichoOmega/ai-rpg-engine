@@ -89,5 +89,23 @@
       {"system": "guard_patrol", "target": "ancient_foundry", "level": 3},
       {"system": "ambient_dialogue", "target": "ancient_foundry", "line": "A restored construct keeps watch on the gantry, faithful as the day it was forged."}
     ]
+  },
+
+  "mill_repaired": {
+    "when": true,
+    "reactions": [
+      {"system": "merchant_inventory", "target": "millers_village", "add": ["fresh_flour", "millers_bread"]},
+      {"system": "settlement_prosperity", "target": "millers_village", "delta": 1},
+      {"system": "ambient_dialogue", "target": "millers_village", "line": "The mill's turning again -- smell that? Fresh bread for the harvest fair."},
+      {"system": "tavern_rumor", "line": "The old river mill runs again; the miller can't stop thanking some passing stranger."}
+    ]
+  },
+  "mill_generous_remembered": {
+    "when": true,
+    "reactions": [
+      {"system": "regional_reputation", "region": "riverlands", "civ": "humans", "delta": 5},
+      {"system": "ambient_dialogue", "target": "millers_village", "line": "That traveler wouldn't take a coin. Folk here won't forget it."},
+      {"system": "tavern_rumor", "line": "Word is a grateful miller is telling every caravan to treat a certain traveler kindly."}
+    ]
   }
 }

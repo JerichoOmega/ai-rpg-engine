@@ -260,6 +260,50 @@ SCENARIOS = [
         },
         expect_missing=["foundry_construct_ally"],
     ),
+
+    # ---- The Jammed Mill (side quest -- framework validation) -------------
+    Scenario(
+        "mill_generous_no_combat", "the_jammed_mill", ["kael"],
+        script={
+            "choices": {
+                "mill.miller.root": "reassure",
+                "mill.approach": "coax",
+                "mill.payment": "waive",
+            },
+            "speech": {
+                "mill.reassure": True,
+                "mill.cause.insight": True,
+                "mill.coax": True,
+            },
+            "seed": 7,
+        },
+        expect_flags={
+            "mill_wheel_freed": True,
+            "mill_repaired": True,
+            "mill_generous": True,
+            "mill_generous_remembered": True,
+        },
+        expect_missing=["mill_vermin_driven_off", "mill_paid"],
+    ),
+    Scenario(
+        "mill_paid_with_combat", "the_jammed_mill", [],
+        script={
+            "choices": {
+                "mill.miller.root": "agree",
+                "mill.approach": "fight",
+                "mill.payment": "take",
+            },
+            "speech": {"mill.cause.insight": False},
+            "seed": 8,
+        },
+        expect_flags={
+            "mill_vermin_driven_off": True,
+            "mill_wheel_freed": True,
+            "mill_repaired": True,
+            "mill_paid": True,
+        },
+        expect_missing=["mill_generous"],
+    ),
 ]
 
 

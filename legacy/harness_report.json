@@ -36,6 +36,18 @@
       "quest": "eternal_forge",
       "passed": true,
       "failures": []
+    },
+    {
+      "scenario": "mill_generous_no_combat",
+      "quest": "the_jammed_mill",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "scenario": "mill_paid_with_combat",
+      "quest": "the_jammed_mill",
+      "passed": true,
+      "failures": []
     }
   ]
 }

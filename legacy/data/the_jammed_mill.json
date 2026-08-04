@@ -1,0 +1,139 @@
+{
+  "id": "the_jammed_mill",
+  "name": "The Jammed Mill",
+  "category": "side",
+  "civilization": "humans",
+  "featured_companion": "",
+  "theme": "A small kindness that the whole village notices.",
+  "start_stage": "arrival",
+  "stages": [
+    {
+      "id": "arrival",
+      "title": "The Silent Waterwheel",
+      "description": "A riverside village mill stands quiet, its great wheel jammed and dripping. The miller waves you over, anxious.",
+      "objectives": [
+        {"id": "meet_miller", "description": "Speak with the village miller."}
+      ],
+      "steps": [
+        {"type": "banter", "context": "mill.arrival"},
+        {
+          "type": "dialogue",
+          "tree": {
+            "id": "mill.miller",
+            "start": "root",
+            "nodes": [
+              {"id": "root", "speaker": "Miller Bramwell", "text": "Wheel's jammed solid and something's nesting in the sluice. No wheel, no flour -- and the harvest fair is in three days. Could you take a look?",
+               "choices": [
+                 {"key": "agree", "label": "I'll take a look at your wheel.", "goto": "grateful"},
+                 {"key": "reassure", "label": "[Persuasion] Breathe -- you'll have flour by the fair.", "goto": "grateful",
+                  "check": {"id": "mill.reassure", "skill": "persuasion", "difficulty": "easy"},
+                  "on_success_goto": "calmed", "on_failure_goto": "grateful"}
+               ]},
+              {"id": "calmed", "speaker": "Miller Bramwell", "text": "Bless you -- first easy breath I've drawn all week. The sluice gate is round the side.",
+               "choices": [{"key": "ok", "label": "Let's have a look.", "goto": "end", "effects": [{"type": "flag", "name": "mill_miller_calmed"}]}]},
+              {"id": "grateful", "speaker": "Miller Bramwell", "text": "Thank you. The sluice gate is round the side -- mind your footing, it's slick.",
+               "choices": [{"key": "ok", "label": "Let's have a look.", "goto": "end"}]},
+              {"id": "end", "outcome": "briefed"}
+            ]
+          },
+          "on_outcome": {"briefed": [{"type": "complete_objective", "objective": "meet_miller"}]}
+        }
+      ],
+      "next": "the_sluice"
+    },
+    {
+      "id": "the_sluice",
+      "title": "The Sluice Gate",
+      "description": "Cold water sheets over a tangle of driftwood -- and a nest of corrupted river-vermin bristles in the gap.",
+      "objectives": [
+        {"id": "clear_wheel", "description": "Clear whatever is jamming the wheel."},
+        {"id": "no_bloodshed", "description": "Resolve it without a fight.", "optional": true}
+      ],
+      "steps": [
+        {
+          "type": "speech_check",
+          "prompt": "You study the jam and the nesting vermin.",
+          "id": "mill.cause.insight", "skill": "insight", "difficulty": "easy",
+          "on_success": [{"type": "flag", "name": "mill_cause_known"}, {"type": "narrate", "text": "You spot it: one keystone log holds the whole tangle. Pull it right and the rest floats free -- no need to provoke the nest."}],
+          "on_failure": [{"type": "narrate", "text": "The tangle is dense and the vermin are agitated; it will take some doing."}]
+        },
+        {
+          "type": "choice",
+          "prompt": "How do you clear the sluice?",
+          "key": "mill.approach",
+          "options": [
+            {"key": "coax", "label": "Coax the vermin out and pull the keystone log free (no fight).", "effects": [{"type": "goto_stage", "stage": "coax"}]},
+            {"key": "fight", "label": "Drive the corrupted vermin off by force.", "effects": [{"type": "goto_stage", "stage": "fight"}]}
+          ]
+        }
+      ],
+      "next": "resolution"
+    },
+    {
+      "id": "coax",
+      "title": "A Gentle Hand",
+      "description": "You work the tangle loose without a fight.",
+      "objectives": [],
+      "steps": [
+        {
+          "type": "speech_check",
+          "prompt": "You coax the skittish vermin toward the far bank.",
+          "id": "mill.coax", "skill": "cultural", "difficulty": "medium",
+          "preparation_flags": ["mill_cause_known"],
+          "on_success": [{"type": "narrate", "text": "The vermin scatter downstream. You lever the keystone log free and the wheel shudders back to life."}],
+          "on_failure": [{"type": "narrate", "text": "It takes patience and a soaked sleeve, but the nest empties and the log comes free. The wheel turns."}]
+        },
+        {"type": "effects", "effects": [{"type": "complete_objective", "objective": "clear_wheel"}, {"type": "complete_objective", "objective": "no_bloodshed"}, {"type": "flag", "name": "mill_wheel_freed"}]}
+      ],
+      "next": "resolution"
+    },
+    {
+      "id": "fight",
+      "title": "Driving Them Off",
+      "description": "The corrupted vermin will not be reasoned with.",
+      "objectives": [],
+      "steps": [
+        {"type": "banter", "context": "mill.fight"},
+        {
+          "type": "encounter",
+          "spec": {
+            "id": "mill.vermin", "name": "Corrupted River-Vermin", "type": "multi_stage", "signature": false,
+            "waves": [
+              {"name": "The nest boils out of the sluice", "threat": 45, "banter_context": "mill.fight", "setback_flag": "mill_scratched_up"}
+            ],
+            "on_complete_flags": ["mill_vermin_driven_off"]
+          }
+        },
+        {"type": "narrate", "text": "With the nest scattered, you lever the keystone log free and the wheel grinds back into motion."},
+        {"type": "effects", "effects": [{"type": "complete_objective", "objective": "clear_wheel"}, {"type": "flag", "name": "mill_wheel_freed"}]}
+      ],
+      "next": "resolution"
+    },
+    {
+      "id": "resolution",
+      "title": "A Fair Wage",
+      "description": "The wheel turns, the grindstone hums, and Miller Bramwell presses a small pouch of silver into your hand.",
+      "objectives": [
+        {"id": "settle_up", "description": "Settle up with the miller."}
+      ],
+      "steps": [
+        {
+          "type": "choice",
+          "prompt": "The miller offers you silver he can barely spare. Do you take it?",
+          "key": "mill.payment",
+          "options": [
+            {"key": "take", "label": "Accept the fair wage.", "effects": [{"type": "reputation", "faction": "kingdom", "amount": 3}, {"type": "flag", "name": "mill_paid"}]},
+            {"key": "waive", "label": "Wave it off -- put it toward the harvest fair.", "effects": [{"type": "reputation", "faction": "kingdom", "amount": 5}, {"type": "standing", "civ": "humans", "amount": 8}, {"type": "flag", "name": "mill_generous"}]}
+          ]
+        },
+        {"type": "complete_objective", "objective": "settle_up"}
+      ],
+      "next": null
+    }
+  ],
+  "consequences": [
+    {"type": "flag", "name": "mill_repaired", "value": true},
+    {"type": "counter", "name": "villages_helped", "amount": 1},
+    {"type": "flag", "name": "mill_generous_remembered", "value": true, "requires": "mill_generous"}
+  ]
+}

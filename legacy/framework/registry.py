@@ -49,10 +49,11 @@ def register_all() -> List[Quest]:
     living_world_reactions.install()
 
     from legacy.quests import (debt_comes_due, what_the_forest_carries,
-                               eternal_forge)
+                               eternal_forge, the_jammed_mill)
 
     quests = []
-    for module in (debt_comes_due, what_the_forest_carries, eternal_forge):
+    for module in (debt_comes_due, what_the_forest_carries, eternal_forge,
+                   the_jammed_mill):
         quest = module.build()
         manager.register(quest)
         module.register_banter()

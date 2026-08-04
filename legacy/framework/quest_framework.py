@@ -70,6 +70,10 @@ class Quest:
     featured_companion: str = ""
     theme: str = ""
     signature_encounter: str = ""
+    # Quest category: "legacy" | "main" | "companion" | "side" | "faction" ...
+    # Purely descriptive metadata; the runner treats every category
+    # identically. Defaults to "legacy" for backward compatibility.
+    category: str = "legacy"
     start_stage: str = ""
     stages: Dict[str, QuestStage] = field(default_factory=dict)
     consequences: List[Dict[str, Any]] = field(default_factory=list)
@@ -424,6 +428,7 @@ def load_quest(data: Dict[str, Any]) -> Quest:
         featured_companion=data.get("featured_companion", ""),
         theme=data.get("theme", ""),
         signature_encounter=data.get("signature_encounter", ""),
+        category=data.get("category", "legacy"),
         start_stage=start_stage,
         stages=stages,
         consequences=list(data.get("consequences", [])),

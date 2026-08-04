@@ -54,6 +54,7 @@ QUEST_FILES = {
     "debt_comes_due": "debt_comes_due.json",
     "what_the_forest_carries": "what_the_forest_carries.json",
     "eternal_forge": "eternal_forge.json",
+    "the_jammed_mill": "the_jammed_mill.json",
 }
 
 
