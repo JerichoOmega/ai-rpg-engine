@@ -14,9 +14,12 @@ from __future__ import annotations
 
 from typing import Callable, Optional
 
-from .actions import move as act_move, attack as act_attack, prepare as act_prepare
+from .actions import (move as act_move, attack as act_attack,
+                      prepare as act_prepare, use_skill as act_skill,
+                      use_item as act_item, ITEMS)
 from .inspection import (compute_hit_chance, inspect_tile, movement_preview,
                          chebyshev)
+from . import abilities_engine
 from .render import render_battlefield
 
 
@@ -39,11 +42,14 @@ def interactive_controller(read: Callable[[str], str] = input):
     """Return a per-unit controller closure bound to an input function."""
 
     def controller(engine, unit) -> None:
+        abilities_engine.start_of_turn(engine, unit)
         while unit.alive and (unit.ap > 0 or unit.move > 0):
             print("\n" + render_battlefield(engine))
             print("\nYour turn: " + _unit_line(unit))
-            print("1. Move   2. Attack   3. Prepare (end turn)   "
-                  "4. Inspect tile   5. End turn")
+            if unit.statuses:
+                print("Status: " + ", ".join(unit.statuses))
+            print("1. Move   2. Attack   3. Skill   4. Use item   "
+                  "5. Prepare (end turn)   6. Inspect tile   7. End turn")
             choice = read("Action: ").strip()
 
             if choice == "1":
@@ -51,14 +57,64 @@ def interactive_controller(read: Callable[[str], str] = input):
             elif choice == "2":
                 _do_attack(engine, unit, read)
             elif choice == "3":
+                _do_skill(engine, unit, read)
+            elif choice == "4":
+                _do_item(engine, unit, read)
+            elif choice == "5":
                 act_prepare(engine, unit)
                 return
-            elif choice == "4":
+            elif choice == "6":
                 _do_inspect(engine, unit, read)
             else:
                 return
 
     return controller
+
+
+def _do_skill(engine, unit, read) -> None:
+    equipped = getattr(unit, "equipped", [])
+    usable = [(aid, abilities_engine.get(aid)) for aid in equipped
+              if abilities_engine.get(aid)]
+    if not usable:
+        print("No abilities equipped.")
+        return
+    print("\nAbilities:")
+    for i, (aid, ab) in enumerate(usable, start=1):
+        print(f"{i}. {ab.get('name', aid)} "
+              f"(AP {ab.get('ap', ab.get('ap_cost', 1))}, "
+              f"range {ab.get('range', 1)}, {ab.get('type', 'attack')})")
+    pick = read("Ability #: ").strip()
+    if not pick.isdigit() or not (1 <= int(pick) <= len(usable)):
+        print("Cancelled.")
+        return
+    aid, ab = usable[int(pick) - 1]
+    target, tile = None, None
+    if ab.get("type") in ("attack", "movement_attack", "control", "debuff",
+                          "terrain"):
+        enemies = [e for e in engine.enemies_of(unit) if e.alive]
+        for j, e in enumerate(enemies, start=1):
+            print(f"{j}. {e.name} ({e.hp}/{e.max_hp}) @ {e.pos}")
+        tp = read("Target #: ").strip()
+        if tp.isdigit() and 1 <= int(tp) <= len(enemies):
+            target = enemies[int(tp) - 1]
+            tile = target.pos
+    if act_skill(engine, unit, aid, target=target, tile=tile):
+        print(engine.log[-1])
+    else:
+        print("Ability could not be used (range/LOS/AP).")
+
+
+def _do_item(engine, unit, read) -> None:
+    items = getattr(unit, "items", [])
+    if not items:
+        print("No usable items.")
+        return
+    for i, iid in enumerate(items, start=1):
+        print(f"{i}. {ITEMS.get(iid, {}).get('name', iid)}")
+    pick = read("Item #: ").strip()
+    if pick.isdigit() and 1 <= int(pick) <= len(items):
+        if act_item(engine, unit, items[int(pick) - 1]):
+            print(engine.log[-1])
 
 
 def _do_move(engine, unit, read) -> None:

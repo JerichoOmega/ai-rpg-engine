@@ -45,8 +45,15 @@ def compute_hit_chance(engine, attacker, defender) -> Dict:
     in_range = chebyshev(attacker.pos, defender.pos) <= attacker.attack_range
     arc = relative_arc(defender, attacker.pos)
     facing_bonus = FACING_HIT[arc]
+    status_bonus = 0.0
+    if "emboldened" in getattr(attacker, "statuses", []):
+        status_bonus += 0.10
+    if any(s in getattr(attacker, "statuses", []) for s in ("hexed", "cursed")):
+        status_bonus -= 0.15
+    if "marked" in getattr(defender, "statuses", []):
+        status_bonus += 0.15
     chance = 0.0 if not (los and in_range) else max(
-        0.05, min(0.95, base - cover_penalty + elevation + facing_bonus))
+        0.05, min(0.95, base - cover_penalty + elevation + facing_bonus + status_bonus))
     return {
         "chance": chance, "base": base, "cover_penalty": cover_penalty,
         "elevation": elevation, "line_of_sight": los, "in_range": in_range,

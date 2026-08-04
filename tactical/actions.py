@@ -16,6 +16,35 @@ from typing import Tuple
 from .inspection import compute_hit_chance, chebyshev
 from .facing import dir_from_to, FACING_DMG
 from .tiles import OBJECTS
+from . import abilities_engine
+
+# The canonical "Skill" action flows through the shared combat pipeline.
+use_skill = abilities_engine.use_skill
+
+ITEMS = {
+    "healing_potion": {"name": "Healing Potion", "ap": 1, "heal": 20},
+    "antidote": {"name": "Antidote", "ap": 1, "cleanse": ["poison", "hexed", "cursed"]},
+}
+
+
+def use_item(engine, unit, item_id: str, target=None) -> bool:
+    item = ITEMS.get(item_id)
+    if item is None or unit.ap < item.get("ap", 1):
+        return False
+    who = target or unit
+    if item.get("heal"):
+        who.hp = min(who.max_hp, who.hp + item["heal"])
+        engine.log.append(f"{unit.name} uses {item['name']}: {who.name} heals "
+                          f"{item['heal']}.")
+    for s in item.get("cleanse", []):
+        while s in who.statuses:
+            who.statuses.remove(s)
+    if item.get("cleanse"):
+        engine.log.append(f"{unit.name} uses {item['name']} on {who.name}.")
+    unit.ap -= item.get("ap", 1)
+    if item_id in getattr(unit, "items", []):
+        unit.items.remove(item_id)
+    return True
 
 XY = Tuple[int, int]
 
@@ -112,6 +141,9 @@ def _resolve_attack(engine, attacker, defender, reaction: bool = False) -> None:
         damage = int(damage * FACING_DMG.get(info.get("facing", "front"), 1.0))
         # Armor reduces damage (minimum 1 gets through).
         damage = max(1, damage - getattr(defender, "armor", 0))
+        if "shielded" in defender.statuses:
+            damage = max(1, damage // 2)
+            defender.statuses.remove("shielded")
         defender.hp -= damage
         flank = "" if info.get("facing") == "front" else \
             f" {info['facing'].upper()} FLANK"

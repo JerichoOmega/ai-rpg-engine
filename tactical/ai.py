@@ -19,6 +19,7 @@ Profile flags honoured here:
 from __future__ import annotations
 
 from . import actions
+from . import abilities_engine as abilities
 from .facing import relative_arc
 from .inspection import compute_hit_chance, chebyshev, threat_map
 from .tiles import COVER_VALUE
@@ -141,6 +142,9 @@ def _resolve_target(engine, unit):
 def take_turn(engine, unit) -> None:
     if not unit.alive:
         return
+    abilities.start_of_turn(engine, unit)
+    if not unit.alive:
+        return
     target = _resolve_target(engine, unit)
     if target is None:
         return
@@ -168,6 +172,13 @@ def take_turn(engine, unit) -> None:
         engine, unit, xy, target, threats))
     if best_xy != unit.pos:
         actions.move(engine, unit, best_xy)
+
+    # Profile-driven: evaluate abilities before a basic attack.
+    if unit.alive and unit.ap > 0:
+        choice = abilities.choose_ability(engine, unit, target)
+        if choice is not None:
+            aid, kwargs = choice
+            abilities.use_skill(engine, unit, aid, **kwargs)
 
     in_range = compute_hit_chance(engine, unit, target)["chance"] > 0
     if unit.alive:

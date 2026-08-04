@@ -1,9 +1,9 @@
 {
   "summary": {
     "total": 47,
-    "passed": 46,
+    "passed": 47,
     "failed": 0,
-    "warned": 1,
+    "warned": 0,
     "foundation_stable": true
   },
   "results": [
@@ -185,7 +185,7 @@
       "category": "Engine",
       "name": "auto_battle reaches a decisive result (no infinite loop)",
       "status": "PASS",
-      "detail": "outcome=player rounds=4 secs=0.010"
+      "detail": "outcome=enemy rounds=9 secs=0.022"
     },
     {
       "category": "Engine",
@@ -208,8 +208,8 @@
     {
       "category": "Data Integrity",
       "name": "Skill/Item actions + ability wiring",
-      "status": "WARN",
-      "detail": "incomplete: skill_action=False item_action=False ai_uses_abilities=False (enemy/class abilities are currently decorative; wiring is Phase 2/Phase 6 work)"
+      "status": "PASS",
+      "detail": "Skill/Item actions + ability casting implemented"
     },
     {
       "category": "Facing (Phase A)",
