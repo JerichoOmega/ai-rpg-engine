@@ -1,0 +1,16 @@
+{
+  "pine_tree": {"cover": "half", "blocks_los": true, "flammable": true, "passable": true, "destructible": true, "push_damage": 3,
+    "interactions": ["burn_object", "chop_object", "push_into_object"]},
+  "boulder": {"cover": "full", "blocks_los": true, "flammable": false, "passable": false, "destructible": false, "push_damage": 5,
+    "interactions": ["push_into_object"]},
+  "rock": {"cover": "half", "blocks_los": false, "flammable": false, "passable": true, "destructible": false, "push_damage": 2,
+    "interactions": ["push_into_object"]},
+  "crate": {"cover": "half", "blocks_los": true, "flammable": true, "passable": false, "destructible": true, "push_damage": 2,
+    "interactions": ["burn_object", "smash_object"]},
+  "oil_barrel": {"cover": "half", "blocks_los": true, "flammable": true, "explosive": true, "passable": false, "destructible": true, "push_damage": 2,
+    "interactions": ["burn_object", "smash_object"]},
+  "wall_segment": {"cover": "full", "blocks_los": true, "flammable": false, "passable": false, "destructible": true,
+    "interactions": ["collapse_wall"]},
+  "bridge_plank": {"cover": "none", "blocks_los": false, "flammable": true, "passable": true, "destructible": true,
+    "interactions": ["destroy_bridge", "burn_object"]}
+}

@@ -1,0 +1,10 @@
+{
+  "aggressive_melee": {"target_selection": "nearest", "preferred_range": "melee", "avoids": ["fire"], "will_retreat": false, "uses_cover": true, "destroys_terrain": false, "uses_consumables": false},
+  "defensive": {"target_selection": "nearest", "preferred_range": "melee", "avoids": ["fire"], "will_retreat": false, "uses_cover": true, "hold_position": true},
+  "support": {"target_selection": "lowest_health", "preferred_range": "ranged", "avoids": ["fire", "melee"], "will_retreat": true, "uses_cover": true, "buffs_allies": true},
+  "skirmisher": {"target_selection": "lowest_health", "preferred_range": "ranged", "avoids": ["fire"], "will_retreat": true, "uses_cover": true, "kites": true},
+  "pack_hunter": {"target_selection": "lowest_health", "preferred_range": "melee", "avoids": ["fire"], "will_retreat": false, "uses_cover": false, "pack_tactics": true, "flanking": true},
+  "summoner": {"target_selection": "lowest_health", "preferred_range": "ranged", "avoids": ["fire", "melee"], "will_retreat": true, "uses_cover": true, "summons": true, "high_value_target": true},
+  "brute": {"target_selection": "nearest", "preferred_range": "melee", "avoids": ["fire"], "will_retreat": false, "uses_cover": false, "charges": true},
+  "cowardly": {"target_selection": "lowest_health", "preferred_range": "melee", "avoids": ["fire"], "will_retreat": true, "uses_cover": true, "flees_when_low": true}
+}

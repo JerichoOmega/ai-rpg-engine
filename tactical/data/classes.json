@@ -1,0 +1,44 @@
+{
+  "guardian": {
+    "tactical_identity": "Protects allies, controls space, creates defensive zones.",
+    "max_hp": 34, "max_ap": 6, "attack_damage": 8, "attack_range": 1,
+    "ability_slots": 3,
+    "prepare": {"reaction": "counterattack", "description": "Counterattack any adjacent enemy that attacks this turn."},
+    "abilities": ["shield_wall", "taunt", "bulwark"]
+  },
+  "ranger": {
+    "tactical_identity": "Controls line of sight, uses elevation, punishes movement.",
+    "max_hp": 24, "max_ap": 7, "attack_damage": 7, "attack_range": 6,
+    "ability_slots": 3,
+    "prepare": {"reaction": "reaction_shot", "description": "Fire at the first enemy that moves within line of sight."},
+    "abilities": ["aimed_shot", "hunters_mark", "pinning_shot"]
+  },
+  "mage": {
+    "tactical_identity": "Manipulates terrain, creates hazards, changes battlefield state.",
+    "max_hp": 20, "max_ap": 6, "attack_damage": 6, "attack_range": 5,
+    "ability_slots": 3,
+    "prepare": {"reaction": "spell_focus", "description": "Focus: the next spell this character casts is empowered."},
+    "abilities": ["firebolt", "grease", "frost_nova"]
+  },
+  "rogue": {
+    "tactical_identity": "Flanking, ambush, mobility, battlefield disruption.",
+    "max_hp": 22, "max_ap": 8, "attack_damage": 7, "attack_range": 1,
+    "ability_slots": 3,
+    "prepare": {"reaction": "evasion", "description": "Evade the next incoming attack this round."},
+    "abilities": ["backstab", "shadowstep", "smoke_bomb"]
+  },
+  "brute": {
+    "tactical_identity": "Enemy melee bruiser.",
+    "max_hp": 26, "max_ap": 6, "attack_damage": 7, "attack_range": 1,
+    "ability_slots": 2,
+    "prepare": {"reaction": "counterattack", "description": "Counterattack adjacent attackers."},
+    "abilities": []
+  },
+  "archer": {
+    "tactical_identity": "Enemy ranged skirmisher.",
+    "max_hp": 18, "max_ap": 7, "attack_damage": 6, "attack_range": 6,
+    "ability_slots": 2,
+    "prepare": {"reaction": "reaction_shot", "description": "Fire at movers in line of sight."},
+    "abilities": []
+  }
+}

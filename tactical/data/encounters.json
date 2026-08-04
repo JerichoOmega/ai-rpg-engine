@@ -1,0 +1,9 @@
+{
+  "forest_wolf_pack": {"biome": "forest", "members": [{"enemy": "wolf", "count": 3}, {"enemy": "alpha_wolf", "count": 1}]},
+  "roadside_ambush": {"biome": "road", "members": [{"enemy": "bandit", "count": 2}, {"enemy": "bandit_archer", "count": 1}]},
+  "ruins_undead": {"biome": "ruins", "members": [{"enemy": "skeleton_warrior", "count": 4}, {"enemy": "necromancer", "count": 1}]},
+  "goblin_camp": {"biome": "camp", "members": [{"enemy": "goblin_warrior", "count": 3}, {"enemy": "mossroot_scout", "count": 2}, {"enemy": "goblin_shaman", "count": 1}]},
+  "cave_swarm": {"biome": "cave", "members": [{"enemy": "giant_rat", "count": 5}]},
+  "orc_warband": {"biome": "hills", "members": [{"enemy": "orc_warrior", "count": 2}, {"enemy": "orc_berserker", "count": 1}]},
+  "corrupted_incursion": {"biome": "blighted", "members": [{"enemy": "corrupted_wolf", "count": 2}, {"enemy": "corrupted_goblin", "count": 2}, {"enemy": "corrupted_troll", "count": 1}]}
+}

@@ -1,0 +1,14 @@
+{
+  "shield_wall": {"class": "guardian", "ap": 2, "type": "buff", "range": 0, "description": "Raise cover to Full for self and adjacent allies until next turn.", "cover_grant": "full"},
+  "taunt": {"class": "guardian", "ap": 2, "type": "control", "range": 3, "description": "Force an enemy to target this Guardian."},
+  "bulwark": {"class": "guardian", "ap": 3, "type": "zone", "range": 1, "description": "Create a defensive zone; allies inside gain Half cover."},
+  "aimed_shot": {"class": "ranger", "ap": 3, "type": "attack", "range": 7, "damage": 12, "description": "High-damage shot; bonus from elevation."},
+  "hunters_mark": {"class": "ranger", "ap": 1, "type": "debuff", "range": 7, "description": "Mark a target; it takes extra damage and is easier to hit."},
+  "pinning_shot": {"class": "ranger", "ap": 2, "type": "control", "range": 6, "damage": 4, "description": "Pin a target, reducing its movement next turn."},
+  "firebolt": {"class": "mage", "ap": 3, "type": "attack", "range": 5, "damage": 8, "ignites": true, "description": "Fire damage that ignites flammable tiles/objects."},
+  "grease": {"class": "mage", "ap": 2, "type": "terrain", "range": 5, "creates": "oil_slick", "description": "Create a flammable oil slick on target tiles."},
+  "frost_nova": {"class": "mage", "ap": 3, "type": "terrain", "range": 4, "creates": "ice", "damage": 4, "description": "Freeze tiles to ice; slows and can freeze water."},
+  "backstab": {"class": "rogue", "ap": 3, "type": "attack", "range": 1, "damage": 14, "flank_bonus": true, "description": "Massive damage when flanking."},
+  "shadowstep": {"class": "rogue", "ap": 2, "type": "movement", "range": 4, "description": "Teleport to a tile in line of sight; ignores terrain cost."},
+  "smoke_bomb": {"class": "rogue", "ap": 2, "type": "terrain", "range": 3, "creates_status": "smoke", "description": "Create smoke that blocks line of sight."}
+}
