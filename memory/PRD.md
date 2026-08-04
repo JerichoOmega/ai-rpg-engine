@@ -100,3 +100,29 @@ Goal: expose existing systems through gameplay (no new systems, no combat change
   (fixed: `complete_travel` syncs both stores). **PHASE 1 = COMPLETE.**
 - **Next gate = R-01** (combat canon) before Phase 2 combat unification / any
   Phase 3 content.
+
+## R-01 Combat Canon — APPROVED (2026-06)
+Option (a) with a canon hierarchy (`docs/design_decisions/R-01-combat-canon.md`):
+- **Gameplay Canon (Design Authority):** `GAME_BIBLE.md` + `COMBAT_SYSTEM.md`
+  (how combat should feel; full feature set).
+- **Technical Canon (Implementation Authority):** `tactical/` +
+  `Combat_Gameplay_Architecture.md` (the single combat runtime).
+- Rules: one engine / entry point / enemy framework / ability framework / AI
+  framework. Evolve `tactical/` ADDITIVELY (never rewrite to match old docs,
+  never remove verified features). Enemies→tactical blueprints; legacy
+  `enemy_manager`/`combat.py` are Compatibility Layers (do not extend).
+- Doc banners added to the three combat docs marking Gameplay/Technical canon.
+
+### Migration order: A (facing/flanking/opportunity) → B (downed/death) →
+C (shield stance/support actions) → D (initiative/party/polish).
+
+## Phase A — Facing / Flanking / Opportunity — COMPLETE (2026-06)
+- Additive: `tactical/facing.py` (new); `entities.Combatant.facing`;
+  `inspection.compute_hit_chance` exposes facing/flanking; `movement_preview`
+  exposes `provokes_opportunity_from`; `actions.move` sets facing + opportunity
+  attacks; `actions._resolve_attack` applies rear ×1.25 flank damage + FLANK tag.
+- Verified: harness `python -m tactical.verify` 40 checks 38 PASS/0 FAIL/2 WARN;
+  independent `backend/tests/test_phase_a_facing_flanking.py` 29/29;
+  `test_reports/iteration_5.json`; report `docs/verification/phaseA_facing_flanking.md`.
+- No regressions; legacy `combat.py`/`enemy_manager.py` untouched.
+- **Next: Phase B (Downed/Death/Recovery).**

@@ -94,6 +94,7 @@ def attack(engine, attacker, defender) -> bool:
 
 def _resolve_attack(engine, attacker, defender, reaction: bool = False) -> None:
     info = compute_hit_chance(engine, attacker, defender)
+    # Attacker turns to face its target (even if the swing is then evaded).
     attacker.facing = dir_from_to(attacker.pos, defender.pos)
     if defender.prepare_stance == "evasion":
         defender.prepare_stance = None
