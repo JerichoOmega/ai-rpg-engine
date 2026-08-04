@@ -84,6 +84,7 @@ Create a new handoff document at the end of any session that includes:
 | 2026-07-30 | [`2026-07-30-documentation-session.md`](2026-07-30-documentation-session.md) | Full documentation suite created; integration pass completed |
 | 2026-07-31 | [`2026-07-31-lore-design-session.md`](2026-07-31-lore-design-session.md) | Engine stabilization (dual player-state eliminated); lore Bible expansion (Four Ages framework, First Empire, Great Library Director, Soleth Archive, Capital dynasty, hero arcs) |
 | 2026-06-15 | [`2026-06-15-legacy-questline-integration.md`](2026-06-15-legacy-questline-integration.md) | Legacy Questline Architecture: 13 reusable frameworks + 3 approved quests (data-driven), dev tools, automated harness (6/6), wired into game loop |
+| 2026-06-16 | [`2026-06-16-legacy-framework-hardening.md`](2026-06-16-legacy-framework-hardening.md) | Production hardening: architecture audit, expanded dev toolkit, authoring doc, data-driven Living-World reaction layer, quest-flow validator (0 errors), perf/future-proofing |
 
 *Add new rows here (oldest → newest) each time a handoff is created.*
 

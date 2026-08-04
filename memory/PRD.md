@@ -37,6 +37,14 @@ encounter per quest; lasting Living-World consequences.
 - Permanent dev tools (`legacy/dev_tools.py`) and automated harness (`legacy/harness.py`, 6/6 pass).
 - Full docs: `docs/systems/legacy_quest_framework.md`, `legacy/README.md`, handoff.
 
+## Production Hardening (2026-06-16)
+- Architecture audit (`docs/systems/legacy_framework_audit.md`): all frameworks reusable/quest-type agnostic.
+- Expanded developer toolkit (stage jump, objective/quest fail, reputation, force world update, spawn NPC, skip cinematic, export state, simulate speech).
+- Authoring toolkit (`docs/systems/legacy_quest_authoring.md`): full JSON schema + examples.
+- Reusable Living-World reaction layer (`legacy/framework/living_world_reactions.py` + JSON): flags → merchants/pricing/NPC schedules/patrols/refugees/ambient dialogue/rumors/prosperity/road safety/regional reputation.
+- Quest-flow validator (`legacy/validator.py`): 0 errors / 0 warnings across all three quests.
+- Verified: harness 6/6, validator clean, independent testing-agent pass (100%).
+
 ## Canon Assumptions Pending Approval
 - Supporting NPC names not in packages: `Skarn`/`Halden` (grieving veterans), `Master Builder Durga`. JSON-only; renameable without code changes.
 

@@ -7,6 +7,21 @@
 
 ---
 
+## [v0.5.1] — June 2026 — Legacy Framework Production Hardening [CONFIRMED]
+
+Hardened the Legacy Quest Framework for long-term production (no new quests,
+no canon changes, save-compatible, existing APIs preserved).
+
+- **Audit:** every framework confirmed reusable and quest-type agnostic (`docs/systems/legacy_framework_audit.md`).
+- **Dev tools:** expanded `legacy/dev_tools.py` (stage jump, complete/fail objective, fail quest, set stage, reputation/standing/relationship, force world update, spawn NPC, skip cinematic, export quest state, simulate speech, seat party).
+- **Authoring toolkit:** `docs/systems/legacy_quest_authoring.md` — full JSON schema + worked examples for every step type.
+- **Living World reactions:** `legacy/framework/living_world_reactions.py` + `legacy/data/living_world_reactions.json` — idempotent, data-driven reaction layer (merchant inventory/pricing, NPC schedules, patrols, refugee movement, ambient dialogue, tavern rumors, prosperity, road safety, regional reputation) with a query API.
+- **Validator:** `legacy/validator.py` — static+dynamic quest-flow validation (0 errors/0 warnings across all three quests).
+- **Additive APIs:** `QuestManager.complete_objective/fail_objective/fail_quest/set_stage/export_state`.
+- **Verification:** harness 6/6, validator clean, independent testing-agent pass (100%, 0 issues).
+
+---
+
 ## [v0.5] — June 2026 — Legacy Questline Architecture [CONFIRMED]
 
 ### Reusable, data-driven quest architecture (`legacy/` package)
