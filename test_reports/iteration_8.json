@@ -1,0 +1,36 @@
+{
+  "summary": "Combat Phase C — CANONICAL Ability Pipeline independently verified. Ran `python -m tactical.verify` (62 PASS / 0 FAIL / 0 WARN, FOUNDATION STABLE: YES) and `python -m pytest backend/tests/ -q` (148 passed). Then authored a fresh 27-test independent behavioral suite (`test_ability_pipeline_t1_iter8.py`) exercising the pipeline from angles distinct from the developer's tests: preview contract fields, in-range/OOR/LOS/AP failure reasons, preview-vs-use_skill parity + AP economy (no consumption on illegal cast), data-driven cooldown ticking, zero-cooldown abilities not tracked, poison DoT + antidote cleanse, shielded halving+drop, war_cry embolden then expire, heal_zone zero tactical_value when nobody wounded, healing_totem heals wounded ally, raise_skeleton summon cap = 3, grease->oil_slick, pinning_shot roots + start-of-turn zeros movement + clears root, taunt sets target_id, AI role selection (Support heals wounded ally, Commander casts war_cry, cooldown skip returns None, in-range attacker picks damage ability), JSON export/import round-trip preserves statuses & cooldowns, every blueprint ability id resolves in the merged registry, and a summoner+support vs 2-hero party ability-rich battle resolves within a 40-round cap with no exceptions. Also asserts `actions.use_skill is abilities_engine.use_skill` (single canonical entry point, no duplicate combat path). Grand total 175 backend pytest tests passing (148 pre-existing + 27 new independent).",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_ability_pipeline_t1_iter8.py",
+    "/app/test_reports/pytest/iter8_results.xml",
+    "/app/tactical/verification_report.json"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "abilities_engine.py is a clean single source of truth: use_skill invokes ability_preview and returns False if not usable, guaranteeing preview-verdict parity and no AP consumption on illegal casts.",
+    "Cooldowns are fully data-driven (ab['cooldown'] field, unit.cooldowns dict, ticked in start_of_turn) — no per-ability hardcoding.",
+    "actions.use_skill is a direct alias to abilities_engine.use_skill (actions.py L22) — no duplicate combat path.",
+    "AI choose_ability reads the same ability_preview the player UI reads, satisfying the transparency pillar.",
+    "Minor: _tactical_value returns 0.0 for a summon whose effect is not heal_zone once summons_made>=3, but also 0.0 when unit.ai_memory has no 'summons_made' key ONLY if that expression short-circuits — verified fine (get(...,0) default).",
+    "Nit: ability_preview declares `expected_damage` only for attack/movement_attack/terrain-with-damage; control abilities like pinning_shot carry `damage: 4` but are typed 'control' so expected_damage is None. Consumers reading the preview should not rely on expected_damage for control effects — acceptable design choice, worth documenting."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_ability_pipeline_t1_iter8.py (new file only)"
+  ],
+  "success_rate": {"backend": "100% (verify 62/62, pytest 175/175)", "frontend": "N/A (skipped per request)"},
+  "test_credentials": "N/A — terminal Python engine, no auth.",
+  "seed_data_creation": "None. Tests use in-memory Combatant/Battlefield/CombatEngine fixtures with a deterministic FixedRNG.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Ability pipeline is stable. When adding new abilities/enemies: (1) register ability id in abilities.json or ability_library.json with cooldown/ap/range/type/status/effect fields, (2) reference by id in enemies.json blueprint 'abilities' list — TestRegistryIntegrity will catch orphans, (3) if you add a new ability 'type', add a handler in _HANDLERS and a base value in _BASE_VALUE. FixedRNG pattern in the new test file is reusable for deterministic combat unit tests.",
+  "rca of the issue": "No issues found."
+}

@@ -1,7 +1,7 @@
 {
   "summary": {
-    "total": 47,
-    "passed": 47,
+    "total": 62,
+    "passed": 62,
     "failed": 0,
     "warned": 0,
     "foundation_stable": true
@@ -185,7 +185,7 @@
       "category": "Engine",
       "name": "auto_battle reaches a decisive result (no infinite loop)",
       "status": "PASS",
-      "detail": "outcome=enemy rounds=9 secs=0.022"
+      "detail": "outcome=player rounds=7 secs=0.016"
     },
     {
       "category": "Engine",
@@ -206,10 +206,100 @@
       "detail": "all referenced AI profiles are defined"
     },
     {
-      "category": "Data Integrity",
-      "name": "Skill/Item actions + ability wiring",
+      "category": "Abilities",
+      "name": "Skill/Item actions + AI ability casting wired",
       "status": "PASS",
-      "detail": "Skill/Item actions + ability casting implemented"
+      "detail": "skill=True item=True ai_casts=True preview=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Preview exposes cost/range/LOS/effect + failure reason",
+      "status": "PASS",
+      "detail": "in_range_usable=True dmg=8 far_reason=target out of range"
+    },
+    {
+      "category": "Abilities",
+      "name": "AP is consumed on a successful skill",
+      "status": "PASS",
+      "detail": "used=True ap_spent=2 (expected 2)"
+    },
+    {
+      "category": "Abilities",
+      "name": "Cooldown blocks reuse, then ticks back to available",
+      "status": "PASS",
+      "detail": "set_cd=3 blocked=True reason='on cooldown (3 turn(s) left)' recovered=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Range + LOS gate skill execution",
+      "status": "PASS",
+      "detail": "los_blocked=True range_blocked=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Attack ability applies damage + status; logs the use",
+      "status": "PASS",
+      "detail": "used=True dealt=7 poisoned=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Poison DoT ticks each turn; antidote cleanses it",
+      "status": "PASS",
+      "detail": "ticked=True cleansed=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Buff emboldens allies then expires next turn",
+      "status": "PASS",
+      "detail": "used=True buffed=True expired_next_turn=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Shielded halves the next hit, then drops",
+      "status": "PASS",
+      "detail": "shielded=True dealt=5 (expected 5) dropped=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "Heal ability restores a wounded ally",
+      "status": "PASS",
+      "detail": "used=True hp=13 (expected 5+8=13)"
+    },
+    {
+      "category": "Abilities",
+      "name": "Summon adds an allied minion to the battle",
+      "status": "PASS",
+      "detail": "used=True added=1 team=enemy"
+    },
+    {
+      "category": "Abilities",
+      "name": "Terrain ability alters the battlefield",
+      "status": "PASS",
+      "detail": "used=True terrain=oil_slick"
+    },
+    {
+      "category": "Abilities",
+      "name": "AI uses a role ability before a basic attack",
+      "status": "PASS",
+      "detail": "ally_healed=True logged=True"
+    },
+    {
+      "category": "Abilities",
+      "name": "AI respects cooldowns (skips a spent ability)",
+      "status": "PASS",
+      "detail": "choice_while_on_cd=None"
+    },
+    {
+      "category": "Abilities",
+      "name": "Ability state survives a JSON save/load round-trip",
+      "status": "PASS",
+      "detail": "cd=3 statuses=['shielded']"
+    },
+    {
+      "category": "Abilities",
+      "name": "Every ability referenced by a blueprint resolves",
+      "status": "PASS",
+      "detail": "unresolved ability ids: none"
     },
     {
       "category": "Facing (Phase A)",

@@ -588,17 +588,271 @@ def _c_ai_profiles():
             + ", ".join(f"{p} -> {v}" for p, v in missing.items()))
 
 
-@check("Data Integrity", "Skill/Item actions + ability wiring")
-def _c_skill_gap():
-    has_skill = hasattr(actions, "skill") or hasattr(actions, "use_skill")
-    has_item = hasattr(actions, "item") or hasattr(actions, "use_item")
+# -- Ability Pipeline (Combat Phase C) -------------------------------------
+def _ab_field(bf, combatants, rng=None):
+    return _engine(bf, combatants, rng=rng)
+
+
+@check("Abilities", "Skill/Item actions + AI ability casting wired")
+def _c_skill_wired():
+    from . import abilities_engine
+    has_skill = hasattr(actions, "use_skill")
+    has_item = hasattr(actions, "use_item")
     ai_casts = "abilities" in ai.take_turn.__code__.co_names
-    if has_skill and has_item and ai_casts:
-        return ("PASS", "Skill/Item actions + ability casting implemented")
-    return ("WARN",
-            f"incomplete: skill_action={has_skill} item_action={has_item} "
-            f"ai_uses_abilities={ai_casts} (enemy/class abilities are currently "
-            "decorative; wiring is Phase 2/Phase 6 work)")
+    has_preview = hasattr(abilities_engine, "ability_preview")
+    ok = has_skill and has_item and ai_casts and has_preview
+    return ("PASS" if ok else "FAIL",
+            f"skill={has_skill} item={has_item} ai_casts={ai_casts} "
+            f"preview={has_preview}")
+
+
+@check("Abilities", "Preview exposes cost/range/LOS/effect + failure reason")
+def _c_ability_preview():
+    from . import abilities_engine as ae
+    bf = _open_field(12, 3)
+    caster = Combatant("Mage", "mage", "player", 0, 1)   # firebolt range 5
+    near = Combatant("Near", "brute", "enemy", 4, 1)
+    far = Combatant("Far", "brute", "enemy", 10, 1)
+    eng = _engine(bf, [caster, near, far])
+    caster.ap = 3
+    ok_prev = ae.ability_preview(eng, caster, "firebolt", target=near)
+    bad_prev = ae.ability_preview(eng, caster, "firebolt", target=far)
+    keys = {"name", "ap_cost", "cooldown_remaining", "range", "line_of_sight",
+            "in_range", "legal_target", "expected_damage", "usable",
+            "failure_reason", "tactical_value", "friendly_fire_risk"}
+    ok = (keys.issubset(ok_prev) and ok_prev["usable"] is True
+          and ok_prev["expected_damage"] == 8
+          and bad_prev["usable"] is False
+          and bad_prev["failure_reason"] == "target out of range")
+    return ("PASS" if ok else "FAIL",
+            f"in_range_usable={ok_prev['usable']} dmg={ok_prev['expected_damage']} "
+            f"far_reason={bad_prev['failure_reason']}")
+
+
+@check("Abilities", "AP is consumed on a successful skill")
+def _c_ability_ap():
+    from . import abilities_engine as ae
+    bf = _open_field(4, 3)
+    guard = Combatant("Bran", "guardian", "player", 0, 1)   # shield_wall ap 2
+    eng = _engine(bf, [guard])
+    ap0 = guard.ap
+    used = ae.use_skill(eng, guard, "shield_wall")
+    spent = ap0 - guard.ap
+    return ("PASS" if used and spent == 2 else "FAIL",
+            f"used={used} ap_spent={spent} (expected 2)")
+
+
+@check("Abilities", "Cooldown blocks reuse, then ticks back to available")
+def _c_ability_cooldown():
+    from . import abilities_engine as ae
+    bf = _open_field(4, 3)
+    guard = Combatant("Bran", "guardian", "player", 0, 1)   # shield_wall CD 3
+    eng = _engine(bf, [guard])
+    first = ae.use_skill(eng, guard, "shield_wall")
+    on_cd = guard.cooldowns.get("shield_wall")
+    guard.reset_turn()                       # AP back, still on cooldown
+    blocked = not ae.use_skill(eng, guard, "shield_wall")
+    reason = ae.ability_preview(eng, guard, "shield_wall")["failure_reason"]
+    ae.start_of_turn(eng, guard); guard.reset_turn()   # CD 3->2
+    ae.start_of_turn(eng, guard); guard.reset_turn()   # CD 2->1
+    ae.start_of_turn(eng, guard); guard.reset_turn()   # CD 1->0 cleared
+    available = ae.ability_preview(eng, guard, "shield_wall")["usable"]
+    ok = first and on_cd == 3 and blocked and "cooldown" in reason and available
+    return ("PASS" if ok else "FAIL",
+            f"set_cd={on_cd} blocked={blocked} reason='{reason}' recovered={available}")
+
+
+@check("Abilities", "Range + LOS gate skill execution")
+def _c_ability_range_los():
+    from . import abilities_engine as ae
+    bf = _open_field(10, 3)
+    bf.set_terrain(3, 1, "forest"); bf.tile(3, 1).add_object("pine_tree")
+    caster = Combatant("Mage", "mage", "player", 1, 1)      # firebolt range 5
+    behind = Combatant("Hidden", "brute", "enemy", 5, 1)    # blocked by tree
+    out = Combatant("Distant", "brute", "enemy", 9, 1)
+    eng = _engine(bf, [caster, behind, out])
+    los_blocked = not ae.use_skill(eng, caster, "firebolt", target=behind)
+    caster.ap = caster.max_ap
+    range_blocked = not ae.use_skill(eng, caster, "firebolt", target=out)
+    return ("PASS" if los_blocked and range_blocked else "FAIL",
+            f"los_blocked={los_blocked} range_blocked={range_blocked}")
+
+
+@check("Abilities", "Attack ability applies damage + status; logs the use")
+def _c_ability_damage_status():
+    from . import abilities_engine as ae
+    bf = _open_field(4, 3)
+    spider = Combatant("Spider", "brute", "enemy", 0, 1)
+    spider.equipped = ["poison_bite"]
+    hero = Combatant("Hero", "guardian", "player", 1, 1)
+    hero.armor = 0
+    eng = _engine(bf, [spider, hero])
+    hp0 = hero.hp
+    used = ae.use_skill(eng, spider, "poison_bite", target=hero)
+    ok = (used and hero.hp < hp0 and "poison" in hero.statuses
+          and any("Poison Bite" in l for l in eng.log))
+    return ("PASS" if ok else "FAIL",
+            f"used={used} dealt={hp0 - hero.hp} poisoned={'poison' in hero.statuses}")
+
+
+@check("Abilities", "Poison DoT ticks each turn; antidote cleanses it")
+def _c_status_duration():
+    from . import abilities_engine as ae
+    bf = _open_field(4, 3)
+    hero = Combatant("Hero", "guardian", "player", 1, 1)
+    eng = _engine(bf, [hero])
+    hero.statuses.append("poison")
+    hp0 = hero.hp
+    ae.start_of_turn(eng, hero)             # takes DoT, poison persists
+    ticked = hero.hp == hp0 - 3 and "poison" in hero.statuses
+    actions.use_item(eng, hero, "antidote")
+    cleansed = "poison" not in hero.statuses
+    return ("PASS" if ticked and cleansed else "FAIL",
+            f"ticked={ticked} cleansed={cleansed}")
+
+
+@check("Abilities", "Buff emboldens allies then expires next turn")
+def _c_buff_duration():
+    from . import abilities_engine as ae
+    bf = _open_field(6, 3)
+    cmdr = Combatant("Captain", "brute", "enemy", 0, 1)
+    cmdr.equipped = ["war_cry"]
+    ally = Combatant("Grunt", "brute", "enemy", 1, 1)
+    hero = Combatant("Hero", "guardian", "player", 5, 1)
+    eng = _engine(bf, [cmdr, ally, hero])
+    used = ae.use_skill(eng, cmdr, "war_cry")
+    buffed = "emboldened" in ally.statuses
+    ae.start_of_turn(eng, ally)             # buff lasts until ally's own turn
+    expired = "emboldened" not in ally.statuses
+    return ("PASS" if used and buffed and expired else "FAIL",
+            f"used={used} buffed={buffed} expired_next_turn={expired}")
+
+
+@check("Abilities", "Shielded halves the next hit, then drops")
+def _c_shield_absorb():
+    from . import abilities_engine as ae
+    bf = _open_field(6, 3)
+    guard = Combatant("Bran", "guardian", "player", 2, 1)
+    guard.equipped = ["shield_wall"]
+    atk = Combatant("Foe", "brute", "enemy", 3, 1)
+    atk.crit_chance = 0.0
+    atk.damage_min = atk.damage_max = 10
+    guard.armor = 0
+    eng = _engine(bf, [guard, atk], rng=ALWAYS_HIT())
+    ae.use_skill(eng, guard, "shield_wall")
+    shielded = "shielded" in guard.statuses
+    hp0 = guard.hp
+    actions.attack(eng, atk, guard)
+    dealt = hp0 - guard.hp
+    dropped = "shielded" not in guard.statuses
+    return ("PASS" if shielded and dealt == 5 and dropped else "FAIL",
+            f"shielded={shielded} dealt={dealt} (expected 5) dropped={dropped}")
+
+
+@check("Abilities", "Heal ability restores a wounded ally")
+def _c_ability_heal():
+    from . import abilities_engine as ae
+    bf = _open_field(6, 3)
+    healer = Combatant("Shaman", "guardian", "enemy", 0, 1)
+    healer.equipped = ["healing_totem"]
+    wounded = Combatant("Grunt", "brute", "enemy", 1, 1)
+    hero = Combatant("Hero", "guardian", "player", 5, 1)
+    eng = _engine(bf, [healer, wounded, hero])
+    wounded.hp = 5
+    used = ae.use_skill(eng, healer, "healing_totem")
+    return ("PASS" if used and wounded.hp == 13 else "FAIL",
+            f"used={used} hp={wounded.hp} (expected 5+8=13)")
+
+
+@check("Abilities", "Summon adds an allied minion to the battle")
+def _c_ability_summon():
+    from . import abilities_engine as ae
+    bf = _open_field(6, 3)
+    necro = Combatant("Necro", "mage", "enemy", 0, 1)
+    necro.equipped = ["raise_skeleton"]
+    hero = Combatant("Hero", "guardian", "player", 5, 1)
+    eng = _engine(bf, [necro, hero])
+    n0 = len(eng.combatants)
+    used = ae.use_skill(eng, necro, "raise_skeleton")
+    minion = eng.combatants[-1] if len(eng.combatants) > n0 else None
+    ok = used and minion is not None and minion.team == "enemy"
+    return ("PASS" if ok else "FAIL",
+            f"used={used} added={len(eng.combatants) - n0} team={minion.team if minion else None}")
+
+
+@check("Abilities", "Terrain ability alters the battlefield")
+def _c_ability_terrain():
+    from . import abilities_engine as ae
+    bf = _open_field(8, 3)
+    mage = Combatant("Mage", "mage", "player", 0, 1)      # grease range 5
+    foe = Combatant("Foe", "brute", "enemy", 3, 1)
+    eng = _engine(bf, [mage, foe])
+    used = ae.use_skill(eng, mage, "grease", target=foe, tile=(3, 1))
+    became = bf.tile(3, 1).terrain == "oil_slick"
+    return ("PASS" if used and became else "FAIL",
+            f"used={used} terrain={bf.tile(3,1).terrain}")
+
+
+@check("Abilities", "AI uses a role ability before a basic attack")
+def _c_ai_uses_ability():
+    from . import abilities_engine as ae
+    bf = _open_field(6, 3)
+    shaman = Combatant("Shaman", "guardian", "enemy", 0, 1)
+    shaman.equipped = ["healing_totem"]
+    shaman.ai_profile = dict(enemies.AI_PROFILES["support"])
+    wounded = Combatant("Grunt", "brute", "enemy", 1, 1)
+    hero = Combatant("Hero", "guardian", "player", 5, 1)
+    eng = _engine(bf, [shaman, wounded, hero])
+    wounded.hp = 5
+    shaman.reset_turn()
+    ai.take_turn(eng, shaman)
+    healed = wounded.hp > 5 and any("healing" in l.lower() for l in eng.log)
+    return ("PASS" if healed else "FAIL",
+            f"ally_healed={wounded.hp > 5} logged={any('healing' in l.lower() for l in eng.log)}")
+
+
+@check("Abilities", "AI respects cooldowns (skips a spent ability)")
+def _c_ai_respects_cooldown():
+    from . import abilities_engine as ae
+    bf = _open_field(6, 3)
+    cmdr = Combatant("Captain", "brute", "enemy", 0, 1)
+    cmdr.equipped = ["war_cry"]
+    ally = Combatant("Grunt", "brute", "enemy", 1, 1)
+    hero = Combatant("Hero", "guardian", "player", 5, 1)
+    eng = _engine(bf, [cmdr, ally, hero])
+    cmdr.cooldowns["war_cry"] = 2                 # already spent
+    choice = ae.choose_ability(eng, cmdr, hero)
+    return ("PASS" if choice is None else "FAIL",
+            f"choice_while_on_cd={choice}")
+
+
+@check("Abilities", "Ability state survives a JSON save/load round-trip")
+def _c_ability_persist():
+    from . import abilities_engine as ae
+    import json as _json
+    bf = _open_field(4, 3)
+    u = Combatant("Bran", "guardian", "player", 0, 1)
+    eng = _engine(bf, [u])
+    ae.use_skill(eng, u, "shield_wall")           # sets cooldown + shielded
+    blob = _json.dumps(ae.export_state(u))
+    fresh = Combatant("Bran2", "guardian", "player", 0, 1)
+    ae.import_state(fresh, _json.loads(blob))
+    ok = (fresh.cooldowns.get("shield_wall") == 3
+          and "shielded" in fresh.statuses)
+    return ("PASS" if ok else "FAIL",
+            f"cd={fresh.cooldowns.get('shield_wall')} statuses={fresh.statuses}")
+
+
+@check("Abilities", "Every ability referenced by a blueprint resolves")
+def _c_ability_resolve():
+    from . import abilities_engine as ae
+    missing = []
+    for eid in enemies.list_enemies(include_abstract=True):
+        for aid in enemies.BLUEPRINTS[eid].get("abilities", []) or []:
+            if ae.get(aid) is None:
+                missing.append(f"{eid}:{aid}")
+    return ("PASS" if not missing else "FAIL",
+            f"unresolved ability ids: {missing or 'none'}")
 
 
 # -- Phase A: Facing / Flanking / Opportunity ------------------------------

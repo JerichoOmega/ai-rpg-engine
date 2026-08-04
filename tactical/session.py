@@ -78,22 +78,31 @@ def _do_skill(engine, unit, read) -> None:
     if not usable:
         print("No abilities equipped.")
         return
-    print("\nAbilities:")
+    print("\nAbilities (Information Before Commitment):")
+    previews = []
     for i, (aid, ab) in enumerate(usable, start=1):
-        print(f"{i}. {ab.get('name', aid)} "
-              f"(AP {ab.get('ap', ab.get('ap_cost', 1))}, "
-              f"range {ab.get('range', 1)}, {ab.get('type', 'attack')})")
+        prev = abilities_engine.ability_preview(engine, unit, aid)
+        previews.append((aid, ab, prev))
+        cd = (f", CD {prev['cooldown_remaining']}"
+              if prev["cooldown_remaining"] else "")
+        gate = "" if prev["usable"] else f"  [x {prev['failure_reason']}]"
+        effect = _effect_summary(prev)
+        print(f"{i}. {prev['name']} (AP {prev['ap_cost']}, range "
+              f"{prev['range']}, {prev['type']}{cd}){effect}{gate}")
     pick = read("Ability #: ").strip()
-    if not pick.isdigit() or not (1 <= int(pick) <= len(usable)):
+    if not pick.isdigit() or not (1 <= int(pick) <= len(previews)):
         print("Cancelled.")
         return
-    aid, ab = usable[int(pick) - 1]
+    aid, ab, _ = previews[int(pick) - 1]
     target, tile = None, None
     if ab.get("type") in ("attack", "movement_attack", "control", "debuff",
                           "terrain"):
         enemies = [e for e in engine.enemies_of(unit) if e.alive]
         for j, e in enumerate(enemies, start=1):
-            print(f"{j}. {e.name} ({e.hp}/{e.max_hp}) @ {e.pos}")
+            tp = abilities_engine.ability_preview(engine, unit, aid, target=e,
+                                                  tile=e.pos)
+            legal = "" if tp["usable"] else f" [x {tp['failure_reason']}]"
+            print(f"{j}. {e.name} ({e.hp}/{e.max_hp}) @ {e.pos}{legal}")
         tp = read("Target #: ").strip()
         if tp.isdigit() and 1 <= int(tp) <= len(enemies):
             target = enemies[int(tp) - 1]
@@ -101,7 +110,28 @@ def _do_skill(engine, unit, read) -> None:
     if act_skill(engine, unit, aid, target=target, tile=tile):
         print(engine.log[-1])
     else:
-        print("Ability could not be used (range/LOS/AP).")
+        prev = abilities_engine.ability_preview(engine, unit, aid,
+                                                target=target, tile=tile)
+        print(f"Ability could not be used: {prev.get('failure_reason') or 'no effect'}.")
+
+
+def _effect_summary(prev) -> str:
+    parts = []
+    if prev.get("expected_damage"):
+        parts.append(f"~{prev['expected_damage']} dmg")
+    if prev.get("expected_healing"):
+        parts.append(f"~{prev['expected_healing']} heal")
+    if prev.get("aoe"):
+        parts.append(f"AoE:{prev['aoe']}")
+    if prev.get("summons"):
+        parts.append(f"summons {prev['summons']}")
+    for tag in prev.get("buffs", []) + prev.get("debuffs", []) + \
+            prev.get("status_effects", []):
+        parts.append(tag)
+    if prev.get("friendly_fire_risk"):
+        parts.append("friendly-fire risk")
+    return ("  — " + ", ".join(parts)) if parts else ""
+
 
 
 def _do_item(engine, unit, read) -> None:

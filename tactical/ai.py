@@ -168,22 +168,32 @@ def take_turn(engine, unit) -> None:
         _retreat(engine, unit, target, threats, reachable)
         return
 
+    # Profile-driven abilities come BEFORE movement so support/casters/
+    # summoners can act from a good position (a healer shouldn't charge past
+    # the ally it means to heal). Attack abilities that need to close range are
+    # re-evaluated after the move.
+    used_ability = False
+    if unit.alive and unit.ap > 0:
+        choice = abilities.choose_ability(engine, unit, target)
+        if choice is not None:
+            aid, kwargs = choice
+            used_ability = abilities.use_skill(engine, unit, aid, **kwargs)
+
     best_xy = max(reachable, key=lambda xy: _score_tile(
         engine, unit, xy, target, threats))
     if best_xy != unit.pos:
         actions.move(engine, unit, best_xy)
 
-    # Profile-driven: evaluate abilities before a basic attack.
-    if unit.alive and unit.ap > 0:
+    if unit.alive and unit.ap > 0 and not used_ability:
         choice = abilities.choose_ability(engine, unit, target)
         if choice is not None:
             aid, kwargs = choice
-            abilities.use_skill(engine, unit, aid, **kwargs)
+            used_ability = abilities.use_skill(engine, unit, aid, **kwargs)
 
     in_range = compute_hit_chance(engine, unit, target)["chance"] > 0
     if unit.alive:
         if in_range and unit.ap >= actions.ATTACK_AP:
             actions.attack(engine, unit, target)
-        elif unit.ap > 0:
+        elif unit.ap > 0 and not used_ability:
             actions.prepare(engine, unit)
     mem["turns_chasing"] = 0 if in_range else mem.get("turns_chasing", 0) + 1

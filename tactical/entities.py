@@ -46,6 +46,7 @@ class Combatant:
         self.x = x
         self.y = y
         self.statuses: List[str] = []
+        self.cooldowns: Dict[str, int] = {}    # ability_id -> turns remaining
         self.prepare_stance: Optional[str] = None
         self.facing: Optional[str] = None      # set on move/attack (Phase A)
         self.ai_memory: Dict = {}              # short tactical context (Phase 2)

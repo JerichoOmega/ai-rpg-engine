@@ -275,21 +275,22 @@ class TestEnemyRoster:
 
 
 # ---------------------------------------------------------------------------
-# WARN verification
+# Ability pipeline: positive regression guards (Combat Phase C — COMPLETE)
+# These previously asserted the gap existed; abilities are now first-class.
 # ---------------------------------------------------------------------------
-class TestWarnsAreReal:
-    def test_no_skill_or_item_action(self):
-        assert not hasattr(actions, "skill")
-        assert not hasattr(actions, "use_skill")
-        assert not hasattr(actions, "item")
-        assert not hasattr(actions, "use_item")
+class TestAbilityPipelineWired:
+    def test_skill_and_item_actions_exist(self):
+        assert hasattr(actions, "use_skill")
+        assert hasattr(actions, "use_item")
 
-    def test_ai_does_not_cast_abilities(self):
-        from tactical import ai
-        src = open(ai.__file__).read()
-        # Confirm ai doesn't invoke abilities (no reference to use_ability/cast/ABILITIES)
-        assert "use_ability" not in src
-        assert "cast(" not in src
+    def test_ai_casts_abilities(self):
+        from tactical import ai, abilities_engine
+        assert "abilities" in ai.take_turn.__code__.co_names
+        assert hasattr(abilities_engine, "choose_ability")
+
+    def test_single_source_preview_api(self):
+        from tactical import abilities_engine
+        assert hasattr(abilities_engine, "ability_preview")
 
     def test_referenced_ai_profiles_now_defined(self):
         """REGRESSION GUARD (fixed): every AI profile referenced by an enemy

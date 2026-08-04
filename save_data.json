@@ -11,7 +11,7 @@
     },
     "progression": {
         "level": 2,
-        "xp": 60,
+        "xp": 100,
         "xp_to_next_level": 150,
         "skill_points": 1,
         "world_tier": 1
@@ -29,9 +29,9 @@
         "player": {
             "name": "TESTHero",
             "level": 2,
-            "xp": 60,
+            "xp": 100,
             "xp_to_next_level": 150,
-            "gold": 68,
+            "gold": 76,
             "hp": 100,
             "max_hp": 120,
             "resource_name": "Stamina",
@@ -103,7 +103,7 @@
         "roster": {
             "player": {
                 "level": 2,
-                "xp": 60,
+                "xp": 100,
                 "xp_to_next_level": 150,
                 "max_hp": 120,
                 "attack_bonus": 7
