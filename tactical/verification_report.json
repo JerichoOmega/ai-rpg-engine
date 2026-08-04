@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "total": 34,
+    "passed": 32,
+    "failed": 0,
+    "warned": 2,
+    "foundation_stable": true
+  },
+  "results": [
+    {
+      "category": "Tile Metadata",
+      "name": "Terrain + object composition",
+      "status": "PASS",
+      "detail": "forest+pine_tree -> cost=2 cover=half los_block=True flammable=True"
+    },
+    {
+      "category": "Tile Metadata",
+      "name": "Impassable tiles (boulder / occupant)",
+      "status": "PASS",
+      "detail": "boulder_impassable=True occupant_blocks=True"
+    },
+    {
+      "category": "Tile Metadata",
+      "name": "Difficult terrain movement cost",
+      "status": "PASS",
+      "detail": "plains=1 forest=2 water=3"
+    },
+    {
+      "category": "Tile Metadata",
+      "name": "Elevation from terrain + override",
+      "status": "PASS",
+      "detail": "hill=1 cliff=2 override=5"
+    },
+    {
+      "category": "Movement",
+      "name": "Reachability respects movement budget",
+      "status": "PASS",
+      "detail": "count=13 incl(5,3)=True excl(6,3)=True"
+    },
+    {
+      "category": "Movement",
+      "name": "Pathfinding routes around impassable",
+      "status": "PASS",
+      "detail": "path_len=11 uses_gap=True"
+    },
+    {
+      "category": "Movement",
+      "name": "Difficult terrain consumes extra movement",
+      "status": "PASS",
+      "detail": "moved=True final_pos=(2, 0) move_left=0"
+    },
+    {
+      "category": "Line of Sight",
+      "name": "Blocker breaks LOS at equal elevation",
+      "status": "PASS",
+      "detail": "blocked_through_tree=True clear_open_row=True"
+    },
+    {
+      "category": "Line of Sight",
+      "name": "High ground sees over cover",
+      "status": "PASS",
+      "detail": "cliff_sees_over_tree=True"
+    },
+    {
+      "category": "Cover",
+      "name": "Directional cover + hit penalty",
+      "status": "PASS",
+      "detail": "cover=half penalty=0.25"
+    },
+    {
+      "category": "Information",
+      "name": "inspect_tile exposes full tactical data",
+      "status": "PASS",
+      "detail": "has_all_keys=True cover=half"
+    },
+    {
+      "category": "Information",
+      "name": "compute_hit_chance transparency + range gate",
+      "status": "PASS",
+      "detail": "near_chance=0.85 far_in_range=False far_chance=0.0"
+    },
+    {
+      "category": "Information",
+      "name": "movement_preview shows cost/threat/attackers",
+      "status": "PASS",
+      "detail": "reachable=True cost=4 threatened_by=['Foe']"
+    },
+    {
+      "category": "Information",
+      "name": "threat map / threat visualization is live",
+      "status": "PASS",
+      "detail": "tile_threatened=True threats_at_tile=1"
+    },
+    {
+      "category": "Information",
+      "name": "tactical_overlay covers whole grid",
+      "status": "PASS",
+      "detail": "cells=16 keys_ok=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Melee attack applies damage minus armor",
+      "status": "PASS",
+      "detail": "hit=True dealt=7 (expected 10-3=7) ap_spent_ok=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Miss deals no damage",
+      "status": "PASS",
+      "detail": "hp_unchanged=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Ranged attack range gate",
+      "status": "PASS",
+      "detail": "hit_near=True hit_far_blocked=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Prepare: Guardian counterattack",
+      "status": "PASS",
+      "detail": "countered=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Prepare: Rogue evasion negates a hit",
+      "status": "PASS",
+      "detail": "hp_unchanged=True evaded_logged=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Prepare: Ranger reaction shot on movement",
+      "status": "PASS",
+      "detail": "reaction_fired=True"
+    },
+    {
+      "category": "Combat",
+      "name": "Loadout locked during combat, editable outside",
+      "status": "PASS",
+      "detail": "locked_in_combat=True editable_outside=True"
+    },
+    {
+      "category": "AI",
+      "name": "AI closes distance and attacks in range",
+      "status": "PASS",
+      "detail": "start_dist=7 end_dist=1 closed=True"
+    },
+    {
+      "category": "AI",
+      "name": "AI prefers cover / elevation tiles when scoring",
+      "status": "PASS",
+      "detail": "elevation_pref hi=17.0>lo=14.0=True"
+    },
+    {
+      "category": "AI",
+      "name": "AI avoids hazard tiles it is told to avoid",
+      "status": "PASS",
+      "detail": "safe=18.0 > fire=-17.0=True"
+    },
+    {
+      "category": "Environment",
+      "name": "Fire spreads then burns out to scorched + smoke",
+      "status": "PASS",
+      "detail": "spread=True scorched=True smoke=True"
+    },
+    {
+      "category": "Environment",
+      "name": "Hazard tiles damage occupants each round",
+      "status": "PASS",
+      "detail": "fire_damage_taken=4"
+    },
+    {
+      "category": "Environment",
+      "name": "Interact: destroy bridge turns tile to water",
+      "status": "PASS",
+      "detail": "interacted=True water=True flagged=True"
+    },
+    {
+      "category": "Persistence",
+      "name": "Permanent changes persist to world_state and reload",
+      "status": "PASS",
+      "detail": "saved=True restored_on_load=True"
+    },
+    {
+      "category": "Engine",
+      "name": "auto_battle reaches a decisive result (no infinite loop)",
+      "status": "PASS",
+      "detail": "outcome=player rounds=5 secs=0.012"
+    },
+    {
+      "category": "Engine",
+      "name": "Return-to-context preserved after combat",
+      "status": "PASS",
+      "detail": "origin=location loc=ravenford_keep in_combat=False"
+    },
+    {
+      "category": "Data Integrity",
+      "name": "Every enemy blueprint resolves",
+      "status": "PASS",
+      "detail": "74 spawnable blueprints resolve; errors=[]"
+    },
+    {
+      "category": "Data Integrity",
+      "name": "Referenced AI profiles exist in ai_profiles.json",
+      "status": "WARN",
+      "detail": "missing AI profiles (resolve to empty dict; Phase 2 work): caster -> ['cult_adept', 'crystal_guardian'], ambusher -> ['restless_spirit', 'wraith', 'cave_lurker'], defender -> ['treant', 'thornling', 'living_vines', 'corrupted_treant', 'stone_sentinel', 'corrupted_ancient_guardian', 'rock_crawler'], aggressive -> ['swamp_leech']"
+    },
+    {
+      "category": "Data Integrity",
+      "name": "Skill/Item actions + ability wiring",
+      "status": "WARN",
+      "detail": "incomplete: skill_action=False item_action=False ai_uses_abilities=False (enemy/class abilities are currently decorative; wiring is Phase 2/Phase 6 work)"
+    }
+  ]
+}

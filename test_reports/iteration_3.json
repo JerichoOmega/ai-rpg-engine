@@ -1,0 +1,39 @@
+{
+  "summary": "Independent behavioural verification of tactical/ combat foundation against Combat_Gameplay_Architecture.md. Wrote a fresh pytest suite (21 tests) covering LOS, pathfinding, attack math, prepare reactions, environment evolution, persistence, return-to-context, all 74 enemy blueprints, encounter groups, and both WARN findings. Also re-ran the harness `python -m tactical.verify` -> 32 PASS / 0 FAIL / 2 WARN, exit 0. Foundation is verified STABLE.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "tactical.actions", "issue": "No skill/use_skill or item/use_item action functions defined; class/enemy 'abilities' arrays are purely decorative (confirmed WARN #1). Player and AI cannot actually invoke abilities in combat. Phase 2/Phase 6 work per spec."},
+      {"endpoint": "tactical.ai.take_turn", "issue": "AI never casts abilities (no use_ability/cast references in ai.py). Enemies with 'abilities' in enemies.json use only basic Move/Attack/Prepare."},
+      {"endpoint": "tactical/data/ai_profiles.json vs enemies.json", "issue": "AI profiles referenced by enemies but MISSING as keys: 'caster' (cult_adept, crystal_guardian), 'ambusher' (restless_spirit, wraith, cave_lurker), 'defender' (treant, thornling, living_vines, corrupted_treant, stone_sentinel, corrupted_ancient_guardian, rock_crawler), 'aggressive' (swamp_leech). They silently resolve to an empty dict, so those enemies get default AI behaviour. Confirmed WARN #2."}
+    ]
+  },
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_tactical_independent.py",
+    "/app/test_reports/pytest/tactical_independent.xml",
+    "/app/tactical/verification_report.json"
+  ],
+  "action_items": [
+    "Phase 2: add real skill/item action functions in tactical.actions and wire ai.take_turn to consider ability usage; otherwise enemy `abilities` and class `equipped` lists are dead data.",
+    "Phase 2: either add 'caster'/'ambusher'/'defender'/'aggressive' entries to ai_profiles.json or remap the referencing enemies to existing profile keys (aggressive_melee, skirmisher, defensive, etc.).",
+    "Consider logging a warning at enemy-load time when an ai_profile string does not resolve, so future missing-profile references are caught immediately instead of degrading silently."
+  ],
+  "critical_code_review_comments": [
+    "Silent fallback for missing ai_profile keys hides data errors -- prefer strict resolution (raise or log at load).",
+    "actions.attack always consumes AP even on a forced miss but not on a chance==0 pre-check bail-out; behaviour matches spec but should be documented.",
+    "battlefield.step_environment marks 'smoke' with smoke_timer=2 but the same pass decrements it on non-burning tiles, so smoke can decay very quickly (visible within 2 ticks). Behaviour matches spec, but tests must sample immediately after burnout.",
+    "encounters.roster(group_id) is single-group; the naming previously suggested 'full roster' (a minor API-naming nit, no functional bug).",
+    "Combatant.max_move is populated from CLASSES[cls]['max_ap'] which conflates two different resources by name -- consider renaming the JSON field to 'max_move' to prevent future confusion."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_tactical_independent.py"
+  ],
+  "success_rate": {"backend": "100% (21/21 independent tests + 32/32 harness PASS, 2 WARN documented as real)", "frontend": "N/A"},
+  "test_credentials": "N/A - pure Python terminal project",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Independent verification of Phase 1 tactical foundation complete. All behavioural pillars (LOS/elevation, pathing, attack math, prepare reactions Guardian/Rogue/Ranger, fire spread + scorched + smoke, persistence round-trip, return-to-context, 74/74 enemy spawns, encounters) validated by /app/backend/tests/test_tactical_independent.py. Both WARN findings from tactical.verify are real and documented -- they represent Phase 2 work (skill/item action wiring + missing ai_profile keys). Foundation is STABLE and ready for Phase 2.",
+  "rca of the issue": "N/A - no failures. Two initial test-script issues (encounters.roster signature and smoke-timer sampling window) were fixed in the test file; underlying tactical/ code was not modified."
+}
