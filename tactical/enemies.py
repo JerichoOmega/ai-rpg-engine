@@ -62,7 +62,14 @@ def resolve(enemy_id: str) -> Dict:
     # (which reads a dict) stays decoupled from how it was authored.
     profile = resolved.get("ai_profile", "aggressive_melee")
     if isinstance(profile, str):
-        base_profile = AI_PROFILES.get(profile, {})
+        if profile not in AI_PROFILES:
+            import sys
+            print(f"[tactical] WARNING: enemy {enemy_id!r} references undefined "
+                  f"AI profile {profile!r}; falling back to 'aggressive_melee'.",
+                  file=sys.stderr)
+            base_profile = AI_PROFILES["aggressive_melee"]
+        else:
+            base_profile = AI_PROFILES[profile]
         resolved["ai_profile_name"] = profile
         resolved["ai_profile"] = _deep_merge(
             base_profile, resolved.get("ai_overrides", {}))

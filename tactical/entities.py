@@ -48,6 +48,7 @@ class Combatant:
         self.statuses: List[str] = []
         self.prepare_stance: Optional[str] = None
         self.facing: Optional[str] = None      # set on move/attack (Phase A)
+        self.ai_memory: Dict = {}              # short tactical context (Phase 2)
 
         if blueprint is not None:
             self._init_from_blueprint(blueprint)

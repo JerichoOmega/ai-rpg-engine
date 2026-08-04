@@ -1,0 +1,29 @@
+{
+  "summary": "Backend-only testing of the data-driven AI personality library and behavior memory on the tactical engine. Added /app/backend/tests/test_ai_personalities.py with 25 focused tests covering: profile-library completeness, fail-loud fallback (bogus profile -> stderr WARNING + fallback to aggressive_melee), distinct behaviors via _score_tile (defender/hold, kite, flank rear>front, charger delta > non-charger, fearless ignores threat penalty), flee/morale (cowardly retreats, fearless at 1 HP does not flee, commander_nearby halves threshold, morale=low raises threshold), behavior memory keys populated after take_turn, sticky targeting keeps committed target, lowest_health switches to <50% HP target, turns_chasing increments out-of-range and resets in-range, no enemy-identity branching in ai.py (grep clean), full regression across all 7 canonical encounter groups via CombatEngine.auto_battle (all terminate <=30 rounds), combat_bridge.start_encounter(interactive=False) terminates, every listed blueprint spawns with a non-empty ai_profile dict. Full backend pytest suite: 116 passed (91 pre-existing + 25 new). Harness (python -m tactical.verify): FOUNDATION STABLE: YES, 47 checks, 46 PASS, 0 FAIL, 1 WARN (Skill/Item ability-wiring gap — intentionally deferred, matches spec).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_ai_personalities.py",
+    "/app/test_reports/pytest/pytest_results.xml",
+    "/app/tactical/verification_report.json"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "tactical/ai.py contains ZERO enemy-identity branching (verified via regex on comment-stripped source for goblin/skeleton/orc/kobold/bandit/wolf/spider/zombie/necromancer). Behavior is purely profile-flag driven — spec-compliant.",
+    "enemies.resolve() correctly warns to stderr and falls back to 'aggressive_melee' when a blueprint references an undefined profile. Fail-loud contract honored.",
+    "All 20 profiles referenced by 74 blueprints resolve to non-empty definitions in ai_profiles.json (previously-missing caster/ambusher/defender/aggressive are now present).",
+    "AI parity preserved: _score_tile uses only bf.line_of_sight/directional_cover/cover_penalty, inspection.compute_hit_chance/threat_map/chebyshev, facing.relative_arc — same shared functions available to the player. No hidden state.",
+    "Combatant.ai_memory correctly persists {target_id, turns_chasing, morale, commander_nearby, currently_flanking}; sticky targeting works with lowest_health <50% switch rule.",
+    "Nit (informational, not a bug): AI_PROFILES 'defender' and 'defensive' are identical duplicates; 'ambusher' and 'assassin' are identical duplicates. Fine as authored aliases but could be a single key with an alias table if desired. Not a blocker."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_ai_personalities.py (created)"
+  ],
+  "success_rate": {"backend": "100%", "frontend": "N/A (skipped per request)"},
+  "test_credentials": "N/A - pure Python terminal RPG, no auth",
+  "seed_data_creation": "None. Temp blueprint '_TEST_bogus' is added to enemies.BLUEPRINTS in-memory during one test and restored in the finally block; enemies.json on disk is not modified.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Next phase per verify.py WARN is Skill/Item ability wiring (enemies list abilities in blueprints but they aren't executed through ai.take_turn yet). When that lands, extend test_ai_personalities.py with ability-selection tests and re-run tactical.verify — the remaining WARN should clear. Facing values on Combatants must be one of {'N','S','E','W'} (see tactical/facing.DIRS); 'north'/'south' will KeyError inside relative_arc.",
+  "rca of the issue": "N/A - no defects found. All requested behaviors verified as data-driven and regression-free."
+}

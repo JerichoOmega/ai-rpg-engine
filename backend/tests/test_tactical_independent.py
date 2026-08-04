@@ -291,19 +291,21 @@ class TestWarnsAreReal:
         assert "use_ability" not in src
         assert "cast(" not in src
 
-    def test_referenced_ai_profiles_missing(self):
+    def test_referenced_ai_profiles_now_defined(self):
+        """REGRESSION GUARD (fixed): every AI profile referenced by an enemy
+        blueprint now exists in ai_profiles.json (previously caster/ambusher/
+        defender/aggressive were missing and resolved to an empty dict)."""
         with open("/app/tactical/data/ai_profiles.json") as f:
             profiles = json.load(f)
         with open("/app/tactical/data/enemies.json") as f:
             data = json.load(f)
         entries = data if isinstance(data, list) else list(data.values())
-        refs = {e.get("ai_profile") for e in entries if isinstance(e, dict)}
-        missing = {"caster", "ambusher", "defender", "aggressive"}
-        # Confirm they are referenced
-        assert missing.issubset(refs), f"expected refs; got {refs}"
-        # Confirm they are NOT keys in ai_profiles.json
-        for m in missing:
-            assert m not in profiles, f"{m} unexpectedly present"
+        refs = {e.get("ai_profile") for e in entries
+                if isinstance(e, dict) and isinstance(e.get("ai_profile"), str)}
+        undefined = {r for r in refs if r not in profiles}
+        assert not undefined, f"undefined referenced profiles: {undefined}"
+        for m in ("caster", "ambusher", "defender", "aggressive"):
+            assert m in profiles, f"{m} should now be defined"
 
 
 # ---------------------------------------------------------------------------

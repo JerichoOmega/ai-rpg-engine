@@ -37,7 +37,8 @@ from .entities import (Combatant, LoadoutLockedError, equip_ability,
 from .engine import CombatEngine, CombatContext
 from . import actions, ai, enemies
 from .inspection import (inspect_tile, compute_hit_chance, movement_preview,
-                         threat_map, enemies_threatening, tactical_overlay)
+                         threat_map, enemies_threatening, tactical_overlay,
+                         chebyshev)
 
 
 # ---------------------------------------------------------------------------
@@ -684,6 +685,128 @@ def _c_facing_readout():
     info = compute_hit_chance(eng, a, d)
     ok = "facing" in info and "flanking" in info and "facing_bonus" in info
     return ("PASS" if ok else "FAIL", f"keys_present={ok} facing={info.get('facing')}")
+
+
+# -- AI Personalities (reusable library) -----------------------------------
+def _profiled(unit, **flags):
+    unit.ai_profile = {"target_selection": "nearest", "preferred_range": "melee",
+                       "avoids": ["fire"], "uses_cover": True}
+    unit.ai_profile.update(flags)
+    return unit
+
+
+@check("AI Personalities", "Defender holds ground (penalises roaming)")
+def _c_defender_holds():
+    bf = _open_field(9, 3)
+    foe = Combatant("Def", "brute", "enemy", 6, 1)
+    hero = Combatant("Hero", "guardian", "player", 0, 1)
+    eng = _engine(bf, [foe, hero])
+    threats = threat_map(eng, foe)
+    roam = (1, 1)   # far from the defender's start
+    _profiled(foe, hold_position=True)
+    held = ai._score_tile(eng, foe, roam, hero, threats)
+    _profiled(foe, hold_position=False)
+    free = ai._score_tile(eng, foe, roam, hero, threats)
+    return ("PASS" if held < free else "FAIL",
+            f"roam score hold={held:.1f} < free={free:.1f}")
+
+
+@check("AI Personalities", "Kiter avoids standing next to a foe")
+def _c_kiter():
+    bf = _open_field(9, 3)
+    foe = Combatant("Archer", "archer", "enemy", 6, 1)
+    hero = Combatant("Hero", "guardian", "player", 5, 1)
+    eng = _engine(bf, [foe, hero])
+    threats = threat_map(eng, foe)
+    _profiled(foe, preferred_range="ranged", kites=True)
+    adjacent = ai._score_tile(eng, foe, (4, 1), hero, threats)  # next to hero
+    spaced = ai._score_tile(eng, foe, (8, 1), hero, threats)    # kept back
+    return ("PASS" if spaced > adjacent else "FAIL",
+            f"spaced={spaced:.1f} > adjacent={adjacent:.1f}")
+
+
+@check("AI Personalities", "Ambusher prefers a flanking tile")
+def _c_ambusher_flank():
+    bf = _open_field(7, 3)
+    hero = Combatant("Hero", "guardian", "player", 3, 1)
+    hero.facing = "E"
+    foe = Combatant("Amb", "brute", "enemy", 4, 1)   # melee
+    eng = _engine(bf, [foe, hero])
+    threats = threat_map(eng, foe)
+    _profiled(foe, prefers_flank=True)
+    rear = ai._score_tile(eng, foe, (2, 1), hero, threats)   # behind an E-facer
+    front = ai._score_tile(eng, foe, (4, 1), hero, threats)  # in front
+    return ("PASS" if rear > front else "FAIL",
+            f"rear={rear:.1f} > front={front:.1f}")
+
+
+@check("AI Personalities", "Wounded coward flees from the foe")
+def _c_coward_flees():
+    bf = _open_field(9, 3)
+    foe = Combatant("Coward", "brute", "enemy", 2, 1)
+    hero = Combatant("Hero", "guardian", "player", 1, 1)
+    eng = _engine(bf, [foe, hero], rng=ALWAYS_HIT())
+    foe.ai_profile = enemies.AI_PROFILES["cowardly"]
+    foe.reset_turn()
+    foe.hp = 1                              # badly wounded -> below threshold
+    d0 = chebyshev(foe.pos, hero.pos)
+    ai.take_turn(eng, foe)
+    fled = chebyshev(foe.pos, hero.pos) > d0
+    return ("PASS" if fled else "FAIL",
+            f"start_dist={d0} end_dist={chebyshev(foe.pos, hero.pos)} fled={fled}")
+
+
+@check("AI Personalities", "Sticky targeting (behavior memory)")
+def _c_sticky_target():
+    bf = _open_field(10, 3)
+    foe = Combatant("Foe", "archer", "enemy", 5, 1)
+    a = Combatant("A", "guardian", "player", 4, 1)   # nearest
+    b = Combatant("B", "guardian", "player", 8, 1)
+    eng = _engine(bf, [foe, a, b])
+    foe.ai_profile = dict(enemies.AI_PROFILES["skirmisher"])
+    foe.ai_memory["target_id"] = b.id                # committed to B
+    picked = ai._resolve_target(eng, foe)
+    return ("PASS" if picked is b else "FAIL",
+            f"kept committed target={picked.name} (expected B)")
+
+
+@check("AI Personalities", "Commander presence steadies morale (braver)")
+def _c_commander_morale():
+    bf = _open_field(8, 3)
+    coward = Combatant("Grunt", "brute", "enemy", 4, 1)
+    cmdr = Combatant("Captain", "brute", "enemy", 5, 1)
+    cmdr.ai_profile = enemies.AI_PROFILES["commander"]
+    hero = Combatant("Hero", "guardian", "player", 0, 1)
+    eng = _engine(bf, [coward, cmdr, hero])
+    coward.ai_profile = dict(enemies.AI_PROFILES["cowardly"])  # flee_threshold .5
+    coward.reset_turn(); coward.hp = int(coward.max_hp * 0.35)  # 35% > .5*.5=.25
+    d0 = chebyshev(coward.pos, hero.pos)
+    ai.take_turn(eng, coward)
+    steadied = coward.ai_memory.get("commander_nearby") and \
+        chebyshev(coward.pos, hero.pos) <= d0   # did NOT flee
+    return ("PASS" if steadied else "FAIL",
+            f"commander_nearby={coward.ai_memory.get('commander_nearby')} "
+            f"held_ground={chebyshev(coward.pos, hero.pos) <= d0}")
+
+
+@check("AI Personalities", "All referenced profiles now defined (WARN cleared)")
+def _c_profiles_complete():
+    missing = set()
+    for eid in enemies.list_enemies():
+        raw = enemies.BLUEPRINTS[eid]
+        node, prof = raw, None
+        seen = set()
+        while node is not None and id(node) not in seen:
+            seen.add(id(node))
+            if "ai_profile" in node:
+                prof = node["ai_profile"]
+                break
+            parent = node.get("extends")
+            node = enemies.BLUEPRINTS.get(parent) if parent else None
+        if isinstance(prof, str) and prof not in enemies.AI_PROFILES:
+            missing.add(prof)
+    return ("PASS" if not missing else "FAIL",
+            f"undefined referenced profiles: {sorted(missing) or 'none'}")
 
 
 # ===========================================================================
