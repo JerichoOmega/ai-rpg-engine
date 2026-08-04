@@ -105,9 +105,18 @@ _TBD — no canonical voice direction yet. Placeholder._
 for all future Eleanor art, modeling, UI, and marketing.
 
 ### Reference Assets
-| Version | File | Resolution | Notes |
+**Canonical concept reference — imported 2026-08-04, unaltered (no resize/crop/compress/recolor).**
+These are the authoritative visual source for Eleanor until a future canonical
+revision supersedes them (see [`Asset_Standards.md`](Asset_Standards.md)).
+
+| Role | File | Resolution | SHA-256 |
 |---|---|---|---|
-| Eleanor (primary) | _TBD — no canonical reference sheet imported yet_ | — | Until a sheet exists, the **written visual direction in this document is the authoritative reference.** Produce sheets as `assets/reference/characters/eleanor_*.png` (lossless, original resolution) per [`Asset_Standards.md`](Asset_Standards.md), then link them here. |
+| **Primary** — master character sheet ("The Light of the Elements": turnaround, face/hair, expressions, pendant, palette, combat, animation, relationships, UI) | [`assets/reference/characters/eleanor_reference_v1.png`](../../assets/reference/characters/eleanor_reference_v1.png) | 1024 × 1536 | `af60208a805367b8ab021254dd8bf2d7b836ef0162458bb5ede5d6183a425ebc` |
+| Model sheet (close-up, colour palette, PBR texture set, Tripo export info, model notes) | [`assets/reference/characters/eleanor_model_sheet_v1.png`](../../assets/reference/characters/eleanor_model_sheet_v1.png) | 1024 × 1536 | `a6ebbb6038f3ad05fde2e37f2ba033a1ade96f8674cf7ba8046a185b4e4dd791` |
+| 3D turnaround (front/¾/side/back, T-pose, wireframe, PBR set) | [`assets/reference/characters/eleanor_turnaround_v1.png`](../../assets/reference/characters/eleanor_turnaround_v1.png) | 1536 × 1024 | `cda925d0cc074239623d5db4e5250488526adaa3418f2c74fa193076aaf7567e` |
+| Full-body hero figure (clean pose with staff) | [`assets/reference/characters/eleanor_fullbody_v1.png`](../../assets/reference/characters/eleanor_fullbody_v1.png) | 1122 × 1402 | `ef7ee0bfdf1fb5bcce8e206fd9af94ce0a752f49119810c7aa778b1e726763fe` |
+
+**Status:** Canonical (v1). All Eleanor derivatives must trace back to these files.
 
 ### Overview
 A young **Human Mage** and **elemental specialist** — the party's warmth and its
@@ -121,14 +130,14 @@ elements at once**, a gift the Mages Guild has no framework for. She should look
 |---|---|
 | Character Name | Eleanor |
 | Status | Canonical |
-| Reference Images | _TBD_ (written direction authoritative for now) |
+| Reference Images | `eleanor_reference_v1.png` (+ model sheet, turnaround, full-body) — canonical v1 |
 | Primary Colours | Ivory / cream / white |
 | Secondary Colours | Sky blue / soft teal |
 | Accents | Gold embroidery, emerald gemstones, light-brown leather, light-gold metal |
-| Silhouette | Young, lighter build; loose flowing golden hair; layered mage robes, travel-ready |
-| Race | Human |
-| Height | _TBD_ |
-| Body Type | Young, lighter build (carries herself with confidence beyond her age) |
+| Silhouette | Young, graceful build; long flowing golden hair; layered flowing robes, travel-ready |
+| Race | Human (female) |
+| Height | 5'6" (167 cm) — per approved reference sheet |
+| Body Type | Early 20s; realistic human, graceful build |
 | Weapons | Magical focus — staff / wand / orb / crystal (an *active* extension of her, not a tool) |
 | Armour | Light armoured mage robes (reinforced cloth + light leather) |
 | Accessories | **The Hearthstone Pendant** (new canon); **the family ribbon** tied to her focus (established canon) |
@@ -138,14 +147,17 @@ elements at once**, a gift the Mages Guild has no framework for. She should look
 | Important Story Notes | Harmonic Soul; Mages Guild arc — see `docs/heroes/ELEANOR.md` |
 
 ### Physical Description
-- **Age/build:** young, lighter build; more confident than her age suggests
-  (established canon — `docs/heroes/ELEANOR.md`).
-- **Hair (canonical):** bright **golden blonde**, long, with slight natural
-  waves, worn **loose**, a few strands framing her face — elegant but practical.
-  Inspired by the *overall style* of Jaina Proudmoore's long hair without copying
-  it. **Her hair is a defining visual feature.**
+- **Age/build:** early 20s; graceful, realistic human build; carries herself
+  with more confidence than her age suggests (established canon —
+  `docs/heroes/ELEANOR.md`). **Height 5'6" (167 cm)** per the approved sheet.
+- **Hair (canonical):** bright **golden blonde**, long, high-volume with soft
+  natural waves, worn **loose**, a few strands framing her face — elegant but
+  practical. Inspired by the *overall style* of Jaina Proudmoore's long hair
+  without copying it. **Her hair is a defining visual feature.**
 - **Eyes (canonical):** bright **emerald green**, expressive, full of curiosity
   and hope.
+- **Expression:** warm, kind, gentle; approachable. The approved sheet gives an
+  expression range: *happy · curious · concerned · determined.*
 - **Read on first sight:** *hope · warmth · kindness · magic.*
 
 ### Visual Identity
@@ -168,12 +180,29 @@ armoured or arcane-menacing one.
 
 ### Equipment
 - **Armour:** light armoured mage robes — **not** fragile, **not** heavy;
-  travel-ready. Elegant layered cloth with reinforced light-leather protection;
-  small shoulder guards acceptable. **No oversized fantasy armour.**
+  travel-ready. Elegant layered cloth (ivory/cream with blue underlayers and
+  gold embroidered trim) with reinforced light-leather protection: bracers,
+  belt with utility pouch/satchel, and knee-high leather travel boots with small
+  emerald-set guards. Small shoulder guards present. **No oversized fantasy
+  armour.**
 - **Focus:** staff / wand / orb / crystal — active, expressive, a natural
-  extension of her (established canon).
+  extension of her (established canon). Primary depicted focus is the staff
+  (below); secondary options (wand/orb/crystal) shown on the sheet's Weapon
+  Focus panel.
+- **Utility:** spellbook, backup wand, potion pouch, component satchel (model
+  sheet).
 - **Signature accessory:** The Hearthstone Pendant (see below).
 - See also [`Equipment.md`](Equipment.md).
+
+### Weapon — Elegant Mage Staff *(canonical appearance)*
+As depicted in the approved artwork:
+- A tall, slender **golden staff** with an elegant twisted/interwoven headpiece
+  cradling a faceted **pale-blue crystalline gem**, and a matching pointed
+  crystal ferrule at the base.
+- Warm gold metal, refined and graceful (not blunt or martial) — reads as a
+  channeling focus, matching her light-and-gold visual language.
+- _No magical lore is asserted for the staff beyond "a focus for channeling
+  elemental magic" (existing canon). Deeper properties: `_TBD_` — do not invent._
 
 ### Personality
 Preserve all existing personality canon (`docs/heroes/ELEANOR.md`). Visually
@@ -196,13 +225,20 @@ escalation, not a safety net. (Mechanics/design: `docs/heroes/ELEANOR.md`,
 - Further formal animation reference: _TBD_ (capture during rigging).
 
 ### Modeling Notes
-- Derive the 3D model from the canonical visual direction here (and the future
-  Eleanor reference sheet once produced).
-- Keep the **loose flowing golden hair** as a hero silhouette element (plan for
-  hair sim / well-authored cards).
-- Model robes as **layered cloth + light leather**; keep it travel-ready, not
-  bulky. Small shoulder guards optional.
-- Author the **Hearthstone Pendant** as a distinct, simple prop (see spec).
+- **Derive the 3D model from the canonical reference set above** —
+  `eleanor_turnaround_v1.png` for topology (front/¾/side/back + T-pose +
+  wireframe), `eleanor_reference_v1.png` for identity, `eleanor_model_sheet_v1.png`
+  for materials.
+- **Production targets (from the model sheet):** OBJ/FBX export · clean
+  quad-based topology · non-overlapping UVs · 4096×4096 PBR set (base colour,
+  normal, roughness, metallic, AO, emissive) · real-world scale (metres) ·
+  A-pose · **target polycount 35k–45k** · keep pivots centred at the feet.
+- Keep the **long, high-volume flowing golden hair** as a hero silhouette
+  element (plan hair sim / well-authored cards).
+- Model robes as **layered cloth + light leather**; travel-ready, not bulky;
+  small shoulder guards included.
+- Author the **Hearthstone Pendant** as a distinct, simple prop, seated centred
+  above the sternum (see spec).
 - Preserve the ivory/cream + sky-blue/teal + gold/emerald palette in materials.
 
 ### UI Portrait Notes
@@ -222,6 +258,13 @@ escalation, not a safety net. (Mechanics/design: `docs/heroes/ELEANOR.md`,
 4. Do not depict the Hearthstone Pendant as an overtly magical object (see
    Hidden Truth). Do not conflate it with her mother's ribbon.
 5. Do not contradict established canon in `docs/heroes/ELEANOR.md`.
+
+**DO-NOT-CHANGE list (from the approved reference sheet):**
+- Golden-blonde hair · emerald-green eyes.
+- The Hearthstone Pendant (teardrop with emerald).
+- Light-coloured mage attire (white / blue / gold).
+- Long staff as the primary focus.
+- Overall theme of **hope, warmth, and light.**
 
 ### Signature Accessory — The Hearthstone Pendant *(new canon)*
 - **Name:** The Hearthstone Pendant.
@@ -261,6 +304,7 @@ escalation, not a safety net. (Mechanics/design: `docs/heroes/ELEANOR.md`,
 | Version | Date | Change |
 |---|---|---|
 | v1.0 | 2026-06 | Established Eleanor's canonical visual direction (golden blonde hair, emerald eyes, ivory/cream + sky-blue/teal + gold/emerald palette, light armoured travel robes) and the canonical **Hearthstone Pendant** heirloom (incl. its Hidden Truth). Narrative canon preserved; no reference sheet imported yet (written direction authoritative). |
+| v1.1 | 2026-08-04 | **Imported approved concept art as canonical reference** (unaltered): `eleanor_reference_v1.png` (primary master sheet), `eleanor_model_sheet_v1.png`, `eleanor_turnaround_v1.png`, `eleanor_fullbody_v1.png`. Confirmed height 5'6" (167 cm), the elegant crystalline-gem staff, expression range, and production targets (OBJ/FBX, clean quads, 4096² PBR, A-pose, 35k–45k polys). Written direction superseded by the imported reference set. |
 
 ---
 
