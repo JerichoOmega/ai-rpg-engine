@@ -234,6 +234,11 @@ def complete_travel(
         destination_region
     )
 
+    # TD-001: keep the serialized world_state discovery list in sync with the
+    # REGIONS metadata flag so both stores agree across save/load.
+    from world_state import discover_region as ws_discover_region
+    ws_discover_region(destination_region)
+
     travel_state[
         "is_traveling"
     ] = False

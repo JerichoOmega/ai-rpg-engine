@@ -122,17 +122,18 @@ class TestTravel:
         # (see test_trigger_travel_event_emit_collision_bug for repro).
         travel_manager.trigger_travel_event = lambda: None
 
-    def test_trigger_travel_event_emit_collision_bug(self):
-        """REGRESSION / SEAM BUG:
+    def test_trigger_travel_event_emit_collision_fixed(self):
+        """REGRESSION GUARD (fixed):
         travel_manager.trigger_travel_event() calls
             emit("travel_event", event_name=event_name)
-        but event_bus.emit's own parameter is named `event_name`, so the
-        kwargs collide -> TypeError. Randomly hit on any travel day where
-        roll is 46..70. This test documents the bug — it currently FAILS.
+        Previously this collided with event_bus.emit's `event_name`
+        parameter -> TypeError on ~25% of travel days. event_bus.emit now
+        makes the event key positional-only, so this must NOT raise.
         """
-        import travel_manager
-        with pytest.raises(TypeError):
-            travel_manager.trigger_travel_event()
+        import importlib, event_bus, travel_manager
+        importlib.reload(event_bus)          # ensure the fixed emit is loaded
+        importlib.reload(travel_manager)
+        travel_manager.trigger_travel_event()   # must not raise
 
     def test_travel_to_neighbor_updates_current_and_discovery(self):
         self._stub()

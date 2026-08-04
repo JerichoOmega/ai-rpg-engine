@@ -61,6 +61,7 @@ def unsubscribe(
 def emit(
 
     event_name,
+    /,
     **data
 
 ):

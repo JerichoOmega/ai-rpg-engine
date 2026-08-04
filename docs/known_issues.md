@@ -21,26 +21,27 @@
 
 ---
 
-### 🟡 TD-001 — Dual region-discovery state (consolidate before beta)
+### 🟡 TD-001 — Dual region-discovery state (immediate divergence FIXED; consolidate before beta)
 
 **Files:** `region_manager.py` (`REGIONS[name]["discovered"]`), `world_state.py`
 (`world_state["regions"]["discovered_regions"]`), `world_map.py`, `travel_manager.py`
 
-**Impact:** Region discovery is tracked in **two** places. `travel_manager.
-complete_travel` → `discover_region()` sets `REGIONS[name]["discovered"]=True`,
-while `world_state["regions"]["discovered_regions"]` is a separate serialized
-list. `world_map.show_world_map` reads the `REGIONS` flag; save/load persists the
-`world_state` list. They can diverge (e.g. a loaded save whose list is ahead of
-the in-memory `REGIONS` flags, or vice-versa), causing the map to show the wrong
-discovered set.
+**Status (2026-06):** *Immediate divergence FIXED.* `travel_manager.
+complete_travel` now calls **both** `region_manager.discover_region` and
+`world_state.discover_region`, so the two stores agree across save/load
+(verified by `test_phase1_wiring_integration.py`). **Durable consolidation still
+pending:** two discovery stores still exist.
 
-**Decision required:** pick **one** canonical source. Recommended: the
-serialized `world_state["regions"]["discovered_regions"]` list (it is what the
-save owns), and make `discover_region()` update it + have `world_map` read from
-it. Update all dependents.
+**Impact (historical):** travel updated only `REGIONS[name]["discovered"]`; the
+serialized `world_state` list lagged, so a loaded save could show the wrong
+discovered set on the map.
 
-**Priority:** before beta. Not blocking Phase 1 (the map is cosmetically
-consistent for a fresh session), but must not be forgotten.
+**Durable fix (before beta):** pick one canonical source — recommended the
+serialized `world_state["regions"]["discovered_regions"]` — and make
+`region_manager.discover_region` delegate to `world_state.discover_region`; have
+`world_map` read from it. Then remove the double-write in `complete_travel`.
+
+**Priority:** before beta. Not blocking Phase 1.
 
 ---
 

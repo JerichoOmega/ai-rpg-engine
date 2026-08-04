@@ -92,3 +92,11 @@ Goal: expose existing systems through gameplay (no new systems, no combat change
 - Smoke tests: `scripts/smoke_phase1_wiring.py`, `scripts/smoke_phase1_deep.py`
   (region transition, dialogue, quest board — all pass, no exceptions).
 - No combat code touched; compatible with either R-01 outcome.
+- **Independently verified (2026-06):** `backend/tests/test_phase1_wiring_integration.py`
+  23/23 pass; report `test_reports/iteration_4.json` +
+  `docs/verification/phase1_wiring_integration.md`. Two seam bugs found & fixed:
+  (1) CRITICAL `event_bus.emit` keyword collision crashing ~25% of travel days
+  (fixed: event key made positional-only); (2) TD-001 region-discovery divergence
+  (fixed: `complete_travel` syncs both stores). **PHASE 1 = COMPLETE.**
+- **Next gate = R-01** (combat canon) before Phase 2 combat unification / any
+  Phase 3 content.
