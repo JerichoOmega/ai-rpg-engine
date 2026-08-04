@@ -264,7 +264,7 @@ def settlement_menu() -> None:
 # 3 · Explore -> player agency (reuses existing encounter/quest/event systems)
 # ---------------------------------------------------------------------------
 def explore_menu() -> None:
-    from combat import quick_encounter                      # unchanged combat
+    from combat_bridge import start_encounter            # canonical tactical combat
     from quest_manager import generate_quest
     from world_event_manager import generate_random_world_event
     from location_manager import random_location_discovery
@@ -278,7 +278,7 @@ def explore_menu() -> None:
 
     def _hunt():
         print("\nYou seek out trouble...")
-        quick_encounter()
+        start_encounter(interactive=True)
 
     def _opportunity():
         print("\nYou look for work and opportunity...")

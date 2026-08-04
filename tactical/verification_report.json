@@ -185,7 +185,7 @@
       "category": "Engine",
       "name": "auto_battle reaches a decisive result (no infinite loop)",
       "status": "PASS",
-      "detail": "outcome=player rounds=5 secs=0.012"
+      "detail": "outcome=player rounds=5 secs=0.011"
     },
     {
       "category": "Engine",

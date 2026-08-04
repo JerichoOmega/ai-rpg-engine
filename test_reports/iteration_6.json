@@ -1,0 +1,31 @@
+{
+  "summary": "Combat Bridge (canonical overworld -> tactical) verification. Wrote /app/backend/tests/test_combat_bridge.py with 18 pytest checks covering: headless resolution + HP write-back (never <1), party build from world_state + CLASS_MAP mapping + level scaling, companion party join + HP write-back, blueprint-based enemies via tactical.encounters.build_group (and static-source check that combat_bridge does NOT reference enemy_manager), biome->group mapping via _pick_group, fairness cap (solo hero <=2 enemies; party of 3 <=4 enemies), victory reward branch (deterministic monkeypatched 'player' outcome grants XP + gold + attempts loot drop), defeat branch (no rewards but HP still written), interactive controller full scripted flow (Move/Attack/Inspect/End) terminates, unreachable-move rejection, world_actions.explore_menu wiring (source contains 'combat_bridge' + 'start_encounter', NOT 'quick_encounter'), _hunt actually calls combat_bridge.start_encounter, legacy combat.py still imports, and save/load roundtrip after encounter. 18/18 pass. Also re-ran regressions: tactical.verify -> FOUNDATION STABLE 40/38 PASS/0 FAIL/2 WARN (pre-existing Phase 2/6 items), and full pytest suite backend/tests/ = 91/91 pass (18 new + 52 phase A/wiring + 21 tactical independent). Smoke script scripts/smoke_combat_bridge.py still completes cleanly.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_combat_bridge.py",
+    "/app/test_reports/pytest/combat_bridge.xml",
+    "/app/tactical/verification_report.json"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "combat_bridge._build_party places every party member at x=0 with y=i%HEIGHT; if the party ever grows past HEIGHT (=6) two units would overlap at (0,0). Companion loop already breaks when y>=HEIGHT but the hero placement uses (0, i%HEIGHT) where i=0 -> (0,0). Safe today (party<=HEIGHT) but worth a guard when threat-budget scaling arrives.",
+    "combat_bridge._apply_results forces ws_player['hp']=1 if the computed value <=0 EVEN when outcome=='player'. Practically fine (victory can't happen with hp<=0 in engine), but the explicit floor at 1 also swallows a genuine 'pyrrhic 0hp survival'. Consider: on victory keep the actual hp (which will be >0 since hero is alive); on defeat/draw floor to 1 as anti-softlock. Currently softlock guard is applied uniformly.",
+    "combat_bridge.start_encounter mutates bf.tile(0, i%HEIGHT).occupant=None before the engine start-placement — this is a no-op comment ('placement handled by engine.start') but the explicit .occupant=None can be removed to avoid confusion.",
+    "biome 'urban' (kingdom_capital) falls through to the default 'roadside_ambush' — intentional per BIOME_GROUPS, but there's no 'urban' key so any city region silently gets bandits. If cities should have their own group (city_watch/city_thugs) this is a content gap, not a bug.",
+    "world_actions.explore_menu docstring still says 'Combat is intentionally untouched: encounters are launched through the existing combat.quick_encounter entry point' — the code was updated but the module docstring wasn't. Stale doc-comment; low priority."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_combat_bridge.py"
+  ],
+  "success_rate": {"backend": "100% (18/18 new bridge tests, 91/91 full suite, 40/38 tactical harness non-WARN)", "frontend": "N/A - terminal Python RPG"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None. Tests reset world_state via ensure_world_state_defaults() and clear companion_manager.active_companions in a per-test fixture; region_manager REGIONS are mutated with '_test_*' keys only inside a try/finally that removes them.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Bridge is canonical and verified. To force a deterministic victory branch for reward testing: monkeypatch combat_bridge.run_session (NOT tactical.session.run_session — combat_bridge imported the symbol at module load) to return 'player'. Solo-hero headless encounters legitimately tend to lose; assert outcome-in-set + hp>=1, not victory. combat_bridge does not import enemy_manager (verified by source scan). Legacy combat.py still imports for backwards compatibility but is no longer reachable from explore_menu -> Hunt. The two harness WARNs (missing AI subtype profiles; unwired skill/item actions) remain Phase 2/6 work and are not bridge regressions.",
+  "rca of the issue": "No live issues. All bridge behaviours (headless outcome, HP write-back never <1, party+companions build, blueprint enemies via encounters.build_group, biome mapping, fairness cap, victory rewards via progression_manager.award_xp_to_roster + gold + loot_manager.generate_loot, defeat-with-no-rewards, interactive controller termination, world_actions wiring) match the R-01 canon. Baseline tactical harness and Phase A / Phase 1 suites remain green."
+}
