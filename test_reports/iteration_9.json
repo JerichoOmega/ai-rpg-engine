@@ -1,0 +1,50 @@
+{
+  "summary": "Iteration 9: Independent verification of the 'Sundered Span' vertical-slice combat showcase. Ran python -m tactical.verify (62/62/0 PASS, FOUNDATION STABLE), full pre-existing backend suite (194/194 passed), and wrote a NEW independent pytest module test_showcase_independent_t1_iter9.py (22 tests, 22 passed) covering static pillar structure, solution levers (elevation, flank/backstab, prepare/OA, burn ignition, focus/sustain), playability across 20 seeds vs both-AI ambush, AI personality expression, world_state persistence, and manifest completeness. Combined backend suite is 216/216 green.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_showcase_independent_t1_iter9.py",
+    "/app/test_reports/pytest/iter9_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Positive: pillar_manifest() provides a single source of truth mapping the 15 canonical pillars to feature+decision — excellent for design review coherence.",
+    "Positive: Battlefield.persist(world_state) cleanly writes scorched/altered tiles into ws['tactical']['persistent'][battlefield_id], preserving world evolution across combats.",
+    "Nit: Combatant.pos is a read-only property. Tests / callers must set .x/.y AND update tile.occupant. Consider a helper Combatant.set_pos(bf, x, y) to keep occupant map in sync and prevent subtle bugs.",
+    "Nit: Battlefield.step_environment() (self-only) and CombatEngine.environment_reacts() have overlapping intent; naming should be clarified in docs — engine-level environment_reacts() is the correct public API in tests.",
+    "Nit: tactician_controller._priority checks `\"rally\" in unit.equipped` for the commander branch; consider also checking \"war_cry\" so the same priority is stable if the warlord ever only carries war_cry."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_showcase_independent_t1_iter9.py (new)"
+  ],
+  "success_rate": {
+    "backend": "100% (216/216 pytest, 62/62 tactical.verify)",
+    "frontend": "N/A (terminal Python RPG, no frontend)"
+  },
+  "measured_playability": {
+    "tactician_win_rate_30_seeds": "22/30 (73.3%)",
+    "naive_both_ai_30_seeds": "player 0, enemy 30, draw 0 — ambush punishes button-mashing as designed",
+    "round_cap": "All 20 test seeds resolved decisively within 40 rounds"
+  },
+  "verified_solution_levers": {
+    "high_ground": "compute_hit_chance(elevation modifier) rises from 0.0 (plains) to 0.1 (hill (5,4)); chance strictly higher.",
+    "flank_backstab": "Rogue rear backstab vs armoured Warlord strictly out-damages a front basic (punches through armour 5).",
+    "prepare_reactions": "Guardian prepared counter fires on adjacent raider; moving out of Corrupted Raider (melee, range 1) reach provokes an opportunity attack (Bridge Warden reach 2 correctly does NOT provoke).",
+    "burn": "Firebolt on the Warlord (standing on oil at (9,2)) ignites tile.env['burning'] and chips HP over subsequent environment_reacts() ticks.",
+    "focus_and_sustain": "Shaman has armour 1, max_hp 22 (killable priority); healing_potion via actions.use_item restores HP and is consumed.",
+    "commander_ai_expression": "Across seeds 1..10 driven by tactician_controller, Warlord Gruk uses rally/war_cry at least once."
+  },
+  "test_credentials": "None (terminal Python engine, no auth).",
+  "seed_data_creation": "None — used deterministic random.Random(seed) and a FixedRandom-style stub (rng.random()->0.0, rng.randint(a,b)->b) for damage/hit determinism.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Independent test file lives at /app/backend/tests/test_showcase_independent_t1_iter9.py. Combatant.pos is read-only — set unit.x/unit.y directly and, when moving mid-test, also update eng.bf.tile(x,y).occupant. Environment ticks use eng.environment_reacts() (engine-level), NOT eng.bf.step_environment(). Tile fire status is tile.env['burning']. Persistence: call eng.start(); ...; eng.end() so that Battlefield.persist(world_state) is invoked; scorched tiles appear under world_state['tactical']['persistent'][showcase.BATTLEFIELD_ID]. Facing values are cardinal strings ('N','S','E','W'), NOT tuples. Opportunity attacks fire only for melee foes (attack_range<=1) — use Corrupted Raider, not Bridge Warden.",
+  "rca of the issue": "N/A — no issue observed. Design thesis 'button-mashing loses, tactics win' is empirically validated (0% naive vs 73% tactician win rate)."
+}

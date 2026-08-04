@@ -1,5 +1,6 @@
 {
   "shield_wall": {
+    "name": "Shield Wall",
     "class": "guardian",
     "ap": 2,
     "type": "buff",
@@ -10,6 +11,7 @@
     "description": "Raise cover to Full for self and adjacent allies until next turn."
   },
   "taunt": {
+    "name": "Taunt",
     "class": "guardian",
     "ap": 2,
     "type": "control",
@@ -20,6 +22,7 @@
     "description": "Force an enemy to target this Guardian."
   },
   "bulwark": {
+    "name": "Bulwark",
     "class": "guardian",
     "ap": 2,
     "type": "zone",
@@ -29,6 +32,7 @@
     "description": "Create a defensive zone; allies inside gain Half cover."
   },
   "aimed_shot": {
+    "name": "Aimed Shot",
     "class": "ranger",
     "ap": 2,
     "type": "attack",
@@ -39,6 +43,7 @@
     "description": "High-damage shot; bonus from elevation."
   },
   "hunters_mark": {
+    "name": "Hunter's Mark",
     "class": "ranger",
     "ap": 1,
     "type": "debuff",
@@ -49,6 +54,7 @@
     "description": "Mark a target; it takes extra damage and is easier to hit."
   },
   "pinning_shot": {
+    "name": "Pinning Shot",
     "class": "ranger",
     "ap": 2,
     "type": "control",
@@ -60,6 +66,7 @@
     "description": "Pin a target, reducing its movement next turn."
   },
   "firebolt": {
+    "name": "Firebolt",
     "class": "mage",
     "ap": 2,
     "type": "attack",
@@ -71,6 +78,7 @@
     "description": "Fire damage that ignites flammable tiles/objects."
   },
   "grease": {
+    "name": "Grease",
     "class": "mage",
     "ap": 2,
     "type": "terrain",
@@ -81,6 +89,7 @@
     "description": "Create a flammable oil slick on target tiles."
   },
   "frost_nova": {
+    "name": "Frost Nova",
     "class": "mage",
     "ap": 2,
     "type": "terrain",
@@ -92,6 +101,7 @@
     "description": "Freeze tiles to ice; slows and can freeze water."
   },
   "backstab": {
+    "name": "Backstab",
     "class": "rogue",
     "ap": 2,
     "type": "attack",
@@ -102,6 +112,7 @@
     "description": "Massive damage when flanking."
   },
   "shadowstep": {
+    "name": "Shadowstep",
     "class": "rogue",
     "ap": 2,
     "type": "movement",
@@ -111,6 +122,7 @@
     "description": "Teleport to a tile in line of sight; ignores terrain cost."
   },
   "smoke_bomb": {
+    "name": "Smoke Bomb",
     "class": "rogue",
     "ap": 2,
     "type": "terrain",
