@@ -143,3 +143,20 @@ Every STANDARD overworld encounter now runs on the canonical tactical engine.
   encounter groups (urban→roadside stopgap).
 - **Approved sequence next:** enemy personality profiles → Phase B (Downed/Death)
   → combat feedback → one polished vertical slice before broad content.
+
+## Enemy AI Personalities + Behavior Memory — COMPLETE (2026-06)
+Priority 1/5 of the Engine→Game directive. Reusable, data-driven AI library.
+- **`tactical/data/ai_profiles.json`** — 20 archetypes; the 4 missing referenced
+  profiles (caster/ambusher/defender/aggressive) added → missing-profile WARN cleared.
+- **`tactical/ai.py`** — honours profile flags (charges/kites/hold_position/
+  prefers_flank/fearless/avoids/flee) via one code path; sticky targeting +
+  `_update_memory` + `_retreat`. No enemy-specific AI.
+- **`enemies.resolve`** fail-loud (warn + fallback) on undefined profile.
+- **`Combatant.ai_memory`** — target_id/turns_chasing/morale/commander_nearby/
+  currently_flanking, each influencing decisions.
+- **Verified:** `backend/tests/test_ai_personalities.py` 25/25; full suite 116/116;
+  harness 47 checks 46 PASS/0 FAIL/1 WARN; `test_reports/iteration_7.json`;
+  report `docs/verification/ai_personalities.md`; system doc `docs/systems/tactical_ai.md`.
+- **Remaining WARN = Skill/Item ability wiring** (next). Archetype aliases
+  (defender≈defensive, ambusher≈assassin) fully differentiate once abilities land.
+- **Next: Ability/Item usage → Phase B (Downed/Death) → combat feedback → vertical slice.**
