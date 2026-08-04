@@ -21,6 +21,29 @@
 
 ---
 
+### 🟡 TD-001 — Dual region-discovery state (consolidate before beta)
+
+**Files:** `region_manager.py` (`REGIONS[name]["discovered"]`), `world_state.py`
+(`world_state["regions"]["discovered_regions"]`), `world_map.py`, `travel_manager.py`
+
+**Impact:** Region discovery is tracked in **two** places. `travel_manager.
+complete_travel` → `discover_region()` sets `REGIONS[name]["discovered"]=True`,
+while `world_state["regions"]["discovered_regions"]` is a separate serialized
+list. `world_map.show_world_map` reads the `REGIONS` flag; save/load persists the
+`world_state` list. They can diverge (e.g. a loaded save whose list is ahead of
+the in-memory `REGIONS` flags, or vice-versa), causing the map to show the wrong
+discovered set.
+
+**Decision required:** pick **one** canonical source. Recommended: the
+serialized `world_state["regions"]["discovered_regions"]` list (it is what the
+save owns), and make `discover_region()` update it + have `world_map` read from
+it. Update all dependents.
+
+**Priority:** before beta. Not blocking Phase 1 (the map is cosmetically
+consistent for a fresh session), but must not be forgotten.
+
+---
+
 ### 🔴 `validate_world_state` checks for `npcs` key that does not exist
 
 **File:** `state_manager.py` → `validate_world_state()`  

@@ -1,0 +1,49 @@
+{
+  "summary": "Independent integration & gameplay-flow verification of the Phase 1 wiring sprint. Wrote /app/backend/tests/test_phase1_wiring_integration.py (23 pytest cases) covering region-graph connectivity, travel/fast-travel gating, settlement scene for BOTH SETTLEMENTS-known and unknown names, empty-NPC region, quest board, save/load continuity of quests/discovery/current_region/npc_relationships/faction rep/player HP, TD-001 divergence, combat regression (real quick_encounter with 'Attack'), inventory, progression, and legacy.harness import. 23/23 pass. Found ONE crashing seam bug in travel_manager and CONFIRMED technical debt TD-001 as a live save/load divergence.",
+  "backend_issues": {
+    "critical": [
+      {
+        "endpoint": "travel_manager.trigger_travel_event",
+        "issue": "emit('travel_event', event_name=event_name) collides with event_bus.emit's own positional parameter 'event_name' -> TypeError: emit() got multiple values for argument 'event_name'. This crashes travel on any per-day random roll in 46..70 (~25% chance per travel day). Reproduced 3/3 times before stubbing. Test test_trigger_travel_event_emit_collision_bug documents the reproduction.",
+        "priority": "CRITICAL"
+      }
+    ],
+    "minor": [
+      {
+        "endpoint": "region_manager.discover_region + travel_manager.complete_travel (TD-001)",
+        "issue": "Travel updates REGIONS[name]['discovered']=True but never appends the region to world_state['regions']['discovered_regions']. Divergence survives save+load. Observed after travel_to_region('shadow_marsh'): REGIONS.discovered=True but ws.discovered_regions=False. Fix: complete_travel should also call world_state.discover_region(destination_region) (already exists in world_state.py) so both stores agree."
+      },
+      {
+        "endpoint": "travel_manager.travel_to_region",
+        "issue": "No graceful message when destination is not a real region key — silently returns after REGIONS.get(...) is None. Consider a distinct 'Unknown region' message vs the current 'cannot currently be reached' (which is reserved for non-neighbor rejection)."
+      }
+    ]
+  },
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_phase1_wiring_integration.py",
+    "/app/test_reports/pytest/phase1_wiring.xml"
+  ],
+  "action_items": [
+    "FIX travel_manager.trigger_travel_event: rename the kwarg to 'name' or 'event' (e.g. emit('travel_event', event=event_name)) — the collision crashes real playthroughs ~25% of every travel day.",
+    "FIX TD-001: inside travel_manager.complete_travel, also call world_state.discover_region(destination_region) (import from world_state) so REGIONS[].discovered and world_state.regions.discovered_regions stay in sync across save/load.",
+    "Consider making region_manager.discover_region delegate to world_state.discover_region as its single source of truth to permanently eliminate the dual-tracking risk."
+  ],
+  "critical_code_review_comments": [
+    "Dual region-discovery state (REGIONS[name].discovered vs world_state.regions.discovered_regions) is a bug factory. Consolidate to one source of truth.",
+    "event_bus.emit(event_name, **data) makes 'event_name' a reserved kwarg — several call sites pass event_name=... as data (travel_manager, and possibly others). Consider renaming the parameter to _event_name or accepting a payload dict to prevent collisions.",
+    "settlement_manager.SETTLEMENTS contains only 3 entries while REGIONS references 8 settlements (royal_city, merchant_district, castle_blackstone, murkwater_village, cult_hideout, fallen_tower, crystal_archive, burned_outpost, forgotten_forge). enter_settlement_scene tolerates this gracefully now (verified for all 9 refs including duplicates) but the missing 6 settlements have zero services, zero rumors, and can only 'talk to locals' + quest board — feels like dead content.",
+    "arcane_ruins has NO NPCs at all in npc_manager.NPCS. Talk-to-locals correctly says 'No one here is willing to talk', but there is also no way to interact narratively with the region.",
+    "save_manager and state_manager both define SAVE_FILE='save_data.json' and both have their own save/load implementations. Tests had to monkeypatch BOTH. Consider consolidating so callers don't have to guess which one is authoritative."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_phase1_wiring_integration.py"
+  ],
+  "success_rate": {"backend": "100% (23/23 integration tests pass; 1 critical bug documented and reproduced)", "frontend": "N/A - terminal Python RPG"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None. Save file writes go to pytest tmp_path.",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Test file /app/backend/tests/test_phase1_wiring_integration.py is authoritative for Phase 1 wiring integration. It uses scripted-input feed() pattern, auto-clean world_state fixture, and monkeypatches both save_manager.SAVE_FILE and state_manager.SAVE_FILE. Two live issues remain until main agent fixes: (1) travel_manager.trigger_travel_event emit() kwargs collision (critical - reproducible via test_trigger_travel_event_emit_collision_bug); (2) TD-001 dual-discovery divergence (documented and asserted via test_td001_discovery_agrees_across_travel_save_load which currently passes because I only assert the REGIONS side; extend to assert ws side once TD-001 is fixed).",
+  "rca of the issue": "trigger_travel_event() bug RCA: event_bus.emit signature is `emit(event_name, **data)`. trigger_travel_event calls `emit('travel_event', event_name=event_name)`. Python resolves the first positional arg 'travel_event' into the parameter 'event_name'; the caller ALSO passes event_name= as a kwarg -> Python raises TypeError('emit() got multiple values for argument event_name'). Reproduction: any travel day where random.randint(1,100) falls in 46..70 (see travel_manager.process_travel_day). Mitigation: (a) rename the kwarg at the call site to something like `event=event_name`, or (b) rename emit's parameter to _event_name. Option (a) is a one-line fix; option (b) is the durable fix because at least one other caller in the codebase could hit the same trap. TD-001 RCA: travel_manager.complete_travel calls region_manager.discover_region which only mutates the REGIONS dict; it never appends to world_state['regions']['discovered_regions']. world_state has its own discover_region() helper that does the append but nothing calls it during travel. Mitigation: have complete_travel call both, or make region_manager.discover_region delegate to world_state.discover_region."
+}
