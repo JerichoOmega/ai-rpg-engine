@@ -12,6 +12,8 @@ from __future__ import annotations
 
 from typing import Dict, List, Tuple
 
+from .facing import relative_arc, FACING_HIT
+
 XY = Tuple[int, int]
 
 
@@ -41,12 +43,16 @@ def compute_hit_chance(engine, attacker, defender) -> Dict:
                                                   else 0.0)
     los = bf.line_of_sight(attacker.pos, defender.pos)
     in_range = chebyshev(attacker.pos, defender.pos) <= attacker.attack_range
+    arc = relative_arc(defender, attacker.pos)
+    facing_bonus = FACING_HIT[arc]
     chance = 0.0 if not (los and in_range) else max(
-        0.05, min(0.95, base - cover_penalty + elevation))
+        0.05, min(0.95, base - cover_penalty + elevation + facing_bonus))
     return {
         "chance": chance, "base": base, "cover_penalty": cover_penalty,
         "elevation": elevation, "line_of_sight": los, "in_range": in_range,
         "cover": bf.directional_cover(defender.pos, attacker.pos),
+        "facing": arc, "facing_bonus": facing_bonus,
+        "flanking": arc in ("side", "rear"),
     }
 
 
@@ -98,6 +104,10 @@ def movement_preview(engine, unit, target: XY) -> Dict:
         if bf.line_of_sight(enemy.pos, target) and \
                 chebyshev(enemy.pos, target) <= enemy.attack_range:
             attackers.append(enemy.name)
+    provoke = [e.name for e in engine.enemies_of(unit)
+               if e.alive and e.attack_range <= 1
+               and chebyshev(e.pos, unit.pos) == 1
+               and chebyshev(e.pos, target) > 1]
     return {
         "reachable": True, "path": path, "cost": cost,
         "final_move": unit.move - cost,
@@ -106,6 +116,7 @@ def movement_preview(engine, unit, target: XY) -> Dict:
         "threat_tiles_entered": threat_entered,
         "enemies_attackable": attackable,
         "enemies_that_can_hit_you": attackers,
+        "provokes_opportunity_from": provoke,
     }
 
 

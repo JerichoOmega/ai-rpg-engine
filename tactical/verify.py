@@ -600,6 +600,92 @@ def _c_skill_gap():
             "decorative; wiring is Phase 2/Phase 6 work)")
 
 
+# -- Phase A: Facing / Flanking / Opportunity ------------------------------
+@check("Facing (Phase A)", "relative_arc front/side/rear")
+def _c_arc():
+    from .facing import relative_arc
+    d = Combatant("D", "brute", "enemy", 3, 3)
+    d.facing = "N"
+    front = relative_arc(d, (3, 1))   # north of a north-facer
+    rear = relative_arc(d, (3, 5))    # south
+    side = relative_arc(d, (1, 3))    # west
+    uncommitted = relative_arc(Combatant("U", "brute", "enemy", 0, 0), (5, 5))
+    ok = (front == "front" and rear == "rear" and side == "side"
+          and uncommitted == "front")
+    return ("PASS" if ok else "FAIL",
+            f"front={front} rear={rear} side={side} uncommitted={uncommitted}")
+
+
+@check("Facing (Phase A)", "Flank raises hit chance (rear > front)")
+def _c_flank_hit():
+    bf = _open_field(6, 3)
+    dfn = Combatant("D", "brute", "enemy", 3, 1)
+    dfn.facing = "E"
+    front_atk = Combatant("F", "brute", "player", 4, 1)  # east = front
+    rear_atk = Combatant("R", "brute", "player", 2, 1)   # west = rear
+    eng = _engine(bf, [dfn, front_atk, rear_atk])
+    cf = compute_hit_chance(eng, front_atk, dfn)
+    cr = compute_hit_chance(eng, rear_atk, dfn)
+    ok = (cf["facing"] == "front" and cr["facing"] == "rear"
+          and cr["chance"] > cf["chance"] and cr["flanking"] is True)
+    return ("PASS" if ok else "FAIL",
+            f"front={cf['chance']:.2f} rear={cr['chance']:.2f} "
+            f"flanking={cr['flanking']}")
+
+
+@check("Facing (Phase A)", "Rear flank multiplies damage 1.25x")
+def _c_flank_dmg():
+    bf = _open_field(6, 3)
+    dfn = Combatant("D", "brute", "enemy", 3, 1)
+    dfn.facing = "E"
+    dfn.armor = 0
+    atk = Combatant("R", "brute", "player", 2, 1)   # west = rear
+    atk.crit_chance = 0.0
+    atk.damage_min = atk.damage_max = 10
+    eng = _engine(bf, [dfn, atk], rng=ALWAYS_HIT())
+    hp0 = dfn.hp
+    actions.attack(eng, atk, dfn)
+    dealt = hp0 - dfn.hp
+    return ("PASS" if dealt == 12 else "FAIL",
+            f"rear damage={dealt} (expected int(10*1.25)=12)")
+
+
+@check("Facing (Phase A)", "Opportunity attack when leaving melee reach")
+def _c_opportunity():
+    bf = _open_field(6, 5)
+    mover = Combatant("Runner", "guardian", "player", 1, 1)
+    foe = Combatant("Grunt", "brute", "enemy", 2, 1)   # melee, adjacent
+    eng = _engine(bf, [mover, foe], rng=ALWAYS_HIT())
+    mover.move = 4
+    actions.move(eng, mover, (1, 3))   # walks out of the grunt's reach
+    fired = any("opportunity attack" in l for l in eng.log)
+    return ("PASS" if fired else "FAIL", f"opportunity_fired={fired}")
+
+
+@check("Facing (Phase A)", "Preview warns of provoked opportunity attacks")
+def _c_opportunity_preview():
+    bf = _open_field(6, 5)
+    unit = Combatant("Hero", "guardian", "player", 1, 1)
+    foe = Combatant("Grunt", "brute", "enemy", 2, 1)
+    eng = _engine(bf, [unit, foe])
+    unit.move = 4
+    prev = movement_preview(eng, unit, (1, 3))
+    ok = "Grunt" in prev.get("provokes_opportunity_from", [])
+    return ("PASS" if ok else "FAIL",
+            f"provokes_from={prev.get('provokes_opportunity_from')}")
+
+
+@check("Facing (Phase A)", "Hit-chance breakdown exposes facing (readability)")
+def _c_facing_readout():
+    bf = _open_field(4, 3)
+    a = Combatant("A", "brute", "player", 0, 1)
+    d = Combatant("D", "brute", "enemy", 1, 1)
+    eng = _engine(bf, [a, d])
+    info = compute_hit_chance(eng, a, d)
+    ok = "facing" in info and "flanking" in info and "facing_bonus" in info
+    return ("PASS" if ok else "FAIL", f"keys_present={ok} facing={info.get('facing')}")
+
+
 # ===========================================================================
 # Runner
 # ===========================================================================

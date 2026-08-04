@@ -74,6 +74,17 @@
 
 ## Design Direction Notice
 
+> **Combat canon hierarchy (R-01, approved 2026-06):** the Combat Overview below
+> is **Gameplay Canon (design authority)** — how combat should feel. The
+> **implementation authority (Technical Canon)** is the `tactical/` package +
+> `Combat_Gameplay_Architecture.md`, now the single combat runtime. Mechanics
+> described here that the engine does not yet have (Facing, Flanking, Shield
+> Stance, Downed/Death, Initiative, Support Actions, four-hero party) are
+> **Planned Additive** and are being migrated onto `tactical/` in phases. The old
+> terminal `combat.py` + `enemy_manager.py` are **Compatibility Layers** and must
+> not be extended. See `docs/design_decisions/R-01-combat-canon.md`.
+
+
 > **As of July 2026, the project's long-term design direction has been officially updated.**  
 > The game is now targeting a **Stylized 3D Tactical RPG** with isometric camera and stylized fantasy art.  
 > The previous sprite-based / gacha-inspired direction is no longer the primary foundation.  

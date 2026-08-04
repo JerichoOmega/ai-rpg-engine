@@ -1,5 +1,16 @@
 # Combat System
 
+> **Canon role (R-01, approved 2026-06): GAMEPLAY CANON — Design Authority.**
+> This document defines how combat should ultimately *feel* and the long-term
+> feature set (Facing, Flanking, Shield Stance, Downed/Death, Initiative, Support
+> Actions, four-hero party, tactical identity, pacing). The **implementation
+> authority** (single combat runtime) is the `tactical/` package +
+> `Combat_Gameplay_Architecture.md` (Technical Canon). Mechanics below not yet in
+> the engine are **Planned Additive** and are being migrated in order (Phase A:
+> Facing/Flanking/Opportunity/readability → B: Downed/Death → C: Shield Stance/
+> Support Actions → D: Initiative/party/polish). See
+> `docs/design_decisions/R-01-combat-canon.md`.
+>
 > **Document Status:** Canonical design direction as of July 2026.  
 > **Authority:** This document defines the target combat design for the Stylized 3D Tactical RPG. It supersedes any earlier combat design notes not explicitly preserved here.  
 > **Relationship to terminal prototype:** The current Python terminal implementation (`combat.py`) is the active prototype. It does not yet implement the grid, AP economy, facing, or downed system described here. The terminal prototype remains authoritative for *what exists now*; this document is authoritative for *where combat is going*.  

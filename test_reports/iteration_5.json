@@ -1,0 +1,31 @@
+{
+  "summary": "Independent Phase A verification for /app/tactical (terminal Python RPG). Ran the built-in harness (`python -m tactical.verify`) — exit 0, FOUNDATION STABLE: YES, 40 checks / 38 PASS / 0 FAIL / 2 WARN (the two WARNs are pre-existing Phase-2 wiring items, not Phase A). Then wrote /app/backend/tests/test_phase_a_facing_flanking.py — 29 independent pytest checks covering facing math, shared hit-chance breakdown, flank damage/log tag, opportunity attacks (fires, no-fire when still adjacent, ranged non-adjacent skipped, one swing per foe per move), movement_preview readability, facing set after move/attack, and full regressions (armor math, ranged range gate, all 74 blueprints spawn, auto_battle terminates with OA active, three build_group encounters run to a decisive outcome within the round cap). 29/29 pass.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/test_phase_a_facing_flanking.py",
+    "/app/test_reports/pytest/phase_a.xml",
+    "/app/tactical/verification_report.json"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "compute_hit_chance clamps to max 0.95; because guardian/brute default accuracy is already ~0.85–0.9, a +0.20 rear flank is effectively capped at +0.10 in-play (0.85 front -> 0.95 rear). If the design intent is 'rear is always ~+0.20 over front', consider either lowering the cap for flanking cases or acknowledging the cap in the docs/preview so the player sees the actual delta rather than the nominal one. Not a bug per spec, but the tests deliberately dropped accuracy to 0.5 to observe the full FACING_HIT delta.",
+    "actions._resolve_attack sets attacker.facing BEFORE the evasion early-return; this is actually the desired behaviour (an attacker who committed the swing still turns to face the target) but worth an inline comment because it looks like a bug at a glance.",
+    "actions.move triggers opportunity attacks based on adj_before snapshot at start of movement — correct — but if the mover is killed mid-path by a reaction_shot, the OA loop is still entered (guarded by `if unit.alive`). That is fine; keeping the note here so future refactors do not remove the alive guard.",
+    "facing.dir_from_to breaks ties toward horizontal on pure diagonals (dx==dy). Intentional per current code; if diagonal movement is ever added, this rule should be re-audited so a NE step does not silently register as 'E'.",
+    "Two harness WARNs remain (missing AI profiles for caster/ambusher/defender/aggressive subtypes; skill/item/ability wiring not yet plumbed). These are explicitly Phase 2/6 work per the harness message and are NOT Phase A regressions."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_phase_a_facing_flanking.py"
+  ],
+  "success_rate": {"backend": "100% (29/29 independent + 38/38 non-WARN harness checks)", "frontend": "N/A - terminal Python RPG"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None. Pure Python tests, no side effects on world_state (auto_battle regressions run on freshly-built battlefields).",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Phase A (facing/flanking/opportunity/readability) is fully verified. Independent tests live in /app/backend/tests/test_phase_a_facing_flanking.py (uses a FixedRandom rng shim: .random()->0.0 -> always hits, .randint(a,b)->a -> deterministic damage). Key nuance: compute_hit_chance is clamped at 0.95, so to see the full +0.20 rear bonus in a diff-test you must set attacker.accuracy <= 0.75 (tests use 0.5). defender.facing=None is treated as 'front' from every direction (backward-compat) — do NOT set facing in legacy damage tests. Ranger has _prepare_reaction='reaction_shot' by default and its prepare_stance can auto-arm; the OA-ranged-foe test explicitly clears it. The two harness WARNs (missing AI profile subtypes; unwired skill/item actions) are Phase 2/6 work and pre-existed Phase A.",
+  "rca of the issue": "No live issues. The two initial test failures in this iteration were TEST-SIDE bugs (mine): compute_hit_chance clamps at 0.95, so with attacker.accuracy=0.9 the +0.20 rear bonus was clipped to +0.05. Dropped test-attacker accuracy to 0.5 to observe the full FACING_HIT delta. All Phase A behaviours match the R-01 gameplay canon and no previously-verified foundation behaviour regressed."
+}

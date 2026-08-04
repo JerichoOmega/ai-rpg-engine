@@ -47,6 +47,7 @@ class Combatant:
         self.y = y
         self.statuses: List[str] = []
         self.prepare_stance: Optional[str] = None
+        self.facing: Optional[str] = None      # set on move/attack (Phase A)
 
         if blueprint is not None:
             self._init_from_blueprint(blueprint)

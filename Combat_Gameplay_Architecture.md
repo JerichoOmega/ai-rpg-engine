@@ -1,6 +1,13 @@
 # Combat & Gameplay Architecture
 
-> **Version 1.0 · Status: CANON · Priority: Critical**
+> **Version 1.0 · Status: TECHNICAL CANON (Implementation Authority) · Priority: Critical**
+>
+> **Canon hierarchy (R-01, approved 2026-06):** this document + the `tactical/`
+> package are the **Technical Canon** — the single combat runtime all future
+> combat work builds on. The **Gameplay Canon** (design authority for how combat
+> should *feel*) is `docs/GAME_BIBLE.md` + `docs/COMBAT_SYSTEM.md`. The engine
+> evolves *additively* to satisfy the gameplay canon; it is never rewritten to
+> match an older document. See `docs/design_decisions/R-01-combat-canon.md`.
 >
 > This is a foundational, canonical design document. From this point forward,
 > **every new combat feature must be evaluated against this document before

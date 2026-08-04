@@ -1,7 +1,7 @@
 {
   "summary": {
-    "total": 34,
-    "passed": 32,
+    "total": 40,
+    "passed": 38,
     "failed": 0,
     "warned": 2,
     "foundation_stable": true
@@ -210,6 +210,42 @@
       "name": "Skill/Item actions + ability wiring",
       "status": "WARN",
       "detail": "incomplete: skill_action=False item_action=False ai_uses_abilities=False (enemy/class abilities are currently decorative; wiring is Phase 2/Phase 6 work)"
+    },
+    {
+      "category": "Facing (Phase A)",
+      "name": "relative_arc front/side/rear",
+      "status": "PASS",
+      "detail": "front=front rear=rear side=side uncommitted=front"
+    },
+    {
+      "category": "Facing (Phase A)",
+      "name": "Flank raises hit chance (rear > front)",
+      "status": "PASS",
+      "detail": "front=0.85 rear=0.95 flanking=True"
+    },
+    {
+      "category": "Facing (Phase A)",
+      "name": "Rear flank multiplies damage 1.25x",
+      "status": "PASS",
+      "detail": "rear damage=12 (expected int(10*1.25)=12)"
+    },
+    {
+      "category": "Facing (Phase A)",
+      "name": "Opportunity attack when leaving melee reach",
+      "status": "PASS",
+      "detail": "opportunity_fired=True"
+    },
+    {
+      "category": "Facing (Phase A)",
+      "name": "Preview warns of provoked opportunity attacks",
+      "status": "PASS",
+      "detail": "provokes_from=['Grunt']"
+    },
+    {
+      "category": "Facing (Phase A)",
+      "name": "Hit-chance breakdown exposes facing (readability)",
+      "status": "PASS",
+      "detail": "keys_present=True facing=front"
     }
   ]
 }

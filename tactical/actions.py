@@ -14,6 +14,7 @@ from __future__ import annotations
 from typing import Tuple
 
 from .inspection import compute_hit_chance, chebyshev
+from .facing import dir_from_to, FACING_DMG
 from .tiles import OBJECTS
 
 XY = Tuple[int, int]
@@ -34,9 +35,18 @@ def move(engine, unit, target: XY) -> bool:
     if cost > unit.move:
         return False
 
+    # Melee foes the mover starts adjacent to may get an opportunity attack
+    # if the mover leaves their reach (Phase A).
+    adj_before = [e for e in engine.enemies_of(unit)
+                  if e.alive and e.attack_range <= 1
+                  and chebyshev(e.pos, unit.pos) == 1]
+
     bf.tile(unit.x, unit.y).occupant = None
+    prev = unit.pos
     for step in path[1:]:
+        unit.facing = dir_from_to(prev, step)
         unit.x, unit.y = step
+        prev = step
         _trigger_reaction_shots(engine, mover=unit)
         if not unit.alive:
             break
@@ -44,6 +54,15 @@ def move(engine, unit, target: XY) -> bool:
     if unit.alive:
         bf.tile(unit.x, unit.y).occupant = unit.id
     engine.log.append(f"{unit.name} moves to {unit.pos} (cost {cost})")
+
+    if unit.alive:
+        for foe in adj_before:
+            if foe.alive and chebyshev(foe.pos, unit.pos) > 1:
+                engine.log.append(
+                    f"{foe.name} makes an opportunity attack on {unit.name}!")
+                _resolve_attack(engine, foe, unit, reaction=True)
+                if not unit.alive:
+                    break
     return True
 
 
@@ -75,6 +94,7 @@ def attack(engine, attacker, defender) -> bool:
 
 def _resolve_attack(engine, attacker, defender, reaction: bool = False) -> None:
     info = compute_hit_chance(engine, attacker, defender)
+    attacker.facing = dir_from_to(attacker.pos, defender.pos)
     if defender.prepare_stance == "evasion":
         defender.prepare_stance = None
         engine.log.append(f"{defender.name} evades {attacker.name}'s attack.")
@@ -87,12 +107,16 @@ def _resolve_attack(engine, attacker, defender, reaction: bool = False) -> None:
         crit = engine.rng.random() < getattr(attacker, "crit_chance", 0.05)
         if crit:
             damage = int(damage * 1.5)
+        # Flanking (side/rear) increases damage (Phase A).
+        damage = int(damage * FACING_DMG.get(info.get("facing", "front"), 1.0))
         # Armor reduces damage (minimum 1 gets through).
         damage = max(1, damage - getattr(defender, "armor", 0))
         defender.hp -= damage
+        flank = "" if info.get("facing") == "front" else \
+            f" {info['facing'].upper()} FLANK"
         tag = " CRIT" if crit else ""
         engine.log.append(
-            f"{attacker.name} hits {defender.name} for {damage}{tag} "
+            f"{attacker.name} hits {defender.name} for {damage}{tag}{flank} "
             f"(chance {info['chance']:.0%}, cover {info['cover']}, "
             f"armor {getattr(defender, 'armor', 0)})")
         if defender.hp <= 0:
