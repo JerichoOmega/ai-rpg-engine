@@ -13,9 +13,10 @@ player's hands:
                  quest and world-event systems
 * World map   -> ``world_map`` (already dynamic / discovery-filtered)
 
-Combat is intentionally untouched: encounters are launched through the
-existing ``combat.quick_encounter`` entry point, so this stays compatible with
-whichever combat model becomes canonical (R-01).
+Standard overworld encounters route through the canonical tactical engine via
+``combat_bridge.start_encounter`` (R-01 Technical Canon); the legacy
+``combat.quick_encounter`` runtime is a compatibility layer and is no longer the
+entry point for exploration combat.
 """
 
 from __future__ import annotations

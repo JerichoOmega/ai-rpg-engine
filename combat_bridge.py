@@ -182,7 +182,6 @@ def start_encounter(region: Optional[str] = None,
     bf = _build_battlefield(str(biome).lower(), region)
     party = _build_party()
     for i, unit in enumerate(party):
-        bf.tile(0, i % HEIGHT).occupant = None  # placement handled by engine.start
         unit.x, unit.y = 0, i % HEIGHT
 
     enemies = tac_encounters.build_group(group_id, battlefield=bf)

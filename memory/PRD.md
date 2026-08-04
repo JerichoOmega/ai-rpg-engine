@@ -126,3 +126,20 @@ C (shield stance/support actions) → D (initiative/party/polish).
   `test_reports/iteration_5.json`; report `docs/verification/phaseA_facing_flanking.md`.
 - No regressions; legacy `combat.py`/`enemy_manager.py` untouched.
 - **Next: Phase B (Downed/Death/Recovery).**
+
+## Combat Bridge (audit C1) — COMPLETE (2026-06)
+Every STANDARD overworld encounter now runs on the canonical tactical engine.
+- **New:** `combat_bridge.py` (overworld→tactical entry: party from world+companions,
+  blueprint enemies via `tactical.encounters.build_group`, biome→group map, fairness
+  cap, reward/HP write-back via `award_xp_to_roster`/gold/`generate_loot`);
+  `tactical/session.py` (interactive terminal combat UI + headless mode).
+- **Wired:** `world_actions.explore_menu` "Hunt" → `combat_bridge.start_encounter`.
+  Legacy `combat.py`/`enemy_manager` = Compatibility Layers (not reachable from the
+  standard path, not extended).
+- **Verified:** `backend/tests/test_combat_bridge.py` 18/18; full backend suite 91/91;
+  tactical harness STABLE; `test_reports/iteration_6.json`;
+  report `docs/verification/combat_bridge.md`.
+- Follow-ups (later phases): threat-budget scaling + real 4-hero party; city
+  encounter groups (urban→roadside stopgap).
+- **Approved sequence next:** enemy personality profiles → Phase B (Downed/Death)
+  → combat feedback → one polished vertical slice before broad content.
