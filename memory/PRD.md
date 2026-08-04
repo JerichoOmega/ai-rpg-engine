@@ -190,3 +190,29 @@ canonical pipeline with zero duplicate implementations.
 - **Next (per user direction):** ONE polished **vertical-slice showcase
   encounter** (elevation + cover + flanking + hazards + distinct AI +
   companion) — NOT Phase B (Downed/Death) yet.
+
+## Gold-Standard Vertical-Slice Encounter — "The Sundered Span" — COMPLETE (2026-06)
+The single hand-built reference battle that demonstrates EVERY canonical combat
+pillar at once — the benchmark for all future encounter design (not a template
+to mass-produce).
+- **`tactical/showcase.py`** — a 12×7 ravine-bridge ambush: 4-hero party
+  (Guardian/Ranger/Mage/Rogue, healing potions) vs 5 distinct goblin AI
+  archetypes (Warlord commander/buffs, Shaman support/heals, Bridge Warden
+  defender, Ridge Sniper skirmisher, Corrupted Raider brute). Impassable ravine
+  with a bridge chokepoint + slow ford; player & enemy high ground; half/full
+  cover; oil + explosive barrel hazard. `pillar_manifest()` maps all 15 pillars
+  to a feature + the decision it creates; `tactician_controller()` is the
+  reference good-play oracle.
+- **Design thesis (verified):** button-mashing LOSES (naive both-AI 0/30),
+  competent tactics WIN (~23/30, ~77%), decisive in ~13 rounds. Armoured foes
+  make flanking/high-ground/abilities/focus-fire the correct answers, not
+  optional flavour.
+- **Play:** `python scripts/play_showcase.py` (interactive) /
+  `python scripts/showcase_report.py` (headless demo + win-rate).
+- **Verified:** `backend/tests/test_showcase_encounter.py` 19/19; full backend
+  216/216; harness 62/62/0; independent testing-agent
+  `test_reports/iteration_9.json` 100%, 0 issues. Reference doc:
+  `docs/design/encounters/gold_standard_sundered_span.md` (seeds the Encounter
+  Design Bible).
+- **Next:** Encounter Design Bible (archetypes/terrain/composition rules derived
+  from this encounter) → combat readability pass → Phase B (Downed/Death).

@@ -7,6 +7,29 @@
 
 ---
 
+## [v0.6.4] — June 2026 — Gold-Standard Encounter: "The Sundered Span" [CONFIRMED]
+
+The reference vertical-slice battle that demonstrates every canonical combat
+pillar at once — the benchmark for the Encounter Design Bible.
+
+- **`tactical/showcase.py`** — a 12×7 ravine-bridge ambush: 4 heroes (with
+  healing potions) vs 5 distinct goblin AI archetypes (commander/support/
+  defender/skirmisher/brute). Impassable ravine + bridge chokepoint + slow ford,
+  two-sided high ground, half/full cover, oil + explosive-barrel hazard.
+  `pillar_manifest()` maps all 15 pillars to feature + decision;
+  `tactician_controller()` is the reference good-play oracle.
+- **Thesis (verified):** button-mashing loses (naive both-AI 0/30), competent
+  tactics win (~77%), decisive in ~13 rounds — armour makes flanking, high
+  ground, abilities and focus-fire the *correct* answers.
+- **Entry points:** `scripts/play_showcase.py` (interactive),
+  `scripts/showcase_report.py` (demo + win-rate).
+- **Verification:** `backend/tests/test_showcase_encounter.py` 19/19; full
+  backend 216/216; harness 62/62/0; independent testing-agent
+  `test_reports/iteration_9.json` 100%/0 issues. Reference doc:
+  `docs/design/encounters/gold_standard_sundered_span.md`.
+
+---
+
 ## [v0.6.3] — June 2026 — Combat Phase C: Canonical Ability Pipeline [CONFIRMED]
 
 The tactical combat engine is now **feature-complete** — abilities are

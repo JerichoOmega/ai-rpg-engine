@@ -243,6 +243,18 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 
 ## Recently Completed Work
 
+- **Gold-Standard Encounter "The Sundered Span" (2026-06):** The single
+  hand-built reference battle demonstrating every canonical combat pillar at
+  once — the benchmark for all future encounter design. `tactical/showcase.py`
+  (4 heroes with potions vs 5 distinct goblin AI archetypes on a ravine-bridge
+  ambush with high ground, cover, a chokepoint + ford, and an oil/barrel
+  hazard). Thesis verified: button-mashing loses (naive AI 0/30), competent
+  tactics win (~77%), decisive in ~13 rounds. Play: `python scripts/play_showcase.py`;
+  demo: `python scripts/showcase_report.py`. Tests
+  `backend/tests/test_showcase_encounter.py` 19/19; full backend 216/216;
+  independent testing-agent `test_reports/iteration_9.json` 100%. Reference doc:
+  [`docs/design/encounters/gold_standard_sundered_span.md`](docs/design/encounters/gold_standard_sundered_span.md).
+
 - **Combat Phase C — Canonical Ability Pipeline (2026-06):** The tactical
   combat engine is now **feature-complete**. Abilities are first-class actions
   on the single canonical `tactical/` pipeline: one authoritative
