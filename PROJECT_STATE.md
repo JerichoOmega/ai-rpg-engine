@@ -243,6 +243,20 @@ See [`docs/architecture.md`](docs/architecture.md) for the full component map.
 
 ## Recently Completed Work
 
+- **Combat Phase C — Canonical Ability Pipeline (2026-06):** The tactical
+  combat engine is now **feature-complete**. Abilities are first-class actions
+  on the single canonical `tactical/` pipeline: one authoritative
+  `ability_preview()` API (AP/cooldown/range/LOS/legal-target/AoE/expected
+  effect/failure reason), data-driven cooldowns (`unit.cooldowns`, ticked in
+  `start_of_turn`, save/load compatible), and profile-driven AI ability usage
+  (Commander rally, Support heal, Necromancer summon, Caster control) with no
+  enemy-specific code. Harness `python -m tactical.verify` 62/62 PASS 0 WARN
+  (last Skill/Item WARN eliminated); backend suite 175 passed; independent
+  testing-agent 100% (`test_reports/iteration_8.json`). See
+  [`docs/systems/tactical_abilities.md`](docs/systems/tactical_abilities.md)
+  and [`docs/verification/phaseC_ability_pipeline.md`](docs/verification/phaseC_ability_pipeline.md).
+  **Next:** one polished vertical-slice showcase encounter (not Phase B yet).
+
 - **Legacy Questline Architecture (2026-06-15):** New reusable `legacy/` package delivering the three approved Legacy Questlines (The Debt Comes Due, What the Forest Carries, Eternal Forge) as data-driven content on 13 reusable frameworks (quest runner, dialogue trees, speech checks, companion affinity + banter, split party, timed objectives, multi-stage/ritual encounters, environmental puzzles, living world, reputation, civilization relationships, consequences). Wired into `game_loop.py` (menu option 11) and `world_state["legacy"]` with save migration. Automated harness passes 6/6. See [`docs/handoffs/2026-06-15-legacy-questline-integration.md`](docs/handoffs/2026-06-15-legacy-questline-integration.md), [`docs/systems/legacy_quest_framework.md`](docs/systems/legacy_quest_framework.md), and [`legacy/README.md`](legacy/README.md).
 - **Engine stabilization (2026-07-31):** Eliminated dual player-state (`world_state` is now sole authority); fixed hero starting items and equipment; fixed new-game reset (progression, equipment, skills); fixed level-up stat persistence; fixed `equipped_weapon`/`weapon_bonus` sync
 - **Lore Bible expansion (2026-07-31):** Four Ages canonical framework; First Empire / First Council (`docs/lore/civilization/`); Great Library Director (Maret Cosse); House Soleth Sealed Archive contribution and exchange terms; Capital Province ruling dynasty (House Aldenmoor) and Key Figures (Queen Merveth, Marshal Voss); Ragash and Eleanor hero arc depth; Mossroot first contact scene

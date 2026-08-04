@@ -160,3 +160,33 @@ Priority 1/5 of the Engine→Game directive. Reusable, data-driven AI library.
 - **Remaining WARN = Skill/Item ability wiring** (next). Archetype aliases
   (defender≈defensive, ambusher≈assassin) fully differentiate once abilities land.
 - **Next: Ability/Item usage → Phase B (Downed/Death) → combat feedback → vertical slice.**
+
+## Combat Phase C — Canonical Ability Pipeline — COMPLETE (2026-06)
+The tactical combat engine is now **feature-complete**: Move, Attack, Prepare,
+Opportunity, Facing/Flanking, Cover/Elevation, AI personalities, and now
+Ability preview + execution + cooldowns + AI ability usage all run on ONE
+canonical pipeline with zero duplicate implementations.
+- **`tactical/abilities_engine.py`** — single authoritative `ability_preview()`
+  (name/AP/cooldown/range/LOS/legal-target/AoE/friendly-fire/expected
+  damage&healing/buffs/debuffs/status/tactical_value/usable/failure_reason).
+  `use_skill()` is gated by that preview (what the player sees is enforced).
+- **Data-driven cooldowns** — per-ability `cooldown` field; tracked in
+  `unit.cooldowns`; ticked once in `start_of_turn`; block reuse; save/load via
+  `export_state`/`import_state`. No hardcoded ability-specific cooldown logic.
+- **AI (`ai.py` `take_turn`)** — evaluates a worthwhile ability BEFORE movement,
+  then move, then attack-ability/basic-attack. `choose_ability` reads the same
+  preview the player UI does; profile flags (`coordinates`/`buffs_allies`/
+  `summons`/`kites`) give gentle role multipliers — no enemy-specific code.
+- **Effects** — attack/movement_attack/summon(+heal_zone)/heal/buff/zone/
+  control/debuff/terrain/movement handlers; status lifecycle (rooted, poison
+  DoT, shielded, emboldened/marked/hexed/cursed); `raise_skeleton` added; class
+  abilities capped to AP≤2 to fit the 2-AP economy.
+- **Verified:** harness `python -m tactical.verify` **62/62 PASS, 0 WARN**
+  (last Skill/Item WARN eliminated); full backend suite **175 passed**;
+  independent testing-agent `test_reports/iteration_8.json` 100%, 0 issues.
+  Docs: `docs/systems/tactical_abilities.md`,
+  `docs/verification/phaseC_ability_pipeline.md`. New suite
+  `backend/tests/test_ability_pipeline.py` (31 tests).
+- **Next (per user direction):** ONE polished **vertical-slice showcase
+  encounter** (elevation + cover + flanking + hazards + distinct AI +
+  companion) — NOT Phase B (Downed/Death) yet.

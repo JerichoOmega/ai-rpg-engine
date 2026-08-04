@@ -145,9 +145,12 @@ def ability_preview(engine, unit, ability_id: str, target=None,
     target_required = typ in _TARGET_TYPES
     tile_required = typ in _TILE_TYPES
 
-    expected_damage = (_base_damage(unit, ab)
-                       if typ in ("attack", "movement_attack")
-                       or (typ == "terrain" and "damage" in ab) else None)
+    if typ in ("attack", "movement_attack"):
+        expected_damage = _base_damage(unit, ab)
+    elif "damage" in ab:                    # control/terrain w/ splash damage
+        expected_damage = int(ab["damage"])
+    else:
+        expected_damage = None
     expected_healing = (int(ab.get("heal", 8))
                         if typ == "heal" or ab.get("effect") == "heal_zone"
                         else None)

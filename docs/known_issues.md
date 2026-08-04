@@ -192,6 +192,9 @@ Duplicate entry — see the 🔴 Critical item at the top.
 | `region_manager.py` missing `show_regions()` function | July 2026 | Added wrapper function |
 | Dead imports in 5 modules | July 2026 | All removed |
 | Old save files missing new world_state schema keys | July 2026 | `ensure_world_state_defaults()` added |
+| Tactical combat: Skill/Item abilities unwired (decorative) | June 2026 | Combat Phase C: full canonical ability pipeline (preview API, data-driven cooldowns, AI ability usage). Harness WARN eliminated. See `docs/verification/phaseC_ability_pipeline.md` |
+| Class abilities cost 3 AP but classes only had 2 AP (unusable) | June 2026 | Capped class abilities to AP≤2 (full-turn cost) in `abilities.json` |
+| Enemy blueprint referenced undefined ability `raise_skeleton` | June 2026 | Added `raise_skeleton` to `ability_library.json`; harness guards every blueprint ability id resolves |
 
 ---
 

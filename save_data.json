@@ -1,7 +1,7 @@
 {
     "save_version": 2,
     "inventory": [
-        "steel_armor"
+        "obsidian_helmet"
     ],
     "equipment": {
         "weapon": null,
@@ -43,7 +43,7 @@
             "weapon_bonus": 0,
             "equipped_weapon": "Rusty Sword",
             "inventory": [
-                "steel_armor"
+                "obsidian_helmet"
             ],
             "class": "Warrior",
             "magic_power": 0

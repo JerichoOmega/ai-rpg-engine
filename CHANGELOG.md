@@ -7,9 +7,37 @@
 
 ---
 
-## [v0.5.1] — June 2026 — Legacy Framework Production Hardening [CONFIRMED]
+## [v0.6.3] — June 2026 — Combat Phase C: Canonical Ability Pipeline [CONFIRMED]
 
-Hardened the Legacy Quest Framework for long-term production (no new quests,
+The tactical combat engine is now **feature-complete** — abilities are
+first-class actions on the one canonical `tactical/` pipeline (no duplicate
+combat path).
+
+- **Single source of truth:** `tactical/abilities_engine.py:ability_preview()`
+  exposes AP cost, cooldown, range, LOS, legal target, AoE, friendly-fire,
+  expected damage/healing, buffs/debuffs/status, tactical value, and a
+  `failure_reason`. Player UI, AI, and harness all read it; `use_skill()` is
+  gated by it.
+- **Data-driven cooldowns:** per-ability `cooldown` field, tracked in
+  `unit.cooldowns`, ticked once in `start_of_turn`, save/load via
+  `export_state`/`import_state`. No per-ability hardcoding.
+- **AI ability usage:** `choose_ability()` reads the same preview; profile flags
+  (`coordinates`/`buffs_allies`/`summons`/`kites`) reinforce roles — Commander
+  rallies, Support heals, Necromancer summons, Caster controls — with no
+  enemy-specific code. Abilities are considered before movement.
+- **Effects:** attack/movement_attack/summon(+heal_zone)/heal/buff/zone/control/
+  debuff/terrain/movement; status lifecycle (rooted, poison DoT, shielded,
+  emboldened/marked/hexed/cursed); added `raise_skeleton`; class abilities capped
+  to AP≤2 to fit the 2-AP economy.
+- **Verification:** `python -m tactical.verify` **62/62 PASS, 0 WARN** (last
+  Skill/Item WARN eliminated); backend suite **175 passed**; independent
+  testing-agent `test_reports/iteration_8.json` 100%/0 issues. Docs:
+  `docs/systems/tactical_abilities.md`,
+  `docs/verification/phaseC_ability_pipeline.md`.
+
+---
+
+## [v0.5.1] — June 2026 — Legacy Framework Production Hardening [CONFIRMED]Hardened the Legacy Quest Framework for long-term production (no new quests,
 no canon changes, save-compatible, existing APIs preserved).
 
 - **Audit:** every framework confirmed reusable and quest-type agnostic (`docs/systems/legacy_framework_audit.md`).
