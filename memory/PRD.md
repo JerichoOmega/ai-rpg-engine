@@ -59,3 +59,36 @@ encounter per quest; lasting Living-World consequences.
 - Play: `python main.py` → menu → 11. Legacy Questlines.
 - Regression: `python legacy/harness.py` (report: `legacy/harness_report.json`).
 - Dev tools: `from legacy import dev_tools`.
+
+---
+
+## Tactical Combat Foundation — Phase 1 verified (2026-06)
+- `tactical/` grid engine independently verified STABLE against
+  `Combat_Gameplay_Architecture.md`: 32/32 harness PASS + 21/21 testing-agent
+  tests (`/app/test_reports/iteration_3.json`). Harness: `python -m tactical.verify`.
+  Report + checklist: `docs/verification/phase1_combat_foundation.md`.
+- Tracked debt (Phase 2/6): Skill/Item actions unwired (abilities decorative),
+  Mage Spell Focus no-op, 4 AI-profile names missing from `ai_profiles.json`.
+- **OPEN DECISION R-01 (blocks combat unification):** combat-canon conflict
+  between `Combat_Gameplay_Architecture.md` (move+AP, Prepare, N-party) and
+  `docs/GAME_BIBLE.md`/`docs/COMBAT_SYSTEM.md` (MP+AP+Support, Facing, Shield
+  Stance, Downed/Death, Initiative, 4-hero party). Not to be resolved by guess.
+
+## Production Audit (2026-06)
+- Full audit: `docs/PRODUCTION_AUDIT.md`. Core finding: **engine-rich,
+  wiring-poor**; three disconnected combat/enemy stacks; deep lore, thin loop.
+- 5 gated phases, top-20/engine-10/content-10/risk-5 lists inside.
+
+## Phase 1 Wiring Sprint — DONE (2026-06)
+Goal: expose existing systems through gameplay (no new systems, no combat changes).
+- **NEW glue:** `world_actions.py` (travel/settlement/explore/map orchestration).
+- **Wired `game_loop.py`:** Explore → player-choice menu (reuses encounters/
+  quests/events); Travel → `travel_manager.travel_to_region` (destination
+  choice, region transition, road events, world tick); Regions → live
+  `world_map`; Settlements → enter-scene (services→`shop`/`black_market`,
+  faction presence, NPCs→`dialogue_manager.start_dialogue`, quest board).
+- **Verified already-fixed:** save validation (`npcs` removed from required in
+  `state_manager`); player-state sync (`player.sync_*` wired into save/load).
+- Smoke tests: `scripts/smoke_phase1_wiring.py`, `scripts/smoke_phase1_deep.py`
+  (region transition, dialogue, quest board — all pass, no exceptions).
+- No combat code touched; compatible with either R-01 outcome.

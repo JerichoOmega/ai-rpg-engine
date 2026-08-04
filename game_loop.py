@@ -251,52 +251,11 @@ def process_game_tick():
 
 def explore():
 
-    print(
-        "\n=== EXPLORING ==="
-    )
+    # Player-driven exploration: choices that reuse the existing encounter,
+    # quest and world-event systems (see world_actions.explore_menu).
+    from world_actions import explore_menu
 
-    encounter_roll = random.randint(
-        1,
-        100
-    )
-
-    # =========================
-    # COMBAT ENCOUNTER
-    # =========================
-
-    if encounter_roll <= 60:
-
-        print(
-            "\nEnemies approach!"
-        )
-
-        quick_encounter()
-
-    # =========================
-    # QUEST EVENT
-    # =========================
-
-    elif encounter_roll <= 80:
-
-        print(
-            "\nYou discover"
-            " a new opportunity."
-        )
-
-        generate_quest()
-
-    # =========================
-    # WORLD EVENT
-    # =========================
-
-    else:
-
-        print(
-            "\nYou uncover signs"
-            " of a larger threat."
-        )
-
-        generate_random_world_event()
+    explore_menu()
 
 # =========================
 # TRAVEL
@@ -304,16 +263,12 @@ def explore():
 
 def travel():
 
-    print(
-        "\n=== TRAVEL ==="
-    )
+    # Real travel: destination selection + region transition + road events,
+    # driven by the existing travel_manager (see world_actions.travel_menu).
+    # travel_menu advances the world simulation itself, so no extra tick here.
+    from world_actions import travel_menu
 
-    print(
-        "\nYou journey across"
-        " dangerous lands."
-    )
-
-    process_game_tick()
+    travel_menu()
 
 # =========================
 # REST
@@ -416,13 +371,19 @@ def run_game():
 
             show_regions()
 
+            from world_actions import world_map_menu
+
+            world_map_menu()
+
         # =========================
         # SETTLEMENTS
         # =========================
 
         elif choice == "6":
 
-            show_settlements()
+            from world_actions import settlement_menu
+
+            settlement_menu()
 
         # =========================
         # STORY
