@@ -1,0 +1,93 @@
+{
+  "talos_town_growing": {
+    "when": true,
+    "reactions": [
+      {"system": "merchant_inventory", "target": "talos_town", "add": ["stonefang_ironwork", "frontier_provisions"]},
+      {"system": "settlement_prosperity", "target": "talos_town", "delta": 2},
+      {"system": "ambient_dialogue", "target": "talos_town", "line": "New folk arrive every week now. There's work for any honest hand."},
+      {"system": "tavern_rumor", "line": "They say the little town by the river takes in anyone willing to build."}
+    ]
+  },
+  "frontier_camp_closed": {
+    "when": true,
+    "reactions": [
+      {"system": "npc_schedule", "target": "thomas_rourke", "schedule": "escorting_caravan"},
+      {"system": "refugee_movement", "from": "frontier_camp", "to": "talos_town"}
+    ]
+  },
+  "symbolic_goblins_remain_with_refugees": {
+    "when": true,
+    "reactions": [
+      {"system": "regional_reputation", "region": "frontier", "civ": "stonefang", "delta": 15},
+      {"system": "ambient_dialogue", "target": "talos_town", "line": "A few Stonefang stayed on as masons. Good with stone, better than most."}
+    ]
+  },
+  "travel_safe_frontier": {
+    "when": true,
+    "reactions": [
+      {"system": "road_safety", "target": "frontier", "delta": 2},
+      {"system": "guard_patrol", "target": "frontier", "level": 2}
+    ]
+  },
+
+  "forest_restored": {
+    "when": true,
+    "reactions": [
+      {"system": "ambient_dialogue", "target": "mothers_crossing", "line": "The water runs clear again. The forest is breathing."},
+      {"system": "tavern_rumor", "line": "The Silent Forest sings once more, they say. The Mossroot walk it freely."}
+    ]
+  },
+  "mossroot_patrols_expanded": {
+    "when": true,
+    "reactions": [
+      {"system": "guard_patrol", "target": "forest", "level": 2},
+      {"system": "regional_reputation", "region": "forest", "civ": "mossroot", "delta": 10}
+    ]
+  },
+  "travel_safe_forest": {
+    "when": true,
+    "reactions": [
+      {"system": "road_safety", "target": "forest", "delta": 2}
+    ]
+  },
+  "warden_distant_sightings": {
+    "when": true,
+    "reactions": [
+      {"system": "tavern_rumor", "line": "Travelers glimpse a mountain of moss and root moving at the treeline. The Warden walks."}
+    ]
+  },
+
+  "eternal_forge_active": {
+    "when": true,
+    "reactions": [
+      {"system": "settlement_prosperity", "target": "ancient_foundry", "delta": 3},
+      {"system": "ambient_dialogue", "target": "ancient_foundry", "line": "The Forge-light never dies again. You can feel its warmth in the stone."}
+    ]
+  },
+  "dwarven_trade_resumed": {
+    "when": true,
+    "reactions": [
+      {"system": "merchant_inventory", "target": "ancient_foundry", "add": ["dwarven_toolwork", "foundry_alloy"]},
+      {"system": "tavern_rumor", "line": "Dwarven caravans roll again out of the Foundry, laden with the finest steel."}
+    ]
+  },
+  "better_crafted_goods_available": {
+    "when": true,
+    "reactions": [
+      {"system": "merchant_pricing", "target": "ancient_foundry", "modifier": -0.10}
+    ]
+  },
+  "roads_and_bridges_improving": {
+    "when": true,
+    "reactions": [
+      {"system": "road_safety", "target": "dwarven_roads", "delta": 3}
+    ]
+  },
+  "foundry_construct_ally": {
+    "when": true,
+    "reactions": [
+      {"system": "guard_patrol", "target": "ancient_foundry", "level": 3},
+      {"system": "ambient_dialogue", "target": "ancient_foundry", "line": "A restored construct keeps watch on the gantry, faithful as the day it was forged."}
+    ]
+  }
+}

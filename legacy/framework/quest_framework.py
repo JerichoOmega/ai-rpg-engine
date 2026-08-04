@@ -352,6 +352,45 @@ class QuestManager:
             raise KeyError(f"{quest_id} has no stage {stage_id!r}")
         return QuestRunner(io=io).play(quest, start_stage=stage_id)
 
+    def complete_objective(self, quest_id: str, objective_id: str) -> None:
+        """Developer utility: mark an objective complete out of band."""
+        _complete_objective(self._quests[quest_id], objective_id)
+
+    def fail_objective(self, quest_id: str, objective_id: str) -> None:
+        """Developer utility: record an objective as failed."""
+        state = _state_for(self._quests[quest_id])
+        state["objectives"][objective_id] = False
+        emit("quest_objective_failed", quest_id=quest_id,
+             objective=objective_id)
+
+    def fail_quest(self, quest_id: str) -> None:
+        """Mark a quest failed (dev utility / future fail branches)."""
+        state = _state_for(self._quests[quest_id])
+        state["state"] = "failed"
+        emit("quest_failed", quest_name=quest_id,
+             quest={"id": quest_id, "type": "legacy"})
+
+    def set_stage(self, quest_id: str, stage_id: str) -> None:
+        """Developer utility: set the persisted current stage without playing."""
+        quest = self._quests[quest_id]
+        if stage_id not in quest.stages:
+            raise KeyError(f"{quest_id} has no stage {stage_id!r}")
+        state = _state_for(quest)
+        state["state"] = "active"
+        state["started"] = True
+        state["current_stage"] = stage_id
+
+    def export_state(self, quest_id: str) -> Dict[str, Any]:
+        """Return a JSON-serialisable snapshot of a quest's runtime state."""
+        quest = self._quests[quest_id]
+        return {
+            "quest": {"id": quest.id, "name": quest.name,
+                      "civilization": quest.civilization,
+                      "featured_companion": quest.featured_companion,
+                      "stage_order": quest.stage_order()},
+            "state": dict(_state_for(quest)),
+        }
+
 
 # Module-level singleton the game and tools share.
 manager = QuestManager()

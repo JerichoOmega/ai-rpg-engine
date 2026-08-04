@@ -44,6 +44,10 @@ def register_all() -> List[Quest]:
     global _REGISTERED
     ensure_legacy_world_state()
 
+    # Connect Living-World flags to reusable world reactions (Phase 4).
+    from . import living_world_reactions
+    living_world_reactions.install()
+
     from legacy.quests import (debt_comes_due, what_the_forest_carries,
                                eternal_forge)
 

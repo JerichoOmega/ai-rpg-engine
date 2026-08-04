@@ -150,3 +150,106 @@ def snapshot() -> None:
     world_flags.show_living_world()
     companion_affinity.show_affinity()
     reputation.show_civilizations()
+
+
+# ---------------------------------------------------------------------------
+# Objectives / quest state
+# ---------------------------------------------------------------------------
+def complete_objective(quest_id: str, objective_id: str) -> None:
+    manager.complete_objective(quest_id, objective_id)
+    print(f"[dev] {quest_id}: objective '{objective_id}' completed")
+
+
+def fail_objective(quest_id: str, objective_id: str) -> None:
+    manager.fail_objective(quest_id, objective_id)
+    print(f"[dev] {quest_id}: objective '{objective_id}' failed")
+
+
+def fail_quest(quest_id: str) -> None:
+    manager.fail_quest(quest_id)
+    print(f"[dev] {quest_id}: quest failed")
+
+
+def set_stage(quest_id: str, stage_id: str) -> None:
+    """Set the persisted current stage without playing (jump-in point)."""
+    manager.set_stage(quest_id, stage_id)
+    print(f"[dev] {quest_id}: current stage set to '{stage_id}'")
+
+
+def export_quest_state(quest_id: str, path: Optional[str] = None) -> Dict:
+    """Return (and optionally write) a JSON snapshot of a quest's state."""
+    import json
+    state = manager.export_state(quest_id)
+    if path:
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(state, fh, indent=2)
+        print(f"[dev] exported {quest_id} state -> {path}")
+    else:
+        print(json.dumps(state, indent=2))
+    return state
+
+
+# ---------------------------------------------------------------------------
+# Reputation / civilizations
+# ---------------------------------------------------------------------------
+def change_reputation(faction: str, amount: int) -> None:
+    reputation.adjust_reputation(faction, amount)
+    print(f"[dev] reputation {faction} {amount:+d}")
+
+
+def set_standing(civ: str, amount: int) -> None:
+    reputation.adjust_standing(civ, amount)
+
+
+def set_relationship(civ_a: str, civ_b: str, amount: int) -> None:
+    reputation.adjust_relationship(civ_a, civ_b, amount)
+
+
+# ---------------------------------------------------------------------------
+# Living World
+# ---------------------------------------------------------------------------
+def force_world_update() -> None:
+    """Force a full recompute of Living-World reactions and print them."""
+    from legacy.framework import living_world_reactions
+    living_world_reactions.recompute()
+    living_world_reactions.show_reactions()
+
+
+def show_reactions() -> None:
+    from legacy.framework import living_world_reactions
+    living_world_reactions.show_reactions()
+
+
+# ---------------------------------------------------------------------------
+# NPCs / cinematics
+# ---------------------------------------------------------------------------
+def spawn_npc(name: str, **attributes) -> Dict:
+    """Register a quest-specific NPC in the engine roster (best-effort).
+
+    Falls back to a Living-World record if npc_manager is unavailable, so a
+    developer always has a spawned marker to work with.
+    """
+    entry = {"name": name, **attributes}
+    try:
+        import npc_manager
+        registry_dict = getattr(npc_manager, "NPCS", None)
+        if isinstance(registry_dict, dict):
+            registry_dict[name] = entry
+            print(f"[dev] spawned NPC '{name}' in npc_manager.NPCS")
+            return entry
+    except Exception:
+        pass
+    world_state.setdefault("legacy", {}).setdefault(
+        "debug_npcs", {})[name] = entry
+    print(f"[dev] spawned NPC '{name}' (legacy debug registry)")
+    return entry
+
+
+def skip_cinematic(quest_id: str, to_stage: str) -> None:
+    """Skip narrative and jump the persisted state to a later stage.
+
+    Cinematics in this engine are ``narrate`` steps; skipping is simply
+    advancing the current stage past them without replaying narration.
+    """
+    manager.set_stage(quest_id, to_stage)
+    print(f"[dev] {quest_id}: skipped ahead to '{to_stage}'")

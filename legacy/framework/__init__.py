@@ -22,10 +22,12 @@ from . import (  # noqa: F401
     split_party,
     consequences,
     quest_framework,
+    living_world_reactions,
 )
 
 __all__ = [
     "io", "world_flags", "reputation", "companion_affinity",
     "speech_checks", "dialogue_trees", "puzzles", "timed_objectives",
     "encounters", "split_party", "consequences", "quest_framework",
+    "living_world_reactions",
 ]
