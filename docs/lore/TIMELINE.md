@@ -88,6 +88,53 @@ For fuller treatment of each age, see `HISTORY_BIBLE.md`.
 
 ---
 
+## Clan Ironhall — Historical Anchors
+Cross-referenced entries anchoring **[Clan Ironhall](../world/factions/clan_ironhall.md)**
+(a dwarven craft-honour clan of the Iron Peaks) within the world chronology. These
+**connect existing canon rather than inventing new world history**; exact eras/dates
+use `_TBD_` where not yet canon.
+
+### Founding — Baelor Ironhall *(deep past — era `_TBD_`)*
+- **Baelor Ironhall** — *The First Builder / The Stonewright / The First Master* —
+  **founds Clan Ironhall** and establishes the Ironhall philosophy,
+  *"Truth is the first measurement."*
+- He **forges the Founder's Compass** (the clan's living historical record), builds
+  the **earliest Ironhall Great Forge**, and **begins the lineage of Clan Masters.**
+- **Chronological placement:** the deep past of dwarven craft — plausibly spanning
+  the Age of Awakening's *first cities and organized communities* into the great
+  building era of the Age of Harmony. **Exact age/date: `_TBD_`** (dwarven clan
+  founding predates most surviving human records). Full canon:
+  [`clan_ironhall.md`](../world/factions/clan_ironhall.md#baelor-ironhall--the-first-builder).
+
+### The Broken Oath — Durgan Ironhall *(Age of Restoration; date `_TBD_`)*
+- **Durgan Ironhall**, **Lord Warden of the Vault**, swore an unbreakable oath to
+  guard a relic. During a **catastrophic disaster** he chose to **save the
+  kingdom's people over protecting the relic.**
+- He **accepted public disgrace rather than reveal the High King's sealed command**
+  that had released him from the oath (the King died before it could be made
+  public). **Clan Ironhall fell from honour**; the disgrace was carved into the
+  **Hall of Names.**
+- **Chronological placement:** the era of modern kingdoms and a **High King** — the
+  **Age of Restoration**, **generations before** the campaign present. Exact date:
+  `_TBD_`. This is a **separate catastrophe from the Sundering** and must not be
+  conflated with it. Full canon:
+  [`clan_ironhall.md`](../world/factions/clan_ironhall.md#historical-truth--durgan-and-the-broken-oath)
+  · quest: [`the_empty_pedestal.md`](../quests/the_empty_pedestal.md).
+
+### Restoration of Honour — Torren Ironhall *(near the end of the Age of Restoration — campaign present)*
+- **Torren Ironhall uncovers the historical truth**; the **High King's sealed
+  letter is revealed.**
+- **High Thane Borik Stoneheart restores Clan Ironhall's honour**; the disgrace is
+  **formally removed from the Hall of Names.**
+- Torren becomes the **first Ironhall Master in generations to use the Ironhall
+  Master's Seal**, and engraves his name and lesson in the Founder's Compass —
+  beginning the next generation of the clan.
+- **Chronological placement:** the campaign present (**near the end of the Age of
+  Restoration**), during/after the companion quest
+  [`The Empty Pedestal`](../quests/the_empty_pedestal.md).
+
+---
+
 ## Key Dates (Relative)
 
 | Reference Point | Age |
@@ -103,6 +150,9 @@ For fuller treatment of each age, see `HISTORY_BIBLE.md`.
 | Great Forgetting | Age of Sundering (aftermath) |
 | Modern kingdoms established | Age of Restoration |
 | Campaign begins | Near the end of Age of Restoration |
+| Clan Ironhall founded (Baelor Ironhall) | Deep past — `_TBD_` (Age of Awakening → Age of Harmony building era) |
+| The Broken Oath (Durgan Ironhall) | Age of Restoration — generations before the campaign (`_TBD_`) |
+| Clan Ironhall's honour restored (Torren Ironhall) | Near the end of Age of Restoration (campaign present) |
 
 No absolute dates are assigned. This is intentional — it allows flexibility for regional histories and prevents inconsistencies between different content creators.
 
@@ -114,3 +164,4 @@ No absolute dates are assigned. This is intentional — it allows flexibility fo
 |---|---|
 | July 2026 | Created — concise developer timeline reference covering all Seven Ages and key canonical facts per era |
 | July 2026 | Revised — canonical framework updated to Four Ages (Age of Awakening, Age of Harmony, Age of Sundering, Age of Restoration) per project owner directive; Age of Discovery and Age of Awakening consolidated into Age I; Age of Unity becomes Age of Harmony; Long Decline is now the tragic final chapter of Age II rather than a standalone age; Present Age is now the final era of Age IV rather than a separate period |
+| 2026-06 | Added **Clan Ironhall — Historical Anchors** (Baelor's founding in the deep past; Durgan's *Broken Oath* in the Age of Restoration, a separate catastrophe from the Sundering; Torren's restoration of honour at the campaign present), plus matching Key Dates rows. Cross-referenced [`clan_ironhall.md`](../world/factions/clan_ironhall.md) and [`the_empty_pedestal.md`](../quests/the_empty_pedestal.md). Additive; eras use `_TBD_` where not yet canon; no existing entries changed. |

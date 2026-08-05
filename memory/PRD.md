@@ -299,3 +299,21 @@ the_empty_pedestal.md). No assets/source touched.
   notes documenting the change); Baelor + motto present in all 3 files; 1172
   links checked, all links in edited files resolve (12 pre-existing broken links
   remain only in untouched GAME_BIBLE.md / religious_encounters.md).
+
+## Canon Maintenance — Doc-Link Repair + Ironhall Timeline (2026-06)
+Documentation-only, additive. 3 files changed: docs/GAME_BIBLE.md,
+docs/encounters/religious_encounters.md, docs/lore/TIMELINE.md.
+- **Repaired 8 genuinely broken links:** GAME_BIBLE.md `../game_tone.md`→`game_tone.md`
+  and 6× `../characters/…`→`characters/…`; religious_encounters.md fixed a
+  malformed nested link → `[**The Acceptable Risk**](../quests/threshold_circle_questline.md)`.
+  (The 4 GAME_BIBLE `#…--…` TOC anchors were never actually broken — valid `&`
+  headings; earlier report was a validator false-positive, now corrected.)
+- **Ironhall timeline integration** in `docs/lore/TIMELINE.md`: new
+  "Clan Ironhall — Historical Anchors" section + Key Dates rows — Baelor founding
+  (deep past, era `_TBD_`), Durgan's Broken Oath (Age of Restoration, generations
+  back, date `_TBD_`; explicitly a *separate* catastrophe from the Sundering),
+  and Torren's restoration (campaign present). Cross-referenced clan_ironhall.md +
+  the_empty_pedestal.md; no dwarf-only isolated history; no existing entries changed.
+- **Validation:** full link scan = **1179 links, 0 broken**. No gameplay/engine/
+  asset files modified; no duplicate lore. Intentional new `_TBD_`: exact
+  founding era, Durgan's exact date.

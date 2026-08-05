@@ -861,7 +861,7 @@ Pattern knowledge is a two-edged resource, and both edges must escalate together
 
 **Assembly requirement:** documents or transcripts from three or more rift sites (the versioning evidence) plus the modified symbol's provenance from an Archivist.
 
-**Culminating encounter — The Unfiltered Report:** the assembly gives the party the one thing the Circle's interception network cannot survive: a documented, multi-site, independently-witnessed case that can be delivered *in person* past the compromised correspondence chain. Delivering it — choosing to whom, since the party cannot be certain which Order figures are clean — is the encounter. **Boundary:** the culmination breaks the Circle's information seal; everything that follows (Pell Ashwick, Tessaly Vorn, Soles, the Deep Reading Site) runs through the authored questline [**The Acceptable Risk**]([`docs/quests/threshold_circle_questline.md`](../quests/threshold_circle_questline.md)), which this framework feeds but must not duplicate or pre-empt.
+**Culminating encounter — The Unfiltered Report:** the assembly gives the party the one thing the Circle's interception network cannot survive: a documented, multi-site, independently-witnessed case that can be delivered *in person* past the compromised correspondence chain. Delivering it — choosing to whom, since the party cannot be certain which Order figures are clean — is the encounter. **Boundary:** the culmination breaks the Circle's information seal; everything that follows (Pell Ashwick, Tessaly Vorn, Soles, the Deep Reading Site) runs through the authored questline [**The Acceptable Risk**](../quests/threshold_circle_questline.md), which this framework feeds but must not duplicate or pre-empt.
 
 ---
 
