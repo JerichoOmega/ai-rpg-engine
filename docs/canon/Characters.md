@@ -487,6 +487,395 @@ handler, not be tamed. _(Hook only; deeper lore `_TBD_`.)_
 
 ---
 
+## Ronan
+
+> Elyndor's **fourth fully-documented canonical companion**, after Talos,
+> Eleanor, and Ragash. **Narrative canon is established** in
+> [`docs/heroes/RONAN.md`](../heroes/RONAN.md) and
+> [`docs/characters/ronan.md`](../characters/ronan.md) — this entry does **not**
+> rewrite it. It adds the approved **visual identity** and consolidates his
+> production reference. Personality/story fields cite the hero bible; unknowns use
+> `_TBD_`.
+>
+> **Source:** approved *Ronan Character Sheet* set. Werewolf-form lore stays
+> subordinate to [`RONAN.md`](../heroes/RONAN.md) and
+> [`docs/world/hidden_pack.md`](../world/hidden_pack.md).
+
+### Status
+**Canonical** — approved visual direction below, and the reference sheets, are
+authoritative for all future Ronan art, modeling, UI, and marketing.
+
+### Reference Assets
+**Canonical reference — imported 2026-06, unaltered (no resize/crop/compress/recolor).**
+
+| Role | File | Resolution | SHA-256 |
+|---|---|---|---|
+| **Primary** — master character sheet ("Ronan — The Cursed Drifter": turnaround, expressions, action poses, equipment/materials, werewolf form, backstory, size comparison) | [`assets/reference/characters/ronan_reference_v1.png`](../../assets/reference/characters/ronan_reference_v1.png) | 1024 × 1536 | `46616f543d1365683c38df065bcf056c485ff32e4d22c7af9ea505d8730d1149` |
+| Character sheet (landscape multi-panel: turnaround, expressions, action poses, equipment/details, werewolf form, palette, signature items) | [`assets/reference/characters/ronan_character_sheet_v1.png`](../../assets/reference/characters/ronan_character_sheet_v1.png) | 1536 × 1024 | `5bce38ada9cc88d894182445b32cdac8e987d34b0fce146c668d3b76e6fbba6f` |
+| Full-body hero render (clean pose with twin short swords) | [`assets/reference/characters/ronan_fullbody_v1.png`](../../assets/reference/characters/ronan_fullbody_v1.png) | 1024 × 1536 | `d86ded00083b731005bbdc5f64959469ec1a592511901784a32e6bb5f952a66c` |
+
+**Status:** Canonical (v1). All Ronan derivatives must trace back to these files.
+
+### Overview
+A **Human** drifter and **Rogue / Duelist** (Neutral Good) who carries a werewolf
+curse he tries not to inflict on anyone he cares about. He should read as
+**"a good man carrying a terrible burden"** — quiet, guarded, thoughtful,
+compassionate, loyal — **not** an edgy antihero. Full character:
+[`docs/heroes/RONAN.md`](../heroes/RONAN.md).
+
+### Metadata (reserved fields)
+| Field | Value |
+|---|---|
+| Character Name | Ronan |
+| Status | Canonical |
+| Reference Images | `ronan_reference_v1.png` (+ character sheet, full-body) — canonical v1 |
+| Primary Colours | Dark browns — worn leather, rough cloth |
+| Secondary Colours | Muted reddish-brown / dark green accents |
+| Accents | Weathered steel (blades/buckles); reddish-brown werewolf-fur highlights |
+| Silhouette | Lean, self-contained; oversized weathered hooded cloak; slightly separate from the group |
+| Race | Human (male) |
+| Height | 5'6" (167 cm) — per approved reference sheet |
+| Body Type | Early–mid 20s; lean, athletic, travel-worn |
+| Weapons | Matched practical **twin short swords** (minimally ornate) |
+| Armour | Layered dark travel clothes + worn/repaired leather gear (bracers, belts, pouches, heavy boots) |
+| Accessories | **Seed pouch** (symbolic, nonmagical); worn/frayed traveler's scarf |
+| Personality Summary | Quiet, watchful, measured, empathetic, self-deprecating, darkly funny; burdened but loyal |
+| Combat Style | Human form: fast paired short-swords; Werewolf Form: controlled escalation (mechanics: hero bible / `docs/COMBAT_SYSTEM.md`) |
+| Voice Notes | _TBD_ (see hero bible: economical, precise, tired-but-not-hopeless) |
+| Important Story Notes | Werewolf curse; cure-search arc; the Hidden Pack — see `docs/heroes/RONAN.md` |
+
+### Physical Description
+- **Build:** human, **lean / athletic / travel-worn**; early–mid 20s; **5'6"
+  (167 cm)**; moves with the economy of someone always alert.
+- **Hair:** **deep reddish-brown with copper undertones**, medium length,
+  slightly messy with natural waves.
+- **Facial hair:** short, matching **darker scruff**.
+- **Eyes:** **amber-yellow** (per canonical sheet — see reconciliation note).
+- **Read on first sight:** *quiet · guarded · thoughtful · burdened · kind
+  underneath.*
+
+### Visual Identity
+Ronan is a **deliberate counterpoint** to Talos (discipline / heavy armour) and
+Eleanor (hope / elegant light robes): where they read as steel and light, Ronan
+reads as **shadow, distance, and restraint** — while clearly belonging to the same
+world. Weathered, layered, self-repaired; nothing decorative.
+
+### Colour Palette
+| Role | Colours |
+|---|---|
+| Cloth / Leather | Dark browns |
+| Accent (muted) | Reddish-brown, dark green |
+| Metal | Weathered steel / greys |
+| Werewolf fur | Dark brown with reddish-brown highlights |
+
+### Equipment (as depicted in the reference sheets)
+- **Oversized weathered hooded cloak** over **layered dark travel clothes**.
+- **Worn / repaired leather gear:** bracers, belts, pouches, heavy travel boots;
+  fingerless where shown.
+- **Twin short swords** — matched, practical, minimally ornate (paired duelling).
+- See also [`Equipment.md`](Equipment.md).
+
+### Signature Item — The Seed Pouch *(symbolic, nonmagical)*
+- **What:** a small belt pouch of **seeds from his childhood home** (a sprouting
+  seedling is shown emerging from it on the sheet).
+- **Meaning:** *"something beautiful can still grow, even in darkness"* — hope and
+  origin carried by a man who keeps himself at a distance.
+- **Truth:** **no magical properties**; its importance is entirely emotional.
+  Do not depict it as an arcane object.
+
+### Werewolf Form (production notes)
+- **Silhouette:** dramatically **larger** than human form — strong shoulders, long
+  arms, thick fur; a **visually distinct entity**, not the same figure re-statted
+  (≈ 8+ ft per the sheet's size comparison).
+- **Fur:** **dark brown with rich reddish-brown highlights**, especially along the
+  **mane, shoulders, and back.**
+- Model the transformation as a **separate hero silhouette** derived from the same
+  identity; keep human-form palette echoes in the fur highlights.
+- Silver weakness and form mechanics: hero bible / `docs/COMBAT_SYSTEM.md`.
+
+### Personality
+Preserve all existing personality canon (`docs/heroes/RONAN.md`): quiet, watchful,
+measured, deeply empathetic, self-deprecating, darkly funny. Visually reinforce
+**a burdened, loyal, compassionate man** — guarded exterior protecting real
+warmth. **Not** a brooding edgelord.
+
+### Combat Style
+Human form: capable, careful paired short-swords. Werewolf Form: **controlled
+escalation** — more powerful, harder to control, carrying real cost (established
+canon). No new mechanics defined here.
+
+### Animation Notes
+- Grounded, economical, always-alert body language; keeps a margin from the group.
+- The cloak reads strongly in motion and from behind.
+- Formal reference: _TBD_ (capture during rigging).
+
+### Modeling Notes
+- Derive the 3D model from `ronan_reference_v1.png` (identity + turnaround) and
+  `ronan_character_sheet_v1.png` (turnaround/details); use `ronan_fullbody_v1.png`
+  for clean proportions.
+- Author the **oversized hooded cloak** as a separable layer; model **twin short
+  swords** as a matched pair.
+- Build the **Werewolf Form** as a distinct hero mesh sharing identity cues.
+- Preserve the dark-brown palette with reddish-brown accents.
+- Follow the studio production targets in
+  [`Character_Production_Bible.md`](Character_Production_Bible.md) /
+  [`Pipeline.md`](Pipeline.md).
+
+### UI Portrait Notes
+- Lead with **face + amber eyes + reddish-brown wavy hair + hood**; read as
+  *guarded, thoughtful, kind underneath.*
+- Keep both human and werewolf portraits available for state changes.
+
+### Design Rules
+1. Ronan must read as **"a good man carrying a terrible burden"** — never an edgy
+   antihero.
+2. He must **contrast Talos and Eleanor** (shadow/restraint vs steel and light)
+   while sharing the world's material language.
+3. Keep signature identity consistent: reddish-brown copper-undertoned wavy hair,
+   short scruff, amber eyes, oversized hooded cloak, twin short swords, seed pouch.
+4. The **seed pouch appears** where framing allows; it is symbolic and nonmagical.
+5. The **Werewolf Form is a distinct silhouette**, not a recoloured human.
+6. Do not contradict established canon in `docs/heroes/RONAN.md`.
+
+> **Reconciliation notes (art sheet vs narrative canon).**
+> 1. **Eyes:** one sheet leaves eye colour *TBD*; the master sheet specifies
+>    **amber-yellow** — adopted as canonical.
+> 2. **Backstory blurb:** the sheet's short blurb says Ronan was *"born into a
+>    nomadic werewolf pack."* **Established narrative canon is authoritative**
+>    ([`RONAN.md`](../heroes/RONAN.md)): Ronan believed himself **alone** in the
+>    curse for most of his life, and the **Hidden Pack**
+>    ([`hidden_pack.md`](../world/hidden_pack.md)) is a later **discovery** and
+>    turning point. Treat the sheet blurb as **art-context only** — do not import
+>    it as narrative canon.
+
+### Revision History
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 2026-06 | Established Ronan's canonical visual direction and **imported approved reference artwork** (unaltered): `ronan_reference_v1.png` (master sheet), `ronan_character_sheet_v1.png` (multi-panel), `ronan_fullbody_v1.png`. Canon: Human Rogue/Duelist, 5'6" (167 cm), reddish-brown copper-undertoned wavy hair + short scruff, amber eyes, oversized hooded cloak + layered travel leathers, twin short swords, symbolic nonmagical seed pouch; werewolf-form production notes (larger silhouette, dark-brown fur with reddish-brown highlights). Narrative canon preserved; art-blurb backstory reconciled as art-context only. |
+
+---
+
+## Torren
+
+> Elyndor's **fifth fully-documented canonical companion**, completing the core
+> party alongside Talos, Eleanor, Ragash, and Ronan. **Narrative canon is
+> established** in [`docs/heroes/TORREN.md`](../heroes/TORREN.md) and
+> [`docs/characters/torren.md`](../characters/torren.md) — this entry adds the
+> approved **visual identity**, his **Clan Ironhall** heritage, his signature
+> artifacts, and his companion quest, and consolidates his production reference.
+>
+> **Source:** approved *Torren Ironhall Character Sheet* set. Clan:
+> [`Clan Ironhall`](../world/factions/clan_ironhall.md); companion quest:
+> [`The Empty Pedestal`](../quests/the_empty_pedestal.md). Personality/story
+> fields cite the hero bible; unknowns use `_TBD_`.
+
+### Status
+**Canonical** — approved visual direction below, and the reference sheets, are
+authoritative for all future Torren art, modeling, UI, and marketing.
+
+### Reference Assets
+**Canonical reference — imported 2026-06, unaltered (no resize/crop/compress/recolor).**
+
+| Role | File | Resolution | SHA-256 |
+|---|---|---|---|
+| **Primary** — master character sheet ("Torren Ironhall — Dwarf • Blacksmith • Companion": expressions, turnaround, details, clothing/gear, weapon, key items, palette, tools, scale reference) | [`assets/reference/characters/torren_reference_v1.png`](../../assets/reference/characters/torren_reference_v1.png) | 1536 × 1024 | `c57402d4258bdede6eff74cbac15eb5c9a44aa304753d147df62806fe0214de7` |
+| Turnaround / action poses (8 poses, grey field) | [`assets/reference/characters/torren_turnaround_v1.png`](../../assets/reference/characters/torren_turnaround_v1.png) | 1536 × 1024 | `87bf7c852a9af789e4d32e2894eed366c7cb7da32fa64dc4e546b7bb6385b5b6` |
+| Full-body hero render (hammer over shoulder, compass on belt) | [`assets/reference/characters/torren_fullbody_v1.png`](../../assets/reference/characters/torren_fullbody_v1.png) | 1122 × 1402 | `0b34c598920fa1dac6613391af7697d7a8b2dea6ba42c3739a0591787b063bd2` |
+| Full-body hero render (alternate) | [`assets/reference/characters/torren_fullbody_alt_v1.png`](../../assets/reference/characters/torren_fullbody_alt_v1.png) | 1122 × 1402 | `649634e61c15e94f8d39fb92d09d21452342e7841c1475b3facb7e0baca65502` |
+
+**Status:** Canonical (v1). All Torren derivatives must trace back to these files.
+
+### Overview
+**Torren Ironhall** — a **Dwarf Master Blacksmith, craftsman, and adventurer**
+(Lawful Good) of **[Clan Ironhall](../world/factions/clan_ironhall.md)**. In the
+party he is the **heavy frontline fighter, the craftsman, and the moral heart of
+the group.** He is the comic relief — but his humour is a **coping mechanism**:
+he jokes because **silence forces him to remember the burden his family has
+carried for generations.** The humour disappears only when he speaks of Clan
+Ironhall. Full character: [`docs/heroes/TORREN.md`](../heroes/TORREN.md).
+
+### Metadata (reserved fields)
+| Field | Value |
+|---|---|
+| Character Name | Torren Ironhall |
+| Status | Canonical |
+| Reference Images | `torren_reference_v1.png` (+ turnaround, 2× full-body) — canonical v1 |
+| Primary Colours | Charcoal, deep brown |
+| Secondary Colours | Burgundy (mountain cloak), worn tan |
+| Accents | Copper / bronze hardware; steel (hammer, tools) |
+| Silhouette | Compact, broad, barrel-chested; forge-braided beard; load-bearing, immovable |
+| Race | **Dwarf** (male) |
+| Age | ~85 (dwarf) — roughly a human's early/mid 30s |
+| Height | 4'5" (135 cm) — per approved reference sheet |
+| Body Type | Broad shoulders, massive forearms, thick hands, barrel chest; compact but immensely strong |
+| Weapons | **Forge Hammer** — a blacksmith's hammer adapted for combat |
+| Armour | Heavy leather work gear — reinforced smith's apron, tool belts, thick mountain boots; practical, repaired, not ornate |
+| Accessories | **The Founder's Compass** (signature); **The Ironhall Master's Seal** (secondary, retired); tool belts, pouches, fingerless gloves; the **Cold Clasp** (reserved personal-arc detail — see hero bible) |
+| Personality Summary | Warm, friendly, quick-witted, protective, dependable, humble, compassionate; humour as coping; grave only about Clan Ironhall |
+| Combat Style | Heavy frontline / battlefield shaper; Support / Engineer (Field Forge constructs) — mechanics: hero bible / `docs/COMBAT_SYSTEM.md` |
+| Voice Notes | _TBD_ (see hero bible: measured, dry, late-arriving humour; **terrible dwarven dad jokes**) |
+| Important Story Notes | Clan Ironhall's disgrace; **The Empty Pedestal**; the Founder's Compass lineage — see `docs/heroes/TORREN.md` |
+
+### Physical Description
+- **Build:** dwarf, **broad shoulders, massive forearms, thick powerful hands,
+  barrel chest** — compact but incredibly strong; **built like a lifelong
+  blacksmith.** **4'5" (135 cm)**; ~85 years old (human early/mid-30s equivalent).
+- **Face:** **square jaw, slightly crooked nose, heavy eyebrows, laugh lines,
+  strong cheekbones, warm expression** — players should **immediately trust
+  him.** Forge scars on face and hands.
+- **Hair:** medium-length **deep reddish-brown / ginger**, slightly messy with
+  natural waves; well-kept but practical.
+- **Beard:** full to **mid-chest**, same reddish-brown/ginger, with several
+  **forge braids** and **simple iron rings**; **one braid is singed shorter**
+  from an old forge accident (left side).
+- **Eyes:** **warm amber** — kind, expressive.
+
+### Visual Identity
+Read: **"a master craftsman who travels"** — **NOT** a royal dwarf. Everything is
+**repaired, used, loved, practical**; nothing overly ornate. Within the party he
+is the **grounded, load-bearing** silhouette — Talos is disciplined steel,
+Eleanor is light and hope, Ragash is the wild, Ronan is shadow and restraint, and
+**Torren is the anvil the party is built around.**
+
+### Colour Palette
+| Role | Colours |
+|---|---|
+| Primary | Charcoal, deep brown |
+| Secondary | Burgundy (mountain cloak), worn tan |
+| Metal | Copper, bronze (hardware); steel (hammer/tools) |
+
+### Equipment (as depicted in the reference sheets)
+- **Heavy charcoal travel / wool coat**; **deep burgundy mountain cloak** with
+  hood.
+- **Reinforced leather smith's apron** over heavy leather work gear.
+- **Tool belts & pouches**, **thick mountain boots**, **fingerless gloves**, and
+  **various blacksmith tools attached to his belt** (calipers, chisels, punches,
+  whetstone, measuring ruler, small hammer, chalk, pencils, nails, tool roll —
+  per the "Tools of the Trade" panel).
+- Everything **repaired, used, loved, practical** — nothing ornate.
+- See also [`Equipment.md`](Equipment.md).
+
+### Weapon — The Forge Hammer *(canonical appearance)*
+- A **practical blacksmith's hammer adapted for combat** — a heavy squared head
+  with a maker's mark, a **long wooden handle**, well-maintained, showing
+  **generations of repair.** It **doubles as tool and weapon.**
+- **Avoid oversized fantasy proportions** — it must read as a real smith's hammer,
+  not a cartoon warhammer.
+- (Gameplay: his **Field Forge** constructs and skill trees — `docs/heroes/TORREN.md`.)
+
+### Signature Item — The Founder's Compass *(canonical)*
+- **What it is NOT:** a navigation compass.
+- **What it is:** an ancient **master craftsman's measuring compass** — for
+  precision, design, and discovery.
+- **History:** forged by the **founder of Clan Ironhall**; passed from one Clan
+  Master to the next. **Every generation used it, repaired it, and engraved their
+  name inside** one arm.
+- **Appearance:** **darkened steel with bronze accents**, hand-forged hinges,
+  **one leg replaced centuries ago**, smooth from centuries of use; carried in an
+  **old leather case.**
+- **Engraved lineage inside (canonical, oldest → newest):** Durin · Barag ·
+  Thorek · Borin · Hadrin · Orin · **Durgan** … *(final blank space reserved
+  for)* **Torren Ironhall.**
+- Full lineage/clan context:
+  [`Clan Ironhall`](../world/factions/clan_ironhall.md#the-masters-lineage-and-the-founders-compass).
+
+### Secondary Heirloom — The Ironhall Master's Seal *(canonical)*
+- **Meaning:** the **right to place Clan Ironhall's mark** on completed works of
+  true craftsmanship.
+- **State:** **retired after the Broken Oath** — no official Ironhall work has
+  carried its mark for generations.
+- **Torren:** carries the seal **wrapped in cloth** and **refuses to use it**,
+  believing he **has not yet earned that right.** (He finally uses it at the end
+  of [`The Empty Pedestal`](../quests/the_empty_pedestal.md).)
+
+### Companion Quest — The Empty Pedestal
+His flagship companion quest is **not** about recovering a relic — it is about
+**uncovering historical truth**, asking *what matters more: keeping an oath, or
+saving lives?* Torren discovers that his disgraced ancestor **Durgan Ironhall**
+chose to save the kingdom's people over the relic — and that the **High King had
+secretly released Durgan from his oath** in a sealed letter revealed too late.
+**No historical figure is a villain; the tragedy is incomplete history.** Full
+design + cast + locations:
+[`The Empty Pedestal`](../quests/the_empty_pedestal.md).
+
+### Supporting Cast (companion quest)
+| Character | Role |
+|---|---|
+| **High Thane Borik Stoneheart** | Current High Thane; honourable, initially skeptical; **restores Clan Ironhall's honour**. |
+| **Elder Hilda Forgekeeper** | Clan historian; **believes history is missing**; quietly aids Torren. |
+| **Garrik Ironvein** | Torren's lifelong best friend; grounded; **sees through his jokes**. |
+| **Brynja Emberforge** | Friendly rival; **starts with the official history, becomes an ally**. |
+| **Master Odrin Runehammer** | Torren's gruff old forge master; **proud of him despite rarely saying so**. |
+| **Durgan Ironhall** | Ancestor; **tragic hero**, not a villain. |
+Full profiles: [`Clan Ironhall — Key Figures`](../world/factions/clan_ironhall.md#key-figures).
+
+### Personality (through design)
+Preserve all existing personality canon (`docs/heroes/TORREN.md`). Visually and
+tonally reinforce: **warm, friendly, quick wit, terrible dwarven dad jokes,
+protective, extremely dependable, humble, compassionate** — a man who **jokes to
+keep the weight at bay.** The **only** time the humour vanishes is when he speaks
+of **Clan Ironhall**; that contrast is intentional and must be reflected
+consistently in future dialogue.
+
+### Animation Notes
+- Grounded, deliberate, weighty — a load-bearing frame; always working (repairing
+  gear at camp; see hero bible's Campfire Presence).
+- Physical tells: reaching for tools first when something is wrong; the humour
+  dropping when clan history comes up.
+- Formal reference: _TBD_ (capture during rigging).
+
+### Modeling Notes
+- Derive the 3D model from `torren_reference_v1.png` (identity + turnaround) and
+  `torren_turnaround_v1.png` (poses); use the two full-body renders for
+  proportions.
+- Author the **forge-braided beard with iron rings** (incl. the **one shorter,
+  singed braid** on the left) as a hero silhouette element.
+- Model gear as **repaired, layered leather + apron + burgundy cloak**, with
+  belt-hung tools; **bronze/copper hardware.**
+- Model the **Forge Hammer** at realistic smith proportions; the **Founder's
+  Compass** as a distinct opening measuring-compass prop with a leather case; the
+  **Master's Seal** as a small cloth-wrapped stamp.
+- Preserve the charcoal / deep-brown / burgundy + copper/bronze/steel palette.
+- Follow the studio production targets in
+  [`Character_Production_Bible.md`](Character_Production_Bible.md) /
+  [`Pipeline.md`](Pipeline.md).
+
+### UI Portrait Notes
+- Lead with **face + warm amber eyes + laugh lines + forge-braided beard**; read
+  as *warm, trustworthy, quietly burdened.*
+- The Founder's Compass on the belt should be visible where framing allows.
+
+### Design Rules
+1. Torren reads as a **travelling master craftsman**, **never a royal dwarf**.
+2. Gear is **repaired, used, loved, practical** — nothing ornate.
+3. The **Forge Hammer avoids oversized fantasy proportions** — it is a real
+   smith's tool adapted for battle.
+4. Keep signature identity consistent: reddish-brown/ginger hair + full braided
+   beard (one singed braid), warm amber eyes, apron + tool belts, the **Founder's
+   Compass** on the belt.
+5. Humour is a coping mechanism — **grave only about Clan Ironhall.**
+6. Do not contradict established canon in `docs/heroes/TORREN.md`.
+
+> **Reconciliation notes (approved canon vs prior lore).**
+> 1. **Race:** the finalized canon is **Dwarf**. This supersedes the earlier
+>    "Human" value in [`docs/characters/torren.md`](../characters/torren.md),
+>    which has been corrected. (The hero bible never specified a race.)
+> 2. **Height:** the sheet's Scale Reference panel lists approximate figures for
+>    the whole party; **Torren 4'5" (135 cm)** is canonical here. The panel's
+>    numbers for other characters are illustrative and do **not** override their
+>    own established heights (e.g. Eleanor's 5'6"/167 cm in her canon entry).
+> 3. **Companion quest vs personal Core Wound:** *The Empty Pedestal* authors his
+>    **clan-honour** companion arc. It is **complementary to** — not a replacement
+>    for — his reserved personal Core Wound (the **Cold Clasp**,
+>    [`TORREN.md`](../heroes/TORREN.md)). Both remain canon.
+
+### Revision History
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 2026-06 | Established Torren's canonical visual identity and **imported approved reference artwork** (unaltered): `torren_reference_v1.png` (master sheet), `torren_turnaround_v1.png` (poses), `torren_fullbody_v1.png`, `torren_fullbody_alt_v1.png`. Canon: **Dwarf** Master Blacksmith, ~85 / 4'5" (135 cm), reddish-brown/ginger hair + full forge-braided beard (one singed braid), warm amber eyes, charcoal/deep-brown/burgundy + copper/bronze palette, repaired travelling smith gear, the **Forge Hammer**, the **Founder's Compass** (lineage Durin→…→Durgan→Torren) and retired **Ironhall Master's Seal**. Authored **Clan Ironhall** and the **The Empty Pedestal** companion quest with supporting cast + locations. Corrected prior race (Human→Dwarf); personal Core Wound (Cold Clasp) preserved. |
+
+---
+
 ## Future Character-Reference Pipeline
 All character production assets must **derive from** the canonical reference
 sheets above rather than creating new interpretations. This applies to Tripo /

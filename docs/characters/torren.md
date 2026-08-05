@@ -4,13 +4,15 @@
 
 | Field | Value |
 |---|---|
-| **Name** | Torren |
-| **Race** | Human |
-| **Role / Class** | Master Blacksmith |
+| **Name** | Torren Ironhall |
+| **Race** | Dwarf |
+| **Age** | ~85 (dwarf) — roughly a human's early/mid 30s |
+| **Height** | 4'5" (135 cm) |
+| **Role / Class** | Master Blacksmith / Craftsman-Warrior (heavy frontline; Support / Engineer) |
 | **Preferred Combat Range** | Melee |
 | **Armor Type** | Heavy working gear — practical, reinforced, not ornate |
-| **Moral Alignment** | Hopeful pragmatist; believes every person deserves an attempt before giving up on them |
-| **Faction / Cultural Ties** | None formal; has worked with smiths, craftsmen, and builders across multiple regions |
+| **Moral Alignment** | Lawful Good — hopeful pragmatist; believes every person deserves an attempt before giving up on them |
+| **Faction / Cultural Ties** | **Clan Ironhall** (dwarven craft-clan of the Iron Peaks — bearer of the Founder's Compass and the retired Master's Seal); has worked with smiths and builders across many regions. See [`Clan Ironhall`](../world/factions/clan_ironhall.md). |
 
 ---
 
@@ -107,3 +109,4 @@ Torren's arc confronts his core belief under conditions that genuinely test whet
 - His campfire presence (repairing equipment before anyone wakes, working quietly by firelight) is part of the game's atmospheric texture.
 - His Core Wound involves a specific past failure — defined in spirit, not yet fully authored as a personal quest.
 - Torren replaces Stephen, who has been retired from the canonical companion roster.
+- **Canonical update (2026-06):** Torren is a **Dwarf** of **[Clan Ironhall](../world/factions/clan_ironhall.md)** (this corrects an earlier "Human" value here; the finalized approved canon is Dwarf). His signature artifacts are the **Founder's Compass** (an ancestral master craftsman's measuring compass engraved with the Ironhall Master lineage) and the retired **Ironhall Master's Seal**, which he carries wrapped in cloth and refuses to use until he believes he has earned the right. His companion quest is **[The Empty Pedestal](../quests/the_empty_pedestal.md)** — uncovering the truth of his disgraced ancestor **Durgan Ironhall**. Full visual canon: [`docs/canon/Characters.md#torren`](../canon/Characters.md#torren). The **Cold Clasp** personal-arc detail remains canon and distinct from this clan-honour arc.

@@ -3,6 +3,15 @@
 > **Document Status:** Canonical as of July 2026.  
 > **Cross-references:** [`docs/characters/torren.md`](../characters/torren.md) · [`docs/HERO_BIBLE.md`](../HERO_BIBLE.md) · [`docs/COMBAT_SYSTEM.md`](../COMBAT_SYSTEM.md)  
 > **Replaces:** `docs/heroes/STEVEN.md` (retired July 2026)
+>
+> **Canonical update (2026-06):** Torren's full name is **Torren Ironhall**; he is
+> a **Dwarf** (~85 / 4'5") of **[Clan Ironhall](../world/factions/clan_ironhall.md)**,
+> a dwarven craft-clan of the Iron Peaks. His signature artifacts are the
+> **Founder's Compass** and the retired **Ironhall Master's Seal**; his companion
+> quest is **[The Empty Pedestal](../quests/the_empty_pedestal.md)**. Full visual
+> canon + signature-item specs: [`docs/canon/Characters.md#torren`](../canon/Characters.md#torren).
+> This heading-block note is additive — the personal Core Wound and **Cold Clasp**
+> below remain canon and are **distinct from** the clan-honour companion arc.
 
 ---
 
@@ -238,6 +247,14 @@ Torren's three specialization paths offer meaningfully different playstyles. Pla
 ## Personal Quest
 
 ### Theme
+
+> **Companion quest now authored:** Torren's clan-honour companion quest is
+> **[The Empty Pedestal](../quests/the_empty_pedestal.md)** — uncovering the truth
+> of his disgraced ancestor **Durgan Ironhall** of
+> **[Clan Ironhall](../world/factions/clan_ironhall.md)**. That quest is
+> **complementary to** — not a replacement for — the intimate personal Core Wound
+> (the **Cold Clasp**) described above; both remain canon. The section below is
+> the *original* framing for his personal wound and is preserved.
 
 ⚠️ **NOT YET AUTHORED** — Torren's personal quest will center on his Core Wound: the thing he once refused to release past the point where he should have, and the people who bore the cost of that refusal. The shape of the quest depends on what that was — and whether those people are still out there.
 

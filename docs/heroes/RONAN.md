@@ -2,6 +2,15 @@
 
 > **Document Status:** Canonical as of July 2026.  
 > **Cross-references:** [`docs/characters/ronan.md`](../characters/ronan.md) · [`docs/HERO_BIBLE.md`](../HERO_BIBLE.md) · [`docs/COMBAT_SYSTEM.md`](../COMBAT_SYSTEM.md)
+>
+> **Visual canon (2026-06):** Ronan's approved reference art and visual identity
+> are consolidated in [`docs/canon/Characters.md#ronan`](../canon/Characters.md#ronan)
+> (Human Rogue/Duelist, 5'6", reddish-brown copper-undertoned wavy hair + short
+> scruff, amber eyes, oversized hooded cloak, twin short swords, symbolic seed
+> pouch; werewolf-form production notes). That entry is additive and does **not**
+> rewrite the narrative canon below — in particular, the **Hidden Pack** remains a
+> later *discovery* (see [`docs/world/hidden_pack.md`](../world/hidden_pack.md)),
+> not Ronan's origin.
 
 ---
 

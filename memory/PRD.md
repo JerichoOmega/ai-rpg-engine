@@ -216,3 +216,57 @@ to mass-produce).
   Design Bible).
 - **Next:** Encounter Design Bible (archetypes/terrain/composition rules derived
   from this encounter) → combat readability pass → Phase B (Downed/Death).
+
+## Canonical Art Pipeline — Ronan + Torren Imported (2026-06)
+Additive art-canon + documentation work; NO gameplay/engine/combat/source files
+touched (verified via git status: only docs/ + assets/ changed).
+
+### Ronan — Reference Complete
+- Imported 3 approved sheets byte-for-byte into `assets/reference/characters/`:
+  `ronan_reference_v1.png` (1024×1536 master), `ronan_character_sheet_v1.png`
+  (1536×1024 multi-panel), `ronan_fullbody_v1.png` (1024×1536). SHA-256 recorded;
+  source==project==recorded verified.
+- Full visual-canon entry added to `docs/canon/Characters.md#ronan` (Human
+  Rogue/Duelist, 5'6"/167, reddish-brown copper-undertoned wavy hair + scruff,
+  amber eyes, oversized hooded cloak, twin short swords, symbolic nonmagical seed
+  pouch; werewolf-form production notes). Narrative canon preserved; art-blurb
+  "born into a pack" reconciled as art-context only (Hidden Pack stays a later
+  discovery per `docs/heroes/RONAN.md`). Eyes = amber-yellow (per master sheet).
+
+### Torren Ironhall — Reference Complete
+- Imported 4 approved sheets byte-for-byte: `torren_reference_v1.png` (1536×1024
+  master), `torren_turnaround_v1.png` (1536×1024 poses), `torren_fullbody_v1.png`
+  + `torren_fullbody_alt_v1.png` (1122×1402). SHA-256 recorded & verified.
+- Full visual-canon entry `docs/canon/Characters.md#torren`: **Dwarf** Master
+  Blacksmith, ~85 / 4'5" (135cm), reddish-brown/ginger hair + full forge-braided
+  beard (one singed braid), warm amber eyes, charcoal/deep-brown/burgundy +
+  copper/bronze palette, repaired travelling smith gear, the **Forge Hammer**,
+  the **Founder's Compass** (lineage Durin→Barag→Thorek→Borin→Hadrin→Orin→Durgan
+  → blank for Torren) and retired **Ironhall Master's Seal**.
+- Authored **Clan Ironhall** (`docs/world/factions/clan_ironhall.md`) — first
+  named dwarven clan (Iron Peaks craft-honour clan); key figures (Borik
+  Stoneheart, Hilda Forgekeeper, Garrik Ironvein, Brynja Emberforge, Odrin
+  Runehammer, Durgan); locations (Hall of Names, Hall of Echoes, Silent Forge,
+  Empty Pedestal, Ancestral Forge).
+- Authored **The Empty Pedestal** companion quest
+  (`docs/quests/the_empty_pedestal.md`) — truth-vs-oath; Durgan's impossible
+  choice; the sealed High-King letter twist; "no villain" rule; canonical ending
+  (disgrace mark removed, Silent Forge relit with the Master's Seal, Torren's
+  name engraved in the Founder's Compass).
+- Reconciliations: race corrected Human→Dwarf in `docs/characters/torren.md`
+  (approved); companion quest is complementary to — not a replacement for — the
+  reserved personal Core Wound (the **Cold Clasp**, `docs/heroes/TORREN.md`),
+  which is preserved.
+- Updated `assets/reference/characters/README.md`, `docs/canon/
+  Character_Production_Status.md` (Ronan+Torren now Reference Complete;
+  3D/rig/Godot/animation/UI/marketing still Not Started), `docs/world/RACES.md`
+  (dwarf-culture cross-ref).
+
+### Validation (agent-tested)
+- All 7 imported assets: project == recorded SHA-256 == source (PASS).
+- Talos/Eleanor/Ragash assets unchanged (10/10 PASS).
+- 1169 markdown links checked; ALL links in new/edited files resolve.
+  12 pre-existing broken links remain in UNTOUCHED files (`docs/GAME_BIBLE.md`,
+  `docs/encounters/religious_encounters.md`) — not introduced by this work.
+- Talos/Eleanor/Ragash/Ronan/Torren are now the five fully-canonical production
+  characters (Reference Complete).

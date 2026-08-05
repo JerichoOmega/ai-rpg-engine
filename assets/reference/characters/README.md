@@ -15,6 +15,13 @@ Stored at original resolution, uncompressed and unaltered. Do not modify.
 | `ragash_turnaround_v1.png` | Ragash | Turnaround / poses + expressions + hounds (v1) | 1536 × 1024 |
 | `ragash_fullbody_v1.png` | Ragash | Full-body character sheet (v1) | 1024 × 1536 |
 | `ragash_character_sheet_v1.png` | Ragash | Character sheet — overview + equipment (v1) | 1086 × 1448 |
+| `ronan_reference_v1.png` | Ronan | Primary master character sheet — "The Cursed Drifter" (v1) | 1024 × 1536 |
+| `ronan_character_sheet_v1.png` | Ronan | Multi-panel character sheet — turnaround + werewolf form (v1) | 1536 × 1024 |
+| `ronan_fullbody_v1.png` | Ronan | Clean full-body hero render with twin short swords (v1) | 1024 × 1536 |
+| `torren_reference_v1.png` | Torren | Primary master character sheet — "Torren Ironhall" (v1) | 1536 × 1024 |
+| `torren_turnaround_v1.png` | Torren | Turnaround / action poses (v1) | 1536 × 1024 |
+| `torren_fullbody_v1.png` | Torren | Full-body hero render — hammer + Founder's Compass (v1) | 1122 × 1402 |
+| `torren_fullbody_alt_v1.png` | Torren | Full-body hero render — alternate (v1) | 1122 × 1402 |
 
 These are the single source of truth for each character's appearance. All future
 art must derive from them. See

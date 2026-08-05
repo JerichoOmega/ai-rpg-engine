@@ -56,6 +56,8 @@ What is established for each race:
 
 > ⚠️ Architecture and detailed day-to-day culture remain NOT YET FULLY DEFINED for Humans, Elves, Dwarves, and Orcs specifically. The elements defined above are confirmed canon; the missing elements are gaps to be filled in future worldbuilding passes.
 
+> **Dwarven culture — first authored clan (2026-06):** **[Clan Ironhall](factions/clan_ironhall.md)**, a dwarven **craft-honour clan of the Iron Peaks**, is the first named dwarven clan (companion **Torren Ironhall**). It fills part of the dwarf-culture gap **additively** — Ironhall is one clan, not the whole dwarven people; other dwarven clans and traditions remain open.
+
 ---
 
 ## Halflings

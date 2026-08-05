@@ -24,9 +24,9 @@ been produced.
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **Talos**   | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
 | **Eleanor** | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ◻ | ⬜ | 🟡 | **Reference Complete** |
-| **Ronan**   | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Lore Complete** |
+| **Ronan**   | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
 | **Ragash**  | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ◻ | ⬜ | ⬜ | **Reference Complete** |
-| **Torren**  | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Lore Complete** |
+| **Torren**  | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
 
 ## Notes (evidence, not claims)
 - **Talos** — art: `talos_cloak.png` (turnaround), `talos_no_cloak.png` (hero/full
@@ -38,8 +38,18 @@ been produced.
   has been generated → Tripo Ready = ⬜. *UI Portrait:* a portrait **panel**
   exists on the sheet (reference), but no exported UI asset → ◻ Planned. *Voice:*
   written voice **direction** exists on the reference sheet / hero bible → 🟡.
-- **Ronan / Torren** — narrative bibles exist in `docs/heroes/` and
-  `docs/characters/`; no canon visual entry or reference art produced yet.
+- **Ronan** — canon visual entry ([`Characters.md#ronan`](Characters.md#ronan))
+  + **imported reference art** (`ronan_reference_v1.png` master,
+  `ronan_character_sheet_v1.png`, `ronan_fullbody_v1.png`) from the approved
+  *Ronan Character Sheet* set. Now **Reference Complete** (3D/rig/Godot/animation/
+  UI/marketing still pending).
+- **Torren** — canon visual entry ([`Characters.md#torren`](Characters.md#torren))
+  + **imported reference art** (`torren_reference_v1.png` master,
+  `torren_turnaround_v1.png`, `torren_fullbody_v1.png`, `torren_fullbody_alt_v1.png`)
+  from the approved *Torren Ironhall* set. Clan:
+  [`Clan Ironhall`](../world/factions/clan_ironhall.md); quest:
+  [`The Empty Pedestal`](../quests/the_empty_pedestal.md). Now **Reference
+  Complete** (3D/rig/Godot/animation/UI/marketing still pending).
 - **Ragash** — canon visual entry ([`Characters.md#ragash`](Characters.md#ragash))
   + **imported reference art** (`ragash_reference_v1.png` master, `ragash_turnaround_v1.png`,
   `ragash_fullbody_v1.png`, `ragash_character_sheet_v1.png`) from the approved
@@ -49,4 +59,4 @@ been produced.
 - Also present in `docs/heroes/`: **Steven** (not in this tracker's requested
   roster; add a row if promoted to a tracked production character).
 
-_Last updated: 2026-08-04. Update this table whenever a deliverable ships._
+_Last updated: 2026-06 (Ronan + Torren reference art imported). Update this table whenever a deliverable ships._
