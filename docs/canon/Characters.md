@@ -308,6 +308,185 @@ escalation, not a safety net. (Mechanics/design: `docs/heroes/ELEANOR.md`,
 
 ---
 
+## Ragash
+
+> Elyndor's **third fully-documented canonical companion**, after Talos and
+> Eleanor. **Narrative canon is established** in
+> [`docs/heroes/RAGASH.md`](../heroes/RAGASH.md) and
+> [`docs/characters/ragash.md`](../characters/ragash.md) — this entry does **not**
+> rewrite it. It adds the approved **visual identity**, her **Bloodhorn** origin,
+> and consolidates her production reference. Culture: [`Bloodhorn Clan`](../world/factions/bloodhorn_clan.md);
+> companion quest: [`The Broken Oath`](../quests/the_broken_oath.md).
+>
+> **Source:** approved *Ragash Canonical Package* (docs only — no artwork
+> included). Personality/story fields cite the hero bible; unknowns use `_TBD_`.
+
+### Status
+**Canonical** — visual identity below, and the reference sheets, are
+authoritative for all future Ragash art.
+
+### Reference Assets
+**Canonical reference — imported 2026-08-05, unaltered (no resize/crop/compress/recolor).**
+
+| Role | File | Resolution | SHA-256 |
+|---|---|---|---|
+| **Primary** — master hero sheet ("Houndmaster of the Wild": portrait, full body, signature item, back view, design notes, silhouette) | [`assets/reference/characters/ragash_reference_v1.png`](../../assets/reference/characters/ragash_reference_v1.png) | 1536 × 1024 | `c57abeb34c14035cf29f56d9fe90813f28316e0dcc9318e6b41aa30697524ac5` |
+| Turnaround / poses (multiple full-body poses, head & expressions ×4, silhouettes, hounds, equipment) | [`assets/reference/characters/ragash_turnaround_v1.png`](../../assets/reference/characters/ragash_turnaround_v1.png) | 1536 × 1024 | `20d911c7d9cb770d61a7a03c911eeeff49b71ceb393d0efdf5b7a3c5dd9d45a3` |
+| Full-body character sheet | [`assets/reference/characters/ragash_fullbody_v1.png`](../../assets/reference/characters/ragash_fullbody_v1.png) | 1024 × 1536 | `fef5e4126b7b35538f4cbe2cf7fa4495a1d58c8d16c632ea29f6772f999b6cea` |
+| Character sheet (portrait, overview + equipment + palette) | [`assets/reference/characters/ragash_character_sheet_v1.png`](../../assets/reference/characters/ragash_character_sheet_v1.png) | 1086 × 1448 | `b04403c92fd225dda17df580375dfb7f213228034f85b707b785ee1bf6c3b610` |
+
+**Status:** Canonical (v1). All Ragash derivatives must trace back to these files.
+
+### Overview
+A **female Orc Ranger / Houndmaster, hunter, and tracker** of the **Bloodhorn
+Clan** (an Honor Clan; the reference sheets label her origin *"Bloodhorn Tribe
+(Outcast)"* — synonymous). Alignment **Neutral Good**; now travelling with
+**The Fellowship** (Talos's company). Motto: **"Blood makes you related. Loyalty
+makes you family."** Blunt, proud, fiercely loyal; she believes *belonging is
+earned* and found it first among her hounds. Excommunicated from the Bloodhorn
+for choosing conscience over an Elder ruling (see
+[`The Broken Oath`](../quests/the_broken_oath.md)). Full character:
+[`docs/heroes/RAGASH.md`](../heroes/RAGASH.md).
+
+### Metadata (reserved fields)
+| Field | Value |
+|---|---|
+| Character Name | Ragash |
+| Status | Canonical (documentation); art pending |
+| Reference Images | _TBD_ (none in package) |
+| Primary Colours | Rich reddish-brown leather, buckskin |
+| Secondary Colours | Charcoal (weather cloak) |
+| Accents | Weathered bronze hardware, fur, rope; amber eyes; braid beads |
+| Silhouette | Lean, athletic; wild layered black hair with braids/beads; practical wilderness gear |
+| Race | Orc (female) |
+| Height | 5'7" (170 cm) — per reference sheet (lean; slightly shorter than most orcs) |
+| Body Type | Late 20s – early 30s; lean, athletic |
+| Weapons | Longbow + longsword + hunting knife (Ranger/Houndmaster); her three hounds extend her reach |
+| Armour | Wilderness survival leather (not military/barbarian/ceremonial) |
+| Accessories | **The First Paw** antler bead (signature); braided beads of bone/wood/antler/bronze; hunting/travel kit |
+| Personality Summary | Blunt, proud, loyal (Neutral Good); warm underneath; earns and tests trust |
+| Combat Style | Ranger/Houndmaster — versatile bow/melee, hounds as battlefield presence |
+| Voice Notes | _TBD_ (see hero bible) |
+| Important Story Notes | Bloodhorn exile; *The Broken Oath*; chosen-family arc |
+
+### Physical Description
+- **Build:** female Orc, **lean and athletic**, **slightly shorter than most
+  orcs** — a tracker's frame, not a front-line bruiser.
+- **Skin:** olive-green.
+- **Hair:** thick, layered **black** hair in a wild silhouette; **several braided
+  strands** with **handcrafted beads** woven throughout.
+- **Eyes:** **amber / golden.**
+- **Features:** a **scar crossing one eye**; **small tusks.**
+
+### Visual Identity
+Everything about Ragash says **she lives in the wilderness**: weathered,
+repaired, practical, self-sufficient. She should read as a capable frontier
+survivor and animal-handler — not a soldier, not a raider stereotype. Warm
+earth tones against a cold charcoal cloak; handmade details over manufactured
+uniformity.
+
+### Design Philosophy
+- **Earned, lived-in, self-reliant.** Gear shows practical repairs and personal
+  craft (beads, rope, fur). Nothing issued; everything chosen or made.
+- **Contrast within the party:** Talos = disciplined steel; Eleanor = light and
+  hope; **Ragash = the wild, loyalty, and hard-won belonging.** Same world,
+  distinct silhouette.
+- Aligns with established orc canon (honour as accountability, wardens not
+  raiders — [`NON_HUMAN_FACTIONS.md`](../world/factions/NON_HUMAN_FACTIONS.md)).
+
+### Colour Palette
+| Role | Colours |
+|---|---|
+| Primary | Rich reddish-brown leather, buckskin |
+| Secondary | Charcoal (weather cloak) |
+| Accents | Weathered bronze hardware, fur, natural rope |
+| Skin / eyes | Olive-green skin; amber/golden eyes |
+
+### Equipment
+Canonical armour is **wilderness survival gear** — *not* military, *not*
+barbarian, *not* ceremonial:
+- Rich reddish-brown **leather** + **buckskin** cloth; a **charcoal weather
+  cloak**; **weathered bronze** hardware; **fur** accents and **rope**.
+- **Hunting equipment**, **travel gear**, and **medical supplies for her
+  hounds.**
+- **Practical repairs throughout** — patched, re-stitched, personalised.
+- See also [`Equipment.md`](Equipment.md).
+
+### Weapons
+- **Longsword and bow** (versatile melee/ranged — established combat canon,
+  `docs/heroes/RAGASH.md`).
+- Hunting tools (knives, snares) consistent with a tracker.
+- Her **hounds** are her signature battlefield extension (mechanics: hero bible /
+  `docs/COMBAT_SYSTEM.md`). _No new mechanics defined here._
+
+### Signature Item — The First Paw *(canonical)*
+- **Status:** Canonical.
+- **What:** a **hand-carved antler bead** worn in one of Ragash's braided
+  strands, carved from the antler of **the first hound she ever raised.**
+- **Meaning:** loyalty, trust, family, responsibility, **chosen family.**
+- **Truth:** **no magical properties** — its importance is entirely emotional.
+- **Rule:** **The First Paw must appear in every canonical depiction of Ragash.**
+
+### Personality
+Preserve all existing personality canon (`docs/heroes/RAGASH.md`): blunt to the
+point of seeming cold, warm in ways that take time to see, proud, honest. Belief:
+*"You earn belonging. It is not given."* Visually reinforce loyalty and quiet
+warmth beneath a guarded exterior — capable and watchful, not hostile.
+
+### Combat Style
+Houndmaster — versatile between melee (longsword) and ranged (bow); her hounds
+extend her presence and control space. Her power comes from what she has built
+and who she has committed to (established canon).
+
+### Companion Role
+A **party companion** (chosen family, member of **The Fellowship**). Her three
+hounds — **Tracker, Guardian, and Scout** ("more than animals — family") — are
+central to her identity and presence. Core themes to guide dialogue, writing,
+animation, and cinematics: **loyalty · conviction · belonging · chosen family ·
+responsibility · strength through compassion.** Narrative hook (reference sheet):
+she seeks the **mythical hounds** — ancient companions said to *choose* their
+handler, not be tamed. _(Hook only; deeper lore `_TBD_`.)_
+
+### Animation Notes
+- Grounded, watchful, economical movement — a tracker's efficiency.
+- Natural, protective body language toward hounds/companions.
+- Physical tell: touches **The First Paw** in moments of grief or resolve.
+- Formal reference: _TBD_ (capture during rigging).
+
+### Modeling Notes
+- Derive from the canonical visual direction here and the future Ragash
+  reference sheet **once produced** (none in the package yet).
+- Author **wild layered hair with distinct braids + beads** (incl. **The First
+  Paw** antler bead) as a hero silhouette element.
+- Model gear as **repaired, layered leather/buckskin + cloak + fur/rope**;
+  weathered bronze hardware; visible practical repairs.
+- Follow the studio production targets in
+  [`Character_Production_Bible.md`](Character_Production_Bible.md) /
+  [`Pipeline.md`](Pipeline.md).
+
+### UI Portrait Notes
+- Lead with **face + tusks + amber eyes + eye-scar + braids/beads**; The First
+  Paw should be visible where framing allows.
+- Read: capable, guarded warmth — never a snarling stereotype.
+
+### Design Rules
+1. Ragash must read as a **wilderness survivor / houndmaster**, not military,
+   barbarian, or ceremonial.
+2. **The First Paw appears in every canonical depiction.**
+3. Keep signature identity consistent: olive skin, amber eyes, eye-scar, small
+   tusks, wild braided/beaded black hair.
+4. Warm earth tones + charcoal cloak + weathered bronze; handmade over uniform.
+5. Do not portray the Bloodhorn (or Ragash) as villains or raider stereotypes.
+6. Do not contradict established canon in `docs/heroes/RAGASH.md`.
+
+### Revision History
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 2026-08-05 | Established Ragash's canonical visual identity (female Orc houndmaster; olive skin, amber eyes, eye-scar, small tusks, wild braided/beaded black hair), wilderness survival gear palette, and **The First Paw** signature item — from the approved *Ragash Canonical Package* (docs only). Added Bloodhorn origin + *The Broken Oath* cross-refs. Narrative canon preserved. **Reference artwork pending (none in package).** |
+| v1.1 | 2026-08-05 | **Imported approved reference artwork** (unaltered): `ragash_reference_v1.png` (master hero sheet), `ragash_turnaround_v1.png` (poses/turnaround), `ragash_fullbody_v1.png`, `ragash_character_sheet_v1.png`. Art-confirmed canon: motto *"Blood makes you related. Loyalty makes you family."*, Ranger/Houndmaster role, Neutral Good, height 5'7" (170 cm), late-20s–early-30s, affiliation **The Fellowship**, the three named hounds **Tracker/Guardian/Scout**, bead materials (bone/wood/antler/bronze), and the mythical-hounds hook. Written direction superseded by the imported reference set. |
+
+---
+
 ## Future Character-Reference Pipeline
 All character production assets must **derive from** the canonical reference
 sheets above rather than creating new interpretations. This applies to Tripo /

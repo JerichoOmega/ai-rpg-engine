@@ -47,3 +47,48 @@ Final Game Asset
    `assets/reference/` — that folder holds reference/canon only.
 3. Each character's per-stage notes live under **Modeling Notes / UI Portrait
    Notes / Animation Notes** in `Characters.md`.
+
+---
+
+## Expanded Character Production Pipeline (Concept → Playable Character)
+
+The full studio pipeline for a major character. **Every stage derives from the
+previous canonical stage** — nothing downstream reinterprets canon.
+
+```
+Concept
+   ↓
+Lore                     ← docs/heroes/, docs/characters/ (narrative truth)
+   ↓
+Character Design
+   ↓
+Canonical Reference Sheet ← the contract (assets/reference/characters/)
+   ↓
+Hero Render
+   ↓
+Turnaround
+   ↓
+Tripo                    ← 3D model generated from the turnaround
+   ↓
+Blender                  ← retopo, UVs, materials from the palette/PBR set
+   ↓
+Rigging
+   ↓
+Godot                    ← runtime model + materials
+   ↓
+Animation                ← idle + combat, expressing the character's identity
+   ↓
+UI                       ← portraits derived from canon
+   ↓
+Marketing                ← promo renders, identity preserved
+   ↓
+Playable Character
+```
+
+Governance:
+- Track each character's position in this pipeline in
+  [`Character_Production_Status.md`](Character_Production_Status.md).
+- The required deliverables and their rationale are in
+  [`Character_Production_Bible.md`](Character_Production_Bible.md).
+- If any stage must change canon, record a **new canonical revision first**
+  (see `Asset_Standards.md`) before producing the derivative.

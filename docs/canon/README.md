@@ -39,3 +39,23 @@ the single entry point that ties together:
    re-authoring it.
 
 See [`Asset_Standards.md`](Asset_Standards.md) for the full rules.
+
+---
+
+## Production Standard (applies to every major character)
+
+Elyndor runs as a professional production pipeline, not a collection of isolated
+design docs. **Every future major character follows the same pipeline — no
+exceptions.** **Talos** and **Eleanor** are the project's canonical production
+examples; measure all new character work against them.
+
+| Document | Purpose |
+|---|---|
+| [`Character_Production_Bible.md`](Character_Production_Bible.md) | The minimum deliverables every major character must have, and why each exists. |
+| [`Character_Production_Status.md`](Character_Production_Status.md) | Live tracker of every character's production state (only real progress marked done). |
+| [`checklists/Character_Checklist.md`](checklists/Character_Checklist.md) | Reusable per-character checklist. |
+| [`Visual_Language.md`](Visual_Language.md) | Project art-direction handbook (style, armour, weapons, materials, magic VFX, silhouettes, colour language). |
+| [`Pipeline.md`](Pipeline.md) | Concept → Lore → Design → Reference → Render → Turnaround → Tripo → Blender → Rigging → Godot → Animation → UI → Marketing → Playable Character. |
+
+Companions are held to the **same** standard as heroes (see the Companion
+Standards section in the Production Bible).

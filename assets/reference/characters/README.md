@@ -11,6 +11,10 @@ Stored at original resolution, uncompressed and unaltered. Do not modify.
 | `eleanor_model_sheet_v1.png` | Eleanor | Model sheet — palette + PBR + Tripo export (v1) | 1024 × 1536 |
 | `eleanor_turnaround_v1.png` | Eleanor | 3D turnaround + T-pose + wireframe (v1) | 1536 × 1024 |
 | `eleanor_fullbody_v1.png` | Eleanor | Clean full-body hero figure (v1) | 1122 × 1402 |
+| `ragash_reference_v1.png` | Ragash | Master hero sheet — "Houndmaster of the Wild" (v1) | 1536 × 1024 |
+| `ragash_turnaround_v1.png` | Ragash | Turnaround / poses + expressions + hounds (v1) | 1536 × 1024 |
+| `ragash_fullbody_v1.png` | Ragash | Full-body character sheet (v1) | 1024 × 1536 |
+| `ragash_character_sheet_v1.png` | Ragash | Character sheet — overview + equipment (v1) | 1086 × 1448 |
 
 These are the single source of truth for each character's appearance. All future
 art must derive from them. See
