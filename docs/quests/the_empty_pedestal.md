@@ -18,6 +18,14 @@ The quest is **NOT about recovering a relic.** It is about **uncovering historic
 truth.** The central question runs through every beat: *when duty and life demand
 opposite things, which is the higher obligation — and who gets to decide?*
 
+> **Philosophical origin — Baelor's First Lesson.** The clan's founder, **Baelor
+> Ironhall**, engraved the first inscription inside the **Founder's Compass**
+> *before* any name: *"Measure the stone before you shape it. Measure yourself
+> before you judge another."* Generations judged **Durgan** without measuring the
+> full truth. This quest is Baelor's First Lesson made into a story — and the
+> living proof of the clan motto, **"Truth is the first measurement."**
+> (Founder + compass canon: [`Clan Ironhall`](../world/factions/clan_ironhall.md).)
+
 ## Premise
 Torren believes that **recovering the lost relic will restore Clan Ironhall's
 honour.** He carries the **Founder's Compass** (its final space still blank) and
@@ -97,8 +105,11 @@ Full entries: [`Clan Ironhall — Important Locations`](../world/factions/clan_i
 9. **The Silent Forge** — Torren returns to the long-cold forge and completes an
    **ordinary piece of craftsmanship**; for the first time in generations he
    **stamps it with the Ironhall Master's Seal.**
-10. **The Compass** — later, Torren **engraves his own name inside the Founder's
-    Compass**, filling the blank space: Clan Ironhall's lineage restored.
+10. **The Compass** — Torren **opens the Founder's Compass** and, **beneath the
+    names of every previous Clan Master**, engraves **Torren Ironhall** — then adds
+    his own lesson: **"Truth is the strongest foundation."** The scene is not
+    merely restoring the past; it is **beginning the next generation of Clan
+    Ironhall.**
 
 (Encounter design for any combat beats should follow the gold-standard
 principles in
@@ -106,13 +117,20 @@ principles in
 Mechanics / rewards / branching: `_TBD_`.)
 
 ## Canonical ending (preserve)
-- The **mark of disgrace is removed** from Clan Ironhall's name by High Thane
-  Borik, in person.
-- Torren **relights the Silent Forge** with an ordinary, honest piece of work and
-  **finally uses the Ironhall Master's Seal** — the right he believed he had not
-  yet earned.
-- Torren **engraves his own name inside the Founder's Compass**, symbolising that
-  **Clan Ironhall's lineage has been restored.**
+After the council restores Clan Ironhall's honour:
+- **High Thane Borik personally restores the clan's name in the Hall of Names** —
+  removing the carved mark of disgrace in person.
+- Torren returns to the **Silent Forge** and **completes an ordinary piece of
+  craftsmanship**, then **stamps it with the Ironhall Master's Seal for the first
+  time in generations** — accepting the responsibility he believed he had not yet
+  earned.
+- Torren **opens the Founder's Compass** and, **beneath the names of every
+  previous Clan Master**, engraves **Torren Ironhall**, adding his own lesson:
+  **"Truth is the strongest foundation."**
+- The moment closes the symbolic arc of the two heirlooms — **the Compass sought
+  the truth; the Seal accepts the responsibility** — and marks not just the
+  restoration of the past but **the beginning of the next generation of Clan
+  Ironhall.**
 
 This ending is canonical and must be preserved in future writing.
 
@@ -128,3 +146,4 @@ This ending is canonical and must be preserved in future writing.
 | Date | Change |
 |---|---|
 | 2026-06 | Authored *The Empty Pedestal* companion quest (theme, premise, Durgan / Lord Warden of the Vault, the sealed-letter twist, "no villain" rule, supporting cast, locations, ten-beat arc shape, canonical ending) from the approved Torren Ironhall canon. Design-only; no systems changed. |
+| 2026-06 (Rev v1.2) | Refinement: added the **Baelor's First Lesson** philosophical origin + clan motto **"Truth is the first measurement."**; refined the ending — Torren stamps his work with the Master's Seal, then engraves **Torren Ironhall** beneath every prior Master in the Founder's Compass and adds his lesson **"Truth is the strongest foundation."**, framed as beginning the next generation of Clan Ironhall. Additive; existing beats preserved. |

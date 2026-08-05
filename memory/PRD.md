@@ -270,3 +270,32 @@ touched (verified via git status: only docs/ + assets/ changed).
   `docs/encounters/religious_encounters.md`) — not introduced by this work.
 - Talos/Eleanor/Ragash/Ronan/Torren are now the five fully-canonical production
   characters (Reference Complete).
+
+## Torren Ironhall — Canon Revision v1.2 (2026-06)
+Additive refinement; only 3 docs changed (Characters.md, clan_ironhall.md,
+the_empty_pedestal.md). No assets/source touched.
+- **Founder replaced:** placeholder Durin → **Baelor Ironhall** (*The First
+  Builder / The Stonewright / The First Master*) — original, non-franchise name.
+  Baelor canon: greatest builder (Great Halls/Bridges/Fortress Gates/Mountain
+  Roads/Aqueducts/Foundries/Public Forges); belief *"A kingdom's strength is
+  measured by what remains when the fighting ends."*
+- **Clan motto:** **"Truth is the first measurement."** (now in clan doc, compass
+  description, quest doc, clan history).
+- **Founder's Compass expanded:** personally forged by Baelor; explicitly NOT
+  magical; each Clan Master adds name + personal maker's mark + one lesson →
+  documented as a **living historical record**. **Baelor's First Lesson**
+  (founding inscription, before any name): *"Measure the stone before you shape
+  it. Measure yourself before you judge another."* — philosophical origin of the
+  quest.
+- **Ending refined (The Empty Pedestal):** Borik restores the name in the Hall of
+  Names; Torren completes ordinary craftsmanship at the Silent Forge and stamps
+  it with the Master's Seal; opens the Compass and engraves **Torren Ironhall**
+  beneath every prior Master, adding his lesson **"Truth is the strongest
+  foundation."** — beginning the next generation.
+- **Design intent:** Compass = truth/craftsmanship/patience/legacy/generational
+  wisdom; Seal = earned honour/responsibility/stewardship/carrying the name.
+  Together: the Compass seeks truth; the Seal accepts responsibility.
+- Validation: no residual placeholder-founder lore refs (only revision-history
+  notes documenting the change); Baelor + motto present in all 3 files; 1172
+  links checked, all links in edited files resolve (12 pre-existing broken links
+  remain only in untouched GAME_BIBLE.md / religious_encounters.md).

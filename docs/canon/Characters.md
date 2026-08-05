@@ -764,17 +764,27 @@ Eleanor is light and hope, Ragash is the wild, Ronan is shadow and restraint, an
 - (Gameplay: his **Field Forge** constructs and skill trees — `docs/heroes/TORREN.md`.)
 
 ### Signature Item — The Founder's Compass *(canonical)*
-- **What it is NOT:** a navigation compass.
+- **What it is NOT:** a navigation compass. **Not magical.**
 - **What it is:** an ancient **master craftsman's measuring compass** — for
-  precision, design, and discovery.
-- **History:** forged by the **founder of Clan Ironhall**; passed from one Clan
-  Master to the next. **Every generation used it, repaired it, and engraved their
-  name inside** one arm.
-- **Appearance:** **darkened steel with bronze accents**, hand-forged hinges,
-  **one leg replaced centuries ago**, smooth from centuries of use; carried in an
-  **old leather case.**
-- **Engraved lineage inside (canonical, oldest → newest):** Durin · Barag ·
-  Thorek · Borin · Hadrin · Orin · **Durgan** … *(final blank space reserved
+  **drafting, engineering, architecture, precision, and craftsmanship.**
+- **Forged by:** **Baelor Ironhall**, the clan's founder (*The First Builder /
+  The Stonewright / The First Master*), and passed from one Clan Master to the
+  next.
+- **Appearance:** **darkened steel with bronze accents**, a **hand-forged
+  hinge**, **repaired repeatedly through generations**, worn smooth from
+  centuries of use; carried in an **old leather case.**
+- **A living historical record:** each Clan Master adds inside it **their name,
+  their personal maker's mark, and one lesson learned during their lifetime** —
+  a generational ledger of wisdom, not merely an heirloom.
+- **The founding inscription (Baelor's First Lesson)** is the **first** thing
+  engraved inside — before any name:
+  > *"Measure the stone before you shape it. Measure yourself before you judge
+  > another."*
+  Only beneath it do the generations record their names, marks, and lessons. It
+  is the philosophical origin of Torren's quest and the seed of the clan motto,
+  **"Truth is the first measurement."**
+- **Engraved lineage inside (canonical, oldest → newest):** **Baelor** *(Founder)*
+  · Barag · Thorek · Borin · Hadrin · Orin · **Durgan** … *(final space reserved
   for)* **Torren Ironhall.**
 - Full lineage/clan context:
   [`Clan Ironhall`](../world/factions/clan_ironhall.md#the-masters-lineage-and-the-founders-compass).
@@ -787,6 +797,15 @@ Eleanor is light and hope, Ragash is the wild, Ronan is shadow and restraint, an
 - **Torren:** carries the seal **wrapped in cloth** and **refuses to use it**,
   believing he **has not yet earned that right.** (He finally uses it at the end
   of [`The Empty Pedestal`](../quests/the_empty_pedestal.md).)
+
+### Design Intent — the Compass and the Seal
+- **The Founder's Compass** symbolises **truth · craftsmanship · patience ·
+  legacy · generational wisdom.**
+- **The Ironhall Master's Seal** symbolises **earned honour · responsibility ·
+  stewardship · carrying the clan's name.**
+- Together they are the complete Ironhall philosophy — **the Compass seeks truth;
+  the Seal accepts responsibility.** Torren's arc is learning he has the right to
+  both. Clan motto: **"Truth is the first measurement."**
 
 ### Companion Quest — The Empty Pedestal
 His flagship companion quest is **not** about recovering a relic — it is about
@@ -872,7 +891,8 @@ consistently in future dialogue.
 ### Revision History
 | Version | Date | Change |
 |---|---|---|
-| v1.0 | 2026-06 | Established Torren's canonical visual identity and **imported approved reference artwork** (unaltered): `torren_reference_v1.png` (master sheet), `torren_turnaround_v1.png` (poses), `torren_fullbody_v1.png`, `torren_fullbody_alt_v1.png`. Canon: **Dwarf** Master Blacksmith, ~85 / 4'5" (135 cm), reddish-brown/ginger hair + full forge-braided beard (one singed braid), warm amber eyes, charcoal/deep-brown/burgundy + copper/bronze palette, repaired travelling smith gear, the **Forge Hammer**, the **Founder's Compass** (lineage Durin→…→Durgan→Torren) and retired **Ironhall Master's Seal**. Authored **Clan Ironhall** and the **The Empty Pedestal** companion quest with supporting cast + locations. Corrected prior race (Human→Dwarf); personal Core Wound (Cold Clasp) preserved. |
+| v1.0 | 2026-06 | Established Torren's canonical visual identity and **imported approved reference artwork** (unaltered): `torren_reference_v1.png` (master sheet), `torren_turnaround_v1.png` (poses), `torren_fullbody_v1.png`, `torren_fullbody_alt_v1.png`. Canon: **Dwarf** Master Blacksmith, ~85 / 4'5" (135 cm), reddish-brown/ginger hair + full forge-braided beard (one singed braid), warm amber eyes, charcoal/deep-brown/burgundy + copper/bronze palette, repaired travelling smith gear, the **Forge Hammer**, the **Founder's Compass** (lineage Baelor→…→Durgan→Torren) and retired **Ironhall Master's Seal**. Authored **Clan Ironhall** and the **The Empty Pedestal** companion quest with supporting cast + locations. Corrected prior race (Human→Dwarf); personal Core Wound (Cold Clasp) preserved. |
+| v1.2 | 2026-06 | Canon refinement: canonical founder is **Baelor Ironhall** (*The First Builder / The Stonewright / The First Master*), replacing the placeholder Durin. Expanded the **Founder's Compass** (explicitly non-magical; each Master adds name + maker's mark + one lesson → a living historical record) and added **Baelor's First Lesson** founding inscription. Established clan motto **"Truth is the first measurement."** and documented **Compass/Seal design-intent symbolism**. Ending refined in [`The Empty Pedestal`](../quests/the_empty_pedestal.md): Torren engraves his name beneath every prior Master and adds his lesson, **"Truth is the strongest foundation."** Additive; existing canon preserved. |
 
 ---
 

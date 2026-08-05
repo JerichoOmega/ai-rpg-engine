@@ -22,6 +22,9 @@ Masters keep.** To carry the Ironhall mark on a finished work once meant the
 work was *true* — sound to the core, honestly made, built to outlast its maker.
 
 - **Homeland:** the Iron Peaks (dwarven heartland — [`RACES.md`](../RACES.md)).
+- **Motto:** *"Truth is the first measurement."* — Baelor Ironhall's founding
+  principle and the clan's **philosophical foundation** (see the Founder's
+  Compass and *The Empty Pedestal*).
 - **Identity:** a **craft-honour clan** — closer in temperament to the orcish
   Honor Clans' principle of *"honour as accountability"* than to any War Clan,
   though the two peoples are unrelated. Ironhall keeps its word and signs its
@@ -37,18 +40,64 @@ work was *true* — sound to the core, honestly made, built to outlast its maker
 ## The Master's Lineage and the Founder's Compass
 Ironhall's leadership of craft passes from one **Clan Master** to the next, and
 with it passes **The Founder's Compass** — an ancient **master craftsman's
-measuring compass** (not a navigation instrument) forged by the clan's founder.
-Every Master has used it, repaired it, and **engraved their name inside one arm**
-before passing it on. The compass is the clan's true crown: a working tool that
+measuring compass** (**not** a navigation instrument and **not magical**),
+**personally forged by the clan's founder, Baelor Ironhall** (see below). It is a
+working tool for **drafting, engineering, architecture, precision, and
+craftsmanship.** The compass is the clan's true crown: a working tool that
 records the lineage in the metal itself.
 
-**Engraved lineage (canonical, per the reference sheet), oldest → most recent:**
-Durin Ironhall · Barag Ironhall · Thorek Ironhall · Borin Ironhall ·
-Hadrin Ironhall · Orin Ironhall · **Durgan Ironhall** · … · *(final blank space
-reserved for)* **Torren Ironhall**.
+**Construction:** darkened steel with bronze accents and a hand-forged hinge;
+**repaired repeatedly through generations** and **worn smooth from centuries of
+use.**
+
+**A living historical record — not merely an heirloom.** Every Clan Master, on
+inheriting the compass, adds three things inside it:
+1. **their name**,
+2. **their personal maker's mark**, and
+3. **one lesson learned during their lifetime.**
+
+The interior is therefore a **generational ledger of hard-won wisdom** — the
+clan's memory kept in steel, embodying the motto *"Truth is the first
+measurement."*
+
+### Baelor's First Lesson (the founding inscription)
+The **very first inscription inside the compass is not Baelor's name.** It reads:
+
+> *"Measure the stone before you shape it. Measure yourself before you judge
+> another."*
+
+Only **beneath** that inscription do the generations begin recording their names,
+marks, and lessons. This inscription is the **philosophical origin of Torren's
+companion quest** ([`The Empty Pedestal`](../../quests/the_empty_pedestal.md)) and
+the seed of the clan motto, **"Truth is the first measurement."**
+
+**Engraved lineage (canonical), oldest → most recent:**
+**Baelor Ironhall** *(Founder)* · Barag Ironhall · Thorek Ironhall ·
+Borin Ironhall · Hadrin Ironhall · Orin Ironhall · **Durgan Ironhall** · … ·
+*(final space reserved for)* **Torren Ironhall**.
 
 > Full artifact spec: [`docs/canon/Characters.md#torren`](../../canon/Characters.md#torren)
 > (Signature Items). Intermediate names between Durgan and Torren: `_TBD_`.
+
+### Baelor Ironhall — The First Builder
+**Baelor Ironhall** — *Founder of Clan Ironhall · The First Builder · The
+Stonewright · The First Master* — is remembered **not as the greatest warrior but
+as the greatest builder.** His life's work shaped the clan for generations:
+
+- **Great Halls · Bridges · Fortress Gates · Mountain Roads · Aqueducts ·
+  Foundries · Public Forges.**
+
+His philosophy became the clan's foundation. Core belief:
+
+> *"A kingdom's strength is measured by what remains when the fighting ends."*
+
+### Design Intent — the Compass and the Seal
+- **The Founder's Compass** symbolises **truth, craftsmanship, patience, legacy,
+  and generational wisdom.**
+- **The Ironhall Master's Seal** (below) symbolises **earned honour,
+  responsibility, stewardship, and carrying the clan's name.**
+- Together they are the complete Ironhall philosophy: **the Compass seeks truth;
+  the Seal accepts responsibility.**
 
 ### The Ironhall Master's Seal *(secondary heirloom)*
 The **Ironhall Master's Seal** conferred the right to stamp Clan Ironhall's mark
@@ -152,3 +201,4 @@ its long-cold, historically-significant chamber.)
 | Date | Change |
 |---|---|
 | 2026-06 | Authored Clan Ironhall (dwarven craft-honour clan of the Iron Peaks), the Master's lineage + Founder's Compass, the retired Master's Seal, the Durgan / Broken Oath historical truth, key figures, and the Hall of Names / Hall of Echoes / Silent Forge / Empty Pedestal / Ancestral Forge locations — from the approved Torren Ironhall canon. Cross-referenced `RACES.md` and `NON_HUMAN_FACTIONS.md`; nothing overwritten. |
+| 2026-06 (Rev v1.2) | Canon refinement: replaced placeholder founder **Durin → Baelor Ironhall** (*The First Builder / The Stonewright / The First Master*), added Baelor's canon (great works + core belief), established clan motto **"Truth is the first measurement."**, expanded the Founder's Compass (not magical; each Master adds name + maker's mark + one lesson → living historical record), added **Baelor's First Lesson** founding inscription, and documented Compass/Seal design-intent symbolism. Additive; existing canon preserved. |
