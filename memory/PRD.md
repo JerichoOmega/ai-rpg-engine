@@ -433,3 +433,28 @@ docs/characters/ronan.md.
   full pytest **233 passed** (engine/gameplay/AI/combat untouched); git scope clean
   (docs only; no code, no canonical assets modified); existing Ronan canon
   preserved and internally consistent.
+
+## Engine-Agnostic Core — Godot Migration Architecture (2026-06, additive docs + reserved dirs)
+Non-breaking architecture refactor prep. **No code, gameplay, combat, AI, quest, save, or canon changes.**
+Files created (9): docs/architecture/{GODOT_MIGRATION_PLAN, LAYER_RULES, ENGINE_INTERFACES,
+GODOT_SCENE_MAPPING, ARCHITECTURE_DECISIONS}.md + reserved README markers in
+core/, engine/, engine/godot/, tools/ (no __init__.py → not importable, no code).
+- **Audit finding:** `tactical/` combat core is already ~90% engine-agnostic (pure
+  logic; presentation isolated to render.py/session.py; showcases run headless with
+  0 I/O). No curses/pygame/tkinter lock-in anywhere. Coupling lives in the legacy
+  root runtime (world_actions/game_loop) and stray print()s in combat_bridge +
+  event_bus. Save = JSON (portable). Canon docs = 100% engine-neutral.
+- **Doc set:** migration plan (audit/roadmap/risks/effort/readiness index), layer
+  rules + presentation-assumption audit, engine data contracts (CharacterState,
+  BattlefieldState, Quest/Dialogue/World/SaveState, Combat/Animation/Reward events,
+  intents — field names mirror real code), Godot scene/node/signal mapping, and an
+  ADR log (ADR-0001…0009).
+- **Godot Readiness: ~55% overall** (combat core ~90%, data/canon ~100%, save ~85%,
+  overworld runtime ~40%). Top blocker: engine.log/event_bus are human-string/print
+  based, not a structured event stream → highest-value next step (plan P1, additive).
+  Migration complexity: Medium (favourable — no graphics-engine lock-in).
+- Validation (agent-tested): full pytest **233 passed** (no behavior/save/AI change);
+  git scope = only new files, **no .py modified**; reserved dirs not importable;
+  markdown links — 0 broken across the 9 new files (11 remaining broken links are
+  all pre-existing/out-of-scope: LORE_AUDIT, PRD, goblin_tribes exports). Sundered
+  Span / Forge Stand / Lost Howl slices remain valid & headless.
