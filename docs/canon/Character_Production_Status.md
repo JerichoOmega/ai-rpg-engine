@@ -48,7 +48,7 @@ been produced.
 - **Corwin** — canon visual entry ([`Characters.md#corwin`](Characters.md#corwin))
   + **imported reference art** (`corwin_reference_v1.png`, 1264×848) + hero/character
   bibles ([`CORWIN.md`](../heroes/CORWIN.md), [`corwin.md`](../characters/corwin.md))
-  + companion quest [`The Buried Evidence`](../quests/the_buried_evidence.md). Now
+  + companion quest [`The Silent Witness`](../quests/the_silent_witness.md). Now
   **Reference Complete** (3D/rig/Godot/animation/UI/marketing still pending).
 - **Maeve Ashwood** — canon visual entry
   ([`Characters.md#maeve-ashwood`](Characters.md#maeve-ashwood)) + **imported

@@ -78,9 +78,10 @@ advantage: what the party can *see* and *understand* becomes what it can exploit
 [`docs/COMBAT_SYSTEM.md`](../COMBAT_SYSTEM.md) and existing systems. Specific
 kit: `_TBD_`.)*
 
-## Companion Quest — *The Buried Evidence*
-> **Newly established title (revisable).** Expands, does not replace, any prior
-> Corwin quest hooks. Full design: [`The Buried Evidence`](../quests/the_buried_evidence.md).
+## Companion Quest — *The Silent Witness*
+> **Canonical title (finalized).** Expands, does not replace, any prior Corwin
+> quest hooks. Full design: [`The Silent Witness`](../quests/the_silent_witness.md).
+> *(Provisional working title was "The Buried Evidence".)*
 
 Themes: **truth · corruption · responsibility · accountability · forgiveness.**
 Corwin is drawn back to the case that broke him — the ignored warning — and finds
@@ -121,4 +122,5 @@ does — solving problems with knowledge before brute force.
 ## Document History
 | Date | Change |
 |---|---|
-| 2026-06 | Created — full Hero Bible (theme *"the truth is a kindness"*, core wound, surface/hidden personality, signature habits, Surveyor's Lens + Green Journal, exploration & combat identity, *The Buried Evidence* companion quest, relationships, long-term legacy, canonical quote). Additive; preserves prior Gnome/Ranger/Corruption-Investigator + affinity/roster references. |
+| 2026-06 | Created — full Hero Bible (theme *"the truth is a kindness"*, core wound, surface/hidden personality, signature habits, Surveyor's Lens + Green Journal, exploration & combat identity, *The Silent Witness* companion quest, relationships, long-term legacy, canonical quote). Additive; preserves prior Gnome/Ranger/Corruption-Investigator + affinity/roster references. |
+| 2026-06 | **Imported canonical reference sheet** `corwin_reference_v1.png`. **Quest title finalized: *The Silent Witness*** (replaces provisional *The Buried Evidence*). Title-only + art; narrative/mechanics unchanged. |

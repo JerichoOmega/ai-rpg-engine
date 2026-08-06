@@ -1,18 +1,33 @@
-# The Buried Evidence — Corwin Companion Quest (Canonical)
+# The Silent Witness — Corwin Companion Quest (Canonical)
 
 > **Status:** Canonical design (2026-06). Corwin's flagship companion quest.
-> **Title note:** *The Buried Evidence* is **newly established** in this pass and may
-> be revised; it **expands, and does not replace,** any prior Corwin quest hooks.
-> Character: [`docs/heroes/CORWIN.md`](../heroes/CORWIN.md) ·
+> **Canonical title:** ***The Silent Witness.*** *(Finalized from the provisional
+> working title "The Buried Evidence", which is retained only as a historical
+> development note.)* Character: [`docs/heroes/CORWIN.md`](../heroes/CORWIN.md) ·
 > [`Characters.md#corwin`](../canon/Characters.md#corwin).
-> Design/narrative documentation only — **no gameplay systems, combat, or saves are
-> changed by this document.** Reserved details use `_TBD_`.
+> Design/narrative documentation only — **no gameplay systems, combat, saves, or
+> quest logic are changed by this document.** Reserved details use `_TBD_`.
 
 ## Core Theme — *Truth & Discovery*
 Completing the companion philosophy set — Talos = **duty**, Eleanor = **justice &
 hope**, Ragash = **loyalty**, Ronan = **belonging**, Torren = **honour & legacy**,
 Maeve = **compassion & hope through service**, **Corwin = truth & discovery.**
 Themes: **truth · corruption · responsibility · accountability · forgiveness.**
+
+## Title — *The Silent Witness* (design intent)
+The title is deliberately multivalent. It refers, all at once, to:
+- **Corwin himself** — who witnessed the early signs of corruption.
+- **The forest** — which silently remembers everything.
+- **The Green Journal** — preserving truths others ignored.
+- **The buried evidence** — that stayed hidden for years.
+- **The quiet consequences** — of warnings no one heeded.
+- **Corwin's identity as an observer** — whose greatest strength is seeing what
+  others overlook.
+
+This symbolic naming matches the companion-quest naming philosophy alongside
+[`The Lost Howl`](the_lost_howl.md) (Ronan), [`The Empty Pedestal`](the_empty_pedestal.md)
+(Torren), and [`A Light in the Ashes`](a_light_in_the_ashes.md) (Maeve). Maintain
+this philosophy for future companion quests.
 
 ## Premise
 Corwin is drawn back to the **case that broke him** — the early corruption warning
@@ -67,11 +82,11 @@ research, and a better understanding of corruption** (see
   campfire beat pairs them.
 
 ## Reserved (`_TBD_`)
-Final quest title confirmation; specific locations, antagonist(s)/witnesses, the
-buried-evidence particulars, objective-swap/combat mechanics, and any branching
-outcomes.
+Specific locations, antagonist(s)/witnesses, the buried-evidence particulars,
+objective-swap/combat mechanics, and any branching outcomes.
 
 ## Revision History
 | Date | Change |
 |---|---|
-| 2026-06 | Authored Corwin's companion quest *The Buried Evidence* (theme truth & discovery; three-act structure; human-not-villain accountability; philosophy-reinforcing climax instead of a boss fight; knowledge-first combat philosophy; forgiveness ending + Green Journal legacy). Additive; title revisable; no systems changed. |
+| 2026-06 | Authored Corwin's companion quest (theme truth & discovery; three-act structure; human-not-villain accountability; philosophy-reinforcing climax instead of a boss fight; knowledge-first combat philosophy; forgiveness ending + Green Journal legacy). Additive; no systems changed. Provisional working title: *The Buried Evidence.* |
+| 2026-06 | **Title finalized: *The Silent Witness*** (replaces the provisional *The Buried Evidence*). Documented the title's multivalent design intent. Title-only change — narrative, objectives, mechanics, and progression unchanged; the provisional title is retained here as a historical development note. |

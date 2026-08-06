@@ -1006,7 +1006,7 @@ wolves." / "I've only ever met people."*
 > established in [`docs/heroes/CORWIN.md`](../heroes/CORWIN.md) and
 > [`docs/characters/corwin.md`](../characters/corwin.md) — this entry consolidates
 > the production reference and does **not** rewrite it. Companion quest:
-> [`The Buried Evidence`](../quests/the_buried_evidence.md). Personality/story cite
+> [`The Silent Witness`](../quests/the_silent_witness.md). Personality/story cite
 > the hero bible; unknowns use `_TBD_`.
 
 ### Status
@@ -1045,7 +1045,7 @@ truth is a kindness, even when it hurts."* Full character:
 | Combat Style | Knowledge-first — reveal hidden enemies, expose weaknesses, tracking, trap detection (mechanics `_TBD_`) |
 | Physical Description | Small, wiry gnome; tousled auburn/brown hair; warm, curious, observant face; practical green-and-brown field gear with many notebook pouches (per reference sheet) |
 | Voice Notes | `_TBD_` |
-| Important Story Notes | Core wound: ignored/buried corruption evidence; companion quest *The Buried Evidence* |
+| Important Story Notes | Core wound: ignored/buried corruption evidence; companion quest *The Silent Witness* |
 
 ### Visual Identity
 Per the canonical reference sheet: a **small, wiry gnome** in **earthy greens and
@@ -1059,8 +1059,9 @@ self-doubting.* Palette: mossy greens, warm browns, aged brass, cream paper.
 ### Revision History
 | Version | Date | Change |
 |---|---|---|
-| v1.0 | 2026-06 | Established Corwin as a documented canonical companion (Gnome Ranger / Corruption Investigator; philosophy *"the truth is a kindness"*; Surveyor's Lens + Green Journal; knowledge-first combat identity; companion quest *The Buried Evidence*). Preserves prior Gnome/Ranger/Corruption-Investigator + affinity/roster references. **Reference artwork pending.** |
+| v1.0 | 2026-06 | Established Corwin as a documented canonical companion (Gnome Ranger / Corruption Investigator; philosophy *"the truth is a kindness"*; Surveyor's Lens + Green Journal; knowledge-first combat identity; companion quest *The Silent Witness*). Preserves prior Gnome/Ranger/Corruption-Investigator + affinity/roster references. **Reference artwork pending.** |
 | v1.1 | 2026-06 | **Imported canonical reference sheet** (unaltered): `corwin_reference_v1.png` (1264×848) — turnaround (front/side/back), expression studies, and prop callouts (Surveyor's Lens, Green Journal, sketching kit) with palette. Visual identity established: small wiry gnome, earthy green/brown field-investigator gear, tousled auburn hair. Now **Reference Complete**. |
+| v1.2 | 2026-06 | **Companion quest title finalized: *The Silent Witness*** (replaces the provisional *The Buried Evidence*). Documentation-only title sync; narrative/objectives/mechanics unchanged. |
 
 ---
 

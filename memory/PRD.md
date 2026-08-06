@@ -465,7 +465,7 @@ Completes the 7-companion philosophy set: Talos=Duty, Eleanor=Justice&Hope, Raga
 Ronan=Belonging, Torren=Honour&Legacy, **Corwin=Truth&Discovery**, **Maeve=Compassion&Hope Through Service**.
 Files (11; docs only — no gameplay/combat/AI/recruitment/save/asset changes):
 NEW: docs/heroes/CORWIN.md, docs/heroes/MAEVE.md, docs/characters/corwin.md,
-docs/characters/maeve.md, docs/quests/the_buried_evidence.md,
+docs/characters/maeve.md, docs/quests/the_silent_witness.md,
 docs/quests/a_light_in_the_ashes.md, docs/design/companions/corwin_maeve_relationships.md.
 EDITED: docs/canon/Characters.md (+Corwin & +Maeve Ashwood entries, art `_TBD_`),
 docs/canon/Character_Production_Status.md (+2 party rows "Docs Complete — Art Pending"),
@@ -493,3 +493,17 @@ docs/design/companions/ronan_eleanor_banter.md (roster note).
   no combat/recruitment regression possible; full pytest **233 passed**; markdown links
   0 broken across all 11 files (11 remaining broken are pre-existing/out-of-scope:
   LORE_AUDIT, PRD, goblin_tribes exports).
+
+## Corwin & Maeve reference art + Corwin quest title finalized (2026-06, additive)
+- **Reference art imported** (byte-for-byte, unaltered): `corwin_reference_v1.png`
+  (1264×848, sha b213885d…) and `maeve_reference_v1.png` (1264×848, sha 2c851a39…).
+  Both promoted to **Reference Complete** in Characters.md + production tracker;
+  hero/character bibles + characters README updated; visual identities established.
+- **Corwin quest title FINALIZED: "The Silent Witness"** (replaces provisional
+  "The Buried Evidence"). Quest file renamed the_buried_evidence.md → the_silent_witness.md;
+  documented the title's multivalent design intent (Corwin, the forest, the Green
+  Journal, the buried evidence, the quiet consequences, the observer). All canonical
+  references synced (CORWIN.md, Characters.md, Character_Production_Status.md,
+  corwin.md, the quest doc). Provisional title kept only in historical revision notes.
+  Title-only change — narrative/objectives/mechanics/progression unchanged.
+- Validation: docs + 2 new image assets only; no .py/save/quest-logic changes.

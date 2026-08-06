@@ -3,7 +3,7 @@
 > **Authority note.** Synchronized quick-reference sheet. Authoritative docs:
 > [`docs/heroes/CORWIN.md`](../heroes/CORWIN.md) and
 > [`docs/canon/Characters.md#corwin`](../canon/Characters.md#corwin) — those win on
-> any discrepancy. Quest: [`The Buried Evidence`](../quests/the_buried_evidence.md).
+> any discrepancy. Quest: [`The Silent Witness`](../quests/the_silent_witness.md).
 
 ## Identity
 | Field | Value |
