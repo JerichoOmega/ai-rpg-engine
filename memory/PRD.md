@@ -526,3 +526,21 @@ No gameplay/combat/AI/data/save changes. 13 new docs.
   explicit exists-vs-`_TBD_` scope split (interactive region build = follow-up).
 - Validation: git = docs only, no .py/json/save changed; markdown links 0 broken
   across all 13 new files (11 remaining broken = pre-existing/out-of-scope).
+
+## Frontier playable flow + enemy tags + Talos quest title (2026-06)
+- **The Frontier — playable end-to-end slice** (`tactical/frontier.py`, `scripts/play_frontier.py`,
+  `backend/tests/test_frontier_slice.py`). Orchestrator stitches 8 beats: reuses the 3
+  existing showcases (Sundered Span, Forge Stand, Lost Howl) as combat anchors + real
+  data-driven travel skirmishes (wolves/bandits/corrupted) + recruitment & investigation
+  beats. Deterministic per seed; party grows to all 7 companions; finale = 'rescued'
+  (save-don't-slay). Reuses canonical engine — no engine fork/modification. 8 new tests pass.
+- **Encounter tags in data**: added `tags` field to all 74 units in `enemies.json`
+  (minimal inline additive edit, original compact formatting preserved) + query helpers
+  in `enemies.py` (`by_tag`, `tags_for`, `all_tags`). 10 tags: Tutorial/Frontier/Forest/
+  Roads/Ruins/Mountains/Cave-Dungeon/Swamp/Night/Story. Tags inherit via `extends`.
+- **Talos quest title FINALIZED: "The Line He Would Not Cross"** (Vellmar's Ford arc;
+  multivalent — moral line/military line/river-crossing). Updated TALOS.md +
+  companion_quests_index.md. All 7 companion-quest titles now canonical.
+- Validation: full pytest **241 passed** (233→241, +8 frontier); `tactical.verify`
+  FOUNDATION STABLE; enemies.json valid + by_tag works; markdown links 0 broken across
+  edited/new docs (11 remaining pre-existing/out-of-scope); save/report side-effects restored.

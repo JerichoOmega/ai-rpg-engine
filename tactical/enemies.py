@@ -81,6 +81,26 @@ def list_enemies(include_abstract: bool = False) -> List[str]:
             if include_abstract or not bp.get("abstract")]
 
 
+def tags_for(enemy_id: str) -> List[str]:
+    """Resolved encounter tags for an enemy (inherits via ``extends``)."""
+    return list(resolve(enemy_id).get("tags", []))
+
+
+def by_tag(tag: str, include_abstract: bool = False) -> List[str]:
+    """All spawnable enemy ids carrying ``tag`` — for encounter generation."""
+    return [eid for eid in list_enemies(include_abstract)
+            if tag in tags_for(eid)]
+
+
+def all_tags() -> List[str]:
+    """Every distinct encounter tag present across the roster (sorted)."""
+    seen = set()
+    for eid in list_enemies():
+        seen.update(tags_for(eid))
+    return sorted(seen)
+
+
+
 def spawn_enemy(enemy_id: str, x: int, y: int, team: str = "enemy",
                 name: Optional[str] = None) -> Combatant:
     """Build a Combatant from a resolved enemy blueprint."""

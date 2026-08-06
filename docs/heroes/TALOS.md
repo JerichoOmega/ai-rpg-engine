@@ -173,6 +173,11 @@ These are design directions, not implemented abilities. Exact mechanics defined 
 
 ## Personal Quest
 
+> **Canonical title: *The Line He Would Not Cross.*** *(Multivalent — the moral
+> line he refused to cross by obeying the order, the military line he held, and the
+> river-crossing at Vellmar's Ford itself. Finalized 2026-06; may be revised as
+> story develops.)* Indexed in [`companion_quests_index.md`](../quests/companion_quests_index.md).
+
 ### Theme
 
 Talos's personal quest challenges his foundational belief that every government and institution inevitably becomes corrupt and fails the people it claims to protect.
