@@ -272,6 +272,10 @@ Preserved lines:
 - *"Every wolf deserves a pack."*
 - *"Because someone once did the same for me."* (why they keep risking their life).
 
+**Reference art:** [`assets/reference/characters/hidden_pack_alpha_reference_v1.png`](../../assets/reference/characters/hidden_pack_alpha_reference_v1.png)
+— human + werewolf forms — and full canon entry
+[`Characters.md#the-hidden-pack-alpha`](../canon/Characters.md#the-hidden-pack-alpha).
+
 > **Role reconciliation:** **Sera** remains the Pack **Elder** (consensus leader,
 > per the Named Members section). The **Alpha** leads the Warden effort — the one
 > who goes out to find the lost. Whether the Alpha is Sera in another aspect or a

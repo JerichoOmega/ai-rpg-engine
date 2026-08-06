@@ -943,6 +943,58 @@ kit) is exercised by a dedicated vertical-slice showcase, **The Forge Stand**:
 
 ---
 
+## The Hidden Pack Alpha
+
+> Canonical **major recurring NPC** introduced in Ronan's companion quest
+> [`The Lost Howl`](../quests/the_lost_howl.md). Faction:
+> [`The Hidden Pack`](../world/hidden_pack.md). This entry adds the approved
+> visual identity + reference art; personality/story cite the quest and world
+> docs. Named identity/relationship to Sera: `_TBD_` (see reconciliation in
+> `hidden_pack.md`).
+
+### Status
+**Canonical (v1)** — reference sheet below is authoritative for future Alpha art.
+
+### Reference Asset
+| Role | File | Resolution | SHA-256 |
+|---|---|---|---|
+| Character sheet — human + werewolf forms, expressions, token/gear callouts | [`assets/reference/characters/hidden_pack_alpha_reference_v1.png`](../../assets/reference/characters/hidden_pack_alpha_reference_v1.png) | 1264 × 848 | `943bbcad894054bc8365799abad9df79d9f3b1c37d0eae570e751c6f3c7fde2e` |
+
+### Overview & Visual Identity
+An **elder werewolf Warden** who has spent decades finding newly awakened
+werewolves before the world does. Read: **calm, compassionate, wise, quietly
+exhausted; respected rather than feared — a protector, never a monster.**
+- **Human form:** late-50s, lean but solid; **deep amber eyes**, silver-streaked
+  dark hair, short greying beard; a face lined with care and tiredness but steady
+  and kind; muted earth-tone travel clothes, a heavy worn warden's hooded cloak,
+  a walking staff; **a cord of several small carved wooden wolf tokens** (he has
+  given many wolves a home — echoing Ronan's Pack Token).
+- **Werewolf form:** a **large, grizzled, dignified** wolf — silver-grey fur
+  streaked charcoal, old scars, a **calm protector silhouette** (never feral),
+  amber eyes; steadier and larger than the frightened Lost Wolf.
+- **Palette:** charcoal, moss green, silver-grey fur, amber eyes, aged bronze.
+
+### Personality & Lines (preserve)
+Warm, tired gravitas. Preserved lines: *"Every wolf deserves a pack."* and, on
+why he keeps risking his life, *"Because someone once did the same for me."* With
+Eleanor: *"You don't fear wolves." / "I've only ever met people."*
+
+### Design Rules
+1. Always reads as a **protector/mentor**, never a threat — the opposite of a
+   feral werewolf.
+2. The **carved wolf tokens** are a signature (nonmagical); they mirror Ronan's
+   Pack Token and the pack's law *"No wolf is left alone."*
+3. Keep the "quietly exhausted but unshakeably kind" note in expression work.
+4. Do not contradict [`hidden_pack.md`](../world/hidden_pack.md); the Alpha leads
+   the Warden tradition while Sera remains Elder.
+
+### Revision History
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 2026-06 | Established the Hidden Pack Alpha as a canonical recurring NPC with visual identity and imported reference art (`hidden_pack_alpha_reference_v1.png`). From *The Lost Howl*. Named identity `_TBD_`. |
+
+---
+
 ## Future Character-Reference Pipeline
 All character production assets must **derive from** the canonical reference
 sheets above rather than creating new interpretations. This applies to Tripo /

@@ -52,12 +52,13 @@ The **Hidden Pack** is discovered. Contrary to the rumours, they have been
 **pursuing the true source** of the attacks themselves.
 
 ## Major Twist — The Lost Wolf
-The "monster" is **not an evil werewolf.** It is a **solitary werewolf who
-awakened completely alone** — no mentor, no guidance, no family, no one to teach
-control — and has become increasingly desperate simply trying to survive. The
-story **intentionally refuses to portray them as inherently evil.** The Lost Wolf
-is a mirror: **exactly what Ronan himself might have become** had he never found
-the party.
+The "monster" is **not an evil werewolf.** It is **Bram** — a **solitary werewolf
+who awakened completely alone** — no mentor, no guidance, no family, no one to
+teach control — and has become increasingly desperate simply trying to survive.
+The story **intentionally refuses to portray him as inherently evil.** The Lost
+Wolf is a mirror: **exactly what Ronan himself might have become** had he never
+found the party. Full design (name/look/mechanics + **playable slice**):
+[`The Lost Wolf (Bram)`](../design/encounters/the_lost_wolf_bram.md).
 
 ## Final Encounter — save, don't slay *(defining design goal)*
 The climax **deliberately subverts** the expected boss fight:
@@ -68,7 +69,10 @@ The climax **deliberately subverts** the expected boss fight:
   **defining design goal** of the quest and must be preserved. (Any combat beats
   should follow the readability principles of
   [`the gold-standard encounter`](../design/encounters/gold_standard_sundered_span.md);
-  mechanics/objective-swap implementation: `_TBD_`.)
+  mechanics/objective-swap implementation: `_TBD_`.) **This objective swap is
+  implemented and proven as a playable slice** — `tactical/showcase_lost_howl.py`
+  (compassion → rescued; murder-hobo → slain); design:
+  [`The Lost Wolf (Bram)`](../design/encounters/the_lost_wolf_bram.md).
 
 ## The Hidden Pack Alpha *(major recurring NPC)*
 A senior Warden — **calm, compassionate, wise, quietly exhausted; respected rather
@@ -120,7 +124,9 @@ permanent paired symbols:
 Eleanor's role runs throughout the quest. She is **Ronan's emotional counterpart,**
 and her defining choice is language: **she never separates Ronan from the wolf.**
 She always speaks of him simply as **"you"** — never **"the wolf."** This
-distinction is intentional and should be preserved in all dialogue.
+distinction is intentional and should be preserved in all dialogue. Ambient
+travel/campfire lines that build this bond across the journey:
+[`Ronan–Eleanor Banter`](../design/companions/ronan_eleanor_banter.md).
 
 ### Campfire Conversation *(defining scene)*
 > **Ronan:** *"Have you ever wished you weren't born different?"*

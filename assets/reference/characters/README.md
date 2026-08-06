@@ -22,6 +22,7 @@ Stored at original resolution, uncompressed and unaltered. Do not modify.
 | `torren_turnaround_v1.png` | Torren | Turnaround / action poses (v1) | 1536 × 1024 |
 | `torren_fullbody_v1.png` | Torren | Full-body hero render — hammer + Founder's Compass (v1) | 1122 × 1402 |
 | `torren_fullbody_alt_v1.png` | Torren | Full-body hero render — alternate (v1) | 1122 × 1402 |
+| `hidden_pack_alpha_reference_v1.png` | Hidden Pack Alpha | Character sheet — human + werewolf forms, expressions, tokens (v1) | 1264 × 848 |
 
 These are the single source of truth for each character's appearance. All future
 art must derive from them. See
