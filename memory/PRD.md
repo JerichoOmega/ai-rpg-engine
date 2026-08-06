@@ -507,3 +507,22 @@ docs/design/companions/ronan_eleanor_banter.md (roster note).
   corwin.md, the quest doc). Provisional title kept only in historical revision notes.
   Title-only change — narrative/objectives/mechanics/progression unchanged.
 - Validation: docs + 2 new image assets only; no .py/save/quest-logic changes.
+
+## Enemy Bestiary + Quest Index + First-Region Slice (2026-06, additive docs-only)
+No gameplay/combat/AI/data/save changes. 13 new docs.
+- **Bestiary** (`docs/design/enemies/`): index + 10 family docs (wildlife, undead,
+  goblins, bandits, cultists, orcs, beasts_and_monsters, forest, constructs,
+  corrupted) documenting all **74 existing data units** with role/tier/threat/AI,
+  one-lesson-per-basic, encounter tags, and Basic→Veteran→Elite→Champion→Boss
+  progression targets (Champion/Boss = `_TBD_`). Doc-only; enemies.json untouched.
+- **Companion Quest Index** (`docs/quests/companion_quests_index.md`): links all 7
+  companions/quests + philosophy set + naming philosophy. Ragash=The Broken Oath,
+  Ronan=The Lost Howl, Torren=The Empty Pedestal, Corwin=The Silent Witness,
+  Maeve=A Light in the Ashes, Eleanor="The Weight of What We Build", Talos title `_TBD_`.
+- **First-Region Slice** (`docs/design/first_region_vertical_slice.md`): 8-beat
+  Frontier pacing stitching existing encounters (forest_wolf_pack, roadside_ambush,
+  corrupted_incursion, etc.) + the 3 playable showcases (Sundered Span, Forge Stand,
+  Lost Wolf) + companion recruitment/philosophy beats, with readability curve and an
+  explicit exists-vs-`_TBD_` scope split (interactive region build = follow-up).
+- Validation: git = docs only, no .py/json/save changed; markdown links 0 broken
+  across all 13 new files (11 remaining broken = pre-existing/out-of-scope).
