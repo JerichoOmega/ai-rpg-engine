@@ -74,23 +74,25 @@ The climax **deliberately subverts** the expected boss fight:
   (compassion → rescued; murder-hobo → slain); design:
   [`The Lost Wolf (Bram)`](../design/encounters/the_lost_wolf_bram.md).
 
-## The Hidden Pack Alpha *(major recurring NPC)*
-A senior Warden — **calm, compassionate, wise, quietly exhausted; respected rather
-than feared.** For decades the Alpha has found newly awakened werewolves before the
-rest of the world finds them.
+## The Hidden Pack Alpha — Alden Graymane *(major recurring NPC)*
+**Alden Graymane**, a senior Warden — **calm, compassionate, wise, quietly
+exhausted; respected rather than feared** (patient and soft-spoken, per
+[`Characters.md#the-hidden-pack-alpha`](../canon/Characters.md#the-hidden-pack-alpha)).
+For decades Alden has found newly awakened werewolves before the rest of the world
+finds them. With Ronan he **never treats him as an outsider — only as someone who
+has finally come home.**
 
 **Preserve these lines:**
 - *"Every wolf deserves a pack."*
-- When asked why they keep risking their life for dangerous werewolves:
+- When asked why he keeps risking his life for dangerous werewolves:
   *"Because someone once did the same for me."*
 
-> **Reconciliation with [`hidden_pack.md`](../world/hidden_pack.md):** Sera remains
-> the Pack **Elder** (consensus leader who does not cast deciding votes). The
-> **Alpha** is the leader of the Pack's **Warden/rescue tradition** — the one who
-> goes out to find the lost. Whether the Alpha is Sera in another aspect, or a
-> distinct senior Warden, is `_TBD_`; treat the Alpha as a distinct recurring
-> figure unless a future revision merges the roles. Named identity/appearance:
-> `_TBD_`.
+> **Reconciliation with [`hidden_pack.md`](../world/hidden_pack.md) (resolved —
+> Canon v1.2):** **Alden Graymane is a distinct character from Sera.** Sera remains
+> a Pack **Elder** (consensus leader who does not cast deciding votes); **Alden** is
+> the current **Alpha** who leads the Pack's **Warden/rescue tradition** — the one
+> who goes out to find the lost. The earlier `_TBD_` on whether the Alpha was Sera
+> in another aspect is now closed: two people, complementary roles.
 
 ## Ronan's Arc
 Across the quest Ronan slowly realizes that **if he had never met the party, he
@@ -117,6 +119,17 @@ a home here."* Ronan **ties it beside his seed pouch.** The two items become
 permanent paired symbols:
 - **Seed Pouch → hope and the future.**
 - **Pack Token → belonging and chosen family.**
+
+## Long-Term Consequences: Bram Returns
+Saving Bram is not a self-contained good deed; it **echoes forward.**
+- **Bram returns later in the campaign.** His rescue has lasting narrative
+  consequences rather than a one-off resolution. (His post-rescue path and exact
+  later role: `_TBD_` — see
+  [`The Lost Wolf (Bram)`](../design/encounters/the_lost_wolf_bram.md).)
+- **The Pack repays compassion with compassion.** Because of the mercy Ronan and
+  the party showed during *The Lost Howl*, the **Hidden Pack eventually comes to
+  Ronan's aid** when he needs it — living proof of their First Law, *"No wolf is
+  left alone."*
 
 ---
 
@@ -183,3 +196,4 @@ carry both.**
 | Date | Change |
 |---|---|
 | 2026-06 | Authored *The Lost Howl* (canonical title): theme (*what makes a family?*), three-act structure, the Lost Wolf twist, the save-don't-slay final encounter, the Hidden Pack **Alpha** NPC + preserved lines, Ronan's arc, the *"I already found my pack"* ending, the carved-wolf **Pack Token** reward, and full **Eleanor integration** (campfire, "look at his eyes", the empty-handed rescue, "I've only ever met people", "compassion is a choice", the braided-cord final moment). Additively expanded the Hidden Pack's **Warden/rescue tradition** and philosophy (*"No wolf is left alone" / "Know the beast"*), reconciled with existing `hidden_pack.md`. Design-only; no systems changed. |
+| 2026-06 (v1.2) | **Canon v1.2** — named the Alpha **Alden Graymane** (distinct from Sera; prior `_TBD_` resolved) with patient/soft-spoken character and his *"finally come home"* bond with Ronan. Added **Long-Term Consequences — Bram Returns** (Bram reappears later; the Hidden Pack later comes to Ronan's aid because of the compassion shown here). Additive; existing quest canon preserved. |

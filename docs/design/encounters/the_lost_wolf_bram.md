@@ -62,6 +62,19 @@ The two outcomes prove the objective genuinely inverts the normal win condition:
 **the naive "kill the boss" instinct produces the tragedy the quest is warning
 against, and only restraint + compassion earns the rescue.**
 
+## Long-Term Role — Bram Returns
+Bram is **not** a one-encounter character. His rescue is designed to **pay off
+later in the campaign:**
+- **He returns.** Having been found and brought home by the Hidden Pack, Bram
+  reappears later — no longer the terrified, starving boy of the climax.
+- **Compassion echoes forward.** Because the party chose to *save* rather than
+  *slay*, the **Hidden Pack later comes to Ronan's aid** when the party needs it —
+  a direct, earned consequence of the mercy shown here and an embodiment of the
+  Pack's First Law, *"No wolf is left alone"* (see
+  [`The Lost Howl`](../../quests/the_lost_howl.md#long-term-consequences-bram-returns)).
+- Exact later appearance, whether Bram formally joins the Pack, and his eventual
+  fate remain `_TBD_` (see below).
+
 ## Reserved details (`_TBD_`)
 - Bram's full name, home steading, and post-rescue fate (does he join the Hidden
   Pack? a later cameo?).
@@ -73,3 +86,4 @@ against, and only restraint + compassion earns the rescue.**
 | Date | Change |
 |---|---|
 | 2026-06 | Authored the Lost Wolf (**Bram**) — name, look, and the *save-don't-slay* climax as a **playable slice** (`tactical/showcase_lost_howl.py` + report + tests). Proven: compassion → `rescued` 100%, murder-hobo → `slain` 100% (objective swap at round 4). Design/validation only; no shared systems changed. |
+| 2026-06 (v1.2) | Added **Long-Term Role — Bram Returns**: Bram reappears later in the campaign, and the Hidden Pack later comes to Ronan's aid because of the compassion shown here (First Law *"No wolf is left alone"*). Later appearance/fate remain `_TBD_`. Additive. |

@@ -56,6 +56,8 @@ Losing control of the transformation when it matters most — when someone he ca
 
 Not the transformation itself. What he might do in it, to someone he would die to protect.
 
+> **The deeper fear (Canon v1.2):** beneath this conscious fear lies a quieter, truer one — that he might one day *stop needing other people* and slip back into isolation. See [Character Polish (Canon v1.2)](#character-polish-canon-v12).
+
 ---
 
 ## Driving Goal
@@ -298,9 +300,129 @@ What the revelation gives him: a reason to be more committed to the work of putt
 
 ---
 
+## Character Polish (Canon v1.2)
+
+> **Additive canon (2026-06).** This section completes Ronan's day-to-day identity
+> — his philosophy, surface/hidden traits, recurring behaviours, woodsman
+> instincts, the cloak, his deeper fear, and his defining strength. It **enriches**
+> and does not replace anything above. On any discrepancy, this bible and
+> [`docs/canon/Characters.md#ronan`](../canon/Characters.md#ronan) are authoritative.
+
+### Central Philosophy
+> **"No one should have to survive alone."**
+
+This is the emotional foundation of everything Ronan does. He learned it the hard
+way — by surviving alone — and he has quietly organised his life around making sure
+no one beside him has to.
+
+### Personality (expanded)
+**Surface traits** — what people see first:
+- Quiet · Observant · Reserved · Dry humour · Patient · Self-reliant.
+
+**Hidden traits** — what the surface protects:
+- Extremely compassionate · Fiercely loyal · Protective · Gentle with children and
+  animals · **Does not recognise how much good he does for others.**
+
+The gap between the two is the point: he reads as guarded and self-contained, and
+the person underneath is far warmer than he lets anyone see. His silence is
+**thoughtfulness, not distance.**
+
+### Daily Behaviours (canonical, recurring)
+Small, unglamorous habits that show who he is without a single speech:
+
+- **Last Watch.** He almost always volunteers for the final watch — not because
+  anyone asks, but because he genuinely believes everyone sleeps safer if he stays
+  awake.
+- **Eats Last.** When meals are shared he waits until everyone else has served
+  themselves, then eats. Years of surviving alone made this automatic.
+- **Counts the Party.** Leaving camp, crossing dangerous ground, exiting ruins,
+  entering settlements — he unconsciously counts everyone. He rarely notices he is
+  doing it.
+- **Walks the Outside.** Travelling, he naturally takes the most exposed line —
+  nearest the trees, the cliff edge, the dark — putting himself between the party
+  and whatever might be out there.
+- **Never Wastes Food.** After a fight or a hunt he quietly gathers anything
+  usable. He understands hunger better than anyone in the group.
+- **Anonymous Kindness.** Where he can, he leaves food, supplies, or game for
+  struggling villagers and **never takes credit.** The player usually learns of it
+  indirectly, after the fact.
+
+### Relationship With Nature
+Ronan is an **experienced woodsman first and a werewolf second.** He reads
+wildlife, birds, predators, weather, tracks, edible plants, and forest ecology
+fluently — the practical fieldcraft of someone who has spent years alive in wild
+places. The curse is part of him; it is not the whole of him, and it is not where
+his competence comes from.
+
+### Animals
+Animals generally **trust** Ronan. Birds land near him; dogs settle quickly;
+horses grow less anxious; wild creatures rarely panic in his presence. It is a
+quiet, recurring detail — never remarked on by him — that tells the player
+something true about him before he would ever say it aloud.
+
+### The Oversized Cloak
+His weathered, oversized hooded cloak is more than costume. On the road it has been
+a **blanket, shelter, pillow, sling, rain cover, emergency bandage,** and **comfort
+for a frightened child.** It has been **repaired countless times** — almost none of
+the original fabric remains. It is the story of his life on the road, stitched
+together. (Visual canon: [`Characters.md#ronan`](../canon/Characters.md#ronan).)
+
+### Greatest Fear — the deeper truth
+His **conscious** fear stays exactly as written under [Greatest Fear](#greatest-fear):
+losing control of the transformation with someone he loves too close to get clear.
+Beneath it lies the **deeper** fear that actually drives him:
+
+> He is **not** most afraid of becoming a monster.
+> He is afraid of **waking up one day and no longer needing other people** —
+> because that would mean becoming alone again.
+
+The two are complementary: the surface fear keeps him at a careful distance; the
+deeper fear is why that distance quietly terrifies him.
+
+### Greatest Strength
+**He never leaves anyone behind.** Not because he is fearless — because he
+remembers exactly what abandonment feels like, and he will not be the reason
+someone else learns it.
+
+### Companion Relationships (v1.2 additions)
+Additive to [Relationship Dynamics](#relationship-dynamics); preserve everything
+there. System context: [`COMPANION_RELATIONSHIPS.md`](../design/companions/COMPANION_RELATIONSHIPS.md).
+
+- **Eleanor** *(preserve).* She never refers to *"the wolf"* — only **"you."**
+  Maintain all previously approved dialogue and her role as his emotional
+  counterpart ([`The Lost Howl`](../quests/the_lost_howl.md) ·
+  [`Ronan–Eleanor Banter`](../design/companions/ronan_eleanor_banter.md)).
+- **Talos.** Talos quietly notices that Ronan never truly rests. A recurring beat:
+  Talos **insists on taking the watch** — not because Ronan asks, but because Talos
+  realises Ronan needs someone else to carry the burden occasionally.
+- **Torren.** Torren **keeps trying to make Ronan laugh** — and eventually
+  **succeeds.** It becomes a recurring source of lighthearted party banter, and one
+  of the first cracks in Ronan's guard.
+- **Ragash.** Ragash **judges Ronan only by his actions.** Mutual respect develops
+  naturally, with very little explanation required — exactly the register Ronan can
+  actually receive.
+- **Party Healer.** The healer is the one who names it: Ronan is **not afraid of
+  becoming a monster — he is afraid of losing people.** That recognition becomes
+  one of the strongest emotional connections in the party. *(Specific healer
+  identity: `_TBD_` pending roster.)*
+
+### Design Intent
+All future Ronan writing should reinforce **belonging, compassion, chosen family,
+quiet heroism, and protecting others before himself.** Avoid brooding for its own
+sake: his silence communicates **thoughtfulness, not emotional distance.** He is a
+good man carrying a heavy thing — never an edgy antihero.
+
+### Character Status
+With this pass Ronan is the **finalized canonical companion** for production,
+matching the completeness of Talos, Eleanor, and Torren. Future changes should be
+**story revisions**, not foundational redesigns.
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | July 2026 | Created — full Hero Bible entry established |
 | July 2026 | Added The Forgotten Eighth revelation response |
+| 2026-06 | **Canon v1.2 — Character Polish.** Added Central Philosophy (*"No one should have to survive alone"*), expanded surface/hidden personality, canonical Daily Behaviours (Last Watch, Eats Last, Counts the Party, Walks the Outside, Never Wastes Food, Anonymous Kindness), Relationship With Nature, Animals, the Oversized Cloak, the **deeper fear** (additive to Greatest Fear), Greatest Strength, v1.2 companion additions (Talos/Torren/Ragash/Party Healer; Eleanor preserved), and Design Intent. Finalized as the canonical companion. Additive; existing canon preserved. |

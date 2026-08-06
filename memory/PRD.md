@@ -398,3 +398,38 @@ docs/canon/Character_Production_Status.md (Alpha secondary-NPC row/note).
   1222/0 broken; Alpha PNG integrity OK; scope audit clean (only intended files; no
   canonical art/gameplay/engine modified; save_data.json + verification_report.json
   test side-effects restored).
+
+## Ronan Canon v1.2 — Character Polish & Hidden Pack Expansion (2026-06, additive docs-only)
+Files changed (6, docs only — no gameplay/combat/AI/engine/asset changes):
+docs/heroes/RONAN.md, docs/world/hidden_pack.md, docs/canon/Characters.md,
+docs/quests/the_lost_howl.md, docs/design/encounters/the_lost_wolf_bram.md,
+docs/characters/ronan.md.
+- **Ronan finalized** (matches Talos/Eleanor/Torren completeness). Added to the
+  hero bible: Central Philosophy *"No one should have to survive alone,"*
+  expanded surface/hidden personality, canonical **Daily Behaviours** (Last Watch,
+  Eats Last, Counts the Party, Walks the Outside, Never Wastes Food, Anonymous
+  Kindness), Relationship With Nature (woodsman first), Animals trust him, the
+  Oversized Cloak, the **deeper fear** (afraid of no longer *needing* people —
+  additive to the existing werewolf-control fear), Greatest Strength (never leaves
+  anyone behind), v1.2 companion beats (Talos takes the watch; Torren makes him
+  laugh; Ragash judges by actions; Party Healer names his real fear), Design Intent.
+- **Alpha named — Alden Graymane** (distinct character from Sera; prior `_TBD_`
+  resolved across hidden_pack.md, Characters.md, the_lost_howl.md). Sera stays
+  Elder; Alden leads the Warden/rescue tradition. Traits: patient, compassionate,
+  calm, quietly exhausted, wise, soft-spoken; treats Ronan as *"someone who has
+  finally come home."*
+- **Hidden Pack culture** added: First Law *"No wolf is left alone,"* greeting
+  *"Who walks beside you?"*, homecoming howl (not moon-howling), emblem = wolf paw
+  growing into tree roots (*"strength through belonging"*).
+- **Bram future role**: returns later; the Pack comes to Ronan's aid because of the
+  compassion shown in *The Lost Howl* (documented in quest + Bram encounter doc).
+- **Legacy sheet reconciled**: docs/characters/ronan.md synchronized to current
+  canon (reddish-brown hair, current personality/equipment/Hidden-Pack lore/
+  relationships), stale details preserved under a labeled *Legacy Development
+  Notes* section, with an authority note (RONAN.md + Characters.md are canonical).
+- Validation (agent-tested, PASS): markdown link validator — 0 broken links in all
+  6 edited files (recreated a GitHub-accurate validator; 12 remaining broken links
+  are all pre-existing and out-of-scope: goblin_tribes exports, PRD, LORE_AUDIT);
+  full pytest **233 passed** (engine/gameplay/AI/combat untouched); git scope clean
+  (docs only; no code, no canonical assets modified); existing Ronan canon
+  preserved and internally consistent.

@@ -949,8 +949,9 @@ kit) is exercised by a dedicated vertical-slice showcase, **The Forge Stand**:
 > [`The Lost Howl`](../quests/the_lost_howl.md). Faction:
 > [`The Hidden Pack`](../world/hidden_pack.md). This entry adds the approved
 > visual identity + reference art; personality/story cite the quest and world
-> docs. Named identity/relationship to Sera: `_TBD_` (see reconciliation in
-> `hidden_pack.md`).
+> docs. **Named canon (v1.2): Alden Graymane** — a *distinct* character from Sera
+> (Sera remains an Elder; Alden is the current Alpha of the Warden tradition; see
+> reconciliation in [`hidden_pack.md`](../world/hidden_pack.md)).
 
 ### Status
 **Canonical (v1)** — reference sheet below is authoritative for future Alpha art.
@@ -961,7 +962,7 @@ kit) is exercised by a dedicated vertical-slice showcase, **The Forge Stand**:
 | Character sheet — human + werewolf forms, expressions, token/gear callouts | [`assets/reference/characters/hidden_pack_alpha_reference_v1.png`](../../assets/reference/characters/hidden_pack_alpha_reference_v1.png) | 1264 × 848 | `943bbcad894054bc8365799abad9df79d9f3b1c37d0eae570e751c6f3c7fde2e` |
 
 ### Overview & Visual Identity
-An **elder werewolf Warden** who has spent decades finding newly awakened
+**Alden Graymane** — an **elder werewolf Warden** who has spent decades finding newly awakened
 werewolves before the world does. Read: **calm, compassionate, wise, quietly
 exhausted; respected rather than feared — a protector, never a monster.**
 - **Human form:** late-50s, lean but solid; **deep amber eyes**, silver-streaked
@@ -975,9 +976,12 @@ exhausted; respected rather than feared — a protector, never a monster.**
 - **Palette:** charcoal, moss green, silver-grey fur, amber eyes, aged bronze.
 
 ### Personality & Lines (preserve)
-Warm, tired gravitas. Preserved lines: *"Every wolf deserves a pack."* and, on
-why he keeps risking his life, *"Because someone once did the same for me."* With
-Eleanor: *"You don't fear wolves." / "I've only ever met people."*
+Warm, tired gravitas. **Character (Canon v1.2):** patient, compassionate, calm,
+quietly exhausted, wise, soft-spoken. With Ronan specifically he **never treats him
+as an outsider — he treats him as someone who has finally come home.** Preserved
+lines: *"Every wolf deserves a pack."* and, on why he keeps risking his life,
+*"Because someone once did the same for me."* With Eleanor: *"You don't fear
+wolves." / "I've only ever met people."*
 
 ### Design Rules
 1. Always reads as a **protector/mentor**, never a threat — the opposite of a
@@ -992,6 +996,7 @@ Eleanor: *"You don't fear wolves." / "I've only ever met people."*
 | Version | Date | Change |
 |---|---|---|
 | v1.0 | 2026-06 | Established the Hidden Pack Alpha as a canonical recurring NPC with visual identity and imported reference art (`hidden_pack_alpha_reference_v1.png`). From *The Lost Howl*. Named identity `_TBD_`. |
+| v1.1 | 2026-06 | **Canon v1.2 pass** — named the Alpha **Alden Graymane** (a distinct character from Sera; prior `_TBD_` resolved). Added personality (patient/compassionate/calm/quietly exhausted/wise/soft-spoken) and his defining bond with Ronan (*"someone who has finally come home"*). Reference art and visual identity unchanged. |
 
 ---
 

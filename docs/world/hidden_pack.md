@@ -263,24 +263,46 @@ quietly).
   the wolf, nor to *surrender* to it. The wolf is **neither curse nor blessing — it
   is part of who they are.** The path to control is **understanding, not fear.**
 
-### The Alpha *(major recurring NPC — introduced in The Lost Howl)*
+### Pack Culture & Traditions (Canon v1.2)
+Small, memorable customs that make the Warden tradition feel lived-in:
+
+- **First Law — *"No wolf is left alone."*** Their defining principle; every other
+  custom flows from it.
+- **Philosophy — *"Know the beast."*** They neither suppress nor glorify the wolf;
+  understanding brings balance (see above).
+- **Greeting.** Members do not ask *"Who are you?"* They ask **"Who walks beside
+  you?"** — because to the Pack, **companionship defines identity.**
+- **Celebration.** The Hidden Pack **does not howl at the moon.** They howl
+  **whenever someone finds their way home** — a returning wolf or a newly rescued
+  one. It is their most joyful tradition.
+- **Symbol.** Their emblem is **a wolf paw growing into tree roots**, meaning
+  **"strength through belonging."**
+
+### Alden Graymane — The Alpha *(major recurring NPC — introduced in The Lost Howl)*
 The leader of the Warden/rescue tradition: **calm, compassionate, wise, quietly
-exhausted; respected rather than feared.** For decades the Alpha has found newly
-awakened werewolves before the rest of the world does.
+exhausted; respected rather than feared.** For decades **Alden Graymane** has found
+newly awakened werewolves before the rest of the world does.
+
+**Character (Canon v1.2):** patient, compassionate, calm, quietly exhausted, wise,
+and soft-spoken — a protector, never a monster. His bond with Ronan is the heart of
+his role: **he never treats Ronan as an outsider. He simply treats him as someone
+who has finally come home.**
 
 Preserved lines:
 - *"Every wolf deserves a pack."*
-- *"Because someone once did the same for me."* (why they keep risking their life).
+- *"Because someone once did the same for me."* (why he keeps risking his life).
 
 **Reference art:** [`assets/reference/characters/hidden_pack_alpha_reference_v1.png`](../../assets/reference/characters/hidden_pack_alpha_reference_v1.png)
 — human + werewolf forms — and full canon entry
 [`Characters.md#the-hidden-pack-alpha`](../canon/Characters.md#the-hidden-pack-alpha).
 
-> **Role reconciliation:** **Sera** remains the Pack **Elder** (consensus leader,
-> per the Named Members section). The **Alpha** leads the Warden effort — the one
-> who goes out to find the lost. Whether the Alpha is Sera in another aspect or a
-> distinct senior Warden is `_TBD_`; treat as a distinct figure unless a future
-> revision merges the roles. Named identity/appearance: `_TBD_`.
+> **Role reconciliation (resolved — Canon v1.2):** **Alden Graymane is a distinct
+> character from Sera.** **Sera** remains a Pack **Elder** and respected
+> spiritual/cultural authority (consensus leader, per the Named Members section);
+> **Alden** is the current **Alpha**, responsible for the Warden tradition, rescue
+> missions, and leadership of the Pack's effort to find the lost. The earlier
+> `_TBD_` on whether the Alpha was Sera in another aspect is now **closed**: they
+> are two people with complementary roles.
 
 Full quest, twist (the alone-awakened **Lost Wolf**), the **save-don't-slay** final
 encounter, and Eleanor's role: [`The Lost Howl`](../quests/the_lost_howl.md).
@@ -293,3 +315,4 @@ encounter, and Eleanor's role: [`The Lost Howl`](../quests/the_lost_howl.md).
 |---|---|
 | 2026-07-31 | Created — Hidden Pack canonical definition including five named members (Sera, Horath, Lyss, Davan, Tae), internal faction structure and voices, daily life, encounter structure, companion cross-references |
 | 2026-06 | Added the **Warden Tradition** section (additive): the Pack's rescue purpose toward newly awakened werewolves — *"No wolf is left alone"*, the *"Know the beast"* philosophy, and the **Alpha** recurring NPC — introduced by Ronan's companion quest [`The Lost Howl`](../quests/the_lost_howl.md). Existing community/debate/members canon preserved unchanged; role reconciliation noted (Sera = Elder, Alpha = Warden lead). |
+| 2026-06 (v1.2) | **Canon v1.2** — named the Alpha **Alden Graymane** (a distinct character from Sera; `_TBD_` resolved), with personality (patient/compassionate/calm/quietly exhausted/wise/soft-spoken) and his bond with Ronan (*"someone who has finally come home"*). Added **Pack Culture & Traditions** (greeting *"Who walks beside you?"*, the homecoming howl, the wolf-paw-into-tree-roots symbol = *"strength through belonging"*). Additive; Sera and all existing member/debate canon preserved. |
