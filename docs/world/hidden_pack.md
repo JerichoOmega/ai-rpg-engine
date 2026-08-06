@@ -243,8 +243,49 @@ Horath does not say farewell to Ronan specifically. He says, as the party is lea
 
 ---
 
+## The Warden Tradition & *The Lost Howl* (additive expansion — 2026-06)
+
+> **Additive refinement.** Everything above (the isolated survival community, the
+> isolation-vs-coexistence debate, Sera and the named members) remains canon and
+> is unchanged. This section adds the Pack's purpose toward **their own kind**,
+> introduced in Ronan's companion quest
+> [`The Lost Howl`](../quests/the_lost_howl.md).
+
+The Hidden Pack is **not merely a tribe hiding from humanity.** Within their hidden
+life they keep a **Warden tradition**: a quiet effort to **locate and protect
+newly awakened werewolves** before fear, hunters, or isolation destroy them.
+**Their mission toward their own is rescue, not conquest** — and it is fully
+compatible with staying hidden from the wider world (they extract and shelter
+quietly).
+
+- **Highest law:** *"No wolf is left alone."*
+- **Philosophy — "Know the beast."** The Pack does not teach members to *suppress*
+  the wolf, nor to *surrender* to it. The wolf is **neither curse nor blessing — it
+  is part of who they are.** The path to control is **understanding, not fear.**
+
+### The Alpha *(major recurring NPC — introduced in The Lost Howl)*
+The leader of the Warden/rescue tradition: **calm, compassionate, wise, quietly
+exhausted; respected rather than feared.** For decades the Alpha has found newly
+awakened werewolves before the rest of the world does.
+
+Preserved lines:
+- *"Every wolf deserves a pack."*
+- *"Because someone once did the same for me."* (why they keep risking their life).
+
+> **Role reconciliation:** **Sera** remains the Pack **Elder** (consensus leader,
+> per the Named Members section). The **Alpha** leads the Warden effort — the one
+> who goes out to find the lost. Whether the Alpha is Sera in another aspect or a
+> distinct senior Warden is `_TBD_`; treat as a distinct figure unless a future
+> revision merges the roles. Named identity/appearance: `_TBD_`.
+
+Full quest, twist (the alone-awakened **Lost Wolf**), the **save-don't-slay** final
+encounter, and Eleanor's role: [`The Lost Howl`](../quests/the_lost_howl.md).
+
+---
+
 ## Document History
 
 | Date | Change |
 |---|---|
 | 2026-07-31 | Created — Hidden Pack canonical definition including five named members (Sera, Horath, Lyss, Davan, Tae), internal faction structure and voices, daily life, encounter structure, companion cross-references |
+| 2026-06 | Added the **Warden Tradition** section (additive): the Pack's rescue purpose toward newly awakened werewolves — *"No wolf is left alone"*, the *"Know the beast"* philosophy, and the **Alpha** recurring NPC — introduced by Ronan's companion quest [`The Lost Howl`](../quests/the_lost_howl.md). Existing community/debate/members canon preserved unchanged; role reconciliation noted (Sera = Elder, Alpha = Warden lead). |

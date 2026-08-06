@@ -248,6 +248,18 @@ escalation, not a safety net. (Mechanics/design: `docs/heroes/ELEANOR.md`,
 - Derive portraits from the canonical reference sheet once available; store under
   `assets/reference/ui/`.
 
+### Companion Bond — Ronan (*The Lost Howl*)
+Eleanor is **Ronan's emotional counterpart** in his companion quest
+[`The Lost Howl`](../quests/the_lost_howl.md). Her defining trait there is
+language: she **never separates Ronan from the wolf** — she speaks of him only as
+**"you"**, never *"the wolf."* Her compassion (not her magic) turns the quest's
+climax: she walks toward the frightened Lost Wolf **with empty hands** (*"You
+don't have to be afraid anymore"*), giving Ronan the courage to step forward.
+Defining lines to preserve: *"I've only ever met people."* and *"Sometimes
+compassion is a choice, not a certainty."* She later threads Ronan's Pack Token
+beside his seed pouch on a braided green cord — *"Now they travel together."*
+Consistent with her hope/warmth/compassion identity.
+
 ### Design Rules
 1. Eleanor must visually **contrast Talos** (light/hope vs steel/discipline) yet
    share the world's material language.
@@ -582,6 +594,24 @@ world. Weathered, layered, self-repaired; nothing decorative.
   origin carried by a man who keeps himself at a distance.
 - **Truth:** **no magical properties**; its importance is entirely emotional.
   Do not depict it as an arcane object.
+
+### Paired Symbol — The Pack Token *(from the companion quest)*
+- **What:** a **carved wooden wolf token** given by the Hidden Pack at the end of
+  his companion quest — **not a rank, not magical.** It means only: *"You will
+  always have a home here."*
+- Ronan **ties it beside the seed pouch** (Eleanor threads it there on a braided
+  green cord — *"Now they travel together"*). The two become permanent paired
+  symbols: **Seed Pouch = hope / the future; Pack Token = belonging / chosen
+  family.** Where framing allows, both appear together at his belt.
+
+### Companion Quest — The Lost Howl
+His flagship companion quest, [`The Lost Howl`](../quests/the_lost_howl.md), asks
+*"what makes a family?"* — belonging and chosen family (contrasting Talos's duty
+and Torren's honour). Ronan is accused of frontier attacks he didn't commit; the
+truth is a **Lost Wolf who awakened utterly alone** — a mirror of what Ronan might
+have become. The climax **saves rather than slays**, and Ronan chooses his party
+over a permanent place in the [`Hidden Pack`](../world/hidden_pack.md):
+*"I already found my pack."* Eleanor is his emotional counterpart throughout.
 
 ### Werewolf Form (production notes)
 - **Silhouette:** dramatically **larger** than human form — strong shoulders, long

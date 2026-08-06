@@ -342,3 +342,30 @@ docs/encounters/religious_encounters.md, docs/lore/TIMELINE.md.
   (40 seeds). The ~65-pt gap proves his identity is constructs, not stats.
 - Verification: harness 62/62 (0 WARN); full suite **227 passed** (11 new); all
   Forge Stand ability/mechanic + design-proof tests green.
+
+## Ronan Companion Quest — "The Lost Howl" (2026-06, additive docs-only)
+Files changed: docs/quests/the_lost_howl.md (new), docs/world/hidden_pack.md,
+docs/canon/Characters.md (Ronan + Eleanor). No gameplay/asset/engine files touched.
+- Canonical title **The Lost Howl**; theme *"what makes a family?"* (belonging /
+  chosen family) — completing the flagship triangle: Talos=duty, Torren=honour,
+  Ronan=belonging.
+- Hidden Pack **Warden tradition** added additively (rescue newly-awakened wolves;
+  *"No wolf is left alone"*, *"Know the beast"*) and reconciled with the existing
+  isolated-community canon (Sera stays Elder; Alpha = Warden lead; existing
+  members/debate preserved unchanged).
+- 3-act structure; the **Lost Wolf** twist (awakened utterly alone = Ronan's
+  mirror); **save-don't-slay** final encounter (objective flips to *Protect the
+  Lost Wolf*) as a defining design goal.
+- **Alpha** recurring NPC + preserved lines ("Every wolf deserves a pack." /
+  "Because someone once did the same for me.").
+- Ending *"I already found my pack." / "Then our work is done."*; **Pack Token**
+  (carved wolf, nonmagical) tied beside the seed pouch (hope + belonging).
+- Full **Eleanor integration** as Ronan's emotional counterpart (she says "you",
+  never "the wolf"; campfire scene; "Look at his eyes"; empty-handed rescue; "I've
+  only ever met people"; "compassion is a choice, not a certainty"; braided-cord
+  final moment) — documented in Characters.md#eleanor.
+- Validation: 1200 links checked, 0 broken; existing Ronan/Hidden Pack/Eleanor
+  canon preserved.
+- Open `_TBD_`: Alpha named identity/appearance (and whether Alpha == Sera); Lost
+  Wolf name/details; final-encounter mechanics + objective-swap implementation;
+  roster reconciliation for "Corwin" and "the healer".
