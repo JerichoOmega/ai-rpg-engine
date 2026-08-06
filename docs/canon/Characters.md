@@ -1010,12 +1010,19 @@ wolves." / "I've only ever met people."*
 > the hero bible; unknowns use `_TBD_`.
 
 ### Status
-**Canonical (documentation); reference art pending.** No reference sheet has been
-imported yet — the hero/character bibles are authoritative for narrative until art
-is produced.
+**Canonical (v1)** — the reference sheet below is authoritative for all future
+Corwin art, modeling, UI, and marketing.
 
 ### Reference Assets
-`_TBD_` — no canonical reference sheet imported yet.
+**Canonical reference — imported 2026-06, unaltered (no resize/crop/compress/recolor).**
+
+| Role | File | Resolution | SHA-256 |
+|---|---|---|---|
+| Character sheet — turnaround (front/side/back), expression studies, prop callouts (Surveyor's Lens, Green Journal, sketching kit), palette | [`assets/reference/characters/corwin_reference_v1.png`](../../assets/reference/characters/corwin_reference_v1.png) | 1264 × 848 | `b213885d794ca8f78b579fa7d01ad6cb7a27bca7b36c3ae22017d8b7c3ab5d17` |
+
+**Status:** Canonical (v1). All Corwin derivatives must trace back to this file.
+(File bytes are JPEG-encoded under the `.png` name — stored exactly as generated,
+not re-encoded.)
 
 ### Overview
 A **Gnome Ranger** and **Corruption Investigator** (Neutral Good) — the party's
@@ -1028,27 +1035,32 @@ truth is a kindness, even when it hurts."* Full character:
 | Field | Value |
 |---|---|
 | Character Name | Corwin |
-| Status | Canonical (documentation); art pending |
-| Reference Images | `_TBD_` (none imported) |
+| Status | Canonical (v1) |
+| Reference Images | `corwin_reference_v1.png` — canonical v1 |
 | Race | Gnome (male) |
 | Role / Class | Ranger — Corruption Investigator |
 | Alignment | Neutral Good |
 | Signature Items | **Surveyor's Lens** (inherited brass field lens; nonmagical); **Green Journal** (lifelong field guide) |
 | Personality Summary | Curious, friendly, optimistic, observant; hidden self-doubt; terrible liar; childlike curiosity |
 | Combat Style | Knowledge-first — reveal hidden enemies, expose weaknesses, tracking, trap detection (mechanics `_TBD_`) |
-| Physical Description | `_TBD_` |
+| Physical Description | Small, wiry gnome; tousled auburn/brown hair; warm, curious, observant face; practical green-and-brown field gear with many notebook pouches (per reference sheet) |
 | Voice Notes | `_TBD_` |
 | Important Story Notes | Core wound: ignored/buried corruption evidence; companion quest *The Buried Evidence* |
 
 ### Visual Identity
-`_TBD_` — to be established when reference art is produced. Design intent: a
-practical, well-travelled field investigator (lens, journal, sketching kit) with
-childlike curiosity; read as *curious, kind, quietly self-doubting.*
+Per the canonical reference sheet: a **small, wiry gnome** in **earthy greens and
+browns** — layered cloth and worn light leather, **many small satchels/pouches
+stuffed with rolled notebooks**, a bandolier of pencils, pressed plants tucked into
+straps. **Tousled auburn/brown hair**, a warm **curious, observant face**
+(expression range: curious · delighted · worried · focused). He reads as a
+**naturalist field investigator, never a soldier** — *curious, kind, quietly
+self-doubting.* Palette: mossy greens, warm browns, aged brass, cream paper.
 
 ### Revision History
 | Version | Date | Change |
 |---|---|---|
 | v1.0 | 2026-06 | Established Corwin as a documented canonical companion (Gnome Ranger / Corruption Investigator; philosophy *"the truth is a kindness"*; Surveyor's Lens + Green Journal; knowledge-first combat identity; companion quest *The Buried Evidence*). Preserves prior Gnome/Ranger/Corruption-Investigator + affinity/roster references. **Reference artwork pending.** |
+| v1.1 | 2026-06 | **Imported canonical reference sheet** (unaltered): `corwin_reference_v1.png` (1264×848) — turnaround (front/side/back), expression studies, and prop callouts (Surveyor's Lens, Green Journal, sketching kit) with palette. Visual identity established: small wiry gnome, earthy green/brown field-investigator gear, tousled auburn hair. Now **Reference Complete**. |
 
 ---
 
@@ -1066,15 +1078,19 @@ childlike curiosity; read as *curious, kind, quietly self-doubting.*
 > first name only.
 
 ### Status
-**Canonical (documentation); reference art pending.** No reference sheet has been
-imported yet — the hero/character bibles are authoritative for narrative until art
-is produced.
+**Canonical (v1)** — the reference sheet below is authoritative for all future
+Maeve art, modeling, UI, and marketing.
 
 ### Reference Assets
-`_TBD_` — no canonical reference sheet imported yet.
+**Canonical reference — imported 2026-06, unaltered (no resize/crop/compress/recolor).**
 
-### Overview
-**Maeve Ashwood** — the party's **Community Healer** (in-world title/profession),
+| Role | File | Resolution | SHA-256 |
+|---|---|---|---|
+| Character sheet — turnaround (front/side/back), expression studies, prop callouts (Lantern of Ashes, Field Journal, healer's kit), palette | [`assets/reference/characters/maeve_reference_v1.png`](../../assets/reference/characters/maeve_reference_v1.png) | 1264 × 848 | `2c851a3948666c4bdde947c041fe3a70664886740ace03a7a8b6260d0c8b9abd` |
+
+**Status:** Canonical (v1). All Maeve derivatives must trace back to this file.
+(File bytes are JPEG-encoded under the `.png` name — stored exactly as generated,
+not re-encoded.) (in-world title/profession),
 battlefield physician, and **emotional anchor** (Neutral Good). Recruited through
 [`A Light in the Ashes`](../quests/a_light_in_the_ashes.md); she **refuses to leave
 the refugee settlement until it can stand on its own.** Philosophy: *"Hope is
