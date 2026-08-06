@@ -437,6 +437,8 @@ def _h_terrain(engine, unit, ab, target, tile) -> bool:
         return False
     if ab.get("creates"):
         engine.bf.set_terrain(spot[0], spot[1], ab["creates"])
+    if ab.get("creates_object"):
+        engine.bf.tile(spot[0], spot[1]).add_object(ab["creates_object"])
     if ab.get("creates_status"):
         engine.bf.tile(*spot).env[ab["creates_status"]] = True
     if ab.get("damage") and target is not None:

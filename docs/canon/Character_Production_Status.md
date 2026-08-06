@@ -58,5 +58,12 @@ been produced.
   Complete** (3D/rig/Godot/animation/marketing still pending).
 - Also present in `docs/heroes/`: **Steven** (not in this tracker's requested
   roster; add a row if promoted to a tracked production character).
+- **Party marketing key-art** (all five heroes at true relative scale):
+  `assets/reference/marketing/party_lineup_keyart_v1.png` (canon-derived derivative).
+  **Founder's Compass** interior prop reference:
+  `assets/reference/props/founders_compass_interior_v1.png`.
+- **Torren combat identity** proven in-engine by **The Forge Stand** showcase
+  (`tactical/showcase_forge.py` · [`design doc`](../design/encounters/forge_stand_torren.md)):
+  building wins ~87% vs brawling ~22% over 40 seeds.
 
-_Last updated: 2026-06 (Ronan + Torren reference art imported). Update this table whenever a deliverable ships._
+_Last updated: 2026-06 (Ronan + Torren reference art; party key-art + Founder's Compass prop; Torren combat showcase). Update this table whenever a deliverable ships._

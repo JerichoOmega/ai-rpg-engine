@@ -8,5 +8,6 @@
   "ice": {"movement_cost": 2, "cover": "none", "elevation": 0, "blocks_los": false, "flammable": false, "hazard": "slippery", "melts_to": "water", "category": "hazard"},
   "oil_slick": {"movement_cost": 1, "cover": "none", "elevation": 0, "blocks_los": false, "flammable": true, "hazard": "flammable_ground", "category": "hazard"},
   "scorched": {"movement_cost": 1, "cover": "none", "elevation": 0, "blocks_los": false, "flammable": false, "category": "open"},
-  "rubble": {"movement_cost": 2, "cover": "half", "elevation": 0, "blocks_los": false, "flammable": false, "category": "difficult"}
+  "rubble": {"movement_cost": 2, "cover": "half", "elevation": 0, "blocks_los": false, "flammable": false, "category": "difficult"},
+  "chasm": {"movement_cost": 99, "cover": "none", "elevation": 0, "blocks_los": false, "flammable": false, "category": "impassable"}
 }

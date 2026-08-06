@@ -22,5 +22,11 @@
   "hex": {"name": "Hex", "type": "debuff", "ap": 1, "range": 5, "status": "hexed", "requires_los": true, "cooldown": 2, "description": "Curse a target's aim and footing."},
   "beast_call": {"name": "Beast Call", "type": "summon", "ap": 2, "range": 5, "summons": "wolf", "cooldown": 4, "description": "Summon a beast ally."},
   "lay_eggs": {"name": "Lay Eggs", "type": "summon", "ap": 2, "range": 2, "summons": "spiderling", "cooldown": 3, "description": "Spawn spiderlings."},
-  "arcane_pulse": {"name": "Arcane Pulse", "type": "attack", "ap": 2, "range": 4, "aoe": "burst", "damage_type": "magic", "requires_los": true, "cooldown": 3, "description": "A pulse of arcane force."}
+  "arcane_pulse": {"name": "Arcane Pulse", "type": "attack", "ap": 2, "range": 4, "aoe": "burst", "damage_type": "magic", "requires_los": true, "cooldown": 3, "description": "A pulse of arcane force."},
+  "field_barricade": {"name": "Field Barricade", "type": "terrain", "ap": 1, "range": 3, "creates_object": "crate", "requires_los": true, "cooldown": 2, "description": "Hammer together a barricade on a tile: half cover that blocks line of sight."},
+  "reinforced_wall": {"name": "Reinforced Wall", "type": "terrain", "ap": 2, "range": 2, "creates_object": "wall_segment", "requires_los": true, "cooldown": 3, "description": "Raise a solid wall segment: full cover, blocks line of sight, impassable."},
+  "spike_barrier": {"name": "Spike Barrier", "type": "terrain", "ap": 1, "range": 3, "creates": "rubble", "requires_los": true, "cooldown": 2, "description": "Scatter caltrops and rubble: difficult ground that slows and half-covers the tile."},
+  "forge_beacon": {"name": "Forge Beacon", "type": "buff", "ap": 1, "range": 6, "effect": "morale_boost", "cooldown": 3, "description": "Set a forge beacon that steadies and emboldens nearby allies."},
+  "reinforce_armor": {"name": "Reinforce Armor", "type": "buff", "ap": 1, "range": 0, "cover_grant": "half", "effect": "damage_shield", "cooldown": 2, "description": "Field-temper the armor of Torren and adjacent allies, shielding them."},
+  "battle_repairs": {"name": "Battle Repairs", "type": "heal", "ap": 1, "range": 2, "heal": 8, "cooldown": 2, "description": "On-the-spot repairs and first aid restoring a nearby ally."}
 }

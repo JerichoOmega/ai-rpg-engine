@@ -317,3 +317,28 @@ docs/encounters/religious_encounters.md, docs/lore/TIMELINE.md.
 - **Validation:** full link scan = **1179 links, 0 broken**. No gameplay/engine/
   asset files modified; no duplicate lore. Intentional new `_TBD_`: exact
   founding era, Durgan's exact date.
+
+## Next-Action Batch — Compass Sheet, Party Key-Art, Torren Field-Forge Slice (2026-06)
+### Art (generated + documented)
+- `assets/reference/props/founders_compass_interior_v1.png` (1264×848) — compass
+  interior: Baelor's First Lesson + engraved Master lineage. Documented in props
+  README + Characters.md Founder's Compass.
+- `assets/reference/marketing/party_lineup_keyart_v1.png` (1264×848) — all five
+  heroes at true relative scale (Talos 188 / Ragash 170 / Eleanor 167 / Ronan 167
+  / Torren 135). Documented in marketing README as a canon-derived derivative
+  (per-character sheets remain source of truth).
+
+### Torren Field-Forge Slice — "The Forge Stand" (playable, verified)
+- New: `tactical/showcase_forge.py`, `scripts/forge_showcase_report.py`,
+  `backend/tests/test_forge_showcase.py`, `docs/design/encounters/forge_stand_torren.md`.
+- Data (additive): `smith` class (sturdy, weak-hitting: 46 HP, armor 4, 4 dmg) +
+  6 Field-Forge abilities in `ability_library.json` (field_barricade,
+  reinforced_wall, spike_barrier, forge_beacon, reinforce_armor, battle_repairs);
+  new `chasm` terrain type; small additive `creates_object` option on the terrain
+  effect handler in `abilities_engine.py` (lets terrain abilities place cover
+  objects). No existing gameplay/data changed destructively.
+- **Proof (ablation):** same party + enemies; only Torren's behaviour differs.
+  Torren BUILDS → ~87% win / ~5% loss; Torren BRAWLS → ~22% win / ~42% loss
+  (40 seeds). The ~65-pt gap proves his identity is constructs, not stats.
+- Verification: harness 62/62 (0 WARN); full suite **227 passed** (11 new); all
+  Forge Stand ability/mechanic + design-proof tests green.

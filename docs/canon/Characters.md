@@ -786,6 +786,8 @@ Eleanor is light and hope, Ragash is the wild, Ronan is shadow and restraint, an
 - **Engraved lineage inside (canonical, oldest → newest):** **Baelor** *(Founder)*
   · Barag · Thorek · Borin · Hadrin · Orin · **Durgan** … *(final space reserved
   for)* **Torren Ironhall.**
+- **Interior reference sheet:** [`assets/reference/props/founders_compass_interior_v1.png`](../../assets/reference/props/founders_compass_interior_v1.png)
+  — close-up of Baelor's First Lesson inscription and the engraved Master lineage.
 - Full lineage/clan context:
   [`Clan Ironhall`](../world/factions/clan_ironhall.md#the-masters-lineage-and-the-founders-compass).
 
@@ -863,6 +865,21 @@ consistently in future dialogue.
 - Lead with **face + warm amber eyes + laugh lines + forge-braided beard**; read
   as *warm, trustworthy, quietly burdened.*
 - The Founder's Compass on the belt should be visible where framing allows.
+
+### Combat Identity — battlefield shaper (proven in play)
+Torren's in-engine identity is a **sturdy, weak-hitting battlefield shaper and
+craftsman-support**, not a duelist. His data-driven `smith` class (Field Forge
+kit) is exercised by a dedicated vertical-slice showcase, **The Forge Stand**:
+
+- Runtime `tactical/showcase_forge.py` · design
+  [`docs/design/encounters/forge_stand_torren.md`](../design/encounters/forge_stand_torren.md)
+  · tests `backend/tests/test_forge_showcase.py`.
+- **Field Forge kit:** Spike Barrier (rubble cover / slow), Reinforced Wall &
+  Field Barricade (LOS-blocking cover), Forge Beacon (morale aura), Reinforce
+  Armor (shield), Battle Repairs (heal).
+- **Proof:** with the same party and enemies, a Torren who *builds* wins ~87% of
+  seeds and almost never loses, while a Torren who only *brawls* wins ~22% and
+  loses ~42% — the ~65-point gap is his constructs, not his stats.
 
 ### Design Rules
 1. Torren reads as a **travelling master craftsman**, **never a royal dwarf**.

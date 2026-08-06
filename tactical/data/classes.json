@@ -40,5 +40,12 @@
     "ability_slots": 2,
     "prepare": {"reaction": "reaction_shot", "description": "Fire at movers in line of sight."},
     "abilities": []
+  },
+  "smith": {
+    "tactical_identity": "Battlefield shaper and craftsman-support: builds cover, walls, and difficult ground; buffs and repairs allies; holds the line so squishier heroes can work.",
+    "max_hp": 46, "armor": 4, "max_ap": 5, "attack_damage": 4, "attack_range": 1,
+    "ability_slots": 6,
+    "prepare": {"reaction": "counterattack", "description": "Counterattack any adjacent enemy that attacks this turn."},
+    "abilities": ["field_barricade", "reinforced_wall", "spike_barrier", "forge_beacon", "reinforce_armor", "battle_repairs"]
   }
 }
