@@ -10,7 +10,7 @@
 > mentions in [`The Lost Howl`](../quests/the_lost_howl.md) and the
 > [`Ronan–Eleanor banter`](../design/companions/ronan_eleanor_banter.md) — *"you saved
 > Corwin's footing"*, *"between the arrows and Corwin"*). Nothing here rewrites them.
-> Visual reference art: `_TBD_` (see [`Characters.md#corwin`](../canon/Characters.md#corwin)).
+> Visual reference art: **`corwin_reference_v1.png`** (canonical v1 — see [`Characters.md#corwin`](../canon/Characters.md#corwin)).
 
 ---
 

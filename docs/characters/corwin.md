@@ -54,6 +54,6 @@ that truth spoken with care is enough even when unheeded.
 > *"The smallest clue can save the most lives."*
 
 ## Notes
-Visual reference art `_TBD_`. Preserves prior affinity/recruitment hooks in
+Reference art: `corwin_reference_v1.png` (canonical v1). Preserves prior affinity/recruitment hooks in
 [`legacy_quest_authoring.md`](../systems/legacy_quest_authoring.md) and roster
 mentions in [`The Lost Howl`](../quests/the_lost_howl.md).

@@ -10,7 +10,7 @@
 > association with the Voice **Elyra**, *The Living Hearth*
 > ([`DIVINE_CHORUS`](../lore/DIVINE_CHORUS.md)). This pass **canonizes her name as
 > Maeve Ashwood** while keeping **"Community Healer" as her in-world
-> profession/title.** Visual reference art: `_TBD_`.
+> profession/title.** Visual reference art: **`maeve_reference_v1.png`** (canonical v1).
 >
 > **Disambiguation:** *Maeve Ashwood* (this party healer) is **not** *Sister Maeve
 > Thornwell*, the unrelated Line/cult field-operations figure in

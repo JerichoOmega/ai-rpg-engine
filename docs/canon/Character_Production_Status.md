@@ -27,8 +27,8 @@ been produced.
 | **Ronan**   | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
 | **Ragash**  | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ◻ | ⬜ | ⬜ | **Reference Complete** |
 | **Torren**  | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
-| **Corwin**  | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Docs Complete — Art Pending** |
-| **Maeve Ashwood** | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Docs Complete — Art Pending** |
+| **Corwin**  | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
+| **Maeve Ashwood** | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | **Reference Complete** |
 
 ## Notes (evidence, not claims)
 - **Talos** — art: `talos_cloak.png` (turnaround), `talos_no_cloak.png` (hero/full
@@ -46,16 +46,17 @@ been produced.
   *Ronan Character Sheet* set. Now **Reference Complete** (3D/rig/Godot/animation/
   UI/marketing still pending).
 - **Corwin** — canon visual entry ([`Characters.md#corwin`](Characters.md#corwin))
-  + hero/character bibles ([`CORWIN.md`](../heroes/CORWIN.md),
-  [`corwin.md`](../characters/corwin.md)) + companion quest
-  [`The Buried Evidence`](../quests/the_buried_evidence.md). **Docs Complete**;
-  **no reference art imported yet** → all art columns ⬜ (art pending).
+  + **imported reference art** (`corwin_reference_v1.png`, 1264×848) + hero/character
+  bibles ([`CORWIN.md`](../heroes/CORWIN.md), [`corwin.md`](../characters/corwin.md))
+  + companion quest [`The Buried Evidence`](../quests/the_buried_evidence.md). Now
+  **Reference Complete** (3D/rig/Godot/animation/UI/marketing still pending).
 - **Maeve Ashwood** — canon visual entry
-  ([`Characters.md#maeve-ashwood`](Characters.md#maeve-ashwood)) + hero/character
-  bibles ([`MAEVE.md`](../heroes/MAEVE.md), [`maeve.md`](../characters/maeve.md)) +
+  ([`Characters.md#maeve-ashwood`](Characters.md#maeve-ashwood)) + **imported
+  reference art** (`maeve_reference_v1.png`, 1264×848) + hero/character bibles
+  ([`MAEVE.md`](../heroes/MAEVE.md), [`maeve.md`](../characters/maeve.md)) +
   recruitment quest [`A Light in the Ashes`](../quests/a_light_in_the_ashes.md).
-  Name canonized (Community Healer kept as title). **Docs Complete**; **no
-  reference art imported yet** → all art columns ⬜ (art pending).
+  Name canonized (Community Healer kept as title). Now **Reference Complete**
+  (3D/rig/Godot/animation/UI/marketing still pending).
 - **Torren** — canon visual entry ([`Characters.md#torren`](Characters.md#torren))
   + **imported reference art** (`torren_reference_v1.png` master,
   `torren_turnaround_v1.png`, `torren_fullbody_v1.png`, `torren_fullbody_alt_v1.png`)

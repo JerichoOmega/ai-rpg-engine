@@ -23,6 +23,8 @@ Stored at original resolution, uncompressed and unaltered. Do not modify.
 | `torren_fullbody_v1.png` | Torren | Full-body hero render — hammer + Founder's Compass (v1) | 1122 × 1402 |
 | `torren_fullbody_alt_v1.png` | Torren | Full-body hero render — alternate (v1) | 1122 × 1402 |
 | `hidden_pack_alpha_reference_v1.png` | Hidden Pack Alpha | Character sheet — human + werewolf forms, expressions, tokens (v1) | 1264 × 848 |
+| `corwin_reference_v1.png` | Corwin | Character sheet — turnaround + expressions + props (Surveyor's Lens, Green Journal, sketching kit) (v1) | 1264 × 848 |
+| `maeve_reference_v1.png` | Maeve Ashwood | Character sheet — turnaround + expressions + props (Lantern of Ashes, Field Journal, healer's kit) (v1) | 1264 × 848 |
 
 These are the single source of truth for each character's appearance. All future
 art must derive from them. See

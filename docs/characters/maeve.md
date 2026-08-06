@@ -59,4 +59,4 @@ others carry her sometimes.
 > *"People rarely remember the medicine. They remember the person who stayed."*
 
 ## Notes
-Visual reference art `_TBD_`. Human physical description `_TBD_`.
+Reference art: `maeve_reference_v1.png` (canonical v1). Human physical description per the reference sheet (early–mid 40s; dark hair tied back; warm earthy healer's dress + apron).

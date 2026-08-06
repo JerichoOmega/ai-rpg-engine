@@ -1090,7 +1090,10 @@ Maeve art, modeling, UI, and marketing.
 
 **Status:** Canonical (v1). All Maeve derivatives must trace back to this file.
 (File bytes are JPEG-encoded under the `.png` name — stored exactly as generated,
-not re-encoded.) (in-world title/profession),
+not re-encoded.)
+
+### Overview
+**Maeve Ashwood** — the party's **Community Healer** (in-world title/profession),
 battlefield physician, and **emotional anchor** (Neutral Good). Recruited through
 [`A Light in the Ashes`](../quests/a_light_in_the_ashes.md); she **refuses to leave
 the refugee settlement until it can stand on its own.** Philosophy: *"Hope is
@@ -1101,28 +1104,35 @@ something you practice."* Full character: [`docs/heroes/MAEVE.md`](../heroes/MAE
 |---|---|
 | Character Name | Maeve Ashwood |
 | Title / Profession | Community Healer (kept as in-world title) |
-| Status | Canonical (documentation); art pending |
-| Reference Images | `_TBD_` (none imported) |
-| Race | Human (female) — details `_TBD_` |
+| Status | Canonical (v1) |
+| Reference Images | `maeve_reference_v1.png` — canonical v1 |
+| Race | Human (female) |
 | Role / Class | Healer / support — party emotional anchor |
 | Alignment | Neutral Good |
 | Faith | Elyra, The Living Hearth |
 | Signature Items | **Lantern of Ashes** (simple brass lantern; nonmagical; her defining symbol); **Field Journal** (records how people lived, not died) |
 | Personality Summary | Gentle, patient, motherly, calm, warm; hidden grief; rarely forgives herself; hard to help |
 | Combat Style | Battlefield medicine, healing, protection, morale, civilian rescue (mechanics `_TBD_`) |
-| Physical Description | `_TBD_` |
+| Physical Description | Human woman, early–mid 40s; dark hair tied back practically; gentle, kind, tired eyes; warm earthy healer's dress + sturdy apron with herb pouches and bandage rolls (per reference sheet) |
 | Voice Notes | `_TBD_` |
 | Important Story Notes | Core wound: two war patients, one saved / one lost — both names kept in her journal; recruitment quest *A Light in the Ashes* |
 
 ### Visual Identity
-`_TBD_` — to be established when reference art is produced. Design intent: a warm,
-practical field healer; the **Lantern of Ashes** as a recognisable nighttime
-symbol of safety; read as *gentle, steady, quietly grieving, hopeful.*
+Per the canonical reference sheet: a **human woman in her early–mid 40s** in **warm
+earthy tones** (creams, soft browns, muted sage) — a layered dress/tunic with a
+**sturdy apron**, rolled sleeves, **herb pouches, bandage rolls**, and a leather
+medical satchel; **dark hair tied back practically**; a gentle, trustworthy face
+(expression range: gentle · comforting · grieving · resolute). Her signature
+**Lantern of Ashes** (simple brass, warm amber glow) is her defining prop and a
+nighttime symbol of safety. She reads as a **compassionate field healer, not a
+soldier or mage** — *gentle, steady, quietly grieving, hopeful.* Palette: cream,
+warm brown, brass, soft amber lantern-light, sage.
 
 ### Revision History
 | Version | Date | Change |
 |---|---|---|
 | v1.0 | 2026-06 | Established **Maeve Ashwood** as a documented canonical companion, **canonizing her name** (Community Healer kept as her title). Philosophy *"hope is something you practice"*; Lantern of Ashes + Field Journal; healer/anchor combat identity; recruitment quest *A Light in the Ashes* (refuse-to-leave requirement preserved); Elyra (Living Hearth) faith. Disambiguated from Sister Maeve Thornwell. **Reference artwork pending.** |
+| v1.1 | 2026-06 | **Imported canonical reference sheet** (unaltered): `maeve_reference_v1.png` (1264×848) — turnaround (front/side/back), expression studies, and prop callouts (**Lantern of Ashes**, Field Journal, healer's kit) with palette. Visual identity established: human woman early–mid 40s, warm earthy healer's dress + apron, dark hair tied back, brass lantern as signature. Now **Reference Complete**. |
 
 ---
 
