@@ -458,3 +458,38 @@ core/, engine/, engine/godot/, tools/ (no __init__.py → not importable, no cod
   markdown links — 0 broken across the 9 new files (11 remaining broken links are
   all pre-existing/out-of-scope: LORE_AUDIT, PRD, goblin_tribes exports). Sundered
   Span / Forge Stand / Lost Howl slices remain valid & headless.
+
+## Corwin & Maeve Ashwood — Companion Polish Pass (2026-06, additive docs-only)
+Brings the final two core companions to parity with Talos/Eleanor/Ragash/Ronan/Torren.
+Completes the 7-companion philosophy set: Talos=Duty, Eleanor=Justice&Hope, Ragash=Loyalty,
+Ronan=Belonging, Torren=Honour&Legacy, **Corwin=Truth&Discovery**, **Maeve=Compassion&Hope Through Service**.
+Files (11; docs only — no gameplay/combat/AI/recruitment/save/asset changes):
+NEW: docs/heroes/CORWIN.md, docs/heroes/MAEVE.md, docs/characters/corwin.md,
+docs/characters/maeve.md, docs/quests/the_buried_evidence.md,
+docs/quests/a_light_in_the_ashes.md, docs/design/companions/corwin_maeve_relationships.md.
+EDITED: docs/canon/Characters.md (+Corwin & +Maeve Ashwood entries, art `_TBD_`),
+docs/canon/Character_Production_Status.md (+2 party rows "Docs Complete — Art Pending"),
+docs/quests/the_lost_howl.md (roster: "the healer" → Maeve Ashwood),
+docs/design/companions/ronan_eleanor_banter.md (roster note).
+- **Corwin** (Gnome Ranger / Corruption Investigator): theme "the truth is a kindness,
+  even when it hurts"; core wound (buried/ignored corruption evidence, self-blame);
+  surface/hidden personality; signature habits; Surveyor's Lens + Green Journal;
+  exploration & knowledge-first combat identity; companion quest **The Buried Evidence**
+  (NEW provisional title, revisable — climax reinforces philosophy, not a boss fight);
+  relationships/camp/exploration/banter. Preserved prior Gnome/Ranger/Investigator +
+  affinity/roster refs.
+- **Maeve Ashwood** (name CANONIZED; "Community Healer" kept as in-world title): theme
+  "hope is something you practice"; philosophy "people remember the person who stayed";
+  core wound (two war patients, one saved/one lost, both names in her journal); Lantern
+  of Ashes + Field Journal; settlement exploration + protect/rescue combat identity;
+  expanded **A Light in the Ashes** (recruitment + refuse-to-leave requirement PRESERVED,
+  restoration-not-vengeance climax); Elyra (The Living Hearth) faith. **Disambiguated from
+  the unrelated cult figure Sister Maeve Thornwell (cults.md).**
+- Both entered production tracker as core party (Lore✅ / Canon Doc✅; art & downstream ⬜).
+- Remaining `_TBD_`: reference art for both; Corwin quest final title + specifics; Maeve's
+  physical description, settlement name/location, the two remembered patient names; combat
+  mechanics for both (no new mechanics defined).
+- Validation (agent-tested): git scope = docs only, **no .py/asset/save changed** →
+  no combat/recruitment regression possible; full pytest **233 passed**; markdown links
+  0 broken across all 11 files (11 remaining broken are pre-existing/out-of-scope:
+  LORE_AUDIT, PRD, goblin_tribes exports).

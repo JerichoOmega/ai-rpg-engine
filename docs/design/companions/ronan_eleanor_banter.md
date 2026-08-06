@@ -85,8 +85,8 @@
 
 ## Integration notes
 - These lines assume the roster referenced in [`The Lost Howl`](../../quests/the_lost_howl.md)
-  (Talos, Eleanor, Corwin, Torren, Ragash, the healer). Any not-yet-final member is
-  `_TBD_`; swap names as the roster finalizes.
+  (Talos, Eleanor, Corwin, Torren, Ragash, and Maeve Ashwood — the Community Healer).
+  Any not-yet-final member is `_TBD_`; swap names as the roster finalizes.
 - Tone must stay consistent with each hero bible; nothing here overrides
   [`RONAN.md`](../../heroes/RONAN.md) or Eleanor's canon.
 - Suggested surfacing: travel barks on region transitions / low-tension travel;

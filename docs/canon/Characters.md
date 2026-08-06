@@ -1000,6 +1000,116 @@ wolves." / "I've only ever met people."*
 
 ---
 
+## Corwin
+
+> Elyndor's **sixth documented canonical companion**. **Narrative canon** is
+> established in [`docs/heroes/CORWIN.md`](../heroes/CORWIN.md) and
+> [`docs/characters/corwin.md`](../characters/corwin.md) — this entry consolidates
+> the production reference and does **not** rewrite it. Companion quest:
+> [`The Buried Evidence`](../quests/the_buried_evidence.md). Personality/story cite
+> the hero bible; unknowns use `_TBD_`.
+
+### Status
+**Canonical (documentation); reference art pending.** No reference sheet has been
+imported yet — the hero/character bibles are authoritative for narrative until art
+is produced.
+
+### Reference Assets
+`_TBD_` — no canonical reference sheet imported yet.
+
+### Overview
+A **Gnome Ranger** and **Corruption Investigator** (Neutral Good) — the party's
+lens on the world. He wins through **knowledge**: tracks, corruption signs,
+hidden enemies, weaknesses, traps, and environmental clues. Philosophy: *"The
+truth is a kindness, even when it hurts."* Full character:
+[`docs/heroes/CORWIN.md`](../heroes/CORWIN.md).
+
+### Metadata (reserved fields)
+| Field | Value |
+|---|---|
+| Character Name | Corwin |
+| Status | Canonical (documentation); art pending |
+| Reference Images | `_TBD_` (none imported) |
+| Race | Gnome (male) |
+| Role / Class | Ranger — Corruption Investigator |
+| Alignment | Neutral Good |
+| Signature Items | **Surveyor's Lens** (inherited brass field lens; nonmagical); **Green Journal** (lifelong field guide) |
+| Personality Summary | Curious, friendly, optimistic, observant; hidden self-doubt; terrible liar; childlike curiosity |
+| Combat Style | Knowledge-first — reveal hidden enemies, expose weaknesses, tracking, trap detection (mechanics `_TBD_`) |
+| Physical Description | `_TBD_` |
+| Voice Notes | `_TBD_` |
+| Important Story Notes | Core wound: ignored/buried corruption evidence; companion quest *The Buried Evidence* |
+
+### Visual Identity
+`_TBD_` — to be established when reference art is produced. Design intent: a
+practical, well-travelled field investigator (lens, journal, sketching kit) with
+childlike curiosity; read as *curious, kind, quietly self-doubting.*
+
+### Revision History
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 2026-06 | Established Corwin as a documented canonical companion (Gnome Ranger / Corruption Investigator; philosophy *"the truth is a kindness"*; Surveyor's Lens + Green Journal; knowledge-first combat identity; companion quest *The Buried Evidence*). Preserves prior Gnome/Ranger/Corruption-Investigator + affinity/roster references. **Reference artwork pending.** |
+
+---
+
+## Maeve Ashwood
+
+> Elyndor's **seventh documented canonical companion**, completing the core party.
+> **Narrative canon** is established in [`docs/heroes/MAEVE.md`](../heroes/MAEVE.md)
+> and [`docs/characters/maeve.md`](../characters/maeve.md) — this entry consolidates
+> the production reference and does **not** rewrite it. Companion/recruitment quest:
+> [`A Light in the Ashes`](../quests/a_light_in_the_ashes.md). Faith: the Voice
+> **Elyra, The Living Hearth** ([`DIVINE_CHORUS`](../lore/DIVINE_CHORUS.md)).
+>
+> **Disambiguation:** *Maeve Ashwood* (this party healer) is **not** *Sister Maeve
+> Thornwell* of [`cults.md`](../world/cults.md) — unrelated characters sharing a
+> first name only.
+
+### Status
+**Canonical (documentation); reference art pending.** No reference sheet has been
+imported yet — the hero/character bibles are authoritative for narrative until art
+is produced.
+
+### Reference Assets
+`_TBD_` — no canonical reference sheet imported yet.
+
+### Overview
+**Maeve Ashwood** — the party's **Community Healer** (in-world title/profession),
+battlefield physician, and **emotional anchor** (Neutral Good). Recruited through
+[`A Light in the Ashes`](../quests/a_light_in_the_ashes.md); she **refuses to leave
+the refugee settlement until it can stand on its own.** Philosophy: *"Hope is
+something you practice."* Full character: [`docs/heroes/MAEVE.md`](../heroes/MAEVE.md).
+
+### Metadata (reserved fields)
+| Field | Value |
+|---|---|
+| Character Name | Maeve Ashwood |
+| Title / Profession | Community Healer (kept as in-world title) |
+| Status | Canonical (documentation); art pending |
+| Reference Images | `_TBD_` (none imported) |
+| Race | Human (female) — details `_TBD_` |
+| Role / Class | Healer / support — party emotional anchor |
+| Alignment | Neutral Good |
+| Faith | Elyra, The Living Hearth |
+| Signature Items | **Lantern of Ashes** (simple brass lantern; nonmagical; her defining symbol); **Field Journal** (records how people lived, not died) |
+| Personality Summary | Gentle, patient, motherly, calm, warm; hidden grief; rarely forgives herself; hard to help |
+| Combat Style | Battlefield medicine, healing, protection, morale, civilian rescue (mechanics `_TBD_`) |
+| Physical Description | `_TBD_` |
+| Voice Notes | `_TBD_` |
+| Important Story Notes | Core wound: two war patients, one saved / one lost — both names kept in her journal; recruitment quest *A Light in the Ashes* |
+
+### Visual Identity
+`_TBD_` — to be established when reference art is produced. Design intent: a warm,
+practical field healer; the **Lantern of Ashes** as a recognisable nighttime
+symbol of safety; read as *gentle, steady, quietly grieving, hopeful.*
+
+### Revision History
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 2026-06 | Established **Maeve Ashwood** as a documented canonical companion, **canonizing her name** (Community Healer kept as her title). Philosophy *"hope is something you practice"*; Lantern of Ashes + Field Journal; healer/anchor combat identity; recruitment quest *A Light in the Ashes* (refuse-to-leave requirement preserved); Elyra (Living Hearth) faith. Disambiguated from Sister Maeve Thornwell. **Reference artwork pending.** |
+
+---
+
 ## Future Character-Reference Pipeline
 All character production assets must **derive from** the canonical reference
 sheets above rather than creating new interpretations. This applies to Tripo /

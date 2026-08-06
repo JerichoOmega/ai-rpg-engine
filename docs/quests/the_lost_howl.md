@@ -101,16 +101,16 @@ might have become exactly like the Lost Wolf.** His understanding of family shif
 
 ## Ending — "I already found my pack."
 The Alpha offers Ronan a **permanent place among the Hidden Pack.** Ronan looks
-toward **Talos, Eleanor, Corwin, Torren, Ragash, and the healer**, and answers:
+toward **Talos, Eleanor, Corwin, Torren, Ragash, and Maeve Ashwood** (the party's
+Community Healer), and answers:
 
 > **Ronan:** *"I already found my pack."*
 > **Alpha** *(smiling):* *"Then our work is done."*
 
 This is **not a rejection** of the Hidden Pack — it is the **culmination of
-Ronan's emotional journey.** (Party roster names above are as given; `Corwin` and
-`the healer` cross-reference the current companion roster — reconcile with
-[`docs/canon/Characters.md`](../canon/Characters.md) as the roster finalizes; any
-not-yet-canon member is `_TBD_`.)
+Ronan's emotional journey.** (Full party roster is now canonical: see
+[`Corwin`](../canon/Characters.md#corwin) and
+[`Maeve Ashwood`](../canon/Characters.md#maeve-ashwood) — "the healer" is Maeve.)
 
 ## Symbolic Reward — the Pack Token
 The Hidden Pack presents Ronan with a **carved wooden wolf token.** It is **not a
