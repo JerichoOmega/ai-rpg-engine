@@ -369,3 +369,32 @@ docs/canon/Characters.md (Ronan + Eleanor). No gameplay/asset/engine files touch
 - Open `_TBD_`: Alpha named identity/appearance (and whether Alpha == Sera); Lost
   Wolf name/details; final-encounter mechanics + objective-swap implementation;
   roster reconciliation for "Corwin" and "the healer".
+
+## Hidden Pack Alpha art + Lost Wolf (Bram) playable slice + Ronan–Eleanor banters (2026-06)
+Latest 3-item request delivered & self-validated (agent-tested; not yet user-playtested).
+Files (committed HEAD): assets/reference/characters/hidden_pack_alpha_reference_v1.png (new),
+assets/reference/characters/README.md, docs/canon/Characters.md (Alpha entry),
+docs/quests/the_lost_howl.md, docs/world/hidden_pack.md,
+docs/design/encounters/the_lost_wolf_bram.md (new),
+docs/design/companions/ronan_eleanor_banter.md (new),
+tactical/showcase_lost_howl.py (new), scripts/lost_howl_report.py (new),
+backend/tests/test_lost_howl_encounter.py (new). Plus this session:
+docs/canon/Character_Production_Status.md (Alpha secondary-NPC row/note).
+- **Alpha reference art** imported byte-for-byte: `hidden_pack_alpha_reference_v1.png`
+  1264×848, sha256 `943bbcad…fde2e` (matches Characters.md). Canonical, immutable.
+  (Note: file bytes are JPEG-encoded content under a .png name — preserved as-is, not
+  re-encoded.) Named Alpha identity still `_TBD_`.
+- **Lost Wolf named Bram** — "save, don't slay" climax as a headless playable slice:
+  objective flips from *Defeat the Beast* → *Protect the Lost Wolf* when the Alpha
+  arrives (round 4). No shared gameplay systems modified (design/validation only).
+  Proof: compassion play → rescued 100% / murder-hobo → slain 100% over 30 seeds
+  (deterministic). Alpha begins offset and arrives later; rescue requires a LIVING wolf.
+- **Ronan–Eleanor banters** — travel barks (early/mid/late) + campfire beats; canonical
+  exchanges preserved verbatim; Eleanor always says "you", never "the wolf".
+- **Production tracker** — Hidden Pack Alpha added as a Secondary/Supporting NPC
+  (Reference Complete; 3D→marketing pending). Additive only; no hero rows changed.
+- Verification (all agent-tested, PASS): targeted Lost Howl tests 6/6; tactical.verify
+  62/62, 0 WARN, FOUNDATION STABLE; full pytest **233 passed** (15.5s); markdown links
+  1222/0 broken; Alpha PNG integrity OK; scope audit clean (only intended files; no
+  canonical art/gameplay/engine modified; save_data.json + verification_report.json
+  test side-effects restored).

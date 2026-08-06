@@ -2,8 +2,8 @@
 
 > **Status:** Canonical writing (2026-06). Ambient banter and campfire lines that
 > build the Ronan–Eleanor bond **across the whole journey**, not only inside
-> [`The Lost Howl`](../quests/the_lost_howl.md). Characters:
-> [`Ronan`](../canon/Characters.md#ronan) · [`Eleanor`](../canon/Characters.md#eleanor).
+> [`The Lost Howl`](../../quests/the_lost_howl.md). Characters:
+> [`Ronan`](../../canon/Characters.md#ronan) · [`Eleanor`](../../canon/Characters.md#eleanor).
 > Writing/design only — no gameplay systems, triggers, or VFX are implemented
 > here. Trigger conditions and VO are `_TBD_`.
 
@@ -84,11 +84,11 @@
 ---
 
 ## Integration notes
-- These lines assume the roster referenced in [`The Lost Howl`](../quests/the_lost_howl.md)
+- These lines assume the roster referenced in [`The Lost Howl`](../../quests/the_lost_howl.md)
   (Talos, Eleanor, Corwin, Torren, Ragash, the healer). Any not-yet-final member is
   `_TBD_`; swap names as the roster finalizes.
 - Tone must stay consistent with each hero bible; nothing here overrides
-  [`RONAN.md`](../heroes/RONAN.md) or Eleanor's canon.
+  [`RONAN.md`](../../heroes/RONAN.md) or Eleanor's canon.
 - Suggested surfacing: travel barks on region transitions / low-tension travel;
   campfire beats gated by journey progress and quest state. Triggers: `_TBD_`.
 

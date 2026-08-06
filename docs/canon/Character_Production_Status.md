@@ -66,4 +66,20 @@ been produced.
   (`tactical/showcase_forge.py` · [`design doc`](../design/encounters/forge_stand_torren.md)):
   building wins ~87% vs brawling ~22% over 40 seeds.
 
-_Last updated: 2026-06 (Ronan + Torren reference art; party key-art + Founder's Compass prop; Torren combat showcase). Update this table whenever a deliverable ships._
+## Secondary / Supporting NPCs
+
+| Character | Lore | Canon Doc | Reference Art | Tripo Ready | Downstream (Blender→UI→Marketing) | Status |
+|---|---|---|---|---|---|---|
+| **Hidden Pack Alpha** | ✅ | ✅ | ✅ | ⬜ | ⬜ | **Reference Complete** |
+
+- **Hidden Pack Alpha** — senior Warden of the [`Hidden Pack`](../world/hidden_pack.md)
+  who arrives at the climax of [`The Lost Howl`](../quests/the_lost_howl.md) to bring
+  the Lost Wolf home. Canon visual entry: [`Characters.md#the-hidden-pack-alpha`](Characters.md#the-hidden-pack-alpha).
+  Reference art: `assets/reference/characters/hidden_pack_alpha_reference_v1.png`
+  (1264×848). **Supporting production evidence:** the Alpha's mid-encounter arrival
+  and objective-swap are proven in-engine by the **Lost Wolf (Bram)** playable slice
+  (`tactical/showcase_lost_howl.py` · [`design doc`](../design/encounters/the_lost_wolf_bram.md)):
+  compassion play rescues the wolf, murder-hobo play triggers the tragic slain state.
+  3D/rig/Godot/animation/UI/marketing still pending.
+
+_Last updated: 2026-06 (Hidden Pack Alpha reference art + Lost Wolf/Bram combat showcase; Ronan + Torren reference art; party key-art + Founder's Compass prop; Torren combat showcase). Update this table whenever a deliverable ships._
