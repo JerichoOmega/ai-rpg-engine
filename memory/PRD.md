@@ -633,3 +633,30 @@ User finalized the core combat philosophy as a **primary game pillar**. Additive
 - **Validation:** docs-only (git = 25 md + 1 new, no `.py`); links 0 broken across all touched
   docs. No functional/test impact.
 
+
+## Reactive Combat Design Framework — CANON (2026-06, documentation-only)
+Built the complete combat design *language* that all future mechanics implement against.
+No gameplay code / no prototype (explicitly deferred). Hub: `docs/design/REACTIVE_COMBAT.md`.
+5 new docs + hub expansion; all links validated (0 broken); scope = docs-only (no `.py`).
+- **`OPPORTUNITY_CATALOGUE.md`** (Part 1 + Part 4): master list of ~41 opportunities across
+  Physical/Elemental/Mental/Environmental/Ally-state, each with description, how-created,
+  duration, recognizing companions, example reactions, stacking, boss handling; plus the
+  three-tier escalation model (Minor/Major/Legendary) and Boss Interaction Rules
+  (Resist/Threshold/Ignore/Special; every boss must offer ≥1 opportunity path).
+- **`companions/COMPANION_OPPORTUNITY_PROFILES.md`** (Part 2): battlefield identity for all 7
+  companions (primary/secondary opportunities, role, reaction style, unique Resolve) so players
+  learn "Corwin noticed something." Torren/Maeve Resolve specifics `_TBD_`.
+- **`PARTNER_TECHNIQUE_MATRIX.md`** (Part 3): all 21 pairings (name/fantasy/positioning/cost/
+  purpose/opening-created/follow-up/animation) + Legendary multi-character guidance. Combat
+  fantasy, not impl specs.
+- **`RESOLVE_ECONOMY.md`** (Part 7): earn sources/bands, per-encounter targets, spend costs,
+  Minor-funds-Major balancing, boss Resolve-flow rhythm, anti-patterns (no passive regen). Values `_TBD_`.
+- **`REACTIVE_ENCOUNTER_DESIGN.md`** (Part 6): per-faction opportunity profiles (bandits,
+  knights, undead, beasts, cultists, demons, constructs) + contrast table + encounter checklist.
+- **Hub `REACTIVE_COMBAT.md`** (Parts 5 & 8): added Framework Index; §13 **Reactive Combat
+  Design Rules** (Rule 1 mandatory: every ability/enemy/boss/equipment/status/companion/map/
+  object must answer "what opportunity does this create?" or be reconsidered; +6 rules for
+  creativity/teamwork/environment/spectacle/agency/positioning); §14 **The Feel of Combat** loop
+  (Create→Recognize→Spend→Execute→Create→Repeat).
+- Guiding principle reinforced everywhere: **"Every action creates opportunities."**
+

@@ -17,6 +17,22 @@
 
 ---
 
+## Framework documents (the canonical combat design language)
+
+This pillar is elaborated by a set of authoritative sub-documents. Together they are the
+**design language every future combat mechanic must speak**:
+
+| Document | Defines |
+|---|---|
+| [`OPPORTUNITY_CATALOGUE.md`](OPPORTUNITY_CATALOGUE.md) | Every battlefield **opportunity** + the three **Opportunity Tiers** (Minor/Major/Legendary) |
+| [`companions/COMPANION_OPPORTUNITY_PROFILES.md`](companions/COMPANION_OPPORTUNITY_PROFILES.md) | Each companion's battlefield identity — what they specialize in noticing |
+| [`PARTNER_TECHNIQUE_MATRIX.md`](PARTNER_TECHNIQUE_MATRIX.md) | All 21 companion-pairing techniques (combat fantasy) |
+| [`RESOLVE_ECONOMY.md`](RESOLVE_ECONOMY.md) | How Resolve is earned, spent, and balanced |
+| [`REACTIVE_ENCOUNTER_DESIGN.md`](REACTIVE_ENCOUNTER_DESIGN.md) | How enemy factions create and deny opportunities |
+| **§13 below** | The **Reactive Combat Design Rules** every designer must follow |
+
+---
+
 ## 1. The Core Philosophy
 
 > **"Every action creates opportunities."**
@@ -223,6 +239,81 @@ depth.** Every major ability must satisfy **all four**:
 
 ---
 
+## 13. Reactive Combat Design Rules *(mandatory — Part 5)*
+
+These rules are **permanent and binding** on all future combat design.
+
+### Rule 1 — Every action must create at least one interesting possibility for the next action.
+This is **mandatory.** When designing an **ability, enemy, boss, equipment piece, status effect,
+companion, map, or environmental object**, the designer **must answer**:
+
+> **"What opportunity does this create?"**
+
+If the honest answer is *"none,"* **the design must be reconsidered.** Reference the specific
+opportunity in [`OPPORTUNITY_CATALOGUE.md`](OPPORTUNITY_CATALOGUE.md) (adding a new one there
+first if needed). A mechanic that only deals damage — creating no opening, denying none, enabling
+no follow-up — does not belong in this game.
+
+### Rule 2 — Reward tactical creativity.
+There should always be more than one valid way to create or capitalize on an opening. Reward the
+player who finds the clever line, not the one who memorized the "correct" one.
+
+### Rule 3 — Reward teamwork.
+The best opportunities should be **shared** — created by one companion, capitalized by another.
+Design toward companion combinations, not solo optimization ([`PARTNER_TECHNIQUE_MATRIX.md`](PARTNER_TECHNIQUE_MATRIX.md)).
+
+### Rule 4 — Make the environment a participant.
+Maps and objects must offer opportunities (hazards, destructibles, elevation, chokes). A "flat
+room" is a design failure. Environmental interaction is a first-class Resolve source.
+
+### Rule 5 — Spectacle must serve tactics.
+Every major ability satisfies the **four goals** (§11): spectacular presentation, tactical value,
+character storytelling, meaningful player choice. Spectacle never overrides tactics; cinematic
+moments are *earned* through the Resolve economy.
+
+### Rule 6 — Preserve player agency.
+Companions **identify**, the player **authorizes** (§4, §6). No system may auto-spend Resolve or
+force a reaction. Declining is always free.
+
+### Rule 7 — Reward smart positioning; punish passivity.
+Positioning creates opportunities and Resolve; **waiting earns nothing** (Resolve is never passive
+— [`RESOLVE_ECONOMY.md`](RESOLVE_ECONOMY.md)). The system must always pull the player toward
+*"how can I create another opportunity?"*
+
+> **Designer's checklist for any new content:** What opportunity does it *create*? What does it
+> let the party *capitalize on*? What does it *deny*, and is that telegraphed? Which companion's
+> read does it reward? How does it feed the Resolve economy? Does it push toward a bigger moment?
+
+---
+
+## 14. The Feel of Combat *(Part 8)*
+
+Combat should feel like **leading an elite adventuring party — not controlling chess pieces.**
+Companions constantly recognize opportunities; the player is the commander who authorizes the
+telling blows. The moment-to-moment experience is a **loop**:
+
+```
+        ┌─────────────────────────────────────────────┐
+        │                                             │
+   Create Opportunity ─▶ Recognize Opportunity ─▶ Spend Resolve
+        ▲                                             │
+        │                                             ▼
+        └────────── Create New Opportunity ◀── Execute Technique
+```
+
+1. **Create Opportunity** — position, use the environment, break a guard, set an elemental chain.
+2. **Recognize Opportunity** — a companion notices and voices it ("*Corwin has a clear shot*").
+3. **Spend Resolve** — the commander authorizes a reaction or Partner Technique (or declines, free).
+4. **Execute Technique** — a satisfying, feedback-rich payoff (visual + audio + UI pulse).
+5. **Create New Opportunity** — the technique itself opens the next window (Design Rule 1).
+6. **Repeat** — the fight flows, escalating from Minor toward Legendary moments.
+
+When it works, the player is never asking *"which attack does the most damage?"* — they are always
+asking **"how can I create another opportunity?"** That question is the guiding principle behind
+**every** future combat feature in the game.
+
+---
+
 ## 12. Architecture note (engine-agnostic)
 
 These systems must stay **engine-independent** ([`LAYER_RULES.md`](../architecture/LAYER_RULES.md)):
@@ -244,3 +335,4 @@ These systems must stay **engine-independent** ([`LAYER_RULES.md`](../architectu
 | Date | Change |
 |---|---|
 | 2026-06 | Created — canonical Reactive Combat pillar: Resolve (shared, earned), Reactive Combat (decision-support slowdown, not a QTE), Command Decisions, Partner Techniques, Companion Intelligence, relationship-driven combat, Ronan Ferality integration, and the four ability goals. Gameplay Canon / Planned Additive; no code. |
+| 2026-06 | Expanded into a full **combat design language**: added the Framework Index; §13 **Reactive Combat Design Rules** (Rule 1: every action must create an opportunity) and §14 **The Feel of Combat** loop; and five companion sub-documents — Opportunity Catalogue (+Tiers), Companion Opportunity Profiles, Partner Technique Matrix, Resolve Economy, Reactive Encounter Design. Documentation-only. |
