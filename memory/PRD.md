@@ -577,3 +577,26 @@ Agent-tested; **not user-confirmed**. Additive — canonical engine/AI/showcases
   FOUNDATION STABLE 62/62; enemies.json valid + inheritance/`by_tag` intact; task-owned
   markdown links 0 broken; `save_data.json` + `verification_report.json` side-effects restored;
   git scope = intended boss/frontier code/data/docs/tests/scripts only.
+
+
+## Independent Adversarial QA Pass — First Region slice (2026-06)
+Agent-tested; **not user-confirmed**. Report: `docs/qa/first_region_qa_report.md`.
+New adversarial suite `backend/tests/test_frontier_qa.py` (17 tests): 128-combo choice
+sweep, cross-seed robustness, boss ward/expose/enrage invariants, preparedness math,
+layer/IO discipline (no input()/print() in core), data-roster integrity, save-compat.
+- **2 issues found & fixed:**
+  1. **Finale unfair at worst preparedness** — correct read cleansed only ~30% at prep −3
+     (failed default seed), violating "golden resolution always attainable." Reduced anchor
+     HP penalty 8→3 per negative point (`showcase_corruption_avatar.py`). Now −3 → ~80–90%,
+     gradient preserved, tunnel still 0%.
+  2. **Dead abstract-spawn guard (latent existing bug)** — `spawn_enemy` checked the
+     post-`resolve()` blueprint where `abstract` is already stripped, so abstract bases could
+     spawn. Fixed to check the raw blueprint flag first (`tactical/enemies.py`). Minimal; no
+     behaviour change for real units.
+- **Verified clean:** no soft locks / no permanent companion loss across all 128 branches;
+  naive finale never wins (0%, even max prep); determinism; save-compat (slice never mutates
+  saves — legacy suite still does, pre-existing); engine-interface/Godot layer rules intact.
+- Validation: full pytest **269 passed** (252→269); `tactical.verify` FOUNDATION STABLE 62/62;
+  QA-report markdown links 0 broken; side-effects restored; git scope = 2 fix files + QA
+  test + QA doc. **Readiness: READY for external human playtest** (recommend pacing/clarity
+  pass before the Champion tier).

@@ -84,10 +84,13 @@ def build_combatants(preparedness: int = 0) -> List[Combatant]:
 
     avatar = enemies.spawn_enemy(AVATAR_ID, *AVATAR_SPOT)
     anchors = [enemies.spawn_enemy(ANCHOR_ID, x, y) for (x, y) in ANCHOR_SPOTS]
-    # Poor preparedness (rushed/uninformed) = tougher wardstones, still winnable.
+    # Poor preparedness (rushed/uninformed) = tougher wardstones, still winnable
+    # with the correct read. The penalty is deliberately gentle: bad early choices
+    # make the finale harder, never unwinnable (design constraint — the golden
+    # resolution stays attainable through good judgement at the finale).
     if preparedness < 0:
         for a in anchors:
-            a.max_hp += 8 * (-preparedness)
+            a.max_hp += 3 * (-preparedness)
             a.hp = a.max_hp
     return party + anchors + [avatar]
 

@@ -104,6 +104,8 @@ def all_tags() -> List[str]:
 def spawn_enemy(enemy_id: str, x: int, y: int, team: str = "enemy",
                 name: Optional[str] = None) -> Combatant:
     """Build a Combatant from a resolved enemy blueprint."""
+    if BLUEPRINTS.get(enemy_id, {}).get("abstract"):
+        raise ValueError(f"{enemy_id!r} is an abstract base, not spawnable.")
     bp = resolve(enemy_id)
     if bp.get("abstract"):
         raise ValueError(f"{enemy_id!r} is an abstract base, not spawnable.")
