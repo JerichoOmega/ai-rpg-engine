@@ -1,0 +1,77 @@
+{
+  "region": "The Frontier",
+  "summary": {
+    "total": 13,
+    "ok": 13,
+    "warn": 0,
+    "gap": 0,
+    "region_ready": true
+  },
+  "results": [
+    {
+      "name": "Region Completion",
+      "status": "OK",
+      "detail": "golden finale=cleansed region_status=recovering restored_locations=4"
+    },
+    {
+      "name": "Companion Presence",
+      "status": "OK",
+      "detail": "presence=7/7 landmarks=7/7 missing_presence=none missing_landmark=none"
+    },
+    {
+      "name": "Companion Banter",
+      "status": "OK",
+      "detail": "triggers=11/11 missing=none unknown_participants=none"
+    },
+    {
+      "name": "Quest / Encounter Coverage",
+      "status": "OK",
+      "detail": "beats=9 anchors_win=True all_beats_mapped=True"
+    },
+    {
+      "name": "Dynamic Events",
+      "status": "OK",
+      "detail": "templates=10 required_present=True all_have_choices=True missing=none"
+    },
+    {
+      "name": "Reputation (Remembered Deeds)",
+      "status": "OK",
+      "detail": "golden_deeds=6 worst_deeds=1 all_have_npc_line=True reactive=True"
+    },
+    {
+      "name": "Regional Memory",
+      "status": "OK",
+      "detail": "statuses_with_changes=6/6 all_have_prompt=True"
+    },
+    {
+      "name": "World-State Transitions",
+      "status": "OK",
+      "detail": "transitions=10 all_natural=True unnatural=none"
+    },
+    {
+      "name": "Documentation",
+      "status": "OK",
+      "detail": "present=4/4 missing=none"
+    },
+    {
+      "name": "Godot Migration Compatibility",
+      "status": "OK",
+      "detail": "core_modules=12 screen_io=none"
+    },
+    {
+      "name": "Serialization Round-Trip",
+      "status": "OK",
+      "detail": "living_world_json_roundtrip=True"
+    },
+    {
+      "name": "Playtest Readiness",
+      "status": "OK",
+      "detail": "golden_cleansed=True party_intact=True bram_saved=True"
+    },
+    {
+      "name": "Outstanding TODOs",
+      "status": "OK",
+      "detail": "outstanding=none"
+    }
+  ]
+}

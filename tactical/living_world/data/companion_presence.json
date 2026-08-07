@@ -1,0 +1,64 @@
+{
+  "Talos": [
+    {"kind": "advice", "contexts": ["settlement", "village", "refugee_camp"],
+     "line": "Villagers drift toward Talos with their worries; he answers each one plainly, the way a captain answers a scared recruit."},
+    {"kind": "recognition", "contexts": ["battlefield", "boss_arena"],
+     "line": "An old soldier working the ground straightens when Talos passes, and salutes without meaning to. Leadership is a thing people recognise on sight."},
+    {"kind": "counsel", "contexts": ["settlement", "village"],
+     "line": "Talos walks the perimeter first, marking sight-lines and weak gates, then tells the elders exactly where to stand a watch."}
+  ],
+  "Eleanor": [
+    {"kind": "blessing", "contexts": ["shrine"],
+     "line": "Eleanor lays a hand on the shrine-stone and speaks the old blessing low, until the moss on it seems a shade greener."},
+    {"kind": "clergy", "contexts": ["settlement", "village"],
+     "line": "Eleanor finds the local priest and they talk a long while — two people comparing notes on how a place keeps its faith when the dark presses in."},
+    {"kind": "comfort", "contexts": ["refugee_camp", "grave", "village"],
+     "line": "A grieving family sits apart from the others. Eleanor goes to them, sits in the dirt at their level, and simply stays."}
+  ],
+  "Ragash": [
+    {"kind": "children", "contexts": ["settlement", "village", "refugee_camp"],
+     "line": "The children forget to be frightened the moment Ragash's hounds flop down in the square; soon a dozen small hands are buried in warm fur."},
+    {"kind": "hunters", "contexts": ["wilderness", "forest"],
+     "line": "Local hunters fall in beside Ragash, asking — carefully, respectfully — how the hounds read a trail that they themselves keep losing."},
+    {"kind": "animals", "contexts": ["wilderness", "forest", "shrine"],
+     "line": "Wild things settle when Ragash is near: a wary doe holds its ground, and a hawk circles once, low, as if reporting in."}
+  ],
+  "Ronan": [
+    {"kind": "tracks", "contexts": ["road", "wilderness", "forest"],
+     "line": "Ronan crouches at a smear of prints the others walked straight over. 'Three of them. Fast. Frightened, not hunting.' He is rarely wrong about this."},
+    {"kind": "pack", "contexts": ["forest", "wilderness"],
+     "line": "Something watches from the treeline and does not attack. Ronan lifts his chin a fraction; the Hidden Pack scouts acknowledge one of their own and melt away."},
+    {"kind": "bram", "contexts": ["shrine", "wilderness", "forest"],
+     "line": "Ronan hangs back to speak quietly with Bram, voice pitched for a wolf and not a man. Whatever passes between them, Bram's hackles ease."}
+  ],
+  "Torren": [
+    {"kind": "structures", "contexts": ["ruins", "village", "settlement", "forge"],
+     "line": "Torren runs a thumb along a cracked lintel and shakes his head. 'Whoever laid this was in a hurry. It'll come down in a hard winter.' Then he props it anyway."},
+    {"kind": "repairs", "contexts": ["forge", "settlement", "village"],
+     "line": "Half the camp's tools are broken; Torren gathers them without being asked and works late, and by morning the axes bite true again."},
+    {"kind": "craft", "contexts": ["forge", "ruins", "cave"],
+     "line": "Torren lingers over the old stonework, naming the joints and the tricks of it, half to the party and half to the long-dead hands that cut it."}
+  ],
+  "Corwin": [
+    {"kind": "sketch", "contexts": ["ruins", "wilderness", "cave", "discovery"],
+     "line": "Corwin stops mid-stride, pulls out his journal, and sketches the thing everyone else was about to pass — 'for later,' he says, though later never seems to come."},
+    {"kind": "corruption", "contexts": ["corrupted", "forest"],
+     "line": "Corwin kneels by the sick, weeping bark. 'This isn't rot. Rot is honest. This is being *made* to look like rot.' He notes it, unsettled."},
+    {"kind": "plants", "contexts": ["forest", "wilderness"],
+     "line": "Corwin points out a pale flower the others took for a weed. 'That only grows where the ground was salted with grief. Someone died here, and recently.'"},
+    {"kind": "clues", "contexts": ["ruins", "road", "battlefield"],
+     "line": "Corwin reads the scuff-marks, the dropped strap, the way the door was barred from inside. He assembles the story the survivors were too frightened to tell."}
+  ],
+  "Maeve Ashwood": [
+    {"kind": "wounds", "contexts": ["settlement", "refugee_camp", "battlefield"],
+     "line": "Maeve is elbow-deep in someone's bad arm before the party has even set down their packs; she works fast, talks softly, and does not flinch."},
+    {"kind": "clinic", "contexts": ["settlement", "village"],
+     "line": "Maeve seeks out whatever passes for a clinic here, restocks it from her own kit, and shows a shaking apprentice how to hold a needle steady."},
+    {"kind": "children", "contexts": ["refugee_camp", "village"],
+     "line": "Maeve checks the children first — always the children — pressing an ear to small chests and inventing a game out of every examination."},
+    {"kind": "elders", "contexts": ["village", "settlement"],
+     "line": "Maeve makes her quiet rounds of the old ones, warming stiff hands in hers, listening to complaints no one else has the patience to hear."},
+    {"kind": "anonymous", "contexts": ["refugee_camp", "village"],
+     "line": "In the morning a satchel of clean bandages and fever-root is found on a doorstep. No note. Maeve says nothing, and no one has to ask."}
+  ]
+}

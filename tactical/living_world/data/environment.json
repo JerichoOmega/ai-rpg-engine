@@ -1,0 +1,65 @@
+[
+  {
+    "id": "tracks",
+    "kind": "tracks",
+    "description": "Boot-prints churn the mud here, all pointing one way — away — and among them, the deeper drag of something heavy being hauled.",
+    "tags": ["road", "wilderness", "forest"],
+    "corwin_insight": "Corwin: 'Two groups. The first walked. The second ran, carrying wounded. Look — this heel-drag is a body, not a sack.'"
+  },
+  {
+    "id": "abandoned_camp",
+    "kind": "abandoned_camp",
+    "description": "A camp lies exactly as it was left: bedrolls thrown back, a meal half-eaten and long spoiled, a child's toy dropped mid-play.",
+    "tags": ["road", "wilderness", "forest"],
+    "corwin_insight": "Corwin: 'They didn't pack. Whatever came, it came between the pouring of the water and the drinking of it. Minutes.'"
+  },
+  {
+    "id": "ruined_wagon",
+    "kind": "ruined_wagon",
+    "description": "A merchant's wagon lies on its side in the ditch, wheels gone to other hands, its painted sign scoured half-blank by weather.",
+    "tags": ["road", "battlefield"],
+    "corwin_insight": "Corwin: 'Not robbed — abandoned. See, the strongbox is still nailed shut. Whatever they fled, coin wasn't worth stopping for.'"
+  },
+  {
+    "id": "broken_weapons",
+    "kind": "broken_weapons",
+    "description": "Snapped spear-shafts and a notched blade lie half-buried, rusting into the ground where they fell.",
+    "tags": ["battlefield", "ruins", "road"],
+    "corwin_insight": "Corwin: 'These are farmers' tools re-forged for war. Whoever stood here weren't soldiers. They were people who ran out of choices.'"
+  },
+  {
+    "id": "damaged_buildings",
+    "kind": "damaged_buildings",
+    "description": "Half the houses stand open to the sky, roofs caved, doorframes clawed and blackened at the edges.",
+    "tags": ["village", "settlement", "ruins"],
+    "corwin_insight": "Corwin: 'The scorching climbs *up* the walls, not out from a hearth. This fire came from outside, and it was set on purpose.'"
+  },
+  {
+    "id": "memorial",
+    "kind": "memorial",
+    "description": "A cairn of river-stones stands at the roadside, fresh-built, a scrap of cloth tied to a stick above it snapping in the wind.",
+    "tags": ["road", "village", "battlefield"],
+    "corwin_insight": "Corwin: 'Counted the stones — one per name, and they ran out of big ones. The small stones at the top are the children.'"
+  },
+  {
+    "id": "journal",
+    "kind": "journal",
+    "description": "A water-swollen journal lies open in the grass, its last legible page trailing off mid-word in a shaking hand.",
+    "tags": ["ruins", "road", "wilderness"],
+    "corwin_insight": "Corwin: 'The handwriting degrades over the last week — not fear. Sickness. Whoever wrote this was already changing.'"
+  },
+  {
+    "id": "grave",
+    "kind": "grave",
+    "description": "A single grave sits apart from any village, dug carefully, marked only by a helmet set atop the turned earth.",
+    "tags": ["battlefield", "wilderness", "road"],
+    "corwin_insight": "Corwin: 'One grave, dug by hands too tired to dig a second. They buried the one they could and carried the rest of their grief out with them.'"
+  },
+  {
+    "id": "shrine",
+    "kind": "shrine",
+    "description": "A wayside shrine stands worn but tended — someone still leaves offerings here, even now, even with the world coming apart.",
+    "tags": ["shrine", "forest", "road"],
+    "corwin_insight": "Corwin: 'The offerings are days old, not years. Someone climbs all the way out here to keep hoping. That's data too, you know.'"
+  }
+]

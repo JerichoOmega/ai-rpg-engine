@@ -1,0 +1,30 @@
+{
+  "Ronan": [
+    {"tags": ["shrine"],
+     "line": "Ronan kneels a long moment beside the old wolf shrine, one knuckle to the worn stone. He says nothing. He does not have to."}
+  ],
+  "Maeve Ashwood": [
+    {"tags": ["village"],
+     "line": "In the rebuilt village Maeve sets down her Lantern of Ashes and lights it, watching the small flame steady against the dark for everyone she couldn't save."}
+  ],
+  "Torren": [
+    {"tags": ["ruins", "cave"],
+     "line": "Torren goes quiet among the forgotten dwarven stonework, tracing seams no living smith could cut, learning from the dead."}
+  ],
+  "Corwin": [
+    {"tags": ["ruins"],
+     "line": "Corwin sits cross-legged before the ancient carvings and sketches them faithfully, certain they are a sentence in a language he has not yet earned."}
+  ],
+  "Talos": [
+    {"tags": ["boss_arena", "battlefield"],
+     "line": "When the fighting is finally done, Talos climbs to the high ground alone and watches the sun come up over the ground they held."}
+  ],
+  "Eleanor": [
+    {"tags": ["shrine"],
+     "line": "Eleanor offers a silent prayer, head bowed, asking nothing — only naming the lost so that somewhere, something remembers them."}
+  ],
+  "Ragash": [
+    {"tags": ["wilderness", "forest"],
+     "line": "Ragash sits on a fallen log and lets the wild come to them; by dusk the hounds are ringed by curious eyes that would flee from anyone else."}
+  ]
+}

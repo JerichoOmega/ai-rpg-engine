@@ -85,6 +85,7 @@ Create a new handoff document at the end of any session that includes:
 | 2026-07-31 | [`2026-07-31-lore-design-session.md`](2026-07-31-lore-design-session.md) | Engine stabilization (dual player-state eliminated); lore Bible expansion (Four Ages framework, First Empire, Great Library Director, Soleth Archive, Capital dynasty, hero arcs) |
 | 2026-06-15 | [`2026-06-15-legacy-questline-integration.md`](2026-06-15-legacy-questline-integration.md) | Legacy Questline Architecture: 13 reusable frameworks + 3 approved quests (data-driven), dev tools, automated harness (6/6), wired into game loop |
 | 2026-06-16 | [`2026-06-16-legacy-framework-hardening.md`](2026-06-16-legacy-framework-hardening.md) | Production hardening: architecture audit, expanded dev toolkit, authoring doc, data-driven Living-World reaction layer, quest-flow validator (0 errors), perf/future-proofing |
+| 2026-06 | [`2026-06-living-frontier-pass.md`](2026-06-living-frontier-pass.md) | Living Frontier Pass: `tactical/living_world/` — 10 reusable engine-agnostic systems (region states, epilogue, dynamic events, companion presence & banter, remembered-deed reputation, environmental storytelling, landmark moments, regional memory, Region Completion Review), First-Region content, frontier overlay. +24 tests (293 total), verify 62/62, review 13/13 READY. Additive/non-breaking |
 
 *Add new rows here (oldest → newest) each time a handoff is created.*
 

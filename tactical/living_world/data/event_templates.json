@@ -1,0 +1,142 @@
+[
+  {
+    "id": "merchant_under_attack",
+    "title": "Merchant Under Attack",
+    "category": "combat",
+    "description": "Ahead, a merchant's cart is stopped crossways in the road and figures are dragging crates into the ditch while the driver pleads.",
+    "teaches": "protect a civilian target while dealing with mobile threats",
+    "tags": ["road", "wilderness"],
+    "weight": 3,
+    "choices": [
+      {"id": "intervene", "label": "Charge in and drive the raiders off"},
+      {"id": "flank", "label": "Circle wide and cut off their escape with the loot"},
+      {"id": "parley", "label": "Call out — some of these are just desperate, not cruel"}
+    ]
+  },
+  {
+    "id": "lost_child",
+    "title": "The Lost Child",
+    "category": "social",
+    "description": "A child sits at the roadside, too exhausted to cry, clutching a single shoe and pointing back the way you came.",
+    "teaches": "consequences ripple — where did they come from, and what is following?",
+    "tags": ["road", "wilderness", "forest"],
+    "weight": 2,
+    "choices": [
+      {"id": "escort", "label": "Take the child to the nearest safe camp"},
+      {"id": "backtrack", "label": "Follow the child's trail to whatever they fled"},
+      {"id": "ragash", "label": "Let Ragash's hounds find the family by scent"}
+    ]
+  },
+  {
+    "id": "traveling_healer",
+    "title": "The Traveling Healer",
+    "category": "social",
+    "description": "A healer works a line of the sick under a lean-to, out of clean water and nearly out of hope.",
+    "teaches": "small kindnesses seed reputation and future aid",
+    "tags": ["road", "settlement", "refugee_camp"],
+    "weight": 2,
+    "choices": [
+      {"id": "supply", "label": "Share your own medicine and water"},
+      {"id": "maeve", "label": "Have Maeve take over the worst cases"},
+      {"id": "pass", "label": "Wish them well and move on"}
+    ]
+  },
+  {
+    "id": "hidden_pack_scouts",
+    "title": "Hidden Pack Scouts",
+    "category": "encounter",
+    "description": "Shapes pace you through the undergrowth, never closing, never leaving. Watching. Testing.",
+    "teaches": "not every watcher is an enemy — reputation and Ronan change this",
+    "tags": ["forest", "wilderness"],
+    "weight": 2,
+    "choices": [
+      {"id": "ronan", "label": "Let Ronan step forward and be recognised"},
+      {"id": "gift", "label": "Leave fresh meat on a stump and keep walking"},
+      {"id": "ready", "label": "Form up and wait to see what they want"}
+    ]
+  },
+  {
+    "id": "wandering_knight",
+    "title": "The Wandering Knight",
+    "category": "social",
+    "description": "A knight in dented, honest armour rests a spear across their knees and studies you without alarm.",
+    "teaches": "allies of convenience — and Talos knows the type",
+    "tags": ["road", "ruins", "battlefield"],
+    "weight": 1,
+    "choices": [
+      {"id": "talos", "label": "Let Talos take their measure, soldier to soldier"},
+      {"id": "hire", "label": "Ask what road they walk and whether it's yours"},
+      {"id": "leave", "label": "Nod and give them the peace they came for"}
+    ]
+  },
+  {
+    "id": "corrupted_wildlife",
+    "title": "Corrupted Wildlife",
+    "category": "combat",
+    "description": "A stag steps into the path, and it is wrong — its eyes are wept-over black and it does not fear you at all.",
+    "teaches": "corruption is a spreading enemy; Corwin can read its source",
+    "tags": ["forest", "wilderness", "corrupted"],
+    "weight": 3,
+    "choices": [
+      {"id": "mercy", "label": "End it cleanly — there is nothing left to save"},
+      {"id": "corwin", "label": "Let Corwin study it before you strike"},
+      {"id": "avoid", "label": "Break line of sight and slip past"}
+    ]
+  },
+  {
+    "id": "refugee_caravan",
+    "title": "The Refugee Caravan",
+    "category": "social",
+    "description": "A slow line of carts and walking wounded crawls toward you, everything they own lashed down and everyone they lost left behind.",
+    "teaches": "world state made visible — the Frontier is emptying",
+    "tags": ["road", "settlement", "refugee_camp"],
+    "weight": 2,
+    "choices": [
+      {"id": "guide", "label": "Point them to the safest camp you know"},
+      {"id": "guard", "label": "Walk them past the dangerous stretch of road"},
+      {"id": "ask", "label": "Ask what drove them out — and listen"}
+    ]
+  },
+  {
+    "id": "traveling_storyteller",
+    "title": "The Traveling Storyteller",
+    "category": "social",
+    "description": "By a shared fire, a storyteller trades a night's tale for a night's bread, and the Frontier's rumours all pass through them eventually.",
+    "teaches": "lore and rumour flow through the living world",
+    "tags": ["road", "settlement", "village"],
+    "weight": 1,
+    "choices": [
+      {"id": "listen", "label": "Stay for a tale — you may learn something true"},
+      {"id": "trade", "label": "Trade a story of your own for news of the road ahead"},
+      {"id": "rest", "label": "Let the party rest and simply enjoy it"}
+    ]
+  },
+  {
+    "id": "abandoned_campsite",
+    "title": "The Abandoned Campsite",
+    "category": "discovery",
+    "description": "Cold ashes, a kettle still hung, bedrolls left where they lay. People left here in a hurry and did not come back for their things.",
+    "teaches": "environmental storytelling before a word is spoken",
+    "tags": ["road", "wilderness", "forest"],
+    "weight": 2,
+    "choices": [
+      {"id": "read", "label": "Read the site — what happened, and how long ago?"},
+      {"id": "salvage", "label": "Take what's useful; the owners won't be needing it"},
+      {"id": "respect", "label": "Leave it as a marker and move on"}
+    ]
+  },
+  {
+    "id": "injured_animal",
+    "title": "The Injured Animal",
+    "category": "social",
+    "description": "A young wolf lies in a snare, leg torn, too spent to snap at you — only watching, the way a frightened thing watches.",
+    "teaches": "mercy has a memory; Ragash and Ronan both react",
+    "tags": ["forest", "wilderness"],
+    "weight": 2,
+    "choices": [
+      {"id": "free", "label": "Free it gently and let it run"},
+      {"id": "tend", "label": "Have Maeve or Ragash tend the leg first"},
+      {"id": "mercy", "label": "End its pain if the wound is past saving"}
+    ]
+  }
+]

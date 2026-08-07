@@ -1,0 +1,82 @@
+[
+  {
+    "id": "the_frontier",
+    "name": "The Frontier",
+    "kind": "region",
+    "status": "threatened",
+    "region_id": "the_frontier",
+    "tags": ["region", "wilderness"]
+  },
+  {
+    "id": "frontier_road",
+    "name": "The Frontier Road",
+    "kind": "landmark",
+    "status": "threatened",
+    "region_id": "the_frontier",
+    "tags": ["road", "wilderness"]
+  },
+  {
+    "id": "refugee_settlement",
+    "name": "The Ashen Camp",
+    "kind": "settlement",
+    "status": "threatened",
+    "region_id": "the_frontier",
+    "tags": ["settlement", "refugee_camp"]
+  },
+  {
+    "id": "greenhollow",
+    "name": "Greenhollow",
+    "kind": "settlement",
+    "status": "corrupted",
+    "region_id": "the_frontier",
+    "tags": ["settlement", "village"]
+  },
+  {
+    "id": "sundered_span",
+    "name": "The Sundered Span",
+    "kind": "landmark",
+    "status": "threatened",
+    "region_id": "the_frontier",
+    "tags": ["river", "road", "battlefield"]
+  },
+  {
+    "id": "the_forge",
+    "name": "The Old Forge",
+    "kind": "landmark",
+    "status": "threatened",
+    "region_id": "the_frontier",
+    "tags": ["forge", "ruins"]
+  },
+  {
+    "id": "dwarven_ruins",
+    "name": "The Sunk Hall",
+    "kind": "landmark",
+    "status": "safe",
+    "region_id": "the_frontier",
+    "tags": ["ruins", "cave"]
+  },
+  {
+    "id": "old_wolf_shrine",
+    "name": "The Old Wolf Shrine",
+    "kind": "landmark",
+    "status": "safe",
+    "region_id": "the_frontier",
+    "tags": ["shrine", "forest", "wilderness"]
+  },
+  {
+    "id": "corrupted_woods",
+    "name": "The Blightwood",
+    "kind": "landmark",
+    "status": "corrupted",
+    "region_id": "the_frontier",
+    "tags": ["forest", "wilderness", "corrupted"]
+  },
+  {
+    "id": "blight_heart",
+    "name": "The Heart of the Blight",
+    "kind": "landmark",
+    "status": "corrupted",
+    "region_id": "the_frontier",
+    "tags": ["boss_arena", "corrupted"]
+  }
+]

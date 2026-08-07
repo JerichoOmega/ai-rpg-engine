@@ -1,0 +1,51 @@
+{
+  "safe": {
+    "prompt": "The place holds. Not thriving, but standing — and glad to see you.",
+    "changes": [
+      "A watch has been posted at the gate that had none before.",
+      "Someone has cleared the road of the worst of the wreckage.",
+      "The people meet your eyes now instead of the ground."
+    ]
+  },
+  "threatened": {
+    "prompt": "You feel it before anyone speaks — shutters barred at midday, voices kept low.",
+    "changes": [
+      "Fresh boards cover windows that were open when you left.",
+      "The market square is half-empty; the stalls that remain are packing early.",
+      "A rumour outruns you to the gate: something is moving in the deep woods again."
+    ]
+  },
+  "recovering": {
+    "prompt": "The bruise is still there, but the place is mending — hands busy again, backs bent to good work.",
+    "changes": [
+      "Scaffolding climbs the burned houses; hammers ring from first light.",
+      "A field that was ash last season shows the first green haze of new planting.",
+      "The healer's line is shorter, and the ones waiting are waiting to say thank you."
+    ]
+  },
+  "prosperous": {
+    "prompt": "The place is loud and full — the good kind of loud, the kind that forgets to be afraid.",
+    "changes": [
+      "The market has spilled past its old bounds; new stalls, new faces, new goods.",
+      "There are children enough for a proper game in the square again.",
+      "Someone has painted their door. Then a neighbour did. Then the whole street."
+    ]
+  },
+  "corrupted": {
+    "prompt": "Something is wrong here in a way the eyes catch a breath before the mind does.",
+    "changes": [
+      "The wells taste of iron and the dogs will not go near them.",
+      "Doors are chalk-marked with warding signs that did not used to be needed.",
+      "The few who remain speak of neighbours who 'went quiet' and were not seen again."
+    ]
+  },
+  "restored": {
+    "prompt": "You almost don't know it. The place you left broken has become something that stands taller than before.",
+    "changes": [
+      "Villagers you last saw fleeing are here rebuilding, and they cheer when they see who did it.",
+      "Children play in the square again, loud and heedless, the way children are meant to.",
+      "The fields are restored to green, and the first wildlife has crept back to the wood's edge.",
+      "A new memorial stands at the crossroads, and beside it, a shop has reopened its shutters."
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "weather": [
+    {"participants": ["Ronan", "Corwin"], "lines": [
+      {"speaker": "Corwin", "text": "This fog isn't natural — it's holding at the same height it was an hour ago."},
+      {"speaker": "Ronan", "text": "Then we walk quiet and we walk close. Fog like that hides more than it shows."}
+    ]},
+    {"participants": ["Maeve Ashwood", "Eleanor"], "lines": [
+      {"speaker": "Maeve Ashwood", "text": "Rain again. Half the camp will have coughs by week's end."},
+      {"speaker": "Eleanor", "text": "Then we dry them out and we keep them warm. The sky is not our enemy today."}
+    ]}
+  ],
+  "enter_town": [
+    {"participants": ["Talos", "Maeve Ashwood"], "lines": [
+      {"speaker": "Talos", "text": "Weak gate, no watch on the north road. This place is one bad night from ruin."},
+      {"speaker": "Maeve Ashwood", "text": "Then let's give them a good day first. Fear can wait behind a full stomach."}
+    ]},
+    {"participants": ["Corwin", "Torren"], "lines": [
+      {"speaker": "Corwin", "text": "Look at the roof-lines — half rebuilt, half burned. They're deciding whether to stay."},
+      {"speaker": "Torren", "text": "They'll stay. People don't rebuild a roof they mean to leave under."}
+    ]}
+  ],
+  "river": [
+    {"participants": ["Ronan", "Ragash"], "lines": [
+      {"speaker": "Ragash", "text": "The hounds won't drink here. Something upstream."},
+      {"speaker": "Ronan", "text": "Then neither do we. Fill from the spring we passed."}
+    ]}
+  ],
+  "forest": [
+    {"participants": ["Corwin", "Eleanor"], "lines": [
+      {"speaker": "Corwin", "text": "The birdsong stopped four hundred paces back. Nobody noticed but the trees."},
+      {"speaker": "Eleanor", "text": "The Old Ways say a silent wood is a wood holding its breath. Keep your hope where you can reach it."}
+    ]},
+    {"participants": ["Ronan", "Ragash"], "lines": [
+      {"speaker": "Ronan", "text": "Pack sign. Old. They ranged wide here once."},
+      {"speaker": "Ragash", "text": "And could again, if someone gave them a reason to trust a two-legs."}
+    ]}
+  ],
+  "cave": [
+    {"participants": ["Torren", "Corwin"], "lines": [
+      {"speaker": "Torren", "text": "Dwarf-cut, this. Feel how the air moves? They built it to breathe."},
+      {"speaker": "Corwin", "text": "Then let's not be the ones who teach it to hold its breath."}
+    ]}
+  ],
+  "ruins": [
+    {"participants": ["Torren", "Corwin"], "lines": [
+      {"speaker": "Corwin", "text": "Someone loved this place. You can tell by what they saved before they ran."},
+      {"speaker": "Torren", "text": "Aye. And someone hated it, by what they left broken. Both are still here in the stone."}
+    ]},
+    {"participants": ["Talos", "Eleanor"], "lines": [
+      {"speaker": "Talos", "text": "Men died holding this wall. You can read it in the arrow-scars."},
+      {"speaker": "Eleanor", "text": "Then we'll say their names to the wind. A wall remembers, even when the world forgets."}
+    ]}
+  ],
+  "victory": [
+    {"participants": ["Talos", "Ronan"], "lines": [
+      {"speaker": "Talos", "text": "Clean work. Nobody we came in with is lying in the grass."},
+      {"speaker": "Ronan", "text": "That's the only kind of victory worth the word."}
+    ]},
+    {"participants": ["Maeve Ashwood", "Ragash"], "lines": [
+      {"speaker": "Ragash", "text": "We won."},
+      {"speaker": "Maeve Ashwood", "text": "We survived. Winning is what we do with the time it buys us."}
+    ]}
+  ],
+  "defeat": [
+    {"participants": ["Eleanor", "Talos"], "lines": [
+      {"speaker": "Talos", "text": "We gave ground. I hate giving ground."},
+      {"speaker": "Eleanor", "text": "Ground can be taken back. Breath cannot. You made the right call, captain."}
+    ]}
+  ],
+  "camping": [
+    {"participants": ["Corwin", "Maeve Ashwood"], "lines": [
+      {"speaker": "Corwin", "text": "I filled six pages today and understood maybe one of them."},
+      {"speaker": "Maeve Ashwood", "text": "That's one more than yesterday. Now eat, and let the other five wait for morning."}
+    ]},
+    {"participants": ["Ronan", "Talos", "Eleanor"], "lines": [
+      {"speaker": "Talos", "text": "Strange, isn't it. A fire, a full watch, and none of us quite trusting the quiet."},
+      {"speaker": "Ronan", "text": "The quiet's earned. Let it be quiet."},
+      {"speaker": "Eleanor", "text": "To the ones who aren't at this fire, and to the ones who still might be. Rest."}
+    ]}
+  ],
+  "boss_arena": [
+    {"participants": ["Talos", "Eleanor", "Corwin"], "lines": [
+      {"speaker": "Corwin", "text": "This is it. Whatever's been wearing the Frontier like a mask — it's here."},
+      {"speaker": "Talos", "text": "Then we take the mask off. Together, on my mark, and not before."},
+      {"speaker": "Eleanor", "text": "Whatever it shows us, remember it is afraid of exactly one thing: people who refuse to run."}
+    ]}
+  ],
+  "discovery": [
+    {"participants": ["Corwin", "Ronan"], "lines": [
+      {"speaker": "Corwin", "text": "There. See it now? I told you the land was trying to say something."},
+      {"speaker": "Ronan", "text": "You did. I'll stop doubting your notebook. Mostly."}
+    ]}
+  ]
+}

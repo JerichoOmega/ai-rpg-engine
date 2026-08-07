@@ -1,0 +1,65 @@
+{
+  "title": "The Frontier Endures",
+  "region": "The Frontier",
+  "threads": [
+    {
+      "id": "bram",
+      "subject": "Bram, the Lost Wolf",
+      "flag": "bram_saved",
+      "positive": "Bram runs with the Hidden Pack now, whole and wild. On still nights the Frontier hears him, and it is not a lonely sound anymore — it is a sentinel's.",
+      "reduced": "Bram survives, but wary, keeping to the far ridges. He answers no howl but his own. What was almost mended stayed a little broken."
+    },
+    {
+      "id": "hidden_pack",
+      "subject": "The Hidden Pack",
+      "flag": "pack_ally",
+      "positive": "The Hidden Pack shadows the roads that families travel, and where they pass, raiders do not. An old wariness between wolf and settler has become, quietly, an alliance.",
+      "reduced": "The Hidden Pack keeps to the deep wood, neither friend nor foe. They watched what you did. They have not yet decided what it meant."
+    },
+    {
+      "id": "corwin_investigation",
+      "subject": "Corwin's Investigation",
+      "flag": "knows_source",
+      "positive": "Corwin's notebooks name the thing that wore the Frontier like a mask — and because it is named, it can be watched for elsewhere. His warning travels farther than he ever will.",
+      "reduced": "Corwin knows the blight is beaten but not what it truly was. He fills page after page with the shape of the question, and takes the unease with him to the next region."
+    },
+    {
+      "id": "maeve_settlement",
+      "subject": "Maeve's Settlement",
+      "flag": "settlement_secured",
+      "positive": "The Ashen Camp has walls now, and a clinic, and a name people say with pride instead of pity. Maeve's anonymous satchels still appear on doorsteps — and everyone still pretends not to know whose.",
+      "reduced": "The camp holds on, thinner than it should be, its people always half-packed to run. Maeve leaves it what medicine she can and does not forgive herself the difference."
+    },
+    {
+      "id": "torren_forge",
+      "subject": "Torren's Forge Work",
+      "flag": "forge_mastered",
+      "positive": "The Old Forge burns again, and the tools that come off it are the best the Frontier has seen in a generation. Torren left his mark on the anvil and his craft in a hundred honest hands.",
+      "reduced": "The forge stands, cold more often than not. Torren mended what he could in the time he had, and carries the list of what he couldn't like a debt."
+    },
+    {
+      "id": "eleanor_diplomacy",
+      "subject": "Eleanor's Diplomacy",
+      "flag": "region_cleansed",
+      "positive": "Where Eleanor blessed the shrines, the shrines are tended again; where she sat with the grieving, the grieving have risen. Faith did not save the Frontier — but it gave the people saving it a reason to keep standing.",
+      "reduced": "Eleanor kept the small fires of hope alight through the worst of it, though some she could not reach in time. She counts the shrines still dark and vows the next region will have fewer."
+    },
+    {
+      "id": "talos_leadership",
+      "subject": "Talos's Leadership",
+      "flag": "talos_trust",
+      "positive": "The militias Talos drilled hold their gates now without him. He gave the Frontier not victories but the harder gift — the knowledge that it could defend itself.",
+      "reduced": "Talos held the line where he stood, but there were not enough of him to stand everywhere. He leaves plans pinned to a dozen doors and hopes someone reads them before the next bad night."
+    },
+    {
+      "id": "ronan_acceptance",
+      "subject": "Ronan's Acceptance",
+      "flag": "bram_saved",
+      "positive": "Ronan stopped running the night he chose to save rather than slay. He belongs to something now — the Pack, the party, the Frontier itself — and he has stopped flinching from the word.",
+      "reduced": "Ronan did what was needed and no more, and kept the door of himself shut. Belonging is still a country he watches from the border of. But he watches. That is new."
+    }
+  ],
+  "closing_bright": "The Corruption Avatar is broken, and the Frontier does not merely survive — it endures. The roads carry traders again. The wood carries wolves that mean no harm. The people carry each other. What the party leaves behind is not an ending. It is a place that has learned how to go on living.",
+  "closing_mixed": "The Corruption Avatar is broken, and the Frontier endures — scarred, uneven, some lights rekindled and some still dark. It is not the region it was, and not yet the region it could be. But it is standing, and it is theirs, and that is enough to build the rest on.",
+  "closing_grim": "The Corruption Avatar is broken, but the Frontier endures the way a survivor endures — grateful and hollowed both. Too much was left half-done, too many doors stayed shut. The party moves on carrying the weight of it, and the quiet promise to do better where they go next."
+}
