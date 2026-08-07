@@ -27,9 +27,10 @@ encounters: [`The Sundered Span`](../encounters/gold_standard_sundered_span.md),
 | Beasts & Monsters | 10 | Aggressive melee pressure & ambush | [`beasts_and_monsters.md`](beasts_and_monsters.md) |
 | Forest | 4 | Terrain control & zoning | [`forest.md`](forest.md) |
 | Constructs | 4 | Durability & sustained problems | [`constructs.md`](constructs.md) |
-| Corrupted (variant line) | 9 | Escalation of the familiar | [`corrupted.md`](corrupted.md) |
+| Corrupted (variant line) | 11 | Escalation of the familiar + the family **boss** | [`corrupted.md`](corrupted.md) |
 
-**Total: 74 spawnable units.**
+**Total: 76 spawnable units** (74 base roster + the `corruption_avatar` boss and
+its `corruption_anchor` wardstone — the region's finale set-piece).
 
 ## How to read a family doc
 Each family doc has: **visual identity · lore summary · combat philosophy ·
@@ -53,9 +54,10 @@ these; do not author duplicate behaviours.
 ```
 Basic → Veteran → Elite → Champion → Boss
 ```
-`tier` values in data today are **basic · veteran · elite**. **Champion** and
-**Boss** tiers are **documented targets only** (`_TBD_`) — this pass builds the
-*basic/veteran/elite* foundation, **not** bosses.
+`tier` values in data today are **basic · veteran · elite · boss**. The first
+**Boss** tier unit now exists — the **Corruption Avatar** finale set-piece
+([`the_corruption_avatar.md`](../encounters/the_corruption_avatar.md)). A
+**Champion** tier between elite and boss remains a documented target (`_TBD_`).
 
 ## Encounter-tag legend
 `Tutorial` · `Frontier` · `Forest` · `Roads` · `Ruins` · `Mountains` ·
@@ -72,3 +74,4 @@ already compose these families: `forest_wolf_pack`, `roadside_ambush`,
 | Date | Change |
 |---|---|
 | 2026-06 | Created the bestiary design library: index + 10 family docs covering all 74 existing data-driven units, with roles, AI mapping, one-lesson-per-basic, encounter tags, and Basic→Boss progression targets. Documentation-only; no data/gameplay changed. |
+| 2026-06 | Added the family's **boss tier**: the Corruption Avatar + Corruption Anchor (roster 74→76). Documented in [`corrupted.md`](corrupted.md) and [`the_corruption_avatar.md`](../encounters/the_corruption_avatar.md); backed by 2 additive `enemies.json` blueprints. |

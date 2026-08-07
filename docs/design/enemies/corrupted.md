@@ -57,11 +57,30 @@ anymore" beat.
 | `corrupted_ancient_guardian` | `stone_sentinel` | tank | elite | high | A vault-wall turned hostile | Ruins, Story |
 
 ## Future upgrade path (documented)
-Corruption is itself the "veteran/elite" step for many base creatures. Future:
-**Champion** `_TBD_` (a corruption-warped apex) → **Boss** `_TBD_` (a Corruption
-avatar / heart-of-the-blight set-piece — the family's natural capstone).
+Corruption is itself the "veteran/elite" step for many base creatures. The
+family's natural capstone — a **Corruption avatar / heart-of-the-blight
+set-piece** — now exists (see below); a corruption-warped **Champion** apex
+between elite and boss remains `_TBD_`.
+
+## Boss tier — The Corruption Avatar (implemented)
+The family's capstone boss is now defined in data and as a playable headless
+set-piece. Two additive blueprints back it:
+
+| Unit | Role | Tier | Threat | AI | One lesson | Tags |
+|---|---|---|---|---|---|---|
+| `corruption_avatar` | boss | boss | extreme | `boss` | Don't tunnel the boss — break its wards first | Story, Frontier, Ruins |
+| `corruption_anchor` | objective | elite | moderate | `defender` | The thing sustaining the boss must die first | Story, Frontier, Ruins |
+
+**Mechanic (WARDED):** while any `corruption_anchor` (wardstone) stands, damage
+to the Avatar is nullified; destroy the anchors to **expose and enrage** it.
+Full design, numbers, and evidence:
+[`the_corruption_avatar.md`](../encounters/the_corruption_avatar.md).
+
+**Identity is canonically `_TBD_`:** it is a *manifestation* of The Corruption —
+an ancient force, not a named individual (trait `_TBD_identity`). The player
+cleanses the region, but the true source is left unresolved for future acts.
 
 ## Future elite/boss variants (`_TBD_`)
-A named **Corruption avatar boss** and additional corrupted forms of any base
-creature are **reserved placeholders** — the `extends` pattern makes adding them a
-data-only value swap when needed.
+Additional corrupted forms of any base creature, and a corruption-warped
+**Champion** apex, remain **reserved placeholders** — the `extends` pattern makes
+adding them a data-only value swap when needed.

@@ -544,3 +544,36 @@ No gameplay/combat/AI/data/save changes. 13 new docs.
 - Validation: full pytest **241 passed** (233→241, +8 frontier); `tactical.verify`
   FOUNDATION STABLE; enemies.json valid + by_tag works; markdown links 0 broken across
   edited/new docs (11 remaining pre-existing/out-of-scope); save/report side-effects restored.
+
+
+## First Boss + Interactive Frontier (2026-06)
+Agent-tested; **not user-confirmed**. Additive — canonical engine/AI/showcases unchanged.
+- **The Corruption Avatar — regional finale boss** (`tactical/showcase_corruption_avatar.py`,
+  `scripts/corruption_avatar_report.py`, `backend/tests/test_corruption_avatar.py`,
+  `docs/design/encounters/the_corruption_avatar.md`). New tactical lesson: **don't tunnel
+  the boss — break its wards first.** Mechanic = **WARDED**: while any `corruption_anchor`
+  wardstone (×3) stands, damage to the Avatar is nullified; destroy all anchors to **expose
+  + enrage** it (Phase 2: +1 AP, +4 dmg). Identity canonically **`_TBD_`** — a manifestation
+  of The Corruption, not a named individual (trait `_TBD_identity`); region is cleansed but
+  the true source is left unresolved for future acts.
+- **Data**: 2 additive compact blueprints in `enemies.json` — `corruption_avatar`
+  (HP120/boss AI, first **boss-tier** unit) + `corruption_anchor` (HP22/defender). Roster 74→76.
+  No whole-file reformat; original compact formatting preserved.
+- **Design evidence** (40 seeds): break-the-wards ~95% cleansed (97.5% prepared / 80% rushed);
+  tunnel-the-boss **0%** cleansed → **+95pt** strategic gap.
+- **Interactive Frontier** (`tactical/frontier.py` rewritten, `scripts/play_frontier.py`,
+  `backend/tests/test_frontier_slice.py`): recruitment/investigation beats are now **real
+  player-choice scenes** via an engine-neutral `Choice`/`decider` API (`golden_decider`,
+  `worst_decider`, terminal decider in the script — no UI/input in core). 7 branching
+  choices set flags/clues/rewards and a **`preparedness`** score that feeds the finale.
+  **Hybrid consequences**: wrong reads make things harder / hide lore / fail the finale, but
+  **no permanent companion loss** and the golden resolution stays reachable at every prep
+  level. Now **9 beats** (added the Avatar finale after Ronan's Lost Howl emotional climax);
+  Corwin's careful investigation telegraphs the wardstone mechanic.
+- **Docs updated**: `docs/design/enemies/corrupted.md` (boss tier now implemented),
+  `docs/design/enemies/README.md` (74→76, boss tier exists), `first_region_vertical_slice.md`
+  (9th beat + interactive scenes).
+- Validation: full pytest **252 passed** (241→252, +11: 8 boss + net frontier); `tactical.verify`
+  FOUNDATION STABLE 62/62; enemies.json valid + inheritance/`by_tag` intact; task-owned
+  markdown links 0 broken; `save_data.json` + `verification_report.json` side-effects restored;
+  git scope = intended boss/frontier code/data/docs/tests/scripts only.

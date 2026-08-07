@@ -43,7 +43,16 @@ existing encounters/showcases; companion beats land their philosophy.
 | 5 | **Hold the forge** | Building vs. brawling; use the environment | **The Forge Stand** ([`showcase_forge.py`](../../tactical/showcase_forge.py); [design](encounters/forge_stand_torren.md)) | **Torren** — [The Empty Pedestal](../quests/the_empty_pedestal.md) seed (Honour & Legacy) |
 | 6 | **The investigator's warning** | Battlefield awareness / hidden info | *(investigation beat; mechanics `_TBD_`)* | **Corwin** — [The Silent Witness](../quests/the_silent_witness.md) seed (Truth & Discovery) |
 | 7 | **The corrupted woods** | Escalation of the familiar | `corrupted_incursion` ([corrupted](enemies/corrupted.md)) | Eleanor — hope under pressure; Ragash — loyalty tested |
-| 8 | **The Lost Howl (finale)** | Save, don't slay | **The Lost Wolf (Bram)** ([`showcase_lost_howl.py`](../../tactical/showcase_lost_howl.py); [design](encounters/the_lost_wolf_bram.md)) | **Ronan** — [The Lost Howl](../quests/the_lost_howl.md) as the slice's fully-realized spine |
+| 8 | **The Lost Howl (Ronan's climax)** | Save, don't slay | **The Lost Wolf (Bram)** ([`showcase_lost_howl.py`](../../tactical/showcase_lost_howl.py); [design](encounters/the_lost_wolf_bram.md)) | **Ronan** — [The Lost Howl](../quests/the_lost_howl.md); the slice's emotional spine |
+| 9 | **The Corruption Avatar (finale)** | Don't tunnel the boss — break its wards first | **The Corruption Avatar** ([`showcase_corruption_avatar.py`](../../tactical/showcase_corruption_avatar.py); [design](encounters/the_corruption_avatar.md)) | **Whole party** converges; Corwin's evidence exposes the source |
+
+> **Pacing note:** Ronan's Lost Howl is the *emotional* climax; the Corruption
+> Avatar is the *tactical* climax the whole chapter builds toward. Bram's rescue
+> and the Hidden Pack's acceptance resolve **before** the party turns to the
+> heart of the blight, so the companion arcs **feed into** the finale rather than
+> competing with it. The Avatar's identity is canonically `_TBD_` — a
+> manifestation of The Corruption; the region is cleansed, but its true source is
+> left unresolved for future acts.
 
 *(Undead/orcs/constructs — `ruins_undead`, `orc_warband`, cave/ruin set-pieces — are
 available as optional side content for players who explore, teaching priority and
@@ -70,12 +79,18 @@ coordination), high at the corrupted/finale beats. One new mechanic per beat; co
 only after each is taught. No difficulty spikes that outrun what the player has learned.
 
 ## What exists vs. what's `_TBD_`
-- **Exists & playable/tested (headless):** Sundered Span, Forge Stand, Lost Wolf slices;
-  the 7 encounter definitions; 74 bestiary units.
-- **`_TBD_` (follow-up implementation):** the settlement recruitment beat and Corwin
-  investigation beat as interactive scenes; end-to-end region flow/menu wiring;
-  Eleanor/Ragash recruitment beats; Talos's named quest; save/flow integration.
-  None of this is built by this document.
+- **Exists & playable/tested (headless):** Sundered Span, Forge Stand, Lost Wolf,
+  **and the Corruption Avatar finale**; the 7 encounter definitions; 76 bestiary
+  units; the **end-to-end Frontier flow with interactive player-choice scenes**
+  ([`tactical/frontier.py`](../../tactical/frontier.py),
+  [`scripts/play_frontier.py`](../../scripts/play_frontier.py)). Recruitment and
+  investigation beats are now **real choices with branching consequences** (flags,
+  clues, rewards, and finale `preparedness`) — no permanent companion loss; the
+  golden resolution always stays reachable.
+- **`_TBD_` (follow-up):** the Corruption Avatar's identity/lore; presentation-layer
+  (menu/UI) wiring beyond the terminal runner; Eleanor/Ragash bespoke recruitment
+  scenes; save/flow integration; a hand-built finale battlefield for a full build.
+  None of the reserved lore is invented here.
 
 ## Validation notes
 This is design documentation only. It changes no engine, data, AI, or save; it
@@ -88,3 +103,4 @@ the project's additive workflow.
 | Date | Change |
 |---|---|
 | 2026-06 | Authored the Frontier first-region vertical-slice design: 8-beat pacing stitching existing encounters + the three playable showcases + companion philosophy/recruitment beats, with a readability/difficulty curve and an explicit exists-vs-`_TBD_` scope split. Documentation-only; no systems changed. |
+| 2026-06 | Added the 9th beat — **The Corruption Avatar** regional finale (identity `_TBD_`) — and updated the flow to reflect **interactive player-choice** recruitment/investigation scenes with branching consequences and finale `preparedness`. Reflects implemented code/tests; additive. |
