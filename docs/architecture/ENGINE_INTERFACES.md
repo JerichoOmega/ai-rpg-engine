@@ -110,9 +110,43 @@ WorldState {
   companions: [ { id, name, role, hp, max_hp, relationship: int } ]
   events: { flag: value }
   time/world_flags: {...}
+  living_world: LivingWorldState        # additive; living region layer (below)
 }
 ```
 > Mirrors the existing `world_state.py` dict — already JSON-serializable.
+
+### LivingWorldState (living region layer)
+Snapshot of the Living World foundation (`tactical/living_world/`). Persisted as
+an **additive** block under `WorldState.living_world`; the existing save layer
+already serializes `world_state`, so this is a clean extension of the contract
+with no second save path.
+```
+LivingWorldState {
+  version: int
+  locations: { location_id: LocationState }
+  deeds: [ Deed ]
+  events_seen: [string]        # resolved dynamic-event ids
+  landmarks_seen: [string]     # "companion@location" moments played
+  presence_seen: [string]      # "companion@location" presence beats played
+  progression: { region_id: { status, epilogue, threads_hopeful, threads_total } }
+  flags: { flag: value }       # additional living-world flags
+}
+LocationState {
+  id, name, kind: "settlement"|"landmark"|"region"
+  status: "safe"|"threatened"|"recovering"|"prosperous"|"corrupted"|"restored"
+  tags: [string], region_id: string
+  history: [ { from, to, reason, natural: bool } ]   # regional memory
+}
+Deed {
+  id, title, kind, summary, npc_line, location_id, region_id
+}
+```
+> `LivingWorldState` and every nested object round-trip through JSON
+> (`to_state()`/`from_state()`), and `from_state` **ignores unknown keys** so a
+> save written by a future version loads without crashing. Region *content*
+> (locations, presence, banter, events, environment, epilogue, memory) is data
+> (`tactical/living_world/data/*.json`) resolved through a **region manifest**
+> (`RegionContent`), never engine code — so Godot consumes the same data.
 
 ### SaveState
 ```
@@ -222,3 +256,4 @@ Python core agree on the data. `SaveState` round-trips must additionally preserv
 | Date | Change |
 |---|---|
 | 2026-06 | Authored the engine/gameplay data contracts (CharacterState, BattlefieldState, Inventory/Equipment, QuestState, DialogueState, WorldState, SaveState; Combat/Animation/Dialogue/Quest/Reward events; movement & action intents). Field names mirror existing code. Documentation-only; nothing implemented. |
+| 2026-06 | Added **LivingWorldState** contract (region states, remembered deeds, resolved events, landmark/presence moments, per-region progression, flags) — implemented and persisted additively under `WorldState.living_world` (`tactical/living_world/`, `persistence.py`). Round-trips through JSON; `from_state` ignores unknown keys; region content is data via `RegionContent` manifests. Preserves save compatibility. |

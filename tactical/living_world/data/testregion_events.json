@@ -1,0 +1,10 @@
+[
+  {"id": "tr_event_a", "title": "Test Event A", "category": "social",
+   "description": "A validation event for the test region.",
+   "tags": ["settlement", "village"], "weight": 1,
+   "choices": [{"id": "a", "label": "Option A"}, {"id": "b", "label": "Option B"}]},
+  {"id": "tr_event_b", "title": "Test Event B", "category": "combat",
+   "description": "A second validation event for the test region.",
+   "tags": ["forest", "boss_arena", "corrupted"], "weight": 1,
+   "choices": [{"id": "a", "label": "Option A"}, {"id": "b", "label": "Option B"}]}
+]

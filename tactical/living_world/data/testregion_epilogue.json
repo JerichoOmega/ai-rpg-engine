@@ -1,0 +1,15 @@
+{
+  "title": "The Marches Hold",
+  "region": "The Test Marches",
+  "threads": [
+    {"id": "tr_holdfast_thread", "subject": "The Holdfast", "flag": "holdfast_saved",
+     "positive": "The Holdfast stands and thrives.",
+     "reduced": "The Holdfast holds, barely."},
+    {"id": "tr_keep_thread", "subject": "The Keep", "flag": "region_cleansed",
+     "positive": "The Keep is cleansed and reclaimed.",
+     "reduced": "The Keep is broken but its shadow lingers."}
+  ],
+  "closing_bright": "The Test Marches endure, whole.",
+  "closing_mixed": "The Test Marches endure, scarred.",
+  "closing_grim": "The Test Marches endure, hollowed."
+}

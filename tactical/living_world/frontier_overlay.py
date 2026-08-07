@@ -1,16 +1,20 @@
 """
-frontier_overlay — bind the Living World frameworks to the First Region.
-========================================================================
+frontier_overlay — the First Region's binding to the Living World engine.
+=========================================================================
 
-The Frontier vertical slice (``tactical/frontier.py``) stays untouched: this
-module *consumes* a completed :class:`~tactical.frontier.FrontierState` and
-produces an engine-neutral **living-world overlay** — the presence beats,
-banter, environmental details and dynamic events that play *around* each combat
-beat, the deeds the world now remembers, the region-status changes the player's
-choices caused, and the reactive epilogue.
+The Frontier vertical slice (``tactical/frontier.py``) stays untouched. This
+adapter loads the Frontier's :class:`RegionContent` from its data manifest,
+translates a completed :class:`~tactical.frontier.FrontierState` into a
+region-agnostic **run record**, and delegates to the generic
+:mod:`~tactical.living_world.overlay` engine.
 
-Additive and non-breaking: nothing here modifies the slice, combat, saves, or
-canon. It only reads the slice's recorded decisions and returns data.
+All Frontier-specific knowledge (which choices earn which deeds, which region
+states change, how epilogue flags are derived) lives here — the overlay engine
+itself carries no region assumptions.
+
+Public API is unchanged from the original pass (``build_overlay(state, seed)``,
+``compute_epilogue_flags``, ``revisit_reports``) so existing callers/tests keep
+working.
 
 Engine-agnostic: pure data + rules. No I/O. Deterministic for a given seed.
 """
@@ -20,45 +24,22 @@ from __future__ import annotations
 import random
 from typing import Dict, List, Optional, Tuple
 
-from . import companions as _companions
-from . import banter as _banter
-from . import environment as _environment
-from . import events as _events
-from . import epilogue as _epilogue
-from . import memory as _memory
 from . import content as _content
+from . import overlay as _overlay
 from . import reputation as _rep
+from .region import RegionContent
 from .world import LivingWorld
 
+FRONTIER_MANIFEST = "frontier_region"
 
-# beat id -> (location_id, context tags, banter triggers to try)
-BEAT_CONTEXT: Dict[str, dict] = {
-    "road_in": {"loc": "frontier_road", "tags": ["road", "wilderness"],
-                "triggers": ["weather", "forest"]},
-    "roadside_ambush": {"loc": "frontier_road",
-                        "tags": ["road", "wilderness", "battlefield"],
-                        "triggers": ["victory"]},
-    "settlement": {"loc": "refugee_settlement",
-                   "tags": ["settlement", "refugee_camp"],
-                   "triggers": ["enter_town"]},
-    "sundered_span": {"loc": "sundered_span",
-                      "tags": ["river", "road", "battlefield"],
-                      "triggers": ["river", "victory"]},
-    "forge_stand": {"loc": "the_forge", "tags": ["forge", "ruins"],
-                    "triggers": ["ruins", "victory"]},
-    "investigation": {"loc": "dwarven_ruins",
-                      "tags": ["ruins", "cave", "discovery"],
-                      "triggers": ["ruins", "discovery"]},
-    "corrupted_woods": {"loc": "corrupted_woods",
-                        "tags": ["forest", "wilderness", "corrupted"],
-                        "triggers": ["forest"]},
-    "lost_howl": {"loc": "old_wolf_shrine",
-                  "tags": ["shrine", "forest", "wilderness"],
-                  "triggers": ["forest"]},
-    "corruption_avatar": {"loc": "blight_heart",
-                          "tags": ["boss_arena", "corrupted"],
-                          "triggers": ["boss_arena", "victory"]},
-}
+# Backward-compatible module attribute: the beat->context map, now sourced from
+# the region manifest (data), not hard-coded here.
+BEAT_CONTEXT: Dict[str, dict] = _content.load(FRONTIER_MANIFEST)["beat_map"]
+
+
+def frontier_region() -> RegionContent:
+    """The Frontier's RegionContent (loaded from its data manifest)."""
+    return RegionContent.from_manifest(FRONTIER_MANIFEST)
 
 
 def compute_epilogue_flags(state) -> Dict[str, bool]:
@@ -125,121 +106,56 @@ def _deeds_from_state(state) -> List[Tuple[str, _rep.Deed]]:
     return out
 
 
-def _apply_transitions(world: LivingWorld, state) -> None:
-    """Change region statuses to reflect the player's choices (natural arcs)."""
+def _transitions_from_state(state) -> List[Tuple[str, str, str]]:
+    """Ordered (location_id, new_status, reason) changes from the player's play.
+
+    Ordered so that a place first moves to ``recovering`` and is only lifted to
+    ``restored`` once the region is cleansed — every step a natural transition.
+    """
     f = state.flags
     cleansed = state.region_outcome == "cleansed"
-
+    t: List[Tuple[str, str, str]] = []
     if f.get("talos_trust"):
-        world.set_status("frontier_road", "safe", "travellers protected")
+        t.append(("frontier_road", "safe", "travellers protected"))
     if f.get("settlement_secured"):
-        world.set_status("refugee_settlement", "recovering", "camp secured")
-    # The Sundered Span is an anchor win — the bridge road is held either way.
-    world.set_status("sundered_span", "recovering", "the span held")
+        t.append(("refugee_settlement", "recovering", "camp secured"))
+    t.append(("sundered_span", "recovering", "the span held"))
     if f.get("forge_mastered"):
-        world.set_status("the_forge", "recovering", "forge rekindled")
+        t.append(("the_forge", "recovering", "forge rekindled"))
     if f.get("woods_cleansed"):
-        world.set_status("corrupted_woods", "recovering", "woods cleansed")
-
+        t.append(("corrupted_woods", "recovering", "woods cleansed"))
     if cleansed:
-        world.set_status("blight_heart", "restored", "avatar broken")
-        world.set_status("greenhollow", "restored", "region cleansed")
-        world.set_status("the_frontier", "recovering", "corruption broken")
-        # Places already recovering are lifted the rest of the way home.
-        for loc_id in ("refugee_settlement", "corrupted_woods"):
-            loc = world.location(loc_id)
-            if loc and loc.status == "recovering":
-                loc.set_status("restored", "region cleansed")
+        t.append(("blight_heart", "restored", "avatar broken"))
+        t.append(("greenhollow", "restored", "region cleansed"))
+        t.append(("the_frontier", "recovering", "corruption broken"))
+        if f.get("settlement_secured"):
+            t.append(("refugee_settlement", "restored", "region cleansed"))
+        if f.get("woods_cleansed"):
+            t.append(("corrupted_woods", "restored", "region cleansed"))
+    return t
+
+
+def frontier_run_record(state) -> dict:
+    """Translate a FrontierState into the region-agnostic run record."""
+    return {
+        "party_start": ["Ronan"],
+        "beats": state.beats,
+        "deeds": _deeds_from_state(state),
+        "transitions": _transitions_from_state(state),
+        "epilogue_flags": compute_epilogue_flags(state),
+        "completed": state.region_outcome == "cleansed",
+    }
 
 
 def build_overlay(state, seed: int = 7,
                   world: Optional[LivingWorld] = None) -> Tuple[dict, LivingWorld]:
-    """Produce the full living-world overlay for a completed FrontierState.
-
-    Returns ``(overlay, world)`` where ``overlay`` is plain render-ready data
-    and ``world`` is the resulting :class:`LivingWorld` (region states + deeds).
-    """
-    world = world or LivingWorld.from_content()
-    presence = _content.companion_presence()
-    landmarks = _content.companion_landmarks()
-    banter_content = _content.banter()
-    env_content = _content.environment_details()
-    templates = _content.event_templates()
-
-    # Record remembered deeds and apply region-state transitions.
-    for loc_id, deed in _deeds_from_state(state):
-        world.record_deed(deed)
-    _apply_transitions(world, state)
-
-    party: List[str] = ["Ronan"]
-    beats_out: List[dict] = []
-    for i, beat in enumerate(state.beats):
-        for name in beat.get("recruited", []):
-            if name not in party:
-                party.append(name)
-        ctx = BEAT_CONTEXT.get(beat["id"],
-                               {"loc": "", "tags": [], "triggers": []})
-        rng = random.Random(seed * 1000 + i)
-        tags = ctx["tags"]
-        loc = world.location(ctx["loc"]) if ctx["loc"] else None
-
-        presence_beats = _companions.presence_here(presence, party, tags,
-                                                    per_companion=1, rng=rng)
-        landmark_beats = _companions.landmark_moments_here(landmarks, party, tags)
-        env_beats = _environment.details_for(env_content, tags, count=1,
-                                             party=party, rng=rng)
-        banter_line = None
-        for trig in ctx["triggers"]:
-            banter_line = _banter.banter_for(banter_content, trig, party, rng=rng)
-            if banter_line:
-                break
-
-        event = None
-        drawn = _events.draw_events(
-            templates, tags,
-            status=(loc.status if loc else None),
-            exclude=world.events_seen, rng=rng)
-        if drawn:
-            event = _events.instantiate(drawn[0])
-            world.mark_event_seen(event["id"])
-
-        beats_out.append({
-            "beat_id": beat["id"],
-            "title": beat.get("title", beat["id"]),
-            "location_id": ctx["loc"],
-            "location_name": loc.name if loc else "",
-            "status_after": loc.status if loc else "",
-            "tags": list(tags),
-            "party": list(party),
-            "presence": presence_beats,
-            "landmark_moments": landmark_beats,
-            "banter": banter_line,
-            "environment": env_beats,
-            "event": event,
-        })
-
-    flags = compute_epilogue_flags(state)
-    epi = _epilogue.build_epilogue(_content.epilogue_threads(), flags)
-
-    overlay = {
-        "region": "The Frontier",
-        "beats": beats_out,
-        "epilogue_flags": flags,
-        "epilogue": epi,
-        "deeds": [d.to_state() for d in world.deeds],
-    }
-    return overlay, world
+    """Produce the full living-world overlay for a completed FrontierState."""
+    region = frontier_region()
+    run = frontier_run_record(state)
+    return _overlay.build_overlay(region, run, seed=seed, world=world)
 
 
 def revisit_reports(world: LivingWorld,
                     rng: Optional[random.Random] = None) -> List[dict]:
-    """Regional-memory reports for every location the player might revisit."""
-    rng = rng or random.Random(7)
-    mem = _content.regional_memory()
-    out = []
-    for loc in world.locations.values():
-        if loc.kind == "region":
-            continue
-        out.append(_memory.revisit_report(mem, loc, deeds=world.deeds,
-                                           count=3, rng=rng))
-    return out
+    """Regional-memory reports for every Frontier location."""
+    return _overlay.revisit_reports(frontier_region(), world, rng=rng)

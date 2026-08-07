@@ -1,0 +1,10 @@
+[
+  {"id": "test_marches", "name": "The Test Marches", "kind": "region",
+   "status": "threatened", "region_id": "test_marches", "tags": ["region"]},
+  {"id": "tr_holdfast", "name": "Test Holdfast", "kind": "settlement",
+   "status": "threatened", "region_id": "test_marches", "tags": ["settlement", "village"]},
+  {"id": "tr_wilds", "name": "Test Wilds", "kind": "landmark",
+   "status": "corrupted", "region_id": "test_marches", "tags": ["forest", "wilderness", "corrupted"]},
+  {"id": "tr_keep", "name": "Test Keep", "kind": "landmark",
+   "status": "corrupted", "region_id": "test_marches", "tags": ["boss_arena", "corrupted"]}
+]

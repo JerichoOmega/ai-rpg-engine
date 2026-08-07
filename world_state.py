@@ -472,6 +472,22 @@ world_state = {
         "split_party": {},         # split-party plan state
         "puzzles": {},             # puzzle_id -> {solved, missteps}
     },
+
+    # --- Living World foundation (tactical/living_world) ---
+    # Serializable snapshot of region states, remembered deeds, resolved
+    # dynamic events, landmark/presence moments, per-region progression and
+    # flags. Additive key; persisted for free because the save layer already
+    # serializes world_state. Backfilled by ensure_world_state_defaults().
+    "living_world": {
+        "version": 1,
+        "locations": {},
+        "deeds": [],
+        "events_seen": [],
+        "landmarks_seen": [],
+        "presence_seen": [],
+        "progression": {},
+        "flags": {},
+    },
 }
 
 
@@ -716,6 +732,21 @@ def ensure_world_state_defaults():
                     "civilizations", "split_party", "puzzles"):
         if not isinstance(legacy.get(sub_key), dict):
             legacy[sub_key] = {}
+
+    # --- Living World foundation (tactical/living_world) ---
+    # Additive block; backfilled so saves written before this feature load
+    # cleanly and every code path sees the full schema.
+    lw = world_state.setdefault("living_world", {})
+    if not isinstance(lw, dict):
+        lw = world_state["living_world"] = {}
+    lw.setdefault("version", 1)
+    for _lw_key, _lw_default in (
+        ("locations", {}), ("deeds", []), ("events_seen", []),
+        ("landmarks_seen", []), ("presence_seen", []),
+        ("progression", {}), ("flags", {}),
+    ):
+        if not isinstance(lw.get(_lw_key), type(_lw_default)):
+            lw[_lw_key] = type(_lw_default)()
 
 
 # =========================

@@ -34,7 +34,7 @@ from .region_state import STATES, is_natural_transition
 _CORE_MODULES = [
     "__init__", "region_state", "reputation", "events", "companions",
     "banter", "environment", "memory", "epilogue", "world", "content",
-    "frontier_overlay",
+    "persistence", "region", "overlay", "frontier_overlay",
 ]
 
 _PARTY = ["Ronan", "Talos", "Maeve Ashwood", "Torren", "Corwin", "Eleanor",
@@ -189,6 +189,34 @@ def _check_serialization_roundtrip() -> Tuple[str, str]:
     return ("OK" if ok else "GAP", f"living_world_json_roundtrip={ok}")
 
 
+def _check_content_contract() -> Tuple[str, str]:
+    from .region import RegionContent
+    region = RegionContent.from_manifest("frontier_region")
+    errors = region.validate()
+    return ("OK" if not errors else "GAP",
+            f"frontier_region contract errors={errors or 'none'}")
+
+
+def _check_save_persistence() -> Tuple[str, str]:
+    from . import persistence
+    golden = frontier.run_frontier(seed=7, decider=frontier.golden_decider)
+    _, world = frontier_overlay.build_overlay(golden, seed=7)
+    ws: dict = {}
+    persistence.save_to_world_state(world, ws)
+    # survive a JSON round-trip (as the save layer would do)
+    ws = json.loads(json.dumps(ws))
+    persistence.ensure_defaults(ws)
+    back = persistence.load_from_world_state(ws)
+    ok = back.to_state() == world.to_state()
+    # legacy save (no living_world key) initializes to defaults safely
+    legacy_ws: dict = {}
+    persistence.ensure_defaults(legacy_ws)
+    legacy = persistence.load_from_world_state(legacy_ws)
+    legacy_ok = legacy.to_state() == persistence.default_state()
+    return ("OK" if ok and legacy_ok else "GAP",
+            f"world_state_roundtrip={ok} legacy_defaults_ok={legacy_ok}")
+
+
 def _check_playtest_readiness() -> Tuple[str, str]:
     golden = frontier.run_frontier(seed=7, decider=frontier.golden_decider)
     worst = frontier.run_frontier(seed=7, decider=frontier.worst_decider)
@@ -233,6 +261,8 @@ CHECKS = [
     ("Documentation", _check_documentation),
     ("Godot Migration Compatibility", _check_godot_compat),
     ("Serialization Round-Trip", _check_serialization_roundtrip),
+    ("Content Contract", _check_content_contract),
+    ("Save Persistence", _check_save_persistence),
     ("Playtest Readiness", _check_playtest_readiness),
     ("Outstanding TODOs", _check_outstanding_todos),
 ]

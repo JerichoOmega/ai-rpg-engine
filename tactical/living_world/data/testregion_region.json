@@ -1,0 +1,19 @@
+{
+  "region_id": "test_marches",
+  "region_name": "The Test Marches",
+  "beat_map": {
+    "tr_gate": {"loc": "tr_holdfast", "tags": ["settlement", "village"], "triggers": ["enter_town"]},
+    "tr_wilds": {"loc": "tr_wilds", "tags": ["forest", "wilderness"], "triggers": ["forest"]},
+    "tr_finale": {"loc": "tr_keep", "tags": ["boss_arena", "corrupted"], "triggers": ["boss_arena", "victory"]}
+  },
+  "content": {
+    "locations": "testregion_locations",
+    "presence": "companion_presence",
+    "landmarks": "companion_landmarks",
+    "banter": "banter",
+    "event_templates": "testregion_events",
+    "environment": "environment",
+    "regional_memory": "regional_memory",
+    "epilogue_threads": "testregion_epilogue"
+  }
+}

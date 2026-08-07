@@ -1,0 +1,25 @@
+{
+  "region_id": "the_frontier",
+  "region_name": "The Frontier",
+  "beat_map": {
+    "road_in": {"loc": "frontier_road", "tags": ["road", "wilderness"], "triggers": ["weather", "forest"]},
+    "roadside_ambush": {"loc": "frontier_road", "tags": ["road", "wilderness", "battlefield"], "triggers": ["victory"]},
+    "settlement": {"loc": "refugee_settlement", "tags": ["settlement", "refugee_camp"], "triggers": ["enter_town"]},
+    "sundered_span": {"loc": "sundered_span", "tags": ["river", "road", "battlefield"], "triggers": ["river", "victory"]},
+    "forge_stand": {"loc": "the_forge", "tags": ["forge", "ruins"], "triggers": ["ruins", "victory"]},
+    "investigation": {"loc": "dwarven_ruins", "tags": ["ruins", "cave", "discovery"], "triggers": ["ruins", "discovery"]},
+    "corrupted_woods": {"loc": "corrupted_woods", "tags": ["forest", "wilderness", "corrupted"], "triggers": ["forest"]},
+    "lost_howl": {"loc": "old_wolf_shrine", "tags": ["shrine", "forest", "wilderness"], "triggers": ["forest"]},
+    "corruption_avatar": {"loc": "blight_heart", "tags": ["boss_arena", "corrupted"], "triggers": ["boss_arena", "victory"]}
+  },
+  "content": {
+    "locations": "frontier_locations",
+    "presence": "companion_presence",
+    "landmarks": "companion_landmarks",
+    "banter": "banter",
+    "event_templates": "event_templates",
+    "environment": "environment",
+    "regional_memory": "regional_memory",
+    "epilogue_threads": "epilogue_threads"
+  }
+}

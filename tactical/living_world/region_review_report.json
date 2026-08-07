@@ -1,8 +1,8 @@
 {
   "region": "The Frontier",
   "summary": {
-    "total": 13,
-    "ok": 13,
+    "total": 15,
+    "ok": 15,
     "warn": 0,
     "gap": 0,
     "region_ready": true
@@ -56,12 +56,22 @@
     {
       "name": "Godot Migration Compatibility",
       "status": "OK",
-      "detail": "core_modules=12 screen_io=none"
+      "detail": "core_modules=15 screen_io=none"
     },
     {
       "name": "Serialization Round-Trip",
       "status": "OK",
       "detail": "living_world_json_roundtrip=True"
+    },
+    {
+      "name": "Content Contract",
+      "status": "OK",
+      "detail": "frontier_region contract errors=none"
+    },
+    {
+      "name": "Save Persistence",
+      "status": "OK",
+      "detail": "world_state_roundtrip=True legacy_defaults_ok=True"
     },
     {
       "name": "Playtest Readiness",

@@ -33,9 +33,21 @@ Region, built as `tactical/living_world/`.
   composition over expanding legacy managers, everything JSON-serializable.
 
 ## Backlog / Next
-- P1: Persist `LivingWorld` under `world_state["living_world"]` + add to
-  `ensure_world_state_defaults()` when wiring into the main runtime save.
-- P1: Region Two content pass on top of these systems (content, not systems).
-- P2: Promote overlay beat→context map into per-region content (fully
-  region-agnostic overlay).
-- P2: Add `region_review` to CI alongside `tactical.verify`.
+- P1: Region Two content pass on top of these systems (content, not systems):
+  add `<region>_region.json` manifest + content JSON, supply a run record, pass
+  the CI gate.
+- P2: Wire the real main-loop call site to `persistence.save_to_world_state()`
+  when live play consumes the overlay (plumbing done + tested).
+- P2: Add `scripts/ci_quality_gate.py` to CI alongside `tactical.verify`.
+
+## Foundation hardening (2026-06, done)
+- Persistence into `world_state["living_world"]` (additive; no save-module
+  changes; legacy-safe; forward-compatible). `persistence.py` + `world.py`
+  extended + `world_state.py` defaults.
+- Region-agnostic overlay engine (`overlay.py`) + `RegionContent` manifest
+  contract (`region.py`); Frontier reduced to a data-driven adapter; behaviour
+  unchanged. `data/testregion_*` fixture proves arbitrary regions.
+- CI quality gate `scripts/ci_quality_gate.py` (headless).
+- ENGINE_INTERFACES `LivingWorldState` contract + Godot-migration note.
+- Validation: **307 pytest passed**, verify 62/62, review 15/15, gate PASS.
+- Reports: `LIVING_FRONTIER_PASS_REPORT.md`, `FOUNDATION_HARDENING_REPORT.md`.

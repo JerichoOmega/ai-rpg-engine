@@ -1,7 +1,7 @@
 {
     "save_version": 2,
     "inventory": [
-        "iron_sword"
+        "cult_amulet"
     ],
     "equipment": {
         "weapon": null,
@@ -31,7 +31,7 @@
             "level": 2,
             "xp": 100,
             "xp_to_next_level": 150,
-            "gold": 72,
+            "gold": 78,
             "hp": 100,
             "max_hp": 120,
             "resource_name": "Stamina",
@@ -43,7 +43,7 @@
             "weapon_bonus": 0,
             "equipped_weapon": "Rusty Sword",
             "inventory": [
-                "iron_sword"
+                "cult_amulet"
             ],
             "class": "Warrior",
             "magic_power": 0
@@ -116,6 +116,16 @@
             "civilizations": {},
             "split_party": {},
             "puzzles": {}
+        },
+        "living_world": {
+            "version": 1,
+            "locations": {},
+            "deeds": [],
+            "events_seen": [],
+            "landmarks_seen": [],
+            "presence_seen": [],
+            "progression": {},
+            "flags": {}
         },
         "tactical": {
             "persistent": {

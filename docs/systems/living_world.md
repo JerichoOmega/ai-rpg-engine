@@ -128,30 +128,61 @@ Writes `region_review_report.json`. Exit code `0` iff **REGION READY**.
 
 ## Integration with the First Region
 
-`frontier_overlay.build_overlay(state, seed)` consumes a completed
-`tactical.frontier.FrontierState` (the slice is **not** modified) and returns an
-engine-neutral overlay: per-beat presence/banter/environment/dynamic-event, the
-remembered deeds, the region-status transitions the player's choices caused, and
-the reactive epilogue. `revisit_reports(world)` returns the regional-memory
-evidence for every location.
+`frontier_overlay.py` is the Frontier **adapter**: it loads the Frontier's
+`RegionContent` from a data manifest (`data/frontier_region.json`), translates a
+completed `tactical.frontier.FrontierState` (the slice is **not** modified) into
+a region-agnostic **run record**, and delegates to the generic overlay engine
+(`overlay.py`). All Frontier-specific knowledge (which choices earn which deeds,
+which region states change, epilogue-flag derivation) lives in the adapter; the
+overlay engine carries **no region assumptions**. Public API is unchanged:
+`build_overlay(state, seed)`, `compute_epilogue_flags`, `revisit_reports`.
 
-The terminal runner `scripts/play_frontier.py` renders this overlay as a
-temporary presentation layer — it consumes the data only; no rules live there.
+The terminal runner `scripts/play_frontier.py` renders the overlay as a
+temporary presentation layer — it consumes data only; no rules live there.
+
+### Region content contract (`region.py`)
+
+`RegionContent.from_manifest("<region>_region")` bundles a region's `beat_map`
+plus its content (locations, presence, landmarks, banter, event templates,
+environment, regional memory, epilogue threads) — pure data. `validate()`
+returns contract errors (unknown beat locations, unknown banter triggers,
+malformed epilogue threads, …), used by the CI gate. The `data/testregion_*.json`
+fixture proves the overlay engine drives an arbitrary region from data alone.
 
 ## Persistence
 
-`LivingWorld` is designed to live under `world_state["living_world"]` when wired
-into the main save (additive key; backfilled by
-`ensure_world_state_defaults()`). It is fully JSON-serializable and
-round-trippable, preserving save compatibility (ENGINE_INTERFACES §Round-trip).
+The living world persists as an **additive** block under
+`world_state["living_world"]`. Because `save_manager.py` / `state_manager.py`
+already serialize the whole `world_state`, this needs **no second save path and
+no changes to the save modules** — a clean extension of the WorldState/SaveState
+contract (frozen in `ENGINE_INTERFACES.md`).
+
+- `persistence.save_to_world_state(world, ws)` writes the snapshot; 
+  `persistence.load_from_world_state(ws)` reconstructs it (defaults if missing —
+  **legacy saves load safely**).
+- `world_state.ensure_world_state_defaults()` backfills a safe `living_world`
+  block on every load; `persistence.ensure_defaults()` mirrors it standalone.
+- `LivingWorld.from_state` **ignores unknown keys** → forward-compatible.
+
+Persisted: region states + transition history (regional memory), remembered
+deeds (reputation), resolved dynamic events, landmark & presence moments played,
+per-region progression, and living-world flags.
 
 ## Reuse for future regions
 
-1. Add a `data/<region>_locations.json` and region-specific content files.
-2. Point a new overlay (or a generalized loader) at that content.
-3. Run `region_review` to confirm the region is feature-complete before ship.
+1. Add a `data/<region>_region.json` manifest + its content JSON files.
+2. Build a thin adapter (or reuse the generic run-record shape) that supplies
+   the run's beats/deeds/transitions/flags, then call `overlay.build_overlay`.
+3. Run `region_review` (and `scripts/ci_quality_gate.py`) until **REGION READY**.
 
 No framework code changes — subsequent regions are **content, not systems**.
+
+## CI quality gate
+
+`python scripts/ci_quality_gate.py` (headless, no Godot dependency) fails if
+tactical verification, the region review, content contracts, the save
+round-trip, or the documentation contract fail. Run it alongside
+`python -m tactical.verify`. Add `--pytest` to also run the full suite.
 
 ## Related
 
@@ -165,3 +196,4 @@ No framework code changes — subsequent regions are **content, not systems**.
 | Date | Change |
 |---|---|
 | 2026-06 | Created — Living Frontier Pass: ten reusable engine-agnostic systems, First-Region content, frontier overlay, and the Region Completion Review tool. Additive/non-breaking. |
+| 2026-06 | Foundation hardening: **persistence** into `world_state["living_world"]` (additive; no save-module changes; legacy-safe; forward-compatible); **region-agnostic** overlay engine (`overlay.py`) + `RegionContent` manifest contract (`region.py`), with the Frontier reduced to a data-driven adapter; `data/testregion_*` fixture; **CI quality gate** (`scripts/ci_quality_gate.py`); ENGINE_INTERFACES `LivingWorldState` contract + Godot-migration note. |
