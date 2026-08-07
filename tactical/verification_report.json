@@ -197,7 +197,7 @@
       "category": "Data Integrity",
       "name": "Every enemy blueprint resolves",
       "status": "PASS",
-      "detail": "74 spawnable blueprints resolve; errors=[]"
+      "detail": "76 spawnable blueprints resolve; errors=[]"
     },
     {
       "category": "Data Integrity",
