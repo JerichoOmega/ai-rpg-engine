@@ -4,6 +4,11 @@
 
 **Modules:** `combat.py`, `enemy_manager.py`, `bosses.py`, `status_effects.py`, `encounter_manager.py`
 
+> **Target direction — Reactive Combat pillar:** the 3D combat target is built around
+> *Reactive Combat* + **Resolve** + **Partner Techniques**
+> ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md), [`../COMBAT_SYSTEM.md`](../COMBAT_SYSTEM.md)).
+> This terminal prototype does **not** implement it; it is documented here as design direction only.
+
 ---
 
 ## Overview

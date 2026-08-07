@@ -109,6 +109,19 @@
   and technical concerns stay cleanly separated.
 - **Status.** Accepted (already true across `docs/`).
 
+## ADR-0010 — Reactive Combat is decision-support, not a timing mechanic
+- **Context.** *Reactive Combat* + *Resolve* + *Partner Techniques* are now a core combat
+  pillar ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)). They must not
+  become an engine-coupled QTE, and Resolve must stay a single shared party value.
+- **Decision.** The **rules** own opportunity detection, the shared Resolve economy, reaction
+  catalogues/costs, and Partner-Technique eligibility (headless, testable). The **presentation**
+  owns the time-slow, the prompt, authorize/decline input, and feedback. The slowdown is
+  presentation-only and never a rule the core depends on; declining is always a cost-free no-op.
+- **Consequences.** Reactive Combat stays engine-neutral and accessible (a paused/slowed decision
+  is equivalent to an untimed one). Resolve is a single `ResolveState` value, not per-unit.
+  Contracts live in [`ENGINE_INTERFACES.md`](ENGINE_INTERFACES.md).
+- **Status.** Accepted (design canon; Planned Additive — not yet implemented).
+
 ## Document History
 | Date | Change |
 |---|---|

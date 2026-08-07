@@ -10,7 +10,13 @@
 Quality over quantity. Every enemy has a **distinct tactical identity** and
 teaches **one lesson** — positioning, target priority, teamwork, terrain, morale,
 or battlefield awareness. Basic enemies demonstrate **one mechanic**; complexity
-comes from **combinations**, not from any single overloaded unit. Precedent
+comes from **combinations**, not from any single overloaded unit.
+
+> **Reactive Combat pillar:** enemies exist to **create and deny opportunities** — flanks,
+> exposed casters, guard breaks, environmental setups — the openings the party's *Reactive
+> Combat* loop turns into **Resolve** and reactions ([`../REACTIVE_COMBAT.md`](../REACTIVE_COMBAT.md)).
+> Good enemy design gives the player openings worth recognizing and punishes sloppy positioning;
+> bosses (e.g. the Corruption Avatar) build set-piece opportunity/denial into their mechanics. Precedent
 encounters: [`The Sundered Span`](../encounters/gold_standard_sundered_span.md),
 [`The Forge Stand`](../encounters/forge_stand_torren.md),
 [`The Lost Wolf (Bram)`](../encounters/the_lost_wolf_bram.md).

@@ -140,6 +140,27 @@ easy addition of new terrain, interactions, classes, abilities, and
 environmental effects. Every feature consumes the same tile/battlefield data
 model.
 
+## Reactive Combat, Resolve & Partner Techniques (Planned Additive)
+
+> **Core combat pillar** — design authority: [`docs/design/REACTIVE_COMBAT.md`](docs/design/REACTIVE_COMBAT.md)
+> + [`docs/COMBAT_SYSTEM.md`](docs/COMBAT_SYSTEM.md). **Planned Additive** on this runtime — not
+> yet implemented. It evolves the `tactical/` engine additively (R-01); it does not fork it.
+
+When implemented on this engine, the split follows the existing engine-agnostic discipline:
+
+- **Rules (this runtime — `tactical/`):** a single **shared party Resolve** value; opportunity
+  *detection* hooks off existing combat events (flanking, blocks, crits, environmental
+  interactions, reactions — several already modelled here); the reaction catalogue and Resolve
+  costs; Partner-Technique eligibility (companion pairing + positioning + Resolve + cooldown);
+  and applying an authorized action's effects. All headless and testable via the showcase
+  harness, like every other tactical system.
+- **Presentation (terminal / Godot):** the time-slow decision window, the authorize/decline
+  prompt, and the visual + audio + UI-pulse feedback. The slowdown is presentation-only — never
+  a rule the engine depends on (Reactive Combat is decision-support, not a QTE).
+
+No parallel combat path: this reuses the one engine, one entry point, one AI pipeline (R-01).
+Contracts: [`docs/architecture/ENGINE_INTERFACES.md`](docs/architecture/ENGINE_INTERFACES.md).
+
 ## Final Design Principle
 
 > The player should never lose because the game hid information. They should

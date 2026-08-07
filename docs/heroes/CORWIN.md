@@ -119,6 +119,17 @@ observation.** Corwin's optimism is real but not naïve; his self-doubt is
 sympathetic, never mopey. Players should learn to *read the world* because Corwin
 does — solving problems with knowledge before brute force.
 
+## Reactive Combat — Resolve & Opportunities
+
+> **Core combat pillar** — canon: [`docs/design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md).
+
+Corwin is the party's opportunity **finisher** in the **Reactive Combat** loop. His
+identity-specific ways to generate the shared **Resolve** resource are **precision attacks,
+critical hits, and long-range executions**. He automatically spots clear lines and voices
+them in character (*"I've got a shot."*), letting the player-commander authorize a
+Command Decision such as **Skyhunter's Gambit** for a Resolve cost. He identifies the
+opening; the player decides whether it is worth taking. Values `_TBD_` (Planned Additive).
+
 ## Document History
 | Date | Change |
 |---|---|

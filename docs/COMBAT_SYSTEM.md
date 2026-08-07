@@ -26,8 +26,9 @@ The design emphasizes:
 
 - **Tactical positioning** — where you stand matters as much as what you do
 - **Meaningful decision making** — every turn should present real choices
+- **Reactive Combat** — *"Every action creates opportunities."* Combat is about creating, recognizing, and deciding whether to capitalize on openings — not memorizing rotations (**CORE PILLAR**: [`docs/design/REACTIVE_COMBAT.md`](design/REACTIVE_COMBAT.md))
 - **Environmental awareness** — the battlefield is a tool, not a backdrop
-- **Team synergy** — heroes should complement each other through positioning and ability combinations
+- **Team synergy (Resolve)** — heroes complement each other through positioning and ability combinations, fuelled by the shared, earned **Resolve** resource
 - **Readable combat** — what is happening should always be clear to the player
 - **Flexible player choice** — multiple valid approaches to any situation
 
@@ -124,6 +125,46 @@ Examples:
 - Class-specific reaction abilities (to be defined per hero)
 
 Reactions **refresh each round**.
+
+---
+
+## Reactive Combat, Resolve & Partner Techniques
+
+> **CORE COMBAT PILLAR** — full canonical spec: [`docs/design/REACTIVE_COMBAT.md`](design/REACTIVE_COMBAT.md).
+> Gameplay Canon (design authority); **Planned Additive** — not yet in the engine.
+
+**Philosophy: *"Every action creates opportunities."*** Combat should feel like leading an
+elite party that constantly recognizes openings. Players evaluate, create, recognize, and
+decide whether to capitalize on opportunities — they do not memorize rotations.
+
+### Resolve (shared party resource)
+The party shares one **Resolve** pool — confidence, coordination, trust, and tactical
+momentum. It is **always earned, never passive** (flanking, saving allies, perfect blocks,
+guard breaks, crits, environmental plays, successful reactions, smart positioning,
+coordinated teamwork). Every gain fires **visual feedback + audio cue + UI pulse** so the
+player knows they earned it. Each companion has identity-reinforcing Resolve sources.
+
+### Reactive Combat (decision support, not a QTE)
+When an opportunity appears, **time slows** to give the player time to decide — this is an
+**accessibility/decision-support** feature, not a cinematic QTE. The player is shown the
+available reactions and chooses whether to authorize one. **Declining is free — nothing is
+wasted, no penalty.**
+
+### Command Decisions
+Companions **identify** openings; the player **authorizes** them (e.g. *"Corwin has a clear
+shot." Authorize Skyhunter's Gambit? Cost: 2 Resolve*). The commander makes the final call;
+companion intelligence never removes player agency.
+
+### Partner Techniques
+Player-**intentional** cinematic combos (Marvel: Ultimate Alliance–inspired) requiring
+specific companion combinations, positioning, Resolve, and availability. Distinct from
+Reactive Combat (where the *battlefield* creates the opening).
+
+### Relationships & combat
+Growing companion relationships improve coordination, speed up animations, unlock new
+Partner Techniques and reactions, and evolve animations to show trust. **Ronan's Ferality**
+integrates with this loop. Every major ability must satisfy four goals: spectacular
+presentation · tactical value · character storytelling · meaningful player choice.
 
 ---
 
@@ -330,6 +371,10 @@ These areas are confirmed as part of the system but not yet fully designed:
 | Full boss roster | ⚠️ NOT YET DEFINED (Ashen Guardian confirmed only) |
 | Initiative stat derivation | ⚠️ NOT YET DEFINED |
 | Exact Downed revival HP value | ⚠️ NOT YET DEFINED — approximately 1 HP, to be balanced |
+| Resolve values (gain amounts, costs, cap) | ⚠️ NOT YET DEFINED — Planned Additive ([`design/REACTIVE_COMBAT.md`](design/REACTIVE_COMBAT.md)) |
+| Reaction catalogue & opportunity triggers | ⚠️ NOT YET DEFINED — per companion; Planned Additive |
+| Partner Technique roster (companion pairings) | ⚠️ NOT YET DEFINED — authored per relationship; Planned Additive |
+| Per-companion Resolve-generation sources | ⚠️ Directionally set for 5 companions; Torren/Maeve `_TBD_` |
 
 ---
 

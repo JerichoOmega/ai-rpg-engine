@@ -21,6 +21,17 @@ Companions must visibly react to all eight of the following. "Visibly react" mea
 | **Settlement recovery** | When a place the party saved visibly recovers ([`../design/VISIBLE_CONSEQUENCES.md`](../design/VISIBLE_CONSEQUENCES.md)), companions mark it; earned hope is a scarce resource — spend it on screen |
 | **Companion disagreements** | Companions react to *each other's* positions, not just the player's choices ([`../design/companions/COMPANION_RELATIONSHIPS.md`](../design/companions/COMPANION_RELATIONSHIPS.md)); the player should sometimes be an audience, not an arbiter |
 
+## Reactivity in combat (Reactive Combat)
+
+Companion reactivity extends onto the battlefield. Under the **Reactive Combat** pillar
+([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)), companions **recognize
+openings and voice them in character** ("Corwin has a clear shot"; Ronan's *"Now!"*) so the
+player-commander can authorize a reaction or Partner Technique for **Resolve**. These barks
+follow the same craft rules below — through each companion's values, sparingly, at high
+value — and, like all reactivity, they **surface options without removing player agency.**
+As relationships deepen, combat coordination, animations, and available Partner Techniques
+evolve to show trust.
+
 ## Rules of Craft
 
 1. **Through their values.** The same event gets different reactions from each companion; if two reactions are interchangeable, one is wrong.

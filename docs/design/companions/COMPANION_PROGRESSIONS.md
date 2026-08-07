@@ -10,6 +10,12 @@
 
 Each companion possesses one fixed Combat Identity.
 
+> **Reactive Combat integration:** progression also deepens each companion's role in the
+> **Reactive Combat** pillar — their identity-specific **Resolve** generation, the
+> opportunities they recognize, the reactions they offer, and the **Partner Techniques**
+> they unlock with specific partners as relationships grow. Canon:
+> [`../REACTIVE_COMBAT.md`](../REACTIVE_COMBAT.md).
+
 **Players customize how that companion performs their role — not who they are.**
 
 Companions never change classes. A Construct Engineer does not become a Healer. A Frontline Defender does not become a Rogue. The class is a fundamental expression of the companion's identity, not a container players can swap.

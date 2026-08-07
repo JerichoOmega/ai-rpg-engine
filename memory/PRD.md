@@ -600,3 +600,36 @@ layer/IO discipline (no input()/print() in core), data-roster integrity, save-co
   QA-report markdown links 0 broken; side-effects restored; git scope = 2 fix files + QA
   test + QA doc. **Readiness: READY for external human playtest** (recommend pacing/clarity
   pass before the Champion tier).
+
+## Reactive Combat Pillar — CANON (2026-06, documentation-only)
+User finalized the core combat philosophy as a **primary game pillar**. Additive docs only;
+**no gameplay code** (explicitly deferred). Authoritative new doc:
+`docs/design/REACTIVE_COMBAT.md`.
+- **Philosophy:** *"Every action creates opportunities."* Lead an elite party that recognizes
+  openings — evaluate/create/recognize/decide, never memorize rotations.
+- **Resolve** = the shared, **always-earned** party resource (replaces the loose "team
+  synergy"/"Synergy Points" notion — note: no literal "Synergy Points" resource existed in the
+  docs; only the generic phrase "team synergy", now formalized into Resolve). Earned via
+  flanks/saves/perfect blocks/guard breaks/crits/environment/reactions/positioning/teamwork;
+  every gain = visual + audio + UI pulse.
+- **Reactive Combat** = time-slow **decision support, NOT a QTE**; decline is free/no-penalty.
+- **Command Decisions** = companions identify openings, player-commander authorizes for Resolve.
+- **Partner Techniques** = player-intentional cinematic combos (MUA-inspired) needing
+  pairing + positioning + Resolve + availability.
+- Companion **relationships** improve combat (coordination, faster animations, new techniques,
+  reactions); **Ronan's Ferality** integrates. Four ability goals: spectacle · tactical value ·
+  character storytelling · meaningful choice.
+- **Files updated (25 + 1 new):** GAME_BIBLE, COMBAT_SYSTEM, CORE_DESIGN_PILLARS (Pillar 3),
+  R-01 combat canon, COMPANION_PROGRESSIONS, COMPANION_REACTIVITY_STANDARD, heroes
+  TALOS/CORWIN/RAGASH/ELEANOR/RONAN (identity-specific Resolve sources), architecture
+  ENGINE_INTERFACES (ResolveState/opportunity/authorize contracts) + LAYER_RULES +
+  ARCHITECTURE_DECISIONS (ADR-0010) + GODOT_SCENE_MAPPING, root Combat_Gameplay_Architecture,
+  tactical_abilities/tactical_ai/progression_skills/systems.combat, enemies/README,
+  PLAYER_COMMUNICATION, encounters/the_corruption_avatar, first_region_vertical_slice.
+- **Canon labels:** Gameplay Canon (design authority) / **Planned Additive** (not in engine);
+  engine-agnostic split documented (rules own Resolve/opportunity detection; presentation owns
+  time-slow + prompts + feedback; slowdown never a rule → not a QTE). Per-companion Resolve set
+  for 5 companions; Torren/Maeve `_TBD_`; Avatar identity remains `_TBD_`.
+- **Validation:** docs-only (git = 25 md + 1 new, no `.py`); links 0 broken across all touched
+  docs. No functional/test impact.
+

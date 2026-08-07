@@ -6,6 +6,13 @@
 alongside Move / Attack / Prepare / Interact, running on the single canonical
 `tactical/` engine — no parallel ability system, no duplicate combat path.
 
+> **Reactive Combat pillar:** future ability design must serve *Reactive Combat*
+> ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)) — abilities create or
+> capitalize on **opportunities**, generate/spend the shared **Resolve** resource, and can be
+> offered as authorized **reactions** or **Partner Techniques**. Every major ability should
+> satisfy the four goals: spectacular presentation · tactical value · character storytelling ·
+> meaningful player choice. Planned Additive; built on this one pipeline (no parallel path).
+
 ## Design pillar: Information Before Commitment
 
 There is exactly **one** authoritative source of ability truth,

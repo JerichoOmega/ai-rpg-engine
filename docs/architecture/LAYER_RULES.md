@@ -83,6 +83,22 @@ Documented for later remediation. **No fixes are applied by this document.**
 > 1–2 today (0 `print`/`input`, no engine imports). That is the model the rest of
 > the project migrates toward.
 
+## Reactive Combat belongs on both sides of the line
+
+The **Reactive Combat** pillar ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md))
+must split cleanly across the one law:
+
+- **Gameplay (rules, headless, testable):** the shared **Resolve** economy, opportunity
+  *detection*, the catalogue of available reactions and their Resolve costs, Partner-Technique
+  eligibility, and applying an authorized action's effects. No `print`/`input`, no engine
+  imports.
+- **Presentation (terminal today / Godot later):** the **time-slow**, the reaction prompt, the
+  authorize/decline input, and the visual + audio + UI-pulse feedback for Resolve changes.
+
+The **time-slow is presentation only** — it must never be a rule the core depends on (the core
+resolves a decision the same whether or not a clock slowed). This keeps Reactive Combat a
+decision-support layer, not a timing/QTE mechanic baked into the rules.
+
 ## Enforcement (future, optional)
 A lightweight import-lint could later assert that modules under `core/` never
 import `engine/`, and that rules code contains no `print`/`input`. Documented as a

@@ -198,6 +198,26 @@ This is the test that proves the boundary is engine-neutral and that Godot and t
 Python core agree on the data. `SaveState` round-trips must additionally preserve
 **exact save compatibility**.
 
+## Reactive Combat contract (Resolve / opportunities / techniques)
+
+> Serves the **Reactive Combat** core pillar ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)). Planned Additive — not implemented.
+
+- **STATE — `ResolveState`:** a single **shared party** integer `resolve` (+ `max`). Not
+  per-unit. Round-trips like any STATE contract.
+- **EVENT — `resolve_changed`:** `{delta, reason, source_unit_id}` where `reason` is an
+  earned source (flank, save, perfect_block, guard_break, crit, environment, reaction,
+  positioning, teamwork). Presentation renders visual + audio + UI-pulse; it never invents a
+  delta. Passive gain is not representable by contract (there is no "tick" source).
+- **EVENT — `opportunity_available`:** `{opportunity_id, source_unit_id, reactions:[{id,
+  label, resolve_cost, bark}]}`. Emitted by the core when it detects an opening; presentation
+  triggers the time-slow and shows the choices.
+- **INTENT — `authorize_reaction(opportunity_id, reaction_id)`** or **`decline_opportunity
+  (opportunity_id)`.** Decline is a guaranteed no-op (no state change, no penalty). The core
+  validates cost/availability and replies with the resulting events or a rejection reason.
+- **STATE — Partner Techniques:** eligibility (`partner_technique_available`) is core-derived
+  from companion pairing + positioning + Resolve + cooldown; the cinematic is presentation
+  replaying core-authored effect events (determinism preserved).
+
 ## Document History
 | Date | Change |
 |---|---|

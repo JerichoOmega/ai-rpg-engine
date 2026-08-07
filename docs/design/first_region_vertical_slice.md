@@ -92,6 +92,14 @@ only after each is taught. No difficulty spikes that outrun what the player has 
   scenes; save/flow integration; a hand-built finale battlefield for a full build.
   None of the reserved lore is invented here.
 
+## Reactive Combat (pillar) in the slice
+Every combat beat is a teaching ground for the **Reactive Combat** pillar
+([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)): the wolf-pack flank, the
+bandit leader opening, the forge environment, and the finale wardstones are all
+**opportunities** the party recognizes and capitalizes on for shared **Resolve**. The slice's
+onboarding should introduce Resolve, the time-slow decision prompt, and the first authorized
+reaction here. Wiring is Planned Additive (`_TBD_`).
+
 ## Validation notes
 This is design documentation only. It changes no engine, data, AI, or save; it
 references existing, separately-tested set-pieces. Building the interactive region is

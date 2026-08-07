@@ -419,6 +419,23 @@ matching the completeness of Talos, Eleanor, and Torren. Future changes should b
 
 ---
 
+## Reactive Combat — Resolve, Opportunities & Ferality
+
+> **Core combat pillar** — canon: [`docs/design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md).
+
+Ronan is the party's predator in the **Reactive Combat** loop. His identity-specific ways to
+generate the shared **Resolve** resource are **fear, pounces, predator gameplay, and
+aggressive follow-ups** — he thrives on capitalizing the instant an enemy is exposed, voicing
+it in character (*"Now!"*) so the player-commander can authorize a pounce or Partner
+Technique for Resolve.
+
+**Ferality integration:** Ronan retains his unique **Ferality** system — using werewolf
+abilities increases Ferality, granting greater combat power while raising narrative and
+gameplay risk. His strongest Resolve-generating predator openings also push Ferality upward,
+making every aggressive reaction a genuine risk/reward Command Decision. He surfaces the
+opening and its cost; the player decides how far to let the wolf run. Values `_TBD_`
+(Planned Additive).
+
 ## Document History
 
 | Date | Change |

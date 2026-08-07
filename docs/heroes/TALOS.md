@@ -340,6 +340,18 @@ The revelation may shift how he understands the institutions he has spent his li
 
 ---
 
+## Reactive Combat — Resolve & Opportunities
+
+> **Core combat pillar** — canon: [`docs/design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md).
+
+Talos anchors the party's **Reactive Combat** loop as its protector. His identity-specific
+ways to generate the shared **Resolve** resource are **protecting allies, shield blocks, and
+holding choke points** — the more he keeps the party standing, the more coordinated momentum
+the party earns. He recognizes defensive openings and voices them in character
+(*"Get behind me."*) so the player-commander can authorize an intercept, guard, or Partner
+Technique for Resolve. As with all companions, he **surfaces** the opportunity; the player
+decides. Values `_TBD_` (Planned Additive).
+
 ## Document History
 
 | Date | Change |

@@ -82,6 +82,13 @@ From [`scripts/corruption_avatar_report.py`](../../../scripts/corruption_avatar_
 - `held` — time runs out with the Avatar still warded (the naive read).
 - `overwhelmed` — the party falls.
 
+## Reactive Combat hooks (pillar)
+As the region's set-piece, the Avatar is an ideal **Reactive Combat** showcase
+([`../REACTIVE_COMBAT.md`](../REACTIVE_COMBAT.md)): breaking a wardstone, exposing the Avatar,
+and its enraged telegraphs are all **opportunities** the party can recognize and capitalize on
+for **Resolve**, and a natural stage for authorized **Partner Techniques**. Wiring the specific
+opportunities/reactions is Planned Additive (`_TBD_`).
+
 ## What's `_TBD_`
 The Avatar's name/origin/deeper lore; a bespoke hand-built battlefield and
 multi-avatar/second-phase mechanics for a full presentation-layer build; the

@@ -2,7 +2,13 @@
 
 > **Canon Status:** CONFIRMED — established July 2026.
 > **Authority:** Binding rule for how world changes are communicated to the player. Partner document to [`VISIBLE_CONSEQUENCES.md`](VISIBLE_CONSEQUENCES.md): that rule says the world must change; this one says the player must be able to understand *that* it changed and *why*.
-> **Cross-references:** [`VISIBLE_CONSEQUENCES.md`](VISIBLE_CONSEQUENCES.md) · [`../companions/COMPANION_REACTIVITY_STANDARD.md`](../companions/COMPANION_REACTIVITY_STANDARD.md) · [`docs/systems/journal_system.md`](../systems/journal_system.md) · [`world_state/WORLD_REACTIONS.md`](world_state/WORLD_REACTIONS.md)
+> **Cross-references:** [`VISIBLE_CONSEQUENCES.md`](VISIBLE_CONSEQUENCES.md) · [`../companions/COMPANION_REACTIVITY_STANDARD.md`](../companions/COMPANION_REACTIVITY_STANDARD.md) · [`docs/systems/journal_system.md`](../systems/journal_system.md) · [`world_state/WORLD_REACTIONS.md`](world_state/WORLD_REACTIONS.md) · [`REACTIVE_COMBAT.md`](REACTIVE_COMBAT.md)
+
+> **Combat feedback (Reactive Combat pillar):** the same "the player must understand what
+> happened and why" rule governs combat. Every **Resolve** gain must be communicated with
+> **visual feedback + an audio cue + a UI pulse** so the player always knows they *earned* it,
+> and every opportunity prompt must clearly show the available reactions and their Resolve
+> costs before the player authorizes or declines ([`REACTIVE_COMBAT.md`](REACTIVE_COMBAT.md)).
 
 ---
 

@@ -309,9 +309,20 @@ Combat is a **turn-based tactical system** fought on **square grids** in fully *
 |---|---|
 | Tactical positioning | Where you stand shapes what you can do |
 | Meaningful decisions | Every turn presents real choices |
-| Team synergy | Heroes combine through positioning and ability chaining |
+| **Reactive Combat** | *"Every action creates opportunities."* Lead a party that recognizes openings; create, recognize, and decide whether to capitalize on them — never memorize rotations. **CORE PILLAR.** |
+| Team synergy (**Resolve**) | Heroes combine through positioning and ability chaining, fuelled by the shared, earned **Resolve** resource |
 | Readable combat | What is happening is always clear |
 | Flexible choice | Multiple valid approaches to any encounter |
+
+### Reactive Combat, Resolve & Partner Techniques
+
+> **Full canonical spec:** [`docs/design/REACTIVE_COMBAT.md`](design/REACTIVE_COMBAT.md) — **CORE COMBAT PILLAR** (Gameplay Canon; Planned Additive, not yet implemented).
+
+- **Reactive Combat** — *"Every action creates opportunities."* When an opening appears, time slows (decision support, **not** a QTE) and the player may authorize a companion reaction, or decline at no cost.
+- **Resolve** — the party's **shared, always-earned** resource (confidence, coordination, trust, momentum). Gained through flanks, saves, perfect blocks, guard breaks, crits, environmental plays, and coordination — never passively. Every gain fires visual + audio + a UI pulse.
+- **Command Decisions** — companions *identify* openings ("Corwin has a clear shot"); the player, as commander, *authorizes* them for a Resolve cost. Companions never remove player agency.
+- **Partner Techniques** — spectacular, cinematic combos (Marvel: Ultimate Alliance–inspired) the player **intentionally** sets up via companion pairing, positioning, and Resolve.
+- Companion **relationships** improve combat (coordination, faster animations, new Partner Techniques, extra reactions); animations evolve to show growing trust. **Ronan's Ferality** integrates with this loop.
 
 ### Action Economy
 

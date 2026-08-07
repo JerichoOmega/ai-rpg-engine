@@ -13,7 +13,11 @@ own domain:
 **`docs/GAME_BIBLE.md` + `docs/COMBAT_SYSTEM.md`.** They define how combat should
 ultimately *feel* and the long-term feature set. **Not being replaced.** Covers:
 Facing, Flanking, Shield Stance, Downed/Death, Initiative, Support Actions,
-four-hero party design, tactical identity, combat pacing.
+four-hero party design, tactical identity, combat pacing, and the **Reactive
+Combat** core pillar — *Reactive Combat · Resolve · Command Decisions · Partner
+Techniques* ([`docs/design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md), the
+authoritative spec for that pillar). All of it is **Planned Additive** on the
+tactical runtime — evolved onto the one engine additively, never forked.
 
 ### 2. Technical Canon — *Implementation Authority*
 **`tactical/` + `Combat_Gameplay_Architecture.md`.** The single combat runtime.

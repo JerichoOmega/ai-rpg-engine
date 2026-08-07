@@ -4,6 +4,11 @@
 
 **Modules:** `progression_manager.py`, `skill_tree.py`, `skills.py`
 
+> **Reactive Combat pillar:** progression deepens each companion's role in *Reactive Combat*
+> ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)) — unlocking new
+> identity-specific **Resolve** generators, additional reactions, and **Partner Techniques**
+> (some gated behind companion relationship growth, not just levels). Planned Additive.
+
 ---
 
 ## Overview

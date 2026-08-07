@@ -695,6 +695,18 @@ She may be the companion who most directly asks whether the Eighth could have be
 
 ---
 
+## Reactive Combat — Resolve & Opportunities
+
+> **Core combat pillar** — canon: [`docs/design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md).
+
+Eleanor turns the battlefield itself into opportunity in the **Reactive Combat** loop. Her
+identity-specific ways to generate the shared **Resolve** resource are **elemental
+interactions, battlefield manipulation, and supporting allies**. She recognizes when the
+terrain or an elemental setup can be exploited and voices it in character (*"I can use the
+terrain."*), letting the player-commander authorize an environmental reaction or Partner
+Technique for Resolve. She identifies the opening; the player decides. Values `_TBD_`
+(Planned Additive).
+
 ## Document History
 
 | Date | Change |

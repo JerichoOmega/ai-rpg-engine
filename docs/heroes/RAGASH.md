@@ -493,6 +493,18 @@ She may ask, quietly and practically, what the party intends to do with this inf
 
 ---
 
+## Reactive Combat — Resolve & Opportunities
+
+> **Core combat pillar** — canon: [`docs/design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md).
+
+Ragash drives the party's flanking game in the **Reactive Combat** loop. Her
+identity-specific ways to generate the shared **Resolve** resource are **hound coordination,
+flanking, and pack tactics** — every surround and combined strike builds momentum. She and
+her hounds recognize when a target is boxed in and she voices it in character
+(*"They're surrounded."*), so the player-commander can authorize a coordinated pack reaction
+or Partner Technique for Resolve. She surfaces the opening; the player commits. Values
+`_TBD_` (Planned Additive).
+
 ## Document History
 
 | Date | Change |

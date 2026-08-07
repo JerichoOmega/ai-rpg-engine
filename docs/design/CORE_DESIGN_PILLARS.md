@@ -20,7 +20,9 @@ Choices change the world, not just the epilogue text. Outcomes come in tiers (Ex
 ## 3. Tactical Combat
 Combat is a decision space, not a dice-rolling interlude. Positioning, resource management, enemy behavior, and party composition matter; readability beats spectacle ([`docs/systems/combat.md`](../systems/combat.md), [`docs/COMBAT_SYSTEM.md`](../COMBAT_SYSTEM.md)).
 
-**Test:** Could a thoughtful player have won a lost fight by deciding differently, and can they tell why?
+Its defining expression is **Reactive Combat** — *"Every action creates opportunities."* The player leads an elite party that recognizes openings, creates and capitalizes on them, and spends the shared, earned **Resolve** resource to authorize companion reactions and **Partner Techniques**. Players evaluate situations rather than memorize rotations. This is a **core combat pillar**; full canon: [`REACTIVE_COMBAT.md`](REACTIVE_COMBAT.md).
+
+**Test:** Could a thoughtful player have won a lost fight by deciding differently, and can they tell why? — and: is the player asking *"how can I create another opportunity?"* rather than *"which attack does the most damage?"*
 
 ## 4. Handcrafted Storytelling
 The AI DM improvises *within* authored canon — named NPCs, authored scenes, written handouts, established lore ([`docs/lore/CANON_RULES.md`](../lore/CANON_RULES.md)). Procedural generation fills gaps; it never replaces authored content for moments that matter. The quest philosophy test applies: if content could be removed without anyone noticing, it should not exist ([`docs/systems/quests.md`](../systems/quests.md)).

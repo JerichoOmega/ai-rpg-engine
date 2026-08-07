@@ -5,6 +5,13 @@
 > `backend/tests/test_ai_personalities.py` (25) · report
 > `docs/verification/ai_personalities.md`
 
+> **Reactive Combat pillar:** companion AI must eventually **recognize opportunities** and
+> surface them to the player-commander (the barks in [`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md) §6),
+> who authorizes a reaction/Partner Technique for **Resolve**. Enemy AI likewise **creates and
+> denies** opportunities (openings the party can exploit; punishing sloppy positioning).
+> Companion intelligence identifies; it never auto-acts — the player always decides. Planned
+> Additive on this one AI pipeline.
+
 ## Principle
 
 Enemy behaviour is **data-driven and reusable**. A blueprint sets stats,

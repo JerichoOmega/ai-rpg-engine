@@ -68,6 +68,23 @@ These have **no** gameplay module and must never leak into the core:
 - **Navigation** — Godot pathing is *visual*; the **authoritative path** comes from
   the core's grid pathing in the `move` event.
 
+## Reactive Combat → scenes / nodes / signals
+
+Serves the **Reactive Combat** pillar ([`../design/REACTIVE_COMBAT.md`](../design/REACTIVE_COMBAT.md)); all presentation, driven by core events (Planned Additive).
+
+- **Resolve meter** — a party-level HUD node bound to `ResolveState`; on `resolve_changed`
+  it plays the earned-feedback trio (VFX pulse + audio cue + UI pulse). Purely reflective;
+  never authoritative over the value.
+- **Opportunity prompt** — on `opportunity_available`, presentation enters a **slow-motion**
+  time-scale and shows a reaction chooser (labels, Resolve costs, companion bark). The
+  slow-motion is a Godot `Engine.time_scale`/tween effect only — the core does not know or
+  care that time slowed.
+- **Authorize / decline** — the chooser emits `authorize_reaction` / `decline_opportunity`
+  intents; decline simply closes the prompt and restores time-scale (no state change).
+- **Partner Technique** — a cinematic scene/AnimationPlayer sequence triggered by the
+  authorized technique's effect events; it **replays** core-authored results (determinism
+  note below), never re-rolls. Companion-trust growth selects richer animation variants.
+
 ## Determinism note
 The core owns RNG (`CombatEngine.rng`). Godot must **replay** results from events,
 never re-roll. This keeps the headless core and the Godot view in lockstep and lets
