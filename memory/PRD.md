@@ -33,11 +33,21 @@ Region, built as `tactical/living_world/`.
   composition over expanding legacy managers, everything JSON-serializable.
 
 ## Backlog / Next
-- P1: Region Two content pass on top of these systems (content, not systems):
-  add `<region>_region.json` manifest + content JSON, supply a run record, pass
-  the CI gate.
+- P1: Region Two content pass (content, not systems): `<region>_region.json` +
+  `<region>_npcs.json` + content JSON; supply a run record; pass the CI gate.
 - P2: In live play, call `runtime.apply_overlay(world)` / `install_event_hooks()`
-  so a region's runtime auto-persists at checkpoints (save boundaries done).
+  so a region's runtime auto-persists at checkpoints.
+- P2: Optional explicit NPC-owned quest objects if the quest architecture warrants.
+
+## Region One NPC population (2026-06, done)
+- Smallest reusable NPC content model: `tactical/living_world/npcs.py` (rules) +
+  `data/frontier_npcs.json` (14 NPCs), optional `npcs` ref on `RegionContent`.
+- NPCs react via existing deeds/region-state/memory (no meter, no simulation,
+  no new persisted state). Companions referenced, never redefined (canon-safe).
+- Corruption source stays unresolved (Scholar Nain / Old Perrin knowledge tiers).
+- Region Review gained an NPC Population check (16 checks).
+- Validation: **334 pytest passed**, verify 62/62, review 16/16, gate PASS.
+- Docs: `docs/systems/frontier_npcs.md`; report `REGION_ONE_NPC_PASS_REPORT.md`.
 
 ## Runtime save + CI integration (2026-06, done)
 - Live save hookup: `tactical/living_world/runtime.py` holds the session's

@@ -20,6 +20,7 @@
     "event_templates": "event_templates",
     "environment": "environment",
     "regional_memory": "regional_memory",
-    "epilogue_threads": "epilogue_threads"
+    "epilogue_threads": "epilogue_threads",
+    "npcs": "frontier_npcs"
   }
 }

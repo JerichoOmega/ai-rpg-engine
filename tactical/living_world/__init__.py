@@ -39,7 +39,7 @@ from __future__ import annotations
 
 from . import region_state, reputation, events, companions, banter
 from . import environment, memory, epilogue, content, persistence
-from . import region, overlay, runtime
+from . import region, overlay, runtime, npcs
 from .world import LivingWorld
 from .region import RegionContent
 from .region_state import LocationState, STATES
@@ -62,4 +62,5 @@ __all__ = [
     "region",
     "overlay",
     "runtime",
+    "npcs",
 ]

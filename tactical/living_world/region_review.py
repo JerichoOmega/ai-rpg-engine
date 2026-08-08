@@ -34,7 +34,7 @@ from .region_state import STATES, is_natural_transition
 _CORE_MODULES = [
     "__init__", "region_state", "reputation", "events", "companions",
     "banter", "environment", "memory", "epilogue", "world", "content",
-    "persistence", "region", "overlay", "runtime", "frontier_overlay",
+    "persistence", "region", "overlay", "runtime", "npcs", "frontier_overlay",
 ]
 
 _PARTY = ["Ronan", "Talos", "Maeve Ashwood", "Torren", "Corwin", "Eleanor",
@@ -197,6 +197,24 @@ def _check_content_contract() -> Tuple[str, str]:
             f"frontier_region contract errors={errors or 'none'}")
 
 
+def _check_npc_population() -> Tuple[str, str]:
+    from .region import RegionContent
+    from . import npcs as npc_mod
+    region = RegionContent.from_manifest("frontier_region")
+    ref_errors = npc_mod.resolve_references(region.npcs, region)
+    # every non-wilderness settlement/landmark should have at least one NPC
+    inhabited = {n.get("location_id") for n in region.npcs}
+    settlements = [l["id"] for l in region.locations
+                   if l.get("kind") == "settlement"]
+    empty_settlements = [s for s in settlements if s not in inhabited]
+    categories = {n.get("category") for n in region.npcs}
+    ok = (not ref_errors and not empty_settlements
+          and len(region.npcs) >= 8 and "major" in categories)
+    return ("OK" if ok else ("GAP" if ref_errors or empty_settlements else "WARN"),
+            f"npcs={len(region.npcs)} categories={len(categories)} "
+            f"ref_errors={ref_errors or 'none'} empty_settlements={empty_settlements or 'none'}")
+
+
 def _check_save_persistence() -> Tuple[str, str]:
     from . import persistence
     golden = frontier.run_frontier(seed=7, decider=frontier.golden_decider)
@@ -262,6 +280,7 @@ CHECKS = [
     ("Godot Migration Compatibility", _check_godot_compat),
     ("Serialization Round-Trip", _check_serialization_roundtrip),
     ("Content Contract", _check_content_contract),
+    ("NPC Population", _check_npc_population),
     ("Save Persistence", _check_save_persistence),
     ("Playtest Readiness", _check_playtest_readiness),
     ("Outstanding TODOs", _check_outstanding_todos),

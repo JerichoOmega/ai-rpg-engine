@@ -1,0 +1,367 @@
+[
+  {
+    "id": "campmother_alna",
+    "name": "Camp-Mother Alna",
+    "role": "Elder and de-facto leader of the Ashen Camp",
+    "category": "major",
+    "location_id": "refugee_settlement",
+    "region_id": "the_frontier",
+    "personality": "Iron-spined and tired; counts heads before she counts anything else.",
+    "motivation": "Keep every soul in the camp alive until the Frontier is safe enough to go home.",
+    "concern": "Winter, thin walls, and raiders who know the camp cannot defend itself.",
+    "history": "Led three villages' worth of survivors out of the deep Frontier when the blight took their homes.",
+    "values": "Shelter first, pride never.",
+    "secret": "She turned away a family at the gate weeks ago to save the water ration, and it is eating her alive.",
+    "companion_hooks": ["faith", "military"],
+    "knows": [
+      {"deed": "helped_refugees", "source": "involved"},
+      {"deed": "broke_the_avatar", "source": "public"},
+      {"deed": "*", "source": "public"}
+    ],
+    "relationships": [
+      {"with": "Maeve Ashwood", "kind": "grateful_ally", "note": "Maeve restocks her clinic and leaves medicine on doorsteps."},
+      {"with": "sergeant_oda", "kind": "employer", "note": "Relies on Oda's thin watch to hold the gate."}
+    ],
+    "events": ["refugee_caravan", "traveling_healer"],
+    "presence": {"default": "present", "fearful_if_status": ["threatened", "corrupted"]},
+    "dialogue": {
+      "default": "You've a strong look. If you're staying, stay useful — we've no room for spectators.",
+      "by_status": {
+        "threatened": "Bar that gate behind you. We lose someone to the dark most nights now.",
+        "recovering": "There's bread again, and a watch that sleeps in shifts. Small things. They feel like miracles."
+      },
+      "by_deed": {
+        "helped_refugees": "You gave us our walls back. I've stopped rationing the water, and I've started rationing my worrying. Thank you.",
+        "broke_the_avatar": "The children ask if it's really over. I tell them yes — because of you. I almost believe it myself."
+      }
+    }
+  },
+  {
+    "id": "sergeant_oda",
+    "name": "Sergeant Oda",
+    "role": "Commander of the Ashen Camp's ragtag watch",
+    "category": "guard",
+    "location_id": "refugee_settlement",
+    "region_id": "the_frontier",
+    "personality": "Blunt, exhausted, secretly certain the camp cannot be held.",
+    "motivation": "Hold the gate one more night, then one more after that.",
+    "concern": "Six real soldiers and forty frightened farmers with spears.",
+    "companion_hooks": ["military"],
+    "knows": [
+      {"deed": "protected_travellers", "source": "word_of_mouth"},
+      {"deed": "helped_refugees", "source": "witnessed"}
+    ],
+    "relationships": [
+      {"with": "Talos", "kind": "respect", "note": "Recognizes a real commander on sight."},
+      {"with": "campmother_alna", "kind": "employee"}
+    ],
+    "events": ["merchant_under_attack"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "You know which end of a blade to hold? Good. Stand a watch or move along.",
+      "by_deed": {
+        "helped_refugees": "You did in a week what I couldn't do in a season. My people sleep now. Ask me for anything.",
+        "protected_travellers": "Word came up the road — you stood over those wagons. That's the kind of thing I can't order men to do. They just have to be the doing kind."
+      }
+    }
+  },
+  {
+    "id": "pell",
+    "name": "Pell",
+    "role": "A camp child, ten winters old, always underfoot",
+    "category": "civilian",
+    "location_id": "refugee_settlement",
+    "region_id": "the_frontier",
+    "personality": "Fearless in the way only a child who hasn't understood the danger can be.",
+    "motivation": "Find the dog she lost when they fled home.",
+    "companion_hooks": ["medical", "beast"],
+    "knows": [{"deed": "broke_the_avatar", "source": "word_of_mouth"}],
+    "relationships": [{"with": "campmother_alna", "kind": "ward"}],
+    "events": ["lost_child", "injured_animal"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "Are you a hero? You look tired for a hero. Have you seen a brown dog with one ear? He's mine.",
+      "by_deed": {
+        "broke_the_avatar": "Camp-Mother says the bad thing is gone forever. Does that mean we can go home and look for my dog?"
+      }
+    }
+  },
+  {
+    "id": "hetty_cook",
+    "name": "Hetty",
+    "role": "Runs the camp's single communal cookfire",
+    "category": "ambient",
+    "location_id": "refugee_settlement",
+    "region_id": "the_frontier",
+    "personality": "Feeds first, asks questions never.",
+    "motivation": "Stretch one pot to feed a hundred.",
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "Sit, eat. Whatever you're doing out there, you'll do it better with something warm in you.",
+      "by_status": {"recovering": "Two pots now, and real salt in one of them. We're getting above ourselves."}
+    }
+  },
+  {
+    "id": "elder_fenn",
+    "name": "Elder Fenn",
+    "role": "The last elder of Greenhollow who refused to leave",
+    "category": "major",
+    "location_id": "greenhollow",
+    "region_id": "the_frontier",
+    "personality": "Grief worn smooth into stubbornness; will not abandon his village's dead.",
+    "motivation": "See Greenhollow live again, or be buried in its soil.",
+    "concern": "The wells taste of iron and the neighbours who 'went quiet' are still out there.",
+    "history": "Buried more of Greenhollow than he can count; keeps the graves even as the blight closes in.",
+    "values": "Roots. A place is its people and its dead, and he will not leave either.",
+    "companion_hooks": ["faith", "evidence"],
+    "knows": [
+      {"deed": "cleansed_woods", "source": "witnessed"},
+      {"deed": "broke_the_avatar", "source": "public"}
+    ],
+    "relationships": [
+      {"with": "Eleanor", "kind": "kindred_faith", "note": "She tends the graves he can no longer reach."},
+      {"with": "scholar_nain", "kind": "wary", "note": "Distrusts outsiders who study his village's grief like a specimen."}
+    ],
+    "presence": {"default": "present", "absent_if_status": [], "fearful_if_status": ["corrupted"]},
+    "dialogue": {
+      "default": "Greenhollow, they call it still, though there's little green and less hollow left. I stay. Someone must.",
+      "by_status": {
+        "corrupted": "Don't drink the water. Don't sleep past dark. And if you hear a neighbour's voice in the dark — that's not a neighbour anymore.",
+        "restored": "The green's come back to the low field. I didn't think I'd live to see it. I'm glad I was wrong.",
+        "prosperous": "Children in the square, a market on market-day. Greenhollow's a place again, not a graveyard I refused to leave."
+      },
+      "by_deed": {
+        "cleansed_woods": "The wood above the village stopped weeping. My wife's grave is quiet now. You did that.",
+        "broke_the_avatar": "Whatever you broke in the deep dark — I felt it break here. The wells run clean. Come, drink, and be welcome."
+      }
+    }
+  },
+  {
+    "id": "merra_merchant",
+    "name": "Merra",
+    "role": "Greenhollow's shopkeeper, waiting to reopen",
+    "category": "merchant",
+    "location_id": "greenhollow",
+    "region_id": "the_frontier",
+    "personality": "Practical optimism kept alive by spite for the dark.",
+    "motivation": "Reopen the shop her mother left her.",
+    "concern": "No caravans will risk the road; her shelves are bare.",
+    "companion_hooks": ["craft"],
+    "knows": [
+      {"deed": "protected_travellers", "source": "faction_tracks"},
+      {"deed": "broke_the_avatar", "source": "public"}
+    ],
+    "relationships": [{"with": "coll_trader", "kind": "supplier", "note": "Waits for Coll's caravan that never comes while the road is unsafe."}],
+    "events": ["traveling_storyteller"],
+    "presence": {"default": "present", "absent_if_status": ["corrupted"]},
+    "dialogue": {
+      "default": "Shop's shut, friend. Nothing to sell and no one fool enough to bring me stock. Come back when the road's safe.",
+      "by_status": {
+        "restored": "Shutters are up and the shelves aren't bare! First market in a year. Buy something — I've earned the coin.",
+        "recovering": "Coll's caravan made it through last week. First stock I've had in months. It felt like the war ending."
+      },
+      "by_deed": {
+        "protected_travellers": "The traders are talking about you up and down the road. Makes them brave enough to come to Greenhollow again. That's my livelihood you saved."
+      }
+    }
+  },
+  {
+    "id": "garrick_smith",
+    "name": "Garrick",
+    "role": "Greenhollow's struggling village smith",
+    "category": "quest",
+    "location_id": "the_forge",
+    "region_id": "the_frontier",
+    "personality": "Proud hands, humble words; ashamed of the poor work his cold forge produces.",
+    "motivation": "Arm the Frontier well enough to defend itself.",
+    "concern": "His forge runs too cold to make anything that holds an edge.",
+    "companion_hooks": ["craft"],
+    "knows": [{"deed": "restored_forge", "source": "involved"}],
+    "relationships": [
+      {"with": "Torren", "kind": "student", "note": "Torren showed him the old joints and tricks; he reveres the man."}
+    ],
+    "events": [],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "Every blade I hand out, I pray it holds. The Old Forge could do better, if anyone knew how to wake it.",
+      "by_deed": {
+        "restored_forge": "Since you and the smith woke the Old Forge, my axes bite true. First time in years I'm not ashamed of my own mark."
+      }
+    }
+  },
+  {
+    "id": "coll_trader",
+    "name": "Coll",
+    "role": "A road merchant who braves the Frontier routes",
+    "category": "merchant",
+    "location_id": "frontier_road",
+    "region_id": "the_frontier",
+    "personality": "Nervous, quick-talking, keeps one hand on the cart brake and the other on his coin.",
+    "motivation": "Get his goods to the settlements alive and turn a profit.",
+    "concern": "Raiders and worse on every stretch of road.",
+    "companion_hooks": ["evidence"],
+    "knows": [{"deed": "protected_travellers", "source": "involved"}],
+    "relationships": [{"with": "merra_merchant", "kind": "customer"}],
+    "events": ["merchant_under_attack", "abandoned_campsite"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "You're not raiders, are you? No. Good. Then let me past — I've mouths waiting on this cargo and no wish to join the ditches.",
+      "by_deed": {
+        "protected_travellers": "You're the ones from the ambush! I'd have lost the cart and my neck both. There's no thanks big enough, so — take this, and tell no one I gave it free."
+      }
+    }
+  },
+  {
+    "id": "roadwarden_hulde",
+    "name": "Roadwarden Hulde",
+    "role": "A lone warden who patrols and logs the Frontier road",
+    "category": "faction",
+    "location_id": "frontier_road",
+    "region_id": "the_frontier",
+    "personality": "Watchful, laconic, keeps a ledger of every traveller and every disappearance.",
+    "motivation": "Know the road better than the things that hunt it.",
+    "concern": "More names in the 'did not arrive' column than the 'arrived' one.",
+    "companion_hooks": ["military", "evidence"],
+    "knows": [
+      {"deed": "protected_travellers", "source": "faction_tracks"},
+      {"deed": "cleansed_woods", "source": "faction_tracks"},
+      {"deed": "broke_the_avatar", "source": "faction_tracks"}
+    ],
+    "relationships": [{"with": "sergeant_oda", "kind": "former_ally", "note": "Served together before the Frontier fell apart."}],
+    "events": ["wandering_knight"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "State your road and your business. I keep a ledger. The Frontier eats travellers who don't tell someone where they're going.",
+      "by_status": {"safe": "The 'arrived safe' column's longer than the other one this month. First time in a year my ledger reads like good news."},
+      "by_deed": {
+        "protected_travellers": "You're in my ledger — the good side of it. The wardens up and down the road know your names now."
+      }
+    }
+  },
+  {
+    "id": "huntsman_ordo",
+    "name": "Huntsman Ordo",
+    "role": "A Frontier hunter who has stopped entering the deep wood",
+    "category": "quest",
+    "location_id": "old_wolf_shrine",
+    "region_id": "the_frontier",
+    "personality": "Reads the land like a book; will not admit the woods now frighten him.",
+    "motivation": "Understand what changed the wolves and the wood.",
+    "concern": "The pack he once respected went silent, and the game went wrong.",
+    "companion_hooks": ["beast", "belonging"],
+    "knows": [
+      {"deed": "saved_bram", "source": "witnessed"},
+      {"deed": "cleansed_woods", "source": "witnessed"}
+    ],
+    "relationships": [
+      {"with": "Ronan", "kind": "wary_respect", "note": "Senses Ronan is more than he seems; asks after tracks."},
+      {"with": "Ragash", "kind": "peer", "note": "Two hunters who read the same signs."}
+    ],
+    "events": ["hidden_pack_scouts", "corrupted_wildlife", "injured_animal"],
+    "presence": {"default": "present", "fearful_if_status": ["corrupted"]},
+    "dialogue": {
+      "default": "The wolves stopped their old songs. Game's gone strange. I don't go past the shrine anymore, and I'm not ashamed to say it.",
+      "by_deed": {
+        "saved_bram": "You saved a wolf when killing would've been easy. The pack knows. I saw them let you pass. I've hunted forty years and never seen the like.",
+        "cleansed_woods": "The wood breathes right again. I took a deer past the shrine yesterday and nothing wrong looked back at me. I'd forgotten that feeling."
+      }
+    }
+  },
+  {
+    "id": "scholar_nain",
+    "name": "Scholar Nain",
+    "role": "A dwarven-lore scholar studying the corruption's signature",
+    "category": "quest",
+    "location_id": "dwarven_ruins",
+    "region_id": "the_frontier",
+    "personality": "Precise, sleepless, cannot stop pulling a thread once she sees it.",
+    "motivation": "Understand what the corruption *is*, not merely how to fight it.",
+    "concern": "Her notes describe a pattern that the Avatar's defeat does not fully explain.",
+    "history": "Came to read the Sunk Hall's carvings; stayed when she found the same wrong signature in the living wood.",
+    "values": "The truth, even the unwelcome kind — especially the unwelcome kind.",
+    "secret": "She believes the Corruption Avatar was a symptom, not the source — and she is right, though she cannot prove it yet.",
+    "companion_hooks": ["evidence"],
+    "knows": [
+      {"deed": "cleansed_woods", "source": "found_evidence"},
+      {"deed": "broke_the_avatar", "source": "witnessed"}
+    ],
+    "relationships": [
+      {"with": "Corwin", "kind": "intellectual_peer", "note": "They finish each other's suspicions; his sketches match her carvings."},
+      {"with": "elder_fenn", "kind": "wary", "note": "He thinks she studies grief; she thinks he refuses to."}
+    ],
+    "events": ["abandoned_campsite"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "Look at this carving. The dwarves recorded a 'quiet that eats' long before our blight. This isn't the first time. That should frighten you more than it does.",
+      "by_deed": {
+        "broke_the_avatar": "You broke the Avatar, and the wood healed — yes. But my notes don't close. Something *made* that thing, and it did not die with it. Don't celebrate too long. Please."
+      }
+    }
+  },
+  {
+    "id": "ferryman_joss",
+    "name": "Ferryman Joss",
+    "role": "Keeps the crossing at the Sundered Span",
+    "category": "service",
+    "location_id": "sundered_span",
+    "region_id": "the_frontier",
+    "personality": "Slow, kind, has seen everyone who crosses and forgotten none.",
+    "motivation": "Keep the only safe crossing open for those fleeing the dark.",
+    "concern": "The span is half-broken and the current takes the careless.",
+    "companion_hooks": ["craft"],
+    "knows": [{"deed": "*", "source": "public"}],
+    "relationships": [],
+    "events": [],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "Careful on the planks — the span earned its name honestly. I've pulled too many from that water. Cross slow.",
+      "by_status": {"recovering": "The span holds better since the fighting moved off it. I've had a week without fishing anyone out. A good week."}
+    }
+  },
+  {
+    "id": "caravan_tamsin",
+    "name": "Caravan-Leader Tamsin",
+    "role": "Leads a refugee caravan seeking safe haven",
+    "category": "event",
+    "location_id": "frontier_road",
+    "region_id": "the_frontier",
+    "personality": "Weary command; carries everyone's fear so they don't have to.",
+    "motivation": "Get her people to a settlement that will take them.",
+    "concern": "One bad stretch of road between her caravan and safety.",
+    "companion_hooks": ["faith", "medical"],
+    "knows": [{"deed": "helped_refugees", "source": "word_of_mouth"}],
+    "relationships": [{"with": "campmother_alna", "kind": "seeks_shelter"}],
+    "events": ["refugee_caravan"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "We've walked from the deep Frontier with everything we couldn't bear to bury. Is there a camp ahead that'll have us? Please say there is.",
+      "by_deed": {
+        "helped_refugees": "They say the Ashen Camp took people in and gave them walls. That's where we're bound, then. You've given my people somewhere to be going."
+      }
+    }
+  },
+  {
+    "id": "storyteller_perrin",
+    "name": "Old Perrin",
+    "role": "A traveling storyteller who carries the road's news",
+    "category": "ambient",
+    "location_id": "frontier_road",
+    "region_id": "the_frontier",
+    "personality": "Trades a night's tale for a night's bread; makes the true stories bigger and the cruel ones bearable.",
+    "motivation": "Keep the Frontier's memory alive, one fire at a time.",
+    "companion_hooks": ["faith"],
+    "knows": [
+      {"deed": "*", "source": "public"},
+      {"deed": "broke_the_avatar", "source": "public"}
+    ],
+    "relationships": [],
+    "events": ["traveling_storyteller"],
+    "presence": {"default": "present"},
+    "dialogue": {
+      "default": "A tale for a supper? I've got the funny ones and the true ones. Round here, folks mostly want the funny.",
+      "by_deed": {
+        "broke_the_avatar": "Oh, I've a new one now — how a stranger walked into the heart of the blight and walked back out. Folk believe the shape of it. The deep truth of what made that thing? That, even I don't tell, because even I don't know."
+      }
+    }
+  }
+]

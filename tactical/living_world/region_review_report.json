@@ -1,8 +1,8 @@
 {
   "region": "The Frontier",
   "summary": {
-    "total": 15,
-    "ok": 15,
+    "total": 16,
+    "ok": 16,
     "warn": 0,
     "gap": 0,
     "region_ready": true
@@ -56,7 +56,7 @@
     {
       "name": "Godot Migration Compatibility",
       "status": "OK",
-      "detail": "core_modules=16 screen_io=none"
+      "detail": "core_modules=17 screen_io=none"
     },
     {
       "name": "Serialization Round-Trip",
@@ -67,6 +67,11 @@
       "name": "Content Contract",
       "status": "OK",
       "detail": "frontier_region contract errors=none"
+    },
+    {
+      "name": "NPC Population",
+      "status": "OK",
+      "detail": "npcs=14 categories=9 ref_errors=none empty_settlements=none"
     },
     {
       "name": "Save Persistence",

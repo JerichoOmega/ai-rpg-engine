@@ -104,4 +104,19 @@ class RegionContent:
             if trig not in _banter.TRIGGERS:
                 errors.append(f"banter uses unknown trigger {trig!r}")
 
+        # NPCs (optional): ids unique, locations resolve
+        if self.npcs:
+            seen = set()
+            for npc in self.npcs:
+                nid = npc.get("id")
+                if not nid or not npc.get("name"):
+                    errors.append(f"npc missing id/name: {npc}")
+                    continue
+                if nid in seen:
+                    errors.append(f"duplicate npc id {nid!r}")
+                seen.add(nid)
+                loc = npc.get("location_id")
+                if loc and loc not in loc_ids:
+                    errors.append(f"npc {nid!r} references unknown location {loc!r}")
+
         return errors
