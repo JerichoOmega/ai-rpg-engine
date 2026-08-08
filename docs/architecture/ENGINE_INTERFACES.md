@@ -147,6 +147,17 @@ Deed {
 > (locations, presence, banter, events, environment, epilogue, memory) is data
 > (`tactical/living_world/data/*.json`) resolved through a **region manifest**
 > (`RegionContent`), never engine code — so Godot consumes the same data.
+>
+> **Runtime persistence (save boundaries).** The live session holds one
+> authoritative `LivingWorld` (`tactical/living_world/runtime.py`). It is
+> **hydrated** from `world_state.living_world` right after load
+> (`save_manager`/`state_manager` `load_game`) and **flushed** back into it right
+> before serialization (`save_game`/`autosave`), plus at gameplay checkpoints
+> (deed earned, region-state change, event resolved, landmark/presence moment,
+> regional milestone). No second save path is introduced — the existing save
+> systems serialize `world_state` unchanged. A future Godot presentation layer
+> calls the **same** `runtime`/`persistence` interfaces (plain data in/out); no
+> UI/terminal/filesystem state is ever persisted.
 
 ### SaveState
 ```
@@ -257,3 +268,4 @@ Python core agree on the data. `SaveState` round-trips must additionally preserv
 |---|---|
 | 2026-06 | Authored the engine/gameplay data contracts (CharacterState, BattlefieldState, Inventory/Equipment, QuestState, DialogueState, WorldState, SaveState; Combat/Animation/Dialogue/Quest/Reward events; movement & action intents). Field names mirror existing code. Documentation-only; nothing implemented. |
 | 2026-06 | Added **LivingWorldState** contract (region states, remembered deeds, resolved events, landmark/presence moments, per-region progression, flags) — implemented and persisted additively under `WorldState.living_world` (`tactical/living_world/`, `persistence.py`). Round-trips through JSON; `from_state` ignores unknown keys; region content is data via `RegionContent` manifests. Preserves save compatibility. |
+| 2026-06 | Wired live runtime persistence (`tactical/living_world/runtime.py`): hydrate on `load_game`, flush on `save_game`/`autosave` and at gameplay checkpoints, through the **existing** save systems (no second save path). Single authoritative `LivingWorld` mirrored into `world_state.living_world`; Godot layer calls the same interfaces. |

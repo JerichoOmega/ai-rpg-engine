@@ -56,7 +56,7 @@
     {
       "name": "Godot Migration Compatibility",
       "status": "OK",
-      "detail": "core_modules=15 screen_io=none"
+      "detail": "core_modules=16 screen_io=none"
     },
     {
       "name": "Serialization Round-Trip",

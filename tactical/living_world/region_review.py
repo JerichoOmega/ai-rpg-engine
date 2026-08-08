@@ -34,7 +34,7 @@ from .region_state import STATES, is_natural_transition
 _CORE_MODULES = [
     "__init__", "region_state", "reputation", "events", "companions",
     "banter", "environment", "memory", "epilogue", "world", "content",
-    "persistence", "region", "overlay", "frontier_overlay",
+    "persistence", "region", "overlay", "runtime", "frontier_overlay",
 ]
 
 _PARTY = ["Ronan", "Talos", "Maeve Ashwood", "Torren", "Corwin", "Eleanor",

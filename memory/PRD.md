@@ -36,9 +36,20 @@ Region, built as `tactical/living_world/`.
 - P1: Region Two content pass on top of these systems (content, not systems):
   add `<region>_region.json` manifest + content JSON, supply a run record, pass
   the CI gate.
-- P2: Wire the real main-loop call site to `persistence.save_to_world_state()`
-  when live play consumes the overlay (plumbing done + tested).
-- P2: Add `scripts/ci_quality_gate.py` to CI alongside `tactical.verify`.
+- P2: In live play, call `runtime.apply_overlay(world)` / `install_event_hooks()`
+  so a region's runtime auto-persists at checkpoints (save boundaries done).
+
+## Runtime save + CI integration (2026-06, done)
+- Live save hookup: `tactical/living_world/runtime.py` holds the session's
+  authoritative `LivingWorld`, hydrated on `load_game` and flushed on
+  `save_game`/`autosave` + gameplay checkpoints — through the existing save
+  systems (`save_manager`, `state_manager`); no second save path.
+- CI: `.github/workflows/ci.yml` (headless, no Godot) runs pytest + verify +
+  region_review + quality gate; `Makefile` (`make ci`) mirrors it locally.
+- Save-contract + Godot audit clean (single source of truth, deterministic
+  load/defaults, no presentation state persisted).
+- Validation: **315 pytest passed**, verify 62/62, review 15/15, gate PASS,
+  8/8 new runtime tests. Report: `RUNTIME_SAVE_CI_INTEGRATION_REPORT.md`.
 
 ## Foundation hardening (2026-06, done)
 - Persistence into `world_state["living_world"]` (additive; no save-module

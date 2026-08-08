@@ -105,6 +105,12 @@ def save_game():
     # stale runtime Player object.
     reconcile_player_roster_before_save()
 
+    # Flush the live Living-World session into world_state so it is captured
+    # by the (single) save payload below.  No-op when no living world is
+    # active this session, so existing save behaviour is unchanged.
+    from tactical.living_world import runtime as _lw_runtime
+    _lw_runtime.sync_into_world_state(world_state)
+
     save_data = {
 
         # =========================
@@ -453,6 +459,11 @@ def load_game():
     # code path can assume the full schema.
 
     ensure_world_state_defaults()
+
+    # Rebuild the live Living-World session from the freshly loaded
+    # world_state so gameplay continues with the correct world state.
+    from tactical.living_world import runtime as _lw_runtime
+    _lw_runtime.hydrate_from_world_state(world_state)
 
     # =========================
     # QUESTS

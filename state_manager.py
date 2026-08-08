@@ -32,6 +32,11 @@ def save_game():
         from player import sync_world_state_from_player
         sync_world_state_from_player()
 
+        # Flush the live Living-World session into world_state so it is
+        # captured by the save payload below (no-op when inactive).
+        from tactical.living_world import runtime as _lw_runtime
+        _lw_runtime.sync_into_world_state(world_state)
+
         save_data = {
 
             "version": SAVE_VERSION,
@@ -219,6 +224,10 @@ def load_game():
         # saved state.
 
         ensure_world_state_defaults()
+
+        # Rebuild the live Living-World session from the loaded world_state.
+        from tactical.living_world import runtime as _lw_runtime
+        _lw_runtime.hydrate_from_world_state(world_state)
 
         # =========================
         # VALIDATE STRUCTURE
