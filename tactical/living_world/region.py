@@ -50,16 +50,19 @@ class RegionContent:
     environment: List[dict]
     regional_memory: Dict[str, dict]
     epilogue_threads: Dict[str, dict]
+    npcs: List[dict] = field(default_factory=list)  # optional inhabitants
 
     @classmethod
     def from_manifest(cls, manifest_name: str) -> "RegionContent":
         m = _content.load(manifest_name)
         refs = m["content"]
         loaded = {k: _content.load(refs[k]) for k in _CONTENT_KEYS}
+        npcs = _content.load(refs["npcs"]) if "npcs" in refs else []
         return cls(
             region_id=m["region_id"],
             region_name=m["region_name"],
             beat_map=m.get("beat_map", {}),
+            npcs=npcs,
             **loaded,
         )
 
